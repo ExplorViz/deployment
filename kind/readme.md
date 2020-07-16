@@ -2,6 +2,7 @@
 
 ## Prequsuites
 
+
 - A [kind](https://kind.sigs.k8s.io/docs/user/quick-start/) kubernetes cluster
 - A `kubectl` installation configured to interact with the kind cluster (use `kind export kubeconfig` optionally with `--name` if not using the default cluster name)
 - A [helm](https://helm.sh/) installation (version 3.0.0+)
