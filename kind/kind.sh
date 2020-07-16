@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 setup() {
   echo adding helm repo  
@@ -54,6 +54,11 @@ shutdown() {
   echo
   echo removing statefulsets
   kubectl delete statefulsets --all
+
+  echo
+  echo removing statefulsets
+  kubectl delete persistentvolume --all
+  kubectl delete persistentvolumeclaims --all
 }
 
 if [ "$(type -t $1)" == 'function' ]; then
