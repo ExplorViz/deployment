@@ -1,5 +1,8 @@
 #!/bin/sh
 
+echo adding helm repo
+helm repo add bitnami https://charts.bitnami.com/bitnami
+
 echo installing kafka
 helm install -f kafka/values.yml kafka bitnami/kafka
 sleep 1
