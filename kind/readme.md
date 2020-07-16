@@ -8,12 +8,14 @@
 
 ## Deploy Infrastructure Services
 
-The script `kind.sh` deploys all infrastructure services of explorviz, that is,
+The script `kind.sh` can deploy and remove all infrastructure services for explorviz, that is,
 
 - Apache Kafka
 - Avro Schema Registry
 - Apache Cassandra
 - Opencensus Collector
+
+Call the script via `./kind.sh setup` or `./kind.sh shutdown`.
 
 By default, all pods are created with a replication factor of 1. Settings can be overridden in the respective subdirectories.
 
