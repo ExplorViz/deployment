@@ -3,11 +3,13 @@ apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
 - role: control-plane
   extraPortMappings:
-  - containerPort: 8080
-    hostPort: 8080
+  - containerPort: 32680
+    # landscape service
+    hostPort: 32680
     listenAddress: "127.0.0.1"
     protocol: TCP
-  - containerPort: 55678
-    hostPort: 55678
+  - containerPort: 31500
+    # oc-collector
+    hostPort: 31500
     listenAddress: "127.0.0.1"
     protocol: TCP
