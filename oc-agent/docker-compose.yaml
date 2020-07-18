@@ -1,7 +1,7 @@
 version: "2"
 services:
   oc-agent:
-    image: ocagent:latest
+    image: explorviz/ocagent:latest
     command: ["--config=/etc/oc-agent-config.yaml"]
     volumes:
       - ./oc-agent-config.yaml:/etc/oc-agent-config.yaml
