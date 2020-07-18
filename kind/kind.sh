@@ -45,15 +45,7 @@ setup() {
 
 shutdown() {
   echo removing deployments, pods, and services
-  kubectl delete --namespace=explorviz-dev deploy,po,svc --all
-
-  echo
-  echo removing helm cassandra chart
-  helm uninstall -n explorviz-dev cassandra
-  
-  echo
-  echo removing helm kafka chart
-  helm uninstall -n explorviz-dev kafka
+  kubectl delete --namespace=explorviz-dev deploy,po,svc,statefulsets --all
 
   echo
   echo removing statefulsets
