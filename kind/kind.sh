@@ -24,10 +24,14 @@ setup() {
   sleep 1
   
   echo
-  echo installing apache cassandra
-  helm install -f cassandra/values.yml cassandra bitnami/cassandra
+  echo installing apache cassandra for structure
+  helm install -f cassandra-structure/values.yml cassandra bitnami/cassandra
 
   sleep 1
+
+  echo
+  echo installing apache cassandra for traces
+  helm install -f cassandra-traces/values.yml cassandra bitnami/cassandra
 
   # Wait until Kafka is ready to create the topics
   echo
