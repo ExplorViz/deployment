@@ -41,7 +41,8 @@ setup() {
   echo
   echo kafka is ready
   echo creating topics
-  ./create_topic.sh
+  source create_topics.sh
+
   # Install the service after Kafka is ready
   echo
   echo installing opencensus service
