@@ -10,6 +10,8 @@ metadata:
 data:
   otel-collector-config: |
     receivers:
+      opencensus:
+        endpoint: 0.0.0.0:55678
       otlp:
         protocols:
           grpc:
@@ -36,8 +38,12 @@ data:
     service:
       extensions: [health_check, zpages]
       pipelines:
-        traces:
+        traces/1:
           receivers: [otlp]
+          processors: [memory_limiter, batch, queued_retry]
+          exporters: [kafka]
+        traces/2:
+          receivers: [opencensus]
           processors: [memory_limiter, batch, queued_retry]
           exporters: [kafka]
 ---
@@ -56,6 +62,10 @@ spec:
     protocol: TCP
     targetPort: 55680
     nodePort: 31500
+  - name: opencensus
+    port: 55678
+    targetPort: 55678
+    nodePort: 31501
   #- name: jaeger-grpc # Default endpoing for Jaeger gRPC receiver
   #  port: 14250
   #- name: jaeger-thrift-http # Default endpoint for Jaeger HTTP receiver.
