@@ -31,21 +31,25 @@ data:
       health_check: {}
       zpages: {}
     exporters:
-      kafka:
+      kafka-oc:
         protocol_version: 2.5.0
         brokers: ["kafka:9092"]
-        topic: "cluster-dump-spans"
+        topic: "otpl-span-batches"
+      kafka-otpl:
+        protocol_version: 2.5.0
+        brokers: ["kafka:9092"]
+        topic: "oc-span-batches"
     service:
       extensions: [health_check, zpages]
       pipelines:
         traces/1:
           receivers: [otlp]
           processors: [memory_limiter, batch, queued_retry]
-          exporters: [kafka]
+          exporters: [kafka-otpl]
         traces/2:
           receivers: [opencensus]
           processors: [memory_limiter, batch, queued_retry]
-          exporters: [kafka]
+          exporters: [kafka-oc]
 ---
 apiVersion: v1
 kind: Service
