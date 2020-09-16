@@ -46,7 +46,7 @@ setup() {
   # Install the service after Kafka is ready
   echo
   echo installing opencensus service
-  kubectl create -f oc-collector/manifest.yml
+  kubectl create -f ot-collector/manifest.yml
 }
 
 shutdown() {
