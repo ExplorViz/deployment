@@ -49,11 +49,13 @@ metadata:
     app: opentelemetry
     component: otel-collector
 spec:
+  type: NodePort
   ports:
   - name: otlp # Default endpoint for OpenTelemetry receiver.
     port: 55680
     protocol: TCP
     targetPort: 55680
+    nodePort: 31500
   #- name: jaeger-grpc # Default endpoing for Jaeger gRPC receiver
   #  port: 14250
   #- name: jaeger-thrift-http # Default endpoint for Jaeger HTTP receiver.
