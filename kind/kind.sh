@@ -24,10 +24,14 @@ setup() {
   sleep 1
   
   echo
-  echo installing apache cassandra
-  helm install -f cassandra/values.yml cassandra bitnami/cassandra
+  echo installing apache cassandra for structure
+  helm install -f cassandra-structure/values.yml cassandra-structure bitnami/cassandra
 
   sleep 1
+
+  echo
+  echo installing apache cassandra for traces
+  helm install -f cassandra-traces/values.yml cassandra-traces bitnami/cassandra
 
   # Wait until Kafka is ready to create the topics
   echo
@@ -37,10 +41,7 @@ setup() {
   echo
   echo kafka is ready
   echo creating topics
-  kubectl exec kafka-0 -- kafka-topics.sh --create --zookeeper kafka-zookeeper:2181 --replication-factor 1 --partitions 1 --topic cluster-dump-spans
-  kubectl exec kafka-0 -- kafka-topics.sh --create --zookeeper kafka-zookeeper:2181 --replication-factor 1 --partitions 1 --topic explorviz-spans
-  kubectl exec kafka-0 -- kafka-topics.sh --create --zookeeper kafka-zookeeper:2181 --replication-factor 1 --partitions 1 --topic explorviz-traces
-  kubectl exec kafka-0 -- kafka-topics.sh --create --zookeeper kafka-zookeeper:2181 --replication-factor 1 --partitions 1 --topic explorviz-records
+  source create_topics.sh
 
   # Install the service after Kafka is ready
   echo
