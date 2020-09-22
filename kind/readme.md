@@ -18,3 +18,12 @@ The script `kind.sh` can deploy and remove all infrastructure services for explo
 Call the script via `./kind.sh setup` or `./kind.sh shutdown`.
 
 By default, all pods are created with a replication factor of 1. Settings can be overridden in the respective subdirectories.
+
+## Service Port Mappings
+
+|Name                        | Port      | TargetPort    | NodePort|
+|---                         | ---       | ---           | ---  |
+|Landscape Service           | 8080      | 8080          | 32680|
+|OpenCensus Collector        | 55678     | 55678         | 31500|
+|OpenTelemetry Collector     | 55680     | 55680         | 31501|
+|Trace Service               | 8080      | 8080          | 32681|
