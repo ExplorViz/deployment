@@ -44,9 +44,17 @@ setup() {
   source create_topics.sh
 
   # Install the service after Kafka is ready
+  
+  # Otel Collector
+  echo
+  echo installing openetelemetry service
+  kubectl create -f ot-collector/manifest.yml
+
+  # OpenCensus Collector
   echo
   echo installing opencensus service
-  kubectl create -f ot-collector/manifest.yml
+  kubectl create -f oc-collector/manifest.yml
+
 }
 
 shutdown() {

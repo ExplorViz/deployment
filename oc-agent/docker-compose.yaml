@@ -5,7 +5,7 @@ services:
     command: ["--config=/etc/oc-agent-config.yaml"]
     volumes:
       - ./oc-agent-config.yaml:/etc/oc-agent-config.yaml
-    ports:
-      - 55680:55680
+    #ports:
+    #  - 55678:55678
     # linux
-    # network_mode: host
+    network_mode: host
