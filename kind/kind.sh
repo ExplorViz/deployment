@@ -47,6 +47,11 @@ setup() {
   echo
   echo installing opencensus service
   kubectl create -f oc-collector/manifest.yml
+
+  # Install MongoDB for token
+  echo 
+  echo installing landscape token MongoDB
+  helm install -f mongodb-token/values.yml mongo-token bitnami/mongodb
 }
 
 shutdown() {
