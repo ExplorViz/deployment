@@ -7,8 +7,11 @@ externalAccess:
   enabled: true
   service:
     type: NodePort
+    nodePorts: 
+      - 30001
+    domain: "127.0.0.1"
   autoDiscovery:
-    enabled: true
+    enabled: false
 
 serviceAccount:
   create: true
