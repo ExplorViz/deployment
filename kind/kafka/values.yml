@@ -13,6 +13,17 @@ externalAccess:
   autoDiscovery:
     enabled: false
 
+metrics:
+  ## Prometheus Kafka Exporter: exposes complimentary metrics to JMX Exporter
+  ##
+  kafka:
+    enabled: false
+  jmx:
+    enabled: true
+
+persistence:
+  enabled: false
+
 serviceAccount:
   create: true
 
