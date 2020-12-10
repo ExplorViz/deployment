@@ -38,6 +38,9 @@ setup-base() {
   echo adding helm repo  
   helm repo add bitnami https://charts.bitnami.com/bitnami
 
+}
+
+setup-kafka() {
   echo
   echo installing kafka
   helm install -f kafka/values.yml kafka bitnami/kafka
