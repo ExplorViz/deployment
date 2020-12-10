@@ -1,7 +1,32 @@
 #!/bin/bash
 
-setup() {
+setup-adapter() {  
+  
+  echo installing opencensus service
+  kubectl create -f oc-collector/manifest.yml
 
+}
+
+setup-landscape() {
+  echo installing apache cassandra for structure
+  helm install -f cassandra-structure/values.yml cassandra-structure bitnami/cassandra
+}
+
+setup-user() {
+
+  # Install MongoDB for token
+  echo 
+  echo installing landscape token MongoDB
+  helm install -f mongodb-token/values.yml mongo-token bitnami/mongodb
+
+}
+
+setup-trace() {
+  echo installing apache cassandra for traces
+  helm install -f cassandra-traces/values.yml cassandra-traces bitnami/cassandra
+}
+
+setup-base() {
   echo creating explorviz kind cluster
   kind create cluster --wait 3m --name explorviz-dev --config=kind-config.yaml
 
@@ -22,16 +47,6 @@ setup() {
   echo installing the schema registry
   kubectl create -f registry/manifest.yml
   sleep 1
-  
-  echo
-  echo installing apache cassandra for structure
-  helm install -f cassandra-structure/values.yml cassandra-structure bitnami/cassandra
-
-  sleep 1
-
-  echo
-  echo installing apache cassandra for traces
-  helm install -f cassandra-traces/values.yml cassandra-traces bitnami/cassandra
 
   # Wait until Kafka is ready to create the topics
   echo
@@ -42,16 +57,14 @@ setup() {
   echo kafka is ready
   echo creating topics
   source create_topics.sh
+}
 
-  # Install the service after Kafka is ready
+setup-monitoring() {
+  echo installing prometheus
+  helm install -f prometheus/values.yml prometheus prometheus-community/prometheus
   echo
-  echo installing opencensus service
-  kubectl create -f oc-collector/manifest.yml
-
-  # Install MongoDB for token
-  echo 
-  echo installing landscape token MongoDB
-  helm install -f mongodb-token/values.yml mongo-token bitnami/mongodb
+  echo installing grafana
+  helm install -f grafana/values.yml grafana grafana/grafana
 }
 
 shutdown() {
