@@ -1,0 +1,30 @@
+
+extraEnvVars: 
+  - name: KAFKA_CFG_LOG_MESSAGE_TIMESTAMP_TYPE
+    value: "LogAppendTime"
+
+externalAccess:
+  enabled: true
+  service:
+    type: NodePort
+    domain: 192.168.48.30
+    nodePorts:
+      - 31301
+
+serviceAccount:
+  create: false
+
+rbac:
+  create: false
+
+nodeSelector:
+  env: prod
+
+persistence:
+  enabled: false
+
+zookeeper:
+  persistence:
+    enabled: false
+  nodeSelector:
+    env: prod

@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: explorviz-landscape-service
+  labels:
+    app: explorviz-landscape-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: explorviz-landscape-service
+  template:
+    metadata:
+      labels:
+        app: explorviz-landscape-service
+    spec:
+      containers:
+       - name: explorviz-landscape-service
+         image: explorviz/landscape-service-jvm:latest
+         imagePullPolicy: IfNotPresent
+      nodeSelector:
+        env: prod
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: explorviz-landscape-service
+  labels:
+    app: explorviz-landscape-service
+spec:
+  type: NodePort
+  ports:
+    - name: explorviz-landscape-service
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+      nodePort: 32680
+  selector:
+    app: explorviz-landscape-service
