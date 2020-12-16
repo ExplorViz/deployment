@@ -1,11 +1,15 @@
 #!/bin/bash
 
 # Generate SSL certificate in Docker volume for certificates.
+mkdir -p certs
 cd ./certs
 
+# Generate random password.
+pass=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 1023)
+
 # Generate SSL keys.
-openssl genrsa -des3 -passout pass:x -out server.pass.key 2048
-openssl rsa -passin pass:x -in server.pass.key -out server.key
+openssl genrsa -des3 -passout pass:$pass -out server.pass.key 2048
+openssl rsa -passin pass:$pass -in server.pass.key -out server.key
 rm server.pass.key
 
 # Generate SLL certificate signing request.
