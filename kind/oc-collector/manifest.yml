@@ -69,6 +69,7 @@ spec:
       containers:
         - command:
             - "/occollector_linux"
+            - "--log-level=DEBUG"
             - "--config=/conf/oc-collector-config.yaml"
           env:
             - name: GOGC

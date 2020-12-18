@@ -8,7 +8,12 @@ inspectit:
   instrumentation:
     scopes:
       allClasses:
-        type: {name: net, matcher-mode: STARTS_WITH_IGNORE_CASE}
+        type: 
+          name: net.ex
+          matcher-mode: STARTS_WITH_IGNORE_CASE
+        methods:
+          - is-constructor: false
+          - is-constructor: true
 
     rules:
       all_methods_no_input_return:
@@ -30,7 +35,7 @@ inspectit:
           landscape_token_attr:
             action: set
             constant-input:
-              value: "fibonacci-sample-landscape"
+              value: "95811359-f42a-455b-b417-b416f697911b"
           application_name_attr:
             action: set
             constant-input:
@@ -89,6 +94,7 @@ inspectit:
   exporters:
     tracing:
       open-census-agent:
-        address: "localhost:55680"
+        #address: "localhost:55680"
+        address: "localhost:50051"
         service-name: "Alex sein Test - OpenCensus"
         use-insecure: true
