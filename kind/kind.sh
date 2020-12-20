@@ -52,6 +52,11 @@ setup() {
   echo 
   echo installing landscape token MongoDB
   helm install -f mongodb-token/values.yml mongo-token bitnami/mongodb
+
+  echo
+  echo installing token cache
+  helm install -f redis-adapter/values.yml redis-adapter bitnami/redis
+
 }
 
 shutdown() {
