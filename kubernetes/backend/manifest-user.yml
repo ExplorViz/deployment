@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: explorviz-user-service
+  labels:
+    app: explorviz-user-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: explorviz-user-service
+  template:
+    metadata:
+      labels:
+        app: explorviz-user-service
+    spec:
+      containers:
+      - name: explorviz-user-service
+        image: explorviz/user-service-jvm:latest
+        ports:
+          - containerPort: 80
+        imagePullPolicy: IfNotPresent
+      nodeSelector:
+        env: prod 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: explorviz-user-service
+  labels:
+    app: explorviz-user-service
+spec:
+  type: NodePort
+  ports:
+    - name: explorviz-user-service
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+      nodePort: 32682
+  selector:
+    app: explorviz-user-service

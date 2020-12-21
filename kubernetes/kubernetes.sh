@@ -58,10 +58,20 @@ setup() {
   echo deploying ExplorViz Reconstructor-Servive
   kubectl create -f backend/manifest-reconstructor.yml
 
-  # Deploy ExplorViz Reconstructor Service
+  # Deploy ExplorViz Landscape Service
   echo
   echo deploying ExplorViz Landscape-Servive
   kubectl create -f backend/manifest-landscape.yml
+
+  # Deploy ExplorViz Trace Service
+  echo
+  echo deploying ExplorViz Trace-Servive
+  kubectl create -f backend/manifest-trace.yml
+
+  # Deploy ExplorViz User Service
+  echo
+  echo deploying ExplorViz User-Servive
+  kubectl create -f backend/manifest-user.yml
 }
 
 if [ "$(type -t $1)" == 'function' ]; then
