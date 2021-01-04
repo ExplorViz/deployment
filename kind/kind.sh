@@ -69,8 +69,8 @@ setup-monitoring() {
   echo installing grafana
   helm install -f grafana/values.yml grafana grafana/grafana
   
-  echo installing the lag exporter
-  helm install -f lag-exporter/values.yml kafka-lag-exporter https://github.com/lightbend/kafka-lag-exporter/releases/download/v0.6.5/kafka-lag-exporter-0.6.5.tgz
+  #echo installing the lag exporter
+  #helm install -f lag-exporter/values.yml kafka-lag-exporter https://github.com/lightbend/kafka-lag-exporter/releases/download/v0.6.5/kafka-lag-exporter-0.6.5.tgz
 
 }
 

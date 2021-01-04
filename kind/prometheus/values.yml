@@ -25,3 +25,8 @@ extraScrapeConfigs: |
       - targets: ['explorviz-landscape-service:8080']
     scheme: http
     metrics_path: /metrics
+  - job_name: 'trace-service'
+    static_configs:
+      - targets: ['explorviz-trace-service:8080']
+    scheme: http
+    metrics_path: /metrics
