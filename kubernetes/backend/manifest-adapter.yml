@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: explorviz-adapter-service
-        image: explorviz/adapter-service-jvm:latest
+        image: explorviz/adapter-service-jvm:jib
         ports:
           - containerPort: 80
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
       nodeSelector:
         env: prod 
