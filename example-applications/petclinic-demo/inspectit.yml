@@ -35,6 +35,10 @@ inspectit:
             action: set
             constant-input:
               value: "spring pet clinic"
+          instance_id_attr:
+            action: set
+            constant-input:
+              value: 0
           application_language_attr:
             action: set
             constant-input:
@@ -45,9 +49,7 @@ inspectit:
            action: get_host_ip
           method_fqn_attr:
             action: get_method_fqn
-          application_pid_attr:
-            action: get_PID
-
+      
     actions:
       # Returns the name of the host
       get_host_name:
@@ -71,16 +73,6 @@ inspectit:
           _methodName: String
           _class: Class
         value: "new StringBuilder(_class.getName()).append('.').append(_methodName).toString()"
-
-      # Returns the PID or something equivalent, depending on the JVM and the OS
-      # Not guaranteed to be the actual PID, see https://stackoverflow.com/questions/35842/how-can-a-java-program-get-its-own-process-id
-      # Java 9+ can use ProcessHandle.current().pid() to resolve PID
-      get_PID:
-        imports:
-          - java.lang.management.ManagementFactory
-        input:
-          _context: InspectitContext
-        value: "ManagementFactory.getRuntimeMXBean().getName()"
 
   logging:
     debug: true
