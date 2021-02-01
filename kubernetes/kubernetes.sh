@@ -48,6 +48,11 @@ setup() {
   echo installing landscape token MongoDB
   helm install -f mongodb-token/values.yml mongo-token bitnami/mongodb
 
+  # Install Redis for adapter
+  echo
+  echo installing token cache
+  helm install -f redis-adapter/values.yml redis-adapter bitnami/redis
+
   # Deploy ExplorViz Adapter Service
   echo
   echo deploying ExplorViz Adapter-Servive
