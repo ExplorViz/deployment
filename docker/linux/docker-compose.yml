@@ -1,0 +1,135 @@
+# Windows Version 18.06.1-ce-win73 (or newer)
+version: "3.5"
+services:
+
+  ## Kafka ##
+
+  zookeeper:
+    container_name: zookeeper
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+    networks:
+      - explorviz
+
+  kafka:
+    container_name: kafka
+    image: wurstmeister/kafka    
+    ports:
+      - "9091:9091"
+    environment:
+      KAFKA_LISTENERS: OUTSIDE://:9091,INSIDE://kafka:9092
+      KAFKA_ADVERTISED_LISTENERS: OUTSIDE://localhost:9091,INSIDE://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LOG_MESSAGE_TIMESTAMP_TYPE: "LogAppendTime"
+      KAFKA_CREATE_TOPICS: "cluster-dump-spans:1:1,explorviz-spans-structure:1:1,explorviz-spans-dynamic:1:1, explorviz-traces:1:1"
+    depends_on:
+      - zookeeper
+    networks:
+      - explorviz
+
+  schema-registry:
+    container_name: schema-registry
+    image: confluentinc/cp-schema-registry:5.4.0
+    ports: 
+      - "8081:8081"
+      - "9021:9021"
+    environment: 
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: PLAINTEXT://kafka:9092
+      SCHEMA_REGISTRY_HOST_NAME: 127.0.0.1
+    depends_on:
+      - kafka
+    networks:
+      - explorviz
+  
+  ## Open Census ##  
+
+  oc-collector:
+    image: omnition/opencensus-collector:0.1.11
+    container_name: oc-collector
+    command: ["--config=/etc/oc-collector-config.yaml"]
+    volumes:
+      - ./oc-collector-config.yaml:/etc/oc-collector-config.yaml
+    ports:
+      - "55678:55678"
+    depends_on:
+      - schema-registry
+    networks:
+      - explorviz
+
+  oc-agent:
+    image: explorviz/ocagent:latest
+    container_name: oc-agent
+    command: ["--config=/etc/oc-agent-config.yaml"]
+    volumes:
+      - ./oc-agent-config.yaml:/etc/oc-agent-config.yaml
+    ports:
+      - "55680:55680"
+    depends_on:
+      - oc-collector
+    networks:
+      - explorviz
+
+  ## Adapter-Service ##
+
+  redis-adapter:
+    container_name: redis-adapter-service
+    image: redis:alpine3.13
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-adapter:/data
+    networks:
+      - explorviz
+
+  ## Landscape-Service ##
+
+  cassandra-structure:
+    container_name: cassandra-landscape-service
+    image: bitnami/cassandra:3.11.10
+    ports:
+      - "9042:9042"
+    volumes:
+      - cassandra-structure:/bitnami
+    networks:
+      - explorviz
+
+  ## Trace-Service ##
+
+  cassandra-trace:
+    container_name: cassandra-trace-service
+    image: bitnami/cassandra:3.11.10
+    ports:
+      - "9043:9042"
+    volumes:
+      - cassandra-trace:/bitnami
+    networks:
+      - explorviz
+
+  ## User-Service ##
+
+  mongo-user:
+    image: mongo
+    container_name: user-mongo
+    ports:
+      - 27017:27017
+    volumes:
+       - user-mongo-data:/data/db
+       - user-mongo-configdb:/data/configdb
+    networks:
+      - explorviz
+
+  ## Frontend ##
+
+volumes:
+  user-mongo-data:
+  user-mongo-configdb:
+  cassandra-structure:
+  cassandra-trace:
+  redis-adapter:
+
+networks:
+  explorviz:
+    name: explorviz
