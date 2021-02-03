@@ -3,7 +3,7 @@ version: "3.5"
 services:
 
   ## Kafka ##
-  
+
   zookeeper:
     container_name: zookeeper
     image: wurstmeister/zookeeper
@@ -56,19 +56,6 @@ services:
       - "55678:55678"
     depends_on:
       - schema-registry
-    networks:
-      - explorviz
-
-  oc-agent:
-    image: explorviz/ocagent:latest
-    container_name: oc-agent
-    command: ["--config=/etc/oc-agent-config.yaml"]
-    volumes:
-      - ./oc-agent-config.yaml:/etc/oc-agent-config.yaml
-    ports:
-      - "55680:55680"
-    depends_on:
-      - oc-collector
     networks:
       - explorviz
 
