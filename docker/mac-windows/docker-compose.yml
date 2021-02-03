@@ -24,7 +24,7 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_LOG_MESSAGE_TIMESTAMP_TYPE: "LogAppendTime"
-      KAFKA_CREATE_TOPICS: "cluster-dump-spans:1:1,explorviz-spans-structure:1:1,explorviz-spans-dynamic:1:1, explorviz-traces:1:1"
+      KAFKA_CREATE_TOPICS: "cluster-dump-spans:1:1,explorviz-spans-structure:1:1,explorviz-spans-dynamic:1:1,token-events:1:1"
     depends_on:
       - zookeeper
     networks:
