@@ -59,18 +59,6 @@ services:
     networks:
       - explorviz
 
-  oc-agent:
-    image: explorviz/ocagent:latest
-    container_name: oc-agent
-    command: ["--config=/etc/oc-agent-config.yaml"]
-    volumes:
-      - ./oc-agent-config.yaml:/etc/oc-agent-config.yaml
-    ports:
-      - "55680:55680"
-    depends_on:
-      - oc-collector
-    networks:
-      - explorviz
 
   ## Adapter-Service ##
 
