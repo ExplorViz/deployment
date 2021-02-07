@@ -74,6 +74,18 @@ setup() {
   kubectl create -f backend/manifest-user.yml
 }
 
+shutdown() {
+  kubectl delete -f backend/manifest-adapter.yml
+  kubectl delete -f backend/manifest-landscape.yml
+  kubectl delete -f backend/manifest-trace.yml
+  kubectl delete -f backend/manifest-user.yml
+
+  kubectl delete -f oc-collector/manifest.yml
+  kubectl delete -f registry/manifest.yml
+
+  helm uninstall redis-adapter mongo-token cassandra-traces cassandra-structure kafka
+}
+
 if [ "$(type -t $1)" == 'function' ]; then
     $1
 else
