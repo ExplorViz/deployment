@@ -21,8 +21,8 @@ inspectit:
               landscape_token: landscape_token_attr
               application_name: application_name_attr
               application_language: application_language_attr
+              application_instance_id: application_instance_id_attr
 
-              application_pid: application_pid_attr
               host_name: host_name_attr
               host_ip: host_ip_attr
               method_fqn: method_fqn_attr
@@ -30,11 +30,15 @@ inspectit:
           landscape_token_attr:
             action: set
             constant-input:
-              value: "fibonacci-sample-landscape"
+              value: "bc71cc55-5f16-4ee7-94e6-eaa5356ced48"
           application_name_attr:
             action: set
             constant-input:
               value: "fibonacci"
+          application_instance_id_attr:
+            action: set
+            constant-input:
+              value: 0
           application_language_attr:
             action: set
             constant-input:
@@ -45,8 +49,7 @@ inspectit:
            action: get_host_ip
           method_fqn_attr:
             action: get_method_fqn
-          application_pid_attr:
-            action: get_PID
+          
 
     actions:
       # Returns the name of the host
@@ -72,16 +75,6 @@ inspectit:
           _class: Class
         value: "new StringBuilder(_class.getName()).append('.').append(_methodName).toString()"
 
-      # Returns the PID or something equivalent, depending on the JVM and the OS
-      # Not guaranteed to be the actual PID, see https://stackoverflow.com/questions/35842/how-can-a-java-program-get-its-own-process-id
-      # Java 9+ can use ProcessHandle.current().pid() to resolve PID
-      get_PID:
-        imports:
-          - java.lang.management.ManagementFactory
-        input:
-          _context: InspectitContext
-        value: "ManagementFactory.getRuntimeMXBean().getName()"
-
   logging:
     debug: true
     trace: false
@@ -89,6 +82,6 @@ inspectit:
   exporters:
     tracing:
       open-census-agent:
-        address: "localhost:55680"
+        address: "localhost:55678"
         service-name: "Alex sein Test - OpenCensus"
         use-insecure: true
