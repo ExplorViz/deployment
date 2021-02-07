@@ -58,11 +58,6 @@ setup() {
   echo deploying ExplorViz Adapter-Servive
   kubectl create -f backend/manifest-adapter.yml
 
-  # Deploy ExplorViz Reconstructor Service
-  echo
-  echo deploying ExplorViz Reconstructor-Servive
-  kubectl create -f backend/manifest-reconstructor.yml
-
   # Deploy ExplorViz Landscape Service
   echo
   echo deploying ExplorViz Landscape-Servive
