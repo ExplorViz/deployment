@@ -23,7 +23,7 @@ def init():
     print('\n[*] adding bitnami helm repository')
     subprocess.run(['helm', 'repo', 'add', 'bitnami', 'https://charts.bitnami.com/bitnami'])
     
-all_srvc = ['kafka', 'adapter', 'landscape', 'trace', 'user']
+all_srvc = ['kafka', 'adapter', 'dashboard', 'landscape', 'trace', 'user']
 
 def setup(services):
     """
@@ -48,7 +48,11 @@ def setup(services):
         subprocess.run(['kubectl', 'create', '-f', 'oc-collector/manifest.yml'])
         print('\n[*] Installing Redis (Token Cache)\n')
         subprocess.run(['helm', 'install', '-f', 'redis-adapter/values.yml', 'redis-adapter', 'bitnami/redis'])
-    
+
+    if 'dashboard' in services:
+            print('[*] Installing Cassandra (Dashboard History)\n')
+            subprocess.run(['helm', 'install', '-f', 'cassandra-structure/values.yml', 'cassandra-dashboard', 'bitnami/cassandra'])
+
     if 'landscape' in services:
         print('[*] Installing Cassandra (Landscape Structure)\n')
         subprocess.run(['helm', 'install', '-f', 'cassandra-structure/values.yml', 'cassandra-structure', 'bitnami/cassandra'])
