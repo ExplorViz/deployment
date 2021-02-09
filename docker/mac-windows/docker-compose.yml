@@ -74,6 +74,16 @@ services:
     networks:
       - explorviz
 
+  adapter-service-dev:
+    container_name: adapter-service-empty
+    image: alpine:3
+    tty: true
+    networks:
+      - explorviz
+    depends_on:
+      - redis-adapter
+      - oc-collector
+
   ## Landscape-Service ##
 
   cassandra-structure:
@@ -88,6 +98,16 @@ services:
       - cassandra-structure:/bitnami
     networks:
       - explorviz
+  
+  landscape-service-dev:
+    container_name: landscape-service-empty
+    image: alpine:3
+    tty: true
+    networks:
+      - explorviz
+    depends_on:
+      - cassandra-structure
+      - kafka
 
   ## Trace-Service ##
 
@@ -104,6 +124,16 @@ services:
     networks:
       - explorviz
 
+  trace-service-dev:
+    container_name: trace-service-empty
+    image: alpine:3
+    tty: true
+    networks:
+      - explorviz
+    depends_on:
+      - cassandra-trace
+      - kafka
+
   ## User-Service ##
 
   mongo-user:
@@ -116,6 +146,16 @@ services:
        - user-mongo-configdb:/data/configdb
     networks:
       - explorviz
+
+  user-service-dev:
+    container_name: user-service-empty
+    image: alpine:3
+    tty: true
+    networks:
+      - explorviz
+    depends_on:
+      - mongo-user
+      - kafka
 
   ## Frontend ##
 
