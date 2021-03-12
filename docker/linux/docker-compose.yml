@@ -1,14 +1,23 @@
-# Windows Version 18.06.1-ce-win73 (or newer)
+# docker-compose down -v
+
+# docker-compose pull && docker-compose up -d all
+
+# docker-compose pull && docker-compose up -d dev-environment
+
 version: "3.5"
 services:
 
   ## Kafka ##
 
   zookeeper:
-    container_name: zookeeper
-    image: wurstmeister/zookeeper
+    image: zookeeper:3.6
+    container_name: zookeeper    
     ports:
       - "2181:2181"
+    volumes:
+       - zookeeper-data:/data
+       - zookeeper-data-log:/datalog
+       - zookeeper-log:/logs
     networks:
       - explorviz
 
@@ -29,6 +38,8 @@ services:
       KAFKA_CREATE_TOPICS: "cluster-dump-spans:1:1,explorviz-spans-structure:1:1,explorviz-spans-dynamic:1:1,token-events:1:1"
     depends_on:
       - zookeeper
+    volumes:
+      - kafka:/kafka
     networks:
       - explorviz
 
@@ -43,6 +54,8 @@ services:
       SCHEMA_REGISTRY_HOST_NAME: 127.0.0.1
     depends_on:
       - kafka
+    volumes:
+      - schema-registry:/etc/schema-registry/secrets
     networks:
       - explorviz
   
@@ -53,7 +66,7 @@ services:
     container_name: oc-collector
     command: ["--config=/etc/oc-collector-config.yaml"]
     volumes:
-      - ./oc-collector-config.yaml:/etc/oc-collector-config.yaml
+      - ../generic/oc-collector-config.yaml:/etc/oc-collector-config.yaml
     ports:
       - "55678:55678"
     depends_on:
@@ -72,9 +85,22 @@ services:
       - redis-adapter:/data
     networks:
       - explorviz
-  
+
+  adapter-service:
+    container_name: adapter-service
+    image: explorviz/adapter-service-jvm:latest
+    networks:
+      - explorviz
+    depends_on:
+      - redis-adapter
+      - oc-collector
+    environment:
+      - QUARKUS_REDIS_HOSTS=redis://redis-adapter:6379
+      - MP_MESSAGING_INCOMING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - EXPLORVIZ_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+
   adapter-service-dev:
-    container_name: adapter-service-empty
+    container_name: adapter-service-dev
     image: alpine:3
     tty: true
     networks:
@@ -86,7 +112,7 @@ services:
   ## Cassandra for Landscape and Trace Service ##
 
   cassandra:
-    container_name: cassandra
+    container_name: cassandra-explorviz
     image: bitnami/cassandra:3.11.10
     ports:
       - "9042:9042"
@@ -95,13 +121,31 @@ services:
       - HEAP_NEWSIZE=200M
     volumes:
       - cassandra:/bitnami
+      - ../generic/cassandra:/docker-entrypoint-initdb.d
     networks:
       - explorviz
 
   ## Landscape-Service ##
 
+  landscape-service:
+    container_name: landscape-service
+    image: explorviz/landscape-service-jvm:latest
+    networks:
+      - explorviz
+    depends_on:
+      - cassandra
+      - kafka
+    ports:
+      - 8082:8080
+    environment:
+      - QUARKUS_CASSANDRA_CONTACT_POINTS=cassandra:9042
+      - QUARKUS_CASSANDRA_AUTH_USERNAME=cassandra
+      - QUARKUS_CASSANDRA_AUTH_PASSWORD=cassandra
+      - MP_MESSAGING_INCOMING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - EXPLORVIZ_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+  
   landscape-service-dev:
-    container_name: landscape-service-empty
+    container_name: landscape-service-dev
     image: alpine:3
     tty: true
     networks:
@@ -112,8 +156,25 @@ services:
 
   ## Trace-Service ##
 
+  trace-service:
+    container_name: trace-service
+    image: explorviz/trace-service-jvm:latest
+    ports:
+      - 8083:8080
+    networks:
+      - explorviz
+    depends_on:
+      - cassandra
+      - kafka
+    environment:
+      - QUARKUS_CASSANDRA_CONTACT_POINTS=cassandra:9042
+      - QUARKUS_CASSANDRA_AUTH_USERNAME=cassandra
+      - QUARKUS_CASSANDRA_AUTH_PASSWORD=cassandra
+      - MP_MESSAGING_INCOMING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - EXPLORVIZ_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+
   trace-service-dev:
-    container_name: trace-service-empty
+    container_name: trace-service-dev
     image: alpine:3
     tty: true
     networks:
@@ -135,8 +196,22 @@ services:
     networks:
       - explorviz
 
+  user-service:
+    container_name: user-service
+    image: explorviz/user-service-jvm:latest
+    ports:
+      - 8084:8080
+    networks:
+      - explorviz
+    depends_on:
+      - mongo-user
+      - kafka
+    environment:
+      - MP_MESSAGING_OUTGOING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-user:27017
+
   user-service-dev:
-    container_name: user-service-empty
+    container_name: user-service-dev
     image: alpine:3
     tty: true
     networks:
@@ -147,12 +222,57 @@ services:
 
   ## Frontend ##
 
+  # TODO
+
+  ## Helper-Services ##
+
+  dev-environment:
+    container_name: starter-explorviz-dev-environment
+    image: alpine:3
+    tty: true
+    networks:
+      - explorviz
+    depends_on:
+      - adapter-service-dev
+      - trace-service-dev
+      - landscape-service-dev
+      - user-service-dev
+
+  all:
+    container_name: starter-explorviz
+    image: alpine:3
+    tty: true
+    networks:
+      - explorviz
+    depends_on:
+      - adapter-service
+      - trace-service
+      - landscape-service
+      - user-service
+
+# Volumes
+# Delete all ExplorViz volumes: 
+# docker volume rm $(docker volume ls -f name=explorviz -q)
+
 volumes:
+  zookeeper-data:
+    name: explorviz-zookeeper-data
+  zookeeper-data-log:
+    name: explorviz-zookeeper-data-log
+  zookeeper-log:
+    name: explorviz-zookeeper-log
+  kafka:
+    name: explorviz-kafka
+  schema-registry:
+    name: explorviz-schema-registry
   user-mongo-data:
+    name: explorviz-mongo-user-data
   user-mongo-configdb:
+    name: explorviz-mongo-user-config
   cassandra:
+    name: explorviz-cassandra
   redis-adapter:
-  
+    name: explorviz-redis
 
 networks:
   explorviz:
