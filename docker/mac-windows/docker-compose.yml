@@ -93,6 +93,7 @@ services:
       - explorviz
     depends_on:
       - redis-adapter
+      - schema-registry
       - oc-collector
     environment:
       - QUARKUS_REDIS_HOSTS=redis://redis-adapter:6379
@@ -134,7 +135,7 @@ services:
       - explorviz
     depends_on:
       - cassandra
-      - kafka
+      - schema-registry
     ports:
       - 8082:8080
     environment:
@@ -152,7 +153,7 @@ services:
       - explorviz
     depends_on:
       - cassandra
-      - kafka
+      - schema-registry
 
   ## Trace-Service ##
 
@@ -165,7 +166,7 @@ services:
       - explorviz
     depends_on:
       - cassandra
-      - kafka
+      - schema-registry
     environment:
       - QUARKUS_CASSANDRA_CONTACT_POINTS=cassandra:9042
       - QUARKUS_CASSANDRA_AUTH_USERNAME=cassandra
@@ -181,7 +182,7 @@ services:
       - explorviz
     depends_on:
       - cassandra
-      - kafka
+      - schema-registry
 
   ## User-Service ##
 
@@ -205,7 +206,7 @@ services:
       - explorviz
     depends_on:
       - mongo-user
-      - kafka
+      - schema-registry
     environment:
       - MP_MESSAGING_OUTGOING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-user:27017
@@ -218,7 +219,7 @@ services:
       - explorviz
     depends_on:
       - mongo-user
-      - kafka
+      - schema-registry
 
   ## Frontend ##
 
