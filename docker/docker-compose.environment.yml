@@ -63,6 +63,7 @@ services:
     image: omnition/opencensus-collector:0.1.11
     container_name: oc-collector
     command: ["--config=/etc/oc-collector-config.yaml"]
+    restart: on-failure
     volumes:
       - ./generic/oc-collector-config.yaml:/etc/oc-collector-config.yaml
     ports:
