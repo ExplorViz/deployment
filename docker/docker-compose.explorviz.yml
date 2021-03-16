@@ -1,0 +1,75 @@
+# docker-compose pull && docker-compose up -d
+
+# docker-compose down -v
+
+# docker-compose -f docker-compose.explorviz.yml -f docker-compose.environment.yml down -v
+
+version: "3.5"
+services:
+
+  ## Adapter-Service ##
+
+  adapter-service:
+    container_name: adapter-service
+    image: explorviz/adapter-service-jvm:latest
+    networks:
+      - explorviz
+    environment:
+      - QUARKUS_REDIS_HOSTS=redis://redis-adapter:6379
+      - MP_MESSAGING_INCOMING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - EXPLORVIZ_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+
+  ## Landscape-Service ##
+
+  landscape-service:
+    container_name: landscape-service
+    image: explorviz/landscape-service-jvm:latest
+    networks:
+      - explorviz
+    ports:
+      - 8082:8080
+    environment:
+      - QUARKUS_CASSANDRA_CONTACT_POINTS=cassandra:9042
+      - QUARKUS_CASSANDRA_AUTH_USERNAME=cassandra
+      - QUARKUS_CASSANDRA_AUTH_PASSWORD=cassandra
+      - MP_MESSAGING_INCOMING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - EXPLORVIZ_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+
+  ## Trace-Service ##
+
+  trace-service:
+    container_name: trace-service
+    image: explorviz/trace-service-jvm:latest
+    ports:
+      - 8083:8080
+    networks:
+      - explorviz
+    environment:
+      - QUARKUS_CASSANDRA_CONTACT_POINTS=cassandra:9042
+      - QUARKUS_CASSANDRA_AUTH_USERNAME=cassandra
+      - QUARKUS_CASSANDRA_AUTH_PASSWORD=cassandra
+      - MP_MESSAGING_INCOMING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - EXPLORVIZ_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+
+  ## User-Service ##
+
+  user-service:
+    container_name: user-service
+    image: explorviz/user-service-jvm:latest
+    ports:
+      - 8084:8080
+    networks:
+      - explorviz
+    environment:
+      - MP_MESSAGING_OUTGOING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-user:27017
+
+  ## Frontend ##
+
+  # TODO
+
+  ## Helper-Services ##
+
+networks:
+  explorviz:
+    name: explorviz
