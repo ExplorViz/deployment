@@ -1,5 +1,3 @@
-# https://inspectit.github.io/inspectit-ocelot/docs/instrumentation/rules#actions
-
 inspectit:
 
   metrics:
@@ -7,53 +5,53 @@ inspectit:
 
   instrumentation:
     scopes:
-      allClasses:
-        type: {name: net, matcher-mode: STARTS_WITH_IGNORE_CASE}
+      s_allClasses:
+        type:
+            name: net
+            matcher-mode: STARTS_WITH_IGNORE_CASE
 
     rules:
-      all_methods_no_input_return:
+      r_all_methods_no_input_return:
         scopes:
-          allClasses: true
+          s_allClasses: true
         tracing:
             start-span: true
             attributes:
-
               landscape_token: landscape_token_attr
               application_name: application_name_attr
               application_language: application_language_attr
               application_instance_id: application_instance_id_attr
-
               host_name: host_name_attr
               host_ip: host_ip_attr
               method_fqn: method_fqn_attr
         entry:
           landscape_token_attr:
-            action: set
+            action: a_assign_value
             constant-input:
-              value: "bc71cc55-5f16-4ee7-94e6-eaa5356ced48"
+              # Replace with generated token
+              value: "sample-token"
           application_name_attr:
-            action: set
+            action: a_assign_value
             constant-input:
               value: "fibonacci"
           application_instance_id_attr:
-            action: set
+            action: a_assign_value
             constant-input:
               value: 0
           application_language_attr:
-            action: set
+            action: a_assign_value
             constant-input:
               value: "java"
           host_name_attr:
-           action: get_host_name
+           action: a_get_host_name
           host_ip_attr:
-           action: get_host_ip
+           action: a_get_host_ip
           method_fqn_attr:
-            action: get_method_fqn
-          
-
+            action: a_get_method_fqn
+      
     actions:
       # Returns the name of the host
-      get_host_name:
+      a_get_host_name:
         imports:
           - java.net.InetAddress
         value-body: |
@@ -61,7 +59,7 @@ inspectit:
           return ip.getHostName();
 
       # Returns the IP address of the local adapter
-      get_host_ip:
+      a_get_host_ip:
         imports:
           - java.net.InetAddress
         value-body: |
@@ -69,7 +67,7 @@ inspectit:
           return ip.getHostAddress();
 
       # Returns the FQN of the called method, delimited with dots. 
-      get_method_fqn:
+      a_get_method_fqn:
         input:
           _methodName: String
           _class: Class
@@ -83,5 +81,5 @@ inspectit:
     tracing:
       open-census-agent:
         address: "localhost:55678"
-        service-name: "Alex sein Test - OpenCensus"
+        service-name: "OC Agent Local"
         use-insecure: true
