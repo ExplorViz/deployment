@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: explorviz-collaborative-service
+  labels:
+    app: explorviz-collaborative-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: explorviz-collaborative-service
+  template:
+    metadata:
+      labels:
+        app: explorviz-collaborative-service
+    spec:
+      containers:
+      - name: explorviz-collaborative-service
+        image: explorviz/collaborative-service-jvm:latest
+        ports:
+          - containerPort: 80
+        imagePullPolicy: Always
+      nodeSelector:
+        env: prod 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: explorviz-collaborative-service
+  labels:
+    app: explorviz-collaborative-service
+spec:
+  type: NodePort
+  ports:
+    - name: explorviz-collaborative-service
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+      nodePort: 32683
+  selector:
+    app: explorviz-collaborative-service
