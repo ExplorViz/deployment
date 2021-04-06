@@ -68,9 +68,13 @@ services:
 
   ## Frontend ##
 
-  # TODO
-
-  ## Helper-Services ##
+  frontend:
+    container_name: explorviz-frontend
+    image: explorviz/explorviz-frontend:dev
+    ports:
+      - 4200:80
+    networks:
+      - explorviz
 
 networks:
   explorviz:
