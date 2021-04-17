@@ -66,6 +66,16 @@ services:
       - MP_MESSAGING_OUTGOING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-user:27017
 
+  ## Collaborative-Service ##
+
+  collaborative-service:
+    container_name: collaborative-service
+    image: explorviz/collaborative-service-jvm:latest
+    ports:
+      - 8085:8080
+    networks:
+      - explorviz
+
   ## Frontend ##
 
   frontend:
