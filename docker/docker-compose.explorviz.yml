@@ -36,6 +36,7 @@ services:
       - QUARKUS_CASSANDRA_REQUEST_TIMEOUT=10
       - MP_MESSAGING_INCOMING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - EXPLORVIZ_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - EXPLORVIZ_LOG_LVL=DEBUG
 
   ## Trace-Service ##
 
@@ -53,6 +54,7 @@ services:
       - QUARKUS_CASSANDRA_REQUEST_TIMEOUT=10
       - MP_MESSAGING_INCOMING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - EXPLORVIZ_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - EXPLORVIZ_LOG_LVL=DEBUG
 
   ## User-Service ##
 
@@ -66,6 +68,7 @@ services:
     environment:
       - MP_MESSAGING_OUTGOING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-user:27017
+      - EXPLORVIZ_LOG_LVL=DEBUG
 
   ## Collaborative-Service ##
 
@@ -76,6 +79,8 @@ services:
       - 8085:8080
     networks:
       - explorviz
+    environment:
+      - EXPLORVIZ_LOG_LVL=DEBUG
 
   ## Frontend ##
 
