@@ -1,0 +1,97 @@
+# docker-compose -f docker-compose.explorviz.yml pull
+
+# docker-compose -f docker-compose.explorviz.yml up -d
+
+# docker-compose -f docker-compose.explorviz.yml -f docker-compose.environment.yml down -v
+
+version: "3.5"
+services:
+
+  ## Adapter-Service ##
+
+  adapter-service:
+    container_name: adapter-service
+    image: explorviz/adapter-service-native:latest
+    networks:
+      - explorviz
+    environment:
+      - QUARKUS_REDIS_HOSTS=redis://redis-adapter:6379
+      - MP_MESSAGING_INCOMING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - EXPLORVIZ_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - EXPLORVIZ_LOG_LVL=TRACE
+
+  ## Landscape-Service ##
+
+  landscape-service:
+    container_name: landscape-service
+    image: explorviz/landscape-service-native:latest
+    networks:
+      - explorviz
+    ports:
+      - 8082:8080
+    environment:
+      - QUARKUS_CASSANDRA_CONTACT_POINTS=cassandra:9042
+      - QUARKUS_CASSANDRA_AUTH_USERNAME=cassandra
+      - QUARKUS_CASSANDRA_AUTH_PASSWORD=cassandra
+      - QUARKUS_CASSANDRA_REQUEST_TIMEOUT=10
+      - MP_MESSAGING_INCOMING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - EXPLORVIZ_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - EXPLORVIZ_LOG_LVL=DEBUG
+
+  ## Trace-Service ##
+
+  trace-service:
+    container_name: trace-service
+    image: explorviz/trace-service-native:latest
+    ports:
+      - 8083:8080
+    networks:
+      - explorviz
+    environment:
+      - QUARKUS_CASSANDRA_CONTACT_POINTS=cassandra:9042
+      - QUARKUS_CASSANDRA_AUTH_USERNAME=cassandra
+      - QUARKUS_CASSANDRA_AUTH_PASSWORD=cassandra
+      - QUARKUS_CASSANDRA_REQUEST_TIMEOUT=10
+      - MP_MESSAGING_INCOMING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - EXPLORVIZ_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - EXPLORVIZ_LOG_LVL=DEBUG
+
+  ## User-Service ##
+
+  user-service:
+    container_name: user-service
+    image: explorviz/user-service-native:latest
+    ports:
+      - 8084:8080
+    networks:
+      - explorviz
+    environment:
+      - MP_MESSAGING_OUTGOING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-user:27017
+      - EXPLORVIZ_LOG_LVL=DEBUG
+
+  ## Collaborative-Service ##
+
+  collaborative-service:
+    container_name: collaborative-service
+    image: explorviz/collaborative-service-jvm:latest
+    ports:
+      - 8085:8080
+    networks:
+      - explorviz
+    environment:
+      - EXPLORVIZ_LOG_LVL=DEBUG
+
+  ## Frontend ##
+
+  frontend:
+    container_name: explorviz-frontend
+    image: explorviz/explorviz-frontend:dev
+    ports:
+      - 4200:80
+    networks:
+      - explorviz
+
+networks:
+  explorviz:
+    name: explorviz
