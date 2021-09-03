@@ -59,17 +59,22 @@ services:
     networks:
       - explorviz
 
-  ## Open Census ##
+  ## Open Telemetry ##
 
-  oc-collector:
-    image: omnition/opencensus-collector:0.1.11
-    container_name: oc-collector
-    command: ["--config=/etc/oc-collector-config.yaml"]
+  otel-collector:
+    container_name: otel-collector
+    image: otel/opentelemetry-collector-contrib:0.34.0
+    command: ["--config=/etc/otel-collector-config.yaml", "--log-level=DEBUG"]
     restart: on-failure
     volumes:
-      - ./generic/oc-collector-config.yaml:/etc/oc-collector-config.yaml
+      - ./generic/otel-collector-config.yaml:/etc/otel-collector-config.yaml
     ports:
-      - "55678:55678"
+      - "55678:55678" # OTLP gRPC receiver
+      - "55679:55679" # zPages
+      - "13133:13133" # health_check extension
+      - "1777:1777"   # pprof extension
+      - "8888:8888"   # Prometheus metrics exposed by the collector
+      - "8889:8889"   # Prometheus exporter metrics
     depends_on:
       - schema-registry
     networks:
