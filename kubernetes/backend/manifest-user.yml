@@ -15,11 +15,13 @@ spec:
         app: explorviz-user-service
     spec:
       containers:
-      - name: explorviz-user-service
-        image: explorviz/user-service-jvm:latest
-        ports:
-          - containerPort: 80
-        imagePullPolicy: Always
+        - name: explorviz-user-service
+          image: explorviz/user-service-native:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: EXPLORVIZ_LOG_LVL
+              value: TRACE
       nodeSelector:
         env: prod 
 ---

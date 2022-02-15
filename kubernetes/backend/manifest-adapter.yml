@@ -15,10 +15,18 @@ spec:
         app: explorviz-adapter-service
     spec:
       containers:
-      - name: explorviz-adapter-service
-        image: explorviz/adapter-service-jvm:latest
-        ports:
-          - containerPort: 80
-        imagePullPolicy: Always
+        - name: explorviz-adapter-service
+          image: explorviz/adapter-service-jvm:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: EXPLORVIZ_LOG_LVL
+              value: TRACE
+            - name: EXPLORVIZ_VALIDATE_TOKEN_EXISTENCE
+              value: 'false'
+            - name: QUARKUS_KAFKA_STREAMS_BOOTSTRAP_SERVERS
+              value: 'theodolite-explorviz-cp-kafka:9092'
+            - name: QUARKUS_KAFKA_STREAMS_SCHEMA_REGISTRY_URL
+              value: 'http://theodolite-explorviz-cp-schema-registry:8081'
       nodeSelector:
         env: prod 

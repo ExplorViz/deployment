@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: explorviz-workload-generator
+spec:
+  selector:
+    matchLabels:
+      app: explorviz-workload-generator
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: explorviz-workload-generator
+    spec:
+      terminationGracePeriodSeconds: 0
+      containers:
+        - name: workload-generator
+          image: explorviz/loadgenerator-adapter
+          env:
+            - name: KUBERNETES_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: KUBERNETES_DNS_NAME
+              value: "titan-ccp-load-generator.$(KUBERNETES_NAMESPACE).svc.cluster.local"
+            - name: KAFKA_BOOTSTRAP_SERVERS
+              value: theodolite-explorviz-cp-kafka:9092
+            - name: KAFKA_INPUT_TOPIC
+              value: cluster-dump-spans
+            - name: LANDSCAPE_TOKEN
+              value: 9dcb88d3-69c7-4dc9-90dc-5d1899ea8aff
+            - name: TOKEN_SECRET
+              value: gC7YFkn2UEv0atff
+      nodeSelector:
+        env: prod

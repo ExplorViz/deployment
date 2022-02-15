@@ -15,11 +15,15 @@ spec:
         app: explorviz-landscape-service
     spec:
       containers:
-       - name: explorviz-landscape-service
-         image: explorviz/landscape-service-jvm:latest
-         imagePullPolicy: Always
+        - name: explorviz-landscape-service
+          image: explorviz/landscape-service-native:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: EXPLORVIZ_LOG_LVL
+              value: TRACE
       nodeSelector:
-        env: prod
+        env: prod 
 ---
 apiVersion: v1
 kind: Service

@@ -15,9 +15,13 @@ spec:
         app: explorviz-trace-service
     spec:
       containers:
-      - name: explorviz-trace-service
-        image: explorviz/trace-service-jvm:latest
-        imagePullPolicy: Always
+        - name: explorviz-trace-service
+          image: explorviz/trace-service-native:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: EXPLORVIZ_LOG_LVL
+              value: TRACE
       nodeSelector:
         env: prod 
 ---

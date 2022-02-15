@@ -1,4 +1,3 @@
-
 extraEnvVars: 
   - name: KAFKA_CFG_LOG_MESSAGE_TIMESTAMP_TYPE
     value: "LogAppendTime"
@@ -22,6 +21,31 @@ nodeSelector:
 
 persistence:
   enabled: false
+
+provisioning:
+  enabled: true
+  topics:
+    - name: cluster-dump-spans
+      partitions: 20
+      replicationFactor: 1
+    - name: explorviz-spans-structure
+      partitions: 20
+      replicationFactor: 1
+    - name: explorviz-spans-dynamic
+      partitions: 20
+      replicationFactor: 1
+    - name: token-events
+      partitions: 20
+      replicationFactor: 1
+    - name: token-events-table
+      partitions: 20
+      replicationFactor: 1
+    - name: cluster-dump-spans
+      partitions: 20
+      replicationFactor: 1
+    - name: cluster-dump-spans
+      partitions: 20
+      replicationFactor: 1
 
 zookeeper:
   persistence:

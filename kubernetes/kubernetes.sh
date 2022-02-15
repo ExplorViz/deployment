@@ -5,8 +5,27 @@ setup() {
   export KUBECONFIG="/Users/alex/.kube/config-se"
 
   echo
+  echo adding grafana repo  
+  helm repo add grafana https://grafana.github.io/helm-charts
+
+  echo
+  echo adding prometheus repo  
+  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+
+  echo
   echo adding helm repo  
   helm repo add bitnami https://charts.bitnami.com/bitnami
+
+  echo
+  echo installing grafana
+  #helm install -f grafana/values.yml grafana grafana/grafana
+  sleep 1
+  
+
+  echo
+  echo installing prometheus
+  #helm install -f prometheus/values.yml prometheus prometheus-community/prometheus
+  sleep 1  
 
   echo
   echo installing kafka
@@ -28,15 +47,10 @@ setup() {
   helm install -f cassandra-traces/values.yml cassandra-traces bitnami/cassandra
   sleep 1
 
-  # Wait until Kafka is ready to create the topics
+  # Wait until Kafka is ready
   echo
   echo waiting for kafka to be ready
   kubectl wait --for=condition=Ready --timeout=360s pod/kafka-0 
-  
-  echo
-  echo kafka is ready
-  echo creating topics
-  source create_topics.sh
 
   # Install the service after Kafka is ready
   echo
@@ -47,11 +61,6 @@ setup() {
   echo 
   echo installing landscape token MongoDB
   helm install -f mongodb-token/values.yml mongo-token bitnami/mongodb
-
-  # Install Redis for adapter
-  echo
-  echo installing token cache
-  helm install -f redis-adapter/values.yml redis-adapter bitnami/redis
 
   # Deploy ExplorViz Adapter Service
   echo
@@ -83,7 +92,7 @@ shutdown() {
   kubectl delete -f oc-collector/manifest.yml
   kubectl delete -f registry/manifest.yml
 
-  helm uninstall redis-adapter mongo-token cassandra-traces cassandra-structure kafka
+  helm uninstall grafana prometheus mongo-token cassandra-traces cassandra-structure kafka
 }
 
 if [ "$(type -t $1)" == 'function' ]; then
