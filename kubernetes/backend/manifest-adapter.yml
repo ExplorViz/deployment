@@ -5,7 +5,7 @@ metadata:
   labels:
     app: explorviz-adapter-service
 spec:
-  replicas: 1
+  replicas: 15
   selector:
     matchLabels:
       app: explorviz-adapter-service
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: explorviz-adapter-service
-          image: explorviz/adapter-service-jvm:latest
+          image: explorviz/adapter-service-jvm:commit
           ports:
             - containerPort: 80
           env:
@@ -29,4 +29,4 @@ spec:
             - name: QUARKUS_KAFKA_STREAMS_SCHEMA_REGISTRY_URL
               value: 'http://theodolite-explorviz-cp-schema-registry:8081'
       nodeSelector:
-        env: prod 
+        env: dev 

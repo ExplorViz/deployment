@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: explorviz-workload-generator
-  replicas: 1
+  replicas: 12
   template:
     metadata:
       labels:
@@ -21,8 +21,10 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.namespace
-            - name: KUBERNETES_DNS_NAME
-              value: "titan-ccp-load-generator.$(KUBERNETES_NAMESPACE).svc.cluster.local"
+            - name: NUM_SENSORS
+              value: '50000'
+            - name: SPANS_AMOUNT
+              value: '1'
             - name: KAFKA_BOOTSTRAP_SERVERS
               value: theodolite-explorviz-cp-kafka:9092
             - name: KAFKA_INPUT_TOPIC
