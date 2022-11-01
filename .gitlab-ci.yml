@@ -2,6 +2,10 @@ stages:
   - test
   - deploy
 
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
 run-pre-commit:
   stage: test
   image: explorviz/pre-commit:latest
@@ -27,7 +31,7 @@ build-petclinic:
 build-demo-supplier:
   stage: deploy
   tags:
-    - exec-docker  
+    - exec-docker
   image:
     name: gcr.io/kaniko-project/executor:debug
     entrypoint: [""]
