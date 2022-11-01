@@ -1,7 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const cors = require("cors");
-const jq = require("node-jq");
+const crypto = require("crypto");
 
 const landscapeApp = express();
 const traceApp = express();
@@ -205,7 +205,7 @@ fs.readFile(`./${increasingSLFilePrefix}-dynamic.json`, (err, json) => {
 let previousStructure = null;
 let topLevelPackageCounter = 0;
 let artificialTopLevelPackageScaffold = {
-  name: "0",
+  name: "1",
   subPackages: [],
   classes: [],
 };
@@ -214,11 +214,14 @@ landscapeApp.get(
   `${landscapeRootUrl}/${increasingSLToken}/structure`,
   async (req, res) => {
     if (previousStructure) {
-      //const newStructure =
-      //addTopLevelPackageToFirstApplication(previousStructure);
-      //console.log("alexhier", previousStructure);
-      const newStructure = await randomizeAllHashCodes(previousStructure);
-      //randomizeAllHashCodes(JSON.parse(JSON.stringify(structureIncreasingSL)));
+      const node = structureIncreasingSL.nodes[0];
+      const app = node.applications[0];
+      const package = app.packages[0];
+
+      const newStructure = addTopLevelPackageToFirstApplication(
+        package,
+        previousStructure
+      );
       previousStructure = JSON.parse(JSON.stringify(newStructure));
     } else {
       previousStructure = JSON.parse(JSON.stringify(structureIncreasingSL));
@@ -260,8 +263,80 @@ function addTopLevelPackageToFirstApplication(structureRecord) {
   return structureRecord;
 }
 
-async function randomizeAllHashCodes(structureRecord) {
-  return jq.run('.. | .hashCode? |= "asd"', structureRecord, { input: "json" });
+function addTopLevelPackageToFirstApplication(
+  topLevelPackage,
+  structureRecord
+) {
+  const deepCopyPackage = JSON.parse(JSON.stringify(topLevelPackage));
+  recursivelyRandomizeAllHashCodesOfPackages(deepCopyPackage);
+
+  const node = structureRecord.nodes[0];
+  const app = node.applications[0];
+
+  const newTopLevelPackage = JSON.parse(
+    JSON.stringify(artificialTopLevelPackageScaffold)
+  );
+
+  newTopLevelPackage.name = topLevelPackageCounter.toString();
+
+  newTopLevelPackage.subPackages = [deepCopyPackage];
+
+  const siblingWithRandomHashCodes = JSON.stringify(newTopLevelPackage);
+
+  app.packages.push(JSON.parse(siblingWithRandomHashCodes));
+
+  topLevelPackageCounter++;
+
+  return structureRecord;
+}
+
+function addSiblingPackageToFirstApplication(structureRecord) {
+  const topLevelPackages = [];
+
+  const node = structureRecord.nodes[0];
+  const app = node.applications[0];
+
+  for (let package of app.packages) {
+    topLevelPackages.push(JSON.parse(JSON.stringify(package)));
+  }
+
+  const newTopLevelPackage = JSON.parse(
+    JSON.stringify(artificialTopLevelPackageScaffold)
+  );
+
+  newTopLevelPackage.name = topLevelPackageCounter.toString();
+
+  for (let package of topLevelPackages) {
+    recursivelyRandomizeAllHashCodesOfPackages(package);
+  }
+
+  newTopLevelPackage.subPackages = topLevelPackages;
+
+  const siblingWithRandomHashCodes = JSON.stringify(newTopLevelPackage);
+
+  app.packages.push(JSON.parse(siblingWithRandomHashCodes));
+
+  topLevelPackageCounter++;
+
+  return structureRecord;
+}
+
+function recursivelyRandomizeAllHashCodesOfPackages(topLevelPackageRecord) {
+  for (let clazz of topLevelPackageRecord.classes) {
+    for (let method of clazz.methods) {
+      const secret = "abcdefg";
+      const hash = crypto
+        .createHmac("sha256", secret)
+        .update("MyFancyMessageMega")
+        .digest("hex");
+
+      method.hashCode = hash;
+    }
+  }
+
+  for (let subPackage of topLevelPackageRecord.subPackages) {
+    recursivelyRandomizeAllHashCodesOfPackages(subPackage);
+  }
 }
 
 /**
