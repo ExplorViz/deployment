@@ -23,7 +23,7 @@ scrape_configs:
     # scheme defaults to 'http'.
 
     static_configs:
-      - targets: ['kafka-lag-exporter:8000', 'localhost:9090','cadvisor:8080','node-exporter:9100']
+      - targets: ['kafka-lag-exporter:8000', 'localhost:9090','node-exporter:9100']
 
   - job_name: 'adapter-service'
     metrics_path: '/q/metrics'
