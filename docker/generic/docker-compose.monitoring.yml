@@ -54,18 +54,19 @@ services:
     volumes:
       - ./grafana/data:/var/lib/grafana
       - ./grafana/provisioning:/etc/grafana/provisioning
-      - ./src:/var/lib/grafana/dashboards
+      - ./grafana/src:/var/lib/grafana/dashboards
     environment:
       - GF_AUTH_DISABLE_LOGIN_FORM=true
       - GF_AUTH_ANONYMOUS_ENABLED=true
       - GF_AUTH_ANONYMOUS_ORG_NAME=Main Org.
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
       - GF_USERS_ALLOW_SIGN_UP=false
-      - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/var/lib/grafana/dashboards/dashboard.json
+      - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/var/lib/grafana/dashboards/explorviz-all.json
     ports:
       - ${MONITORING_GRAFANA_PORT}:${MONITORING_GRAFANA_PORT}
     networks:
       - explorviz
+
 volumes:
   prometheus-data:
     name: explorviz-prometheus-data
