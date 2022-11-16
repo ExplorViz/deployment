@@ -45,6 +45,12 @@ services:
     networks:
       - explorviz
 
+  kafka-lag-exporter:
+    image: seglo/kafka-lag-exporter:0.8.2
+    volumes:
+      - ./kafka-lag-exporter:/opt/docker/conf
+    command: "bin/kafka-lag-exporter -Dconfig.file=/opt/docker/conf/application.conf"
+
   grafana:
     image: grafana/grafana:latest
     container_name: monitoring_grafana
