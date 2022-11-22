@@ -48,7 +48,7 @@ services:
     links:
       - prometheus:prometheus
     volumes:
-      - ./grafana/data:/var/lib/grafana
+      - grafana-data:/var/lib/grafana
       - ./grafana/provisioning:/etc/grafana/provisioning
       - ./grafana/src:/var/lib/grafana/dashboards
     environment:
@@ -66,6 +66,8 @@ services:
 volumes:
   prometheus-data:
     name: explorviz-prometheus-data
+  grafana-data:
+    name: explorviz-grafana-data
 
 networks:
   explorviz:
