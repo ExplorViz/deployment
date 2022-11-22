@@ -19,7 +19,7 @@ services:
     environment:
       - QUARKUS_KAFKA_STREAMS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - EXPLORVIZ_LOG_LVL=DEBUG
-      - EXPLORVIZ_VALIDATE_TOKEN_EXISTENCE=true
+      - EXPLORVIZ_VALIDATE_TOKEN_EXISTENCE=false
     deploy:
       mode: replicated
       replicas: ${ADAPTER_REPLICAS}

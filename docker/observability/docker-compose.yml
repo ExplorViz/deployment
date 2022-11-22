@@ -26,7 +26,7 @@ services:
 
   node-exporter:
     image: prom/node-exporter:latest
-    container_name: monitoring_node_exporter
+    hostname: monitoring_node_exporter
     expose:
       - ${MONITORING_NODE_EXPORTER_PORT}
     networks:
@@ -43,7 +43,9 @@ services:
 
   grafana:
     image: grafana/grafana:latest
-    container_name: monitoring_grafana
+    hostname: monitoring_grafana
+    depends_on:
+      - prometheus
     user: "$UID:$GID"
     links:
       - prometheus:prometheus
