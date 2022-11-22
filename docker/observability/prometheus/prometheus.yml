@@ -14,16 +14,12 @@ rule_files:
 # Here it's Prometheus itself.
 scrape_configs:
   # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
-  - job_name: 'prometheus'
-
-    # Override the global default and scrape targets from this job every 5 seconds.
-    scrape_interval: 5s
-
+  
+  - job_name: 'kafka-lag-exporter'
     # metrics_path defaults to '/metrics'
     # scheme defaults to 'http'.
-
     static_configs:
-      - targets: ['kafka-lag-exporter:8000', 'localhost:9090','node-exporter:9100']
+      - targets: ['kafka-lag-exporter:8000']
 
   - job_name: 'adapter-service'
     metrics_path: '/q/metrics'
