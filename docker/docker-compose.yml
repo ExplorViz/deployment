@@ -45,8 +45,6 @@ services:
       interval: 15s
       timeout: 10s
       retries: 10
-    networks:
-      - explorviz
 
   init-kafka:
     image: confluentinc/cp-kafka:7.3.0
@@ -62,8 +60,6 @@ services:
       - init-kafka-secrets:/etc/kafka/secrets
       - ./generic/kafka/init_kafka_topics.sh:/tmp/init_kafka_topics.sh
     command: "/tmp/init_kafka_topics.sh"
-    networks:
-      - explorviz
 
   schema-registry:
     hostname: schema-registry
@@ -79,8 +75,6 @@ services:
       SCHEMA_REGISTRY_HOST_NAME: 127.0.0.1
     volumes:
       - schema-registry:/etc/schema-registry/secrets
-    networks:
-      - explorviz
 
   ## Open Telemetry ##
 
@@ -97,8 +91,6 @@ services:
       - ${OTEL_COLLECTOR_ZPAGES_PORT}:55679 # zPages
     depends_on:
       - schema-registry
-    networks:
-      - explorviz
 
   ## Cassandra for Landscape and Trace Service ##
 
@@ -118,8 +110,6 @@ services:
       interval: 15s
       timeout: 10s
       retries: 10
-    networks:
-      - explorviz
 
   init-cassandra:
       image: cassandra:3.11.14
@@ -130,8 +120,6 @@ services:
       volumes:
       - ./generic/cassandra/setup.cql:/setup.cql
       command: "cqlsh cassandra-explorviz -f /setup.cql"
-      networks:
-        - explorviz
 
   ## User-Service ##
 
@@ -144,8 +132,6 @@ services:
     volumes:
       - user-mongo-data:/data/db
       - user-mongo-configdb:/data/configdb
-    networks:
-      - explorviz
 
 #endregion Environment
 
@@ -155,13 +141,12 @@ services:
   ## Adapter-Service ##
 
   adapter-service-jvm:
+    hostname: adapter-service
     image: explorviz/adapter-service-jvm:latest
     profiles: ["jvm"]
     depends_on:
       init-kafka:
         condition: service_completed_successfully
-    networks:
-      - explorviz
     environment:
       - QUARKUS_KAFKA_STREAMS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - EXPLORVIZ_LOG_LVL=DEBUG
@@ -183,8 +168,6 @@ services:
         condition: service_completed_successfully
     #ports:
     #- ${LANDSCAPE_PORT}:8080
-    networks:
-      - explorviz
     environment:
       - QUARKUS_CASSANDRA_CONTACT_POINTS=cassandra:9042
       - QUARKUS_CASSANDRA_AUTH_USERNAME=cassandra
@@ -209,8 +192,6 @@ services:
         condition: service_completed_successfully
     #ports:
     #- ${TRACE_PORT}:8080
-    networks:
-      - explorviz
     environment:
       - QUARKUS_CASSANDRA_CONTACT_POINTS=cassandra:9042
       - QUARKUS_CASSANDRA_AUTH_USERNAME=cassandra
@@ -235,8 +216,6 @@ services:
         condition: service_completed_successfully
     #ports:
     #- ${USER_PORT}:8080
-    networks:
-      - explorviz
     environment:
       - QUARKUS_OIDC_ENABLED=false
       - INIT_TOKEN_ENABLED=true
@@ -254,8 +233,6 @@ services:
     profiles: ["jvm"]
     #ports:
     #- ${COLLABORATION_PORT}:4444
-    networks:
-      - explorviz
     environment:
       - EXPLORVIZ_LOG_LVL=DEBUG
 
@@ -271,8 +248,6 @@ services:
       - trace-service-jvm
     ports:
       - ${FRONTEND_PORT}:80
-    networks:
-      - explorviz
     environment:
       - FRONTEND_HOST_URL=http://${FRONTEND_HOST_NAME}:${FRONTEND_PORT}
       - FRONTEND_HOST_NAME=${FRONTEND_HOST_NAME}
@@ -299,8 +274,6 @@ services:
     depends_on:
       init-kafka:
         condition: service_completed_successfully
-    networks:
-      - explorviz
     environment:
       - QUARKUS_KAFKA_STREAMS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - EXPLORVIZ_LOG_LVL=DEBUG
@@ -320,8 +293,6 @@ services:
         condition: service_completed_successfully
       init-cassandra:
         condition: service_completed_successfully
-    networks:
-      - explorviz
     environment:
       - QUARKUS_CASSANDRA_CONTACT_POINTS=cassandra:9042
       - QUARKUS_CASSANDRA_AUTH_USERNAME=cassandra
@@ -344,8 +315,6 @@ services:
         condition: service_completed_successfully
       init-cassandra:
         condition: service_completed_successfully
-    networks:
-      - explorviz
     environment:
       - QUARKUS_CASSANDRA_CONTACT_POINTS=cassandra:9042
       - QUARKUS_CASSANDRA_AUTH_USERNAME=cassandra
@@ -369,8 +338,6 @@ services:
         condition: service_completed_successfully
     #ports:
     #- ${USER_PORT}:8080
-    networks:
-      - explorviz
     environment:
       - MP_MESSAGING_OUTGOING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-user:27017
@@ -384,8 +351,6 @@ services:
     profiles: ["native"]
     #ports:
     #- ${COLLABORATION_PORT}:4444
-    networks:
-      - explorviz
     environment:
       - EXPLORVIZ_LOG_LVL=DEBUG
 
@@ -400,8 +365,6 @@ services:
       - trace-service
     ports:
       - ${FRONTEND_PORT}:80
-    networks:
-      - explorviz
     environment:
       - FRONTEND_HOST_URL=http://${FRONTEND_HOST_NAME}:${FRONTEND_PORT}
       - FRONTEND_HOST_NAME=${FRONTEND_HOST_NAME}
@@ -433,8 +396,6 @@ services:
       - ${MONITORING_PROMETHEUS_PORT}
     ports:
       - ${MONITORING_PROMETHEUS_PORT}:${MONITORING_PROMETHEUS_PORT}
-    networks:
-      - explorviz
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
@@ -448,8 +409,6 @@ services:
     volumes:
       - ./observability/kafka-lag-exporter:/opt/docker/conf
     command: "bin/kafka-lag-exporter -Dconfig.file=/opt/docker/conf/application.conf"
-    networks:
-      - explorviz
 
   grafana:
     image: grafana/grafana:latest
@@ -473,8 +432,6 @@ services:
       - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/var/lib/grafana/dashboards/explorviz-all.json
     ports:
       - ${MONITORING_GRAFANA_PORT}:${MONITORING_GRAFANA_PORT}
-    networks:
-      - explorviz
 
 #endregion Observability
 
@@ -508,7 +465,7 @@ volumes:
     name: explorviz-grafana-data
 
 networks:
-  explorviz:
+  default:
     name: explorviz
 
 #endregion Volumes + Network
