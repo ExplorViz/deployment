@@ -105,6 +105,7 @@ services:
       - HEAP_NEWSIZE=200M
     volumes:
       - ./generic/cassandra/setup.cql:/setup.cql
+      - cassandra:/var/lib/cassandra
     healthcheck:
       test: ["CMD", "cqlsh", "-u cassandra", "-p cassandra" ,"-e describe keyspaces"]
       interval: 15s
@@ -119,6 +120,7 @@ services:
           condition: service_healthy
       volumes:
       - ./generic/cassandra/setup.cql:/setup.cql
+      - init-cassandra:/var/lib/cassandra
       command: "cqlsh cassandra-explorviz -f /setup.cql"
 
   ## User-Service ##
@@ -459,6 +461,8 @@ volumes:
     name: explorviz-mongo-user-config
   cassandra:
     name: explorviz-cassandra
+  init-cassandra:
+    name: explorviz-init-cassandra
   prometheus-data:
     name: explorviz-prometheus-data
   grafana-data:
