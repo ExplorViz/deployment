@@ -82,7 +82,7 @@ scrape_configs:
       - names:
           - "collaboration-service"
         type: "A"
-        port: 8080
+        port: 4444
     static_configs:
       - targets:
-        - "host.docker.internal:8085" # dev-mode
+        - "host.docker.internal:4444" # dev-mode
