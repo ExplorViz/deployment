@@ -381,7 +381,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "collaboration-service"
+              "options": "collaborative-service"
             },
             "properties": [
               {
@@ -621,7 +621,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "sum by (job, topic) (kafka_consumer_fetch_manager_records_consumed_total)",
+          "expr": "sum by (job, topic) (kafka_consumer_fetch_manager_records_consumed_total{topic!=\"\"})",
           "hide": false,
           "interval": "",
           "legendFormat": "{{job}} ({{topic}})",
