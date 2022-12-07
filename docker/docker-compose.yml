@@ -31,6 +31,7 @@ services:
       KAFKA_JMX_PORT: ${KAFKA_JMX_PORT}
       KAFKA_JMX_HOSTNAME: localhost
       KAFKA_PROCESS_ROLES: 'broker,controller'
+      KAFKA_MESSAGE_MAX_BYTES: 10485880
       KAFKA_NODE_ID: 1
       KAFKA_CONTROLLER_QUORUM_VOTERS: '1@kafka:29093'
       KAFKA_LISTENERS: 'PLAINTEXT://kafka:${KAFKA_INT_PORT},CONTROLLER://kafka:29093,PLAINTEXT_HOST://0.0.0.0:${KAFKA_EXT_PORT}'
@@ -127,7 +128,7 @@ services:
   ## User-Service ##
 
   mongo-user:
-    image: mongo
+    image: mongo:6.0
     hostname: user-mongo
     profiles: ["env"]
     ports:
@@ -150,6 +151,10 @@ services:
     depends_on:
       init-kafka:
         condition: service_completed_successfully
+      kafka:
+        condition: service_healthy
+      schema-registry:
+        condition: service_started
     environment:
       - QUARKUS_KAFKA_STREAMS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - EXPLORVIZ_LOG_LVL=DEBUG
@@ -169,6 +174,12 @@ services:
         condition: service_completed_successfully
       init-cassandra:
         condition: service_completed_successfully
+      kafka:
+        condition: service_healthy
+      cassandra:
+        condition: service_healthy
+      schema-registry:
+        condition: service_started
     #ports:
     #- ${LANDSCAPE_PORT}:8080
     environment:
@@ -193,6 +204,12 @@ services:
         condition: service_completed_successfully
       init-cassandra:
         condition: service_completed_successfully
+      kafka:
+        condition: service_healthy
+      cassandra:
+        condition: service_healthy
+      schema-registry:
+        condition: service_started
     #ports:
     #- ${TRACE_PORT}:8080
     environment:
@@ -217,6 +234,12 @@ services:
     depends_on:
       init-kafka:
         condition: service_completed_successfully
+      kafka:
+        condition: service_healthy
+      mongo-user:
+        condition: service_started
+      schema-registry:
+        condition: service_started
     #ports:
     #- ${USER_PORT}:8080
     environment:
@@ -249,6 +272,8 @@ services:
     depends_on:
       - landscape-service-jvm
       - trace-service-jvm
+      - user-service-jvm
+      - collaboration-service-jvm
     ports:
       - ${FRONTEND_PORT}:80
     environment:
@@ -346,11 +371,11 @@ services:
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-user:27017
       - EXPLORVIZ_LOG_LVL=DEBUG
 
-  ## Collaborative-Service ##
+  ## Collaboration-Service ##
 
-  collaborative-service:
+  collaboration-service:
     hostname: collaboration-service
-    image: explorviz/collaborative-service-jvm:latest
+    image: explorviz/collaboration-service-native:latest
     profiles: ["native"]
     #ports:
     #- ${COLLABORATION_PORT}:4444
@@ -366,6 +391,8 @@ services:
     depends_on:
       - landscape-service
       - trace-service
+      - user-service
+      - collaboration-service
     ports:
       - ${FRONTEND_PORT}:80
     environment:
@@ -410,6 +437,8 @@ services:
     depends_on:
       init-kafka:
         condition: service_completed_successfully
+      kafka:
+        condition: service_started
     volumes:
       - ./monitoring/kafka-lag-exporter:/opt/docker/conf
     command: "bin/kafka-lag-exporter -Dconfig.file=/opt/docker/conf/application.conf"
