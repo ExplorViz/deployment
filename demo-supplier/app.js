@@ -244,6 +244,34 @@ traceApp.get(
 
 // END Increasing SL Sample
 
+// BEGIN PlantUML Sample
+
+const plantUmlToken = "12845195-6144-4254-a17b-0f7fb49adb0a";
+const plantUmlFilePrefix = "plantuml";
+let structurePlantUml = {};
+let dynamicPlantUml = {};
+
+fs.readFile(`./${plantUmlFilePrefix}-structure.json`, (err, json) => {
+  structurePlantUml = JSON.parse(json);
+});
+
+fs.readFile(`./${plantUmlFilePrefix}-dynamic.json`, (err, json) => {
+  dynamicPlantUml = JSON.parse(json);
+});
+
+landscapeApp.get(
+  `${landscapeRootUrl}/${plantUmlToken}/structure`,
+  function (req, res) {
+    res.json(structurePlantUml);
+  }
+);
+
+traceApp.get(`${traceRootUrl}/${plantUmlToken}/dynamic`, function (req, res) {
+  res.json(dynamicPlantUml);
+});
+
+// END PlantUML Sample
+
 function addTopLevelPackageToFirstApplication(structureRecord) {
   const oldTopLevelPackages = [];
 
