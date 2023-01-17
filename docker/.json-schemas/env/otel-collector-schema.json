@@ -6,6 +6,7 @@
     "ports": {
       "type" : "array",
       "items": [
+        { "enum" : ["8888:8888"]},
         { "enum" : ["${OTEL_COLLECTOR_PORT}:55678"]},
         { "enum" : ["${OTEL_COLLECTOR_ZPAGES_PORT}:55679"]}
       ]

@@ -10,6 +10,11 @@ exporters:
     brokers:
       - kafka:9092
     topic: otlp_spans
+  kafka/2:
+    protocol_version: 2.0.0
+    brokers:
+      - kafka:9092
+    topic: otlp_logs
 
   logging:
     loglevel: debug
@@ -22,6 +27,11 @@ service:
   extensions:
     - zpages
   pipelines:
+    logs:
+      receivers:
+        - otlp
+      exporters:
+        - kafka/2
     traces:
       receivers:
         - otlp

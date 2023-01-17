@@ -88,8 +88,9 @@ services:
     volumes:
       - ./generic/otel-collector-config.yaml:/etc/otel-collector-config.yaml
     ports:
-      - ${OTEL_COLLECTOR_PORT}:55678
-      - ${OTEL_COLLECTOR_ZPAGES_PORT}:55679 # zPages
+      - 8888:8888 # Prometheus Metrics Endpoint
+      - ${OTEL_COLLECTOR_PORT}:55678 # gRPC receiver
+      - ${OTEL_COLLECTOR_ZPAGES_PORT}:55679 # zPages HTTP Endpoint
     depends_on:
       - schema-registry
 
