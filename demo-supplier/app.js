@@ -7,33 +7,40 @@ const compression = require("compression");
 const landscapeApp = express();
 const traceApp = express();
 const userApp = express();
+const codeApp = express();
 
 // Disable caching to prevent HTTP 304
 landscapeApp.disable("etag");
 traceApp.disable("etag");
 userApp.disable("etag");
+codeApp.disable("etag");
 
 landscapeApp.use(compression());
 traceApp.use(compression());
 userApp.use(compression());
+codeApp.use(compression());
 
 const landscapePort = 8082;
 const tracePort = 8083;
 const userPort = 8084;
+const codePort = 8075;
 
 traceApp.use(cors());
 landscapeApp.use(cors());
 userApp.use(cors());
+codeApp.use(cors());
 
 traceApp.listen(tracePort, () => {});
 landscapeApp.listen(landscapePort, () => {});
 userApp.listen(userPort, () => {});
+codeApp.listen(codePort, () => {});
 
 let user = {};
 
 const landscapeRootUrl = "/v2/landscapes";
 const traceRootUrl = "/v2/landscapes";
 const userRootUrl = "/user/:uid/token";
+const codeRootUrl = "/v2/landscapes";
 
 fs.readFile("./user.json", (err, json) => {
   user = JSON.parse(json);
@@ -111,6 +118,7 @@ const petclinicToken = "19844195-7235-4254-a17b-0f7fb49adb0a";
 const petclinicFilePrefix = "petclinic";
 let structurePetclinic = {};
 let dynamicPetclinic = {};
+let codePetclinic = {};
 
 fs.readFile(`./${petclinicFilePrefix}-structure.json`, (err, json) => {
   structurePetclinic = JSON.parse(json);
@@ -118,6 +126,10 @@ fs.readFile(`./${petclinicFilePrefix}-structure.json`, (err, json) => {
 
 fs.readFile(`./${petclinicFilePrefix}-dynamic.json`, (err, json) => {
   dynamicPetclinic = JSON.parse(json);
+});
+
+fs.readFile(`./${petclinicFilePrefix}-code.json`, (err, json) => {
+  codePetclinic = JSON.parse(json);
 });
 
 landscapeApp.get(
@@ -129,6 +141,10 @@ landscapeApp.get(
 
 traceApp.get(`${traceRootUrl}/${petclinicToken}/dynamic`, function (req, res) {
   res.json(removeRandomTraces(dynamicPetclinic));
+});
+
+codeApp.get(`${codeRootUrl}/${petclinicToken}/code`, function (req, res) {
+  res.json(codePetclinic);
 });
 
 // END Petclinic Sample
