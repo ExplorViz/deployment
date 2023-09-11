@@ -14,7 +14,7 @@ services:
       - agent-vol:/agent
 
   plantuml:
-    image: plantuml/plantuml-server:latest
+    image: plantuml/plantuml-server:jetty-v1.2022.7
     depends_on:
       - ocelot-agent
     ports:
