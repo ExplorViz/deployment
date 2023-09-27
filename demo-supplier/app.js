@@ -192,6 +192,34 @@ traceApp.get(`${traceRootUrl}/${studyToken}/dynamic`, function (req, res) {
 
 // END Study Sample
 
+// BEGIN ArgoUML
+
+const argoUmlToken = "09ac9d6c-7f7c-4084-a531-8db6f83bb1ca";
+const argoUmlFilePrefix = "argo-uml";
+let structureArgoUml = {};
+let dynamicArgoUml = {};
+
+fs.readFile(`./${argoUmlFilePrefix}-structure.json`, (err, json) => {
+  structureArgoUml = JSON.parse(json);
+});
+
+fs.readFile(`./${argoUmlFilePrefix}-dynamic.json`, (err, json) => {
+  dynamicArgoUml = JSON.parse(json);
+});
+
+landscapeApp.get(
+  `${landscapeRootUrl}/${argoUmlToken}/structure`,
+  function (req, res) {
+    res.json(structureArgoUml);
+  }
+);
+
+traceApp.get(`${traceRootUrl}/${argoUmlToken}/dynamic`, function (req, res) {
+  res.json(dynamicArgoUml);
+});
+
+// END ArgoUML
+
 // BEGIN Increasing SL Sample
 
 const increasingSLToken = "12444195-6144-4254-a17b-0f7fb49adb0a";

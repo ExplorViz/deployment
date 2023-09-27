@@ -1,0 +1,52 @@
+inspectit:
+  tags:
+    extra:
+      landscape_token: 09ac9d6c-7f7c-4084-a531-8db6f83bb1ca
+      token_secret: 8L4WolMN0HVSKv1S
+      application_name: "argouml-demo"
+      application_instance_id: 0
+      application_language: "java"
+
+  tracing:
+    add-common-tags: ALWAYS
+
+  metrics:
+    enabled: false
+
+  instrumentation:
+    scopes:
+      s_allClasses:
+        type:
+          name: org
+          matcher-mode: STARTS_WITH_IGNORE_CASE
+
+    rules:
+      r_all_methods_no_input_return:
+        scopes:
+          s_allClasses: true
+        tracing:
+          start-span: true
+          attributes:
+            java.fqn: method_fqn_attr
+        entry:
+          method_fqn_attr:
+            action: a_get_method_fqn
+
+    actions:
+      a_get_method_fqn:
+        input:
+          _methodName: String
+          _class: Class
+        value: "new StringBuilder(_class.getName()).append('.').append(_methodName).toString()"
+
+  logging:
+    debug: true
+    trace: false
+
+  exporters:
+    tracing:
+      service-name: "Ocelot Otel Exporter"
+      otlp:
+        enabled: true
+        endpoint: "http://localhost:55678"
+        protocol: grpc
