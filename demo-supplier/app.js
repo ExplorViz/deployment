@@ -1,6 +1,6 @@
 const express = require("express");
 const { readFile, writeFile } = require("node:fs/promises");
-const { createHash } = require('crypto');
+const { createHash } = require("crypto");
 const cors = require("cors");
 const compression = require("compression");
 const {
@@ -8,7 +8,7 @@ const {
   recursivelyRandomizeAllHashCodesOfPackages,
   copyPackageAndTraces,
   createRandomHex,
-  findFirstCommit
+  findFirstCommit,
 } = require("./utils.js");
 
 const path = require("path");
@@ -22,7 +22,6 @@ const userApp = createExpressApplication(8084);
 const landscapeRootUrl = "/v2/landscapes";
 const traceRootUrl = "/v2/landscapes";
 const userRootUrl = "/user/:uid/token";
-
 
 (async () => {
   const user = JSON.parse(await readFile("./user.json"));
@@ -77,19 +76,22 @@ createLandscapeSample({
     app.packages.unshift({
       name: "changing",
       subPackages: [],
-      classes: Array.from({length:12}, () => ({
+      classes: Array.from({ length: 12 }, () => ({
         name: "C" + createRandomHex(6),
-        methods: []
-      }))
+        methods: [],
+      })),
     });
 
-    for (let i=0; i<15; i++) {
-      const { packageCopy, newTraces } = copyPackageAndTraces(package, originalTraces);
+    for (let i = 0; i < 15; i++) {
+      const { packageCopy, newTraces } = copyPackageAndTraces(
+        package,
+        originalTraces
+      );
 
       app.packages.push({
         name: `petclinic${i}`,
         subPackages: [packageCopy],
-        classes: []
+        classes: [],
       });
 
       traces.push(...newTraces);
@@ -97,9 +99,9 @@ createLandscapeSample({
   },
   structureModifier: (structure) => {
     const changingPackage = structure.nodes[0].applications[0].packages[0];
-    changingPackage.classes.forEach(c => c.name = "C" + createRandomHex(6));
+    changingPackage.classes.forEach((c) => (c.name = "C" + createRandomHex(6)));
     return structure;
-  }
+  },
 });
 
 {
@@ -169,8 +171,6 @@ function createExpressApplication(port) {
   return app;
 }
 
-
-
 createLandscapeSample({
   filePrefix: "plantuml",
   token: "somerandomtoken",
@@ -196,96 +196,102 @@ async function createLandscapeSample({
   token,
   traceModifier,
   structureModifier,
-  initializer
+  initializer,
 }) {
   const structureData = JSON.parse(
     await readFile(`demo-data/${filePrefix}-structure.json`)
   );
-  
+
   const dynamicData = JSON.parse(
     await readFile(`demo-data/${filePrefix}-dynamic.json`)
   );
 
-  
-  if(filePrefix === "petclinic") { // currently only petclinic evolution files available
+  if (filePrefix === "petclinic") {
+    // currently only petclinic evolution files available
     const evolutionDataBranches = JSON.parse(
       await readFile(`demo-data/evolution/${filePrefix}/branches.json`)
     );
 
     landscapeApp.get(`${landscapeRootUrl}/${token}/branches`, (req, res) =>
-    res.json(
-      evolutionDataBranches
-    )
-  );
-
-  landscapeApp.get(`${landscapeRootUrl}/${token}/commit-report/:cid`, async (req, res) => {
-    const commitData = await readFile(`demo-data/evolution/${filePrefix}/commit-reports/CommitReport_${req.params.cid}.json`);
-    const commitDataParsed = JSON.parse(
-      commitData
+      res.json(evolutionDataBranches)
     );
-    res.json(commitDataParsed);
-  }
-  );
 
-  landscapeApp.get(`${landscapeRootUrl}/${token}/commit-structure/:cid`, async (req, res) => {
-    let commitStructureData;
-    if(req.params.cid !== "923e2b7aa331b8194a6579da99fb6388f15d7f3e"){
-      commitStructureData = await readFile(`demo-data/${filePrefix}-structure.json`);
-    }else {
-      commitStructureData = await readFile(`demo-data/evolution/${filePrefix}/commit-structure/CommitStructure_${req.params.cid}.json`);
-    }
-    const commitStructureDataParsed = JSON.parse(
-      commitStructureData
+    landscapeApp.get(
+      `${landscapeRootUrl}/${token}/commit-report/:cid`,
+      async (req, res) => {
+        const commitData = await readFile(
+          `demo-data/evolution/${filePrefix}/commit-reports/CommitReport_${req.params.cid}.json`
+        );
+        const commitDataParsed = JSON.parse(commitData);
+        res.json(commitDataParsed);
+      }
     );
-    res.json(commitStructureDataParsed);
-  }
-  );
 
-  landscapeApp.get(`${landscapeRootUrl}/${token}/commit-dynamic/:cid`, async (req, res) => {
-    res.json(traceModifier ? traceModifier(dynamicData) : dynamicData);
-  }
-  );
+    landscapeApp.get(
+      `${landscapeRootUrl}/${token}/commit-structure/:cid`,
+      async (req, res) => {
+        let commitStructureData;
+        if (req.params.cid !== "923e2b7aa331b8194a6579da99fb6388f15d7f3e") {
+          commitStructureData = await readFile(
+            `demo-data/${filePrefix}-structure.json`
+          );
+        } else {
+          commitStructureData = await readFile(
+            `demo-data/evolution/${filePrefix}/commit-structure/CommitStructure_${req.params.cid}.json`
+          );
+        }
+        const commitStructureDataParsed = JSON.parse(commitStructureData);
+        res.json(commitStructureDataParsed);
+      }
+    );
+
+    landscapeApp.get(
+      `${landscapeRootUrl}/${token}/commit-dynamic/:cid`,
+      async (req, res) => {
+        res.json(traceModifier ? traceModifier(dynamicData) : dynamicData);
+      }
+    );
   }
 
-
-  if(filePrefix === "plantuml") { // currently only petclinic evolution files available
+  if (filePrefix === "plantuml") {
+    // currently only petclinic evolution files available
     const evolutionDataBranches = JSON.parse(
       await readFile(`demo-data/evolution/${filePrefix}/branches.json`)
     );
 
     landscapeApp.get(`${landscapeRootUrl}/${token}/branches`, (req, res) =>
-    res.json(
-      evolutionDataBranches
-    )
-  );
-
-  landscapeApp.get(`${landscapeRootUrl}/${token}/commit-report/:cid`, async (req, res) => {
-    const commitData = await readFile(`demo-data/evolution/${filePrefix}/analysis-data/CommitReport_${req.params.cid}.json`);
-    const commitDataParsed = JSON.parse(
-      commitData
+      res.json(evolutionDataBranches)
     );
-    res.json(commitDataParsed);
-  }
-  );
 
-  landscapeApp.get(`${landscapeRootUrl}/${token}/commit-structure/:cid`, async (req, res) => {
-    const commitStructureData = await readFile(`demo-data/${filePrefix}-structure.json`);
-    const commitStructureDataParsed = JSON.parse(
-      commitStructureData
+    landscapeApp.get(
+      `${landscapeRootUrl}/${token}/commit-report/:cid`,
+      async (req, res) => {
+        const commitData = await readFile(
+          `demo-data/evolution/${filePrefix}/analysis-data/CommitReport_${req.params.cid}.json`
+        );
+        const commitDataParsed = JSON.parse(commitData);
+        res.json(commitDataParsed);
+      }
     );
-    res.json(commitStructureDataParsed);
+
+    landscapeApp.get(
+      `${landscapeRootUrl}/${token}/commit-structure/:cid`,
+      async (req, res) => {
+        const commitStructureData = await readFile(
+          `demo-data/${filePrefix}-structure.json`
+        );
+        const commitStructureDataParsed = JSON.parse(commitStructureData);
+        res.json(commitStructureDataParsed);
+      }
+    );
+
+    landscapeApp.get(
+      `${landscapeRootUrl}/${token}/commit-dynamic/:cid`,
+      async (req, res) => {
+        res.json(traceModifier ? traceModifier(dynamicData) : dynamicData);
+      }
+    );
   }
-  );
-
-  landscapeApp.get(`${landscapeRootUrl}/${token}/commit-dynamic/:cid`, async (req, res) => {
-    res.json(traceModifier ? traceModifier(dynamicData) : dynamicData);
-  }
-  );
-  }
-
-
-
-
 
   structureData.landscapeToken = token;
   initializer?.(structureData, dynamicData);
@@ -294,39 +300,38 @@ async function createLandscapeSample({
     console.log(filePrefix);
     res.json(
       structureModifier ? structureModifier(structureData) : structureData
-    )
-  }
-  );
+    );
+  });
 
   traceApp.get(`${traceRootUrl}/${token}/dynamic`, (req, res) =>
     res.json(traceModifier ? traceModifier(dynamicData) : dynamicData)
   );
 }
 
-
 // -----------------------------------------------------------------
 
-async function createApplicationStructureFromCommitReport(commitReport, applicationName, landscapeToken){
-
+async function createApplicationStructureFromCommitReport(
+  commitReport,
+  applicationName,
+  landscapeToken
+) {
   const nodeStructure = {
-      landscapeToken: "somerandomtoken",
-      nodes: [
-        {
-          ipAddress: "0.0.0.0",
-          hostName: "randomhostname",
-          applications: []
-        }
-      ]
-    
+    landscapeToken: "somerandomtoken",
+    nodes: [
+      {
+        ipAddress: "0.0.0.0",
+        hostName: "randomhostname",
+        applications: [],
+      },
+    ],
   };
 
   const applicationStructure = {
     name: applicationName,
     language: "java", // we only consider java projects
     instanceId: "0",
-    packages: []
+    packages: [],
   };
-
 
   // Compute packages
   const packageNameToPackageMap = new Map();
@@ -336,46 +341,52 @@ async function createApplicationStructureFromCommitReport(commitReport, applicat
 
   const commitId = commitReport.commitID;
 
-  for (const file of commitReport.files){
+  console.log(commitReport.files.length);
+
+  let counter = 0;
+
+  for (const file of commitReport.files) {
+    counter += 1;
     const fileAndFolders = file.split("/");
     const fileName = fileAndFolders[fileAndFolders.length - 1];
     const fileNameWithoutFileFormat = fileName.split(".")[0];
 
-    console.log(fileNameWithoutFileFormat);
-    
+    console.log(counter + " " + fileNameWithoutFileFormat);
+
     try {
-      const analysisDataRaw = await readFile(`demo-data/evolution/${applicationName}/analysis-data/${fileNameWithoutFileFormat}_${commitId}.json`);
+      const analysisDataRaw = await readFile(
+        `demo-data/evolution/${applicationName}/analysis-data/${fileNameWithoutFileFormat}_${commitId}.json`
+      );
       const analysisData = JSON.parse(analysisDataRaw);
 
-      
-      if(analysisData){
+      if (analysisData) {
         const packageName = analysisData.packageName;
         const packages = packageName.split(".");
         let currentPackage = undefined;
         let parentPackage = undefined;
-        for(let i = 0; i < packages.length; i++){
+        for (let i = 0; i < packages.length; i++) {
           const currentPackageName = packages[i];
-          if(i === 0 && !firstLevelPackageNames.has(currentPackageName)){
+          if (i === 0 && !firstLevelPackageNames.has(currentPackageName)) {
             firstLevelPackageNames.add(currentPackageName);
           }
 
           let id = packages[0];
-          for(let j = 0; j < i; j++){
-            id += "." + packages[j+1];
+          for (let j = 0; j < i; j++) {
+            id += "." + packages[j + 1];
           }
 
           currentPackage = packageNameToPackageMap.get(id); // use full qualified name as id to avoid name clashes
-          if(!currentPackage) {
+          if (!currentPackage) {
             currentPackage = {
               name: currentPackageName,
               subPackages: [],
-              classes: []
+              classes: [],
             };
             packageNameToPackageMap.set(id, currentPackage);
           }
 
-          if(parentPackage){
-            if(!parentPackage.subPackages.includes(currentPackage)){
+          if (parentPackage) {
+            if (!parentPackage.subPackages.includes(currentPackage)) {
               parentPackage.subPackages.push(currentPackage);
             }
           }
@@ -385,8 +396,8 @@ async function createApplicationStructureFromCommitReport(commitReport, applicat
 
         const id = packageName + "fileNameWithoutFileFormat";
         let clazz = fqnClassNameToClass.get(id);
-        if(!clazz){
-           clazz = {
+        if (!clazz) {
+          clazz = {
             name: fileNameWithoutFileFormat,
             methods: [],
           };
@@ -394,25 +405,33 @@ async function createApplicationStructureFromCommitReport(commitReport, applicat
         }
 
         // fill clazz with methods
-        if(!analysisData.classData || !analysisData.classData[`${packageName}.${fileNameWithoutFileFormat}`]){
-          break;
+        if (
+          !analysisData.classData ||
+          !analysisData.classData[`${packageName}.${fileNameWithoutFileFormat}`]
+        ) {
+          continue;
         }
-        const methodData = analysisData.classData[`${packageName}.${fileNameWithoutFileFormat}`].methodData;
-        const superClass = analysisData.classData[`${packageName}.${fileNameWithoutFileFormat}`].superClass;
+        const methodData =
+          analysisData.classData[`${packageName}.${fileNameWithoutFileFormat}`]
+            .methodData;
+        const superClass =
+          analysisData.classData[`${packageName}.${fileNameWithoutFileFormat}`]
+            .superClass;
 
-        if(methodData){
-
-          for(const key of Object.keys(methodData)){
+        if (methodData) {
+          for (const key of Object.keys(methodData)) {
             const temp = key.split(".");
             const temp2 = temp[temp.length - 1].split("#");
             const prefixFQN = temp.slice(0, temp.length - 1);
-            const methodName = temp2[0]; // TODO: if methodName is constructor we write <init> 
+            const methodName = temp2[0]; // TODO: if methodName is constructor we write <init>
             const methodFQN = [...prefixFQN, methodName].join(".");
 
-            if(!functionFQN.has(methodFQN)){
+            if (!functionFQN.has(methodFQN)) {
               const method = {
                 name: methodName,
-                hash: createHash('sha256').update(`${landscapeToken}${methodFQN}`).digest('hex')
+                hash: createHash("sha256")
+                  .update(`${landscapeToken}${methodFQN}`)
+                  .digest("hex"),
               };
               clazz.methods.push(method);
               functionFQN.add(methodFQN);
@@ -421,115 +440,90 @@ async function createApplicationStructureFromCommitReport(commitReport, applicat
             // if(methodData[`${key}`].parameter){
             //  Parameters part of function name?
             // }
-  
           }
 
-
-          if(!currentPackage.classes.includes(clazz)){
+          if (!currentPackage.classes.includes(clazz)) {
             currentPackage.classes.push(clazz);
           }
         }
 
-        if(superClass){
+        if (superClass) {
           clazz.superClass = superClass;
         }
-
       }
-    
     } catch (error) {
       console.log(error);
     }
   }
 
-  firstLevelPackageNames.forEach(name => applicationStructure.packages.push(packageNameToPackageMap.get(name)));
+  firstLevelPackageNames.forEach((name) =>
+    applicationStructure.packages.push(packageNameToPackageMap.get(name))
+  );
   // // TODO: method hash
   nodeStructure.nodes[0].applications.push(applicationStructure);
-  writeFile("demo-data/plantuml-structure.json", JSON.stringify(nodeStructure), (err) => {
-    if(err){
-      throw err;
+  writeFile(
+    "demo-data/plantuml-structure.json",
+    JSON.stringify(nodeStructure),
+    (err) => {
+      if (err) {
+        throw err;
+      }
     }
-  });
+  );
 
-    // for (const file of commitReport.files){
-    //   let parentPackage = undefined;
-    //   let counter = 0;
+  // for (const file of commitReport.files){
+  //   let parentPackage = undefined;
+  //   let counter = 0;
 
+  //   for(const path of paths){
+  //     if(file.startsWith(path)){
+  //       const x = file.replace(path, "");
+  //       const ys = x.split("/");
+  //       for(const y of ys){
+  //         if(y.endsWith(".java")){
+  //           // java file
+  //           if(parentPackage){
+  //             parentPackage.classes.push(y);
+  //           }
+  //         }else {
+  //           // package
 
+  //           if(counter === 0){
+  //             firstLevelPackageNames.add(y);
+  //           }
 
-    //   for(const path of paths){
-    //     if(file.startsWith(path)){
-    //       const x = file.replace(path, "");
-    //       const ys = x.split("/");
-    //       for(const y of ys){
-    //         if(y.endsWith(".java")){
-    //           // java file
-    //           if(parentPackage){
-    //             parentPackage.classes.push(y);
-    //           }
-    //         }else {
-    //           // package
+  //           let currentPackage = packageNameToPackageMap.get(y);
 
-    //           if(counter === 0){
-    //             firstLevelPackageNames.add(y);
-    //           }
+  //           if(!currentPackage) {
+  //             currentPackage = {
+  //               name: y,
+  //               subPackages: [],
+  //               classes: []
+  //             };
+  //             packageNameToPackageMap.set(y, currentPackage);
+  //           }
 
-    //           let currentPackage = packageNameToPackageMap.get(y);
+  //           if(parentPackage){
+  //             if(!parentPackage.subPackages.includes(currentPackage)){
+  //               parentPackage.subPackages.push(currentPackage);
+  //             }
+  //           }
 
-    //           if(!currentPackage) {
-    //             currentPackage = {
-    //               name: y,
-    //               subPackages: [],
-    //               classes: []
-    //             };
-    //             packageNameToPackageMap.set(y, currentPackage);
-    //           }
+  //           parentPackage = currentPackage;
+  //         }
+  //         counter++;
+  //       }
+  //       break;
+  //     }
+  //   }
+  // }
 
-    //           if(parentPackage){
-    //             if(!parentPackage.subPackages.includes(currentPackage)){
-    //               parentPackage.subPackages.push(currentPackage);
-    //             }
-    //           }
+  // // applicationStructure.subPackages.push(packageNameToPackageMap.get(name))
+  // firstLevelPackageNames.forEach(name => applicationStructure.packages.push(packageNameToPackageMap.get(name)));
+  // // TODO: method hash
 
-    //           parentPackage = currentPackage;
-    //         }
-    //         counter++;
-    //       }
-    //       break;
-    //     }
-    //   }
-    // }  
-
-    // // applicationStructure.subPackages.push(packageNameToPackageMap.get(name))
-    // firstLevelPackageNames.forEach(name => applicationStructure.packages.push(packageNameToPackageMap.get(name)));
-    // // TODO: method hash
-
-    // console.log(JSON.stringify(applicationStructure));
-
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // console.log(JSON.stringify(applicationStructure));
+}
 
 // Takes a list of commit reports of an application and creates a commit tree structure. Precondition: the commits of the same branch must be ordered!
 // function createCommitTreeStructureFromCommitReports(commitReportList){
@@ -553,8 +547,6 @@ async function createApplicationStructureFromCommitReport(commitReport, applicat
 //   // });
 
 // }
-
-
 
 // function orderCommitReports(){
 
@@ -581,14 +573,13 @@ async function createApplicationStructureFromCommitReport(commitReport, applicat
 //   const commitIdToBranchName = new Map();
 //   let mainBranch;
 //   const fileNameSplit = results[0].split("_");
-//   const earliestCommitNumber = parseInt(fileNameSplit[fileNameSplit.length - 1]); 
+//   const earliestCommitNumber = parseInt(fileNameSplit[fileNameSplit.length - 1]);
 //   let currentCommitNumber = earliestCommitNumber;
-  
+
 //   results.forEach(fileName => {
 
 //     const commitReport = readFileSync(`demo-data/evolution/plantuml/analysis-data/${fileName}`, "utf-8");
 //     const commitReportJson = JSON.parse(commitReport);
-
 
 //     const branchName = commitReportJson.branchName;
 //     const commitList = branchNameToCommitList.get(branchName);
@@ -597,8 +588,6 @@ async function createApplicationStructureFromCommitReport(commitReport, applicat
 
 //     const fileNameSplit = fileName.split("_");
 //     const commitNumber = parseInt(fileNameSplit[fileNameSplit.length - 1]);
-
-
 
 //     if(parentCommitId === "NONE"){
 //       mainBranch = branchName;
@@ -624,14 +613,18 @@ async function createApplicationStructureFromCommitReport(commitReport, applicat
 //     console.log(val, key);
 //   });
 
-  
 // }
 
-async function testApplicationStructure(){
-  const commitReport = await readFile(`demo-data/evolution/plantuml/analysis-data/CommitReport_4f46b6726efe1937b6edefaf62e6b4a88c534217_0.json`);
-  createApplicationStructureFromCommitReport(JSON.parse(commitReport), "plantuml", "somerandomtoken");
+async function testApplicationStructure() {
+  const commitReport = await readFile(
+    `demo-data/evolution/plantuml/analysis-data/CommitReport_4f46b6726efe1937b6edefaf62e6b4a88c534217_0.json`
+  );
+  createApplicationStructureFromCommitReport(
+    JSON.parse(commitReport),
+    "plantuml",
+    "somerandomtoken"
+  );
 }
 
 testApplicationStructure();
 //orderCommitReports();
-
