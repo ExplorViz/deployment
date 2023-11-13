@@ -1,0 +1,211 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "DriverTextEps.java",
+  "packageName": "net.sourceforge.plantuml.klimt.drawing.eps",
+  "importName": ["java.awt.Color", "java.awt.Shape", "java.awt.font.TextLayout", "java.awt.geom.PathIterator", "java.util.ArrayList", "java.util.List", "net.sourceforge.plantuml.klimt.ClipContainer", "net.sourceforge.plantuml.klimt.UClip", "net.sourceforge.plantuml.klimt.UParam", "net.sourceforge.plantuml.klimt.color.ColorMapper", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.UDriver", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.FontStyle", "net.sourceforge.plantuml.klimt.font.UFontContext", "net.sourceforge.plantuml.klimt.geom.MinMax", "net.sourceforge.plantuml.klimt.shape.UText"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.drawing.eps.DriverTextEps": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.drawing.UDriver\u003cnet.sourceforge.plantuml.klimt.shape.UText, net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphics\u003e"],
+      "field": [{
+        "name": "clipContainer",
+        "type": "net.sourceforge.plantuml.klimt.ClipContainer",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "strategy",
+        "type": "net.sourceforge.plantuml.klimt.drawing.eps.EpsStrategy",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.drawing.eps.DriverTextEps.drawPathIterator#5da7a84f": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "eps",
+            "type": "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphics"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "shape",
+            "type": "java.awt.Shape"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.DriverTextEps.getClosings#9962ff2": {
+          "returnType": "java.util.List\u003cjava.lang.Integer\u003e",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "path",
+            "type": "java.awt.geom.PathIterator"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.DriverTextEps.draw#dd14b71e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.UText"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "mapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }, {
+            "name": "param",
+            "type": "net.sourceforge.plantuml.klimt.UParam"
+          }, {
+            "name": "eps",
+            "type": "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphics"
+          }],
+          "metric": {
+            "loc": "77",
+            "cyclomatic_complexity": "16",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.DriverTextEps.drawAsText#ed76dc88": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.UText"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "param",
+            "type": "net.sourceforge.plantuml.klimt.UParam"
+          }, {
+            "name": "eps",
+            "type": "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphics"
+          }, {
+            "name": "mapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.DriverTextEps.getMinMax#c8966e12": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.MinMax",
+          "modifier": ["static", "private"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "path",
+            "type": "java.awt.geom.PathIterator"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "12",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.DriverTextEps.DriverTextEps#92a53f8b": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "clipContainer",
+            "type": "net.sourceforge.plantuml.klimt.ClipContainer"
+          }, {
+            "name": "strategy",
+            "type": "net.sourceforge.plantuml.klimt.drawing.eps.EpsStrategy"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.DriverTextEps.getOutline#d838b2f6": {
+          "returnType": "java.awt.Shape",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "textLayout",
+            "type": "java.awt.font.TextLayout",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.DriverTextEps.analyze#4c25fa0": {
+          "returnType": "java.util.List\u003cjava.lang.Integer\u003e",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "shape",
+            "type": "java.awt.Shape"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.DriverTextEps.drawSingle#627b78a1": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "eps",
+            "type": "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphics"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "path",
+            "type": "java.awt.geom.PathIterator",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "12",
+            "nestedBlockDepth": "7"
+          }
+        }
+      },
+      "metric": {
+        "loc": "207",
+        "cyclomatic_complexity": "47",
+        "cyclomatic_complexity_weighted": "7",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "262",
+    "cyclomatic_complexity": "7"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,83 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "XmlFactories.java",
+  "packageName": "net.sourceforge.plantuml.xml",
+  "importName": ["javax.xml.parsers.DocumentBuilder", "javax.xml.parsers.DocumentBuilderFactory", "javax.xml.parsers.ParserConfigurationException", "javax.xml.transform.Transformer", "javax.xml.transform.TransformerConfigurationException", "javax.xml.transform.TransformerFactory"],
+  "classData": {
+    "net.sourceforge.plantuml.xml.XmlFactories.TransformerFactoryHolder": {
+      "type": "CLASS",
+      "modifier": ["private", "static"],
+      "field": [{
+        "name": "INSTANCE",
+        "type": "javax.xml.transform.TransformerFactory",
+        "modifier": ["static", "final"]
+      }],
+      "metric": {
+        "loc": "3",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.xml.XmlFactories.DocumentBuilderFactoryHolder": {
+      "type": "CLASS",
+      "modifier": ["private", "static"],
+      "field": [{
+        "name": "INSTANCE",
+        "type": "javax.xml.parsers.DocumentBuilderFactory",
+        "modifier": ["static", "final"]
+      }],
+      "metric": {
+        "loc": "3",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.xml.XmlFactories": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "innerClass": ["net.sourceforge.plantuml.xml.XmlFactories.DocumentBuilderFactoryHolder", "net.sourceforge.plantuml.xml.XmlFactories.TransformerFactoryHolder"],
+      "methodData": {
+        "net.sourceforge.plantuml.xml.XmlFactories.XmlFactories#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xml.XmlFactories.newTransformer#1": {
+          "returnType": "javax.xml.transform.Transformer",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xml.XmlFactories.newDocumentBuilder#1": {
+          "returnType": "javax.xml.parsers.DocumentBuilder",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "22",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "31",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

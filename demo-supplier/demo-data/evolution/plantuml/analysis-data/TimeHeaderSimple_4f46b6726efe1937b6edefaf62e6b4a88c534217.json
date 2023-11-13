@@ -1,0 +1,265 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "TimeHeaderSimple.java",
+  "packageName": "net.sourceforge.plantuml.project.draw",
+  "importName": ["java.util.Set", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.klimt.sprite.SpriteContainerEmpty", "net.sourceforge.plantuml.project.TimeHeaderParameters", "net.sourceforge.plantuml.project.core.PrintScale", "net.sourceforge.plantuml.project.time.Day", "net.sourceforge.plantuml.project.timescale.TimeScale", "net.sourceforge.plantuml.project.timescale.TimeScaleWink"],
+  "classData": {
+    "net.sourceforge.plantuml.project.draw.TimeHeaderSimple": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "colorDays",
+        "type": "net.sourceforge.plantuml.project.TimeHeaderParameters",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "printScale",
+        "type": "net.sourceforge.plantuml.project.core.PrintScale",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "verticalSeparators",
+        "type": "java.util.Set\u003cnet.sourceforge.plantuml.project.time.Day\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.project.draw.TimeHeaderSimple.Pending"],
+      "methodData": {
+        "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.TimeHeaderSimple#f003919a": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "thParam",
+            "type": "net.sourceforge.plantuml.project.TimeHeaderParameters"
+          }, {
+            "name": "printScale",
+            "type": "net.sourceforge.plantuml.project.core.PrintScale"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.getHeaderNameDayHeight#1": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.drawSeparatorsDay#a4046586": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "timeScale",
+            "type": "net.sourceforge.plantuml.project.timescale.TimeScale"
+          }, {
+            "name": "totalHeightWithoutFooter",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.isBold#10b9b": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "wink",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.drawTextsBackground#f58b691f": {
+          "returnType": "void",
+          "modifier": ["protected", "final"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "totalHeightWithoutFooter",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.drawSmallVlinesDay#a4046586": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "timeScale",
+            "type": "net.sourceforge.plantuml.project.timescale.TimeScale"
+          }, {
+            "name": "totalHeightWithoutFooter",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.getTimeFooterHeight#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.drawTimeHeader#f58b691f": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+            "modifier": ["final "]
+          }, {
+            "name": "totalHeightWithoutFooter",
+            "type": "double"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.getFullHeaderHeight#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.getTimeHeaderHeight#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.drawTimeFooter#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.drawSimpleDayCounter#bd848bab": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "timeScale",
+            "type": "net.sourceforge.plantuml.project.timescale.TimeScale"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.project.draw.TimeHeader",
+      "metric": {
+        "loc": "144",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "7",
+        "LCOM4": "5"
+      }
+    },
+    "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.Pending": {
+      "type": "CLASS",
+      "field": [{
+        "name": "x1",
+        "type": "double",
+        "modifier": ["final"]
+      }, {
+        "name": "x2",
+        "type": "double"
+      }, {
+        "name": "color",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.Pending.draw#f58b691f": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "height",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderSimple.Pending.Pending#f21607ba": {
+          "parameter": [{
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "x2",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "15",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "197",
+    "cyclomatic_complexity": "7"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,456 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "VisibilityModifier.java",
+  "packageName": "net.sourceforge.plantuml.skin",
+  "importName": ["net.atmp.InnerStrategy", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XRectangle2D", "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.UDrawable", "net.sourceforge.plantuml.klimt.shape.UEllipse", "net.sourceforge.plantuml.klimt.shape.UPolygon", "net.sourceforge.plantuml.klimt.shape.URectangle", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.StyleSignatureBasic"],
+  "classData": {
+    "net.sourceforge.plantuml.skin.VisibilityModifier": {
+      "type": "ENUM",
+      "modifier": ["public"],
+      "field": [{
+        "name": "foregroundParam",
+        "type": "net.sourceforge.plantuml.skin.ColorParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "backgroundParam",
+        "type": "net.sourceforge.plantuml.skin.ColorParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "unicode",
+        "type": "char",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.skin.VisibilityModifier.getVisibilityModifier#f8be0d72": {
+          "returnType": "net.sourceforge.plantuml.skin.VisibilityModifier",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.CharSequence"
+          }, {
+            "name": "isField",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.getXmiVisibility#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.getStyleSignature#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.getForeground#1": {
+          "returnType": "net.sourceforge.plantuml.skin.ColorParam",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.drawTriangle#7ac67d19": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "filled",
+            "type": "boolean"
+          }, {
+            "name": "size",
+            "type": "int"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.getBackground#1": {
+          "returnType": "net.sourceforge.plantuml.skin.ColorParam",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.drawDiamond#7ac67d19": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "filled",
+            "type": "boolean"
+          }, {
+            "name": "size",
+            "type": "int"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.getUBlock#e9e39dfa": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "size",
+            "type": "int",
+            "modifier": ["final "]
+          }, {
+            "name": "foregroundColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor",
+            "modifier": ["final "]
+          }, {
+            "name": "backgoundColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor",
+            "modifier": ["final "]
+          }, {
+            "name": "withInvisibleRectanble",
+            "type": "boolean",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.getVisibilityModifierForField#2e9375": {
+          "returnType": "net.sourceforge.plantuml.skin.VisibilityModifier",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.drawCircle#7ac67d19": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "filled",
+            "type": "boolean"
+          }, {
+            "name": "size",
+            "type": "int"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.isField#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.regexForVisibilityCharacterInClassName#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.getByUnicode#2e9375": {
+          "returnType": "net.sourceforge.plantuml.skin.VisibilityModifier",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.getUDrawable#de214bee": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UDrawable",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "size",
+            "type": "int",
+            "modifier": ["final "]
+          }, {
+            "name": "foregroundColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor",
+            "modifier": ["final "]
+          }, {
+            "name": "backgoundColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.drawSquare#7ac67d19": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "filled",
+            "type": "boolean"
+          }, {
+            "name": "size",
+            "type": "int"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.VisibilityModifier#976eb75": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "unicode",
+            "type": "char"
+          }, {
+            "name": "foreground",
+            "type": "net.sourceforge.plantuml.skin.ColorParam"
+          }, {
+            "name": "background",
+            "type": "net.sourceforge.plantuml.skin.ColorParam"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.isVisibilityCharacter#6aff0d76": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.CharSequence"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.ensureEven#1980e": {
+          "returnType": "int",
+          "modifier": ["static", "private"],
+          "parameter": [{
+            "name": "n",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.replaceVisibilityModifierByUnicodeChar#f6eaa9d8": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }, {
+            "name": "isField",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.drawInternal#cb59403d": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "size",
+            "type": "int"
+          }, {
+            "name": "foregroundColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor",
+            "modifier": ["final "]
+          }, {
+            "name": "backgoundColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor",
+            "modifier": ["final "]
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "50",
+            "cyclomatic_complexity": "22",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.getVisibilityModifierForMethod#2e9375": {
+          "returnType": "net.sourceforge.plantuml.skin.VisibilityModifier",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "enumConstant": ["PRIVATE_FIELD", "PROTECTED_FIELD", "PACKAGE_PRIVATE_FIELD", "PUBLIC_FIELD", "PRIVATE_METHOD", "PROTECTED_METHOD", "PACKAGE_PRIVATE_METHOD", "PUBLIC_METHOD", "IE_MANDATORY"],
+      "metric": {
+        "loc": "288",
+        "cyclomatic_complexity": "59",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "9"
+      }
+    },
+    "net.sourceforge.plantuml.skin.VisibilityModifier.getUBlock#e9e39dfa.AbstractTextBlock": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.skin.VisibilityModifier.getUBlock#e9e39dfa.AbstractTextBlock.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.getUBlock#e9e39dfa.AbstractTextBlock.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.VisibilityModifier.getUBlock#e9e39dfa.AbstractTextBlock.getInnerPosition#82b92e1f": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XRectangle2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "member",
+            "type": "java.lang.String"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "strategy",
+            "type": "net.atmp.InnerStrategy"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.skin.VisibilityModifier.getUDrawable#de214bee.UDrawable": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.skin.VisibilityModifier.getUDrawable#de214bee.UDrawable.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "343",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

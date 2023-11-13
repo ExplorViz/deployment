@@ -1,0 +1,119 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "NPlayField.java",
+  "packageName": "net.sourceforge.plantuml.nwdiag.next",
+  "importName": ["java.util.ArrayList", "java.util.Collection", "java.util.Collections", "java.util.HashMap", "java.util.List", "java.util.Map", "java.util.Map.Entry", "net.sourceforge.plantuml.nwdiag.core.NServer", "net.sourceforge.plantuml.nwdiag.core.NwGroup"],
+  "classData": {
+    "net.sourceforge.plantuml.nwdiag.next.NPlayField": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "stages",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.nwdiag.next.NStage\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "boxes",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.nwdiag.next.NBox\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.nwdiag.next.NPlayField.createNewStage#1": {
+          "returnType": "net.sourceforge.plantuml.nwdiag.next.NStage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NPlayField.doLayout#1": {
+          "returnType": "java.util.Map\u003cnet.sourceforge.plantuml.nwdiag.next.NBar, java.lang.Integer\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NPlayField.getLast#1": {
+          "returnType": "net.sourceforge.plantuml.nwdiag.next.NStage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NPlayField.fixGroups#8eda2c6": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "groups",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.nwdiag.core.NwGroup\u003e"
+          }, {
+            "name": "servers",
+            "type": "java.util.Collection\u003cnet.sourceforge.plantuml.nwdiag.core.NServer\u003e"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NPlayField.getStage#1980e": {
+          "returnType": "net.sourceforge.plantuml.nwdiag.next.NStage",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "num",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NPlayField.fixServerInGroup#6d6cc6c6": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "server",
+            "type": "net.sourceforge.plantuml.nwdiag.core.NServer"
+          }, {
+            "name": "group",
+            "type": "net.sourceforge.plantuml.nwdiag.core.NwGroup"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NPlayField.addInPlayfield#247904": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "bar",
+            "type": "net.sourceforge.plantuml.nwdiag.next.NBar"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "74",
+        "cyclomatic_complexity": "13",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "121",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

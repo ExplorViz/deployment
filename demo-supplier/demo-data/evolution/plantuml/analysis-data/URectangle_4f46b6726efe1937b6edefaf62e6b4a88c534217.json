@@ -1,0 +1,324 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "URectangle.java",
+  "packageName": "net.sourceforge.plantuml.klimt.shape",
+  "importName": ["net.sourceforge.plantuml.klimt.AbstractShadowable", "net.sourceforge.plantuml.klimt.Shadowable", "net.sourceforge.plantuml.klimt.UClip", "net.sourceforge.plantuml.klimt.UPath", "net.sourceforge.plantuml.klimt.UShapeSized", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.compress.CompressionMode", "net.sourceforge.plantuml.klimt.compress.UShapeIgnorableForCompression", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.geom.MinMax", "net.sourceforge.plantuml.klimt.geom.XDimension2D"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.shape.URectangle": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.UShapeSized", "net.sourceforge.plantuml.klimt.compress.UShapeIgnorableForCompression"],
+      "field": [{
+        "name": "width",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "height",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "rx",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ry",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "comment",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "codeLine",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ignoreForCompressionOnX",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ignoreForCompressionOnY",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.shape.URectangle.withCommentAndCodeLine#874989e1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.URectangle",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "comment",
+            "type": "java.lang.String"
+          }, {
+            "name": "codeLine",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.build#1eef7de1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.URectangle",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "width",
+            "type": "double"
+          }, {
+            "name": "height",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.diagonalCorner#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.klimt.Shadowable",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagonalCorner",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.getCodeLine#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.URectangle#94031ca1": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "width",
+            "type": "double"
+          }, {
+            "name": "height",
+            "type": "double"
+          }, {
+            "name": "rx",
+            "type": "double"
+          }, {
+            "name": "ry",
+            "type": "double"
+          }, {
+            "name": "comment",
+            "type": "java.lang.String"
+          }, {
+            "name": "ignoreForCompressionOnX",
+            "type": "boolean"
+          }, {
+            "name": "ignoreForCompressionOnY",
+            "type": "boolean"
+          }, {
+            "name": "codeLine",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.ignoreForCompressionOnX#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.URectangle",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.getHeight#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.getRx#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.ignoreForCompressionOnY#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.URectangle",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.getRy#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.isIgnoreForCompressionOn#c8da9c28": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "mode",
+            "type": "net.sourceforge.plantuml.klimt.compress.CompressionMode"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.withHeight#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.URectangle",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newHeight",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.rounded#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.URectangle",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "round",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.getWidth#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.getMinMax#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.MinMax",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.getComment#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.drawWhenCompressed#d6e8957": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "mode",
+            "type": "net.sourceforge.plantuml.klimt.compress.CompressionMode"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.build#61032df": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.URectangle",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "dim",
+            "type": "net.sourceforge.plantuml.klimt.geom.XDimension2D"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.withWidth#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.URectangle",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newWidth",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.URectangle.clip#4cde564": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.URectangle",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "clip",
+            "type": "net.sourceforge.plantuml.klimt.UClip"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.AbstractShadowable",
+      "metric": {
+        "loc": "149",
+        "cyclomatic_complexity": "12",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "198",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

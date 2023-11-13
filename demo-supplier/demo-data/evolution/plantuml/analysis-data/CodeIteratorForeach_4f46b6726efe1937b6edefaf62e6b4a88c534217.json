@@ -1,0 +1,105 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CodeIteratorForeach.java",
+  "packageName": "net.sourceforge.plantuml.tim.iterator",
+  "importName": ["java.util.List", "net.sourceforge.plantuml.json.JsonValue", "net.sourceforge.plantuml.text.StringLocated", "net.sourceforge.plantuml.text.TLineType", "net.sourceforge.plantuml.tim.EaterException", "net.sourceforge.plantuml.tim.EaterExceptionLocated", "net.sourceforge.plantuml.tim.EaterForeach", "net.sourceforge.plantuml.tim.ExecutionContextForeach", "net.sourceforge.plantuml.tim.TContext", "net.sourceforge.plantuml.tim.TMemory", "net.sourceforge.plantuml.tim.TVariableScope", "net.sourceforge.plantuml.tim.expression.TValue"],
+  "classData": {
+    "net.sourceforge.plantuml.tim.iterator.CodeIteratorForeach": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "context",
+        "type": "net.sourceforge.plantuml.tim.TContext",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "memory",
+        "type": "net.sourceforge.plantuml.tim.TMemory",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "logs",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.tim.iterator.CodeIteratorForeach.peek#1": {
+          "returnType": "net.sourceforge.plantuml.text.StringLocated",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "47",
+            "cyclomatic_complexity": "14",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.tim.iterator.CodeIteratorForeach.setLoopVariable#34fa322": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "foreach",
+            "type": "net.sourceforge.plantuml.tim.ExecutionContextForeach"
+          }, {
+            "name": "position",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.iterator.CodeIteratorForeach.CodeIteratorForeach#b1d92167": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.tim.iterator.CodeIterator"
+          }, {
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "logs",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.iterator.CodeIteratorForeach.executeForeach#fb0675cd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.tim.iterator.AbstractCodeIterator",
+      "metric": {
+        "loc": "81",
+        "cyclomatic_complexity": "16",
+        "cyclomatic_complexity_weighted": "8",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "131",
+    "cyclomatic_complexity": "8"
+  },
+  "author": "plantuml@gmail.com"
+}

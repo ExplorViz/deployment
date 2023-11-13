@@ -1,0 +1,95 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "AbstractElementFactoryComplex.java",
+  "packageName": "net.sourceforge.plantuml.salt.factory",
+  "importName": ["java.util.ArrayList", "java.util.Collection", "net.sourceforge.plantuml.salt.DataSource", "net.sourceforge.plantuml.salt.SaltDictionary", "net.sourceforge.plantuml.salt.Terminated", "net.sourceforge.plantuml.salt.element.Element"],
+  "classData": {
+    "net.sourceforge.plantuml.salt.factory.AbstractElementFactoryComplex": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "interface": ["net.sourceforge.plantuml.salt.factory.ElementFactory"],
+      "field": [{
+        "name": "dataSource",
+        "type": "net.sourceforge.plantuml.salt.DataSource",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "factories",
+        "type": "java.util.Collection\u003cnet.sourceforge.plantuml.salt.factory.ElementFactory\u003e",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "dictionary",
+        "type": "net.sourceforge.plantuml.salt.SaltDictionary",
+        "modifier": ["final", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.salt.factory.AbstractElementFactoryComplex.AbstractElementFactoryComplex#7534c188": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dataSource",
+            "type": "net.sourceforge.plantuml.salt.DataSource"
+          }, {
+            "name": "dictionary",
+            "type": "net.sourceforge.plantuml.salt.SaltDictionary"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.factory.AbstractElementFactoryComplex.getNextElement#1": {
+          "returnType": "net.sourceforge.plantuml.salt.Terminated\u003cnet.sourceforge.plantuml.salt.element.Element\u003e",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.salt.factory.AbstractElementFactoryComplex.getDictionary#1": {
+          "returnType": "net.sourceforge.plantuml.salt.SaltDictionary",
+          "modifier": ["protected", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.factory.AbstractElementFactoryComplex.getDataSource#1": {
+          "returnType": "net.sourceforge.plantuml.salt.DataSource",
+          "modifier": ["protected", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.factory.AbstractElementFactoryComplex.addFactory#3911e2ad": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "factory",
+            "type": "net.sourceforge.plantuml.salt.factory.ElementFactory"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "33",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "78",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

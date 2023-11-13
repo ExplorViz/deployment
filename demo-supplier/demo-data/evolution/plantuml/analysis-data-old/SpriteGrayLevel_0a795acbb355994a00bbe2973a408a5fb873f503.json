@@ -1,0 +1,265 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "SpriteGrayLevel.java",
+  "packageName": "net.sourceforge.plantuml.klimt.sprite",
+  "importName": ["java.awt.Color", "java.awt.image.BufferedImage", "java.util.ArrayList", "java.util.Collections", "java.util.List", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.code.AsciiEncoder", "net.sourceforge.plantuml.code.AsciiEncoderFinalZeros", "net.sourceforge.plantuml.code.ByteArray", "net.sourceforge.plantuml.code.CompressionZlib", "net.sourceforge.plantuml.code.CompressionZopfliZlib", "net.sourceforge.plantuml.code.NoPlantumlCompressionException", "net.sourceforge.plantuml.code.PairInt", "net.sourceforge.plantuml.code.SpiralOnRectangle", "net.sourceforge.plantuml.klimt.color.ColorUtils", "net.sourceforge.plantuml.log.Logme"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel": {
+      "type": "ENUM",
+      "modifier": ["public"],
+      "field": [{
+        "name": "nbColor",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.buildSpriteZ#9a677eb0": {
+          "returnType": "net.sourceforge.plantuml.klimt.sprite.Sprite",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }, {
+            "name": "compressed",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.getNbColor#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.get#1980e": {
+          "returnType": "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.getGrayOn16#ed3106db": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "img",
+            "type": "java.awt.image.BufferedImage"
+          }, {
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.SpriteGrayLevel#1980e": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "nbColor",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.buildSprite#988d77ae": {
+          "returnType": "net.sourceforge.plantuml.klimt.sprite.Sprite",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }, {
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.encodeZSpiral#f9520bbb": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "img",
+            "type": "java.awt.image.BufferedImage"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.encodeZ#f9520bbb": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "img",
+            "type": "java.awt.image.BufferedImage"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.encode4#f9520bbb": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "img",
+            "type": "java.awt.image.BufferedImage"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.cut#943a4c50": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.encode8#f9520bbb": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "img",
+            "type": "java.awt.image.BufferedImage"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.encode#f9520bbb": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "img",
+            "type": "java.awt.image.BufferedImage"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.buildSprite16#9260454e": {
+          "returnType": "net.sourceforge.plantuml.klimt.sprite.Sprite",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.buildSprite8#988d77ae": {
+          "returnType": "net.sourceforge.plantuml.klimt.sprite.Sprite",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }, {
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.buildSprite4#988d77ae": {
+          "returnType": "net.sourceforge.plantuml.klimt.sprite.Sprite",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }, {
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel.encode16#f9520bbb": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "img",
+            "type": "java.awt.image.BufferedImage"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "enumConstant": ["GRAY_16", "GRAY_8", "GRAY_4"],
+      "metric": {
+        "loc": "242",
+        "cyclomatic_complexity": "38",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "297",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,92 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "DotGeneratorLines.java",
+  "packageName": "ext.plantuml.com.ctreber.acearth.scandot",
+  "importName": ["ext.plantuml.com.ctreber.acearth.projection.Projection", "ext.plantuml.com.ctreber.acearth.util.Coordinate", "ext.plantuml.com.ctreber.acearth.util.Point2D", "ext.plantuml.com.ctreber.acearth.util.Point3D"],
+  "classData": {
+    "ext.plantuml.com.ctreber.acearth.scandot.DotGeneratorLines": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "fProjection",
+        "type": "ext.plantuml.com.ctreber.acearth.projection.Projection",
+        "modifier": ["private"]
+      }, {
+        "name": "fLineDivider",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "fPointDivider",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "PI",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "TWOPI",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "HALFPI",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "ext.plantuml.com.ctreber.acearth.scandot.DotGeneratorLines.transformAndAddDot#82ad51b7": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "pPos",
+            "type": "ext.plantuml.com.ctreber.acearth.util.Coordinate"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.scandot.DotGeneratorLines.DotGeneratorLines#428a38ee": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pProjection",
+            "type": "ext.plantuml.com.ctreber.acearth.projection.Projection"
+          }, {
+            "name": "pLineDevider",
+            "type": "int"
+          }, {
+            "name": "pPointDivider",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.scandot.DotGeneratorLines.generateScanDots#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "superClass": "ext.plantuml.com.ctreber.acearth.scandot.ScanDotGenerator",
+      "metric": {
+        "loc": "53",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "60",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

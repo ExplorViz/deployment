@@ -1,0 +1,157 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "StripeFrontier.java",
+  "packageName": "net.sourceforge.plantuml.mindmap",
+  "importName": ["java.util.Iterator", "java.util.SortedSet", "java.util.TreeSet"],
+  "classData": {
+    "net.sourceforge.plantuml.mindmap.StripeFrontier": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "stripes",
+        "type": "java.util.SortedSet\u003cnet.sourceforge.plantuml.mindmap.Stripe\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.mindmap.StripeFrontier.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.StripeFrontier.isEmpty#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.StripeFrontier.checkConsistent#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.StripeFrontier.StripeFrontier#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.StripeFrontier.addSegment#6ff7ba10": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "x2",
+            "type": "double"
+          }, {
+            "name": "value",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.StripeFrontier.collisionning#1eef7de1": {
+          "returnType": "java.util.SortedSet\u003cnet.sourceforge.plantuml.mindmap.Stripe\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "x2",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.StripeFrontier.contains#1eef7de1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.StripeFrontier.getContact#1eef7de1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "x2",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.StripeFrontier.addSingleInternal#2339d45d": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "x2",
+            "type": "double"
+          }, {
+            "name": "value",
+            "type": "double"
+          }, {
+            "name": "touch",
+            "type": "net.sourceforge.plantuml.mindmap.Stripe",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "106",
+        "cyclomatic_complexity": "20",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "147",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

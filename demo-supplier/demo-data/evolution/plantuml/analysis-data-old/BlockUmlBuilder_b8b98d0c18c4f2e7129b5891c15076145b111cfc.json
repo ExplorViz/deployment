@@ -1,0 +1,192 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "BlockUmlBuilder.java",
+  "packageName": "net.sourceforge.plantuml",
+  "importName": ["java.util.Objects.requireNonNull", "net.sourceforge.plantuml.utils.CharsetUtils.charsetOrDefault", "java.io.IOException", "java.io.Reader", "java.nio.charset.Charset", "java.util.ArrayList", "java.util.Collections", "java.util.HashSet", "java.util.List", "java.util.Set", "com.plantuml.api.cheerpj.WasmLog", "net.sourceforge.plantuml.file.AParentFolderRegular", "net.sourceforge.plantuml.preproc.Defines", "net.sourceforge.plantuml.preproc.FileWithSuffix", "net.sourceforge.plantuml.preproc.ImportedFiles", "net.sourceforge.plantuml.preproc.ReadLineNumbered", "net.sourceforge.plantuml.preproc.ReadLineReader", "net.sourceforge.plantuml.preproc.UncommentReadLine", "net.sourceforge.plantuml.preproc2.Preprocessor", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.text.StringLocated", "net.sourceforge.plantuml.utils.StartUtils"],
+  "classData": {
+    "net.sourceforge.plantuml.BlockUmlBuilder": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "interface": ["net.sourceforge.plantuml.DefinitionsContainer"],
+      "field": [{
+        "name": "blocks",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.BlockUml\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "usedFiles",
+        "type": "java.util.Set\u003cnet.sourceforge.plantuml.preproc.FileWithSuffix\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "reader",
+        "type": "net.sourceforge.plantuml.preproc.UncommentReadLine",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "defines",
+        "type": "net.sourceforge.plantuml.preproc.Defines",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "importedFiles",
+        "type": "net.sourceforge.plantuml.preproc.ImportedFiles",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "charset",
+        "type": "java.nio.charset.Charset",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.BlockUmlBuilder.getDefinition#943a4c50": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.BlockUmlBuilder.getIncludedFiles#1": {
+          "returnType": "java.util.Set\u003cnet.sourceforge.plantuml.preproc.FileWithSuffix\u003e",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.BlockUmlBuilder.getImportedFiles#1": {
+          "returnType": "net.sourceforge.plantuml.preproc.ImportedFiles",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.BlockUmlBuilder.BlockUmlBuilder#1c5221ce": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "config",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "charset",
+            "type": "java.lang.String"
+          }, {
+            "name": "defines",
+            "type": "net.sourceforge.plantuml.preproc.Defines"
+          }, {
+            "name": "reader",
+            "type": "java.io.Reader"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.BlockUmlBuilder.getBlockUmls#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.BlockUml\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.BlockUmlBuilder.BlockUmlBuilder#795fef6b": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "config",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "charset",
+            "type": "java.nio.charset.Charset"
+          }, {
+            "name": "defines",
+            "type": "net.sourceforge.plantuml.preproc.Defines"
+          }, {
+            "name": "readerInit",
+            "type": "java.io.Reader"
+          }, {
+            "name": "newCurrentDir",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }, {
+            "name": "desc",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.BlockUmlBuilder.init#d9045ab1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "includer",
+            "type": "net.sourceforge.plantuml.preproc.ReadLineNumbered"
+          }],
+          "metric": {
+            "loc": "44",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.BlockUmlBuilder.getCharset#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "annotation": ["java.lang.Deprecated"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.BlockUmlBuilder.BlockUmlBuilder#763937f0": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "config",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "charset",
+            "type": "java.lang.String"
+          }, {
+            "name": "defines",
+            "type": "net.sourceforge.plantuml.preproc.Defines"
+          }, {
+            "name": "readerInit",
+            "type": "java.io.Reader"
+          }, {
+            "name": "newCurrentDir",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }, {
+            "name": "desc",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "106",
+        "cyclomatic_complexity": "14",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "169",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

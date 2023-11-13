@@ -1,0 +1,69 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "CommandStyleImport.java",
+  "packageName": "net.sourceforge.plantuml.style",
+  "importName": ["java.io.IOException", "java.io.InputStream", "java.net.MalformedURLException", "net.sourceforge.plantuml.FileSystem", "net.sourceforge.plantuml.TitledDiagram", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.command.SingleLineCommand2", "net.sourceforge.plantuml.regex.IRegex", "net.sourceforge.plantuml.regex.RegexConcat", "net.sourceforge.plantuml.regex.RegexLeaf", "net.sourceforge.plantuml.regex.RegexResult", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.security.SURL", "net.sourceforge.plantuml.style.parser.StyleParser", "net.sourceforge.plantuml.style.parser.StyleParsingException", "net.sourceforge.plantuml.utils.BlocLines", "net.sourceforge.plantuml.utils.LineLocation"],
+  "classData": {
+    "net.sourceforge.plantuml.style.CommandStyleImport": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "ME",
+        "type": "net.sourceforge.plantuml.style.CommandStyleImport",
+        "modifier": ["public", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.style.CommandStyleImport.getRegexConcat#1": {
+          "returnType": "net.sourceforge.plantuml.regex.IRegex",
+          "modifier": ["static"],
+          "metric": {
+            "loc": "0",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.CommandStyleImport.CommandStyleImport#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.CommandStyleImport.executeArg#f17f7d01": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.TitledDiagram"
+          }, {
+            "name": "location",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "37",
+            "cyclomatic_complexity": "12",
+            "nestedBlockDepth": "5"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.command.SingleLineCommand2\u003cnet.sourceforge.plantuml.TitledDiagram\u003e",
+      "metric": {
+        "loc": "47",
+        "cyclomatic_complexity": "12",
+        "cyclomatic_complexity_weighted": "12",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "103",
+    "cyclomatic_complexity": "12"
+  },
+  "author": "plantuml@gmail.com"
+}

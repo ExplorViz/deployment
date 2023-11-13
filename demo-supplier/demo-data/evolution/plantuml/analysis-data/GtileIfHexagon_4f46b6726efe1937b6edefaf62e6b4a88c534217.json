@@ -1,0 +1,200 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "GtileIfHexagon.java",
+  "packageName": "net.sourceforge.plantuml.activitydiagram3.gtile",
+  "importName": ["java.util.Arrays", "java.util.Collection", "java.util.List", "net.sourceforge.plantuml.activitydiagram3.Branch", "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlockUtils", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.StyleSignatureBasic"],
+  "classData": {
+    "net.sourceforge.plantuml.activitydiagram3.gtile.GtileIfHexagon": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "shape1",
+        "type": "net.sourceforge.plantuml.activitydiagram3.gtile.Gtile",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "branches",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.Branch\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "shape2",
+        "type": "net.sourceforge.plantuml.activitydiagram3.gtile.Gtile",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "positionShape1",
+        "type": "net.sourceforge.plantuml.klimt.UTranslate",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "positionShape2",
+        "type": "net.sourceforge.plantuml.klimt.UTranslate",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileIfHexagon.getInnerConnections#1": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.activitydiagram3.gtile.GConnection\u003e",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileIfHexagon.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileIfHexagon.getDefaultStyleDefinitionDiamond#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileIfHexagon.build#20af366a": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.gtile.Gtile",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "swimlane",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane"
+          }, {
+            "name": "gtiles",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.gtile.Gtile\u003e"
+          }, {
+            "name": "branches",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.Branch\u003e"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileIfHexagon.getCoordImpl#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.UTranslate",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileIfHexagon.drawUInternal#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileIfHexagon.getDefaultStyleDefinitionArrow#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileIfHexagon.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileIfHexagon.GtileIfHexagon#20af366a": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "swimlane",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane"
+          }, {
+            "name": "gtiles",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.gtile.Gtile\u003e"
+          }, {
+            "name": "branches",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.Branch\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "60",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileIfHexagon.calculateDimensionRaw#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileIfHexagon.getShape1#fe6684b3": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.gtile.Gtile",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "swimlane",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileIfHexagon.getDefaultStyleDefinitionActivity#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.activitydiagram3.gtile.GtileColumns",
+      "metric": {
+        "loc": "172",
+        "cyclomatic_complexity": "10",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "224",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

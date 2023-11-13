@@ -1,0 +1,367 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "StripeSimple.java",
+  "packageName": "net.sourceforge.plantuml.klimt.creole.legacy",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.HashMap", "java.util.List", "java.util.Map", "java.util.Objects", "net.sourceforge.plantuml.emoji.Emoji", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.NoSuchColorException", "net.sourceforge.plantuml.klimt.creole.CreoleContext", "net.sourceforge.plantuml.klimt.creole.CreoleHorizontalLine", "net.sourceforge.plantuml.klimt.creole.CreoleMode", "net.sourceforge.plantuml.klimt.creole.Stripe", "net.sourceforge.plantuml.klimt.creole.StripeStyle", "net.sourceforge.plantuml.klimt.creole.StripeStyleType", "net.sourceforge.plantuml.klimt.creole.atom.Atom", "net.sourceforge.plantuml.klimt.creole.atom.AtomEmoji", "net.sourceforge.plantuml.klimt.creole.atom.AtomImg", "net.sourceforge.plantuml.klimt.creole.atom.AtomMath", "net.sourceforge.plantuml.klimt.creole.atom.AtomOpenIcon", "net.sourceforge.plantuml.klimt.creole.atom.AtomSpace", "net.sourceforge.plantuml.klimt.creole.atom.AtomSprite", "net.sourceforge.plantuml.klimt.creole.command.Command", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleColorAndSizeChange", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleColorChange", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleEmoji", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleExposantChange", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleFontFamilyChange", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleImg", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleLatex", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleMath", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleMonospaced", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleOpenIcon", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleQrcode", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleSizeChange", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleSpace", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleSprite", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleStyle", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleSvgAttributeChange", "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleUrl", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.FontPosition", "net.sourceforge.plantuml.klimt.font.FontStyle", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.ImgValign", "net.sourceforge.plantuml.klimt.sprite.Sprite", "net.sourceforge.plantuml.math.ScientificEquationSafe", "net.sourceforge.plantuml.openiconic.OpenIcon", "net.sourceforge.plantuml.security.SecurityUtils", "net.sourceforge.plantuml.style.ISkinSimple", "net.sourceforge.plantuml.text.BackSlash", "net.sourceforge.plantuml.url.Url", "net.sourceforge.plantuml.utils.CharHidder"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.creole.Stripe"],
+      "field": [{
+        "name": "header",
+        "type": "net.sourceforge.plantuml.klimt.creole.atom.Atom",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "atoms",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.atom.Atom\u003e",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "commands",
+        "type": "java.util.Map\u003cjava.lang.Character, java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.command.Command\u003e\u003e",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "align",
+        "type": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment",
+        "modifier": ["private"]
+      }, {
+        "name": "fontConfiguration",
+        "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+        "modifier": ["private"]
+      }, {
+        "name": "style",
+        "type": "net.sourceforge.plantuml.klimt.creole.StripeStyle",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinSimple",
+        "modifier": ["final", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.addPending#42ee5249": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "pending",
+            "type": "java.lang.StringBuilder"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.getCellAlignment#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.StripeSimple#9632fd3c": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fontConfiguration",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration"
+          }, {
+            "name": "style",
+            "type": "net.sourceforge.plantuml.klimt.creole.StripeStyle"
+          }, {
+            "name": "context",
+            "type": "net.sourceforge.plantuml.klimt.creole.CreoleContext"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinSimple"
+          }, {
+            "name": "modeSimpleLine",
+            "type": "net.sourceforge.plantuml.klimt.creole.CreoleMode"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "57",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.getAtoms#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.atom.Atom\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.getLHeader#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.atom.Atom",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.addCommand#9bde774a": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "cmd",
+            "type": "net.sourceforge.plantuml.klimt.creole.command.Command"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.modifyStripe#943a4c50": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.setCellAlignment#98a1661e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "align",
+            "type": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.addUrl#14d6e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "url",
+            "type": "net.sourceforge.plantuml.url.Url"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.analyzeAndAdd#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.addQrcode#a406b981": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "src",
+            "type": "java.lang.String"
+          }, {
+            "name": "scale",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.setActualFontConfiguration#744b90e6": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fontConfiguration",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.addEmoji#874989e1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "emojiName",
+            "type": "java.lang.String"
+          }, {
+            "name": "forcedColor",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.addSprite#5b91a29a": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "src",
+            "type": "java.lang.String"
+          }, {
+            "name": "scale",
+            "type": "double"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.searchCommand#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.command.Command",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.getActualFontConfiguration#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.addImage#a406b981": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "src",
+            "type": "java.lang.String"
+          }, {
+            "name": "scale",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.addSpace#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "size",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.getSkinParam#1": {
+          "returnType": "net.sourceforge.plantuml.style.ISkinSimple",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.fontConfigurationForHeading#152823c9": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "fontConfiguration",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration"
+          }, {
+            "name": "order",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.addOpenIcon#5b91a29a": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "src",
+            "type": "java.lang.String"
+          }, {
+            "name": "scale",
+            "type": "double"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple.addMath#105801": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "math",
+            "type": "net.sourceforge.plantuml.math.ScientificEquationSafe"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "237",
+        "cyclomatic_complexity": "32",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "329",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,65 @@
+{
+  "commitID": "c39ed819044448f7575f3c6cced9f2501f35776e",
+  "fileName": "OwnerRepository.java",
+  "packageName": "org.springframework.samples.petclinic.repository",
+  "importName": ["java.util.Collection", "org.springframework.dao.DataAccessException", "org.springframework.data.jpa.repository.Query", "org.springframework.data.repository.Repository", "org.springframework.data.repository.query.Param", "org.springframework.samples.petclinic.model.BaseEntity", "org.springframework.samples.petclinic.model.Owner"],
+  "classData": {
+    "org.springframework.samples.petclinic.repository.OwnerRepository": {
+      "modifier": ["public"],
+      "interface": ["org.springframework.data.repository.Repository\u003corg.springframework.samples.petclinic.model.Owner, java.lang.Integer\u003e"],
+      "methodData": {
+        "org.springframework.samples.petclinic.repository.OwnerRepository.findByLastName#943a4c50": {
+          "returnType": "java.util.Collection\u003corg.springframework.samples.petclinic.model.Owner\u003e",
+          "parameter": [{
+            "name": "lastName",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["Query"],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.OwnerRepository.findById#1980e": {
+          "returnType": "org.springframework.samples.petclinic.model.Owner",
+          "parameter": [{
+            "name": "id",
+            "type": "int"
+          }],
+          "annotation": ["Query"],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.OwnerRepository.save#49102b2": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.model.Owner"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "12",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "38",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "angel.aguilera@gmail.com",
+  "modifiedLines": 13,
+  "addedLines": 3
+}

@@ -1,0 +1,108 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "TextBlockRaw.java",
+  "packageName": "net.sourceforge.plantuml.klimt.shape",
+  "importName": ["java.util.ArrayList", "java.util.List", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.shape.TextBlockRaw": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.shape.TextBlock"],
+      "field": [{
+        "name": "lines2",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.shape.Line\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "strings",
+        "type": "java.util.List\u003cjava.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fontConfiguration",
+        "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.shape.TextBlockRaw.getTextDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["protected", "final"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.TextBlockRaw.getLines#395b4159": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.klimt.shape.Line\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.TextBlockRaw.TextBlockRaw#2df3f539": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "fontConfiguration",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.TextBlockRaw.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.TextBlockRaw.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock",
+      "metric": {
+        "loc": "50",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "96",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

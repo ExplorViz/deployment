@@ -1,0 +1,169 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "GanttArrow.java",
+  "packageName": "net.sourceforge.plantuml.project",
+  "importName": ["net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColorSet", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.shape.UDrawable", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.project.core.Task", "net.sourceforge.plantuml.project.core.TaskAttribute", "net.sourceforge.plantuml.project.core.TaskInstant", "net.sourceforge.plantuml.project.draw.TaskDraw", "net.sourceforge.plantuml.project.timescale.TimeScale", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleBuilder", "net.sourceforge.plantuml.style.StyleSignatureBasic", "net.sourceforge.plantuml.utils.Direction"],
+  "classData": {
+    "net.sourceforge.plantuml.project.GanttArrow": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.shape.UDrawable"],
+      "field": [{
+        "name": "timeScale",
+        "type": "net.sourceforge.plantuml.project.timescale.TimeScale",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "atStart",
+        "type": "net.sourceforge.plantuml.utils.Direction",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "source",
+        "type": "net.sourceforge.plantuml.project.core.TaskInstant",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "atEnd",
+        "type": "net.sourceforge.plantuml.utils.Direction",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "dest",
+        "type": "net.sourceforge.plantuml.project.core.TaskInstant",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "colorSet",
+        "type": "net.sourceforge.plantuml.klimt.color.HColorSet",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "style",
+        "type": "net.sourceforge.plantuml.style.Style",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "toTaskDraw",
+        "type": "net.sourceforge.plantuml.project.ToTaskDraw",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "styleBuilder",
+        "type": "net.sourceforge.plantuml.style.StyleBuilder",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.project.GanttArrow.drawLine#f58b691f": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "coord",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttArrow.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "49",
+            "cyclomatic_complexity": "14",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttArrow.GanttArrow#b07ecb98": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "colorSet",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }, {
+            "name": "style",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }, {
+            "name": "timeScale",
+            "type": "net.sourceforge.plantuml.project.timescale.TimeScale"
+          }, {
+            "name": "source",
+            "type": "net.sourceforge.plantuml.project.core.TaskInstant"
+          }, {
+            "name": "dest",
+            "type": "net.sourceforge.plantuml.project.core.TaskInstant"
+          }, {
+            "name": "toTaskDraw",
+            "type": "net.sourceforge.plantuml.project.ToTaskDraw"
+          }, {
+            "name": "styleBuilder",
+            "type": "net.sourceforge.plantuml.style.StyleBuilder"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttArrow.getStyleSignatureTask#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttArrow.getX#7ce5250c": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "taskAttribute",
+            "type": "net.sourceforge.plantuml.project.core.TaskAttribute"
+          }, {
+            "name": "task",
+            "type": "net.sourceforge.plantuml.project.draw.TaskDraw"
+          }, {
+            "name": "direction",
+            "type": "net.sourceforge.plantuml.utils.Direction"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttArrow.getDestination#1": {
+          "returnType": "net.sourceforge.plantuml.project.draw.TaskDraw",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttArrow.getSource#1": {
+          "returnType": "net.sourceforge.plantuml.project.draw.TaskDraw",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "129",
+        "cyclomatic_complexity": "28",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "185",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

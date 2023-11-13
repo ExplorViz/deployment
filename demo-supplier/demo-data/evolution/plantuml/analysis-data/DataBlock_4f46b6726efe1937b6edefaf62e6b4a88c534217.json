@@ -1,0 +1,84 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "DataBlock.java",
+  "packageName": "ext.plantuml.com.google.zxing.qrcode.decoder",
+  "classData": {
+    "ext.plantuml.com.google.zxing.qrcode.decoder.DataBlock": {
+      "type": "CLASS",
+      "modifier": ["final"],
+      "field": [{
+        "name": "numDataCodewords",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "codewords",
+        "type": "byte[]",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "ext.plantuml.com.google.zxing.qrcode.decoder.DataBlock.DataBlock#ae4bb41c": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "numDataCodewords",
+            "type": "int"
+          }, {
+            "name": "codewords",
+            "type": "byte[]"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.decoder.DataBlock.getDataBlocks#e03dee4f": {
+          "returnType": "DataBlock[]",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "rawCodewords",
+            "type": "byte[]"
+          }, {
+            "name": "version",
+            "type": "ext.plantuml.com.google.zxing.qrcode.decoder.Version"
+          }, {
+            "name": "ecLevel",
+            "type": "ext.plantuml.com.google.zxing.qrcode.decoder.ErrorCorrectionLevel"
+          }],
+          "metric": {
+            "loc": "57",
+            "cyclomatic_complexity": "12",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.decoder.DataBlock.getCodewords#1": {
+          "returnType": "byte[]",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.decoder.DataBlock.getNumDataCodewords#1": {
+          "returnType": "int",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "77",
+        "cyclomatic_complexity": "12",
+        "cyclomatic_complexity_weighted": "12",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "95",
+    "cyclomatic_complexity": "12"
+  },
+  "author": "plantuml@gmail.com"
+}

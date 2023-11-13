@@ -1,0 +1,565 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Deflate.java",
+  "packageName": "net.sourceforge.plantuml.zopfli",
+  "classData": {
+    "net.sourceforge.plantuml.zopfli.Deflate.BlockType": {
+      "type": "ENUM",
+      "modifier": ["static"],
+      "enumConstant": ["DYNAMIC", "FIXED"],
+      "metric": {
+        "loc": "3",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.zopfli.Deflate": {
+      "type": "CLASS",
+      "innerClass": ["net.sourceforge.plantuml.zopfli.Deflate.BlockType"],
+      "methodData": {
+        "net.sourceforge.plantuml.zopfli.Deflate.deflatePart#c02b1527": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "options",
+            "type": "net.sourceforge.plantuml.zopfli.Options"
+          }, {
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "from",
+            "type": "int"
+          }, {
+            "name": "to",
+            "type": "int"
+          }, {
+            "name": "flush",
+            "type": "boolean"
+          }, {
+            "name": "output",
+            "type": "net.sourceforge.plantuml.zopfli.Buffer"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.deflateDynamicBlock#7d926ca3": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "options",
+            "type": "net.sourceforge.plantuml.zopfli.Options"
+          }, {
+            "name": "flush",
+            "type": "boolean"
+          }, {
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "from",
+            "type": "int"
+          }, {
+            "name": "to",
+            "type": "int"
+          }, {
+            "name": "output",
+            "type": "net.sourceforge.plantuml.zopfli.Buffer"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.addLzData#7873445f": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "litLens",
+            "type": "char[]"
+          }, {
+            "name": "dists",
+            "type": "char[]"
+          }, {
+            "name": "lStart",
+            "type": "int"
+          }, {
+            "name": "lEnd",
+            "type": "int"
+          }, {
+            "name": "llSymbols",
+            "type": "int[]"
+          }, {
+            "name": "llLengths",
+            "type": "int[]"
+          }, {
+            "name": "dSymbols",
+            "type": "int[]"
+          }, {
+            "name": "dLengths",
+            "type": "int[]"
+          }, {
+            "name": "output",
+            "type": "net.sourceforge.plantuml.zopfli.Buffer"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.simulateEncodeTree#4f3e1845": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "llLengths",
+            "type": "int[]"
+          }, {
+            "name": "dLengths",
+            "type": "int[]"
+          }, {
+            "name": "use16",
+            "type": "boolean"
+          }, {
+            "name": "use17",
+            "type": "boolean"
+          }, {
+            "name": "use18",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "86",
+            "cyclomatic_complexity": "16",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.optimizeHuffmanForRle#a1f5414e": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "counts",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "63",
+            "cyclomatic_complexity": "20",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.getFixedTree#bf6c75e1": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "llLengths",
+            "type": "int[]"
+          }, {
+            "name": "dLengths",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.simulateAddDynamicTree#a2ae4c03": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "llLengths",
+            "type": "int[]"
+          }, {
+            "name": "dLengths",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.calculateBlockSize#ccdc5203": {
+          "returnType": "int",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "litLens",
+            "type": "char[]"
+          }, {
+            "name": "dists",
+            "type": "char[]"
+          }, {
+            "name": "lStart",
+            "type": "int"
+          }, {
+            "name": "lEnd",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "54",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.compress#f6da5cb1": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "options",
+            "type": "net.sourceforge.plantuml.zopfli.Options"
+          }, {
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "output",
+            "type": "net.sourceforge.plantuml.zopfli.Buffer"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.greedy#b7028ccd": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "lmc",
+            "type": "net.sourceforge.plantuml.zopfli.LongestMatchCache"
+          }, {
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "from",
+            "type": "int"
+          }, {
+            "name": "to",
+            "type": "int"
+          }, {
+            "name": "store",
+            "type": "net.sourceforge.plantuml.zopfli.LzStore"
+          }],
+          "metric": {
+            "loc": "53",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.patchDistanceCodesForBuggyDecoders#5fb63b0": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "dLengths",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.addLzBlock#44ce085c": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.zopfli.Deflate.BlockType"
+          }, {
+            "name": "last",
+            "type": "boolean"
+          }, {
+            "name": "litLens",
+            "type": "char[]"
+          }, {
+            "name": "dists",
+            "type": "char[]"
+          }, {
+            "name": "lStart",
+            "type": "int"
+          }, {
+            "name": "lEnd",
+            "type": "int"
+          }, {
+            "name": "output",
+            "type": "net.sourceforge.plantuml.zopfli.Buffer"
+          }],
+          "metric": {
+            "loc": "37",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.findLongestMatch#c91ba6b0": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "lmc",
+            "type": "net.sourceforge.plantuml.zopfli.LongestMatchCache"
+          }, {
+            "name": "blockStart",
+            "type": "int"
+          }, {
+            "name": "h",
+            "type": "net.sourceforge.plantuml.zopfli.Hash"
+          }, {
+            "name": "array",
+            "type": "byte[]"
+          }, {
+            "name": "pos",
+            "type": "int"
+          }, {
+            "name": "size",
+            "type": "int"
+          }, {
+            "name": "limit",
+            "type": "int"
+          }, {
+            "name": "subLen",
+            "type": "char[]"
+          }],
+          "metric": {
+            "loc": "111",
+            "cyclomatic_complexity": "21",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.calculateFixedBlockSize#69bb36c": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "litLens",
+            "type": "char[]"
+          }, {
+            "name": "dists",
+            "type": "char[]"
+          }, {
+            "name": "size",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.encodeTree#fc570bb": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "llLengths",
+            "type": "int[]"
+          }, {
+            "name": "dLengths",
+            "type": "int[]"
+          }, {
+            "name": "use16",
+            "type": "boolean"
+          }, {
+            "name": "use17",
+            "type": "boolean"
+          }, {
+            "name": "use18",
+            "type": "boolean"
+          }, {
+            "name": "output",
+            "type": "net.sourceforge.plantuml.zopfli.Buffer"
+          }],
+          "metric": {
+            "loc": "107",
+            "cyclomatic_complexity": "22",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.deflateSplittingLast#7d926ca3": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "options",
+            "type": "net.sourceforge.plantuml.zopfli.Options"
+          }, {
+            "name": "flush",
+            "type": "boolean"
+          }, {
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "from",
+            "type": "int"
+          }, {
+            "name": "to",
+            "type": "int"
+          }, {
+            "name": "output",
+            "type": "net.sourceforge.plantuml.zopfli.Buffer"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.deflateSplittingFirst#7d926ca3": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "options",
+            "type": "net.sourceforge.plantuml.zopfli.Options"
+          }, {
+            "name": "flush",
+            "type": "boolean"
+          }, {
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "from",
+            "type": "int"
+          }, {
+            "name": "to",
+            "type": "int"
+          }, {
+            "name": "output",
+            "type": "net.sourceforge.plantuml.zopfli.Buffer"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.lzCounts#a2365a41": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "litLens",
+            "type": "char[]"
+          }, {
+            "name": "dists",
+            "type": "char[]"
+          }, {
+            "name": "start",
+            "type": "int"
+          }, {
+            "name": "end",
+            "type": "int"
+          }, {
+            "name": "llCount",
+            "type": "int[]"
+          }, {
+            "name": "dCount",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.lengthsToSymbols#fd1255e1": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "lengths",
+            "type": "int[]"
+          }, {
+            "name": "n",
+            "type": "int"
+          }, {
+            "name": "maxBits",
+            "type": "int"
+          }, {
+            "name": "symbols",
+            "type": "int[]"
+          }, {
+            "name": "blCount",
+            "type": "int[]"
+          }, {
+            "name": "nextCode",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Deflate.addDynamicTree#2a5bb4bd": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "llLengths",
+            "type": "int[]"
+          }, {
+            "name": "dLengths",
+            "type": "int[]"
+          }, {
+            "name": "output",
+            "type": "net.sourceforge.plantuml.zopfli.Buffer"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "758",
+        "cyclomatic_complexity": "139",
+        "cyclomatic_complexity_weighted": "6",
+        "LCOM4": "20"
+      }
+    }
+  },
+  "metric": {
+    "loc": "778",
+    "cyclomatic_complexity": "6"
+  },
+  "author": "plantuml@gmail.com"
+}

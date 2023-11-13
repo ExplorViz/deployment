@@ -1,0 +1,466 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "JsonArray.java",
+  "packageName": "net.sourceforge.plantuml.json",
+  "importName": ["java.io.IOException", "java.io.Reader", "java.util.ArrayList", "java.util.Collections", "java.util.Iterator", "java.util.List"],
+  "classData": {
+    "net.sourceforge.plantuml.json.JsonArray.iterator#1.Iterator\u003cJsonValue\u003e": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.json.JsonArray.iterator#1.Iterator\u003cJsonValue\u003e.remove#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.iterator#1.Iterator\u003cJsonValue\u003e.next#1": {
+          "returnType": "net.sourceforge.plantuml.json.JsonValue",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.iterator#1.Iterator\u003cJsonValue\u003e.hasNext#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.json.JsonArray": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["java.lang.Iterable\u003cnet.sourceforge.plantuml.json.JsonValue\u003e"],
+      "field": [{
+        "name": "values",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.json.JsonValue\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.json.JsonArray.set#3301a1": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "value",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.values#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.json.JsonValue\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.add#3661a568": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "value",
+            "type": "net.sourceforge.plantuml.json.JsonValue"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.add#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.JsonArray#76caafd8": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "array",
+            "type": "net.sourceforge.plantuml.json.JsonArray"
+          }, {
+            "name": "unmodifiable",
+            "type": "boolean"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.add#5d0227b": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "value",
+            "type": "float"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.set#6018c0e": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "value",
+            "type": "float"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.equals#8c658f7e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "object",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.remove#1980e": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "index",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.size#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.hashCode#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.add#1980e": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "value",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.set#36930efb": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "value",
+            "type": "net.sourceforge.plantuml.json.JsonValue"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.asArray#1": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.iterator#1": {
+          "returnType": "java.util.Iterator\u003cnet.sourceforge.plantuml.json.JsonValue\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.add#3db6c47": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "value",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.add#32c69b": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "value",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.JsonArray#35418650": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "array",
+            "type": "net.sourceforge.plantuml.json.JsonArray"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.JsonArray#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.readFrom#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "string",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Deprecated"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.get#1980e": {
+          "returnType": "net.sourceforge.plantuml.json.JsonValue",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "index",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.set#64302e": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "value",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.set#b128e583": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "value",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.set#946bb5e3": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "value",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.isArray#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.unmodifiableArray#35418650": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "array",
+            "type": "net.sourceforge.plantuml.json.JsonArray"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.readFrom#91aa4502": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "reader",
+            "type": "java.io.Reader"
+          }],
+          "annotation": ["java.lang.Deprecated"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.write#98760bba": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "writer",
+            "type": "net.sourceforge.plantuml.json.JsonWriter"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.add#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "value",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.isEmpty#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonArray.set#40cd5da": {
+          "returnType": "net.sourceforge.plantuml.json.JsonArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "value",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.json.JsonValue",
+      "annotation": ["java.lang.SuppressWarnings"],
+      "metric": {
+        "loc": "197",
+        "cyclomatic_complexity": "14",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "230",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

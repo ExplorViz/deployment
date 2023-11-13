@@ -1,0 +1,98 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "CommandChangeState.java",
+  "packageName": "net.sourceforge.plantuml.timingdiagram.command",
+  "importName": ["net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.command.SingleLineCommand2", "net.sourceforge.plantuml.klimt.color.ColorParser", "net.sourceforge.plantuml.klimt.color.ColorType", "net.sourceforge.plantuml.klimt.color.Colors", "net.sourceforge.plantuml.klimt.color.NoSuchColorException", "net.sourceforge.plantuml.regex.IRegex", "net.sourceforge.plantuml.regex.RegexLeaf", "net.sourceforge.plantuml.regex.RegexOr", "net.sourceforge.plantuml.regex.RegexResult", "net.sourceforge.plantuml.timingdiagram.Player", "net.sourceforge.plantuml.timingdiagram.TimeTick", "net.sourceforge.plantuml.timingdiagram.TimingDiagram"],
+  "classData": {
+    "net.sourceforge.plantuml.timingdiagram.command.CommandChangeState": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["abstract"],
+      "field": [{
+        "name": "STATE_CODE",
+        "type": "java.lang.String",
+        "modifier": ["static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.timingdiagram.command.CommandChangeState.addState#2ad37745": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.timingdiagram.TimingDiagram"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }, {
+            "name": "player",
+            "type": "net.sourceforge.plantuml.timingdiagram.Player",
+            "modifier": ["final "]
+          }, {
+            "name": "now",
+            "type": "net.sourceforge.plantuml.timingdiagram.TimeTick",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.command.CommandChangeState.getStateOrHidden#1": {
+          "returnType": "net.sourceforge.plantuml.regex.IRegex",
+          "modifier": ["static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.command.CommandChangeState.CommandChangeState#8144c59d": {
+          "parameter": [{
+            "name": "pattern",
+            "type": "net.sourceforge.plantuml.regex.IRegex"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.command.CommandChangeState.color#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.ColorParser",
+          "modifier": ["static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.command.CommandChangeState.getStates#1338bb43": {
+          "returnType": "String[]",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.command.SingleLineCommand2\u003cnet.sourceforge.plantuml.timingdiagram.TimingDiagram\u003e",
+      "metric": {
+        "loc": "34",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "85",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

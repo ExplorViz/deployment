@@ -1,0 +1,100 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "CommandLinkActivity.java",
+  "packageName": "net.sourceforge.plantuml.activitydiagram.command",
+  "importName": ["net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.abel.GroupType", "net.sourceforge.plantuml.abel.LeafType", "net.sourceforge.plantuml.abel.Link", "net.sourceforge.plantuml.abel.LinkArg", "net.sourceforge.plantuml.activitydiagram.ActivityDiagram", "net.sourceforge.plantuml.classdiagram.command.CommandLinkClass", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.command.SingleLineCommand2", "net.sourceforge.plantuml.decoration.LinkDecor", "net.sourceforge.plantuml.decoration.LinkType", "net.sourceforge.plantuml.descdiagram.command.CommandLinkElement", "net.sourceforge.plantuml.klimt.color.ColorParser", "net.sourceforge.plantuml.klimt.color.ColorType", "net.sourceforge.plantuml.klimt.color.NoSuchColorException", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.plasma.Quark", "net.sourceforge.plantuml.regex.IRegex", "net.sourceforge.plantuml.regex.RegexConcat", "net.sourceforge.plantuml.regex.RegexLeaf", "net.sourceforge.plantuml.regex.RegexOptional", "net.sourceforge.plantuml.regex.RegexOr", "net.sourceforge.plantuml.regex.RegexPartialMatch", "net.sourceforge.plantuml.regex.RegexResult", "net.sourceforge.plantuml.stereo.Stereotype", "net.sourceforge.plantuml.url.Url", "net.sourceforge.plantuml.url.UrlBuilder", "net.sourceforge.plantuml.url.UrlMode", "net.sourceforge.plantuml.utils.Direction", "net.sourceforge.plantuml.utils.LineLocation"],
+  "classData": {
+    "net.sourceforge.plantuml.activitydiagram.command.CommandLinkActivity": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram.command.CommandLinkActivity.getTypeIfExisting#fcea212": {
+          "returnType": "net.sourceforge.plantuml.abel.LeafType",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "system",
+            "type": "net.sourceforge.plantuml.activitydiagram.ActivityDiagram"
+          }, {
+            "name": "code",
+            "type": "net.sourceforge.plantuml.plasma.Quark\u003cnet.sourceforge.plantuml.abel.Entity\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram.command.CommandLinkActivity.CommandLinkActivity#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram.command.CommandLinkActivity.executeArg#6cd4ce5e": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.activitydiagram.ActivityDiagram"
+          }, {
+            "name": "location",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "66",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram.command.CommandLinkActivity.getEntity#2f3e7f87": {
+          "returnType": "net.sourceforge.plantuml.abel.Entity",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.activitydiagram.ActivityDiagram"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }, {
+            "name": "start",
+            "type": "boolean",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "85",
+            "cyclomatic_complexity": "19",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram.command.CommandLinkActivity.getRegexConcat#1": {
+          "returnType": "net.sourceforge.plantuml.regex.IRegex",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.command.SingleLineCommand2\u003cnet.sourceforge.plantuml.activitydiagram.ActivityDiagram\u003e",
+      "metric": {
+        "loc": "166",
+        "cyclomatic_complexity": "30",
+        "cyclomatic_complexity_weighted": "15",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "235",
+    "cyclomatic_complexity": "15"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

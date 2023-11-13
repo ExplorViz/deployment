@@ -2,6 +2,10 @@ exports.removeRandomTraces = removeRandomTraces;
 exports.recursivelyRandomizeAllHashCodesOfPackages = recursivelyRandomizeAllHashCodesOfPackages;
 exports.copyPackageAndTraces = copyPackageAndTraces;
 exports.createRandomHex = createRandomHex;
+exports.findFirstCommit = findFirstCommit;
+
+const fs = require("fs");
+const path = require("path");
 
 /**
  * Shuffles array in place. ES6 version
@@ -130,4 +134,76 @@ function createRandomHex(length) {
     id += Math.floor(Math.random() * 16).toString(16);
   }
   return id;
+}
+
+/**
+ * Find the very first commit id 
+ * @param {string} application
+ * @returns {string}
+ */
+function findFirstCommitIdAndMainBranch(application, branch) {
+    const commitReportsPath = path.resolve(__dirname,"demo-data","evolution",application,"branches",branch,"commit-reports");
+    const results = fs.readdirSync(commitReportsPath);
+
+    results.forEach(result => {
+      fs.readFile(commitReportsPath + "\\" + result, "utf8", (error, data) => {
+        if (error) {
+          console.log(error);
+          return;
+        }
+        const commitReport = JSON.parse(data);
+        if (commitReport.parentCommitID === "NONE") {
+          console.log(commitReport.branchName + ": "+ commitReport.commitID);
+          return commitReport.commitID;
+        }
+      });
+    });
+}
+
+/**
+ * Find the very first commit id 
+ * @param {string} application
+ * @returns {string}
+ */
+function findFirstCommit(application, branch) {
+  const commitReportsPath = path.resolve(__dirname,"demo-data","evolution",application,"branches",branch,"commit-reports");
+  const results = fs.readdirSync(commitReportsPath);
+
+  let output = "";
+  results.forEach(result => {
+    if (output !== "") { // asynchronous
+      return;
+    }
+    const data = fs.readFileSync(commitReportsPath + "\\" + result);
+    const commitReport = JSON.parse(data);
+    const branchName = commitReport.branchName;
+
+    if (branchName === "refs/heads/" + branch) {
+      const parentCommitID = commitReport.parentCommitID;
+      const commitID = commitReport.commitID;
+
+      if (parentCommitID === "NONE") { // main/master branch
+        output = commitID;
+        return;
+      }
+
+      const prefix = "CommitReport_" + parentCommitID;
+      let fileName = "";
+      fs.readdirSync(commitReportsPath).forEach(file => {
+        if (file.startsWith(prefix)) {
+          fileName = file;
+        }
+      });
+
+      const parentData = fs.readFileSync(commitReportsPath + "\\" + fileName);
+      const parentCommitReport = JSON.parse(parentData);
+      const parentBranchName = parentCommitReport.branchName;
+
+      if(!(parentBranchName === ("refs/heads/" + branch))) {
+        output = commitID;
+        return;
+      }
+    }
+  });
+  return output;
 }

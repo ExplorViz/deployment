@@ -1,0 +1,335 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Splash.java",
+  "packageName": "net.sourceforge.plantuml",
+  "importName": ["java.awt.Color", "java.awt.Cursor", "java.awt.Desktop", "java.awt.Dimension", "java.awt.Font", "java.awt.Graphics", "java.awt.Toolkit", "java.awt.Window", "java.awt.event.MouseEvent", "java.awt.event.MouseListener", "java.awt.event.MouseMotionListener", "java.awt.geom.Rectangle2D", "java.awt.image.BufferedImage", "java.net.URI", "java.util.concurrent.atomic.AtomicInteger", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.version.PSystemVersion"],
+  "classData": {
+    "net.sourceforge.plantuml.Splash": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["java.awt.event.MouseListener", "java.awt.event.MouseMotionListener"],
+      "field": [{
+        "name": "LINK_NORMAL",
+        "type": "java.awt.Color",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "LINK_HOVER",
+        "type": "java.awt.Color",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "singleton",
+        "type": "net.sourceforge.plantuml.Splash",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "width",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "height",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "logo",
+        "type": "java.awt.image.BufferedImage",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "total",
+        "type": "java.util.concurrent.atomic.AtomicInteger",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "done",
+        "type": "java.util.concurrent.atomic.AtomicInteger",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "errors",
+        "type": "java.util.concurrent.atomic.AtomicInteger",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "font",
+        "type": "java.awt.Font",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "xClicked",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "yClicked",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "limY",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "limX",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "link",
+        "type": "java.awt.Color",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.Splash.mouseMoved#b1764134": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "event",
+            "type": "java.awt.event.MouseEvent"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.main#6ed80f72": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "args",
+            "type": "String[]"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.createSplash#1": {
+          "returnType": "void",
+          "modifier": ["public", "synchronized", "static"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.Splash#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.mouseReleased#b1764134": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "event",
+            "type": "java.awt.event.MouseEvent"
+          }],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.mouseExited#b1764134": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "event",
+            "type": "java.awt.event.MouseEvent"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.incDoneInternal#3db6c47": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "error",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.mouseClicked#b1764134": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "event",
+            "type": "java.awt.event.MouseEvent"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.mouseDragged#b1764134": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "event",
+            "type": "java.awt.event.MouseEvent"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.disposeSplash#1": {
+          "returnType": "void",
+          "modifier": ["public", "synchronized", "static"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.updateLinkColor#3e43f62": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "newLink",
+            "type": "java.awt.Color",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.mouseEntered#b1764134": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "event",
+            "type": "java.awt.event.MouseEvent"
+          }],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.drawProgessBar#ff85822a": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "g",
+            "type": "java.awt.Graphics"
+          }, {
+            "name": "intValue",
+            "type": "int"
+          }, {
+            "name": "totalValue",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.incTotal#1980e": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "nb",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.paint#9db0eca": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "g",
+            "type": "java.awt.Graphics"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.incDone#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "error",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.mousePressed#b1764134": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "event",
+            "type": "java.awt.event.MouseEvent"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.incTotalInternal#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "nb",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.Splash.getUsed#c5c116a7": {
+          "returnType": "java.awt.geom.Rectangle2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "g",
+            "type": "java.awt.Graphics"
+          }, {
+            "name": "label",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "java.awt.Window",
+      "metric": {
+        "loc": "194",
+        "cyclomatic_complexity": "14",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "8"
+      }
+    }
+  },
+  "metric": {
+    "loc": "250",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

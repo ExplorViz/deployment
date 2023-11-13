@@ -1,0 +1,336 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "GraphicStrings.java",
+  "packageName": "net.sourceforge.plantuml.klimt.shape",
+  "importName": ["java.awt.image.BufferedImage", "java.util.List", "net.atmp.PixelImage", "net.sourceforge.plantuml.klimt.AffineTransformType", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.creole.CreoleMode", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.font.UFont", "net.sourceforge.plantuml.klimt.geom.GraphicPosition", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.sprite.SpriteContainerEmpty", "net.sourceforge.plantuml.svek.IEntityImage", "net.sourceforge.plantuml.svek.Margins", "net.sourceforge.plantuml.svek.ShapeType"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.shape.GraphicStrings": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.svek.IEntityImage"],
+      "field": [{
+        "name": "margin",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "background",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "hyperlinkColor",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "useUnderlineForHyperlink",
+        "type": "net.sourceforge.plantuml.klimt.UStroke",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "strings",
+        "type": "java.util.List\u003cjava.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "image",
+        "type": "java.awt.image.BufferedImage",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "imagePadding",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "position",
+        "type": "net.sourceforge.plantuml.klimt.geom.GraphicPosition",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fontConfiguration",
+        "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "mode",
+        "type": "net.sourceforge.plantuml.klimt.creole.CreoleMode",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.createGreenOnBlackMonospaced#9260454e": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.getForeColor#3db6c47": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "useRed",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.monospaced14#7ec12c1a": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.getShield#395b4159": {
+          "returnType": "net.sourceforge.plantuml.svek.Margins",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.getBackColor#3db6c47": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "useRed",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.isHidden#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.getOverscanX#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.createBlackOnWhite#9260454e": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.createBlackOnWhite#203b91c3": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "image",
+            "type": "java.awt.image.BufferedImage"
+          }, {
+            "name": "position",
+            "type": "net.sourceforge.plantuml.klimt.geom.GraphicPosition"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.sansSerif14#7ec12c1a": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.calculateDimensionInternal#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.createBlackOnWhiteMonospaced#9260454e": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.GraphicStrings#a3231afe": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "fontConfiguration",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration"
+          }, {
+            "name": "background",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "image",
+            "type": "java.awt.image.BufferedImage"
+          }, {
+            "name": "position",
+            "type": "net.sourceforge.plantuml.klimt.geom.GraphicPosition"
+          }, {
+            "name": "mode",
+            "type": "net.sourceforge.plantuml.klimt.creole.CreoleMode"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.createForError#bd83d09a": {
+          "returnType": "net.sourceforge.plantuml.svek.IEntityImage",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "useRed",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.getBackcolor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.getShapeType#1": {
+          "returnType": "net.sourceforge.plantuml.svek.ShapeType",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.sansSerif12#7ec12c1a": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.GraphicStrings.getTextBlock#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock",
+      "metric": {
+        "loc": "149",
+        "cyclomatic_complexity": "16",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "7"
+      }
+    }
+  },
+  "metric": {
+    "loc": "209",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

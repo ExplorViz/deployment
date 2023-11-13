@@ -1,0 +1,163 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "GtileHexagonInsideLabelled.java",
+  "packageName": "net.sourceforge.plantuml.activitydiagram3.gtile",
+  "importName": ["net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.utils.MathUtils"],
+  "classData": {
+    "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInsideLabelled": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "southLabel",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "eastLabel",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "westLabel",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInsideLabelled.withEastLabel#37fde35f": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInsideLabelled",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "eastLabel",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInsideLabelled.GtileHexagonInsideLabelled#e902509a": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diamond",
+            "type": "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInside"
+          }, {
+            "name": "southLabel",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }, {
+            "name": "eastLabel",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }, {
+            "name": "westLabel",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInsideLabelled.getNorthMargin#dc6b7f66": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "diamond",
+            "type": "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInside"
+          }, {
+            "name": "eastLabel",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }, {
+            "name": "westLabel",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInsideLabelled.withSouthLabel#37fde35f": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInsideLabelled",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "eastLabel",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInsideLabelled.withWestLabel#37fde35f": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInsideLabelled",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "westLabel",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInsideLabelled.getSouthMargin#bafb471a": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "diamond",
+            "type": "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInside"
+          }, {
+            "name": "southLabel",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInsideLabelled.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.gtile.GtileHexagonInsideLabelled.drawUInternal#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.activitydiagram3.gtile.GtileWithMargin",
+      "metric": {
+        "loc": "69",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "113",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

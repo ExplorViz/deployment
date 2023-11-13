@@ -1,0 +1,968 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "SkinParamDelegator.java",
+  "packageName": "net.sourceforge.plantuml.skin",
+  "importName": ["java.util.Collection", "java.util.Map", "net.sourceforge.plantuml.TikzFontDistortion", "net.sourceforge.plantuml.dot.DotSplines", "net.sourceforge.plantuml.klimt.Arrows", "net.sourceforge.plantuml.klimt.LineBreakStrategy", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.color.Colors", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColorSet", "net.sourceforge.plantuml.klimt.color.NoSuchColorException", "net.sourceforge.plantuml.klimt.creole.CreoleMode", "net.sourceforge.plantuml.klimt.creole.SheetBuilder", "net.sourceforge.plantuml.klimt.drawing.svg.LengthAdjust", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.FontParam", "net.sourceforge.plantuml.klimt.font.UFont", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.Rankdir", "net.sourceforge.plantuml.klimt.sprite.Sprite", "net.sourceforge.plantuml.stereo.Stereotype", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleBuilder", "net.sourceforge.plantuml.svek.ConditionEndStyle", "net.sourceforge.plantuml.svek.ConditionStyle", "net.sourceforge.plantuml.svek.PackageStyle", "net.sourceforge.plantuml.text.Guillemet"],
+  "classData": {
+    "net.sourceforge.plantuml.skin.SkinParamDelegator": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.style.ISkinParam"],
+      "field": [{
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinParam",
+        "modifier": ["final", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.maxAsciiMessageLength#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getTikzFontDistortion#1": {
+          "returnType": "net.sourceforge.plantuml.TikzFontDistortion",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getCurrentStyleBuilder#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleBuilder",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getDotSplines#1": {
+          "returnType": "net.sourceforge.plantuml.dot.DotSplines",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.guillemet#1": {
+          "returnType": "net.sourceforge.plantuml.text.Guillemet",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getSplitParam#1": {
+          "returnType": "net.sourceforge.plantuml.skin.SplitParam",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getCircledCharacterRadius#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getPadding#3438233b": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "param",
+            "type": "net.sourceforge.plantuml.skin.PaddingParam"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getConditionStyle#1": {
+          "returnType": "net.sourceforge.plantuml.svek.ConditionStyle",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.colorArrowSeparationSpace#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.sequenceDiagramPadder#1": {
+          "returnType": "net.sourceforge.plantuml.skin.Padder",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.shadowingForNote#9fdb4771": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getHtmlColor#c0ebe3ff": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "param",
+            "type": "net.sourceforge.plantuml.skin.ColorParam"
+          }, {
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }, {
+            "name": "clickable",
+            "type": "boolean"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.sameClassWidth#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.useRankSame#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getParamSameClassWidth#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.setDefaultSkin#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newFileName",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.classAttributeIconSize#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.packageStyle#1": {
+          "returnType": "net.sourceforge.plantuml.svek.PackageStyle",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.forceSequenceParticipantUnderlined#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.copyAllFrom#a9869651": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getAllSpriteNames#1": {
+          "returnType": "java.util.Collection\u003cjava.lang.String\u003e",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getlengthAdjust#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.drawing.svg.LengthAdjust",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.arrows#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.Arrows",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getDpi#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.sheet#1bfb598b": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.SheetBuilder",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fontConfiguration",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration"
+          }, {
+            "name": "horizontalAlignment",
+            "type": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment"
+          }, {
+            "name": "creoleMode",
+            "type": "net.sourceforge.plantuml.klimt.creole.CreoleMode"
+          }, {
+            "name": "stereo",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.isUseVizJs#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.muteStyle#4c82db0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "modifiedStyle",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getSprite#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.sprite.Sprite",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getSvgLinkTarget#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getThickness#560f55a": {
+          "returnType": "net.sourceforge.plantuml.klimt.UStroke",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "param",
+            "type": "net.sourceforge.plantuml.skin.LineParam"
+          }, {
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getHorizontalAlignment#409a35a4": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "param",
+            "type": "net.sourceforge.plantuml.skin.AlignmentParam"
+          }, {
+            "name": "arrowDirection",
+            "type": "net.sourceforge.plantuml.skin.ArrowDirection"
+          }, {
+            "name": "isReverseDefine",
+            "type": "boolean"
+          }, {
+            "name": "overrideDefault",
+            "type": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getDefaultTextAlignment#98a1661e": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "defaultValue",
+            "type": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.responseMessageBelowArrow#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.componentStyle#1": {
+          "returnType": "net.sourceforge.plantuml.skin.ComponentStyle",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.svgDimensionStyle#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getDefaultSkin#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.fixCircleLabelOverlapping#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getStereotypeAlignment#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getIHtmlColorSet#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColorSet",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.stereotypePositionTop#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getConditionEndStyle#1": {
+          "returnType": "net.sourceforge.plantuml.svek.ConditionEndStyle",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getValue#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getTabSize#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.swimlaneWrapTitleWidth#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.LineBreakStrategy",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.groupInheritance#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.setSvgSize#874989e1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "origin",
+            "type": "java.lang.String"
+          }, {
+            "name": "sizeToUse",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getDiagonalCorner#c90c22fb": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "param",
+            "type": "net.sourceforge.plantuml.skin.CornerParam"
+          }, {
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getMonospacedFamily#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getUmlDiagramType#1": {
+          "returnType": "net.sourceforge.plantuml.skin.UmlDiagramType",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.values#1": {
+          "returnType": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getRankdir#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.Rankdir",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.useOctagonForActivity#9fdb4771": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.maxMessageSize#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.LineBreakStrategy",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getPadding#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getRoundCorner#c90c22fb": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "param",
+            "type": "net.sourceforge.plantuml.skin.CornerParam"
+          }, {
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getPreserveAspectRatio#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.transformStringForSizeHack#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getFontHtmlColor#765b3c0d": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }, {
+            "name": "param",
+            "type": "net.sourceforge.plantuml.klimt.font.FontParam"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getBackgroundColor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getHyperlinkColor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getFont#a886dd67": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UFont",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }, {
+            "name": "inPackageTitle",
+            "type": "boolean"
+          }, {
+            "name": "fontParam",
+            "type": "net.sourceforge.plantuml.klimt.font.FontParam"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.handwritten#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.shadowing#9fdb4771": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.displayGenericWithOldFashion#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getCircledCharacter#9fdb4771": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.actorStyle#1": {
+          "returnType": "net.sourceforge.plantuml.skin.ActorStyle",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.useUnderlineForHyperlink#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UStroke",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.SkinParamDelegator#98f78ae6": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.setUseVizJs#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "useVizJs",
+            "type": "boolean"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getColors#37a5b149": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.Colors",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "param",
+            "type": "net.sourceforge.plantuml.skin.ColorParam"
+          }, {
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getNodesep#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.useSwimlanes#bdf9f578": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "type",
+            "type": "net.sourceforge.plantuml.skin.UmlDiagramType"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.getRanksep#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.strictUmlStyle#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.swimlaneWidth#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.hoverPathColor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.SkinParamDelegator.sheet#aa920ebc": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.SheetBuilder",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fontConfiguration",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration"
+          }, {
+            "name": "horizontalAlignment",
+            "type": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment"
+          }, {
+            "name": "creoleMode",
+            "type": "net.sourceforge.plantuml.klimt.creole.CreoleMode"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "397",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "464",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

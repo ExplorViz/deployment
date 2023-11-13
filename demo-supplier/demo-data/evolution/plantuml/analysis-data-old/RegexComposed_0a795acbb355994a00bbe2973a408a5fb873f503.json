@@ -1,0 +1,159 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "RegexComposed.java",
+  "packageName": "net.sourceforge.plantuml.regex",
+  "importName": ["java.util.Arrays", "java.util.Collections", "java.util.HashMap", "java.util.Iterator", "java.util.List", "java.util.Map", "java.util.concurrent.atomic.AtomicReference", "net.sourceforge.plantuml.text.StringLocated"],
+  "classData": {
+    "net.sourceforge.plantuml.regex.RegexComposed": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "interface": ["net.sourceforge.plantuml.regex.IRegex"],
+      "field": [{
+        "name": "partials",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.regex.IRegex\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fullCached",
+        "type": "java.util.concurrent.atomic.AtomicReference\u003cnet.sourceforge.plantuml.regex.Pattern2\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.regex.RegexComposed.getPattern#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.regex.RegexComposed.match#49563e00": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.regex.RegexComposed.getPattern2#1": {
+          "returnType": "net.sourceforge.plantuml.regex.Pattern2",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.regex.RegexComposed.getPartials#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.regex.IRegex\u003e",
+          "modifier": ["final", "protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.regex.RegexComposed.partials#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.regex.IRegex\u003e",
+          "modifier": ["protected", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.regex.RegexComposed.getFullSlow#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["abstract", "protected"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.regex.RegexComposed.createPartialMatch#fcf5bd1e": {
+          "returnType": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.regex.RegexPartialMatch\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "it",
+            "type": "java.util.Iterator\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.regex.RegexComposed.isCompiled#1": {
+          "returnType": "boolean",
+          "modifier": ["final", "protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.regex.RegexComposed.RegexComposed#8144c59d": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "partial",
+            "type": "net.sourceforge.plantuml.regex.IRegex"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.regex.RegexComposed.getStartCount#1": {
+          "returnType": "int",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.regex.RegexComposed.count#1": {
+          "returnType": "int",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.regex.RegexComposed.matcher#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.regex.RegexResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "78",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "125",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,397 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "FileFormatOption.java",
+  "packageName": "net.sourceforge.plantuml",
+  "importName": ["java.awt.geom.AffineTransform", "java.io.Serializable", "java.util.Objects", "net.sourceforge.plantuml.klimt.color.ColorMapper", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.text.SvgCharSizeHack"],
+  "classData": {
+    "net.sourceforge.plantuml.FileFormatOption": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "interface": ["java.io.Serializable"],
+      "field": [{
+        "name": "fileFormat",
+        "type": "net.sourceforge.plantuml.FileFormat",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "withMetadata",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "useRedForError",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "svgLinkTarget",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "hoverColor",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "tikzFontDistortion",
+        "type": "net.sourceforge.plantuml.TikzFontDistortion",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "scale",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "preserveAspectRatio",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "watermark",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "colorMapper",
+        "type": "net.sourceforge.plantuml.klimt.color.ColorMapper",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "debugsvek",
+        "type": "boolean",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.FileFormatOption.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.withUseRedForError#1": {
+          "returnType": "net.sourceforge.plantuml.FileFormatOption",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.withHoverColor#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.FileFormatOption",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "hoverColor",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.getSvgLinkTarget#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.isUseRedForError#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.FileFormatOption#1a6c589b": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormat"
+          }, {
+            "name": "withMetadata",
+            "type": "boolean"
+          }, {
+            "name": "useRedForError",
+            "type": "boolean"
+          }, {
+            "name": "svgLinkTarget",
+            "type": "java.lang.String"
+          }, {
+            "name": "debugsvek",
+            "type": "boolean"
+          }, {
+            "name": "hoverColor",
+            "type": "java.lang.String"
+          }, {
+            "name": "tikzFontDistortion",
+            "type": "net.sourceforge.plantuml.TikzFontDistortion"
+          }, {
+            "name": "scale",
+            "type": "double"
+          }, {
+            "name": "preserveAspectRatio",
+            "type": "java.lang.String"
+          }, {
+            "name": "watermark",
+            "type": "java.lang.String"
+          }, {
+            "name": "colorMapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.isDebugSvek#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.withScale#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.FileFormatOption",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "scale",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.getAffineTransform#1": {
+          "returnType": "java.awt.geom.AffineTransform",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Deprecated"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.withSvgLinkTarget#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.FileFormatOption",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "svgLinkTarget",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.getFileFormat#1": {
+          "returnType": "net.sourceforge.plantuml.FileFormat",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.getPreserveAspectRatio#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.withTikzFontDistortion#bd71ee4f": {
+          "returnType": "net.sourceforge.plantuml.FileFormatOption",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "tikzFontDistortion",
+            "type": "net.sourceforge.plantuml.TikzFontDistortion"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.isWithMetadata#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.withPreserveAspectRatio#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.FileFormatOption",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "preserveAspectRatio",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.withWartermark#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.FileFormatOption",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "watermark",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.setDebugSvek#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "debugsvek",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.withColorMapper#92ab2b83": {
+          "returnType": "net.sourceforge.plantuml.FileFormatOption",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "colorMapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.getHoverColor#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.getColorMapper#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.ColorMapper",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.getWatermark#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.hideMetadata#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.FileFormatOption#b010dd96": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormat"
+          }, {
+            "name": "withMetadata",
+            "type": "boolean"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.FileFormatOption#cbbfa8d2": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormat"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.getTikzFontDistortion#1": {
+          "returnType": "net.sourceforge.plantuml.TikzFontDistortion",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.getDefaultStringBounder#821ac0bb": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.StringBounder",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "charSizeHack",
+            "type": "net.sourceforge.plantuml.text.SvgCharSizeHack"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.FileFormatOption.getScaleCoef#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "148",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "193",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

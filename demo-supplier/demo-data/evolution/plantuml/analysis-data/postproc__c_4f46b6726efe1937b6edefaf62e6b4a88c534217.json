@@ -1,0 +1,518 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "postproc__c.java",
+  "packageName": "gen.lib.common",
+  "importName": ["gen.lib.cgraph.attr__c.agattr", "gen.lib.cgraph.edge__c.agfstout", "gen.lib.cgraph.edge__c.aghead", "gen.lib.cgraph.edge__c.agnxtout", "gen.lib.cgraph.edge__c.agtail", "gen.lib.cgraph.graph__c.agnnodes", "gen.lib.cgraph.id__c.agnameof", "gen.lib.cgraph.node__c.agfstnode", "gen.lib.cgraph.node__c.agnxtnode", "gen.lib.cgraph.obj__c.agroot", "gen.lib.common.geom__c.ccwrotatepf", "gen.lib.common.splines__c.edgeMidpoint", "gen.lib.common.splines__c.getsplinepoints", "gen.lib.common.utils__c.gv_nodesize", "gen.lib.common.utils__c.late_bool", "gen.lib.common.utils__c.updateBB", "gen.lib.label.xlabels__c.placeLabels", "h.ST_pointf.pointfof", "smetana.core.Macro.AGRAPH", "smetana.core.Macro.EDGE_LABEL", "smetana.core.Macro.EDGE_XLABEL", "smetana.core.Macro.ED_edge_type", "smetana.core.Macro.ED_head_label", "smetana.core.Macro.ED_label", "smetana.core.Macro.ED_spl", "smetana.core.Macro.ED_tail_label", "smetana.core.Macro.ED_xlabel", "smetana.core.Macro.ET_NONE", "smetana.core.Macro.GD_bb", "smetana.core.Macro.GD_border", "smetana.core.Macro.GD_clust", "smetana.core.Macro.GD_flags", "smetana.core.Macro.GD_flip", "smetana.core.Macro.GD_has_labels", "smetana.core.Macro.GD_label", "smetana.core.Macro.GD_label_pos", "smetana.core.Macro.GD_n_cluster", "smetana.core.Macro.GD_rankdir", "smetana.core.Macro.GRAPH_LABEL", "smetana.core.Macro.HEAD_LABEL", "smetana.core.Macro.IGNORED", "smetana.core.Macro.INCH2PS", "smetana.core.Macro.INT_MAX", "smetana.core.Macro.LABEL_AT_LEFT", "smetana.core.Macro.LABEL_AT_RIGHT", "smetana.core.Macro.LABEL_AT_TOP", "smetana.core.Macro.LEFT_IX", "smetana.core.Macro.ND_coord", "smetana.core.Macro.ND_height", "smetana.core.Macro.ND_width", "smetana.core.Macro.ND_xlabel", "smetana.core.Macro.NODE_XLABEL", "smetana.core.Macro.RANKDIR_BT", "smetana.core.Macro.RANKDIR_LR", "smetana.core.Macro.RANKDIR_RL", "smetana.core.Macro.RANKDIR_TB", "smetana.core.Macro.RIGHT_IX", "smetana.core.Macro.TAIL_LABEL", "smetana.core.Macro.UNSUPPORTED", "smetana.core.debug.SmetanaDebug.ENTERING", "smetana.core.debug.SmetanaDebug.LEAVING", "gen.annotation.Original", "gen.annotation.Reviewed", "gen.annotation.Unused", "h.ST_Agedge_s", "h.ST_Agnode_s", "h.ST_Agraph_s", "h.ST_Agsym_s", "h.ST_bezier", "h.ST_boxf", "h.ST_cinfo_t", "h.ST_label_params_t", "h.ST_object_t", "h.ST_pointf", "h.ST_splines", "h.ST_textlabel_t", "h.ST_xlabel_t", "smetana.core.CArray", "smetana.core.CString", "smetana.core.Globals", "smetana.core.Memory", "smetana.core.ZType"],
+  "classData": {
+    "gen.lib.common.postproc__c": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "gen.lib.common.postproc__c.addXLabels#c8177730": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "gp",
+            "type": "h.ST_Agraph_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "142",
+            "cyclomatic_complexity": "43",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "gen.lib.common.postproc__c.dotneato_postprocess#c8177730": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.postproc__c.addXLabel_#55f108f7": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "lp",
+            "type": "h.ST_textlabel_t"
+          }, {
+            "name": "objp",
+            "type": "smetana.core.CArray\u003ch.ST_object_t\u003e"
+          }, {
+            "name": "xlp",
+            "type": "smetana.core.CArray\u003ch.ST_xlabel_t\u003e"
+          }, {
+            "name": "initObj",
+            "type": "int"
+          }, {
+            "name": "pos",
+            "type": "h.ST_pointf"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.postproc__c.HAVE_EDGE#133e7fb": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ep",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "et",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.postproc__c.addClusterObj#d01f1638": {
+          "returnType": "h.ST_cinfo_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "info",
+            "type": "h.ST_cinfo_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.postproc__c.map_point_w_#72802d25": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "p",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.postproc__c.addClusterObj_#d01f1638": {
+          "returnType": "h.ST_cinfo_t",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "info",
+            "type": "h.ST_cinfo_t"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.postproc__c.translate_bb#3ad906bf": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "rankdir",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.postproc__c.translate_drawing#c8177730": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.common.postproc__c.edgeHeadpoint#ce7d7e74": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.postproc__c.addXLabel#55f108f7": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "lp",
+            "type": "h.ST_textlabel_t"
+          }, {
+            "name": "objp",
+            "type": "smetana.core.CArray\u003ch.ST_object_t\u003e"
+          }, {
+            "name": "xlp",
+            "type": "smetana.core.CArray\u003ch.ST_xlabel_t\u003e"
+          }, {
+            "name": "initObj",
+            "type": "int"
+          }, {
+            "name": "pos",
+            "type": "h.ST_pointf"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.postproc__c.addLabelObj_#6be42876": {
+          "returnType": "h.ST_boxf",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "lp",
+            "type": "h.ST_textlabel_t"
+          }, {
+            "name": "objp",
+            "type": "smetana.core.CArray\u003ch.ST_object_t\u003e"
+          }, {
+            "name": "bb",
+            "type": "h.ST_boxf",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.postproc__c.edgeTailpoint#ce7d7e74": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.postproc__c.addLabelObj#6be42876": {
+          "returnType": "h.ST_boxf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "lp",
+            "type": "h.ST_textlabel_t"
+          }, {
+            "name": "objp",
+            "type": "smetana.core.CArray\u003ch.ST_object_t\u003e"
+          }, {
+            "name": "bb",
+            "type": "h.ST_boxf",
+            "modifier": ["final "]
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.postproc__c.addNodeObj_#94585792": {
+          "returnType": "h.ST_boxf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "np",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "objp",
+            "type": "smetana.core.CArray\u003ch.ST_object_t\u003e"
+          }, {
+            "name": "bb",
+            "type": "h.ST_boxf",
+            "modifier": ["final "]
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.postproc__c.addNodeObj#94585792": {
+          "returnType": "h.ST_boxf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "np",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "objp",
+            "type": "smetana.core.CArray\u003ch.ST_object_t\u003e"
+          }, {
+            "name": "bb",
+            "type": "h.ST_boxf",
+            "modifier": ["final "]
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.postproc__c.map_point#72802d25": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "p",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.postproc__c.adjustBB_#43d3d408": {
+          "returnType": "h.ST_boxf",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "objp",
+            "type": "smetana.core.CArray\u003ch.ST_object_t\u003e"
+          }, {
+            "name": "bb",
+            "type": "h.ST_boxf"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.postproc__c.place_graph_label#e4865a9e": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.common.postproc__c.edgeHeadpoint_#ce7d7e74": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.postproc__c.map_edge#b20e9b06": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "36",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.common.postproc__c.edgeTailpoint_#ce7d7e74": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.postproc__c.place_flip_graph_label#e4865a9e": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.common.postproc__c.centerPt#dc1925d4": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "xlp",
+            "type": "smetana.core.CArray\u003ch.ST_xlabel_t\u003e"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.postproc__c.gv_postprocess#3ad906bf": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "allowTranslation",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "38",
+            "cyclomatic_complexity": "15",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.common.postproc__c.adjustBB#43d3d408": {
+          "returnType": "h.ST_boxf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "objp",
+            "type": "smetana.core.CArray\u003ch.ST_object_t\u003e"
+          }, {
+            "name": "bb",
+            "type": "h.ST_boxf"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.postproc__c.countClusterLabels#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "631",
+        "cyclomatic_complexity": "127",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "761",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "plantuml@gmail.com"
+}

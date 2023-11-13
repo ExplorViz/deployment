@@ -1,0 +1,112 @@
+{
+  "commitID": "1315cf6e1f1e88e4850e5573388a89ba4469df07",
+  "fileName": "VisitController.java",
+  "packageName": "org.springframework.samples.petclinic.owner",
+  "importName": ["java.util.Map", "org.springframework.stereotype.Controller", "org.springframework.validation.BindingResult", "org.springframework.web.bind.WebDataBinder", "org.springframework.web.bind.annotation.GetMapping", "org.springframework.web.bind.annotation.InitBinder", "org.springframework.web.bind.annotation.ModelAttribute", "org.springframework.web.bind.annotation.PathVariable", "org.springframework.web.bind.annotation.PostMapping", "jakarta.validation.Valid"],
+  "classData": {
+    "org.springframework.samples.petclinic.owner.VisitController": {
+      "type": "CLASS",
+      "field": [{
+        "name": "owners",
+        "type": "org.springframework.samples.petclinic.owner.OwnerRepository",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.owner.VisitController.initNewVisitForm#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["GetMapping"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.VisitController.setAllowedFields#bc79c867": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dataBinder",
+            "type": "org.springframework.web.bind.WebDataBinder"
+          }],
+          "annotation": ["InitBinder"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.VisitController.VisitController#7721de5c": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "owners",
+            "type": "org.springframework.samples.petclinic.owner.OwnerRepository"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.VisitController.loadPetWithVisit#bcf0eb43": {
+          "returnType": "org.springframework.samples.petclinic.owner.Visit",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ownerId",
+            "type": "int"
+          }, {
+            "name": "petId",
+            "type": "int"
+          }, {
+            "name": "model",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e"
+          }],
+          "annotation": ["ModelAttribute"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.VisitController.processNewVisitForm#5f832354": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.owner.Owner"
+          }, {
+            "name": "petId",
+            "type": "int"
+          }, {
+            "name": "visit",
+            "type": "org.springframework.samples.petclinic.owner.Visit"
+          }, {
+            "name": "result",
+            "type": "org.springframework.validation.BindingResult"
+          }],
+          "annotation": ["PostMapping"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "annotation": ["Controller"],
+      "metric": {
+        "loc": "46",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "76",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dsyer@vmware.com",
+  "addedLines": 2,
+  "deletedLines": 2
+}

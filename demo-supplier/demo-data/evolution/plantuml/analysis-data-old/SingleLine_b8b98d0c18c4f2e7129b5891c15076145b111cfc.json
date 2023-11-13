@@ -1,0 +1,135 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "SingleLine.java",
+  "packageName": "net.sourceforge.plantuml.klimt.shape",
+  "importName": ["java.util.ArrayList", "java.util.List", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.creole.command.FontChange", "net.sourceforge.plantuml.klimt.creole.command.HtmlCommand", "net.sourceforge.plantuml.klimt.creole.command.Img", "net.sourceforge.plantuml.klimt.creole.command.PlainText", "net.sourceforge.plantuml.klimt.creole.command.Splitter", "net.sourceforge.plantuml.klimt.creole.command.SpriteCommand", "net.sourceforge.plantuml.klimt.creole.command.TextLink", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.sprite.Sprite", "net.sourceforge.plantuml.klimt.sprite.SpriteContainer", "net.sourceforge.plantuml.url.Url"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.shape.SingleLine": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.shape.Line"],
+      "field": [{
+        "name": "blocs",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.shape.TextBlock\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "horizontalAlignment",
+        "type": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.shape.SingleLine.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.SingleLine.withSomeHtmlTag#5bd5b4": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.SingleLine",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "text",
+            "type": "java.lang.String"
+          }, {
+            "name": "fontConfiguration",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration"
+          }, {
+            "name": "horizontalAlignment",
+            "type": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment"
+          }, {
+            "name": "spriteContainer",
+            "type": "net.sourceforge.plantuml.klimt.sprite.SpriteContainer"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "12",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.SingleLine.SingleLine#98a1661e": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "horizontalAlignment",
+            "type": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.SingleLine.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.SingleLine.getHorizontalAlignment#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.SingleLine.rawText#675ace77": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.SingleLine",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "text",
+            "type": "java.lang.String"
+          }, {
+            "name": "fontConfiguration",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.SingleLine.maxDeltaY#f1b230f2": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock",
+      "metric": {
+        "loc": "96",
+        "cyclomatic_complexity": "19",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "153",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

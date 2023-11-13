@@ -1,0 +1,113 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "SequenceDiagramTxtMaker.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram.graphic",
+  "importName": ["java.nio.charset.StandardCharsets.UTF_8", "java.io.IOException", "java.io.OutputStream", "java.io.PrintStream", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.api.ImageDataSimple", "net.sourceforge.plantuml.asciiart.TextSkin", "net.sourceforge.plantuml.asciiart.TextStringBounder", "net.sourceforge.plantuml.asciiart.UmlCharArea", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.drawing.txt.UGraphicTxt", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.security.SecurityUtils", "net.sourceforge.plantuml.sequencediagram.Event", "net.sourceforge.plantuml.sequencediagram.Participant", "net.sourceforge.plantuml.sequencediagram.SequenceDiagram"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.graphic.SequenceDiagramTxtMaker": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.sequencediagram.graphic.FileMaker"],
+      "field": [{
+        "name": "diagram",
+        "type": "net.sourceforge.plantuml.sequencediagram.SequenceDiagram",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "drawableSet",
+        "type": "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSet",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fullDimension",
+        "type": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "dummyStringBounder",
+        "type": "net.sourceforge.plantuml.klimt.font.StringBounder",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ug",
+        "type": "net.sourceforge.plantuml.klimt.drawing.txt.UGraphicTxt",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fileFormat",
+        "type": "net.sourceforge.plantuml.FileFormat",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skin",
+        "type": "net.sourceforge.plantuml.asciiart.TextSkin",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.graphic.SequenceDiagramTxtMaker.createOne#9d1a6e39": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "isWithMetadata",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SequenceDiagramTxtMaker.getNbPages#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SequenceDiagramTxtMaker.createOneGraphic#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SequenceDiagramTxtMaker.SequenceDiagramTxtMaker#6ca2502": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "sequenceDiagram",
+            "type": "net.sourceforge.plantuml.sequencediagram.SequenceDiagram"
+          }, {
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormat"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "37",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "69",
+        "cyclomatic_complexity": "8",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "130",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

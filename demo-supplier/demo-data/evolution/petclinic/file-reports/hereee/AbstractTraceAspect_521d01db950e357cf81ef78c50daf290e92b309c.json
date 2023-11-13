@@ -1,0 +1,56 @@
+{
+  "commitID": "521d01db950e357cf81ef78c50daf290e92b309c",
+  "fileName": "AbstractTraceAspect.java",
+  "packageName": "org.springframework.samples.petclinic.aspects",
+  "importName": ["org.apache.commons.logging.Log", "org.apache.commons.logging.LogFactory", "org.aspectj.lang.JoinPoint", "org.aspectj.lang.annotation.Aspect", "org.aspectj.lang.annotation.Before", "org.aspectj.lang.annotation.Pointcut"],
+  "classData": {
+    "org.springframework.samples.petclinic.aspects.AbstractTraceAspect": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "field": [{
+        "name": "logger",
+        "type": "org.apache.commons.logging.Log",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.aspects.AbstractTraceAspect.trace#ac4c0c48": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "jpsp",
+            "type": "org.aspectj.lang.JoinPoint.StaticPart"
+          }],
+          "annotation": ["Before"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.aspects.AbstractTraceAspect.traced#1": {
+          "returnType": "void",
+          "modifier": ["public", "abstract"],
+          "annotation": ["Pointcut"],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Aspect"],
+      "metric": {
+        "loc": "16",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "25",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "cleau@vmware.com",
+  "addedLines": 31
+}

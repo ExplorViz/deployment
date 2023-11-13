@@ -1,0 +1,211 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "mem__c.java",
+  "packageName": "gen.lib.cgraph",
+  "importName": ["smetana.core.Macro.UNSUPPORTED", "smetana.core.debug.SmetanaDebug.ENTERING", "smetana.core.debug.SmetanaDebug.LEAVING", "gen.annotation.Original", "gen.annotation.Reviewed", "gen.annotation.Unused", "h.ST_Agdisc_s", "h.ST_Agraph_s", "smetana.core.CFunction", "smetana.core.CFunctionAbstract", "smetana.core.Globals", "smetana.core.__ptr__", "smetana.core.size_t"],
+  "classData": {
+    "gen.lib.cgraph.mem__c.memresize.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.cgraph.mem__c.memresize.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "gen.lib.cgraph.mem__c.memalloc.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.cgraph.mem__c.memalloc.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "gen.lib.cgraph.mem__c.memopen.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.cgraph.mem__c.memopen.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "gen.lib.cgraph.mem__c": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "memopen",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "memalloc",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "memresize",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "memfree",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }],
+      "methodData": {
+        "gen.lib.cgraph.mem__c.memfree#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg_",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.cgraph.mem__c.memopen#cd14884c": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "disc",
+            "type": "h.ST_Agdisc_s"
+          }],
+          "annotation": ["gen.annotation.Original"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.cgraph.mem__c.memresize#aa4b0c01": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "heap",
+            "type": "smetana.core.__ptr__"
+          }, {
+            "name": "ptr",
+            "type": "smetana.core.__ptr__"
+          }, {
+            "name": "oldsize",
+            "type": "smetana.core.size_t"
+          }, {
+            "name": "request",
+            "type": "smetana.core.size_t"
+          }],
+          "annotation": ["gen.annotation.Original"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.cgraph.mem__c.memalloc#bdf445c9": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "heap",
+            "type": "smetana.core.__ptr__"
+          }, {
+            "name": "request",
+            "type": "smetana.core.size_t"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.cgraph.mem__c.agalloc#7682e8d8": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "size",
+            "type": "smetana.core.size_t"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "87",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "gen.lib.cgraph.mem__c.memfree.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.cgraph.mem__c.memfree.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "148",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

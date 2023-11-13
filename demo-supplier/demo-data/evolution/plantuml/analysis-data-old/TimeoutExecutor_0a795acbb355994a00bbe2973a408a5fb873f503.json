@@ -1,0 +1,101 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "TimeoutExecutor.java",
+  "packageName": "net.sourceforge.plantuml.api",
+  "importName": ["java.util.concurrent.atomic.AtomicBoolean", "net.sourceforge.plantuml.log.Logme"],
+  "classData": {
+    "net.sourceforge.plantuml.api.TimeoutExecutor.MyThread": {
+      "type": "CLASS",
+      "field": [{
+        "name": "task",
+        "type": "net.sourceforge.plantuml.api.MyRunnable",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "done",
+        "type": "java.util.concurrent.atomic.AtomicBoolean",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.api.TimeoutExecutor.MyThread.run#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.api.TimeoutExecutor.MyThread.MyThread#c3b9b528": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "task",
+            "type": "net.sourceforge.plantuml.api.MyRunnable"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "java.lang.Thread",
+      "metric": {
+        "loc": "20",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.api.TimeoutExecutor": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "field": [{
+        "name": "ms",
+        "type": "long",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.api.TimeoutExecutor.MyThread"],
+      "methodData": {
+        "net.sourceforge.plantuml.api.TimeoutExecutor.TimeoutExecutor#32c69b": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ms",
+            "type": "long"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.TimeoutExecutor.executeNow#c3b9b528": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "task",
+            "type": "net.sourceforge.plantuml.api.MyRunnable"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "49",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "90",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

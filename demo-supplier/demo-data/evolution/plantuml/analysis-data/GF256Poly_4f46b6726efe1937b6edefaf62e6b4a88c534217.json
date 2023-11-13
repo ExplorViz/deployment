@@ -1,0 +1,168 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "GF256Poly.java",
+  "packageName": "ext.plantuml.com.google.zxing.common.reedsolomon",
+  "classData": {
+    "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly": {
+      "type": "CLASS",
+      "modifier": ["final"],
+      "field": [{
+        "name": "field",
+        "type": "ext.plantuml.com.google.zxing.common.reedsolomon.GF256",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "coefficients",
+        "type": "int[]",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly.addOrSubtract#39147b1f": {
+          "returnType": "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly",
+          "parameter": [{
+            "name": "other",
+            "type": "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly.evaluateAt#1980e": {
+          "returnType": "int",
+          "parameter": [{
+            "name": "a",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly.getCoefficient#1980e": {
+          "returnType": "int",
+          "parameter": [{
+            "name": "degree",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly.GF256Poly#831570be": {
+          "parameter": [{
+            "name": "field",
+            "type": "ext.plantuml.com.google.zxing.common.reedsolomon.GF256"
+          }, {
+            "name": "coefficients",
+            "type": "int[]"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly.getDegree#1": {
+          "returnType": "int",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "36",
+            "cyclomatic_complexity": "13",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly.getCoefficients#1": {
+          "returnType": "int[]",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly.multiply#1980e": {
+          "returnType": "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly",
+          "parameter": [{
+            "name": "scalar",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly.multiplyByMonomial#3301a1": {
+          "returnType": "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly",
+          "parameter": [{
+            "name": "degree",
+            "type": "int"
+          }, {
+            "name": "coefficient",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly.divide#39147b1f": {
+          "returnType": "GF256Poly[]",
+          "parameter": [{
+            "name": "other",
+            "type": "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly.isZero#1": {
+          "returnType": "boolean",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly.multiply#39147b1f": {
+          "returnType": "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly",
+          "parameter": [{
+            "name": "other",
+            "type": "ext.plantuml.com.google.zxing.common.reedsolomon.GF256Poly"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "211",
+        "cyclomatic_complexity": "47",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "229",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,334 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "WireDiagram.java",
+  "packageName": "net.sourceforge.plantuml.wire",
+  "importName": ["java.io.IOException", "java.io.OutputStream", "java.util.ArrayList", "java.util.List", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.UmlDiagram", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.core.DiagramDescription", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.skin.UmlDiagramType"],
+  "classData": {
+    "net.sourceforge.plantuml.wire.WireDiagram.getTextBlock#1.AbstractTextBlock": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.wire.WireDiagram.getTextBlock#1.AbstractTextBlock.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.wire.WireDiagram.getTextBlock#1.AbstractTextBlock.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.wire.WireDiagram": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "root",
+        "type": "net.sourceforge.plantuml.wire.WBlock",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "spots",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.wire.Spot\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "hlinks",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.wire.WLinkHorizontal\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "vlinks",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.wire.WLinkVertical\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.wire.WireDiagram.print#874989e1": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "indent",
+            "type": "java.lang.String"
+          }, {
+            "name": "text",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.wire.WireDiagram.drawMe#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.wire.WireDiagram.getTextBlock#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.wire.WireDiagram.computeIndentationLevel#943a4c50": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "indent",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.wire.WireDiagram.hlink#bac1da0a": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name1",
+            "type": "java.lang.String"
+          }, {
+            "name": "x1",
+            "type": "java.lang.String"
+          }, {
+            "name": "y1",
+            "type": "java.lang.String"
+          }, {
+            "name": "name2",
+            "type": "java.lang.String"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.wire.WLinkType"
+          }, {
+            "name": "direction",
+            "type": "net.sourceforge.plantuml.wire.WArrowDirection"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.wire.WireDiagram.wgoto#8dc7f270": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "indent",
+            "type": "java.lang.String"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.wire.WireDiagram.getDescription#1": {
+          "returnType": "net.sourceforge.plantuml.core.DiagramDescription",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.wire.WireDiagram.wmove#8dc7f270": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "indent",
+            "type": "java.lang.String"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.wire.WireDiagram.newColumn#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "indent",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.wire.WireDiagram.addComponent#bb2089a": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "indent",
+            "type": "java.lang.String"
+          }, {
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.wire.WireDiagram.spot#c6a6310b": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "x",
+            "type": "java.lang.String"
+          }, {
+            "name": "y",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.wire.WireDiagram.WireDiagram#5aaf4a0e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.wire.WireDiagram.exportDiagramInternal#facb8d19": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.wire.WireDiagram.vlink#bac1da0a": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name1",
+            "type": "java.lang.String"
+          }, {
+            "name": "x1",
+            "type": "java.lang.String"
+          }, {
+            "name": "y1",
+            "type": "java.lang.String"
+          }, {
+            "name": "name2",
+            "type": "java.lang.String"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.wire.WLinkType"
+          }, {
+            "name": "direction",
+            "type": "net.sourceforge.plantuml.wire.WArrowDirection"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.UmlDiagram",
+      "metric": {
+        "loc": "130",
+        "cyclomatic_complexity": "9",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "189",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

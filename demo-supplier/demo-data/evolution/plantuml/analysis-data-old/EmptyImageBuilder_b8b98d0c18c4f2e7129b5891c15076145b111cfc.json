@@ -1,0 +1,186 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "EmptyImageBuilder.java",
+  "packageName": "net.sourceforge.plantuml",
+  "importName": ["java.awt.Color", "java.awt.Font", "java.awt.FontMetrics", "java.awt.Graphics2D", "java.awt.geom.AffineTransform", "java.awt.geom.Rectangle2D", "java.awt.image.BufferedImage", "java.util.ArrayList", "java.util.List", "net.sourceforge.plantuml.dot.GraphvizUtils", "net.sourceforge.plantuml.klimt.UAntiAliasing", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.EmptyImageBuilder": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "im",
+        "type": "java.awt.image.BufferedImage",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "g2d",
+        "type": "java.awt.Graphics2D",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "background",
+        "type": "java.awt.Color",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "stringBounder",
+        "type": "net.sourceforge.plantuml.klimt.font.StringBounder",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.EmptyImageBuilder.getWidth#78e95315": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }, {
+            "name": "javaFont",
+            "type": "java.awt.Font"
+          }, {
+            "name": "fm",
+            "type": "java.awt.FontMetrics"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.EmptyImageBuilder.EmptyImageBuilder#8c059487": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "watermark",
+            "type": "java.lang.String"
+          }, {
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }, {
+            "name": "background",
+            "type": "java.awt.Color"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.EmptyImageBuilder.create#a5a4782a": {
+          "returnType": "net.sourceforge.plantuml.EmptyImageBuilder",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "watermark",
+            "type": "java.lang.String"
+          }, {
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }, {
+            "name": "background",
+            "type": "java.awt.Color"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "dpiFactor",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.EmptyImageBuilder.printWatermark#6f0b7630": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "watermark",
+            "type": "java.lang.String"
+          }, {
+            "name": "maxWidth",
+            "type": "int"
+          }, {
+            "name": "maxHeight",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.EmptyImageBuilder.getType#3e43f62": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "background",
+            "type": "java.awt.Color"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.EmptyImageBuilder.withBreaks#a442a77a": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "watermark",
+            "type": "java.lang.String"
+          }, {
+            "name": "javaFont",
+            "type": "java.awt.Font"
+          }, {
+            "name": "fm",
+            "type": "java.awt.FontMetrics"
+          }, {
+            "name": "maxWidth",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.EmptyImageBuilder.getBufferedImage#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.EmptyImageBuilder.getGraphics2D#1": {
+          "returnType": "java.awt.Graphics2D",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "117",
+        "cyclomatic_complexity": "20",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "169",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

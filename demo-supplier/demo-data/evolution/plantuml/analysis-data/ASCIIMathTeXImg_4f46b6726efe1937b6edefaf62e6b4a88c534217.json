@@ -1,0 +1,479 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "ASCIIMathTeXImg.java",
+  "packageName": "net.sourceforge.plantuml.math",
+  "importName": ["java.util.ArrayList", "java.util.Arrays", "java.util.Collection", "java.util.Collections", "java.util.Comparator", "java.util.List"],
+  "classData": {
+    "net.sourceforge.plantuml.math.ASCIIMathTeXImg.refreshSymbols#1.Comparator\u003cTupple\u003e": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.refreshSymbols#1.Comparator\u003cTupple\u003e.compare#bf8db701": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "o1",
+            "type": "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple"
+          }, {
+            "name": "o2",
+            "type": "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "field": [{
+        "name": "input",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "tag",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "output",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "tex",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ttype",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "rewriteleftright",
+        "type": "String[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "flags",
+        "type": "java.util.Collection\u003cjava.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple.Tupple#851cd854": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "rewriteleftright",
+            "type": "String[]"
+          }, {
+            "name": "input",
+            "type": "java.lang.String"
+          }, {
+            "name": "tag",
+            "type": "java.lang.String"
+          }, {
+            "name": "output",
+            "type": "java.lang.String"
+          }, {
+            "name": "tex",
+            "type": "java.lang.String"
+          }, {
+            "name": "ttype",
+            "type": "int"
+          }, {
+            "name": "flags",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple.hasFlag#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "flagName",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple.Tupple#c12be1a3": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "input",
+            "type": "java.lang.String"
+          }, {
+            "name": "tag",
+            "type": "java.lang.String"
+          }, {
+            "name": "output",
+            "type": "java.lang.String"
+          }, {
+            "name": "tex",
+            "type": "java.lang.String"
+          }, {
+            "name": "ttype",
+            "type": "int"
+          }, {
+            "name": "flags",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "35",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.math.ASCIIMathTeXImg": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "AMnestingDepth",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "AMpreviousSymbol",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "AMcurrentSymbol",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "CONST",
+        "type": "int",
+        "modifier": ["static", "private", "final"]
+      }, {
+        "name": "UNARY",
+        "type": "int",
+        "modifier": ["static", "private", "final"]
+      }, {
+        "name": "BINARY",
+        "type": "int",
+        "modifier": ["static", "private", "final"]
+      }, {
+        "name": "INFIX",
+        "type": "int",
+        "modifier": ["static", "private", "final"]
+      }, {
+        "name": "LEFTBRACKET",
+        "type": "int",
+        "modifier": ["static", "private", "final"]
+      }, {
+        "name": "RIGHTBRACKET",
+        "type": "int",
+        "modifier": ["static", "private", "final"]
+      }, {
+        "name": "SPACE",
+        "type": "int",
+        "modifier": ["static", "private", "final"]
+      }, {
+        "name": "UNDEROVER",
+        "type": "int",
+        "modifier": ["static", "private", "final"]
+      }, {
+        "name": "DEFINITION",
+        "type": "int",
+        "modifier": ["static", "private", "final"]
+      }, {
+        "name": "LEFTRIGHT",
+        "type": "int",
+        "modifier": ["static", "private", "final"]
+      }, {
+        "name": "TEXT",
+        "type": "int",
+        "modifier": ["static", "private", "final"]
+      }, {
+        "name": "AMsqrt",
+        "type": "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "AMroot",
+        "type": "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "AMfrac",
+        "type": "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "AMdiv",
+        "type": "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "AMover",
+        "type": "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "AMsub",
+        "type": "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "AMsup",
+        "type": "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "AMtext",
+        "type": "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "AMmbox",
+        "type": "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "AMquote",
+        "type": "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "AMsymbols",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple\u003e",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "AMnames",
+        "type": "String[]",
+        "modifier": ["private", "static"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple"],
+      "methodData": {
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.AMinitSymbols#1": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.AMposition#c22ccd0": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "arr",
+            "type": "String[]"
+          }, {
+            "name": "str",
+            "type": "java.lang.String"
+          }, {
+            "name": "n",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.AMTparseSexpr#943a4c50": {
+          "returnType": "String[]",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "str",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "149",
+            "cyclomatic_complexity": "95",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.AMTparseExpr#f6eaa9d8": {
+          "returnType": "String[]",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "str",
+            "type": "java.lang.String"
+          }, {
+            "name": "rightbracket",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "151",
+            "cyclomatic_complexity": "40",
+            "nestedBlockDepth": "10"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.slice#6f0b7630": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "str",
+            "type": "java.lang.String"
+          }, {
+            "name": "start",
+            "type": "int"
+          }, {
+            "name": "end",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.refreshSymbols#1": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.slice#f310d59f": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "str",
+            "type": "java.lang.String"
+          }, {
+            "name": "start",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.AMTparseIexpr#943a4c50": {
+          "returnType": "String[]",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "str",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "44",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.AMTgetTeXsymbol#95fc6db9": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "symb",
+            "type": "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.AMgetSymbol#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.math.ASCIIMathTeXImg.Tupple",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "str",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "55",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.substr#6f0b7630": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "str",
+            "type": "java.lang.String"
+          }, {
+            "name": "pos",
+            "type": "int"
+          }, {
+            "name": "len",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.AMTremoveBrackets#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "node",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "35",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.patchColor#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "latex",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.AMremoveCharsAndBlanks#f310d59f": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "str",
+            "type": "java.lang.String"
+          }, {
+            "name": "n",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.math.ASCIIMathTeXImg.getTeX#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "asciiMathInput",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "614",
+        "cyclomatic_complexity": "181",
+        "cyclomatic_complexity_weighted": "18",
+        "LCOM4": "14"
+      }
+    }
+  },
+  "metric": {
+    "loc": "659",
+    "cyclomatic_complexity": "18"
+  },
+  "author": "plantuml@gmail.com"
+}

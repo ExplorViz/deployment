@@ -1,0 +1,124 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "ReceivedHTTPRequest.java",
+  "packageName": "net.sourceforge.plantuml.picoweb",
+  "importName": ["java.io.IOException", "java.io.InputStream", "java.util.StringTokenizer"],
+  "classData": {
+    "net.sourceforge.plantuml.picoweb.ReceivedHTTPRequest": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "CONTENT_LENGTH_HEADER",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "method",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "path",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "body",
+        "type": "byte[]",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.picoweb.ReceivedHTTPRequest.readLine#512cbbe9": {
+          "returnType": "java.lang.String",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "in",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.ReceivedHTTPRequest.getBody#1": {
+          "returnType": "byte[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.ReceivedHTTPRequest.fromStream#512cbbe9": {
+          "returnType": "net.sourceforge.plantuml.picoweb.ReceivedHTTPRequest",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "in",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.ReceivedHTTPRequest.readBody#d46c5926": {
+          "returnType": "byte[]",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "in",
+            "type": "java.io.InputStream"
+          }, {
+            "name": "contentLength",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.ReceivedHTTPRequest.getMethod#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.ReceivedHTTPRequest.parseContentLengthHeader#943a4c50": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.ReceivedHTTPRequest.getPath#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "103",
+        "cyclomatic_complexity": "18",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "109",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

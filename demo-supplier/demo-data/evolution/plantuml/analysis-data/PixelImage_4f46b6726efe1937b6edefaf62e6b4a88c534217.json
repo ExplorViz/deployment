@@ -1,0 +1,202 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "PixelImage.java",
+  "packageName": "net.atmp",
+  "importName": ["java.awt.Color", "java.awt.geom.AffineTransform", "java.awt.image.AffineTransformOp", "java.awt.image.BufferedImage", "java.util.Objects", "net.sourceforge.plantuml.klimt.AffineTransformType", "net.sourceforge.plantuml.klimt.MutableImage", "net.sourceforge.plantuml.klimt.color.ColorUtils"],
+  "classData": {
+    "net.atmp.PixelImage": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.MutableImage"],
+      "field": [{
+        "name": "bufferedImageScale1",
+        "type": "java.awt.image.BufferedImage",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "scale",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "type",
+        "type": "net.sourceforge.plantuml.klimt.AffineTransformType",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "cache",
+        "type": "java.awt.image.BufferedImage",
+        "modifier": ["private"]
+      }, {
+        "name": "mask_a__",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "mask_rgb",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.atmp.PixelImage.muteColor#3e43f62": {
+          "returnType": "net.sourceforge.plantuml.klimt.MutableImage",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newColor",
+            "type": "java.awt.Color"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.atmp.PixelImage.PixelImage#87f15a25": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "bufferedImage",
+            "type": "java.awt.image.BufferedImage"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.klimt.AffineTransformType"
+          }, {
+            "name": "scale",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.PixelImage.muteTransparentColor#3e43f62": {
+          "returnType": "net.sourceforge.plantuml.klimt.MutableImage",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newColor",
+            "type": "java.awt.Color"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.atmp.PixelImage.getDarkerRgb#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.atmp.PixelImage.monochrome#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.MutableImage",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.atmp.PixelImage.getRgb#1980e": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "color",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.PixelImage.getA#1980e": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "color",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.PixelImage.getImage#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public", "final"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.PixelImage.PixelImage#e5e7072c": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "bufferedImage",
+            "type": "java.awt.image.BufferedImage"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.klimt.AffineTransformType"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.PixelImage.deepCopy#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.atmp.PixelImage.getScale#1": {
+          "returnType": "double",
+          "modifier": ["public", "final"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.PixelImage.withScale#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.klimt.MutableImage",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "scale",
+            "type": "double"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "138",
+        "cyclomatic_complexity": "18",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "185",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,288 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "ShapeEdge.java",
+  "packageName": "org.stathissideris.ascii2image.graphics",
+  "importName": ["java.awt.geom.GeneralPath"],
+  "classData": {
+    "org.stathissideris.ascii2image.graphics.ShapeEdge": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "DEBUG",
+        "type": "boolean",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "TYPE_HORIZONTAL",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "TYPE_VERTICAL",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "TYPE_SLOPED",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "owner",
+        "type": "org.stathissideris.ascii2image.graphics.DiagramShape",
+        "modifier": ["private"]
+      }, {
+        "name": "startPoint",
+        "type": "org.stathissideris.ascii2image.graphics.ShapePoint",
+        "modifier": ["private"]
+      }, {
+        "name": "endPoint",
+        "type": "org.stathissideris.ascii2image.graphics.ShapePoint",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.fixDirection#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.translate#ba044f41": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dx",
+            "type": "float"
+          }, {
+            "name": "dy",
+            "type": "float"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.setEndPoint#a19d8eae": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "point",
+            "type": "org.stathissideris.ascii2image.graphics.ShapePoint"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.touchesWith#15b598fd": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "org.stathissideris.ascii2image.graphics.ShapeEdge"
+          }],
+          "metric": {
+            "loc": "36",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.getOwner#1": {
+          "returnType": "org.stathissideris.ascii2image.graphics.DiagramShape",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.setStartPoint#a19d8eae": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "point",
+            "type": "org.stathissideris.ascii2image.graphics.ShapePoint"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.ShapeEdge#a327ad2d": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "start",
+            "type": "org.stathissideris.ascii2image.graphics.ShapePoint"
+          }, {
+            "name": "end",
+            "type": "org.stathissideris.ascii2image.graphics.ShapePoint"
+          }, {
+            "name": "owner",
+            "type": "org.stathissideris.ascii2image.graphics.DiagramShape"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.isHorizontal#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.isVertical#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.changeAxis#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.moveInwardsBy#5d0227b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "offset",
+            "type": "float"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "12",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.getMiddle#1": {
+          "returnType": "org.stathissideris.ascii2image.graphics.ShapePoint",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.setOwner#609ececd": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "shape",
+            "type": "org.stathissideris.ascii2image.graphics.DiagramShape"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.equals#8c658f7e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "object",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.getStartPoint#1": {
+          "returnType": "org.stathissideris.ascii2image.graphics.ShapePoint",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.ShapeEdge#15b598fd": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "org.stathissideris.ascii2image.graphics.ShapeEdge"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.flipDirection#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.getType#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.getDistanceFromOrigin#1": {
+          "returnType": "float",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.ShapeEdge.getEndPoint#1": {
+          "returnType": "org.stathissideris.ascii2image.graphics.ShapePoint",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "190",
+        "cyclomatic_complexity": "38",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "214",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

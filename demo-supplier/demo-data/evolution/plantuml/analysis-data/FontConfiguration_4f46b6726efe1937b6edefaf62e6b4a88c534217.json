@@ -1,0 +1,628 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "FontConfiguration.java",
+  "packageName": "net.sourceforge.plantuml.klimt.font",
+  "importName": ["java.util.EnumSet", "java.util.Map", "java.util.Objects", "net.sourceforge.plantuml.klimt.SvgAttributes", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.color.ColorType", "net.sourceforge.plantuml.klimt.color.Colors", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.skin.SkinParamUtils", "net.sourceforge.plantuml.stereo.Stereotype", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.Style"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.font.FontConfiguration": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "styles",
+        "type": "java.util.EnumSet\u003cnet.sourceforge.plantuml.klimt.font.FontStyle\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "currentFont",
+        "type": "net.sourceforge.plantuml.klimt.font.UFont",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "motherFont",
+        "type": "net.sourceforge.plantuml.klimt.font.UFont",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "motherColor",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "currentColor",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "extendedColor",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fontPosition",
+        "type": "net.sourceforge.plantuml.klimt.font.FontPosition",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "svgAttributes",
+        "type": "net.sourceforge.plantuml.klimt.SvgAttributes",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "hyperlinkUnderlineStroke",
+        "type": "net.sourceforge.plantuml.klimt.UStroke",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "hyperlinkColor",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "tabSize",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.getColor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.mute#78a3a9af": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.color.Colors"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.hashCode#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.FontConfiguration#d744e0c3": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "styles",
+            "type": "java.util.EnumSet\u003cnet.sourceforge.plantuml.klimt.font.FontStyle\u003e"
+          }, {
+            "name": "motherFont",
+            "type": "net.sourceforge.plantuml.klimt.font.UFont"
+          }, {
+            "name": "motherColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "currentFont",
+            "type": "net.sourceforge.plantuml.klimt.font.UFont"
+          }, {
+            "name": "currentColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "extendedColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "fontPosition",
+            "type": "net.sourceforge.plantuml.klimt.font.FontPosition"
+          }, {
+            "name": "svgAttributes",
+            "type": "net.sourceforge.plantuml.klimt.SvgAttributes"
+          }, {
+            "name": "hyperlinkColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "hyperlinkUnderlineStroke",
+            "type": "net.sourceforge.plantuml.klimt.UStroke"
+          }, {
+            "name": "tabSize",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.changeSize#5d0227b": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "size",
+            "type": "float"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.getSize2D#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.changeFontPosition#ba9ed7": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fontPosition",
+            "type": "net.sourceforge.plantuml.klimt.font.FontPosition"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.create#2b85f2e5": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "font",
+            "type": "net.sourceforge.plantuml.klimt.font.UFont"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "hyperlinkColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "hyperlinkUnderlineStroke",
+            "type": "net.sourceforge.plantuml.klimt.UStroke"
+          }, {
+            "name": "tabSize",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.changeColor#7ec12c1a": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newHtmlColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.wave#7ec12c1a": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.getAttributes#1": {
+          "returnType": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.getExtendedColor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.blackBlueTrue#4cf4e63": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "font",
+            "type": "net.sourceforge.plantuml.klimt.font.UFont"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.create#8ac1ff6b": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "style",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.unitalic#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.remove#1b009aa1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "style",
+            "type": "net.sourceforge.plantuml.klimt.font.FontStyle"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.forceFont#13dba9f8": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newFont",
+            "type": "net.sourceforge.plantuml.klimt.font.UFont"
+          }, {
+            "name": "htmlColorForStereotype",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.changeAttributes#5760c6da": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "toBeAdded",
+            "type": "net.sourceforge.plantuml.klimt.SvgAttributes"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.containsStyle#1b009aa1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "style",
+            "type": "net.sourceforge.plantuml.klimt.font.FontStyle"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.equals#8c658f7e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "obj",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.create#1800c71a": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "fontParam",
+            "type": "net.sourceforge.plantuml.klimt.font.FontParam"
+          }, {
+            "name": "stereo",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.bold#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.getTabSize#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.hashCode#8c658f7e": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "obj",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.toStringDebug#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.getUnderlineStroke#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UStroke",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.withHyperlink#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.hyperlink#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.create#9a96e4a": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "font",
+            "type": "net.sourceforge.plantuml.klimt.font.UFont"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "hyperlinkColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "hyperlinkUnderlineStroke",
+            "type": "net.sourceforge.plantuml.klimt.UStroke"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.unbold#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.same#8cb1efa1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "obj1",
+            "type": "java.lang.Object"
+          }, {
+            "name": "obj2",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.add#1b009aa1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "style",
+            "type": "net.sourceforge.plantuml.klimt.font.FontStyle"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.italic#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.create#46219785": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "style",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }, {
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.color.Colors"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.bigger#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "delta",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.resetFont#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.changeFamily#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "family",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.getFont#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UFont",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.getSpace#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.getStyles#4cf4e63": {
+          "returnType": "java.util.EnumSet\u003cnet.sourceforge.plantuml.klimt.font.FontStyle\u003e",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "font",
+            "type": "net.sourceforge.plantuml.klimt.font.UFont"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.changeExtendedColor#7ec12c1a": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newExtendedColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontConfiguration.underline#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "275",
+        "cyclomatic_complexity": "13",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "328",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

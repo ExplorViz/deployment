@@ -1,0 +1,70 @@
+{
+  "commitID": "4be8ba2c4349616e1da9d8232250e20da2daec47",
+  "fileName": "VetController.java",
+  "packageName": "org.springframework.samples.petclinic.vet",
+  "importName": ["org.springframework.beans.factory.annotation.Autowired", "org.springframework.stereotype.Controller", "org.springframework.web.bind.annotation.GetMapping", "org.springframework.web.bind.annotation.ResponseBody", "java.util.Map"],
+  "classData": {
+    "org.springframework.samples.petclinic.vet.VetController": {
+      "type": "CLASS",
+      "field": [{
+        "name": "vets",
+        "type": "org.springframework.samples.petclinic.vet.VetRepository",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.vet.VetController.VetController#8bd424ce": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "clinicService",
+            "type": "org.springframework.samples.petclinic.vet.VetRepository"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.vet.VetController.showResourcesVetList#1": {
+          "returnType": "org.springframework.samples.petclinic.vet.Vets",
+          "modifier": ["public"],
+          "annotation": ["GetMapping", "ResponseBody"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.vet.VetController.showVetList#b6c3b8e3": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "model",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e"
+          }],
+          "annotation": ["GetMapping"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Controller"],
+      "metric": {
+        "loc": "26",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "50",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "antoine.rey@gmail.com",
+  "modifiedLines": 3,
+  "addedLines": 2,
+  "deletedLines": 2
+}

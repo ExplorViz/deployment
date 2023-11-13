@@ -1,0 +1,208 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "ValueImpl.java",
+  "packageName": "net.sourceforge.plantuml.style",
+  "importName": ["java.awt.Font", "java.util.Objects", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColorSet", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment"],
+  "classData": {
+    "net.sourceforge.plantuml.style.ValueImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.style.Value"],
+      "field": [{
+        "name": "value",
+        "type": "net.sourceforge.plantuml.style.DarkString",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.style.ValueImpl.asInt#3db6c47": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "minusOneIfError",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.ValueImpl.getPriority#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.ValueImpl.asHorizontalAlignment#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.ValueImpl.asDouble#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.ValueImpl.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.ValueImpl.asColor#919e5286": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "set",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.ValueImpl.dark#8b78721": {
+          "returnType": "net.sourceforge.plantuml.style.ValueImpl",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String"
+          }, {
+            "name": "counter",
+            "type": "net.sourceforge.plantuml.style.AutomaticCounter"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.ValueImpl.asBoolean#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.ValueImpl.regular#f310d59f": {
+          "returnType": "net.sourceforge.plantuml.style.ValueImpl",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String"
+          }, {
+            "name": "priority",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.ValueImpl.asFontStyle#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.ValueImpl.ValueImpl#42b2766": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "value",
+            "type": "net.sourceforge.plantuml.style.DarkString"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.ValueImpl.asString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.ValueImpl.regular#8b78721": {
+          "returnType": "net.sourceforge.plantuml.style.ValueImpl",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String"
+          }, {
+            "name": "counter",
+            "type": "net.sourceforge.plantuml.style.AutomaticCounter"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.ValueImpl.addPriority#1980e": {
+          "returnType": "net.sourceforge.plantuml.style.Value",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "delta",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.ValueImpl.mergeWith#4e9a170": {
+          "returnType": "net.sourceforge.plantuml.style.Value",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.style.Value"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "102",
+        "cyclomatic_complexity": "13",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "147",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

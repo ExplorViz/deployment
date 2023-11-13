@@ -1,0 +1,110 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Variables.java",
+  "packageName": "net.sourceforge.plantuml.preproc",
+  "importName": ["java.util.ArrayList", "java.util.List", "java.util.regex.Matcher", "java.util.regex.Pattern"],
+  "classData": {
+    "net.sourceforge.plantuml.preproc.Variables": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "all",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.preproc.DefineVariable\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fonctionName",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "definitionQuoted",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "newValue",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "regex2",
+        "type": "java.util.regex.Pattern",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.preproc.Variables.removeSomeDefaultValues#1980e": {
+          "returnType": "net.sourceforge.plantuml.preproc.Variables",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "nb",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Variables.Variables#874989e1": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fonctionName",
+            "type": "java.lang.String"
+          }, {
+            "name": "definitionQuoted",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Variables.add#6b1df196": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "var",
+            "type": "net.sourceforge.plantuml.preproc.DefineVariable"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Variables.countDefaultValue#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Variables.applyOn#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "32",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "81",
+        "cyclomatic_complexity": "13",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "123",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

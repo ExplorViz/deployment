@@ -1,0 +1,147 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "ExecutionContexts.java",
+  "packageName": "net.sourceforge.plantuml.tim",
+  "importName": ["java.util.Deque", "java.util.LinkedList"],
+  "classData": {
+    "net.sourceforge.plantuml.tim.ExecutionContexts": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "field": [{
+        "name": "allIfs",
+        "type": "java.util.Deque\u003cnet.sourceforge.plantuml.tim.ExecutionContextIf\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "allWhiles",
+        "type": "java.util.Deque\u003cnet.sourceforge.plantuml.tim.ExecutionContextWhile\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "allForeachs",
+        "type": "java.util.Deque\u003cnet.sourceforge.plantuml.tim.ExecutionContextForeach\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.tim.ExecutionContexts.addIf#e4dc5b33": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "value",
+            "type": "net.sourceforge.plantuml.tim.ExecutionContextIf"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContexts.peekWhile#1": {
+          "returnType": "net.sourceforge.plantuml.tim.ExecutionContextWhile",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContexts.peekIf#1": {
+          "returnType": "net.sourceforge.plantuml.tim.ExecutionContextIf",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContexts.addForeach#a6e436d2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "value",
+            "type": "net.sourceforge.plantuml.tim.ExecutionContextForeach"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContexts.pollIf#1": {
+          "returnType": "net.sourceforge.plantuml.tim.ExecutionContextIf",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContexts.areAllIfOk#6d316edb": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContexts.peekForeach#1": {
+          "returnType": "net.sourceforge.plantuml.tim.ExecutionContextForeach",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContexts.pollForeach#1": {
+          "returnType": "net.sourceforge.plantuml.tim.ExecutionContextForeach",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContexts.pollWhile#1": {
+          "returnType": "net.sourceforge.plantuml.tim.ExecutionContextWhile",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContexts.addWhile#c7d2a5f9": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "value",
+            "type": "net.sourceforge.plantuml.tim.ExecutionContextWhile"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "52",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "91",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

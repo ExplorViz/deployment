@@ -1,0 +1,568 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "DotPath.java",
+  "packageName": "net.sourceforge.plantuml.klimt.shape",
+  "importName": ["java.awt.Graphics2D", "java.awt.geom.CubicCurve2D", "java.awt.geom.GeneralPath", "java.awt.geom.Line2D", "java.util.ArrayList", "java.util.Collections", "java.util.HashSet", "java.util.List", "java.util.Objects", "java.util.Set", "net.sourceforge.plantuml.klimt.UPath", "net.sourceforge.plantuml.klimt.UShape", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.geom.BezierUtils", "net.sourceforge.plantuml.klimt.geom.EnsureVisible", "net.sourceforge.plantuml.klimt.geom.MinFinder", "net.sourceforge.plantuml.klimt.geom.MinMax", "net.sourceforge.plantuml.klimt.geom.Moveable", "net.sourceforge.plantuml.klimt.geom.PointAndAngle", "net.sourceforge.plantuml.klimt.geom.RectangleArea", "net.sourceforge.plantuml.klimt.geom.USegmentType", "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.shape.DotPath.TriPoints": {
+      "type": "CLASS",
+      "modifier": ["public", "static"],
+      "field": [{
+        "name": "x1",
+        "type": "double",
+        "modifier": ["public", "final"]
+      }, {
+        "name": "y1",
+        "type": "double",
+        "modifier": ["public", "final"]
+      }, {
+        "name": "x2",
+        "type": "double",
+        "modifier": ["public", "final"]
+      }, {
+        "name": "y2",
+        "type": "double",
+        "modifier": ["public", "final"]
+      }, {
+        "name": "x",
+        "type": "double",
+        "modifier": ["public", "final"]
+      }, {
+        "name": "y",
+        "type": "double",
+        "modifier": ["public", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.shape.DotPath.TriPoints.TriPoints#e5c9cb89": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "p1",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "p2",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "p",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "18",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.klimt.shape.DotPath": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.UShape", "net.sourceforge.plantuml.klimt.geom.Moveable"],
+      "field": [{
+        "name": "beziers",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.geom.XCubicCurve2D\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "comment",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "codeLine",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.klimt.shape.DotPath.TriPoints"],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.shape.DotPath.getStartAngle#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.getMinMax#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.MinMax",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.getStartTangeante#1": {
+          "returnType": "java.awt.geom.Line2D",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.getMinFinder#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.MinFinder",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.toString#33b7856e": {
+          "returnType": "java.lang.String",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "c",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.isLine#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.reverse#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.DotPath",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.getEndPoint#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.sample#70ca566c": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "bez",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D"
+          }, {
+            "name": "result",
+            "type": "java.util.Set\u003cnet.sourceforge.plantuml.klimt.geom.XPoint2D\u003e"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.addBefore#d11a290d": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.DotPath",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.klimt.shape.DotPath"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.addAfter#33b7856e": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.DotPath",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "after",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.addAfter#d11a290d": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.DotPath",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.klimt.shape.DotPath"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.toUPath#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UPath",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.DotPath#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.moveStartPoint#d295a098": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "move",
+            "type": "net.sourceforge.plantuml.klimt.UTranslate"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.getEndAngle#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.manageEnsureVisible#604db873": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "visible",
+            "type": "net.sourceforge.plantuml.klimt.geom.EnsureVisible"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.draw#9215697c": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "g2d",
+            "type": "java.awt.Graphics2D"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.addCurve#d42ee201": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.DotPath",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pt1",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "pt2",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "pt3",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "pt4",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.getCost#bf3c89": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "pt",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.reverse#33b7856e": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "curv",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.getMiddle#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.PointAndAngle",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.sample#1": {
+          "returnType": "java.util.Set\u003cnet.sourceforge.plantuml.klimt.geom.XPoint2D\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.moveEndPoint#1eef7de1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dx",
+            "type": "double"
+          }, {
+            "name": "dy",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.fromBeziers#737813ac": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.DotPath",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "beziers",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.geom.XCubicCurve2D\u003e"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.getMinDist#bf3c89": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ref",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.addBefore#33b7856e": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.DotPath",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "before",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.moveStartPoint#1eef7de1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dx",
+            "type": "double"
+          }, {
+            "name": "dy",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.moveSvek#1eef7de1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "deltaX",
+            "type": "double"
+          }, {
+            "name": "deltaY",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.getBeziers#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.klimt.geom.XCubicCurve2D\u003e",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.getStartPoint#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.setCommentAndCodeLine#874989e1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "comment",
+            "type": "java.lang.String"
+          }, {
+            "name": "codeLine",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.addCurve#e5c9cb89": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.DotPath",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pt2",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "pt3",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "pt4",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.copy#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.DotPath",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.simulateCompound#823a5341": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.DotPath",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "head",
+            "type": "net.sourceforge.plantuml.klimt.geom.RectangleArea"
+          }, {
+            "name": "tail",
+            "type": "net.sourceforge.plantuml.klimt.geom.RectangleArea"
+          }],
+          "metric": {
+            "loc": "71",
+            "cyclomatic_complexity": "21",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.moveEndPoint#d295a098": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "move",
+            "type": "net.sourceforge.plantuml.klimt.UTranslate"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.DotPath.getEndTangeante#1": {
+          "returnType": "java.awt.geom.Line2D",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "421",
+        "cyclomatic_complexity": "49",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "28"
+      }
+    }
+  },
+  "metric": {
+    "loc": "484",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

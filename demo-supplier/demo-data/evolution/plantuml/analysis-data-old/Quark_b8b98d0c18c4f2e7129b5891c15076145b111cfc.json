@@ -1,0 +1,224 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Quark.java",
+  "packageName": "net.sourceforge.plantuml.plasma",
+  "importName": ["java.util.Collection", "java.util.Collections", "java.util.LinkedHashMap", "java.util.Map"],
+  "classData": {
+    "net.sourceforge.plantuml.plasma.Quark": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "plasma",
+        "type": "net.sourceforge.plantuml.plasma.Plasma\u003cDATA\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "parent",
+        "type": "net.sourceforge.plantuml.plasma.Quark\u003cDATA\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "name",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "data",
+        "type": "DATA",
+        "modifier": ["private"]
+      }, {
+        "name": "children",
+        "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.plasma.Quark\u003cDATA\u003e\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "qualifiedName",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.plasma.Quark.countChildren#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.setData#1fe7c9": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "data",
+            "type": "DATA"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.getName#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.childIfExists#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.plasma.Quark\u003cDATA\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.getChildren#1": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.plasma.Quark\u003cDATA\u003e\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.toStringPoint#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.Quark#fb87be9c": {
+          "parameter": [{
+            "name": "plasma",
+            "type": "net.sourceforge.plantuml.plasma.Plasma\u003cDATA\u003e"
+          }, {
+            "name": "parent",
+            "type": "net.sourceforge.plantuml.plasma.Quark\u003cDATA\u003e"
+          }, {
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.getData#1": {
+          "returnType": "DATA",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.isRoot#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.clean#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "full",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.getPlasma#1": {
+          "returnType": "net.sourceforge.plantuml.plasma.Plasma\u003cDATA\u003e",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.child#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.plasma.Quark\u003cDATA\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "full",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.getParent#1": {
+          "returnType": "net.sourceforge.plantuml.plasma.Quark\u003cDATA\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.getQualifiedName#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.plasma.Quark.getDirectChild#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.plasma.Quark\u003cDATA\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "114",
+        "cyclomatic_complexity": "13",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "156",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

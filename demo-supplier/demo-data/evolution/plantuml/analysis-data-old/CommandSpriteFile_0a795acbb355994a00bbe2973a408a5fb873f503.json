@@ -1,0 +1,98 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "CommandSpriteFile.java",
+  "packageName": "net.sourceforge.plantuml.command",
+  "importName": ["java.awt.image.BufferedImage", "java.io.IOException", "java.io.InputStream", "java.util.zip.ZipEntry", "java.util.zip.ZipInputStream", "net.sourceforge.plantuml.FileSystem", "net.sourceforge.plantuml.FileUtils", "net.sourceforge.plantuml.TitledDiagram", "net.sourceforge.plantuml.klimt.sprite.Sprite", "net.sourceforge.plantuml.klimt.sprite.SpriteImage", "net.sourceforge.plantuml.klimt.sprite.SpriteSvg", "net.sourceforge.plantuml.regex.IRegex", "net.sourceforge.plantuml.regex.RegexConcat", "net.sourceforge.plantuml.regex.RegexLeaf", "net.sourceforge.plantuml.regex.RegexResult", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.security.SImageIO", "net.sourceforge.plantuml.utils.LineLocation", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.command.CommandSpriteFile": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "ME",
+        "type": "net.sourceforge.plantuml.command.CommandSpriteFile",
+        "modifier": ["public", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.command.CommandSpriteFile.isSvg#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandSpriteFile.executeArg#f17f7d01": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "system",
+            "type": "net.sourceforge.plantuml.TitledDiagram"
+          }, {
+            "name": "location",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "49",
+            "cyclomatic_complexity": "14",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandSpriteFile.getRegexConcat#1": {
+          "returnType": "net.sourceforge.plantuml.regex.IRegex",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "0",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandSpriteFile.getImageFromZip#25e85563": {
+          "returnType": "net.sourceforge.plantuml.klimt.sprite.Sprite",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "f",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }, {
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandSpriteFile.CommandSpriteFile#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.command.SingleLineCommand2\u003cnet.sourceforge.plantuml.TitledDiagram\u003e",
+      "metric": {
+        "loc": "94",
+        "cyclomatic_complexity": "23",
+        "cyclomatic_complexity_weighted": "11",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "152",
+    "cyclomatic_complexity": "11"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

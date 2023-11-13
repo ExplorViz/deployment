@@ -1,0 +1,733 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "route__c.java",
+  "packageName": "gen.lib.pathplan",
+  "importName": ["gen.lib.pathplan.solvers__c.solve3", "smetana.core.JUtils.setjmp", "smetana.core.Macro.DISTSQ", "smetana.core.Macro.UNSUPPORTED", "smetana.core.debug.SmetanaDebug.ENTERING", "smetana.core.debug.SmetanaDebug.LEAVING", "gen.annotation.Original", "gen.annotation.Reviewed", "gen.annotation.Unused", "h.ST_Pedge_t", "h.ST_Ppoly_t", "h.ST_pointf", "h.ST_tna_t", "smetana.core.CArray", "smetana.core.Globals", "smetana.core.ZType", "smetana.core.jmp_buf"],
+  "classData": {
+    "gen.lib.pathplan.route__c": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "jbuf",
+        "type": "smetana.core.jmp_buf",
+        "modifier": ["private", "static"]
+      }],
+      "methodData": {
+        "gen.lib.pathplan.route__c.splinefits_w_#4d89e69": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "edges",
+            "type": "smetana.core.CArray\u003ch.ST_Pedge_t\u003e"
+          }, {
+            "name": "edgen",
+            "type": "int"
+          }, {
+            "name": "pa",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "va",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "pb",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "vb",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "inps",
+            "type": "smetana.core.CArray\u003ch.ST_pointf\u003e"
+          }, {
+            "name": "inpn",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "62",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "gen.lib.pathplan.route__c.mkspline_w_#ea4e8fda": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "inps",
+            "type": "smetana.core.CArray\u003ch.ST_pointf\u003e"
+          }, {
+            "name": "inpn",
+            "type": "int"
+          }, {
+            "name": "tnas",
+            "type": "smetana.core.CArray\u003ch.ST_tna_t\u003e"
+          }, {
+            "name": "ev0",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "ev1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "sp0",
+            "type": "h.ST_pointf"
+          }, {
+            "name": "sv0",
+            "type": "h.ST_pointf"
+          }, {
+            "name": "sp1",
+            "type": "h.ST_pointf"
+          }, {
+            "name": "sv1",
+            "type": "h.ST_pointf"
+          }],
+          "metric": {
+            "loc": "43",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.pathplan.route__c.sub_w_#dde21241": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "p1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "p2",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.pathplan.route__c.reallyroutespline_w_#8764bea9": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "edges",
+            "type": "smetana.core.CArray\u003ch.ST_Pedge_t\u003e"
+          }, {
+            "name": "edgen",
+            "type": "int"
+          }, {
+            "name": "inps",
+            "type": "smetana.core.CArray\u003ch.ST_pointf\u003e"
+          }, {
+            "name": "inpn",
+            "type": "int"
+          }, {
+            "name": "ev0",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "ev1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "51",
+            "cyclomatic_complexity": "13",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.pathplan.route__c.B2#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "t",
+            "type": "double"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.pathplan.route__c.mkspline#ea4e8fda": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "inps",
+            "type": "smetana.core.CArray\u003ch.ST_pointf\u003e"
+          }, {
+            "name": "inpn",
+            "type": "int"
+          }, {
+            "name": "tnas",
+            "type": "smetana.core.CArray\u003ch.ST_tna_t\u003e"
+          }, {
+            "name": "ev0",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "ev1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "sp0",
+            "type": "h.ST_pointf"
+          }, {
+            "name": "sv0",
+            "type": "h.ST_pointf"
+          }, {
+            "name": "sp1",
+            "type": "h.ST_pointf"
+          }, {
+            "name": "sv1",
+            "type": "h.ST_pointf"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.pathplan.route__c.add#dde21241": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "p2",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.pathplan.route__c.splineintersectsline#911e4d52": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "sps",
+            "type": "smetana.core.CArray\u003ch.ST_pointf\u003e"
+          }, {
+            "name": "lps",
+            "type": "smetana.core.CArray\u003ch.ST_pointf\u003e"
+          }, {
+            "name": "roots",
+            "type": "double[]"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "89",
+            "cyclomatic_complexity": "24",
+            "nestedBlockDepth": "9"
+          }
+        },
+        "gen.lib.pathplan.route__c.add_w_#dde21241": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "p1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "p2",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.pathplan.route__c.B23#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "t",
+            "type": "double"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.pathplan.route__c.splineisinside#df79fa34": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "edges",
+            "type": "smetana.core.CArray\u003ch.ST_Pedge_t\u003e"
+          }, {
+            "name": "edgen",
+            "type": "int"
+          }, {
+            "name": "sps",
+            "type": "smetana.core.CArray\u003ch.ST_pointf\u003e"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "40",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.pathplan.route__c.addroot#26f6aaee": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "root",
+            "type": "double"
+          }, {
+            "name": "roots",
+            "type": "double[]"
+          }, {
+            "name": "rootnp",
+            "type": "int[]"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.pathplan.route__c.normv#8eef1093": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "v",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.pathplan.route__c.splinefits#4d89e69": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "edges",
+            "type": "smetana.core.CArray\u003ch.ST_Pedge_t\u003e"
+          }, {
+            "name": "edgen",
+            "type": "int"
+          }, {
+            "name": "pa",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "va",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "pb",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "vb",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "inps",
+            "type": "smetana.core.CArray\u003ch.ST_pointf\u003e"
+          }, {
+            "name": "inpn",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.pathplan.route__c.scale_w_#ffea7d9e": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "p",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "c",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.pathplan.route__c.sub#dde21241": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "p2",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.pathplan.route__c.B1#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "t",
+            "type": "double"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.pathplan.route__c.dist#dde21241": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "p2",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.pathplan.route__c.Proutespline_w_#3e6fe88c": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "edges",
+            "type": "smetana.core.CArray\u003ch.ST_Pedge_t\u003e"
+          }, {
+            "name": "edgen",
+            "type": "int"
+          }, {
+            "name": "input",
+            "type": "h.ST_Ppoly_t",
+            "modifier": ["final "]
+          }, {
+            "name": "evs",
+            "type": "smetana.core.CArray\u003ch.ST_pointf\u003e"
+          }, {
+            "name": "output",
+            "type": "h.ST_Ppoly_t"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.pathplan.route__c.B3#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "t",
+            "type": "double"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.pathplan.route__c.B0#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "t",
+            "type": "double"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.pathplan.route__c.points2coeff#ff14b52": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "v0",
+            "type": "double"
+          }, {
+            "name": "v1",
+            "type": "double"
+          }, {
+            "name": "v2",
+            "type": "double"
+          }, {
+            "name": "v3",
+            "type": "double"
+          }, {
+            "name": "coeff",
+            "type": "double[]"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.pathplan.route__c.dot#dde21241": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "p2",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.pathplan.route__c.growops#e392b4a0": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "newopn",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.pathplan.route__c.normv_w_#8eef1093": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "v",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.pathplan.route__c.Proutespline#3e6fe88c": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "edges",
+            "type": "smetana.core.CArray\u003ch.ST_Pedge_t\u003e"
+          }, {
+            "name": "edgen",
+            "type": "int"
+          }, {
+            "name": "input",
+            "type": "h.ST_Ppoly_t"
+          }, {
+            "name": "evs",
+            "type": "smetana.core.CArray\u003ch.ST_pointf\u003e"
+          }, {
+            "name": "output",
+            "type": "h.ST_Ppoly_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.pathplan.route__c.B01#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "t",
+            "type": "double"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.pathplan.route__c.dist_w_#dde21241": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "p1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "p2",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.pathplan.route__c.dist_n#12024bc0": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p",
+            "type": "smetana.core.CArray\u003ch.ST_pointf\u003e"
+          }, {
+            "name": "n",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.pathplan.route__c.reallyroutespline#8764bea9": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "edges",
+            "type": "smetana.core.CArray\u003ch.ST_Pedge_t\u003e"
+          }, {
+            "name": "edgen",
+            "type": "int"
+          }, {
+            "name": "inps",
+            "type": "smetana.core.CArray\u003ch.ST_pointf\u003e"
+          }, {
+            "name": "inpn",
+            "type": "int"
+          }, {
+            "name": "ev0",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "ev1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.pathplan.route__c.dot_w_#dde21241": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "p1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "p2",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.pathplan.route__c.scale#ffea7d9e": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "c",
+            "type": "double"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "648",
+        "cyclomatic_complexity": "84",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "713",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

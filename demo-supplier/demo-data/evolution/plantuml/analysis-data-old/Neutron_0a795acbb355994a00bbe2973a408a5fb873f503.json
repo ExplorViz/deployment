@@ -1,0 +1,172 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Neutron.java",
+  "packageName": "net.sourceforge.plantuml.klimt.creole",
+  "importName": ["net.sourceforge.plantuml.klimt.creole.atom.Atom", "net.sourceforge.plantuml.klimt.creole.legacy.AtomText", "net.sourceforge.plantuml.klimt.font.StringBounder"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.creole.Neutron": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "data",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "type",
+        "type": "net.sourceforge.plantuml.klimt.creole.NeutronType",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "asAtom",
+        "type": "net.sourceforge.plantuml.klimt.creole.atom.Atom",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.Neutron.asAtom#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.atom.Atom",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Neutron.create#1f4d90": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Neutron",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "atom",
+            "type": "net.sourceforge.plantuml.klimt.creole.atom.Atom"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Neutron.getWidth#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Neutron.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Neutron.isSeparator#2e9375": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "ch",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Neutron.getNeutronTypeFromChar#2e9375": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.NeutronType",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "ch",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Neutron.Neutron#4c8cd72c": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "data",
+            "type": "java.lang.String"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.klimt.creole.NeutronType"
+          }, {
+            "name": "asAtom",
+            "type": "net.sourceforge.plantuml.klimt.creole.atom.Atom"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Neutron.getType#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.NeutronType",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Neutron.zwspSeparator#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Neutron",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Neutron.isSentenceBoundaryUnused#2e9375": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ch",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Neutron.isChineseSentenceBoundary#2e9375": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "ch",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "65",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "106",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

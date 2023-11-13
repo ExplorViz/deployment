@@ -1,0 +1,88 @@
+{
+  "commitID": "0a51540ad04b48b5b18fd6fd400363fc02512134",
+  "fileName": "Vet.java",
+  "packageName": "org.springframework.samples.petclinic.vet",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.HashSet", "java.util.List", "java.util.Set", "javax.persistence.Entity", "javax.persistence.FetchType", "javax.persistence.JoinColumn", "javax.persistence.JoinTable", "javax.persistence.ManyToMany", "javax.persistence.Table", "javax.xml.bind.annotation.XmlElement", "org.springframework.beans.support.MutableSortDefinition", "org.springframework.beans.support.PropertyComparator", "org.springframework.samples.petclinic.model.Person"],
+  "classData": {
+    "org.springframework.samples.petclinic.vet.Vet": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "specialties",
+        "type": "java.util.Set\u003corg.springframework.samples.petclinic.vet.Specialty\u003e",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.vet.Vet.setSpecialtiesInternal#f2093af9": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "specialties",
+            "type": "java.util.Set\u003corg.springframework.samples.petclinic.vet.Specialty\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.vet.Vet.getSpecialties#1": {
+          "returnType": "java.util.List\u003corg.springframework.samples.petclinic.vet.Specialty\u003e",
+          "modifier": ["public"],
+          "annotation": ["javax.xml.bind.annotation.XmlElement"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.vet.Vet.getSpecialtiesInternal#1": {
+          "returnType": "java.util.Set\u003corg.springframework.samples.petclinic.vet.Specialty\u003e",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.vet.Vet.addSpecialty#126e24fd": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "specialty",
+            "type": "org.springframework.samples.petclinic.vet.Specialty"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.vet.Vet.getNrOfSpecialties#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "org.springframework.samples.petclinic.model.Person",
+      "annotation": ["Entity", "Table"],
+      "metric": {
+        "loc": "36",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "71",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dsyer@pivotal.io",
+  "modifiedLines": 1,
+  "deletedLines": 1
+}

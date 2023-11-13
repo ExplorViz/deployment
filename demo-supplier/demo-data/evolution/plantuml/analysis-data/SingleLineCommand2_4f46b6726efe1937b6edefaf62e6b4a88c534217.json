@@ -1,0 +1,200 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "SingleLineCommand2.java",
+  "packageName": "net.sourceforge.plantuml.command",
+  "importName": ["java.util.Objects", "net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.error.PSystemError", "net.sourceforge.plantuml.klimt.color.NoSuchColorException", "net.sourceforge.plantuml.regex.IRegex", "net.sourceforge.plantuml.regex.RegexResult", "net.sourceforge.plantuml.text.StringLocated", "net.sourceforge.plantuml.utils.BlocLines", "net.sourceforge.plantuml.utils.LineLocation"],
+  "classData": {
+    "net.sourceforge.plantuml.command.SingleLineCommand2": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "interface": ["net.sourceforge.plantuml.command.Command\u003cS\u003e"],
+      "field": [{
+        "name": "pattern",
+        "type": "net.sourceforge.plantuml.regex.IRegex",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "doTrim",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.command.SingleLineCommand2.SingleLineCommand2#f8d6e217": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "doTrim",
+            "type": "boolean"
+          }, {
+            "name": "pattern",
+            "type": "net.sourceforge.plantuml.regex.IRegex"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.SingleLineCommand2.isValidBracket#a9c76200": {
+          "returnType": "net.sourceforge.plantuml.command.CommandControl",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "lines",
+            "type": "net.sourceforge.plantuml.utils.BlocLines"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.command.SingleLineCommand2.executeArg#9552104d": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["protected", "abstract"],
+          "parameter": [{
+            "name": "system",
+            "type": "S"
+          }, {
+            "name": "location",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.SingleLineCommand2.isCommandForbidden#1": {
+          "returnType": "boolean",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.SingleLineCommand2.myTrim#49563e00": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.command.SingleLineCommand2.syntaxWithFinalBracket#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.SingleLineCommand2.isForbidden#6aff0d76": {
+          "returnType": "boolean",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.CharSequence"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.SingleLineCommand2.getDescription#1": {
+          "returnType": "String[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.SingleLineCommand2.execute#a9c76faf": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "system",
+            "type": "S"
+          }, {
+            "name": "lines",
+            "type": "net.sourceforge.plantuml.utils.BlocLines"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.command.SingleLineCommand2.finalVerification#1": {
+          "returnType": "net.sourceforge.plantuml.command.CommandControl",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.SingleLineCommand2.myTrim2#49563e00": {
+          "returnType": "net.sourceforge.plantuml.text.StringLocated",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.command.SingleLineCommand2.SingleLineCommand2#8144c59d": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pattern",
+            "type": "net.sourceforge.plantuml.regex.IRegex"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.SingleLineCommand2.isValid#a9c76200": {
+          "returnType": "net.sourceforge.plantuml.command.CommandControl",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "lines",
+            "type": "net.sourceforge.plantuml.utils.BlocLines"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "115",
+        "cyclomatic_complexity": "17",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "163",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

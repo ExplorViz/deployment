@@ -1,0 +1,1215 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "shapes__c.java",
+  "packageName": "gen.lib.common",
+  "importName": ["gen.lib.cgraph.attr__c.agget", "gen.lib.cgraph.obj__c.agraphof", "gen.lib.common.geom__c.ccwrotatepf", "gen.lib.common.geom__c.cwrotatepf", "gen.lib.common.htmltable__c.html_port", "gen.lib.common.labels__c.make_label", "gen.lib.common.utils__c.late_double", "gen.lib.common.utils__c.late_int", "gen.lib.common.utils__c.late_string", "gen.lib.common.utils__c.mapbool", "gen.lib.common.utils__c.safefile", "h.ST_pointf.pointfof", "smetana.core.JUtils.strcmp", "smetana.core.Macro.BETWEEN", "smetana.core.Macro.BOTTOM", "smetana.core.Macro.DIST2", "smetana.core.Macro.FIXEDSHAPE", "smetana.core.Macro.GD_drawing", "smetana.core.Macro.GD_flip", "smetana.core.Macro.GD_rankdir", "smetana.core.Macro.GD_realflip", "smetana.core.Macro.INSIDE", "smetana.core.Macro.LEFT", "smetana.core.Macro.LT_HTML", "smetana.core.Macro.LT_NONE", "smetana.core.Macro.M_PI", "smetana.core.Macro.ND_coord", "smetana.core.Macro.ND_has_port", "smetana.core.Macro.ND_height", "smetana.core.Macro.ND_ht", "smetana.core.Macro.ND_label", "smetana.core.Macro.ND_lw", "smetana.core.Macro.ND_rw", "smetana.core.Macro.ND_shape", "smetana.core.Macro.ND_shape_info", "smetana.core.Macro.ND_width", "smetana.core.Macro.PAD", "smetana.core.Macro.PF2P", "smetana.core.Macro.POINTS", "smetana.core.Macro.PS2INCH", "smetana.core.Macro.RADIANS", "smetana.core.Macro.RIGHT", "smetana.core.Macro.ROUND", "smetana.core.Macro.SQR", "smetana.core.Macro.SQRT2", "smetana.core.Macro.TOP", "smetana.core.Macro.UNSUPPORTED", "smetana.core.Macro.hypot", "smetana.core.debug.SmetanaDebug.ENTERING", "smetana.core.debug.SmetanaDebug.LEAVING", "gen.annotation.Difficult", "gen.annotation.Doc", "gen.annotation.Original", "gen.annotation.Reviewed", "gen.annotation.Unused", "h.EN_shape_kind", "h.ST_Agnode_s", "h.ST_boxf", "h.ST_field_t", "h.ST_inside_t", "h.ST_point", "h.ST_pointf", "h.ST_polygon_t", "h.ST_port", "h.ST_shape_desc", "h.ST_textlabel_t", "smetana.core.CArray", "smetana.core.CArrayOfStar", "smetana.core.CFunction", "smetana.core.CFunctionAbstract", "smetana.core.CString", "smetana.core.Globals", "smetana.core.Memory", "smetana.core.ZType"],
+  "classData": {
+    "gen.lib.common.shapes__c.poly_inside.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.common.shapes__c.poly_inside.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "gen.lib.common.shapes__c.poly_free.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.common.shapes__c.poly_free.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "gen.lib.common.shapes__c.record_port.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.common.shapes__c.record_port.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "gen.lib.common.shapes__c.record_path.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.common.shapes__c.record_path.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "gen.lib.common.shapes__c.record_init.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.common.shapes__c.record_init.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "gen.lib.common.shapes__c.record_gencode.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.common.shapes__c.record_gencode.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "gen.lib.common.shapes__c.poly_gencode.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.common.shapes__c.poly_gencode.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "gen.lib.common.shapes__c.record_inside.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.common.shapes__c.record_inside.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "gen.lib.common.shapes__c": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "poly_init",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "poly_free",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "poly_inside",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "poly_path",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "poly_port",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "poly_gencode",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "HASTEXT",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "HASPORT",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "HASTABLE",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "INTEXT",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "INPORT",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "record_init",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "record_free",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "record_port",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "record_inside",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "record_path",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "record_gencode",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "side_port",
+        "type": "CString[]",
+        "modifier": ["static", "private"]
+      }],
+      "methodData": {
+        "gen.lib.common.shapes__c.size_reclbl_#b1f5f9e6": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "f",
+            "type": "h.ST_field_t"
+          }],
+          "metric": {
+            "loc": "36",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.common.shapes__c.bind_shape#90033315": {
+          "returnType": "h.ST_shape_desc",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "name",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "np",
+            "type": "h.ST_Agnode_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.common.shapes__c.compassPoint#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.poly_port_w_#dffe4dcb": {
+          "returnType": "h.ST_port",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "portname",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "compass",
+            "type": "smetana.core.CString"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.common.shapes__c.poly_init#c203de0b": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Difficult", "gen.annotation.Original"],
+          "metric": {
+            "loc": "256",
+            "cyclomatic_complexity": "47",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "gen.lib.common.shapes__c.same_side#cb889481": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p0",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "p1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "L0",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "L1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.record_init#c203de0b": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Doc", "gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "37",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.shapes__c.poly_gencode#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.parse_reclbl#1ecb4b49": {
+          "returnType": "h.ST_field_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "LR",
+            "type": "boolean"
+          }, {
+            "name": "flag",
+            "type": "boolean"
+          }, {
+            "name": "text",
+            "type": "smetana.core.CString"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "136",
+            "cyclomatic_complexity": "83",
+            "nestedBlockDepth": "8"
+          }
+        },
+        "gen.lib.common.shapes__c.record_inside#7ef02506": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "inside_context",
+            "type": "h.ST_inside_t"
+          }, {
+            "name": "p",
+            "type": "h.ST_pointf"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.cvtPt#4ef499bc": {
+          "returnType": "h.ST_point",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "rankdir",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.star_inside#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.isPolygon#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.record_free#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg_",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.unrecognized#5c613bdb": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "p",
+            "type": "smetana.core.CString"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.shapes__c.resolvePorts#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.IS_BOX#c203de0b": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.record_port#dffe4dcb": {
+          "returnType": "h.ST_port",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "portname",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "compass",
+            "type": "smetana.core.CString"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.shapes__c.poly_port#dffe4dcb": {
+          "returnType": "h.ST_port",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "portname",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "compass",
+            "type": "smetana.core.CString"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.epsf_inside#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.shapeOf#de72c179": {
+          "returnType": "h.EN_shape_kind",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.shapes__c.resolvePort#b8194cbe": {
+          "returnType": "h.ST_port",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "other",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "oldport",
+            "type": "h.ST_port"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Doc", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.pos_reclbl#9b47c0ab": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "f",
+            "type": "h.ST_field_t"
+          }, {
+            "name": "ul",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "sides",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.map_rec_port#a8c08d84": {
+          "returnType": "h.ST_field_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "f",
+            "type": "h.ST_field_t"
+          }, {
+            "name": "str",
+            "type": "smetana.core.CString"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.common.shapes__c.record_path#87f88c1": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "prt",
+            "type": "h.ST_port"
+          }, {
+            "name": "side",
+            "type": "int"
+          }, {
+            "name": "rv",
+            "type": "h.ST_boxf"
+          }, {
+            "name": "kptr",
+            "type": "int[]"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.common.shapes__c.invflip_side#3301a1": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "side",
+            "type": "int"
+          }, {
+            "name": "rankdir",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "42",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.shapes__c.resize_reclbl_#9f2194e4": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "f",
+            "type": "h.ST_field_t"
+          }, {
+            "name": "sz",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "nojustify_p",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.common.shapes__c.record_gencode#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.find_user_shape#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.epsf_gencode#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.star_vertices#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.cvtPt_#4ef499bc": {
+          "returnType": "h.ST_point",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "p",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "rankdir",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.shapes__c.same_side_w_#cb889481": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "p0",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "p1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "L0",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "L1",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.shapes__c.record_inside_#7ef02506": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "inside_context",
+            "type": "h.ST_inside_t"
+          }, {
+            "name": "p",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.shapes__c.resolvePort_w_#b8194cbe": {
+          "returnType": "h.ST_port",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "other",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "oldport",
+            "type": "h.ST_port"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.shapes__c.invflip_angle#6df999ff": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "angle",
+            "type": "double"
+          }, {
+            "name": "rankdir",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "26",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.shapes__c.closestSide#b8194cbe": {
+          "returnType": "smetana.core.CString",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "other",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "oldport",
+            "type": "h.ST_port"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "46",
+            "cyclomatic_complexity": "18",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.common.shapes__c.poly_inside_w_#d829ab4": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "inside_context",
+            "type": "h.ST_inside_t"
+          }, {
+            "name": "p",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "71",
+            "cyclomatic_complexity": "18",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.common.shapes__c.pos_reclbl_#9b47c0ab": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "f",
+            "type": "h.ST_field_t"
+          }, {
+            "name": "ul",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "sides",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "37",
+            "cyclomatic_complexity": "19",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "gen.lib.common.shapes__c.free_field#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.resize_reclbl#9f2194e4": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "f",
+            "type": "h.ST_field_t"
+          }, {
+            "name": "sz",
+            "type": "h.ST_pointf",
+            "modifier": ["final "]
+          }, {
+            "name": "nojustify_p",
+            "type": "boolean"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.poly_inside#d829ab4": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "inside_context",
+            "type": "h.ST_inside_t"
+          }, {
+            "name": "p",
+            "type": "h.ST_pointf"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.compassPort#992ca0f5": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "bp",
+            "type": "h.ST_boxf"
+          }, {
+            "name": "pp",
+            "type": "h.ST_port"
+          }, {
+            "name": "compass",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "sides",
+            "type": "int"
+          }, {
+            "name": "ictxt",
+            "type": "h.ST_inside_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "128",
+            "cyclomatic_complexity": "95",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "gen.lib.common.shapes__c.size_reclbl#b1f5f9e6": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "f",
+            "type": "h.ST_field_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Doc", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.star_size#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.poly_free#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg_",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.common.shapes__c.poly_path#ddf36d09": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "p",
+            "type": "h.ST_port"
+          }, {
+            "name": "side",
+            "type": "int"
+          }, {
+            "name": "rv",
+            "type": "java.lang.Object"
+          }, {
+            "name": "kptr",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "1385",
+        "cyclomatic_complexity": "438",
+        "cyclomatic_complexity_weighted": "11",
+        "LCOM4": "16"
+      }
+    },
+    "gen.lib.common.shapes__c.poly_path.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.common.shapes__c.poly_path.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "gen.lib.common.shapes__c.record_free.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.common.shapes__c.record_free.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "gen.lib.common.shapes__c.poly_port.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.common.shapes__c.poly_port.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "gen.lib.common.shapes__c.poly_init.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.common.shapes__c.poly_init.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "1507",
+    "cyclomatic_complexity": "11"
+  },
+  "author": "plantuml@gmail.com"
+}

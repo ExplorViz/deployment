@@ -1,0 +1,213 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "CommunicationTileNoteRight.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram.teoz",
+  "importName": ["net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.UDrawable", "net.sourceforge.plantuml.real.Real", "net.sourceforge.plantuml.sequencediagram.AbstractMessage", "net.sourceforge.plantuml.sequencediagram.Event", "net.sourceforge.plantuml.sequencediagram.Note", "net.sourceforge.plantuml.skin.Area", "net.sourceforge.plantuml.skin.Component", "net.sourceforge.plantuml.skin.ComponentType", "net.sourceforge.plantuml.skin.Context2D", "net.sourceforge.plantuml.skin.rose.Rose", "net.sourceforge.plantuml.style.ISkinParam"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.teoz.CommunicationTileNoteRight": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "tile",
+        "type": "net.sourceforge.plantuml.sequencediagram.teoz.Tile",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "message",
+        "type": "net.sourceforge.plantuml.sequencediagram.AbstractMessage",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skin",
+        "type": "net.sourceforge.plantuml.skin.rose.Rose",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "livingSpace",
+        "type": "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpace",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "noteOnMessage",
+        "type": "net.sourceforge.plantuml.sequencediagram.Note",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "yGauge",
+        "type": "net.sourceforge.plantuml.sequencediagram.teoz.YGauge",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.teoz.CommunicationTileNoteRight.getPreferredHeight#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.CommunicationTileNoteRight.getEvent#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.Event",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.CommunicationTileNoteRight.getMinX#1": {
+          "returnType": "net.sourceforge.plantuml.real.Real",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.CommunicationTileNoteRight.CommunicationTileNoteRight#e02b6f7b": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "tile",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.Tile"
+          }, {
+            "name": "message",
+            "type": "net.sourceforge.plantuml.sequencediagram.AbstractMessage"
+          }, {
+            "name": "skin",
+            "type": "net.sourceforge.plantuml.skin.rose.Rose"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "livingSpace",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpace"
+          }, {
+            "name": "noteOnMessage",
+            "type": "net.sourceforge.plantuml.sequencediagram.Note"
+          }, {
+            "name": "currentY",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.YGauge"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.CommunicationTileNoteRight.isCreate#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.CommunicationTileNoteRight.callbackY_internal#8802f1cf": {
+          "returnType": "void",
+          "modifier": ["final", "protected"],
+          "parameter": [{
+            "name": "y",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.TimeHook"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.CommunicationTileNoteRight.getNotePosition#395b4159": {
+          "returnType": "net.sourceforge.plantuml.real.Real",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.CommunicationTileNoteRight.addConstraints#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.CommunicationTileNoteRight.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.CommunicationTileNoteRight.getMaxX#1": {
+          "returnType": "net.sourceforge.plantuml.real.Real",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.CommunicationTileNoteRight.getComponent#395b4159": {
+          "returnType": "net.sourceforge.plantuml.skin.Component",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.CommunicationTileNoteRight.getContactPointRelative#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.CommunicationTileNoteRight.getYGauge#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.teoz.YGauge",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.sequencediagram.teoz.AbstractTile",
+      "metric": {
+        "loc": "95",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "148",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,119 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "PSystemJcckitFactory.java",
+  "packageName": "net.sourceforge.plantuml.jcckit",
+  "importName": ["java.io.IOException", "java.io.StringReader", "java.util.Properties", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.command.PSystemBasicFactory", "net.sourceforge.plantuml.core.DiagramType", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.regex.Matcher2", "net.sourceforge.plantuml.regex.MyPattern", "net.sourceforge.plantuml.regex.Pattern2", "net.sourceforge.plantuml.text.BackSlash", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.jcckit.PSystemJcckitFactory": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "data",
+        "type": "java.lang.StringBuilder",
+        "modifier": ["private"]
+      }, {
+        "name": "width",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "height",
+        "type": "int",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.jcckit.PSystemJcckitFactory.createSystem#5aaf4a0e": {
+          "returnType": "net.sourceforge.plantuml.jcckit.PSystemJcckit",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.jcckit.PSystemJcckitFactory.PSystemJcckitFactory#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jcckit.PSystemJcckitFactory.executeLine#d4064054": {
+          "returnType": "net.sourceforge.plantuml.jcckit.PSystemJcckit",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "system",
+            "type": "net.sourceforge.plantuml.jcckit.PSystemJcckit"
+          }, {
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.jcckit.PSystemJcckitFactory.extractDimension#943a4c50": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "startLine",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.jcckit.PSystemJcckitFactory.getDimension#1": {
+          "returnType": "java.lang.String",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jcckit.PSystemJcckitFactory.initDiagram#8f7443e3": {
+          "returnType": "net.sourceforge.plantuml.jcckit.PSystemJcckit",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "startLine",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.command.PSystemBasicFactory\u003cnet.sourceforge.plantuml.jcckit.PSystemJcckit\u003e",
+      "metric": {
+        "loc": "65",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "117",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

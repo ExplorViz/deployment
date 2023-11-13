@@ -1,0 +1,149 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Commit.java",
+  "packageName": "net.sourceforge.plantuml.gitlog",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.List"],
+  "classData": {
+    "net.sourceforge.plantuml.gitlog.Commit": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "name",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "comment",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "position",
+        "type": "net.sourceforge.plantuml.gitlog.CursorPosition",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.gitlog.Commit.getPosition#1": {
+          "returnType": "net.sourceforge.plantuml.gitlog.CursorPosition",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.Commit.getComment#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.Commit.hashCode#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.Commit.equals#8c658f7e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "obj",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.Commit.getName#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.Commit.getAncestors#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.gitlog.Commit\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.Commit.Commit#8493646f": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "position",
+            "type": "net.sourceforge.plantuml.gitlog.CursorPosition"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.Commit.addAbove#eed7dc3f": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "result",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.gitlog.CursorPosition\u003e"
+          }, {
+            "name": "here",
+            "type": "net.sourceforge.plantuml.gitlog.CursorPosition"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.Commit.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.Commit.getCandidatesForDown#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.gitlog.CursorPosition\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "87",
+        "cyclomatic_complexity": "12",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "128",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

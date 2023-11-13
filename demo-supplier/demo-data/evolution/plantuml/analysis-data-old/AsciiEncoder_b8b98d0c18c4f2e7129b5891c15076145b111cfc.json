@@ -1,0 +1,154 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "AsciiEncoder.java",
+  "packageName": "net.sourceforge.plantuml.code",
+  "classData": {
+    "net.sourceforge.plantuml.code.AsciiEncoder": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.code.URLEncoder"],
+      "field": [{
+        "name": "encode6bit",
+        "type": "char[]",
+        "modifier": ["final", "static"]
+      }, {
+        "name": "decode6bit",
+        "type": "byte[]",
+        "modifier": ["final", "static"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.code.AsciiEncoder.append3bytes#d9e7f326": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "sb",
+            "type": "java.lang.StringBuilder"
+          }, {
+            "name": "b1",
+            "type": "int"
+          }, {
+            "name": "b2",
+            "type": "int"
+          }, {
+            "name": "b3",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "10",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.code.AsciiEncoder.encode6bit#2e6127": {
+          "returnType": "char",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "b",
+            "type": "byte"
+          }],
+          "metric": {
+            "loc": "23",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.AsciiEncoder.decode#943a4c50": {
+          "returnType": "byte[]",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.AsciiEncoder.decode3bytes#97c71106": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "r",
+            "type": "byte[]"
+          }, {
+            "name": "pos",
+            "type": "int"
+          }, {
+            "name": "cc1",
+            "type": "char"
+          }, {
+            "name": "cc2",
+            "type": "char"
+          }, {
+            "name": "cc3",
+            "type": "char"
+          }, {
+            "name": "cc4",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "9",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.code.AsciiEncoder.encode#ae1a4a89": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "data",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "11",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.AsciiEncoder.scharAt#f310d59f": {
+          "returnType": "char",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }, {
+            "name": "i",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.AsciiEncoder.decode6bit#2e9375": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.code.AsciiEncoder.computeSize#1980e": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "length",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "98",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "135"
+  },
+  "author": "plantuml@gmail.com"
+}

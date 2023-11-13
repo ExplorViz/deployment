@@ -1,0 +1,169 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Squeeze.java",
+  "packageName": "net.sourceforge.plantuml.zopfli",
+  "classData": {
+    "net.sourceforge.plantuml.zopfli.Squeeze": {
+      "type": "CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.zopfli.Squeeze.bestLengths#9702a30": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "lmc",
+            "type": "net.sourceforge.plantuml.zopfli.LongestMatchCache"
+          }, {
+            "name": "blockStart",
+            "type": "int"
+          }, {
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "from",
+            "type": "int"
+          }, {
+            "name": "to",
+            "type": "int"
+          }, {
+            "name": "minCost",
+            "type": "long"
+          }, {
+            "name": "stats",
+            "type": "net.sourceforge.plantuml.zopfli.SymbolStats"
+          }, {
+            "name": "lengthArray",
+            "type": "char[]"
+          }, {
+            "name": "costs",
+            "type": "long[]"
+          }],
+          "metric": {
+            "loc": "66",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Squeeze.bestFixedLengths#732c96ec": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "lmc",
+            "type": "net.sourceforge.plantuml.zopfli.LongestMatchCache"
+          }, {
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "from",
+            "type": "int"
+          }, {
+            "name": "to",
+            "type": "int"
+          }, {
+            "name": "lengthArray",
+            "type": "char[]"
+          }, {
+            "name": "costs",
+            "type": "long[]"
+          }],
+          "metric": {
+            "loc": "49",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Squeeze.optimalRun#3de24fe1": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "lmc",
+            "type": "net.sourceforge.plantuml.zopfli.LongestMatchCache"
+          }, {
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "from",
+            "type": "int"
+          }, {
+            "name": "to",
+            "type": "int"
+          }, {
+            "name": "lengthArray",
+            "type": "char[]"
+          }, {
+            "name": "store",
+            "type": "net.sourceforge.plantuml.zopfli.LzStore"
+          }],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Squeeze.fixedCost#3301a1": {
+          "returnType": "long",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "litLen",
+            "type": "int"
+          }, {
+            "name": "dist",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Squeeze.optimal#7fb51a4f": {
+          "returnType": "net.sourceforge.plantuml.zopfli.LzStore",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "cookie",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie"
+          }, {
+            "name": "numIterations",
+            "type": "int"
+          }, {
+            "name": "lmc",
+            "type": "net.sourceforge.plantuml.zopfli.LongestMatchCache"
+          }, {
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "from",
+            "type": "int"
+          }, {
+            "name": "to",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "44",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "215",
+        "cyclomatic_complexity": "28",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "235",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "plantuml@gmail.com"
+}

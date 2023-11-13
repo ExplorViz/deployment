@@ -1,0 +1,118 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "VP8Decoder.java",
+  "packageName": "net.sourceforge.plantuml.webp",
+  "importName": ["java.io.FileNotFoundException", "java.io.FileOutputStream", "java.io.IOException", "javax.imageio.stream.ImageInputStream", "net.sourceforge.plantuml.log.Logme"],
+  "classData": {
+    "net.sourceforge.plantuml.webp.VP8Decoder": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "coefProbs",
+        "type": "int[][][][]",
+        "modifier": ["private"]
+      }, {
+        "name": "f",
+        "type": "net.sourceforge.plantuml.webp.VP8Frame"
+      }, {
+        "name": "frameCount",
+        "type": "int",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.webp.VP8Decoder.decodeFrame#7b087fce": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stream",
+            "type": "javax.imageio.stream.ImageInputStream"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Decoder.getHeight#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Decoder.getWidth#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Decoder.VP8Decoder#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Decoder.getFrame#1": {
+          "returnType": "net.sourceforge.plantuml.webp.VP8Frame",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Decoder.writeYV12File#c445f0ff": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fileName",
+            "type": "java.lang.String"
+          }, {
+            "name": "frame",
+            "type": "net.sourceforge.plantuml.webp.VP8Frame"
+          }],
+          "metric": {
+            "loc": "38",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Decoder.writePGMFile#c445f0ff": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fileName",
+            "type": "java.lang.String"
+          }, {
+            "name": "frame",
+            "type": "net.sourceforge.plantuml.webp.VP8Frame"
+          }],
+          "metric": {
+            "loc": "44",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "115",
+        "cyclomatic_complexity": "19",
+        "cyclomatic_complexity_weighted": "6",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "140",
+    "cyclomatic_complexity": "6"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

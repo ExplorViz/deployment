@@ -1,0 +1,154 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "CommandFactoryTipOnEntity.java",
+  "packageName": "net.sourceforge.plantuml.command.note",
+  "importName": ["net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.abel.LeafType", "net.sourceforge.plantuml.abel.Link", "net.sourceforge.plantuml.abel.LinkArg", "net.sourceforge.plantuml.classdiagram.AbstractEntityDiagram", "net.sourceforge.plantuml.command.Command", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.command.CommandMultilines2", "net.sourceforge.plantuml.command.MultilinesStrategy", "net.sourceforge.plantuml.command.Trim", "net.sourceforge.plantuml.decoration.LinkDecor", "net.sourceforge.plantuml.decoration.LinkType", "net.sourceforge.plantuml.klimt.color.ColorParser", "net.sourceforge.plantuml.klimt.color.ColorType", "net.sourceforge.plantuml.klimt.color.Colors", "net.sourceforge.plantuml.klimt.color.NoSuchColorException", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.plasma.Quark", "net.sourceforge.plantuml.regex.IRegex", "net.sourceforge.plantuml.regex.RegexConcat", "net.sourceforge.plantuml.regex.RegexLeaf", "net.sourceforge.plantuml.regex.RegexResult", "net.sourceforge.plantuml.skin.ColorParam", "net.sourceforge.plantuml.stereo.Stereotag", "net.sourceforge.plantuml.stereo.Stereotype", "net.sourceforge.plantuml.url.Url", "net.sourceforge.plantuml.url.UrlBuilder", "net.sourceforge.plantuml.url.UrlMode", "net.sourceforge.plantuml.utils.BlocLines", "net.sourceforge.plantuml.utils.Position"],
+  "classData": {
+    "net.sourceforge.plantuml.command.note.CommandFactoryTipOnEntity": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "interface": ["net.sourceforge.plantuml.command.note.SingleMultiFactoryCommand\u003cnet.sourceforge.plantuml.classdiagram.AbstractEntityDiagram\u003e"],
+      "field": [{
+        "name": "partialPattern",
+        "type": "net.sourceforge.plantuml.regex.IRegex",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "key",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.command.note.CommandFactoryTipOnEntity.createMultiLine#3db6c47": {
+          "returnType": "net.sourceforge.plantuml.command.Command\u003cnet.sourceforge.plantuml.classdiagram.AbstractEntityDiagram\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "withBracket",
+            "type": "boolean",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "29",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.command.note.CommandFactoryTipOnEntity.CommandFactoryTipOnEntity#7454032e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }, {
+            "name": "partialPattern",
+            "type": "net.sourceforge.plantuml.regex.IRegex"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.note.CommandFactoryTipOnEntity.createSingleLine#1": {
+          "returnType": "net.sourceforge.plantuml.command.Command\u003cnet.sourceforge.plantuml.classdiagram.AbstractEntityDiagram\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.note.CommandFactoryTipOnEntity.getRegexConcatMultiLine#ab2f5a2b": {
+          "returnType": "net.sourceforge.plantuml.regex.RegexConcat",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "partialPattern",
+            "type": "net.sourceforge.plantuml.regex.IRegex"
+          }, {
+            "name": "withBracket",
+            "type": "boolean",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "0",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.command.note.CommandFactoryTipOnEntity.executeInternal#1b9c231d": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line0",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }, {
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.classdiagram.AbstractEntityDiagram"
+          }, {
+            "name": "url",
+            "type": "net.sourceforge.plantuml.url.Url"
+          }, {
+            "name": "lines",
+            "type": "net.sourceforge.plantuml.utils.BlocLines"
+          }],
+          "metric": {
+            "loc": "51",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.command.note.CommandFactoryTipOnEntity.color#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.ColorParser",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "102",
+        "cyclomatic_complexity": "10",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.command.note.CommandFactoryTipOnEntity.createMultiLine#3db6c47.CommandMultilines2\u003cAbstractEntityDiagram\u003e": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.command.note.CommandFactoryTipOnEntity.createMultiLine#3db6c47.CommandMultilines2\u003cAbstractEntityDiagram\u003e.executeNow#95ff4914": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "system",
+            "type": "net.sourceforge.plantuml.classdiagram.AbstractEntityDiagram",
+            "modifier": ["final "]
+          }, {
+            "name": "lines",
+            "type": "net.sourceforge.plantuml.utils.BlocLines"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.command.note.CommandFactoryTipOnEntity.createMultiLine#3db6c47.CommandMultilines2\u003cAbstractEntityDiagram\u003e.getPatternEnd#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "3"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "171",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

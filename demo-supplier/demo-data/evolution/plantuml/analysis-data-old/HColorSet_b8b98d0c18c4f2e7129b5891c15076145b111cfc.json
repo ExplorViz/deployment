@@ -1,0 +1,322 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "HColorSet.java",
+  "packageName": "net.sourceforge.plantuml.klimt.color",
+  "importName": ["java.awt.Color", "java.util.Collection", "java.util.Collections", "java.util.HashMap", "java.util.Map", "java.util.Objects", "java.util.Set", "java.util.TreeSet", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.regex.Matcher2", "net.sourceforge.plantuml.regex.MyPattern"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.color.HColorSet.Automatic": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "field": [{
+        "name": "colors",
+        "type": "String[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "me",
+        "type": "net.sourceforge.plantuml.klimt.color.HColorSet",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.color.HColorSet.Automatic.Automatic#11040d8d": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "me",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }, {
+            "name": "colors",
+            "type": "String[]"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.Automatic.isValid#1": {
+          "returnType": "boolean",
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.Automatic.buildInternal#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColorScheme",
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "25",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.klimt.color.HColorSet": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "COLOR_GRADIENT_SEPARATOR",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "singleton",
+        "type": "net.sourceforge.plantuml.klimt.color.HColorSet",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "htmlNames",
+        "type": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "names",
+        "type": "java.util.Set\u003cjava.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.klimt.color.HColorSet.Gradient", "net.sourceforge.plantuml.klimt.color.HColorSet.Automatic"],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.color.HColorSet.removeFirstDieseAndgoLowerCase#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.fromRGBa#943a4c50": {
+          "returnType": "java.awt.Color",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.HColorSet#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "156",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.register#874989e1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }, {
+            "name": "color",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.instance#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColorSet",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.build#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "12",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.automaticFromString#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColorSet.Automatic",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.getColorLEGACY#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.getColor#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.getColorOrWhite#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.isColorValid#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.gradientFromString#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColorSet.Gradient",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.names#1": {
+          "returnType": "java.util.Collection\u003cjava.lang.String\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "351",
+        "cyclomatic_complexity": "31",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "9"
+      }
+    },
+    "net.sourceforge.plantuml.klimt.color.HColorSet.Gradient": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "field": [{
+        "name": "s1",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "sep",
+        "type": "char",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "s2",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "me",
+        "type": "net.sourceforge.plantuml.klimt.color.HColorSet",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.color.HColorSet.Gradient.buildInternal#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColorGradient",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.Gradient.isValid#1": {
+          "returnType": "boolean",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorSet.Gradient.Gradient#cfdb7f46": {
+          "parameter": [{
+            "name": "me",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }, {
+            "name": "s1",
+            "type": "java.lang.String"
+          }, {
+            "name": "sep",
+            "type": "char"
+          }, {
+            "name": "s2",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "22",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "401",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

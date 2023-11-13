@@ -1,0 +1,172 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "BitGeneratorMapOrtho.java",
+  "packageName": "ext.plantuml.com.ctreber.acearth.scanbit",
+  "importName": ["java.util.Comparator", "ext.plantuml.com.ctreber.acearth.projection.Projection", "ext.plantuml.com.ctreber.acearth.util.EdgeCrossing", "ext.plantuml.com.ctreber.acearth.util.Point2D", "ext.plantuml.com.ctreber.acearth.util.Point3D"],
+  "classData": {
+    "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMapOrtho.EdgeCrossingComparator": {
+      "type": "CLASS",
+      "modifier": ["private", "static"],
+      "interface": ["java.util.Comparator"],
+      "methodData": {
+        "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMapOrtho.EdgeCrossingComparator.compare#8cb1efa1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "o1",
+            "type": "java.lang.Object"
+          }, {
+            "name": "o2",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "10",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMapOrtho": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "innerClass": ["ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMapOrtho.EdgeCrossingComparator"],
+      "methodData": {
+        "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMapOrtho.getEdgeXingComparator#1": {
+          "returnType": "java.util.Comparator",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMapOrtho.scanOutline#1": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.scanbit.ScanBuf",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMapOrtho.addArcToScanbuf#e7dda555": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "pScanBuf",
+            "type": "ext.plantuml.com.ctreber.acearth.scanbit.ScanBuf"
+          }, {
+            "name": "pXFrom",
+            "type": "double"
+          }, {
+            "name": "pYFrom",
+            "type": "double"
+          }, {
+            "name": "pAngleFrom",
+            "type": "double"
+          }, {
+            "name": "pXTo",
+            "type": "double"
+          }, {
+            "name": "pYTo",
+            "type": "double"
+          }, {
+            "name": "pAngleTo",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "43",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMapOrtho.scanPolygon#11f5c939": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "pScanBuf",
+            "type": "ext.plantuml.com.ctreber.acearth.scanbit.ScanBuf"
+          }, {
+            "name": "pPoints3D",
+            "type": "Point3D[]"
+          }, {
+            "name": "pPoints2D",
+            "type": "Point2D[]"
+          }, {
+            "name": "pIndex",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "35",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMapOrtho.BitGeneratorMapOrtho#166a68e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pProjection",
+            "type": "ext.plantuml.com.ctreber.acearth.projection.Projection"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMapOrtho.findEdgeCrossing#6af9ffe1": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.util.Point3D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "pPrev",
+            "type": "ext.plantuml.com.ctreber.acearth.util.Point3D"
+          }, {
+            "name": "pCurr",
+            "type": "ext.plantuml.com.ctreber.acearth.util.Point3D"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMapOrtho.handleCrossings#3f61fc2c": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "pScanBuf",
+            "type": "ext.plantuml.com.ctreber.acearth.scanbit.ScanBuf"
+          }, {
+            "name": "xings",
+            "type": "EdgeCrossing[]"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMap",
+      "metric": {
+        "loc": "149",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "158",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,223 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Rose.java",
+  "packageName": "net.sourceforge.plantuml.skin.rose",
+  "importName": ["net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.color.Colors", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.sequencediagram.NotePosition", "net.sourceforge.plantuml.skin.AlignmentParam", "net.sourceforge.plantuml.skin.ArrowComponent", "net.sourceforge.plantuml.skin.ArrowConfiguration", "net.sourceforge.plantuml.skin.ArrowDirection", "net.sourceforge.plantuml.skin.ColorParam", "net.sourceforge.plantuml.skin.Component", "net.sourceforge.plantuml.skin.ComponentType", "net.sourceforge.plantuml.skin.LineParam", "net.sourceforge.plantuml.skin.PaddingParam", "net.sourceforge.plantuml.stereo.Stereotype", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleSignatureBasic"],
+  "classData": {
+    "net.sourceforge.plantuml.skin.rose.Rose": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "paddingX",
+        "type": "double",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "paddingY",
+        "type": "double",
+        "modifier": ["final", "public", "static"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.skin.rose.Rose.createComponentArrow#c7ecb0f6": {
+          "returnType": "net.sourceforge.plantuml.skin.ArrowComponent",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "styles",
+            "type": "Style[]"
+          }, {
+            "name": "config",
+            "type": "net.sourceforge.plantuml.skin.ArrowConfiguration"
+          }, {
+            "name": "param",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "stringsToDisplay",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "52",
+            "cyclomatic_complexity": "22",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.Rose.checkRose#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.Rose.createComponentNewPage#98f78ae6": {
+          "returnType": "net.sourceforge.plantuml.skin.Component",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "param",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.Rose.createComponentNote#539768f0": {
+          "returnType": "net.sourceforge.plantuml.skin.Component",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "styles",
+            "type": "Style[]"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.skin.ComponentType"
+          }, {
+            "name": "param",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "stringsToDisplay",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.color.Colors"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.Rose.createComponent#d5d2b9c3": {
+          "returnType": "net.sourceforge.plantuml.skin.Component",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "styles",
+            "type": "Style[]"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.skin.ComponentType"
+          }, {
+            "name": "config",
+            "type": "net.sourceforge.plantuml.skin.ArrowConfiguration"
+          }, {
+            "name": "param",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "stringsToDisplay",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "139",
+            "cyclomatic_complexity": "47",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.Rose.createComponentNote#6753a46b": {
+          "returnType": "net.sourceforge.plantuml.skin.Component",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "styles",
+            "type": "Style[]"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.skin.ComponentType"
+          }, {
+            "name": "param",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "stringsToDisplay",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.color.Colors"
+          }, {
+            "name": "notePosition",
+            "type": "net.sourceforge.plantuml.sequencediagram.NotePosition"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.Rose.getHtmlColor#57a3075e": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "skin",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }, {
+            "name": "colorParams",
+            "type": "net.sourceforge.plantuml.skin.ColorParam"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.Rose.getHtmlColor#48cecce4": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "skin",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.skin.ColorParam"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.Rose.getMinClassWidth#4c82db0": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "style",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.Rose.getStroke#4fbd8f7e": {
+          "returnType": "net.sourceforge.plantuml.klimt.UStroke",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "param",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "lineParam",
+            "type": "net.sourceforge.plantuml.skin.LineParam"
+          }, {
+            "name": "defaultValue",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "273",
+        "cyclomatic_complexity": "82",
+        "cyclomatic_complexity_weighted": "13",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "332",
+    "cyclomatic_complexity": "13"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,507 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "xlabels__c.java",
+  "packageName": "gen.lib.label",
+  "importName": ["gen.lib.cdt.dtclose__c.dtclose", "gen.lib.cdt.dtopen__c.dtopen", "gen.lib.label.index__c.RTreeClose", "gen.lib.label.index__c.RTreeInsert", "gen.lib.label.index__c.RTreeLeafListFree", "gen.lib.label.index__c.RTreeOpen", "gen.lib.label.index__c.RTreeSearch", "smetana.core.Macro.UNSUPPORTED", "smetana.core.debug.SmetanaDebug.ENTERING", "smetana.core.debug.SmetanaDebug.LEAVING", "gen.annotation.Original", "gen.annotation.Unused", "h.ST_BestPos_t", "h.ST_HDict_t", "h.ST_LeafList_t", "h.ST_Node_t___", "h.ST_RTree", "h.ST_Rect_t", "h.ST_XLabels_t", "h.ST_dt_s", "h.ST_dtdisc_s", "h.ST_label_params_t", "h.ST_object_t", "h.ST_point", "h.ST_pointf", "h.ST_xlabel_t", "smetana.core.CArray", "smetana.core.CFunction", "smetana.core.CFunctionAbstract", "smetana.core.Globals", "smetana.core.Memory"],
+  "classData": {
+    "gen.lib.label.xlabels__c": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "icompare",
+        "type": "smetana.core.CFunction",
+        "modifier": ["public", "static"]
+      }],
+      "methodData": {
+        "gen.lib.label.xlabels__c.lblenclosing#2123f601": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "objp",
+            "type": "h.ST_object_t"
+          }, {
+            "name": "objp1",
+            "type": "h.ST_object_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.label.xlabels__c.xladjust_#e13278c5": {
+          "returnType": "h.ST_BestPos_t",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "xlp",
+            "type": "h.ST_XLabels_t"
+          }, {
+            "name": "objp",
+            "type": "h.ST_object_t"
+          }],
+          "metric": {
+            "loc": "73",
+            "cyclomatic_complexity": "22",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.label.xlabels__c.recordointrsx#bc104d0d": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "xlp",
+            "type": "h.ST_XLabels_t"
+          }, {
+            "name": "op",
+            "type": "h.ST_object_t"
+          }, {
+            "name": "cp",
+            "type": "h.ST_object_t"
+          }, {
+            "name": "rp",
+            "type": "h.ST_Rect_t"
+          }, {
+            "name": "a",
+            "type": "double"
+          }, {
+            "name": "intrsx",
+            "type": "ST_object_t[]"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "32",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.label.xlabels__c.floorLog2#1980e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "32",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.label.xlabels__c.xlhorder#877d346d": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "xlp",
+            "type": "h.ST_XLabels_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.label.xlabels__c.objplp2rect#348f306": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "objp",
+            "type": "h.ST_object_t"
+          }, {
+            "name": "r",
+            "type": "h.ST_Rect_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.label.xlabels__c.hd_hil_s_from_xy#8ef0abbe": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p",
+            "type": "h.ST_point"
+          }, {
+            "name": "n",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.label.xlabels__c.xlhdxload#6b0e50ff": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "xlp",
+            "type": "h.ST_XLabels_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.label.xlabels__c.xlfree#877d346d": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "xlp",
+            "type": "h.ST_XLabels_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.label.xlabels__c.icompare#964c61b6": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "dt",
+            "type": "h.ST_dt_s"
+          }, {
+            "name": "v1",
+            "type": "java.lang.Object"
+          }, {
+            "name": "v2",
+            "type": "java.lang.Object"
+          }, {
+            "name": "disc",
+            "type": "h.ST_dtdisc_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.label.xlabels__c.xlspdxload#6b0e50ff": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "xlp",
+            "type": "h.ST_XLabels_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.label.xlabels__c.xlnew#2d3beade": {
+          "returnType": "h.ST_XLabels_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "objs",
+            "type": "smetana.core.CArray\u003ch.ST_object_t\u003e"
+          }, {
+            "name": "n_objs",
+            "type": "int"
+          }, {
+            "name": "lbls",
+            "type": "smetana.core.CArray\u003ch.ST_xlabel_t\u003e"
+          }, {
+            "name": "n_lbls",
+            "type": "int"
+          }, {
+            "name": "params",
+            "type": "h.ST_label_params_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.label.xlabels__c.recordlintrsx#bc104d0d": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "xlp",
+            "type": "h.ST_XLabels_t"
+          }, {
+            "name": "op",
+            "type": "h.ST_object_t"
+          }, {
+            "name": "cp",
+            "type": "h.ST_object_t"
+          }, {
+            "name": "rp",
+            "type": "h.ST_Rect_t"
+          }, {
+            "name": "a",
+            "type": "double"
+          }, {
+            "name": "intrsx",
+            "type": "ST_object_t[]"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "32",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.label.xlabels__c.placeLabels#2d3beade": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "objs",
+            "type": "smetana.core.CArray\u003ch.ST_object_t\u003e"
+          }, {
+            "name": "n_objs",
+            "type": "int"
+          }, {
+            "name": "lbls",
+            "type": "smetana.core.CArray\u003ch.ST_xlabel_t\u003e"
+          }, {
+            "name": "n_lbls",
+            "type": "int"
+          }, {
+            "name": "params",
+            "type": "h.ST_label_params_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "35",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "gen.lib.label.xlabels__c.xlhdxunload#877d346d": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "xlp",
+            "type": "h.ST_XLabels_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.label.xlabels__c.objplpmks#e13278c5": {
+          "returnType": "h.ST_Rect_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "xlp",
+            "type": "h.ST_XLabels_t"
+          }, {
+            "name": "objp",
+            "type": "h.ST_object_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.label.xlabels__c.xlinitialize#6b0e50ff": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "xlp",
+            "type": "h.ST_XLabels_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.label.xlabels__c.xladjust#e13278c5": {
+          "returnType": "h.ST_BestPos_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "xlp",
+            "type": "h.ST_XLabels_t"
+          }, {
+            "name": "objp",
+            "type": "h.ST_object_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.label.xlabels__c.xlintersections_#a05c2e4f": {
+          "returnType": "h.ST_BestPos_t",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "xlp",
+            "type": "h.ST_XLabels_t"
+          }, {
+            "name": "objp",
+            "type": "h.ST_object_t"
+          }, {
+            "name": "intrsx",
+            "type": "ST_object_t[]"
+          }],
+          "metric": {
+            "loc": "52",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.label.xlabels__c.aabbaabb#65c396a1": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "r",
+            "type": "h.ST_Rect_t"
+          }, {
+            "name": "s",
+            "type": "h.ST_Rect_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.label.xlabels__c.getintrsxi#be25bf6d": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "xlp",
+            "type": "h.ST_XLabels_t"
+          }, {
+            "name": "op",
+            "type": "h.ST_object_t"
+          }, {
+            "name": "cp",
+            "type": "h.ST_object_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.label.xlabels__c.hd_hil_s_from_xy_#8ef0abbe": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "p",
+            "type": "h.ST_point"
+          }, {
+            "name": "n",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.label.xlabels__c.objp2rect#348f306": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "op",
+            "type": "h.ST_object_t"
+          }, {
+            "name": "r",
+            "type": "h.ST_Rect_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.label.xlabels__c.xlintersections#a05c2e4f": {
+          "returnType": "h.ST_BestPos_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "xlp",
+            "type": "h.ST_XLabels_t"
+          }, {
+            "name": "objp",
+            "type": "h.ST_object_t"
+          }, {
+            "name": "intrsx",
+            "type": "ST_object_t[]"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "618",
+        "cyclomatic_complexity": "94",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    },
+    "gen.lib.label.xlabels__c.icompare.CFunctionAbstract": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "gen.lib.label.xlabels__c.icompare.CFunctionAbstract.exe#6ff6ac10": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "args",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "698",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

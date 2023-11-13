@@ -1,0 +1,139 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Define.java",
+  "packageName": "net.sourceforge.plantuml.preproc",
+  "importName": ["java.util.Iterator", "java.util.List", "java.util.regex.Matcher", "java.util.regex.Pattern", "net.sourceforge.plantuml.file.AParentFolder", "net.sourceforge.plantuml.text.BackSlash", "net.sourceforge.plantuml.tim.expression.TValue"],
+  "classData": {
+    "net.sourceforge.plantuml.preproc.Define": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "signature",
+        "type": "net.sourceforge.plantuml.preproc.DefineSignature",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "definition",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "definitionQuoted",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "emptyParentheses",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "pattern",
+        "type": "java.util.regex.Pattern",
+        "modifier": ["private"]
+      }, {
+        "name": "currentDir",
+        "type": "net.sourceforge.plantuml.file.AParentFolder",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.preproc.Define.asTVariable#1": {
+          "returnType": "net.sourceforge.plantuml.tim.expression.TValue",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Define.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Define.apply2#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Define.Define#2126c490": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }, {
+            "name": "lines",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "emptyParentheses",
+            "type": "boolean"
+          }, {
+            "name": "currentDir",
+            "type": "net.sourceforge.plantuml.file.AParentFolder"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Define.apply#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Define.getFunctionName#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Define.apply1#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "79",
+        "cyclomatic_complexity": "11",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "125",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

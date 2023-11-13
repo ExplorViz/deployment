@@ -1,0 +1,73 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "MapDataReader.java",
+  "packageName": "ext.plantuml.com.ctreber.acearth",
+  "importName": ["java.io.IOException", "java.util.ArrayList", "java.util.Iterator", "java.util.List", "java.util.StringTokenizer", "ext.plantuml.com.ctreber.acearth.util.Point3D", "ext.plantuml.com.ctreber.acearth.util.Polygon"],
+  "classData": {
+    "ext.plantuml.com.ctreber.acearth.MapDataReader": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "MAP_DATA_SCALE",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "fData",
+        "type": "java.util.List",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "fPolygons",
+        "type": "java.util.List",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "fIndex",
+        "type": "int",
+        "modifier": ["private", "static"]
+      }],
+      "methodData": {
+        "ext.plantuml.com.ctreber.acearth.MapDataReader.processCurve#1": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.MapDataReader.readMapData#1": {
+          "returnType": "Polygon[]",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.MapDataReader.getValue#1980e": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "pIndex",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "57",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "68",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

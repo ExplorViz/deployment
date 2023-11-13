@@ -1,0 +1,71 @@
+{
+  "commitID": "a2849f75f2b4020a5807626a310d434d819164aa",
+  "fileName": "JpaPetRepositoryImpl.java",
+  "packageName": "org.springframework.samples.petclinic.repository.jpa",
+  "importName": ["java.util.List", "javax.persistence.EntityManager", "javax.persistence.PersistenceContext", "org.springframework.samples.petclinic.model.Pet", "org.springframework.samples.petclinic.model.PetType", "org.springframework.samples.petclinic.repository.PetRepository", "org.springframework.stereotype.Repository"],
+  "classData": {
+    "org.springframework.samples.petclinic.repository.jpa.JpaPetRepositoryImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["org.springframework.samples.petclinic.repository.PetRepository"],
+      "field": [{
+        "name": "em",
+        "type": "javax.persistence.EntityManager",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.repository.jpa.JpaPetRepositoryImpl.save#1391e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pet",
+            "type": "org.springframework.samples.petclinic.model.Pet"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jpa.JpaPetRepositoryImpl.findPetTypes#1": {
+          "returnType": "java.util.List\u003corg.springframework.samples.petclinic.model.PetType\u003e",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override", "java.lang.SuppressWarnings"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jpa.JpaPetRepositoryImpl.findById#1980e": {
+          "returnType": "org.springframework.samples.petclinic.model.Pet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "id",
+            "type": "int"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Repository"],
+      "metric": {
+        "loc": "27",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "54",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "verydapeng@gmail.com",
+  "addedLines": 63
+}

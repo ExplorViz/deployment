@@ -1,0 +1,183 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Matcher2.java",
+  "packageName": "net.sourceforge.plantuml.regex",
+  "importName": ["java.util.HashMap", "java.util.Map", "java.util.regex.Matcher", "java.util.regex.Pattern", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.regex.Matcher2": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "INSTRUMENT",
+        "type": "boolean",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "matcher",
+        "type": "java.util.regex.Matcher",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "id",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "durations",
+        "type": "java.util.Map\u003cjava.lang.String, java.lang.Long\u003e",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "printed",
+        "type": "long",
+        "modifier": ["private", "static"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.regex.Matcher2.find#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.regex.Matcher2.end#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.regex.Matcher2.matches#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.regex.Matcher2.groupCount#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.regex.Matcher2.Matcher2#a9c75120": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "matcher",
+            "type": "java.util.regex.Matcher"
+          }, {
+            "name": "id",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.regex.Matcher2.getLongest#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.regex.Matcher2.group#1980e": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "n",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.regex.Matcher2.addTime#f342042c": {
+          "returnType": "void",
+          "modifier": ["private", "static", "synchronized"],
+          "parameter": [{
+            "name": "id",
+            "type": "java.lang.String"
+          }, {
+            "name": "duration",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.regex.Matcher2.start#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.regex.Matcher2.group#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.regex.Matcher2.addTime#32c69b": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "duration",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.regex.Matcher2.build#b91dfba8": {
+          "returnType": "net.sourceforge.plantuml.regex.Matcher2",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "pattern",
+            "type": "java.util.regex.Pattern"
+          }, {
+            "name": "input",
+            "type": "java.lang.CharSequence"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "128",
+        "cyclomatic_complexity": "15",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "172",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

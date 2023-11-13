@@ -1,0 +1,208 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "ETileOptional.java",
+  "packageName": "net.sourceforge.plantuml.ebnf",
+  "importName": ["net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FloatingNote", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlockUtils", "net.sourceforge.plantuml.klimt.shape.URectangle", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.SName"],
+  "classData": {
+    "net.sourceforge.plantuml.ebnf.ETileOptional": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "deltax",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "deltay",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "orig",
+        "type": "net.sourceforge.plantuml.ebnf.ETile",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "commentAbove",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "commentBelow",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "specialForAlternate",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.ebnf.ETileOptional.getNoteBelow#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.ETileOptional.getNoteAbove#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.ETileOptional.getH2#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.ETileOptional.push#3f41cb2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "tile",
+            "type": "net.sourceforge.plantuml.ebnf.ETile"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.ETileOptional.addCommentAbove#943a4c50": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "comment",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.ETileOptional.ETileOptional#13870455": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "orig",
+            "type": "net.sourceforge.plantuml.ebnf.ETile"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.ETileOptional.getDeltaY#395b4159": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.ETileOptional.getH1#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.ETileOptional.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "44",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.ETileOptional.getWidth#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.ETileOptional.addCommentBelow#943a4c50": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "comment",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.ebnf.ETile",
+      "metric": {
+        "loc": "115",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "165",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,604 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Decode.java",
+  "packageName": "net.sourceforge.plantuml.brotli",
+  "importName": ["java.io.IOException", "java.io.InputStream"],
+  "classData": {
+    "net.sourceforge.plantuml.brotli.Decode": {
+      "type": "CLASS",
+      "modifier": ["final"],
+      "field": [{
+        "name": "UNINITIALIZED",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "BLOCK_START",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "COMPRESSED_BLOCK_START",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "MAIN_LOOP",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "READ_METADATA",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "COPY_UNCOMPRESSED",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "INSERT_LOOP",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "COPY_LOOP",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "COPY_WRAP_BUFFER",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "TRANSFORM",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "FINISHED",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "CLOSED",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "WRITE",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "DEFAULT_CODE_LENGTH",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "CODE_LENGTH_REPEAT_CODE",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "NUM_LITERAL_CODES",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "NUM_INSERT_AND_COPY_CODES",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "NUM_BLOCK_LENGTH_CODES",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "LITERAL_CONTEXT_BITS",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "DISTANCE_CONTEXT_BITS",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "HUFFMAN_TABLE_BITS",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "HUFFMAN_TABLE_MASK",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "HUFFMAN_TABLE_SIZE",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "CODE_LENGTH_CODES",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "CODE_LENGTH_CODE_ORDER",
+        "type": "int[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "NUM_DISTANCE_SHORT_CODES",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "DISTANCE_SHORT_CODE_INDEX_OFFSET",
+        "type": "int[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "DISTANCE_SHORT_CODE_VALUE_OFFSET",
+        "type": "int[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "FIXED_TABLE",
+        "type": "int[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "DICTIONARY_OFFSETS_BY_LENGTH",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "DICTIONARY_SIZE_BITS_BY_LENGTH",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "MIN_WORD_LENGTH",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "MAX_WORD_LENGTH",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "MAX_TRANSFORMED_WORD_LENGTH",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "BLOCK_LENGTH_OFFSET",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "BLOCK_LENGTH_N_BITS",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "INSERT_LENGTH_OFFSET",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "INSERT_LENGTH_N_BITS",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "COPY_LENGTH_OFFSET",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "COPY_LENGTH_N_BITS",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "INSERT_RANGE_LUT",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "COPY_RANGE_LUT",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.brotli.Decode.decompress#4c7d490": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "265",
+            "cyclomatic_complexity": "120",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.decodeVarLenUnsignedByte#4c7d490": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.decodeMetaBlockLength#4c7d490": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "42",
+            "cyclomatic_complexity": "13",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.maybeReallocateRingBuffer#4c7d490": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.readBlockLength#79aa7212": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "table",
+            "type": "int[]"
+          }, {
+            "name": "offset",
+            "type": "int"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.readNextMetablockHeader#4c7d490": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "35",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.copyUncompressedData#4c7d490": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.decodeWindowBits#4c7d490": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.initState#e55f793a": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }, {
+            "name": "input",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.close#4c7d490": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.checkDupes#b972aa3f": {
+          "returnType": "int",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "symbols",
+            "type": "int[]"
+          }, {
+            "name": "length",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.translateShortCodes#bf6e730c": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "code",
+            "type": "int"
+          }, {
+            "name": "ringBuffer",
+            "type": "int[]"
+          }, {
+            "name": "index",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.readMetablockHuffmanCodesAndContextMaps#4c7d490": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "56",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.readMetablockPartition#f257ee70": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }, {
+            "name": "treeType",
+            "type": "int"
+          }, {
+            "name": "numBlockTypes",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.decodeBlockTypeAndLength#f257ee70": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }, {
+            "name": "treeType",
+            "type": "int"
+          }, {
+            "name": "numBlockTypes",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.inverseMoveToFrontTransform#15309e86": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "v",
+            "type": "byte[]"
+          }, {
+            "name": "vLen",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.decodeCommandBlockSwitch#4c7d490": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.decodeDistanceBlockSwitch#4c7d490": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.readHuffmanCodeLengths#e5a9f97f": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "codeLengthCodeLengths",
+            "type": "int[]"
+          }, {
+            "name": "numSymbols",
+            "type": "int"
+          }, {
+            "name": "codeLengths",
+            "type": "int[]"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "56",
+            "cyclomatic_complexity": "13",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.readHuffmanCode#3327c2e5": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "alphabetSize",
+            "type": "int"
+          }, {
+            "name": "table",
+            "type": "int[]"
+          }, {
+            "name": "offset",
+            "type": "int"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "61",
+            "cyclomatic_complexity": "16",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.decodeHuffmanTreeGroup#af506f0": {
+          "returnType": "int[]",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "alphabetSize",
+            "type": "int"
+          }, {
+            "name": "n",
+            "type": "int"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.readSymbol#79aa7212": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "table",
+            "type": "int[]"
+          }, {
+            "name": "offset",
+            "type": "int"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.writeRingBuffer#4c7d490": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.decodeContextMap#1ff2a3d5": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "contextMapSize",
+            "type": "int"
+          }, {
+            "name": "contextMap",
+            "type": "byte[]"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "45",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.moveToFront#b972aa3f": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "v",
+            "type": "int[]"
+          }, {
+            "name": "index",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Decode.decodeLiteralBlockSwitch#4c7d490": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "893",
+        "cyclomatic_complexity": "224",
+        "cyclomatic_complexity_weighted": "10",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "906",
+    "cyclomatic_complexity": "10"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

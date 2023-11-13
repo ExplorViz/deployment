@@ -1,0 +1,201 @@
+{
+  "commitID": "2a12048e784eae86e61a484ecb65eec8832b9b9a",
+  "fileName": "Owner.java",
+  "packageName": "org.springframework.samples.petclinic.owner",
+  "importName": ["java.util.ArrayList", "java.util.List", "javax.persistence.CascadeType", "javax.persistence.Column", "javax.persistence.Entity", "javax.persistence.FetchType", "javax.persistence.JoinColumn", "javax.persistence.OneToMany", "javax.persistence.OrderBy", "javax.persistence.Table", "javax.validation.constraints.Digits", "javax.validation.constraints.NotEmpty", "org.springframework.core.style.ToStringCreator", "org.springframework.samples.petclinic.model.Person", "org.springframework.util.Assert"],
+  "classData": {
+    "org.springframework.samples.petclinic.owner.Owner": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "address",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "city",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "telephone",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "pets",
+        "type": "java.util.List\u003corg.springframework.samples.petclinic.owner.Pet\u003e",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.owner.Owner.getPet#f6eaa9d8": {
+          "returnType": "org.springframework.samples.petclinic.owner.Pet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "ignoreNew",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.Owner.getCity#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.Owner.getAddress#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.Owner.addPet#1391e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pet",
+            "type": "org.springframework.samples.petclinic.owner.Pet"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.Owner.getPet#943a4c50": {
+          "returnType": "org.springframework.samples.petclinic.owner.Pet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.Owner.addVisit#2ac26b8e": {
+          "returnType": "org.springframework.samples.petclinic.owner.Owner",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "petId",
+            "type": "java.lang.Integer"
+          }, {
+            "name": "visit",
+            "type": "org.springframework.samples.petclinic.owner.Visit"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.Owner.setCity#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "city",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.Owner.setAddress#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "address",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.Owner.getPet#d7ee193d": {
+          "returnType": "org.springframework.samples.petclinic.owner.Pet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "id",
+            "type": "java.lang.Integer"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.Owner.getTelephone#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.Owner.getPets#1": {
+          "returnType": "java.util.List\u003corg.springframework.samples.petclinic.owner.Pet\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.Owner.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.Owner.setTelephone#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "telephone",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "org.springframework.samples.petclinic.model.Person",
+      "annotation": ["Entity", "Table"],
+      "metric": {
+        "loc": "109",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "144",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "amaembo@gmail.com",
+  "modifiedLines": 2
+}

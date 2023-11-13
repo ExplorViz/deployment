@@ -1,0 +1,160 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "FtpServer.java",
+  "packageName": "net.sourceforge.plantuml.ftp",
+  "importName": ["java.nio.charset.StandardCharsets.UTF_8", "java.io.IOException", "java.net.ServerSocket", "java.net.Socket", "java.util.Map", "java.util.Objects", "java.util.TreeMap", "java.util.concurrent.ExecutorService", "java.util.concurrent.Executors", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.log.Logme"],
+  "classData": {
+    "net.sourceforge.plantuml.ftp.FtpServer": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "datas",
+        "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.ftp.FtpConnexion\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "exeImage",
+        "type": "java.util.concurrent.ExecutorService",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "listenPort",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "portFree",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "ip",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "defaultfileFormat",
+        "type": "net.sourceforge.plantuml.FileFormat",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.ftp.FtpServer.processImage#b654992b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "connexion",
+            "type": "net.sourceforge.plantuml.ftp.FtpConnexion",
+            "modifier": ["final "]
+          }, {
+            "name": "name",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.ftp.FtpServer.getFtpConnexion#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.ftp.FtpConnexion",
+          "modifier": ["public", "synchronized"],
+          "parameter": [{
+            "name": "user",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ftp.FtpServer.getIpServer#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ftp.FtpServer.getFreePort#1": {
+          "returnType": "int",
+          "modifier": ["public", "synchronized"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ftp.FtpServer.go#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ftp.FtpServer.main#6ed80f72": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "args",
+            "type": "String[]"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ftp.FtpServer.getCharset#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ftp.FtpServer.FtpServer#cbf11265": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "listenPort",
+            "type": "int"
+          }, {
+            "name": "defaultfileFormat",
+            "type": "net.sourceforge.plantuml.FileFormat"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "73",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "6"
+      }
+    },
+    "net.sourceforge.plantuml.ftp.FtpServer.processImage#b654992b.Runnable": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.ftp.FtpServer.processImage#b654992b.Runnable.run#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "125",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

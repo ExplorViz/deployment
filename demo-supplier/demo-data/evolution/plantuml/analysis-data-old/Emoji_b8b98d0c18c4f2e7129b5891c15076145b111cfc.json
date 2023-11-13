@@ -1,0 +1,113 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Emoji.java",
+  "packageName": "net.sourceforge.plantuml.emoji",
+  "importName": ["java.io.BufferedReader", "java.io.IOException", "java.io.InputStream", "java.io.InputStreamReader", "java.util.ArrayList", "java.util.Collections", "java.util.HashMap", "java.util.List", "java.util.Map", "java.util.TreeMap", "net.sourceforge.plantuml.emoji.data.Dummy", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.log.Logme"],
+  "classData": {
+    "net.sourceforge.plantuml.emoji.Emoji": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "ALL",
+        "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.emoji.Emoji\u003e",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "nano",
+        "type": "net.sourceforge.plantuml.emoji.SvgNanoParser",
+        "modifier": ["private"]
+      }, {
+        "name": "unicode",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "shortcut",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.emoji.Emoji.drawU#3aa2e6bc": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "scale",
+            "type": "double"
+          }, {
+            "name": "colorForMonochrome",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "8",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.Emoji.Emoji#943a4c50": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "unicode",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "12",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.Emoji.getShortcut#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.Emoji.retrieve#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.emoji.Emoji",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.Emoji.getAll#1": {
+          "returnType": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.emoji.Emoji\u003e",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.Emoji.loadIfNeed#1": {
+          "returnType": "void",
+          "modifier": ["private", "synchronized"],
+          "metric": {
+            "loc": "12",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.Emoji.pattern#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "10",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "80",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "135"
+  },
+  "author": "plantuml@gmail.com"
+}

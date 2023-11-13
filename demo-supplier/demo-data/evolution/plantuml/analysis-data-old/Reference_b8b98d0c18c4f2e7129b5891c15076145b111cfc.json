@@ -1,0 +1,228 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Reference.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.Iterator", "java.util.List", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleBuilder", "net.sourceforge.plantuml.style.StyleSignatureBasic", "net.sourceforge.plantuml.url.Url"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.Reference": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.sequencediagram.EventWithNote"],
+      "field": [{
+        "name": "participants",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.Participant\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "url",
+        "type": "net.sourceforge.plantuml.url.Url",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "backColorGeneral",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "backColorElement",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "strings",
+        "type": "net.sourceforge.plantuml.klimt.creole.Display",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "style",
+        "type": "net.sourceforge.plantuml.style.Style",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "styleHeader",
+        "type": "net.sourceforge.plantuml.style.Style",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "noteOnMessages",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.Note\u003e",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.Reference.uniq#a7d2d1e8": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.Participant\u003e",
+          "modifier": ["static", "private"],
+          "parameter": [{
+            "name": "all",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.Participant\u003e"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Reference.getNoteOnMessages#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.Note\u003e",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Reference.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Reference.hasUrl#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Reference.getUrl#1": {
+          "returnType": "net.sourceforge.plantuml.url.Url",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Reference.addNote#252431": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "note",
+            "type": "net.sourceforge.plantuml.sequencediagram.Note"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Reference.getDefaultStyleDefinition#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Reference.getBackColorElement#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Reference.getStrings#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Display",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Reference.dealWith#91279732": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "someone",
+            "type": "net.sourceforge.plantuml.sequencediagram.Participant"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Reference.getHeaderStyleDefinition#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Reference.Reference#c892b26f": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "participants",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.Participant\u003e"
+          }, {
+            "name": "url",
+            "type": "net.sourceforge.plantuml.url.Url"
+          }, {
+            "name": "strings",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "backColorGeneral",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "backColorElement",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "styleBuilder",
+            "type": "net.sourceforge.plantuml.style.StyleBuilder"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Reference.getUsedStyles#1": {
+          "returnType": "Style[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Reference.getParticipant#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.Participant\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Reference.getBackColorGeneral#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.sequencediagram.AbstractEvent",
+      "metric": {
+        "loc": "99",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "9"
+      }
+    }
+  },
+  "metric": {
+    "loc": "150",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

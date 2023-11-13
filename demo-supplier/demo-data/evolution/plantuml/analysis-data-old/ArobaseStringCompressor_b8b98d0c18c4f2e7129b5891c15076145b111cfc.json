@@ -1,0 +1,114 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "ArobaseStringCompressor.java",
+  "packageName": "net.sourceforge.plantuml.code",
+  "importName": ["java.io.IOException", "java.io.StringReader", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.preproc.ReadLine", "net.sourceforge.plantuml.preproc.ReadLineReader", "net.sourceforge.plantuml.preproc.UncommentReadLine", "net.sourceforge.plantuml.regex.Matcher2", "net.sourceforge.plantuml.regex.MyPattern", "net.sourceforge.plantuml.regex.Pattern2", "net.sourceforge.plantuml.text.StringLocated"],
+  "classData": {
+    "net.sourceforge.plantuml.code.ArobaseStringCompressor": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.code.StringCompressor"],
+      "field": [{
+        "name": "pattern",
+        "type": "net.sourceforge.plantuml.regex.Pattern2",
+        "modifier": ["private", "final", "static"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.code.ArobaseStringCompressor.compress#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "data",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.code.ArobaseStringCompressor.clean1#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.ArobaseStringCompressor.append#643234b8": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "sb",
+            "type": "java.lang.StringBuilder",
+            "modifier": ["final "]
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.ArobaseStringCompressor.decompress#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.ArobaseStringCompressor.compressOld#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.ArobaseStringCompressor.clean#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "73",
+        "cyclomatic_complexity": "12",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "122",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

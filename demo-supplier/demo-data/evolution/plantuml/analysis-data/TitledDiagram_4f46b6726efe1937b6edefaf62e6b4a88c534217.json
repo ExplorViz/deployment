@@ -1,0 +1,411 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "TitledDiagram.java",
+  "packageName": "net.sourceforge.plantuml",
+  "importName": ["java.io.IOException", "java.io.InputStream", "java.util.Map", "net.atmp.ImageBuilder", "net.sourceforge.plantuml.abel.DisplayPositioned", "net.sourceforge.plantuml.abel.DisplayPositionned", "net.sourceforge.plantuml.api.ApiStable", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.cucadiagram.DisplaySection", "net.sourceforge.plantuml.klimt.color.ColorMapper", "net.sourceforge.plantuml.klimt.color.ColorOrder", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.VerticalAlignment", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.sprite.Sprite", "net.sourceforge.plantuml.skin.Pragma", "net.sourceforge.plantuml.skin.SkinParam", "net.sourceforge.plantuml.skin.UmlDiagramType", "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleBuilder", "net.sourceforge.plantuml.style.StyleLoader", "net.sourceforge.plantuml.style.StyleSignatureBasic"],
+  "classData": {
+    "net.sourceforge.plantuml.TitledDiagram": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "interface": ["net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.Annotated"],
+      "field": [{
+        "name": "FORCE_SMETANA",
+        "type": "boolean",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "FORCE_ELK",
+        "type": "boolean",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "title",
+        "type": "net.sourceforge.plantuml.abel.DisplayPositioned",
+        "modifier": ["private"]
+      }, {
+        "name": "caption",
+        "type": "net.sourceforge.plantuml.abel.DisplayPositioned",
+        "modifier": ["private"]
+      }, {
+        "name": "legend",
+        "type": "net.sourceforge.plantuml.abel.DisplayPositioned",
+        "modifier": ["private"]
+      }, {
+        "name": "header",
+        "type": "net.sourceforge.plantuml.cucadiagram.DisplaySection",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "footer",
+        "type": "net.sourceforge.plantuml.cucadiagram.DisplaySection",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "mainFrame",
+        "type": "net.sourceforge.plantuml.klimt.creole.Display",
+        "modifier": ["private"]
+      }, {
+        "name": "type",
+        "type": "net.sourceforge.plantuml.skin.UmlDiagramType",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.skin.SkinParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "pragma",
+        "type": "net.sourceforge.plantuml.skin.Pragma",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "useSmetana",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "useElk",
+        "type": "boolean",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.TitledDiagram.calculateBackColor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.setCaption#d35da9e9": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "caption",
+            "type": "net.sourceforge.plantuml.abel.DisplayPositioned"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.addSprite#87112c95": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "sprite",
+            "type": "net.sourceforge.plantuml.klimt.sprite.Sprite"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.getTextBlock#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["protected", "abstract"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.getHeader#1": {
+          "returnType": "net.sourceforge.plantuml.cucadiagram.DisplaySection",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.loadSkin#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newSkin",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.setUseElk#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "useElk",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.muteColorMapper#92ab2b83": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.ColorMapper",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "init",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.getCaption#1": {
+          "returnType": "net.sourceforge.plantuml.abel.DisplayPositioned",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.isUseElk#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.getSkinParam#1": {
+          "returnType": "net.sourceforge.plantuml.style.ISkinParam",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.getTitleDisplay#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Display",
+          "modifier": ["final", "public"],
+          "annotation": ["java.lang.Override", "net.sourceforge.plantuml.api.ApiStable"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.TitledDiagram#16d04a87": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.skin.UmlDiagramType"
+          }, {
+            "name": "orig",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.getTitle#1": {
+          "returnType": "net.sourceforge.plantuml.abel.DisplayPositionned",
+          "modifier": ["final", "public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.getMainFrame#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Display",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.getCurrentStyleBuilder#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleBuilder",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.getDefaultMargins#1": {
+          "returnType": "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.setTitle#d35da9e9": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "title",
+            "type": "net.sourceforge.plantuml.abel.DisplayPositioned"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.getUmlDiagramType#1": {
+          "returnType": "net.sourceforge.plantuml.skin.UmlDiagramType",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.isUseSmetana#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.exportDiagramGraphic#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.setParam#874989e1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }, {
+            "name": "value",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.setMainFrame#c6ddb0c1": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "mainFrame",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.getFooter#1": {
+          "returnType": "net.sourceforge.plantuml.cucadiagram.DisplaySection",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.setUseSmetana#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "useSmetana",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.createImageBuilder#618c8b27": {
+          "returnType": "net.atmp.ImageBuilder",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.setLegend#d35da9e9": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "legend",
+            "type": "net.sourceforge.plantuml.abel.DisplayPositioned"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.getLegend#1": {
+          "returnType": "net.sourceforge.plantuml.abel.DisplayPositioned",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.TitledDiagram.getPragma#1": {
+          "returnType": "net.sourceforge.plantuml.skin.Pragma",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.AbstractPSystem",
+      "metric": {
+        "loc": "191",
+        "cyclomatic_complexity": "13",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "10"
+      }
+    }
+  },
+  "metric": {
+    "loc": "262",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

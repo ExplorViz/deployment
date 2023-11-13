@@ -1,0 +1,482 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CucaDiagramFileMakerElk.java",
+  "packageName": "net.sourceforge.plantuml.elk",
+  "importName": ["java.io.IOException", "java.io.OutputStream", "java.util.ArrayList", "java.util.Collection", "java.util.EnumSet", "java.util.LinkedHashMap", "java.util.List", "java.util.Map", "java.util.Map.Entry", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.UmlDiagram", "net.sourceforge.plantuml.abel.CucaNote", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.abel.GroupType", "net.sourceforge.plantuml.abel.LeafType", "net.sourceforge.plantuml.abel.Link", "net.sourceforge.plantuml.api.ImageDataSimple", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.cucadiagram.ICucaDiagram", "net.sourceforge.plantuml.decoration.symbol.USymbolFolder", "net.sourceforge.plantuml.eggs.QuoteUtils", "net.sourceforge.plantuml.elk.proxy.core.RecursiveGraphLayoutEngine", "net.sourceforge.plantuml.elk.proxy.core.math.ElkPadding", "net.sourceforge.plantuml.elk.proxy.core.options.CoreOptions", "net.sourceforge.plantuml.elk.proxy.core.options.Direction", "net.sourceforge.plantuml.elk.proxy.core.options.EdgeLabelPlacement", "net.sourceforge.plantuml.elk.proxy.core.options.HierarchyHandling", "net.sourceforge.plantuml.elk.proxy.core.options.NodeLabelPlacement", "net.sourceforge.plantuml.elk.proxy.core.util.NullElkProgressMonitor", "net.sourceforge.plantuml.elk.proxy.graph.ElkEdge", "net.sourceforge.plantuml.elk.proxy.graph.ElkLabel", "net.sourceforge.plantuml.elk.proxy.graph.ElkNode", "net.sourceforge.plantuml.elk.proxy.graph.util.ElkGraphUtil", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.FontParam", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.MinMax", "net.sourceforge.plantuml.klimt.geom.RectangleArea", "net.sourceforge.plantuml.klimt.geom.VerticalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlockUtils", "net.sourceforge.plantuml.klimt.shape.URectangle", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.skin.AlignmentParam", "net.sourceforge.plantuml.skin.UmlDiagramType", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleSignatureBasic", "net.sourceforge.plantuml.svek.Bibliotekon", "net.sourceforge.plantuml.svek.Cluster", "net.sourceforge.plantuml.svek.ClusterDecoration", "net.sourceforge.plantuml.svek.CucaDiagramFileMaker", "net.sourceforge.plantuml.svek.DotStringFactory", "net.sourceforge.plantuml.svek.GeneralImageBuilder", "net.sourceforge.plantuml.svek.GraphvizCrash", "net.sourceforge.plantuml.svek.IEntityImage", "net.sourceforge.plantuml.svek.PackageStyle", "net.sourceforge.plantuml.svek.image.EntityImageNoteLink", "net.sourceforge.plantuml.utils.Position"],
+  "classData": {
+    "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.svek.CucaDiagramFileMaker"],
+      "field": [{
+        "name": "diagram",
+        "type": "net.sourceforge.plantuml.cucadiagram.ICucaDiagram",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "stringBounder",
+        "type": "net.sourceforge.plantuml.klimt.font.StringBounder",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "dotStringFactory",
+        "type": "net.sourceforge.plantuml.svek.DotStringFactory",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "nodes",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.abel.Entity, net.sourceforge.plantuml.elk.proxy.graph.ElkNode\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "clusters",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.abel.Entity, net.sourceforge.plantuml.elk.proxy.graph.ElkNode\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "edges",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.abel.Link, net.sourceforge.plantuml.elk.proxy.graph.ElkEdge\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.Drawing"],
+      "methodData": {
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.getQuantifier#461fad6": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "link",
+            "type": "net.sourceforge.plantuml.abel.Link"
+          }, {
+            "name": "n",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.getFailureText3#2c99793f": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["static", "private"],
+          "parameter": [{
+            "name": "exception",
+            "type": "java.lang.Throwable"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.printSingleGroup#7c02d022": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "g",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.manageSingleEdge#242439": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "link",
+            "type": "net.sourceforge.plantuml.abel.Link",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.printEntityInternal#7c02d022": {
+          "returnType": "net.sourceforge.plantuml.svek.IEntityImage",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ent",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.createOneGraphic#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.manageSingleNode#87ea97de": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "parent",
+            "type": "net.sourceforge.plantuml.elk.proxy.graph.ElkNode"
+          }, {
+            "name": "leaf",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.createFile#b44287d9": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "dotStrings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.getElkNode#7c02d022": {
+          "returnType": "net.sourceforge.plantuml.elk.proxy.graph.ElkNode",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.printEntities#6fad6978": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "parent",
+            "type": "net.sourceforge.plantuml.elk.proxy.graph.ElkNode"
+          }, {
+            "name": "entities",
+            "type": "java.util.Collection\u003cnet.sourceforge.plantuml.abel.Entity\u003e"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.manageAllEdges#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.getBibliotekon#1": {
+          "returnType": "net.sourceforge.plantuml.svek.Bibliotekon",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.printAllSubgroups#87ea97de": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "cluster",
+            "type": "net.sourceforge.plantuml.elk.proxy.graph.ElkNode"
+          }, {
+            "name": "group",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.getLabel#242439": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "link",
+            "type": "net.sourceforge.plantuml.abel.Link"
+          }],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.CucaDiagramFileMakerElk#e8b5f5e1": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.cucadiagram.ICucaDiagram"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.getUnpackagedEntities#1": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.abel.Entity\u003e",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.getStyle#1": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.getPosition#6250c5": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "elkNode",
+            "type": "net.sourceforge.plantuml.elk.proxy.graph.ElkNode"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "393",
+        "cyclomatic_complexity": "30",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "13"
+      }
+    },
+    "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.Drawing": {
+      "type": "CLASS",
+      "field": [{
+        "name": "minMax",
+        "type": "net.sourceforge.plantuml.klimt.geom.MinMax",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.Drawing.drawAllClusters#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.Drawing.getBackcolor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.Drawing.getBackColor#bdf9f578": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "umlDiagramType",
+            "type": "net.sourceforge.plantuml.skin.UmlDiagramType"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.Drawing.Drawing#895ff9f1": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "minMax",
+            "type": "net.sourceforge.plantuml.klimt.geom.MinMax"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.Drawing.drawAllEdges#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.Drawing.drawAllNodes#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.Drawing.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.Drawing.getTitleBlock#7c02d022": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "g",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.Drawing.drawSingleNode#52a33d75": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "leaf",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "elkNode",
+            "type": "net.sourceforge.plantuml.elk.proxy.graph.ElkNode"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.Drawing.drawSingleEdge#52a82bf9": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "link",
+            "type": "net.sourceforge.plantuml.abel.Link"
+          }, {
+            "name": "edge",
+            "type": "net.sourceforge.plantuml.elk.proxy.graph.ElkEdge"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.Drawing.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk.Drawing.drawSingleCluster#52a33d75": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "group",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "elkNode",
+            "type": "net.sourceforge.plantuml.elk.proxy.graph.ElkNode"
+          }],
+          "metric": {
+            "loc": "37",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock",
+      "metric": {
+        "loc": "120",
+        "cyclomatic_complexity": "9",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "507",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

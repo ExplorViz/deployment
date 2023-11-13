@@ -1,0 +1,88 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "QRCodeWriter.java",
+  "packageName": "ext.plantuml.com.google.zxing.qrcode",
+  "importName": ["java.util.Hashtable", "ext.plantuml.com.google.zxing.BarcodeFormat", "ext.plantuml.com.google.zxing.EncodeHintType", "ext.plantuml.com.google.zxing.Writer", "ext.plantuml.com.google.zxing.WriterException", "ext.plantuml.com.google.zxing.common.BitMatrix", "ext.plantuml.com.google.zxing.qrcode.decoder.ErrorCorrectionLevel", "ext.plantuml.com.google.zxing.qrcode.encoder.ByteMatrix", "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder", "ext.plantuml.com.google.zxing.qrcode.encoder.QRCode"],
+  "classData": {
+    "ext.plantuml.com.google.zxing.qrcode.QRCodeWriter": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "interface": ["ext.plantuml.com.google.zxing.Writer"],
+      "field": [{
+        "name": "QUIET_ZONE_SIZE",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "ext.plantuml.com.google.zxing.qrcode.QRCodeWriter.encode#820a65b8": {
+          "returnType": "ext.plantuml.com.google.zxing.common.BitMatrix",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "contents",
+            "type": "java.lang.String"
+          }, {
+            "name": "format",
+            "type": "ext.plantuml.com.google.zxing.BarcodeFormat"
+          }, {
+            "name": "multiple",
+            "type": "int"
+          }, {
+            "name": "hints",
+            "type": "java.util.Hashtable"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.QRCodeWriter.renderResult#4cabddc2": {
+          "returnType": "ext.plantuml.com.google.zxing.common.BitMatrix",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "code",
+            "type": "ext.plantuml.com.google.zxing.qrcode.encoder.QRCode"
+          }, {
+            "name": "multiple",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.QRCodeWriter.encode#187c02a8": {
+          "returnType": "ext.plantuml.com.google.zxing.common.BitMatrix",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "contents",
+            "type": "java.lang.String"
+          }, {
+            "name": "format",
+            "type": "ext.plantuml.com.google.zxing.BarcodeFormat"
+          }, {
+            "name": "multiple",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "56",
+        "cyclomatic_complexity": "9",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "86",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

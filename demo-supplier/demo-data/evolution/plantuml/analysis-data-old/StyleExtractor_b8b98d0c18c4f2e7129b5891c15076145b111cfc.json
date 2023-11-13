@@ -1,0 +1,134 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "StyleExtractor.java",
+  "packageName": "net.sourceforge.plantuml.jsondiagram",
+  "importName": ["java.util.ArrayList", "java.util.Iterator", "java.util.List", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleBuilder", "net.sourceforge.plantuml.style.parser.StyleParser", "net.sourceforge.plantuml.style.parser.StyleParsingException", "net.sourceforge.plantuml.text.StringLocated", "net.sourceforge.plantuml.utils.BlocLines"],
+  "classData": {
+    "net.sourceforge.plantuml.jsondiagram.StyleExtractor": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "list",
+        "type": "java.util.List\u003cjava.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "style",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "title",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "handwritten",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "scale",
+        "type": "double",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.jsondiagram.StyleExtractor.startStyle#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.StyleExtractor.applyStyles#98f78ae6": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.StyleExtractor.getScale#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.StyleExtractor.isHandwritten#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.StyleExtractor.endStyle#49563e00": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.StyleExtractor.getIterator#1": {
+          "returnType": "java.util.Iterator\u003cjava.lang.String\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.StyleExtractor.StyleExtractor#984b8b8a": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "data",
+            "type": "java.util.Iterator\u003cnet.sourceforge.plantuml.text.StringLocated\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "41",
+            "cyclomatic_complexity": "25",
+            "nestedBlockDepth": "12"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.StyleExtractor.getTitle#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "84",
+        "cyclomatic_complexity": "27",
+        "cyclomatic_complexity_weighted": "13",
+        "LCOM4": "7"
+      }
+    }
+  },
+  "metric": {
+    "loc": "133",
+    "cyclomatic_complexity": "13"
+  },
+  "author": "plantuml@gmail.com"
+}

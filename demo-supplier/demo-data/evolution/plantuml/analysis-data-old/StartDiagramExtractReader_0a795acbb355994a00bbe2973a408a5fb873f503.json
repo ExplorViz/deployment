@@ -1,0 +1,286 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "StartDiagramExtractReader.java",
+  "packageName": "net.sourceforge.plantuml.preproc",
+  "importName": ["java.io.IOException", "java.io.InputStream", "java.io.InputStreamReader", "java.io.Reader", "java.nio.charset.Charset", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.preproc2.ReadFilterMergeLines", "net.sourceforge.plantuml.security.SURL", "net.sourceforge.plantuml.text.StringLocated", "net.sourceforge.plantuml.utils.Log", "net.sourceforge.plantuml.utils.StartUtils"],
+  "classData": {
+    "net.sourceforge.plantuml.preproc.StartDiagramExtractReader": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.preproc.ReadLine"],
+      "field": [{
+        "name": "raw",
+        "type": "net.sourceforge.plantuml.preproc.ReadLine",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "finished",
+        "type": "boolean",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.containsStartDiagram#32e58e6": {
+          "returnType": "boolean",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "url",
+            "type": "net.sourceforge.plantuml.security.SURL"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }, {
+            "name": "charset",
+            "type": "java.nio.charset.Charset"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.build#2e993019": {
+          "returnType": "net.sourceforge.plantuml.preproc.StartDiagramExtractReader",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "is",
+            "type": "java.io.InputStream"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }, {
+            "name": "desc",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.build#8b78caa1": {
+          "returnType": "net.sourceforge.plantuml.preproc.StartDiagramExtractReader",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "url",
+            "type": "net.sourceforge.plantuml.security.SURL"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }, {
+            "name": "uid",
+            "type": "java.lang.String"
+          }, {
+            "name": "charset",
+            "type": "java.nio.charset.Charset"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.checkUid#3c657b91": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "uid",
+            "type": "java.lang.String"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.getReadLine#2e993019": {
+          "returnType": "net.sourceforge.plantuml.preproc.ReadLine",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "is",
+            "type": "java.io.InputStream"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }, {
+            "name": "description",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.close#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.StartDiagramExtractReader#c83e0268": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "raw",
+            "type": "net.sourceforge.plantuml.preproc.ReadLine"
+          }, {
+            "name": "suf",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.getReadLine#8834757d": {
+          "returnType": "net.sourceforge.plantuml.preproc.ReadLine",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "f2",
+            "type": "net.sourceforge.plantuml.preproc.FileWithSuffix"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }, {
+            "name": "charset",
+            "type": "java.nio.charset.Charset"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.getReadLine#32e58e6": {
+          "returnType": "net.sourceforge.plantuml.preproc.ReadLine",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "url",
+            "type": "net.sourceforge.plantuml.security.SURL"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }, {
+            "name": "charset",
+            "type": "java.nio.charset.Charset"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.containsStartDiagram#d02126e9": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "r",
+            "type": "net.sourceforge.plantuml.preproc.ReadLine",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.build#8834757d": {
+          "returnType": "net.sourceforge.plantuml.preproc.StartDiagramExtractReader",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "f2",
+            "type": "net.sourceforge.plantuml.preproc.FileWithSuffix"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }, {
+            "name": "charset",
+            "type": "java.nio.charset.Charset"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.containsStartDiagram#2e993019": {
+          "returnType": "boolean",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "is",
+            "type": "java.io.InputStream"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }, {
+            "name": "description",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.containsStartDiagram#8834757d": {
+          "returnType": "boolean",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "f2",
+            "type": "net.sourceforge.plantuml.preproc.FileWithSuffix"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }, {
+            "name": "charset",
+            "type": "java.nio.charset.Charset"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.readLine#1": {
+          "returnType": "net.sourceforge.plantuml.text.StringLocated",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.StartDiagramExtractReader.uncommentAndMerge#d02126e9": {
+          "returnType": "net.sourceforge.plantuml.preproc.ReadLine",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "reader",
+            "type": "net.sourceforge.plantuml.preproc.ReadLine"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "130",
+        "cyclomatic_complexity": "20",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "6"
+      }
+    }
+  },
+  "metric": {
+    "loc": "180",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

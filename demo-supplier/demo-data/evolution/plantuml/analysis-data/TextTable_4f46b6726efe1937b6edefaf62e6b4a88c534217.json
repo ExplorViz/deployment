@@ -1,0 +1,273 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "TextTable.java",
+  "packageName": "net.sourceforge.plantuml.stats",
+  "importName": ["java.io.PrintStream", "java.text.DateFormat", "java.util.ArrayList", "java.util.Date", "java.util.List", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment"],
+  "classData": {
+    "net.sourceforge.plantuml.stats.TextTable.TextLine": {
+      "modifier": ["static"],
+      "methodData": {
+        "net.sourceforge.plantuml.stats.TextTable.TextLine.getPrinted#5fb63b0": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "width",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.TextTable.TextLine.nbCols#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.TextTable.TextLine.getPreferredWidth#1980e": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "col",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "8",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.stats.TextTable.Separator": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "interface": ["net.sourceforge.plantuml.stats.TextTable.TextLine"],
+      "methodData": {
+        "net.sourceforge.plantuml.stats.TextTable.Separator.getPrinted#5fb63b0": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "width",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.stats.TextTable.Separator.nbCols#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.TextTable.Separator.getPreferredWidth#1980e": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "col",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "22",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "3"
+      }
+    },
+    "net.sourceforge.plantuml.stats.TextTable": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "formatter",
+        "type": "java.text.DateFormat",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "lines",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.stats.TextTable.TextLine\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.stats.TextTable.TextLine", "net.sourceforge.plantuml.stats.TextTable.Separator", "net.sourceforge.plantuml.stats.TextTable.DataLine"],
+      "methodData": {
+        "net.sourceforge.plantuml.stats.TextTable.addLine#8c658f7e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cells",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.TextTable.getColsWidth#1": {
+          "returnType": "int[]",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.stats.TextTable.getLines#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.TextTable.addSeparator#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.TextTable.getNbCols#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.stats.TextTable.printMe#4f8c208c": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ps",
+            "type": "java.io.PrintStream"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "138",
+        "cyclomatic_complexity": "15",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "6"
+      }
+    },
+    "net.sourceforge.plantuml.stats.TextTable.DataLine": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "interface": ["net.sourceforge.plantuml.stats.TextTable.TextLine"],
+      "field": [{
+        "name": "cells",
+        "type": "Object[]",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.stats.TextTable.DataLine.getPreferredWidth#1980e": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "col",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.stats.TextTable.DataLine.nbCols#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.TextTable.DataLine.getPrinted#5fb63b0": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "width",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.stats.TextTable.DataLine.DataLine#93f3f20": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "cells",
+            "type": "Object[]"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.TextTable.DataLine.formatMe#4df831": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.Object"
+          }, {
+            "name": "width",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "58",
+        "cyclomatic_complexity": "11",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "183",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

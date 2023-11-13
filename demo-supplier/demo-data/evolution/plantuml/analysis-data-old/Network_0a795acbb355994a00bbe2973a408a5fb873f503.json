@@ -1,0 +1,300 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Network.java",
+  "packageName": "net.sourceforge.plantuml.nwdiag.core",
+  "importName": ["net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.nwdiag.next.NStage"],
+  "classData": {
+    "net.sourceforge.plantuml.nwdiag.core.Network": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.nwdiag.core.NStackable"],
+      "field": [{
+        "name": "name",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "description",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "color",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private"]
+      }, {
+        "name": "visible",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "ownAdress",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "y",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fullWidth",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "up",
+        "type": "net.sourceforge.plantuml.nwdiag.next.NStage",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "nstage",
+        "type": "net.sourceforge.plantuml.nwdiag.next.NStage",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "xmin",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "xmax",
+        "type": "double",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.nwdiag.core.Network.getUp#1": {
+          "returnType": "net.sourceforge.plantuml.nwdiag.next.NStage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.getDisplayName#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.setDescription#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "description",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.isVisible#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.getY#1": {
+          "returnType": "double",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.getXmax#1": {
+          "returnType": "double",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.isEven#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.setOwnAdress#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "ownAdress",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.getColor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.getXmin#1": {
+          "returnType": "double",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.setColor#7ec12c1a": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.setMinMax#1eef7de1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "xmin",
+            "type": "double"
+          }, {
+            "name": "xmax",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.goInvisible#1": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.isFullWidth#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.getOwnAdress#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.getNstage#1": {
+          "returnType": "net.sourceforge.plantuml.nwdiag.next.NStage",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.magicDelta#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.setFullWidth#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fullWidth",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.Network#df4d9690": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "up",
+            "type": "net.sourceforge.plantuml.nwdiag.next.NStage"
+          }, {
+            "name": "nstage",
+            "type": "net.sourceforge.plantuml.nwdiag.next.NStage"
+          }, {
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.core.Network.setY#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "115",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "8"
+      }
+    }
+  },
+  "metric": {
+    "loc": "154",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

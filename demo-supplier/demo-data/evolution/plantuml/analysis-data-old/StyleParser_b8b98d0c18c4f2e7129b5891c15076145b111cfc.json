@@ -1,0 +1,180 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "StyleParser.java",
+  "packageName": "net.sourceforge.plantuml.style.parser",
+  "importName": ["java.util.ArrayList", "java.util.Collection", "java.util.Collections", "java.util.List", "net.sourceforge.plantuml.style.AutomaticCounter", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleScheme", "net.sourceforge.plantuml.style.Value", "net.sourceforge.plantuml.style.ValueImpl", "net.sourceforge.plantuml.utils.BlocLines", "net.sourceforge.plantuml.utils.CharInspector", "net.sourceforge.plantuml.utils.Inspector", "net.sourceforge.plantuml.utils.InspectorUtils"],
+  "classData": {
+    "net.sourceforge.plantuml.style.parser.StyleParser": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "net.sourceforge.plantuml.style.parser.StyleParser.parse#a4cd2771": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.style.Style\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "lines",
+            "type": "net.sourceforge.plantuml.utils.BlocLines"
+          }, {
+            "name": "counter",
+            "type": "net.sourceforge.plantuml.style.AutomaticCounter"
+          }],
+          "metric": {
+            "loc": "98",
+            "cyclomatic_complexity": "34",
+            "nestedBlockDepth": "8"
+          }
+        },
+        "net.sourceforge.plantuml.style.parser.StyleParser.jumpUntil#19d94316": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ins",
+            "type": "net.sourceforge.plantuml.utils.CharInspector"
+          }, {
+            "name": "ch1",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.style.parser.StyleParser.readArobaseMedia#32605840": {
+          "returnType": "java.lang.String",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ins",
+            "type": "net.sourceforge.plantuml.utils.CharInspector"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.style.parser.StyleParser.skipNewLines#8ec40110": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ins",
+            "type": "net.sourceforge.plantuml.utils.Inspector\u003cnet.sourceforge.plantuml.style.parser.StyleToken\u003e"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.style.parser.StyleParser.jumpUntil#217db300": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ins",
+            "type": "net.sourceforge.plantuml.utils.CharInspector"
+          }, {
+            "name": "ch1",
+            "type": "char"
+          }, {
+            "name": "ch2",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.style.parser.StyleParser.readValue#8ec40110": {
+          "returnType": "java.lang.String",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ins",
+            "type": "net.sourceforge.plantuml.utils.Inspector\u003cnet.sourceforge.plantuml.style.parser.StyleToken\u003e"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "13",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.style.parser.StyleParser.readQuotedString#32605840": {
+          "returnType": "java.lang.String",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ins",
+            "type": "net.sourceforge.plantuml.utils.CharInspector"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.parser.StyleParser.readWithComma#8ec40110": {
+          "returnType": "java.lang.String",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ins",
+            "type": "net.sourceforge.plantuml.utils.Inspector\u003cnet.sourceforge.plantuml.style.parser.StyleToken\u003e"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.style.parser.StyleParser.readString#32605840": {
+          "returnType": "java.lang.String",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ins",
+            "type": "net.sourceforge.plantuml.utils.CharInspector"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.style.parser.StyleParser.parse#32605840": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.style.parser.StyleToken\u003e",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ins",
+            "type": "net.sourceforge.plantuml.utils.CharInspector"
+          }],
+          "metric": {
+            "loc": "48",
+            "cyclomatic_complexity": "28",
+            "nestedBlockDepth": "15"
+          }
+        },
+        "net.sourceforge.plantuml.style.parser.StyleParser.skipColon#8ec40110": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ins",
+            "type": "net.sourceforge.plantuml.utils.Inspector\u003cnet.sourceforge.plantuml.style.parser.StyleToken\u003e"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "282",
+        "cyclomatic_complexity": "98",
+        "cyclomatic_complexity_weighted": "8",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "335",
+    "cyclomatic_complexity": "8"
+  },
+  "author": "plantuml@gmail.com"
+}

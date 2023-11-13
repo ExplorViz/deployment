@@ -1,0 +1,170 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "StyleBuilder.java",
+  "packageName": "net.sourceforge.plantuml.style",
+  "importName": ["java.util.EnumMap", "java.util.LinkedHashMap", "java.util.LinkedHashSet", "java.util.Map", "java.util.Map.Entry", "java.util.Set", "net.sourceforge.plantuml.skin.SkinParam", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.style.StyleBuilder": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.style.AutomaticCounter"],
+      "field": [{
+        "name": "stylesMap",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.style.StyleSignatureBasic, net.sourceforge.plantuml.style.Style\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "printedForLog",
+        "type": "java.util.Set\u003cnet.sourceforge.plantuml.style.StyleSignatureBasic\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.skin.SkinParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "counter",
+        "type": "int",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.style.StyleBuilder.StyleBuilder#aec41ee2": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.skin.SkinParam"
+          }, {
+            "name": "printedForLog",
+            "type": "java.util.Set\u003cnet.sourceforge.plantuml.style.StyleSignatureBasic\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.StyleBuilder.getNextInt#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.StyleBuilder.StyleBuilder#f006490f": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.skin.SkinParam"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.StyleBuilder.printMe#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.StyleBuilder.getSkinParam#1": {
+          "returnType": "net.sourceforge.plantuml.skin.SkinParam",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.StyleBuilder.muteStyle#4c82db0": {
+          "returnType": "net.sourceforge.plantuml.style.StyleBuilder",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "modifiedStyle",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.StyleBuilder.createStyle#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.StyleBuilder.loadInternal#c04493eb": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "signature",
+            "type": "net.sourceforge.plantuml.style.StyleSignatureBasic"
+          }, {
+            "name": "newStyle",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.StyleBuilder.getMergedStyleSpecial#bb7dfe49": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "signature",
+            "type": "net.sourceforge.plantuml.style.StyleSignatureBasic"
+          }, {
+            "name": "deltaPriority",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.style.StyleBuilder.getMergedStyle#16906666": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "signature",
+            "type": "net.sourceforge.plantuml.style.StyleSignatureBasic"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "117",
+        "cyclomatic_complexity": "21",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "164",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

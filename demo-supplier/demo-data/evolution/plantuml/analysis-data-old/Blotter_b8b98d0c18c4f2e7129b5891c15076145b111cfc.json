@@ -1,0 +1,131 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Blotter.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram.teoz",
+  "importName": ["java.util.Map.Entry", "java.util.SortedMap", "java.util.TreeMap", "net.sourceforge.plantuml.klimt.UPath", "net.sourceforge.plantuml.klimt.UShape", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.UDrawable", "net.sourceforge.plantuml.klimt.shape.URectangle"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.teoz.Blotter": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.shape.UDrawable"],
+      "field": [{
+        "name": "dim",
+        "type": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "defaultBackcolor",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "round",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "last",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private"]
+      }, {
+        "name": "changes",
+        "type": "java.util.SortedMap\u003cjava.lang.Double, net.sourceforge.plantuml.klimt.color.HColor\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.teoz.Blotter.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.Blotter.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.Blotter.addChange#ecb92e0b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ypos",
+            "type": "double"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.Blotter.getRectangleBackground#b128e583": {
+          "returnType": "net.sourceforge.plantuml.klimt.UShape",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "i",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "35",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.Blotter.closeChanges#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.Blotter.Blotter#cd2ac655": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dim",
+            "type": "net.sourceforge.plantuml.klimt.geom.XDimension2D"
+          }, {
+            "name": "defaultBackcolor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "round",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "88",
+        "cyclomatic_complexity": "9",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "139",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,130 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "GitDiagram.java",
+  "packageName": "net.sourceforge.plantuml.gitlog",
+  "importName": ["java.io.IOException", "java.io.OutputStream", "java.util.Collection", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.UmlDiagram", "net.sourceforge.plantuml.core.DiagramDescription", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.skin.UmlDiagramType"],
+  "classData": {
+    "net.sourceforge.plantuml.gitlog.GitDiagram": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "gnodes",
+        "type": "java.util.Collection\u003cnet.sourceforge.plantuml.gitlog.GNode\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.gitlog.GitDiagram.GitDiagram#6fc8ccde": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "textArea",
+            "type": "net.sourceforge.plantuml.gitlog.GitTextArea"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.GitDiagram.getDescription#1": {
+          "returnType": "net.sourceforge.plantuml.core.DiagramDescription",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.GitDiagram.drawInternal#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.GitDiagram.getTextBlock#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.GitDiagram.exportDiagramInternal#facb8d19": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.UmlDiagram",
+      "metric": {
+        "loc": "44",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.gitlog.GitDiagram.getTextBlock#1.AbstractTextBlock": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.gitlog.GitDiagram.getTextBlock#1.AbstractTextBlock.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.GitDiagram.getTextBlock#1.AbstractTextBlock.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "96",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,149 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Zopfli.java",
+  "packageName": "net.sourceforge.plantuml.zopfli",
+  "classData": {
+    "net.sourceforge.plantuml.zopfli.Zopfli.Crc": {
+      "type": "CLASS",
+      "modifier": ["private", "static"],
+      "field": [{
+        "name": "table",
+        "type": "int[]",
+        "modifier": ["private", "final", "static"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.zopfli.Zopfli.Crc.calculate#ae1a4a89": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "input",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Zopfli.Crc.makeTable#1": {
+          "returnType": "int[]",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "30",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.zopfli.Zopfli": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "cookie",
+        "type": "net.sourceforge.plantuml.zopfli.Cookie",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.zopfli.Zopfli.Crc"],
+      "methodData": {
+        "net.sourceforge.plantuml.zopfli.Zopfli.compressGzip#71e16e93": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "options",
+            "type": "net.sourceforge.plantuml.zopfli.Options"
+          }, {
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "output",
+            "type": "net.sourceforge.plantuml.zopfli.Buffer"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Zopfli.compress#ad3eff6d": {
+          "returnType": "net.sourceforge.plantuml.zopfli.Buffer",
+          "modifier": ["public", "synchronized"],
+          "parameter": [{
+            "name": "options",
+            "type": "net.sourceforge.plantuml.zopfli.Options"
+          }, {
+            "name": "input",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Zopfli.compressZlib#71e16e93": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "options",
+            "type": "net.sourceforge.plantuml.zopfli.Options"
+          }, {
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "output",
+            "type": "net.sourceforge.plantuml.zopfli.Buffer"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Zopfli.Zopfli#1980e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "masterBlockSize",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Zopfli.adler32#ae1a4a89": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "data",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "117",
+        "cyclomatic_complexity": "15",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "137",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

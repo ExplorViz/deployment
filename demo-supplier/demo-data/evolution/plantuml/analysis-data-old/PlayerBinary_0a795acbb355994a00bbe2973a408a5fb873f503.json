@@ -1,0 +1,430 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "PlayerBinary.java",
+  "packageName": "net.sourceforge.plantuml.timingdiagram",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.List", "java.util.Map", "java.util.SortedMap", "java.util.TreeMap", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.Colors", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.UDrawable", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.skin.ArrowConfiguration", "net.sourceforge.plantuml.stereo.Stereotype", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleSignature", "net.sourceforge.plantuml.style.StyleSignatureBasic", "net.sourceforge.plantuml.timingdiagram.graphic.IntricatedPoint", "net.sourceforge.plantuml.utils.Position"],
+  "classData": {
+    "net.sourceforge.plantuml.timingdiagram.PlayerBinary": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "LOW_STRING",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "HIGH_STRING",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "constraints",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.timingdiagram.TimeConstraint\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "values",
+        "type": "java.util.SortedMap\u003cnet.sourceforge.plantuml.timingdiagram.TimeTick, net.sourceforge.plantuml.timingdiagram.ChangeState\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "initialState",
+        "type": "net.sourceforge.plantuml.timingdiagram.ChangeState",
+        "modifier": ["private"]
+      }, {
+        "name": "notes",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.timingdiagram.TimingNote\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ymargin",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.drawConstraints#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.PlayerBinary#63aa63ff": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "code",
+            "type": "java.lang.String"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "ruler",
+            "type": "net.sourceforge.plantuml.timingdiagram.TimingRuler"
+          }, {
+            "name": "compact",
+            "type": "boolean"
+          }, {
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.addNote#ec7340f0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "now",
+            "type": "net.sourceforge.plantuml.timingdiagram.TimeTick"
+          }, {
+            "name": "note",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "position",
+            "type": "net.sourceforge.plantuml.utils.Position"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getCommentFontConfiguration#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["final", "protected"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getTextBlock#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.defineState#874989e1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stateCode",
+            "type": "java.lang.String"
+          }, {
+            "name": "label",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getPart2#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UDrawable",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "49",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getTimeProjection#7a1537f1": {
+          "returnType": "net.sourceforge.plantuml.timingdiagram.graphic.IntricatedPoint",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "tick",
+            "type": "net.sourceforge.plantuml.timingdiagram.TimeTick"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getYpos#864735f8": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "state",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getFullHeight#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getStyleSignature#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignature",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.convert#6ed80f72": {
+          "returnType": "String[]",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "states",
+            "type": "String[]"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getYlow#395b4159": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getHeightForConstraints#395b4159": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.createConstraint#b77d4a3d": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "tick1",
+            "type": "net.sourceforge.plantuml.timingdiagram.TimeTick"
+          }, {
+            "name": "tick2",
+            "type": "net.sourceforge.plantuml.timingdiagram.TimeTick"
+          }, {
+            "name": "message",
+            "type": "java.lang.String"
+          }, {
+            "name": "config",
+            "type": "net.sourceforge.plantuml.skin.ArrowConfiguration"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.convert#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.setState#dd71f9a9": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "now",
+            "type": "net.sourceforge.plantuml.timingdiagram.TimeTick"
+          }, {
+            "name": "comment",
+            "type": "java.lang.String"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.Colors"
+          }, {
+            "name": "states",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.drawNotes#7500ea97": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "position",
+            "type": "net.sourceforge.plantuml.utils.Position",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getYhigh#395b4159": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getPart1#1eef7de1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fullAvailableWidth",
+            "type": "double"
+          }, {
+            "name": "specialVSpace",
+            "type": "double"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getHeightForNotes#2279e710": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "position",
+            "type": "net.sourceforge.plantuml.utils.Position"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.timingdiagram.Player",
+      "metric": {
+        "loc": "200",
+        "cyclomatic_complexity": "17",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "3"
+      }
+    },
+    "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getPart2#1.UDrawable": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getPart2#1.UDrawable.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "44",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "5"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getPart1#1eef7de1.AbstractTextBlock": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getPart1#1eef7de1.AbstractTextBlock.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.PlayerBinary.getPart1#1eef7de1.AbstractTextBlock.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "266",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

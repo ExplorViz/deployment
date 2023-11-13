@@ -1,0 +1,167 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "LineOfSegments.java",
+  "packageName": "net.sourceforge.plantuml.svek",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.List"],
+  "classData": {
+    "net.sourceforge.plantuml.svek.LineOfSegments.Segment": {
+      "type": "CLASS",
+      "modifier": ["static", "private"],
+      "interface": ["java.lang.Comparable\u003cnet.sourceforge.plantuml.svek.LineOfSegments.Segment\u003e"],
+      "field": [{
+        "name": "idx",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "middle",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "halfSize",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.svek.LineOfSegments.Segment.overlap#d8dd3732": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.svek.LineOfSegments.Segment"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.svek.LineOfSegments.Segment.compareTo#d8dd3732": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.svek.LineOfSegments.Segment"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.LineOfSegments.Segment.Segment#24eb46ae": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "idx",
+            "type": "int"
+          }, {
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "x2",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.LineOfSegments.Segment.push#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "delta",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "30",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.svek.LineOfSegments": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "all",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.svek.LineOfSegments.Segment\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.svek.LineOfSegments.Segment"],
+      "methodData": {
+        "net.sourceforge.plantuml.svek.LineOfSegments.addSegment#1eef7de1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "x2",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.LineOfSegments.solveOverlaps#1": {
+          "returnType": "double[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.svek.LineOfSegments.oneLoop#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.svek.LineOfSegments.getMean#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.svek.LineOfSegments.solveOverlapsInternal#1": {
+          "returnType": "void",
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "87",
+        "cyclomatic_complexity": "13",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "128",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

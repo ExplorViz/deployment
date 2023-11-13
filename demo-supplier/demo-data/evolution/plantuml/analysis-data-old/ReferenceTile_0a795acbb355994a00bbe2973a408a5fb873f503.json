@@ -1,0 +1,169 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "ReferenceTile.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram.teoz",
+  "importName": ["net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.real.Real", "net.sourceforge.plantuml.sequencediagram.Event", "net.sourceforge.plantuml.sequencediagram.Note", "net.sourceforge.plantuml.sequencediagram.NotePosition", "net.sourceforge.plantuml.sequencediagram.Participant", "net.sourceforge.plantuml.sequencediagram.Reference", "net.sourceforge.plantuml.skin.Area", "net.sourceforge.plantuml.skin.Component", "net.sourceforge.plantuml.skin.ComponentType", "net.sourceforge.plantuml.skin.Context2D", "net.sourceforge.plantuml.style.ISkinParam"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.teoz.ReferenceTile": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.sequencediagram.teoz.Tile"],
+      "field": [{
+        "name": "reference",
+        "type": "net.sourceforge.plantuml.sequencediagram.Reference",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "tileArguments",
+        "type": "net.sourceforge.plantuml.sequencediagram.teoz.TileArguments",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "first",
+        "type": "net.sourceforge.plantuml.real.Real",
+        "modifier": ["private"]
+      }, {
+        "name": "last",
+        "type": "net.sourceforge.plantuml.real.Real",
+        "modifier": ["private"]
+      }, {
+        "name": "yGauge",
+        "type": "net.sourceforge.plantuml.sequencediagram.teoz.YGauge",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "noteLeft",
+        "type": "net.sourceforge.plantuml.skin.Component",
+        "modifier": ["private"]
+      }, {
+        "name": "noteRight",
+        "type": "net.sourceforge.plantuml.skin.Component",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.teoz.ReferenceTile.getMaxX#1": {
+          "returnType": "net.sourceforge.plantuml.real.Real",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.ReferenceTile.addConstraints#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.ReferenceTile.ReferenceTile#b1cd0fc2": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "reference",
+            "type": "net.sourceforge.plantuml.sequencediagram.Reference"
+          }, {
+            "name": "tileArguments",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.TileArguments"
+          }, {
+            "name": "currentY",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.YGauge"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.ReferenceTile.getMinX#1": {
+          "returnType": "net.sourceforge.plantuml.real.Real",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.ReferenceTile.getComponent#395b4159": {
+          "returnType": "net.sourceforge.plantuml.skin.Component",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.ReferenceTile.getYGauge#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.teoz.YGauge",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.ReferenceTile.getEvent#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.Event",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.ReferenceTile.init#395b4159": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.ReferenceTile.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.ReferenceTile.getPreferredHeight#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.sequencediagram.teoz.AbstractTile",
+      "metric": {
+        "loc": "126",
+        "cyclomatic_complexity": "12",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "180",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

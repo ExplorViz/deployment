@@ -1,0 +1,174 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "UGraphicStencil.java",
+  "packageName": "net.sourceforge.plantuml.klimt.drawing",
+  "importName": ["net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.creole.Stencil", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.UHorizontalLine"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.drawing.UGraphicStencil.getRectangleStencil#61032df.Stencil": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.drawing.UGraphicStencil.getRectangleStencil#61032df.Stencil.getStartingX#a3046598": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.UGraphicStencil.getRectangleStencil#61032df.Stencil.getEndingX#a3046598": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.klimt.drawing.UGraphicStencil": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "stencil",
+        "type": "net.sourceforge.plantuml.klimt.creole.Stencil",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "defaultStroke",
+        "type": "net.sourceforge.plantuml.klimt.UStroke",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.drawing.UGraphicStencil.UGraphicStencil#cb805943": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "stencil",
+            "type": "net.sourceforge.plantuml.klimt.creole.Stencil"
+          }, {
+            "name": "defaultStroke",
+            "type": "net.sourceforge.plantuml.klimt.UStroke"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.UGraphicStencil.drawHline#931889e": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "line",
+            "type": "net.sourceforge.plantuml.klimt.shape.UHorizontalLine"
+          }, {
+            "name": "translate",
+            "type": "net.sourceforge.plantuml.klimt.UTranslate"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.UGraphicStencil.create#cb805943": {
+          "returnType": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "stencil",
+            "type": "net.sourceforge.plantuml.klimt.creole.Stencil"
+          }, {
+            "name": "defaultStroke",
+            "type": "net.sourceforge.plantuml.klimt.UStroke"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.UGraphicStencil.create#4aa4200e": {
+          "returnType": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "dim",
+            "type": "net.sourceforge.plantuml.klimt.geom.XDimension2D"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.UGraphicStencil.getRectangleStencil#61032df": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Stencil",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "dim",
+            "type": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.UGraphicStencil.copy#f1b230f2": {
+          "returnType": "net.sourceforge.plantuml.klimt.drawing.AbstractUGraphicHorizontalLine",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.drawing.AbstractUGraphicHorizontalLine",
+      "metric": {
+        "loc": "42",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "86",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

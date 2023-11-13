@@ -1,0 +1,193 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "TMemoryLocal.java",
+  "packageName": "net.sourceforge.plantuml.tim",
+  "importName": ["java.util.HashMap", "java.util.Map", "java.util.Map.Entry", "java.util.Set", "java.util.TreeMap", "net.sourceforge.plantuml.tim.expression.TValue", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.tim.TMemoryLocal": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.tim.TMemory"],
+      "field": [{
+        "name": "memoryGlobal",
+        "type": "net.sourceforge.plantuml.tim.TMemoryGlobal",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "overridenVariables00",
+        "type": "net.sourceforge.plantuml.tim.TrieImpl",
+        "modifier": ["private"]
+      }, {
+        "name": "overridenVariables01",
+        "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.tim.expression.TValue\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "localVariables00",
+        "type": "net.sourceforge.plantuml.tim.TrieImpl",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "localVariables01",
+        "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.tim.expression.TValue\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.tim.TMemoryLocal.variablesNames#1": {
+          "returnType": "java.util.Set\u003cjava.lang.String\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TMemoryLocal.forkFromGlobal#aa4d5685": {
+          "returnType": "net.sourceforge.plantuml.tim.TMemory",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "input",
+            "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.tim.expression.TValue\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TMemoryLocal.getVariable#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.tim.expression.TValue",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "varname",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TMemoryLocal.TMemoryLocal#69228aaf": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "global",
+            "type": "net.sourceforge.plantuml.tim.TMemoryGlobal"
+          }, {
+            "name": "input",
+            "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.tim.expression.TValue\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TMemoryLocal.putVariable#fe1b73b7": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "varname",
+            "type": "java.lang.String"
+          }, {
+            "name": "value",
+            "type": "net.sourceforge.plantuml.tim.expression.TValue"
+          }, {
+            "name": "scope",
+            "type": "net.sourceforge.plantuml.tim.TVariableScope"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TMemoryLocal.removeVariable#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "varname",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TMemoryLocal.variablesNames3#1": {
+          "returnType": "net.sourceforge.plantuml.tim.Trie",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TMemoryLocal.isEmpty#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TMemoryLocal.dumpDebug#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "message",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.tim.ExecutionContexts",
+      "metric": {
+        "loc": "122",
+        "cyclomatic_complexity": "21",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.tim.TMemoryLocal.variablesNames3#1.Trie": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.tim.TMemoryLocal.variablesNames3#1.Trie.add#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TMemoryLocal.variablesNames3#1.Trie.getLonguestMatchStartingIn#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "167",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

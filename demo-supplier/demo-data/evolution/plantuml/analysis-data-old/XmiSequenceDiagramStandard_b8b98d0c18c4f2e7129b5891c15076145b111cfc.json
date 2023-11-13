@@ -1,0 +1,326 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "XmiSequenceDiagramStandard.java",
+  "packageName": "net.sourceforge.plantuml.xmi",
+  "importName": ["java.util.Arrays", "java.util.HashMap", "java.util.HashSet", "java.util.Stack", "org.w3c.dom.Document", "org.w3c.dom.Element", "org.w3c.dom.Node", "net.sourceforge.plantuml.sequencediagram.AbstractMessage", "net.sourceforge.plantuml.sequencediagram.Event", "net.sourceforge.plantuml.sequencediagram.Grouping", "net.sourceforge.plantuml.sequencediagram.GroupingType", "net.sourceforge.plantuml.sequencediagram.LifeEvent", "net.sourceforge.plantuml.sequencediagram.LifeEventType", "net.sourceforge.plantuml.sequencediagram.Message", "net.sourceforge.plantuml.sequencediagram.MessageExo", "net.sourceforge.plantuml.sequencediagram.Note", "net.sourceforge.plantuml.sequencediagram.NotePosition", "net.sourceforge.plantuml.sequencediagram.Participant", "net.sourceforge.plantuml.sequencediagram.SequenceDiagram"],
+  "classData": {
+    "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "covered",
+        "type": "java.util.Stack\u003cjava.util.HashSet\u003cjava.lang.String\u003e\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "activeParticipants",
+        "type": "java.util.HashMap\u003cnet.sourceforge.plantuml.sequencediagram.Participant, java.util.Stack\u003corg.w3c.dom.Element\u003e\u003e",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.buildGrouping#26882702": {
+          "returnType": "org.w3c.dom.Node",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "currentFragment",
+            "type": "org.w3c.dom.Node"
+          }, {
+            "name": "grouping",
+            "type": "net.sourceforge.plantuml.sequencediagram.Grouping"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.buildMessage#5b2b0d84": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "packagedElement",
+            "type": "org.w3c.dom.Node"
+          }, {
+            "name": "currentFragment",
+            "type": "org.w3c.dom.Node"
+          }, {
+            "name": "message",
+            "type": "net.sourceforge.plantuml.sequencediagram.AbstractMessage"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.buildMessage#2c085006": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "packagedElement",
+            "type": "org.w3c.dom.Node"
+          }, {
+            "name": "currentFragment",
+            "type": "org.w3c.dom.Node"
+          }, {
+            "name": "message",
+            "type": "net.sourceforge.plantuml.sequencediagram.Message"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.createUmlElement#90892e1e": {
+          "returnType": "org.w3c.dom.Element",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "object",
+            "type": "java.lang.Object"
+          }, {
+            "name": "tag",
+            "type": "java.lang.String"
+          }, {
+            "name": "type",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.getReceiver#cb465584": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.Participant",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "message",
+            "type": "net.sourceforge.plantuml.sequencediagram.AbstractMessage"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.getLifeEventOccurrenceId#63c4f0fd": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "event",
+            "type": "net.sourceforge.plantuml.sequencediagram.LifeEvent"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.buildNote#d1a2f6f4": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "packagedElement",
+            "type": "org.w3c.dom.Node"
+          }, {
+            "name": "note",
+            "type": "net.sourceforge.plantuml.sequencediagram.Note"
+          }, {
+            "name": "annotated",
+            "type": "java.util.HashSet\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.buildNoteEvent#4a449f1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "packagedElement",
+            "type": "org.w3c.dom.Node"
+          }, {
+            "name": "note",
+            "type": "net.sourceforge.plantuml.sequencediagram.Note"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.buildLifeEvent#684416bd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "packagedElement",
+            "type": "org.w3c.dom.Node"
+          }, {
+            "name": "event",
+            "type": "net.sourceforge.plantuml.sequencediagram.LifeEvent"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.buildMessageExo#a1efd4d4": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "packagedElement",
+            "type": "org.w3c.dom.Node"
+          }, {
+            "name": "currentFragment",
+            "type": "org.w3c.dom.Node"
+          }, {
+            "name": "message",
+            "type": "net.sourceforge.plantuml.sequencediagram.MessageExo"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.createElement#156073e2": {
+          "returnType": "org.w3c.dom.Element",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "object",
+            "type": "java.lang.Object"
+          }, {
+            "name": "tag",
+            "type": "java.lang.String"
+          }, {
+            "name": "attributes",
+            "type": "String[][]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.getParticipantNumber#91279732": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "participant",
+            "type": "net.sourceforge.plantuml.sequencediagram.Participant"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.getAnnotatedElements#a0a2f9d6": {
+          "returnType": "java.util.HashSet\u003cjava.lang.String\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "note",
+            "type": "net.sourceforge.plantuml.sequencediagram.Note"
+          }, {
+            "name": "message",
+            "type": "net.sourceforge.plantuml.sequencediagram.Message"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.createGuardElement#22090142": {
+          "returnType": "org.w3c.dom.Node",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "grouping",
+            "type": "net.sourceforge.plantuml.sequencediagram.Grouping"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.XmiSequenceDiagramStandard#7241b18a": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.sequencediagram.SequenceDiagram"
+          }, {
+            "name": "document",
+            "type": "org.w3c.dom.Document"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.createMessageOccurrence#8d767900": {
+          "returnType": "org.w3c.dom.Node",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "event",
+            "type": "java.lang.Object"
+          }, {
+            "name": "type",
+            "type": "java.lang.String"
+          }, {
+            "name": "participant",
+            "type": "net.sourceforge.plantuml.sequencediagram.Participant"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.build#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiSequenceDiagramStandard.createElement#9486ac73": {
+          "returnType": "org.w3c.dom.Element",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "object",
+            "type": "java.lang.Object"
+          }, {
+            "name": "tag",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.xmi.XmiSequenceDiagram",
+      "metric": {
+        "loc": "213",
+        "cyclomatic_complexity": "35",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "237",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

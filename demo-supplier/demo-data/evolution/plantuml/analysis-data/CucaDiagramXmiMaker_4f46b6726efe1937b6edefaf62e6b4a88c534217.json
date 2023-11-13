@@ -1,0 +1,76 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CucaDiagramXmiMaker.java",
+  "packageName": "net.sourceforge.plantuml.xmi",
+  "importName": ["java.io.IOException", "java.io.OutputStream", "javax.xml.parsers.ParserConfigurationException", "javax.xml.transform.TransformerException", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.UmlDiagram", "net.sourceforge.plantuml.classdiagram.ClassDiagram", "net.sourceforge.plantuml.cucadiagram.ICucaDiagram", "net.sourceforge.plantuml.descdiagram.DescriptionDiagram", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.statediagram.StateDiagram", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.xmi.CucaDiagramXmiMaker": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "field": [{
+        "name": "diagram",
+        "type": "net.sourceforge.plantuml.cucadiagram.ICucaDiagram",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fileFormat",
+        "type": "net.sourceforge.plantuml.FileFormat",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.xmi.CucaDiagramXmiMaker.CucaDiagramXmiMaker#7b1a5d5a": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.cucadiagram.ICucaDiagram"
+          }, {
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormat"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.CucaDiagramXmiMaker.createFiles#2062420": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fos",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "16",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.CucaDiagramXmiMaker.getModel#d660c99e": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "classDiagram",
+            "type": "net.sourceforge.plantuml.UmlDiagram"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "43",
+        "cyclomatic_complexity": "16",
+        "cyclomatic_complexity_weighted": "16",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "95",
+    "cyclomatic_complexity": "16"
+  },
+  "author": "plantuml@gmail.com"
+}

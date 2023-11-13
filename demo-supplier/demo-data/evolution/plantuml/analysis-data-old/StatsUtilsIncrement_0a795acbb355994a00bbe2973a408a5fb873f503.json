@@ -1,0 +1,137 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "StatsUtilsIncrement.java",
+  "packageName": "net.sourceforge.plantuml.stats",
+  "importName": ["java.util.concurrent.ConcurrentMap", "java.util.concurrent.locks.Lock", "java.util.concurrent.locks.ReentrantLock", "java.util.prefs.Preferences", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.activitydiagram3.ActivityDiagram3", "net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.directdot.PSystemDot", "net.sourceforge.plantuml.eggs.PSystemWelcome", "net.sourceforge.plantuml.error.PSystemErrorUtils", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.math.PSystemMath", "net.sourceforge.plantuml.salt.PSystemSalt", "net.sourceforge.plantuml.stats.api.Stats"],
+  "classData": {
+    "net.sourceforge.plantuml.stats.StatsUtilsIncrement": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "prefs",
+        "type": "java.util.prefs.Preferences",
+        "modifier": ["final", "private", "static"]
+      }, {
+        "name": "byTypeEver",
+        "type": "java.util.concurrent.ConcurrentMap\u003cjava.lang.String, net.sourceforge.plantuml.stats.ParsedGenerated\u003e",
+        "modifier": ["final", "private", "static"]
+      }, {
+        "name": "byTypeCurrent",
+        "type": "java.util.concurrent.ConcurrentMap\u003cjava.lang.String, net.sourceforge.plantuml.stats.ParsedGenerated\u003e",
+        "modifier": ["final", "private", "static"]
+      }, {
+        "name": "formatCounterCurrent",
+        "type": "net.sourceforge.plantuml.stats.FormatCounter",
+        "modifier": ["final", "private", "static"]
+      }, {
+        "name": "formatCounterEver",
+        "type": "net.sourceforge.plantuml.stats.FormatCounter",
+        "modifier": ["final", "private", "static"]
+      }, {
+        "name": "lockXml",
+        "type": "java.util.concurrent.locks.Lock",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "lockHtml",
+        "type": "java.util.concurrent.locks.Lock",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.stats.StatsUtilsIncrement.getByTypeEver#dbee8c56": {
+          "returnType": "net.sourceforge.plantuml.stats.ParsedGenerated",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "type",
+            "type": "java.lang.Class\u003cWildcardUsage{type\u003dEXTENDS, boundedType\u003dReferenceType{net.sourceforge.plantuml.core.Diagram, typeParametersMap\u003dTypeParametersMap{nameToValue\u003d{}}}}\u003e"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.stats.StatsUtilsIncrement.getByTypeCurrent#dbee8c56": {
+          "returnType": "net.sourceforge.plantuml.stats.ParsedGenerated",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "type",
+            "type": "java.lang.Class\u003cWildcardUsage{type\u003dEXTENDS, boundedType\u003dReferenceType{net.sourceforge.plantuml.core.Diagram, typeParametersMap\u003dTypeParametersMap{nameToValue\u003d{}}}}\u003e"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.stats.StatsUtilsIncrement.onceMoreGenerate#2c3e2f37": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "duration",
+            "type": "long"
+          }, {
+            "name": "type",
+            "type": "java.lang.Class\u003cWildcardUsage{type\u003dEXTENDS, boundedType\u003dReferenceType{net.sourceforge.plantuml.core.Diagram, typeParametersMap\u003dTypeParametersMap{nameToValue\u003d{}}}}\u003e"
+          }, {
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormat"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.stats.StatsUtilsIncrement.onceMoreParse#e21498fc": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "duration",
+            "type": "long"
+          }, {
+            "name": "type",
+            "type": "java.lang.Class\u003cWildcardUsage{type\u003dEXTENDS, boundedType\u003dReferenceType{net.sourceforge.plantuml.core.Diagram, typeParametersMap\u003dTypeParametersMap{nameToValue\u003d{}}}}\u003e"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.stats.StatsUtilsIncrement.name#dbee8c56": {
+          "returnType": "java.lang.String",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "type",
+            "type": "java.lang.Class\u003cWildcardUsage{type\u003dEXTENDS, boundedType\u003dReferenceType{net.sourceforge.plantuml.core.Diagram, typeParametersMap\u003dTypeParametersMap{nameToValue\u003d{}}}}\u003e"
+          }],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.stats.StatsUtilsIncrement.realTimeExport#1": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "5"
+          }
+        }
+      },
+      "metric": {
+        "loc": "130",
+        "cyclomatic_complexity": "22",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "183",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

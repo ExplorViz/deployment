@@ -1,0 +1,232 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "SlotFinder.java",
+  "packageName": "net.sourceforge.plantuml.klimt.compress",
+  "importName": ["net.sourceforge.plantuml.utils.ObjectUtils.instanceOfAny", "net.sourceforge.plantuml.klimt.UBackground", "net.sourceforge.plantuml.klimt.UChange", "net.sourceforge.plantuml.klimt.UPath", "net.sourceforge.plantuml.klimt.UShape", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.ColorMapper", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.TextLimitFinder", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.drawing.UGraphicNo", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.shape.UEllipse", "net.sourceforge.plantuml.klimt.shape.UEmpty", "net.sourceforge.plantuml.klimt.shape.UPolygon", "net.sourceforge.plantuml.klimt.shape.URectangle", "net.sourceforge.plantuml.klimt.shape.UText"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.compress.SlotFinder": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "slot",
+        "type": "net.sourceforge.plantuml.klimt.compress.SlotSet",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "mode",
+        "type": "net.sourceforge.plantuml.klimt.compress.CompressionMode",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.compress.SlotFinder.create#8bd42a12": {
+          "returnType": "net.sourceforge.plantuml.klimt.compress.SlotFinder",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "mode",
+            "type": "net.sourceforge.plantuml.klimt.compress.CompressionMode"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.SlotFinder.drawRectangle#95aa9ad9": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.URectangle"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.SlotFinder.getColorMapper#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.ColorMapper",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.SlotFinder.getSlotSet#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.compress.SlotSet",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.SlotFinder.drawEmpty#540bc037": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.UEmpty"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.SlotFinder.apply#8adac84": {
+          "returnType": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "change",
+            "type": "net.sourceforge.plantuml.klimt.UChange"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.SlotFinder.draw#95ce4c6b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "sh",
+            "type": "net.sourceforge.plantuml.klimt.UShape"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "13",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.SlotFinder.drawText#c3d5c561": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.UText"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.SlotFinder.drawEllipse#3d40d808": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.UEllipse"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.SlotFinder.drawPolygon#884b1164": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.UPolygon"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.SlotFinder.drawPath#c3d3e459": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.UPath"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.SlotFinder.SlotFinder#b219f965": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "translate",
+            "type": "net.sourceforge.plantuml.klimt.UTranslate"
+          }, {
+            "name": "slot",
+            "type": "net.sourceforge.plantuml.klimt.compress.SlotSet"
+          }, {
+            "name": "mode",
+            "type": "net.sourceforge.plantuml.klimt.compress.CompressionMode"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.drawing.UGraphicNo",
+      "metric": {
+        "loc": "114",
+        "cyclomatic_complexity": "28",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "171",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

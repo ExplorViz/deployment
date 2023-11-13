@@ -1,0 +1,131 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "TrieImpl.java",
+  "packageName": "net.sourceforge.plantuml.tim",
+  "importName": ["java.util.HashMap", "java.util.Map"],
+  "classData": {
+    "net.sourceforge.plantuml.tim.TrieImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.tim.Trie"],
+      "field": [{
+        "name": "brothers",
+        "type": "java.util.Map\u003cjava.lang.Character, net.sourceforge.plantuml.tim.TrieImpl\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.tim.TrieImpl.getOrCreate#d4addb28": {
+          "returnType": "net.sourceforge.plantuml.tim.TrieImpl",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "added",
+            "type": "java.lang.Character"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TrieImpl.getLonguestMatchStartingIn#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TrieImpl.addInternal#dff46db8": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "current",
+            "type": "net.sourceforge.plantuml.tim.TrieImpl"
+          }, {
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TrieImpl.add#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TrieImpl.getLonguestMatchStartingIn#dff46db8": {
+          "returnType": "java.lang.String",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "current",
+            "type": "net.sourceforge.plantuml.tim.TrieImpl"
+          }, {
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TrieImpl.remove#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TrieImpl.removeInternal#dff46db8": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "current",
+            "type": "net.sourceforge.plantuml.tim.TrieImpl"
+          }, {
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "87",
+        "cyclomatic_complexity": "19",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "126",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

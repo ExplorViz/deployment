@@ -1,0 +1,127 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "HColorGradient.java",
+  "packageName": "net.sourceforge.plantuml.klimt.color",
+  "importName": ["java.awt.Color", "java.util.Objects"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.color.HColorGradient": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "color1",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "color2",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "policy",
+        "type": "char",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.color.HColorGradient.getColor2#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorGradient.getColor1#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorGradient.toColor#92ab2b83": {
+          "returnType": "java.awt.Color",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "mapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorGradient.getColor#287ed01": {
+          "returnType": "java.awt.Color",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "mapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }, {
+            "name": "coeff",
+            "type": "double"
+          }, {
+            "name": "alpha",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorGradient.getPolicy#1": {
+          "returnType": "char",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorGradient.opposite#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HColorGradient.HColorGradient#2cb97455": {
+          "parameter": [{
+            "name": "color1arg",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "color2arg",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "policy",
+            "type": "char"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.color.HColor",
+      "metric": {
+        "loc": "64",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "103",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

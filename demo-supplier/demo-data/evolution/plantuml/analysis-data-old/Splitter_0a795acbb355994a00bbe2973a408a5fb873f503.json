@@ -1,0 +1,174 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Splitter.java",
+  "packageName": "net.sourceforge.plantuml.klimt.creole.command",
+  "importName": ["java.util.ArrayList", "java.util.Collection", "java.util.Collections", "java.util.EnumSet", "java.util.List", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.emoji.Emoji", "net.sourceforge.plantuml.klimt.font.FontStyle", "net.sourceforge.plantuml.klimt.sprite.SpriteUtils", "net.sourceforge.plantuml.regex.Matcher2", "net.sourceforge.plantuml.regex.MyPattern", "net.sourceforge.plantuml.regex.Pattern2"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.creole.command.Splitter": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "endFontPattern",
+        "type": "java.lang.String",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "endSupSub",
+        "type": "java.lang.String",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "fontPattern",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "fontColorPattern2",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "fontSizePattern2",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "fontSup",
+        "type": "java.lang.String",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "fontSub",
+        "type": "java.lang.String",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "qrcodePattern",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "imgPattern",
+        "type": "java.lang.String",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "imgPatternNoSrcColon",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "fontFamilyPattern",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "svgAttributePattern",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "scale2",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "scale",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "emojiPattern",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "openiconPattern",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "spritePattern2",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "spritePatternForMatch",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "htmlTag",
+        "type": "java.lang.String",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "linkPattern",
+        "type": "java.lang.String",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "mathPattern",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "latexPattern",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "tagOrText",
+        "type": "net.sourceforge.plantuml.regex.Pattern2",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "splitted",
+        "type": "java.util.List\u003cjava.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.command.Splitter.splitText#ed00be16": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.klimt.creole.command.PlainText\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "cmd",
+            "type": "net.sourceforge.plantuml.klimt.creole.command.PlainText"
+          }],
+          "metric": {
+            "loc": "16",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.command.Splitter.getHtmlCommands#3db6c47": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.command.HtmlCommand\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newLineAlone",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "13",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.command.Splitter.getSplittedInternal#1": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.command.Splitter.Splitter#943a4c50": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.command.Splitter.purgeAllTag#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "121",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "172"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,153 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Noise.java",
+  "packageName": "net.sourceforge.plantuml.dedication",
+  "importName": ["net.sourceforge.plantuml.argon2.Argon2", "net.sourceforge.plantuml.argon2.Argon2Factory", "net.sourceforge.plantuml.argon2.model.Argon2Type", "net.sourceforge.plantuml.utils.MTRandom"],
+  "classData": {
+    "net.sourceforge.plantuml.dedication.Noise": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "net.sourceforge.plantuml.dedication.Noise.xor#8f27ec5d": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "buffer",
+            "type": "byte[]"
+          }, {
+            "name": "rnd",
+            "type": "net.sourceforge.plantuml.dedication.BlumBlumShub"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dedication.Noise.shortHash#c3495101": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "buffer",
+            "type": "byte[]"
+          }, {
+            "name": "salt",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dedication.Noise.shuffle#40ecc7e1": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "buffer",
+            "type": "byte[]"
+          }, {
+            "name": "rnd",
+            "type": "net.sourceforge.plantuml.utils.MTRandom"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dedication.Noise.argon2#c3495101": {
+          "returnType": "net.sourceforge.plantuml.argon2.Argon2",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "buffer",
+            "type": "byte[]"
+          }, {
+            "name": "salt",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dedication.Noise.xor#c3495101": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "buffer",
+            "type": "byte[]"
+          }, {
+            "name": "xor",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dedication.Noise.reverse#15309e86": {
+          "returnType": "byte[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "buffer",
+            "type": "byte[]"
+          }, {
+            "name": "delta",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dedication.Noise.computeArgon2bytes#c3495101": {
+          "returnType": "byte[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "buffer",
+            "type": "byte[]"
+          }, {
+            "name": "salt",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dedication.Noise.computeArgon2String#c3495101": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "buffer",
+            "type": "byte[]"
+          }, {
+            "name": "salt",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "61",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "103",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

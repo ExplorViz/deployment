@@ -1,0 +1,75 @@
+{
+  "commitID": "d28f4e5257aee8ba0bce8afb46f7b6a74a1c8f04",
+  "fileName": "JpaOwnerRepositoryImpl.java",
+  "packageName": "org.springframework.samples.petclinic.repository.springdatajpa",
+  "importName": ["org.springframework.samples.petclinic.model.Owner", "org.springframework.samples.petclinic.repository.OwnerRepository", "org.springframework.stereotype.Repository", "javax.persistence.EntityManager", "javax.persistence.PersistenceContext", "javax.persistence.Query", "java.util.Collection"],
+  "classData": {
+    "org.springframework.samples.petclinic.repository.springdatajpa.JpaOwnerRepositoryImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["org.springframework.samples.petclinic.repository.OwnerRepository"],
+      "field": [{
+        "name": "em",
+        "type": "javax.persistence.EntityManager",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.repository.springdatajpa.JpaOwnerRepositoryImpl.findById#1980e": {
+          "returnType": "org.springframework.samples.petclinic.model.Owner",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "id",
+            "type": "int"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.springdatajpa.JpaOwnerRepositoryImpl.save#49102b2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.model.Owner"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.springdatajpa.JpaOwnerRepositoryImpl.findByLastName#943a4c50": {
+          "returnType": "java.util.Collection\u003corg.springframework.samples.petclinic.model.Owner\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "lastName",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override", "java.lang.SuppressWarnings"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Repository"],
+      "metric": {
+        "loc": "30",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "56",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "jdubois@ippon.fr",
+  "modifiedLines": 1
+}

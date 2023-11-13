@@ -1,0 +1,54 @@
+{
+  "commitID": "4c722465d8091cfa29b54674138c24c199259172",
+  "fileName": "SpringDataOwnerRepository.java",
+  "packageName": "org.springframework.samples.petclinic.repository.springdatajpa",
+  "importName": ["java.util.Collection", "org.springframework.data.jpa.repository.Query", "org.springframework.data.repository.Repository", "org.springframework.data.repository.query.Param", "org.springframework.samples.petclinic.model.Owner", "org.springframework.samples.petclinic.repository.OwnerRepository"],
+  "classData": {
+    "org.springframework.samples.petclinic.repository.springdatajpa.SpringDataOwnerRepository": {
+      "modifier": ["public"],
+      "interface": ["org.springframework.samples.petclinic.repository.OwnerRepository", "org.springframework.data.repository.Repository\u003corg.springframework.samples.petclinic.model.Owner, java.lang.Integer\u003e"],
+      "methodData": {
+        "org.springframework.samples.petclinic.repository.springdatajpa.SpringDataOwnerRepository.findById#1980e": {
+          "returnType": "org.springframework.samples.petclinic.model.Owner",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "id",
+            "type": "int"
+          }],
+          "annotation": ["java.lang.Override", "Query"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.springdatajpa.SpringDataOwnerRepository.findByLastName#943a4c50": {
+          "returnType": "java.util.Collection\u003corg.springframework.samples.petclinic.model.Owner\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "lastName",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override", "Query"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "10",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "35",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "antoine.rey@gmail.com",
+  "addedLines": 41
+}

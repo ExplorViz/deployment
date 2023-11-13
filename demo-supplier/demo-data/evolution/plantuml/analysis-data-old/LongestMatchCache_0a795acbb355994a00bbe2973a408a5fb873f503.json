@@ -1,0 +1,116 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "LongestMatchCache.java",
+  "packageName": "net.sourceforge.plantuml.zopfli",
+  "classData": {
+    "net.sourceforge.plantuml.zopfli.LongestMatchCache": {
+      "type": "CLASS",
+      "field": [{
+        "name": "CACHE_LENGTH",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "length",
+        "type": "char[]",
+        "modifier": ["public", "final"]
+      }, {
+        "name": "dist",
+        "type": "char[]",
+        "modifier": ["public", "final"]
+      }, {
+        "name": "subLenPos",
+        "type": "char[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "subLenLen",
+        "type": "byte[]",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.zopfli.LongestMatchCache.subLenToCache#55c72577": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "input",
+            "type": "char[]"
+          }, {
+            "name": "pos",
+            "type": "int"
+          }, {
+            "name": "len",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.LongestMatchCache.maxCachedSubLen#1980e": {
+          "returnType": "int",
+          "parameter": [{
+            "name": "pos",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.LongestMatchCache.cacheToSubLen#b50453b7": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "pos",
+            "type": "int"
+          }, {
+            "name": "len",
+            "type": "int"
+          }, {
+            "name": "output",
+            "type": "char[]"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.LongestMatchCache.init#1980e": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "blockSize",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.LongestMatchCache.LongestMatchCache#1980e": {
+          "parameter": [{
+            "name": "maxBlockSize",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "105",
+        "cyclomatic_complexity": "14",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "125",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

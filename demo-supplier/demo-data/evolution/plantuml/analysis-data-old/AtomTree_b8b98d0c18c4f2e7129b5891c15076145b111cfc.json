@@ -1,0 +1,126 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "AtomTree.java",
+  "packageName": "net.sourceforge.plantuml.klimt.creole.atom",
+  "importName": ["java.util.ArrayList", "java.util.HashMap", "java.util.List", "java.util.Map", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.salt.element.Skeleton2"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.creole.atom.AtomTree": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.creole.atom.Atom"],
+      "field": [{
+        "name": "lineColor",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "cells",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.atom.Atom\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "levels",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.klimt.creole.atom.Atom, java.lang.Integer\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "margin",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTree.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ugInit",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTree.getStartingAltitude#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTree.getLevel#1f4d90": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "atom",
+            "type": "net.sourceforge.plantuml.klimt.creole.atom.Atom"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTree.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTree.AtomTree#7ec12c1a": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "lineColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTree.addCell#3cbfc5f": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "net.sourceforge.plantuml.klimt.creole.atom.Atom"
+          }, {
+            "name": "level",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.creole.atom.AbstractAtom",
+      "metric": {
+        "loc": "53",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "102",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

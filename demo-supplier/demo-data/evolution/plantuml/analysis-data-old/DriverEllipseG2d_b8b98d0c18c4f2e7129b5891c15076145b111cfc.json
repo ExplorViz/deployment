@@ -1,0 +1,97 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "DriverEllipseG2d.java",
+  "packageName": "net.sourceforge.plantuml.klimt.drawing.g2d",
+  "importName": ["java.awt.BasicStroke", "java.awt.GradientPaint", "java.awt.Graphics2D", "java.awt.Shape", "java.awt.geom.Arc2D", "java.awt.geom.Ellipse2D", "net.sourceforge.plantuml.klimt.UParam", "net.sourceforge.plantuml.klimt.color.ColorMapper", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColorGradient", "net.sourceforge.plantuml.klimt.drawing.UDriver", "net.sourceforge.plantuml.klimt.geom.EnsureVisible", "net.sourceforge.plantuml.klimt.shape.UEllipse"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.drawing.g2d.DriverEllipseG2d": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.drawing.UDriver\u003cnet.sourceforge.plantuml.klimt.shape.UEllipse, java.awt.Graphics2D\u003e"],
+      "field": [{
+        "name": "dpiFactor",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "visible",
+        "type": "net.sourceforge.plantuml.klimt.geom.EnsureVisible",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ROU",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.drawing.g2d.DriverEllipseG2d.draw#bbb1b361": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ellipse",
+            "type": "net.sourceforge.plantuml.klimt.shape.UEllipse"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "mapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }, {
+            "name": "param",
+            "type": "net.sourceforge.plantuml.klimt.UParam"
+          }, {
+            "name": "g2d",
+            "type": "java.awt.Graphics2D"
+          }],
+          "metric": {
+            "loc": "38",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.g2d.DriverEllipseG2d.DriverEllipseG2d#f457c44": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dpiFactor",
+            "type": "double"
+          }, {
+            "name": "visible",
+            "type": "net.sourceforge.plantuml.klimt.geom.EnsureVisible"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.g2d.DriverEllipseG2d.round#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "value",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.drawing.g2d.DriverShadowedG2d",
+      "metric": {
+        "loc": "56",
+        "cyclomatic_complexity": "8",
+        "cyclomatic_complexity_weighted": "8",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "108",
+    "cyclomatic_complexity": "8"
+  },
+  "author": "plantuml@gmail.com"
+}

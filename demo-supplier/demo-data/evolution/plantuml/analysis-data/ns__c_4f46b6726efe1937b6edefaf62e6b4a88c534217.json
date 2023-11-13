@@ -1,0 +1,475 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "ns__c.java",
+  "packageName": "gen.lib.common",
+  "importName": ["gen.lib.cgraph.attr__c.agget", "gen.lib.cgraph.edge__c.aghead", "gen.lib.cgraph.edge__c.agtail", "gen.lib.common.utils__c.dequeue", "gen.lib.common.utils__c.enqueue", "gen.lib.common.utils__c.free_queue", "gen.lib.common.utils__c.new_queue", "smetana.core.JUtils.atoi", "smetana.core.JUtils.setjmp", "smetana.core.Macro.ED_cutvalue", "smetana.core.Macro.ED_minlen", "smetana.core.Macro.ED_tree_index", "smetana.core.Macro.ED_weight", "smetana.core.Macro.GD_nlist", "smetana.core.Macro.INT_MAX", "smetana.core.Macro.ND_in", "smetana.core.Macro.ND_lim", "smetana.core.Macro.ND_low", "smetana.core.Macro.ND_mark", "smetana.core.Macro.ND_next", "smetana.core.Macro.ND_node_type", "smetana.core.Macro.ND_out", "smetana.core.Macro.ND_par", "smetana.core.Macro.ND_priority", "smetana.core.Macro.ND_rank", "smetana.core.Macro.ND_tree_in", "smetana.core.Macro.ND_tree_out", "smetana.core.Macro.NORMAL", "smetana.core.Macro.SEARCHSIZE", "smetana.core.Macro.SEQ", "smetana.core.Macro.SLACK", "smetana.core.Macro.TREE_EDGE", "smetana.core.Macro.UNSUPPORTED", "smetana.core.Macro.free_list", "smetana.core.debug.SmetanaDebug.ENTERING", "smetana.core.debug.SmetanaDebug.LEAVING", "gen.annotation.Difficult", "gen.annotation.HasND_Rank", "gen.annotation.Original", "gen.annotation.Reviewed", "gen.annotation.Unused", "h.ST_Agedge_s", "h.ST_Agnode_s", "h.ST_Agraph_s", "h.ST_nodequeue", "smetana.core.CArrayOfStar", "smetana.core.CString", "smetana.core.Globals", "smetana.core.Memory", "smetana.core.ZType", "smetana.core.jmp_buf"],
+  "classData": {
+    "gen.lib.common.ns__c": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "jbuf",
+        "type": "smetana.core.jmp_buf",
+        "modifier": ["private", "static"]
+      }],
+      "methodData": {
+        "gen.lib.common.ns__c.scan_and_normalize#6a70092f": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.HasND_Rank", "gen.annotation.Original"],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.common.ns__c.treesearch#c203de0b": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.common.ns__c.rerank#efe70596": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "delta",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.HasND_Rank", "gen.annotation.Original"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.common.ns__c.incident#ce7d7e74": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.common.ns__c.enter_edge#b20e9b06": {
+          "returnType": "h.ST_Agedge_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.ns__c.leave_edge#6a70092f": {
+          "returnType": "h.ST_Agedge_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "41",
+            "cyclomatic_complexity": "14",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "gen.lib.common.ns__c.dfs_range#dfc2b73": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "par",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "low",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.common.ns__c.TB_balance#6a70092f": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }],
+          "annotation": ["gen.annotation.Difficult", "gen.annotation.HasND_Rank", "gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "54",
+            "cyclomatic_complexity": "12",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "gen.lib.common.ns__c.tight_tree#6a70092f": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.ns__c.LR_balance#6a70092f": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.common.ns__c.x_cutval#ce7d7e74": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "f",
+            "type": "h.ST_Agedge_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.ns__c.x_val#14feb349": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "dir",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "43",
+            "cyclomatic_complexity": "15",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.common.ns__c.init_graph#c8177730": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Difficult", "gen.annotation.Original"],
+          "metric": {
+            "loc": "49",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.common.ns__c.rank#20496910": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "balance",
+            "type": "int"
+          }, {
+            "name": "maxiter",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.ns__c.init_cutvalues#6a70092f": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.ns__c.add_tree_edge#b20e9b06": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Difficult", "gen.annotation.Original"],
+          "metric": {
+            "loc": "36",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.ns__c.dfs_enter_outedge#c203de0b": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "gen.lib.common.ns__c.dfs_enter_inedge#c203de0b": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "gen.lib.common.ns__c.dfs_cutval#be62ebfc": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "par",
+            "type": "h.ST_Agedge_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.common.ns__c.update#5e42440f": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "f",
+            "type": "h.ST_Agedge_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "37",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "gen.lib.common.ns__c.rank2#e8e550df": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "balance",
+            "type": "int"
+          }, {
+            "name": "maxiter",
+            "type": "int"
+          }, {
+            "name": "search_size",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Difficult", "gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "59",
+            "cyclomatic_complexity": "16",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.common.ns__c.feasible_tree#6a70092f": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.HasND_Rank", "gen.annotation.Original"],
+          "metric": {
+            "loc": "44",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "gen.lib.common.ns__c.exchange_tree_edges#5e42440f": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "f",
+            "type": "h.ST_Agedge_s"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "38",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.common.ns__c.init_rank#6a70092f": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.HasND_Rank", "gen.annotation.Original"],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.common.ns__c.freeTreeList#c8177730": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.ns__c.treeupdate#9d1544da": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "w",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "cutvalue",
+            "type": "int"
+          }, {
+            "name": "dir",
+            "type": "boolean"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "912",
+        "cyclomatic_complexity": "189",
+        "cyclomatic_complexity_weighted": "7",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "1012",
+    "cyclomatic_complexity": "7"
+  },
+  "author": "plantuml@gmail.com"
+}

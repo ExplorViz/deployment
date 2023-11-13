@@ -1,0 +1,1115 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Entity.java",
+  "packageName": "net.sourceforge.plantuml.abel",
+  "importName": ["java.util.ArrayList", "java.util.Collection", "java.util.Collections", "java.util.EnumMap", "java.util.HashSet", "java.util.LinkedHashMap", "java.util.LinkedHashSet", "java.util.List", "java.util.Map", "java.util.Objects", "java.util.Set", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.cucadiagram.Bodier", "net.sourceforge.plantuml.cucadiagram.ICucaDiagram", "net.sourceforge.plantuml.decoration.symbol.USymbol", "net.sourceforge.plantuml.decoration.symbol.USymbols", "net.sourceforge.plantuml.dot.Neighborhood", "net.sourceforge.plantuml.klimt.color.ColorType", "net.sourceforge.plantuml.klimt.color.Colors", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.FontParam", "net.sourceforge.plantuml.klimt.font.UFont", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlockEmpty", "net.sourceforge.plantuml.plasma.Quark", "net.sourceforge.plantuml.skin.VisibilityModifier", "net.sourceforge.plantuml.stereo.Stereostyles", "net.sourceforge.plantuml.stereo.Stereotag", "net.sourceforge.plantuml.stereo.Stereotype", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.svek.IEntityImage", "net.sourceforge.plantuml.svek.Kal", "net.sourceforge.plantuml.svek.Margins", "net.sourceforge.plantuml.svek.PackageStyle", "net.sourceforge.plantuml.svek.SingleStrategy", "net.sourceforge.plantuml.svek.image.EntityImageStateCommon", "net.sourceforge.plantuml.text.Guillemet", "net.sourceforge.plantuml.url.Url", "net.sourceforge.plantuml.utils.Direction", "net.sourceforge.plantuml.utils.LineLocation", "net.sourceforge.plantuml.utils.Position"],
+  "classData": {
+    "net.sourceforge.plantuml.abel.Entity": {
+      "type": "CLASS",
+      "modifier": ["final", "public"],
+      "interface": ["net.sourceforge.plantuml.abel.SpecificBackcolorable", "net.sourceforge.plantuml.abel.Hideable", "net.sourceforge.plantuml.abel.Removeable", "net.sourceforge.plantuml.abel.LineConfigurable", "net.sourceforge.plantuml.abel.Bag"],
+      "field": [{
+        "name": "entityFactory",
+        "type": "net.sourceforge.plantuml.abel.EntityFactory",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "quark",
+        "type": "net.sourceforge.plantuml.plasma.Quark\u003cnet.sourceforge.plantuml.abel.Entity\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "url",
+        "type": "net.sourceforge.plantuml.url.Url",
+        "modifier": ["private"]
+      }, {
+        "name": "bodier",
+        "type": "net.sourceforge.plantuml.cucadiagram.Bodier",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "uid",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "display",
+        "type": "net.sourceforge.plantuml.klimt.creole.Display",
+        "modifier": ["private"]
+      }, {
+        "name": "legend",
+        "type": "net.sourceforge.plantuml.abel.DisplayPositioned",
+        "modifier": ["private"]
+      }, {
+        "name": "leafType",
+        "type": "net.sourceforge.plantuml.abel.LeafType",
+        "modifier": ["private"]
+      }, {
+        "name": "stereotype",
+        "type": "net.sourceforge.plantuml.stereo.Stereotype",
+        "modifier": ["private"]
+      }, {
+        "name": "stereostyles",
+        "type": "net.sourceforge.plantuml.stereo.Stereostyles",
+        "modifier": ["private"]
+      }, {
+        "name": "generic",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "groupType",
+        "type": "net.sourceforge.plantuml.abel.GroupType",
+        "modifier": ["private"]
+      }, {
+        "name": "margins",
+        "type": "net.sourceforge.plantuml.svek.Margins",
+        "modifier": ["private"]
+      }, {
+        "name": "portShortNames",
+        "type": "java.util.Collection\u003cjava.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "xposition",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "svekImage",
+        "type": "net.sourceforge.plantuml.svek.IEntityImage",
+        "modifier": ["private"]
+      }, {
+        "name": "symbol",
+        "type": "net.sourceforge.plantuml.decoration.symbol.USymbol",
+        "modifier": ["private"]
+      }, {
+        "name": "rawLayout",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "concurrentSeparator",
+        "type": "char",
+        "modifier": ["private"]
+      }, {
+        "name": "codeLine",
+        "type": "net.sourceforge.plantuml.utils.LineLocation",
+        "modifier": ["private"]
+      }, {
+        "name": "tags",
+        "type": "java.util.Set\u003cnet.sourceforge.plantuml.stereo.Stereotag\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "notesTop",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.abel.CucaNote\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "notesBottom",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.abel.CucaNote\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "together",
+        "type": "net.sourceforge.plantuml.abel.Together",
+        "modifier": ["private"]
+      }, {
+        "name": "neighborhood",
+        "type": "net.sourceforge.plantuml.dot.Neighborhood",
+        "modifier": ["private"]
+      }, {
+        "name": "tips",
+        "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.klimt.creole.Display\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "colors",
+        "type": "net.sourceforge.plantuml.klimt.color.Colors",
+        "modifier": ["private"]
+      }, {
+        "name": "visibility",
+        "type": "net.sourceforge.plantuml.skin.VisibilityModifier",
+        "modifier": ["private"]
+      }, {
+        "name": "kals",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.utils.Direction, java.util.List\u003cnet.sourceforge.plantuml.svek.Kal\u003e\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "isStatic",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "packed",
+        "type": "boolean",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.abel.Entity.getNeighborhood#1": {
+          "returnType": "net.sourceforge.plantuml.dot.Neighborhood",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getStateHeader#98f78ae6": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getGeneric#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.isPacked#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setCodeLine#4642d408": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "codeLine",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getUSymbol#1": {
+          "returnType": "net.sourceforge.plantuml.decoration.symbol.USymbol",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.stereotags#1": {
+          "returnType": "java.util.Set\u003cnet.sourceforge.plantuml.stereo.Stereotag\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setGeneric#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "generic",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getXposition#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getStereostyles#1": {
+          "returnType": "net.sourceforge.plantuml.stereo.Stereostyles",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getName#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setStereostyle#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stereo",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getUid#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getStereotype#1": {
+          "returnType": "net.sourceforge.plantuml.stereo.Stereotype",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getSingleStrategy#1": {
+          "returnType": "net.sourceforge.plantuml.svek.SingleStrategy",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getPortShortNames#1": {
+          "returnType": "java.util.Collection\u003cjava.lang.String\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setVisibilityModifier#8e615448": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "visibility",
+            "type": "net.sourceforge.plantuml.skin.VisibilityModifier"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.canBePacked#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getMargins#1": {
+          "returnType": "net.sourceforge.plantuml.svek.Margins",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setSpecificColorTOBEREMOVED#41d96a3f": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "type",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorType"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getDisplay#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Display",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getGroupType#1": {
+          "returnType": "net.sourceforge.plantuml.abel.GroupType",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.hasUrl#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.countChildren#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getLeafType#1": {
+          "returnType": "net.sourceforge.plantuml.abel.LeafType",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setTogether#bb3f2679": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "together",
+            "type": "net.sourceforge.plantuml.abel.Together"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.isRemovedInternal#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getTogether#1": {
+          "returnType": "net.sourceforge.plantuml.abel.Together",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getKals#3e12277e": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.svek.Kal\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "position",
+            "type": "net.sourceforge.plantuml.utils.Direction"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.checkGroup#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.muteToGroupType#1f0dc258": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newType",
+            "type": "net.sourceforge.plantuml.abel.GroupType"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.isHiddenInternal#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.groups#1": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.abel.Entity\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getNotes#306cfd68": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.abel.CucaNote\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "position",
+            "type": "net.sourceforge.plantuml.utils.Position"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.isStatic#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getBodier#1": {
+          "returnType": "net.sourceforge.plantuml.cucadiagram.Bodier",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setDisplay#c6ddb0c1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "display",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getEntityPosition#1": {
+          "returnType": "net.sourceforge.plantuml.abel.EntityPosition",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setPacked#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "packed",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getDiagram#1": {
+          "returnType": "net.sourceforge.plantuml.cucadiagram.ICucaDiagram",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setNeighborhood#27813b4d": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "neighborhood",
+            "type": "net.sourceforge.plantuml.dot.Neighborhood"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.ensureMargins#953cc884": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "newMargins",
+            "type": "net.sourceforge.plantuml.svek.Margins"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.isHidden#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.leafs#1": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.abel.Entity\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getUrl99#1": {
+          "returnType": "net.sourceforge.plantuml.url.Url",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.Entity#e6bb72e3": {
+          "parameter": [{
+            "name": "quark",
+            "type": "net.sourceforge.plantuml.plasma.Quark\u003cnet.sourceforge.plantuml.abel.Entity\u003e"
+          }, {
+            "name": "entityFactory",
+            "type": "net.sourceforge.plantuml.abel.EntityFactory"
+          }, {
+            "name": "bodier",
+            "type": "net.sourceforge.plantuml.cucadiagram.Bodier"
+          }, {
+            "name": "leafType",
+            "type": "net.sourceforge.plantuml.abel.LeafType"
+          }, {
+            "name": "rawLayout",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.isRemoved#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getParentContainer#1": {
+          "returnType": "net.sourceforge.plantuml.abel.Entity",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.addKal#125d5": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "kal",
+            "type": "net.sourceforge.plantuml.svek.Kal"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.muteToType#60fa27f7": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newType",
+            "type": "net.sourceforge.plantuml.abel.LeafType"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getLegend#1": {
+          "returnType": "net.sourceforge.plantuml.abel.DisplayPositioned",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.isAutarkic#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getFontConfigurationForTitle#98f78ae6": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getTips#1": {
+          "returnType": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.klimt.creole.Display\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setConcurrentSeparator#2e9375": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "separator",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.overrideImage#886ff64a": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "img",
+            "type": "net.sourceforge.plantuml.svek.IEntityImage"
+          }, {
+            "name": "leafType",
+            "type": "net.sourceforge.plantuml.abel.LeafType"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getRawLayout#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.addStereotag#cb59a4a1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "tag",
+            "type": "net.sourceforge.plantuml.stereo.Stereotag"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.putTip#b9ecee52": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "member",
+            "type": "java.lang.String"
+          }, {
+            "name": "display",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setStereotype#9fdb4771": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.Entity#eb1b24a2": {
+          "parameter": [{
+            "name": "quark",
+            "type": "net.sourceforge.plantuml.plasma.Quark\u003cnet.sourceforge.plantuml.abel.Entity\u003e"
+          }, {
+            "name": "entityFactory",
+            "type": "net.sourceforge.plantuml.abel.EntityFactory"
+          }, {
+            "name": "bodier",
+            "type": "net.sourceforge.plantuml.cucadiagram.Bodier"
+          }, {
+            "name": "groupType",
+            "type": "net.sourceforge.plantuml.abel.GroupType"
+          }, {
+            "name": "rawLayout",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getConcurrentSeparator#1": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.Entity#74ec66a3": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "quark",
+            "type": "net.sourceforge.plantuml.plasma.Quark\u003cnet.sourceforge.plantuml.abel.Entity\u003e"
+          }, {
+            "name": "entityFactory",
+            "type": "net.sourceforge.plantuml.abel.EntityFactory"
+          }, {
+            "name": "bodier",
+            "type": "net.sourceforge.plantuml.cucadiagram.Bodier"
+          }, {
+            "name": "rawLayout",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setUSymbol#24f00e6c": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "symbol",
+            "type": "net.sourceforge.plantuml.decoration.symbol.USymbol"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.addUrl#14d6e": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "url",
+            "type": "net.sourceforge.plantuml.url.Url"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setColors#78a3a9af": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.color.Colors"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.isRoot#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.addPortShortName#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "portShortName",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.isAloneAndUnlinked#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.isGroup#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.muteToType#e33ae536": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newType",
+            "type": "net.sourceforge.plantuml.abel.LeafType"
+          }, {
+            "name": "newSymbol",
+            "type": "net.sourceforge.plantuml.decoration.symbol.USymbol"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setSvekImage#e03d9b4e": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "svekImage",
+            "type": "net.sourceforge.plantuml.svek.IEntityImage"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.addNote#dc0ad9e8": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "note",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "position",
+            "type": "net.sourceforge.plantuml.utils.Position"
+          }, {
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.color.Colors"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setXposition#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pos",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getQuark#1": {
+          "returnType": "net.sourceforge.plantuml.plasma.Quark\u003cnet.sourceforge.plantuml.abel.Entity\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getVisibilityModifier#1": {
+          "returnType": "net.sourceforge.plantuml.skin.VisibilityModifier",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setLegend#d35da9e9": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "legend",
+            "type": "net.sourceforge.plantuml.abel.DisplayPositioned"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.checkNotGroup#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getSvekImage#1": {
+          "returnType": "net.sourceforge.plantuml.svek.IEntityImage",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getPackageStyle#1": {
+          "returnType": "net.sourceforge.plantuml.svek.PackageStyle",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getColors#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.Colors",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.setStatic#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "isStatic",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getTitleFontParam#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontParam",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.isEmpty#1": {
+          "returnType": "boolean",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.Entity.getCodeLine#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "646",
+        "cyclomatic_complexity": "85",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "14"
+      }
+    }
+  },
+  "metric": {
+    "loc": "731",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

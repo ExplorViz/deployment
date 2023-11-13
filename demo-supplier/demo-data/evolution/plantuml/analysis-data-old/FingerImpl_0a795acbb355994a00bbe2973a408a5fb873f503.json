@@ -1,0 +1,338 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "FingerImpl.java",
+  "packageName": "net.sourceforge.plantuml.mindmap",
+  "importName": ["java.util.ArrayList", "java.util.List", "net.sourceforge.plantuml.activitydiagram3.ftile.vertical.FtileBoxOld", "net.sourceforge.plantuml.klimt.UPath", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.ColorType", "net.sourceforge.plantuml.klimt.color.Colors", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.creole.CreoleMode", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.Rankdir", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlockUtils", "net.sourceforge.plantuml.klimt.shape.UDrawable", "net.sourceforge.plantuml.skin.SkinParamColors", "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.Style"],
+  "classData": {
+    "net.sourceforge.plantuml.mindmap.FingerImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.mindmap.Finger", "net.sourceforge.plantuml.klimt.shape.UDrawable"],
+      "field": [{
+        "name": "idea",
+        "type": "net.sourceforge.plantuml.mindmap.Idea",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "direction",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "drawPhalanx",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "nail",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.mindmap.FingerImpl\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "tetris",
+        "type": "net.sourceforge.plantuml.mindmap.Tetris",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getFullThickness#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getTetris#395b4159": {
+          "returnType": "net.sourceforge.plantuml.mindmap.Tetris",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getStyleArrow#1": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getNailElongation#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getStyle#1": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getX12#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.build#c17f7f7": {
+          "returnType": "net.sourceforge.plantuml.mindmap.FingerImpl",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "idea",
+            "type": "net.sourceforge.plantuml.mindmap.Idea"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "direction",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.FingerImpl#c17f7f7": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "idea",
+            "type": "net.sourceforge.plantuml.mindmap.Idea"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "direction",
+            "type": "boolean"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.asSymetricalTee#395b4159": {
+          "returnType": "net.sourceforge.plantuml.mindmap.SymetricalTee",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getX2#1": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getPhalanxElongation#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getPhalanx#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.drawLine#65d149b2": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "p1",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "p2",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getX1#1": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.addInNail#3a4c5968": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "child",
+            "type": "net.sourceforge.plantuml.mindmap.FingerImpl"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getUStroke#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UStroke",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.doNotDrawFirstPhalanx#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getNailThickness#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getPhalanxThickness#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getLinkColor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "38",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getFullElongation#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.isTopToBottom#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.FingerImpl.getMargin#1": {
+          "returnType": "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "215",
+        "cyclomatic_complexity": "28",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "277",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,200 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "BpmDiagram.java",
+  "packageName": "net.sourceforge.plantuml.bpm",
+  "importName": ["java.io.IOException", "java.io.OutputStream", "java.util.ArrayDeque", "java.util.ArrayList", "java.util.Deque", "java.util.List", "net.atmp.ImageBuilder", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.UmlDiagram", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.core.DiagramDescription", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.UDrawable", "net.sourceforge.plantuml.skin.SkinParam", "net.sourceforge.plantuml.skin.UmlDiagramType"],
+  "classData": {
+    "net.sourceforge.plantuml.bpm.BpmDiagram": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "start",
+        "type": "net.sourceforge.plantuml.bpm.BpmElement",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "events",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.bpm.BpmEvent\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "branches",
+        "type": "java.util.Deque\u003cnet.sourceforge.plantuml.bpm.BpmBranch\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "current",
+        "type": "net.sourceforge.plantuml.bpm.Coord",
+        "modifier": ["private"]
+      }, {
+        "name": "last",
+        "type": "net.sourceforge.plantuml.bpm.Cell",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.bpm.BpmDiagram.exportDiagramInternal#facb8d19": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.BpmDiagram.BpmDiagram#5aaf4a0e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.BpmDiagram.createGrid#1": {
+          "returnType": "net.sourceforge.plantuml.bpm.Grid",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "44",
+            "cyclomatic_complexity": "12",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.BpmDiagram.endBranch#1": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.BpmDiagram.getTextBlock#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.BpmDiagram.getUDrawable#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UDrawable",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.BpmDiagram.cleanGrid#21ff85": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "grid",
+            "type": "net.sourceforge.plantuml.bpm.Grid"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.BpmDiagram.getDescription#1": {
+          "returnType": "net.sourceforge.plantuml.core.DiagramDescription",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.BpmDiagram.createImageBuilder#618c8b27": {
+          "returnType": "net.atmp.ImageBuilder",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.BpmDiagram.addInGrid#17f97d58": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "grid",
+            "type": "net.sourceforge.plantuml.bpm.Grid"
+          }, {
+            "name": "element",
+            "type": "net.sourceforge.plantuml.bpm.BpmElement"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.BpmDiagram.newBranch#1": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.BpmDiagram.addEvent#aacb3c3a": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "event",
+            "type": "net.sourceforge.plantuml.bpm.BpmEvent"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.BpmDiagram.elseBranch#1": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.UmlDiagram",
+      "metric": {
+        "loc": "136",
+        "cyclomatic_complexity": "16",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "191",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

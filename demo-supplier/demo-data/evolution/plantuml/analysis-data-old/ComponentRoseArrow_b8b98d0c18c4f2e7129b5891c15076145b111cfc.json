@@ -1,0 +1,310 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "ComponentRoseArrow.java",
+  "packageName": "net.sourceforge.plantuml.skin.rose",
+  "importName": ["net.sourceforge.plantuml.klimt.LineBreakStrategy", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.UEllipse", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.klimt.shape.UPolygon", "net.sourceforge.plantuml.skin.Area", "net.sourceforge.plantuml.skin.ArrowConfiguration", "net.sourceforge.plantuml.skin.ArrowDecoration", "net.sourceforge.plantuml.skin.ArrowDirection", "net.sourceforge.plantuml.skin.ArrowDressing", "net.sourceforge.plantuml.skin.ArrowHead", "net.sourceforge.plantuml.skin.ArrowPart", "net.sourceforge.plantuml.style.ISkinSimple", "net.sourceforge.plantuml.style.Style"],
+  "classData": {
+    "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "messagePosition",
+        "type": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "niceArrow",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "belowForResponse",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "inclination1",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "inclination2",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "spaceCrossX",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "diamCircle",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "thinCircle",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.drawDressing1#223e2b9a": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "dressing",
+            "type": "net.sourceforge.plantuml.skin.ArrowDressing"
+          }, {
+            "name": "decoration",
+            "type": "net.sourceforge.plantuml.skin.ArrowDecoration"
+          }, {
+            "name": "lenFull",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "35",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.getPreferredWidth#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.ComponentRoseArrow#f564d82a": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "style",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }, {
+            "name": "stringsToDisplay",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "arrowConfiguration",
+            "type": "net.sourceforge.plantuml.skin.ArrowConfiguration"
+          }, {
+            "name": "messagePosition",
+            "type": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment"
+          }, {
+            "name": "spriteContainer",
+            "type": "net.sourceforge.plantuml.style.ISkinSimple"
+          }, {
+            "name": "maxMessageSize",
+            "type": "net.sourceforge.plantuml.klimt.LineBreakStrategy"
+          }, {
+            "name": "niceArrow",
+            "type": "boolean"
+          }, {
+            "name": "belowForResponse",
+            "type": "boolean"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.getPolygonNormal#3a493f9b": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UPolygon",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "part",
+            "type": "net.sourceforge.plantuml.skin.ArrowPart"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.getDirection2#1": {
+          "returnType": "net.sourceforge.plantuml.skin.ArrowDirection",
+          "modifier": ["final", "private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.getYPoint#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.getStartPoint#f81d1c87": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "dimensionToUse",
+            "type": "net.sourceforge.plantuml.klimt.geom.XDimension2D"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.getPosArrow#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.isBelowForResponse#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.getPolygonReverse#3a493f9b": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UPolygon",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "part",
+            "type": "net.sourceforge.plantuml.skin.ArrowPart"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.getEndPoint#f81d1c87": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "dimensionToUse",
+            "type": "net.sourceforge.plantuml.klimt.geom.XDimension2D"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.drawDressing2#223e2b9a": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "dressing",
+            "type": "net.sourceforge.plantuml.skin.ArrowDressing"
+          }, {
+            "name": "decoration",
+            "type": "net.sourceforge.plantuml.skin.ArrowDecoration"
+          }, {
+            "name": "lenFull",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "35",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.getPreferredHeight#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.drawInternalU#44b331fb": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "area",
+            "type": "net.sourceforge.plantuml.skin.Area"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "90",
+            "cyclomatic_complexity": "20",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.skin.rose.ComponentRoseArrow.drawLine#ba555432": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "y1",
+            "type": "double"
+          }, {
+            "name": "x2",
+            "type": "double"
+          }, {
+            "name": "y2",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.skin.rose.AbstractComponentRoseArrow",
+      "metric": {
+        "loc": "283",
+        "cyclomatic_complexity": "53",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "342",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "plantuml@gmail.com"
+}

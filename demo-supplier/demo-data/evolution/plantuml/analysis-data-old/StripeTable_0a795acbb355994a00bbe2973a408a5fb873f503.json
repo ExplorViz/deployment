@@ -1,0 +1,197 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "StripeTable.java",
+  "packageName": "net.sourceforge.plantuml.klimt.creole.legacy",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.List", "java.util.StringTokenizer", "net.sourceforge.plantuml.klimt.LineBreakStrategy", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.creole.CreoleContext", "net.sourceforge.plantuml.klimt.creole.CreoleMode", "net.sourceforge.plantuml.klimt.creole.Sheet", "net.sourceforge.plantuml.klimt.creole.SheetBlock1", "net.sourceforge.plantuml.klimt.creole.Stripe", "net.sourceforge.plantuml.klimt.creole.StripeStyle", "net.sourceforge.plantuml.klimt.creole.StripeStyleType", "net.sourceforge.plantuml.klimt.creole.atom.Atom", "net.sourceforge.plantuml.klimt.creole.atom.AtomTable", "net.sourceforge.plantuml.klimt.creole.atom.AtomWithMargin", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.style.ISkinSimple", "net.sourceforge.plantuml.text.BackSlash"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.creole.legacy.StripeTable": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.creole.Stripe"],
+      "field": [{
+        "name": "fontConfiguration",
+        "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinSimple",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "table",
+        "type": "net.sourceforge.plantuml.klimt.creole.atom.AtomTable",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "marged",
+        "type": "net.sourceforge.plantuml.klimt.creole.atom.Atom",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "stripeStyle",
+        "type": "net.sourceforge.plantuml.klimt.creole.StripeStyle",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "hiddenBar",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.klimt.creole.legacy.StripeTable.Mode"],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTable.analyzeAndAddInternal#943a4c50": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTable.getWithNewlinesInternal#943a4c50": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTable.StripeTable#93f0bdf": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fontConfiguration",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinSimple"
+          }, {
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTable.getBackOrFrontColor#f310d59f": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }, {
+            "name": "idx",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTable.getAtoms#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.atom.Atom\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTable.analyzeAndAddLine#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTable.asAtom#2e54f691": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.atom.Atom",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "cells",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.legacy.StripeSimple\u003e"
+          }, {
+            "name": "padding",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTable.withouBackColor#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTable.getFontConfiguration#24ade2": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "mode",
+            "type": "net.sourceforge.plantuml.klimt.creole.legacy.StripeTable.Mode"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTable.getLHeader#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.atom.Atom",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "140",
+        "cyclomatic_complexity": "24",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "9"
+      }
+    },
+    "net.sourceforge.plantuml.klimt.creole.legacy.StripeTable.Mode": {
+      "type": "ENUM",
+      "modifier": ["static"],
+      "enumConstant": ["HEADER", "NORMAL"],
+      "metric": {
+        "loc": "3",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "199",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,196 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "GanttConstraint.java",
+  "packageName": "net.sourceforge.plantuml.project",
+  "importName": ["net.sourceforge.plantuml.decoration.LinkDecor", "net.sourceforge.plantuml.decoration.LinkType", "net.sourceforge.plantuml.decoration.WithLinkType", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColorSet", "net.sourceforge.plantuml.klimt.shape.UDrawable", "net.sourceforge.plantuml.project.core.Task", "net.sourceforge.plantuml.project.core.TaskAttribute", "net.sourceforge.plantuml.project.core.TaskInstant", "net.sourceforge.plantuml.project.time.Day", "net.sourceforge.plantuml.project.timescale.TimeScale", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleBuilder", "net.sourceforge.plantuml.style.StyleSignatureBasic"],
+  "classData": {
+    "net.sourceforge.plantuml.project.GanttConstraint": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "source",
+        "type": "net.sourceforge.plantuml.project.core.TaskInstant",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "dest",
+        "type": "net.sourceforge.plantuml.project.core.TaskInstant",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "styleBuilder",
+        "type": "net.sourceforge.plantuml.style.StyleBuilder",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "colorSet",
+        "type": "net.sourceforge.plantuml.klimt.color.HColorSet",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.project.GanttConstraint.isHidden#40e005b": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "now",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }, {
+            "name": "min",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }, {
+            "name": "max",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttConstraint.isThereRightArrow#27a9c4": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "task",
+            "type": "net.sourceforge.plantuml.project.core.Task"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttConstraint.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttConstraint.isOn#27a9c4": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "task",
+            "type": "net.sourceforge.plantuml.project.core.Task"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttConstraint.getStyleSignature#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttConstraint.GanttConstraint#21ed8184": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "colorSet",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }, {
+            "name": "styleBuilder",
+            "type": "net.sourceforge.plantuml.style.StyleBuilder"
+          }, {
+            "name": "source",
+            "type": "net.sourceforge.plantuml.project.core.TaskInstant"
+          }, {
+            "name": "dest",
+            "type": "net.sourceforge.plantuml.project.core.TaskInstant"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttConstraint.isHidden#217341": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "min",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }, {
+            "name": "max",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttConstraint.getUDrawable#2496128": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UDrawable",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "timeScale",
+            "type": "net.sourceforge.plantuml.project.timescale.TimeScale"
+          }, {
+            "name": "toTaskDraw",
+            "type": "net.sourceforge.plantuml.project.ToTaskDraw"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttConstraint.GanttConstraint#9a83daf7": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "colorSet",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }, {
+            "name": "styleBuilder",
+            "type": "net.sourceforge.plantuml.style.StyleBuilder"
+          }, {
+            "name": "source",
+            "type": "net.sourceforge.plantuml.project.core.TaskInstant"
+          }, {
+            "name": "dest",
+            "type": "net.sourceforge.plantuml.project.core.TaskInstant"
+          }, {
+            "name": "forcedColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttConstraint.goNorank#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.decoration.WithLinkType",
+      "metric": {
+        "loc": "77",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "131",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

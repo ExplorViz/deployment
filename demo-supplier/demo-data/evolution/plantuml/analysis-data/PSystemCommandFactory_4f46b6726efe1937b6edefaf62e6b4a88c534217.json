@@ -1,0 +1,202 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "PSystemCommandFactory.java",
+  "packageName": "net.sourceforge.plantuml.command",
+  "importName": ["java.util.ArrayList", "java.util.List", "java.util.Map", "net.sourceforge.plantuml.AbstractPSystem", "net.sourceforge.plantuml.EmbeddedDiagram", "net.sourceforge.plantuml.ErrorUml", "net.sourceforge.plantuml.ErrorUmlType", "net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.core.DiagramType", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.error.PSystemError", "net.sourceforge.plantuml.error.PSystemErrorUtils", "net.sourceforge.plantuml.text.StringLocated", "net.sourceforge.plantuml.utils.BlocLines", "net.sourceforge.plantuml.utils.LineLocation", "net.sourceforge.plantuml.utils.StartUtils", "net.sourceforge.plantuml.version.IteratorCounter2"],
+  "classData": {
+    "net.sourceforge.plantuml.command.PSystemCommandFactory": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "field": [{
+        "name": "cmds",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.command.Command\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.command.PSystemCommandFactory.Step"],
+      "methodData": {
+        "net.sourceforge.plantuml.command.PSystemCommandFactory.initCommandsList#2ac0c3d0": {
+          "returnType": "void",
+          "modifier": ["protected", "abstract"],
+          "parameter": [{
+            "name": "cmds",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.command.Command\u003e"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemCommandFactory.PSystemCommandFactory#f29a7aac": {
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "type",
+            "type": "net.sourceforge.plantuml.core.DiagramType"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemCommandFactory.createEmptyDiagram#a4c08de4": {
+          "returnType": "net.sourceforge.plantuml.AbstractPSystem",
+          "modifier": ["public", "abstract"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "skinParam",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemCommandFactory.createSystem#a4c08de4": {
+          "returnType": "net.sourceforge.plantuml.core.Diagram",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "skinParam",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "43",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemCommandFactory.PSystemCommandFactory#1": {
+          "modifier": ["protected"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemCommandFactory.addOneSingleLineManageEmbedded2#e4b325be": {
+          "returnType": "net.sourceforge.plantuml.utils.BlocLines",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "it",
+            "type": "net.sourceforge.plantuml.version.IteratorCounter2"
+          }, {
+            "name": "lines",
+            "type": "net.sourceforge.plantuml.utils.BlocLines"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemCommandFactory.getCandidate#9ecdcc83": {
+          "returnType": "net.sourceforge.plantuml.command.PSystemCommandFactory.Step",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "it",
+            "type": "net.sourceforge.plantuml.version.IteratorCounter2",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemCommandFactory.executeFewLines#5a774191": {
+          "returnType": "net.sourceforge.plantuml.AbstractPSystem",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "sys",
+            "type": "net.sourceforge.plantuml.AbstractPSystem"
+          }, {
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "it",
+            "type": "net.sourceforge.plantuml.version.IteratorCounter2",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemCommandFactory.isMultilineCommandOk#d6ca3b08": {
+          "returnType": "net.sourceforge.plantuml.utils.BlocLines",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "it",
+            "type": "net.sourceforge.plantuml.version.IteratorCounter2"
+          }, {
+            "name": "cmd",
+            "type": "net.sourceforge.plantuml.command.Command"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.command.PSystemAbstractFactory",
+      "metric": {
+        "loc": "161",
+        "cyclomatic_complexity": "15",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "3"
+      }
+    },
+    "net.sourceforge.plantuml.command.PSystemCommandFactory.Step": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "field": [{
+        "name": "command",
+        "type": "net.sourceforge.plantuml.command.Command",
+        "modifier": ["final"]
+      }, {
+        "name": "blocLines",
+        "type": "net.sourceforge.plantuml.utils.BlocLines",
+        "modifier": ["final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.command.PSystemCommandFactory.Step.Step#89b7d3d7": {
+          "parameter": [{
+            "name": "command",
+            "type": "net.sourceforge.plantuml.command.Command"
+          }, {
+            "name": "blocLines",
+            "type": "net.sourceforge.plantuml.utils.BlocLines"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "10",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "217",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "plantuml@gmail.com"
+}

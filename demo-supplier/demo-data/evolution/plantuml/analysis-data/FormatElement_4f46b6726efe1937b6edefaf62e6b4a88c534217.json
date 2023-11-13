@@ -1,0 +1,197 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "FormatElement.java",
+  "packageName": "jcckit.util",
+  "classData": {
+    "jcckit.util.FormatElement": {
+      "type": "CLASS",
+      "field": [{
+        "name": "DESCRIPTORS",
+        "type": "java.lang.String",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "INT_DESCRIPTORS",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "INT_DESCRIPTOR",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "FLOAT_DESCRIPTOR",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "_descriptor",
+        "type": "char",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_descriptorType",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_tenToPrecision",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_decimalPoint",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "_flushLeft",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "_leadingZeros",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "_alwaysSign",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "_width",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "_precision",
+        "type": "int",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "jcckit.util.FormatElement.formE#b0f77bf0": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "number",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "jcckit.util.FormatElement.form#1fafca7": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "negativeValue",
+            "type": "boolean"
+          }, {
+            "name": "intPart",
+            "type": "java.lang.String"
+          }, {
+            "name": "fracPart",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "jcckit.util.FormatElement.power2#6df999ff": {
+          "returnType": "double",
+          "modifier": ["private", "static", "final"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "n",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "jcckit.util.FormatElement.FormatElement#943a4c50": {
+          "parameter": [{
+            "name": "formatString",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "41",
+            "cyclomatic_complexity": "15",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "jcckit.util.FormatElement.power#6df999ff": {
+          "returnType": "double",
+          "modifier": ["private", "static", "final"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "n",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.util.FormatElement.form#42f4208c": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "buffer",
+            "type": "java.lang.StringBuffer"
+          }, {
+            "name": "number",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.util.FormatElement.form#f3b8d5e1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "buffer",
+            "type": "java.lang.StringBuffer"
+          }, {
+            "name": "number",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "jcckit.util.FormatElement.formF#b0f77bf0": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "number",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "184",
+        "cyclomatic_complexity": "43",
+        "cyclomatic_complexity_weighted": "6",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "204",
+    "cyclomatic_complexity": "6"
+  },
+  "author": "plantuml@gmail.com"
+}

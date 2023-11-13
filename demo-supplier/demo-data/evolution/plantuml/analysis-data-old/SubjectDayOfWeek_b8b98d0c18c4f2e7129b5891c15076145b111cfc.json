@@ -1,0 +1,198 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "SubjectDayOfWeek.java",
+  "packageName": "net.sourceforge.plantuml.project.lang",
+  "importName": ["java.util.Arrays", "java.util.Collection", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.project.Failable", "net.sourceforge.plantuml.project.GanttDiagram", "net.sourceforge.plantuml.project.time.DayOfWeek", "net.sourceforge.plantuml.regex.IRegex", "net.sourceforge.plantuml.regex.RegexLeaf", "net.sourceforge.plantuml.regex.RegexResult"],
+  "classData": {
+    "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.AreOpen": {
+      "type": "CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.AreOpen.execute#c714ba7e": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "project",
+            "type": "net.sourceforge.plantuml.project.GanttDiagram"
+          }, {
+            "name": "subject",
+            "type": "java.lang.Object"
+          }, {
+            "name": "complement",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.AreOpen.AreOpen#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.project.lang.SentenceSimple",
+      "metric": {
+        "loc": "12",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.AreClose": {
+      "type": "CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.AreClose.AreClose#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.AreClose.execute#c714ba7e": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "project",
+            "type": "net.sourceforge.plantuml.project.GanttDiagram"
+          }, {
+            "name": "subject",
+            "type": "java.lang.Object"
+          }, {
+            "name": "complement",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.project.lang.SentenceSimple",
+      "metric": {
+        "loc": "14",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.project.lang.Subject"],
+      "field": [{
+        "name": "ME",
+        "type": "net.sourceforge.plantuml.project.lang.Subject",
+        "modifier": ["public", "static", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.AreOpen", "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.AreClose", "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.InColor"],
+      "methodData": {
+        "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.getSentences#1": {
+          "returnType": "java.util.Collection\u003cWildcardUsage{type\u003dEXTENDS, boundedType\u003dReferenceType{net.sourceforge.plantuml.project.lang.SentenceSimple, typeParametersMap\u003dTypeParametersMap{nameToValue\u003d{}}}}\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.SubjectDayOfWeek#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.toRegex#1": {
+          "returnType": "net.sourceforge.plantuml.regex.IRegex",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.getMe#f412a0c6": {
+          "returnType": "net.sourceforge.plantuml.project.Failable\u003cWildcardUsage{type\u003dEXTENDS, boundedType\u003dReferenceType{java.lang.Object, typeParametersMap\u003dTypeParametersMap{nameToValue\u003d{}}}}\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "project",
+            "type": "net.sourceforge.plantuml.project.GanttDiagram"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "66",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "3"
+      }
+    },
+    "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.InColor": {
+      "type": "CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.InColor.InColor#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek.InColor.execute#c714ba7e": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "project",
+            "type": "net.sourceforge.plantuml.project.GanttDiagram"
+          }, {
+            "name": "subject",
+            "type": "java.lang.Object"
+          }, {
+            "name": "complement",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.project.lang.SentenceSimple",
+      "metric": {
+        "loc": "16",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "115",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,234 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "MTRandom.java",
+  "packageName": "net.sourceforge.plantuml.utils",
+  "importName": ["java.util.Random"],
+  "classData": {
+    "net.sourceforge.plantuml.utils.MTRandom": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "serialVersionUID",
+        "type": "long",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "UPPER_MASK",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "LOWER_MASK",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "N",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "M",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "MAGIC",
+        "type": "int[]",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "MAGIC_FACTOR1",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "MAGIC_FACTOR2",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "MAGIC_FACTOR3",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "MAGIC_MASK1",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "MAGIC_MASK2",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "MAGIC_SEED",
+        "type": "int",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "DEFAULT_SEED",
+        "type": "long",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "mt",
+        "type": "int[]",
+        "modifier": ["private", "transient"]
+      }, {
+        "name": "mti",
+        "type": "int",
+        "modifier": ["private", "transient"]
+      }, {
+        "name": "compat",
+        "type": "boolean",
+        "modifier": ["private", "transient"]
+      }, {
+        "name": "ibuf",
+        "type": "int[]",
+        "modifier": ["private", "transient"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.utils.MTRandom.setSeed#5fb63b0": {
+          "returnType": "void",
+          "modifier": ["public", "final", "synchronized"],
+          "parameter": [{
+            "name": "buf",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.utils.MTRandom.MTRandom#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.utils.MTRandom.MTRandom#32c69b": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "seed",
+            "type": "long"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.utils.MTRandom.setSeed#ae1a4a89": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "buf",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.utils.MTRandom.pack#ae1a4a89": {
+          "returnType": "int[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "buf",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.utils.MTRandom.MTRandom#ae1a4a89": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "buf",
+            "type": "byte[]"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.utils.MTRandom.next#1980e": {
+          "returnType": "int",
+          "modifier": ["protected", "final", "synchronized"],
+          "parameter": [{
+            "name": "bits",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.utils.MTRandom.MTRandom#3db6c47": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "compatible",
+            "type": "boolean"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.utils.MTRandom.setSeed#32c69b": {
+          "returnType": "void",
+          "modifier": ["public", "final", "synchronized"],
+          "parameter": [{
+            "name": "seed",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.utils.MTRandom.setSeed#1980e": {
+          "returnType": "void",
+          "modifier": ["private", "final"],
+          "parameter": [{
+            "name": "seed",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.utils.MTRandom.MTRandom#5fb63b0": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "buf",
+            "type": "int[]"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "java.util.Random",
+      "metric": {
+        "loc": "145",
+        "cyclomatic_complexity": "18",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "162",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

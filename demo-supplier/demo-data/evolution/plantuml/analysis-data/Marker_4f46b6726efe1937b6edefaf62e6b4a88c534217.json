@@ -1,0 +1,132 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Marker.java",
+  "packageName": "ext.plantuml.com.ctreber.acearth.plugins.markers",
+  "importName": ["java.awt.Color", "java.awt.Font", "java.awt.Graphics2D", "java.util.List", "ext.plantuml.com.ctreber.acearth.gui.PixelCanvas", "ext.plantuml.com.ctreber.acearth.projection.Projection", "ext.plantuml.com.ctreber.acearth.projection.ProjectionOrtho", "ext.plantuml.com.ctreber.acearth.util.Coordinate", "ext.plantuml.com.ctreber.acearth.util.Point2D", "ext.plantuml.com.ctreber.acearth.util.Point3D", "ext.plantuml.com.ctreber.acearth.util.StringParser"],
+  "classData": {
+    "ext.plantuml.com.ctreber.acearth.plugins.markers.Marker": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "MARKER_SIZE",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "MarkerAlignDefault",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "MarkerAlignLeft",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "MarkerAlignRight",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "MarkerAlignAbove",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "MarkerAlignBelow",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "fCoordinate",
+        "type": "ext.plantuml.com.ctreber.acearth.util.Coordinate",
+        "modifier": ["private"]
+      }, {
+        "name": "fLabel",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "fAlign",
+        "type": "int",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "ext.plantuml.com.ctreber.acearth.plugins.markers.Marker.Marker#7fb091d5": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "pCoordinate",
+            "type": "ext.plantuml.com.ctreber.acearth.util.Coordinate"
+          }, {
+            "name": "pLabel",
+            "type": "java.lang.String"
+          }, {
+            "name": "pAlign",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.plugins.markers.Marker.render#d3303692": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pCanvas",
+            "type": "ext.plantuml.com.ctreber.acearth.gui.PixelCanvas"
+          }, {
+            "name": "pProjection",
+            "type": "ext.plantuml.com.ctreber.acearth.projection.Projection"
+          }],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.plugins.markers.Marker.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.plugins.markers.Marker.loadMarkerFile#943a4c50": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.plugins.markers.Marker",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.plugins.markers.Marker.createFromLine#943a4c50": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.plugins.markers.Marker",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "pLine",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "31",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "98",
+        "cyclomatic_complexity": "14",
+        "cyclomatic_complexity_weighted": "7",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "113",
+    "cyclomatic_complexity": "7"
+  },
+  "author": "plantuml@gmail.com"
+}

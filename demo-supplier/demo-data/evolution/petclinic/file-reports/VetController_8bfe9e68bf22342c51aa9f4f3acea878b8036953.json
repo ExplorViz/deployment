@@ -1,0 +1,104 @@
+{
+  "commitID": "8bfe9e68bf22342c51aa9f4f3acea878b8036953",
+  "fileName": "VetController.java",
+  "packageName": "org.springframework.samples.petclinic.vet",
+  "importName": ["java.util.List", "org.springframework.data.domain.Page", "org.springframework.data.domain.PageRequest", "org.springframework.data.domain.Pageable", "org.springframework.stereotype.Controller", "org.springframework.ui.Model", "org.springframework.web.bind.annotation.GetMapping", "org.springframework.web.bind.annotation.RequestParam", "org.springframework.web.bind.annotation.ResponseBody"],
+  "classData": {
+    "org.springframework.samples.petclinic.vet.VetController": {
+      "type": "CLASS",
+      "field": [{
+        "name": "vets",
+        "type": "org.springframework.samples.petclinic.vet.VetRepository",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.vet.VetController.VetController#8bd424ce": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "clinicService",
+            "type": "org.springframework.samples.petclinic.vet.VetRepository"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.vet.VetController.findPaginated#1980e": {
+          "returnType": "org.springframework.data.domain.Page\u003corg.springframework.samples.petclinic.vet.Vet\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "page",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.vet.VetController.showResourcesVetList#1": {
+          "returnType": "org.springframework.samples.petclinic.vet.Vets",
+          "modifier": ["public"],
+          "annotation": ["GetMapping", "ResponseBody"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.vet.VetController.addPaginationModel#a50afe11": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "page",
+            "type": "int"
+          }, {
+            "name": "paginated",
+            "type": "org.springframework.data.domain.Page\u003corg.springframework.samples.petclinic.vet.Vet\u003e"
+          }, {
+            "name": "model",
+            "type": "org.springframework.ui.Model"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.vet.VetController.showVetList#4a274bb": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "page",
+            "type": "int"
+          }, {
+            "name": "model",
+            "type": "org.springframework.ui.Model"
+          }],
+          "annotation": ["GetMapping"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Controller"],
+      "metric": {
+        "loc": "41",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "69",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dsyer@vmware.com",
+  "addedLines": 2,
+  "deletedLines": 3
+}

@@ -1,0 +1,177 @@
+{
+  "commitID": "4aa89ae4e2b75e37aa8869b48ab1908e61af74e0",
+  "fileName": "PetController.java",
+  "packageName": "org.springframework.samples.petclinic.web",
+  "importName": ["org.springframework.beans.factory.annotation.Autowired", "org.springframework.samples.petclinic.model.Owner", "org.springframework.samples.petclinic.model.Pet", "org.springframework.samples.petclinic.model.PetType", "org.springframework.samples.petclinic.service.ClinicService", "org.springframework.stereotype.Controller", "org.springframework.ui.ModelMap", "org.springframework.util.StringUtils", "org.springframework.validation.BindingResult", "org.springframework.web.bind.WebDataBinder", "org.springframework.web.bind.annotation", "javax.validation.Valid", "java.util.Collection"],
+  "classData": {
+    "org.springframework.samples.petclinic.web.PetController": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "clinicService",
+        "type": "org.springframework.samples.petclinic.service.ClinicService",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.web.PetController.initOwnerBinder#bc79c867": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dataBinder",
+            "type": "org.springframework.web.bind.WebDataBinder"
+          }],
+          "annotation": ["InitBinder"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.PetController.findOwner#1980e": {
+          "returnType": "org.springframework.samples.petclinic.model.Owner",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ownerId",
+            "type": "int"
+          }],
+          "annotation": ["ModelAttribute"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.PetController.initUpdateForm#df25c345": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "petId",
+            "type": "int"
+          }, {
+            "name": "model",
+            "type": "org.springframework.ui.ModelMap"
+          }],
+          "annotation": ["RequestMapping"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.PetController.PetController#8a3aa4ac": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "clinicService",
+            "type": "org.springframework.samples.petclinic.service.ClinicService"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.PetController.initPetBinder#bc79c867": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dataBinder",
+            "type": "org.springframework.web.bind.WebDataBinder"
+          }],
+          "annotation": ["InitBinder"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.PetController.processUpdateForm#e7cf1de4": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pet",
+            "type": "org.springframework.samples.petclinic.model.Pet"
+          }, {
+            "name": "result",
+            "type": "org.springframework.validation.BindingResult"
+          }, {
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.model.Owner"
+          }, {
+            "name": "model",
+            "type": "org.springframework.ui.ModelMap"
+          }],
+          "annotation": ["RequestMapping"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.web.PetController.populatePetTypes#1": {
+          "returnType": "java.util.Collection\u003corg.springframework.samples.petclinic.model.PetType\u003e",
+          "modifier": ["public"],
+          "annotation": ["ModelAttribute"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.PetController.processCreationForm#28ee783e": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.model.Owner"
+          }, {
+            "name": "pet",
+            "type": "org.springframework.samples.petclinic.model.Pet"
+          }, {
+            "name": "result",
+            "type": "org.springframework.validation.BindingResult"
+          }, {
+            "name": "model",
+            "type": "org.springframework.ui.ModelMap"
+          }],
+          "annotation": ["RequestMapping"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.web.PetController.initCreationForm#6c83ad21": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.model.Owner"
+          }, {
+            "name": "model",
+            "type": "org.springframework.ui.ModelMap"
+          }],
+          "annotation": ["RequestMapping"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Controller", "RequestMapping"],
+      "metric": {
+        "loc": "75",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "107",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "antoine.rey@free.fr",
+  "modifiedLines": 1
+}

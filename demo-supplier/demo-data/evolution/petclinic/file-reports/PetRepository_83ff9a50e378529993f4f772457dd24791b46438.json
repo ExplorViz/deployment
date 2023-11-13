@@ -1,0 +1,60 @@
+{
+  "commitID": "83ff9a50e378529993f4f772457dd24791b46438",
+  "fileName": "PetRepository.java",
+  "packageName": "org.springframework.samples.petclinic.owner",
+  "importName": ["java.util.List", "org.springframework.data.jpa.repository.Query", "org.springframework.data.repository.Repository", "org.springframework.transaction.annotation.Transactional"],
+  "classData": {
+    "org.springframework.samples.petclinic.owner.PetRepository": {
+      "modifier": ["public"],
+      "interface": ["org.springframework.data.repository.Repository\u003corg.springframework.samples.petclinic.owner.Pet, java.lang.Integer\u003e"],
+      "methodData": {
+        "org.springframework.samples.petclinic.owner.PetRepository.findById#d7ee193d": {
+          "returnType": "org.springframework.samples.petclinic.owner.Pet",
+          "parameter": [{
+            "name": "id",
+            "type": "java.lang.Integer"
+          }],
+          "annotation": ["Transactional"],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.PetRepository.findPetTypes#1": {
+          "returnType": "java.util.List\u003corg.springframework.samples.petclinic.owner.PetType\u003e",
+          "annotation": ["Query", "Transactional"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.PetRepository.save#1391e": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "pet",
+            "type": "org.springframework.samples.petclinic.owner.Pet"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "12",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "36",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dsyer@pivotal.io",
+  "addedLines": 58
+}

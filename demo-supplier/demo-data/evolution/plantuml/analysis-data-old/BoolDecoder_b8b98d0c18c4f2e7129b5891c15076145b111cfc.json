@@ -1,0 +1,154 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "BoolDecoder.java",
+  "packageName": "net.sourceforge.plantuml.webp",
+  "importName": ["java.io.IOException", "javax.imageio.stream.ImageInputStream"],
+  "classData": {
+    "net.sourceforge.plantuml.webp.BoolDecoder": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "bit_count",
+        "type": "int"
+      }, {
+        "name": "data",
+        "type": "javax.imageio.stream.ImageInputStream"
+      }, {
+        "name": "offset",
+        "type": "long",
+        "modifier": ["private"]
+      }, {
+        "name": "range",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "value",
+        "type": "int",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.webp.BoolDecoder.readBit#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.BoolDecoder.readTree#bf6c75e1": {
+          "returnType": "int",
+          "parameter": [{
+            "name": "t",
+            "type": "int[]"
+          }, {
+            "name": "p",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.BoolDecoder.readTreeSkip#2e23de2e": {
+          "returnType": "int",
+          "parameter": [{
+            "name": "t",
+            "type": "int[]"
+          }, {
+            "name": "p",
+            "type": "int[]"
+          }, {
+            "name": "skip_branches",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.BoolDecoder.initBoolDecoder#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.BoolDecoder.readBool#1980e": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "probability",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "36",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.BoolDecoder.seek#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.BoolDecoder.BoolDecoder#e63a406e": {
+          "parameter": [{
+            "name": "frame",
+            "type": "javax.imageio.stream.ImageInputStream"
+          }, {
+            "name": "offset",
+            "type": "long"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.BoolDecoder.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.BoolDecoder.readLiteral#1980e": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "num_bits",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "89",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "110",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

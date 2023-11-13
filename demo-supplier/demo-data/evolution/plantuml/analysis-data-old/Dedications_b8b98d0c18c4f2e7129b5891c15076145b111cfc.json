@@ -1,0 +1,77 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Dedications.java",
+  "packageName": "net.sourceforge.plantuml.dedication",
+  "importName": ["java.awt.image.BufferedImage", "java.io.ByteArrayOutputStream", "java.io.IOException", "java.io.InputStream", "java.math.BigInteger", "java.util.ArrayList", "java.util.List", "net.sourceforge.plantuml.FileUtils", "net.sourceforge.plantuml.log.Logme"],
+  "classData": {
+    "net.sourceforge.plantuml.dedication.Dedications": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "all",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.dedication.Dedication\u003e",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.dedication.Dedications.get#943a4c50": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public", "synchronized", "static"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.dedication.Dedications.secret#6792debb": {
+          "returnType": "net.sourceforge.plantuml.dedication.DedicationCrypted",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "tiny",
+            "type": "int"
+          }, {
+            "name": "sig",
+            "type": "java.lang.String"
+          }, {
+            "name": "pq",
+            "type": "java.math.BigInteger"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dedication.Dedications.load#943a4c50": {
+          "returnType": "byte[]",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "6",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dedication.Dedications.Dedications#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "2",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "52",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "100"
+  },
+  "author": "plantuml@gmail.com"
+}

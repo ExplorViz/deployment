@@ -1,0 +1,414 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Projection.java",
+  "packageName": "ext.plantuml.com.ctreber.acearth.projection",
+  "importName": ["ext.plantuml.com.ctreber.acearth.util.Coordinate", "ext.plantuml.com.ctreber.acearth.util.Point2D", "ext.plantuml.com.ctreber.acearth.util.Point3D", "ext.plantuml.com.ctreber.acearth.util.Toolkit"],
+  "classData": {
+    "ext.plantuml.com.ctreber.acearth.projection.Projection": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["abstract", "public"],
+      "field": [{
+        "name": "fImageHeight",
+        "type": "int"
+      }, {
+        "name": "fImageWidth",
+        "type": "int"
+      }, {
+        "name": "fXOffset",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fYOffset",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fShiftX",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "fShiftY",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "fScale",
+        "type": "double"
+      }, {
+        "name": "fViewPos",
+        "type": "ext.plantuml.com.ctreber.acearth.util.Coordinate",
+        "modifier": ["private"]
+      }, {
+        "name": "fViewRotation",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fViewMagnification",
+        "type": "double"
+      }, {
+        "name": "fCosLat",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fSinLat",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fCosLon",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fSinLon",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fCosRot",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fSinRot",
+        "type": "double",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.initTransformTable#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.projectX#1eef7de1": {
+          "returnType": "double",
+          "modifier": ["abstract", "protected"],
+          "parameter": [{
+            "name": "pX",
+            "type": "double"
+          }, {
+            "name": "pZ",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.getLocation#3301a1": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.util.Coordinate",
+          "modifier": ["abstract", "public"],
+          "parameter": [{
+            "name": "pX",
+            "type": "int"
+          }, {
+            "name": "pY",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.inverseProjectY#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["abstract", "public"],
+          "parameter": [{
+            "name": "pY",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.rotateReverse#4b57d000": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.util.Point3D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pPoint",
+            "type": "ext.plantuml.com.ctreber.acearth.util.Point3D"
+          }],
+          "metric": {
+            "loc": "37",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.project2D#4b57d000": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.util.Point2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pPoint",
+            "type": "ext.plantuml.com.ctreber.acearth.util.Point3D"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.setViewRotation#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pViewRotation",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.finalizeY#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pY",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.setViewPos#82ad51b7": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pViewPos",
+            "type": "ext.plantuml.com.ctreber.acearth.util.Coordinate"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.setShiftX#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pX",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.finalizeX#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pX",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.inverseFinalizeY#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.setImageHeight#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pImageHeight",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.getScale#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.finalize#4b57cfe1": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.util.Point2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pPoint",
+            "type": "ext.plantuml.com.ctreber.acearth.util.Point2D"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.setShiftY#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pY",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.setScale#1": {
+          "returnType": "void",
+          "modifier": ["abstract", "protected"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.inverseProjectX#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["abstract", "public"],
+          "parameter": [{
+            "name": "pX",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.setViewMagnification#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pViewMagnification",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.isWithinImage#4b57cfe1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pPoint",
+            "type": "ext.plantuml.com.ctreber.acearth.util.Point2D"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.getViewPos#1": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.util.Coordinate",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.projectY#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["abstract", "public"],
+          "parameter": [{
+            "name": "pY",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.rotate#4b57d000": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.util.Point3D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pPoint",
+            "type": "ext.plantuml.com.ctreber.acearth.util.Point3D"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.inverseFinalizeX#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.setImageWidth#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pImageWidth",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.projection.Projection.isVisible#4b57d000": {
+          "returnType": "boolean",
+          "modifier": ["public", "abstract"],
+          "parameter": [{
+            "name": "pPoint",
+            "type": "ext.plantuml.com.ctreber.acearth.util.Point3D"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "200",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "207",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

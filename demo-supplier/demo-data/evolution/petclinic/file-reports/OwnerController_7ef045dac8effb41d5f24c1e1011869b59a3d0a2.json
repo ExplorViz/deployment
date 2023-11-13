@@ -1,0 +1,186 @@
+{
+  "commitID": "7ef045dac8effb41d5f24c1e1011869b59a3d0a2",
+  "fileName": "OwnerController.java",
+  "packageName": "org.springframework.samples.petclinic.owner",
+  "importName": ["org.springframework.samples.petclinic.visit.VisitRepository", "org.springframework.stereotype.Controller", "org.springframework.ui.Model", "org.springframework.validation.BindingResult", "org.springframework.web.bind.WebDataBinder", "org.springframework.web.bind.annotation.GetMapping", "org.springframework.web.bind.annotation.InitBinder", "org.springframework.web.bind.annotation.PathVariable", "org.springframework.web.bind.annotation.PostMapping", "org.springframework.web.servlet.ModelAndView", "javax.validation.Valid", "java.util.Collection", "java.util.Map"],
+  "classData": {
+    "org.springframework.samples.petclinic.owner.OwnerController": {
+      "type": "CLASS",
+      "field": [{
+        "name": "VIEWS_OWNER_CREATE_OR_UPDATE_FORM",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "owners",
+        "type": "org.springframework.samples.petclinic.owner.OwnerRepository",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "visits",
+        "type": "org.springframework.samples.petclinic.visit.VisitRepository",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.owner.OwnerController.setAllowedFields#bc79c867": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dataBinder",
+            "type": "org.springframework.web.bind.WebDataBinder"
+          }],
+          "annotation": ["InitBinder"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.OwnerController.OwnerController#f039c7f9": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "clinicService",
+            "type": "org.springframework.samples.petclinic.owner.OwnerRepository"
+          }, {
+            "name": "visits",
+            "type": "org.springframework.samples.petclinic.visit.VisitRepository"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.OwnerController.processCreationForm#e7502e70": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.owner.Owner"
+          }, {
+            "name": "result",
+            "type": "org.springframework.validation.BindingResult"
+          }],
+          "annotation": ["PostMapping"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.OwnerController.showOwner#1980e": {
+          "returnType": "org.springframework.web.servlet.ModelAndView",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ownerId",
+            "type": "int"
+          }],
+          "annotation": ["GetMapping"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.OwnerController.processFindForm#b9795854": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.owner.Owner"
+          }, {
+            "name": "result",
+            "type": "org.springframework.validation.BindingResult"
+          }, {
+            "name": "model",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e"
+          }],
+          "annotation": ["GetMapping"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.OwnerController.initCreationForm#b6c3b8e3": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "model",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e"
+          }],
+          "annotation": ["GetMapping"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.OwnerController.initFindForm#b6c3b8e3": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "model",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e"
+          }],
+          "annotation": ["GetMapping"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.OwnerController.initUpdateOwnerForm#4a274bb": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ownerId",
+            "type": "int"
+          }, {
+            "name": "model",
+            "type": "org.springframework.ui.Model"
+          }],
+          "annotation": ["GetMapping"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.OwnerController.processUpdateOwnerForm#2b7377f": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.owner.Owner"
+          }, {
+            "name": "result",
+            "type": "org.springframework.validation.BindingResult"
+          }, {
+            "name": "ownerId",
+            "type": "int"
+          }],
+          "annotation": ["PostMapping"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "annotation": ["Controller"],
+      "metric": {
+        "loc": "90",
+        "cyclomatic_complexity": "10",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "122",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dsyer@pivotal.io",
+  "modifiedLines": 6,
+  "addedLines": 3
+}

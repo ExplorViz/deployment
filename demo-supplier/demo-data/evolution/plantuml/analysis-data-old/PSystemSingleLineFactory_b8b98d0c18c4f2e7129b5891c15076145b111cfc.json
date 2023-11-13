@@ -1,0 +1,68 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "PSystemSingleLineFactory.java",
+  "packageName": "net.sourceforge.plantuml.command",
+  "importName": ["java.util.Map", "net.sourceforge.plantuml.AbstractPSystem", "net.sourceforge.plantuml.ErrorUml", "net.sourceforge.plantuml.ErrorUmlType", "net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.core.DiagramType", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.error.PSystemErrorUtils", "net.sourceforge.plantuml.text.StringLocated", "net.sourceforge.plantuml.utils.LineLocation", "net.sourceforge.plantuml.utils.StartUtils", "net.sourceforge.plantuml.version.IteratorCounter2"],
+  "classData": {
+    "net.sourceforge.plantuml.command.PSystemSingleLineFactory": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "methodData": {
+        "net.sourceforge.plantuml.command.PSystemSingleLineFactory.createSystem#a4c08de4": {
+          "returnType": "net.sourceforge.plantuml.core.Diagram",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "skinParam",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "31",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemSingleLineFactory.executeLine#8f7443e3": {
+          "returnType": "net.sourceforge.plantuml.AbstractPSystem",
+          "modifier": ["protected", "abstract"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemSingleLineFactory.PSystemSingleLineFactory#1": {
+          "modifier": ["protected"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.command.PSystemAbstractFactory",
+      "metric": {
+        "loc": "41",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "7",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "92",
+    "cyclomatic_complexity": "7"
+  },
+  "author": "plantuml@gmail.com"
+}

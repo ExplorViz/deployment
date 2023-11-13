@@ -1,0 +1,322 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "SegmentColored.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram.graphic",
+  "importName": ["java.util.AbstractCollection", "java.util.Collection", "java.util.Iterator", "net.sourceforge.plantuml.klimt.Fashion", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.skin.Area", "net.sourceforge.plantuml.skin.Component", "net.sourceforge.plantuml.skin.SimpleContext2D"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.Coll2": {
+      "type": "CLASS",
+      "field": [{
+        "name": "col",
+        "type": "java.util.Collection\u003cnet.sourceforge.plantuml.sequencediagram.graphic.Segment\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "pos1Initial",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.Coll2.size#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.Coll2.iterator#1": {
+          "returnType": "java.util.Iterator\u003cnet.sourceforge.plantuml.sequencediagram.graphic.SegmentColored\u003e",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.Coll2.Coll2#4f97de9": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "col",
+            "type": "java.util.Collection\u003cnet.sourceforge.plantuml.sequencediagram.graphic.Segment\u003e"
+          }, {
+            "name": "pos1Initial",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "java.util.AbstractCollection\u003cnet.sourceforge.plantuml.sequencediagram.graphic.SegmentColored\u003e",
+      "metric": {
+        "loc": "21",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.Iterator2": {
+      "type": "CLASS",
+      "interface": ["java.util.Iterator\u003cnet.sourceforge.plantuml.sequencediagram.graphic.SegmentColored\u003e"],
+      "field": [{
+        "name": "it",
+        "type": "java.util.Iterator\u003cnet.sourceforge.plantuml.sequencediagram.graphic.Segment\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "pos1Initial",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.Iterator2.hasNext#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.Iterator2.Iterator2#f1b45bb9": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "it",
+            "type": "java.util.Iterator\u003cnet.sourceforge.plantuml.sequencediagram.graphic.Segment\u003e"
+          }, {
+            "name": "pos1Initial",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.Iterator2.next#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.Iterator2.remove#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "22",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored": {
+      "type": "CLASS",
+      "field": [{
+        "name": "segment",
+        "type": "net.sourceforge.plantuml.sequencediagram.graphic.Segment",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "colors",
+        "type": "net.sourceforge.plantuml.klimt.Fashion",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "shadowing",
+        "type": "boolean",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "pos1Initial",
+        "type": "double",
+        "modifier": ["final", "private"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.Iterator2", "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.Coll2"],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.merge#96aec4ce": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "this2",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.drawU#aa11b324": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "compAliveBox",
+            "type": "net.sourceforge.plantuml.skin.Component"
+          }, {
+            "name": "level",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.getSpecificLineColor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.getSegment#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.Segment",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.cutSegmentIfNeed#d1295ae8": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.sequencediagram.graphic.SegmentColored\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "allDelays",
+            "type": "java.util.Collection\u003cnet.sourceforge.plantuml.sequencediagram.graphic.Segment\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.getSpecificBackColor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.create#61d9f331": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "pos1",
+            "type": "double"
+          }, {
+            "name": "pos2",
+            "type": "double"
+          }, {
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.Fashion"
+          }, {
+            "name": "shadowing",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.SegmentColored#418c67cf": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "segment",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.Segment"
+          }, {
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.Fashion"
+          }, {
+            "name": "shadowing",
+            "type": "boolean"
+          }, {
+            "name": "pos1Initial",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.hashCode#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.getPos1Initial#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored.equals#8c658f7e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "obj",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "120",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "171",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

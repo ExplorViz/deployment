@@ -1,0 +1,80 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "DedicationSimple.java",
+  "packageName": "net.sourceforge.plantuml.dedication",
+  "importName": ["java.awt.image.BufferedImage", "java.io.ByteArrayInputStream", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SFile"],
+  "classData": {
+    "net.sourceforge.plantuml.dedication.DedicationSimple": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.dedication.Dedication"],
+      "field": [{
+        "name": "crypted",
+        "type": "byte[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "sentence",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.dedication.DedicationSimple.same#874989e1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s1",
+            "type": "java.lang.String"
+          }, {
+            "name": "s2",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dedication.DedicationSimple.getImage#6abdd8f8": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public", "synchronized"],
+          "parameter": [{
+            "name": "sentence",
+            "type": "net.sourceforge.plantuml.dedication.TinyHashableString"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dedication.DedicationSimple.DedicationSimple#a96952c8": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "crypted",
+            "type": "byte[]"
+          }, {
+            "name": "sentence",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "34",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "77",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

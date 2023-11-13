@@ -1,0 +1,144 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CheckZipTask.java",
+  "packageName": "net.sourceforge.plantuml.ant",
+  "importName": ["java.io.FileNotFoundException", "java.io.IOException", "java.io.InputStream", "java.io.PrintWriter", "java.util.ArrayList", "java.util.List", "java.util.zip.ZipEntry", "java.util.zip.ZipInputStream", "org.apache.tools.ant.BuildException", "org.apache.tools.ant.Task", "org.apache.tools.ant.types.FileList", "org.apache.tools.ant.types.FileSet", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.security.SecurityUtils"],
+  "classData": {
+    "net.sourceforge.plantuml.ant.CheckZipTask": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "zipfile",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "filesets",
+        "type": "java.util.ArrayList\u003corg.apache.tools.ant.types.FileSet\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "filelists",
+        "type": "java.util.ArrayList\u003corg.apache.tools.ant.types.FileList\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "entries",
+        "type": "java.util.List\u003cjava.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.ant.CheckZipTask.addFilelist#d7ff6079": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "list",
+            "type": "org.apache.tools.ant.types.FileList"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.CheckZipTask.isPresentInFile#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.CheckZipTask.execute#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.ant.CheckZipTask.loadZipFile#4b3088e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "file",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.ant.CheckZipTask.addFileset#30422545": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "set",
+            "type": "org.apache.tools.ant.types.FileSet"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.CheckZipTask.myLog#943a4c50": {
+          "returnType": "void",
+          "modifier": ["private", "synchronized"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.CheckZipTask.setZipfile#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.CheckZipTask.manageFileList#d7ff6079": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "fileList",
+            "type": "org.apache.tools.ant.types.FileList"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "superClass": "org.apache.tools.ant.Task",
+      "metric": {
+        "loc": "80",
+        "cyclomatic_complexity": "13",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "135",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

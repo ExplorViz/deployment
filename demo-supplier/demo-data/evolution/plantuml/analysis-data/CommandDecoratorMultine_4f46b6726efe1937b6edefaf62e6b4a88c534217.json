@@ -1,0 +1,121 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CommandDecoratorMultine.java",
+  "packageName": "net.sourceforge.plantuml.command",
+  "importName": ["net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.utils.BlocLines"],
+  "classData": {
+    "net.sourceforge.plantuml.command.CommandDecoratorMultine": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.command.Command\u003cD\u003e"],
+      "field": [{
+        "name": "cmd",
+        "type": "net.sourceforge.plantuml.command.SingleLineCommand2\u003cD\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "removeEmptyColumn",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "nbMaxLines",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.command.CommandDecoratorMultine.CommandDecoratorMultine#ce277c59": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "cmd",
+            "type": "net.sourceforge.plantuml.command.SingleLineCommand2\u003cD\u003e"
+          }, {
+            "name": "removeEmptyColumn",
+            "type": "boolean"
+          }, {
+            "name": "nbMaxLines",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandDecoratorMultine.execute#a9c76dde": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "D"
+          }, {
+            "name": "lines",
+            "type": "net.sourceforge.plantuml.utils.BlocLines"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandDecoratorMultine.getNbMaxLines#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandDecoratorMultine.create#44dd121d": {
+          "returnType": "net.sourceforge.plantuml.command.CommandDecoratorMultine\u003cD\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "cmd",
+            "type": "net.sourceforge.plantuml.command.SingleLineCommand2\u003cD\u003e"
+          }, {
+            "name": "nbMaxLines",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandDecoratorMultine.getDescription#1": {
+          "returnType": "String[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandDecoratorMultine.isValid#a9c76200": {
+          "returnType": "net.sourceforge.plantuml.command.CommandControl",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "lines",
+            "type": "net.sourceforge.plantuml.utils.BlocLines"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "51",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "91",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

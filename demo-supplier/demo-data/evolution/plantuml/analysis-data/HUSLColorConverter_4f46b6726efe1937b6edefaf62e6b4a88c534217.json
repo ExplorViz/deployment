@@ -1,0 +1,559 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "HUSLColorConverter.java",
+  "packageName": "net.sourceforge.plantuml.klimt.color",
+  "importName": ["java.util.ArrayList", "java.util.List"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.color.HUSLColorConverter": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "m",
+        "type": "double[][]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "minv",
+        "type": "double[][]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "refY",
+        "type": "double",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "refU",
+        "type": "double",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "refV",
+        "type": "double",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "kappa",
+        "type": "double",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "epsilon",
+        "type": "double",
+        "modifier": ["private", "static"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.klimt.color.HUSLColorConverter.Length"],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.hexToRgb#943a4c50": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "hex",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.round#6df999ff": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "value",
+            "type": "double"
+          }, {
+            "name": "places",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.yToL#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "Y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.rgbToLch#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.xyzToRgb#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.lchToLuv#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.rgbPrepare#5107d712": {
+          "returnType": "int[]",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.rgbToHpluv#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.hexToHsluv#943a4c50": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.getBounds#b0f77bf0": {
+          "returnType": "java.util.List\u003cResolvedArrayType{PrimitiveTypeUsage{name\u003d\u0027double\u0027}}\u003e",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "L",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.rgbToXyz#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.lchToHsluv#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.rgbToHex#5107d712": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.hexToHpluv#943a4c50": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.hsluvToHex#5107d712": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.rgbToHsluv#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.maxSafeChromaForL#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "L",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.hsluvToLch#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.hsluvToRgb#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.fromLinear#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "c",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.toLinear#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "c",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.lchToRgb#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.luvToLch#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.distanceFromPole#5107d712": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "point",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.lchToHpluv#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.hpluvToHex#5107d712": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.lengthOfRayUntilIntersect#beffd903": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.Length",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "theta",
+            "type": "double"
+          }, {
+            "name": "line",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.lToY#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "L",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.dotProduct#20fae221": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "a",
+            "type": "double[]"
+          }, {
+            "name": "b",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.luvToXyz#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.hpluvToLch#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.hpluvToRgb#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.maxChromaForLH#1eef7de1": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "L",
+            "type": "double"
+          }, {
+            "name": "H",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.intersectLineLine#20fae221": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "lineA",
+            "type": "double[]"
+          }, {
+            "name": "lineB",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.xyzToLuv#5107d712": {
+          "returnType": "double[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tuple",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "381",
+        "cyclomatic_complexity": "28",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "35"
+      }
+    },
+    "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.Length": {
+      "type": "CLASS",
+      "modifier": ["private", "static"],
+      "field": [{
+        "name": "greaterEqualZero",
+        "type": "boolean",
+        "modifier": ["final"]
+      }, {
+        "name": "length",
+        "type": "double",
+        "modifier": ["final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.color.HUSLColorConverter.Length.Length#b0f77bf0": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "length",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "9",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "386",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

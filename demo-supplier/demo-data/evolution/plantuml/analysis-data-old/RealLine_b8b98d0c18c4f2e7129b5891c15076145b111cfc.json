@@ -1,0 +1,285 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "RealLine.java",
+  "packageName": "net.sourceforge.plantuml.real",
+  "importName": ["java.util.ArrayList", "java.util.HashMap", "java.util.HashSet", "java.util.List", "java.util.Map", "java.util.Set"],
+  "classData": {
+    "net.sourceforge.plantuml.real.RealLine": {
+      "type": "CLASS",
+      "field": [{
+        "name": "forces",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.real.PositiveForce\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "min",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "max",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "all",
+        "type": "java.util.Set\u003cnet.sourceforge.plantuml.real.AbstractReal\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "CPT",
+        "type": "int",
+        "modifier": ["static", "private"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.real.RealLine.MaxAbsolute", "net.sourceforge.plantuml.real.RealLine.MinAbsolute", "net.sourceforge.plantuml.real.RealLine.AbstractAbsolute"],
+      "methodData": {
+        "net.sourceforge.plantuml.real.RealLine.compile#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "35",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.getAbsoluteMin#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.getAbsoluteMax#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.asMinAbsolute#1": {
+          "returnType": "net.sourceforge.plantuml.real.Real",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.register#b0f77bf0": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "v",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.register2#dca3311f": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "abstractReal",
+            "type": "net.sourceforge.plantuml.real.AbstractReal"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.incCounter#d344c5d9": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "counter",
+            "type": "java.util.Map\u003cnet.sourceforge.plantuml.real.PositiveForce, java.lang.Integer\u003e"
+          }, {
+            "name": "f",
+            "type": "net.sourceforge.plantuml.real.PositiveForce"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.printCounter#f7d2f199": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "counter",
+            "type": "java.util.Map\u003cnet.sourceforge.plantuml.real.PositiveForce, java.lang.Integer\u003e"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.addForce#d0b98471": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "force",
+            "type": "net.sourceforge.plantuml.real.PositiveForce"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.asMaxAbsolute#1": {
+          "returnType": "net.sourceforge.plantuml.real.Real",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "131",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "4"
+      }
+    },
+    "net.sourceforge.plantuml.real.RealLine.AbstractAbsolute": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["abstract"],
+      "interface": ["net.sourceforge.plantuml.real.Real"],
+      "methodData": {
+        "net.sourceforge.plantuml.real.RealLine.AbstractAbsolute.getName#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.AbstractAbsolute.getMinAbsolute#1": {
+          "returnType": "net.sourceforge.plantuml.real.Real",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.AbstractAbsolute.addFixed#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.real.Real",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "delta",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.AbstractAbsolute.ensureBiggerThan#26cddd": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.real.Real"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.AbstractAbsolute.printCreationStackTrace#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.AbstractAbsolute.getMaxAbsolute#1": {
+          "returnType": "net.sourceforge.plantuml.real.Real",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.real.RealLine.AbstractAbsolute.addAtLeast#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.real.Real",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "delta",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "30",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "6"
+      }
+    },
+    "net.sourceforge.plantuml.real.RealLine.MinAbsolute": {
+      "type": "CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.real.RealLine.MinAbsolute.getCurrentValue#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.real.RealLine.AbstractAbsolute",
+      "metric": {
+        "loc": "5",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.real.RealLine.MaxAbsolute": {
+      "type": "CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.real.RealLine.MaxAbsolute.getCurrentValue#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.real.RealLine.AbstractAbsolute",
+      "metric": {
+        "loc": "5",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "175",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

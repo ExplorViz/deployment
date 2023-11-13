@@ -1,0 +1,120 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "SentenceSimple.java",
+  "packageName": "net.sourceforge.plantuml.project.lang",
+  "importName": ["net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.project.Failable", "net.sourceforge.plantuml.project.GanttDiagram", "net.sourceforge.plantuml.regex.IRegex", "net.sourceforge.plantuml.regex.RegexConcat", "net.sourceforge.plantuml.regex.RegexLeaf", "net.sourceforge.plantuml.regex.RegexResult"],
+  "classData": {
+    "net.sourceforge.plantuml.project.lang.SentenceSimple": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "interface": ["net.sourceforge.plantuml.project.lang.Sentence"],
+      "field": [{
+        "name": "subjectii",
+        "type": "net.sourceforge.plantuml.project.lang.Subject",
+        "modifier": ["protected", "final"]
+      }, {
+        "name": "verb",
+        "type": "net.sourceforge.plantuml.regex.IRegex",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "complementii",
+        "type": "net.sourceforge.plantuml.project.lang.Something",
+        "modifier": ["protected", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.project.lang.SentenceSimple.toRegex#1": {
+          "returnType": "net.sourceforge.plantuml.regex.IRegex",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.SentenceSimple.getVerbRegex#1": {
+          "returnType": "net.sourceforge.plantuml.regex.IRegex",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.SentenceSimple.SentenceSimple#83f6e107": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "subject",
+            "type": "net.sourceforge.plantuml.project.lang.Subject"
+          }, {
+            "name": "verb",
+            "type": "net.sourceforge.plantuml.regex.IRegex"
+          }, {
+            "name": "complement",
+            "type": "net.sourceforge.plantuml.project.lang.Something"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.SentenceSimple.getSignature#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.SentenceSimple.execute#c714ba7e": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public", "abstract"],
+          "parameter": [{
+            "name": "project",
+            "type": "net.sourceforge.plantuml.project.GanttDiagram"
+          }, {
+            "name": "subject",
+            "type": "java.lang.Object"
+          }, {
+            "name": "complement",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.SentenceSimple.execute#f412a0c6": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "project",
+            "type": "net.sourceforge.plantuml.project.GanttDiagram"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "43",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "88",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

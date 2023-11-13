@@ -1,0 +1,170 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "GroupingStart.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.List", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleBuilder", "net.sourceforge.plantuml.url.Url"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.GroupingStart": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "children",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.GroupingLeaf\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "backColorGeneral",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "parent",
+        "type": "net.sourceforge.plantuml.sequencediagram.GroupingStart",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "parallel",
+        "type": "boolean",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.GroupingStart.GroupingStart#8a560c6c": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "title",
+            "type": "java.lang.String"
+          }, {
+            "name": "comment",
+            "type": "java.lang.String"
+          }, {
+            "name": "backColorGeneral",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "backColorElement",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "parent",
+            "type": "net.sourceforge.plantuml.sequencediagram.GroupingStart"
+          }, {
+            "name": "styleBuilder",
+            "type": "net.sourceforge.plantuml.style.StyleBuilder"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.GroupingStart.getLevel#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.GroupingStart.getBackColorGeneral#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.GroupingStart.isParallel#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.GroupingStart.addChildren#5b1cb40": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "g",
+            "type": "net.sourceforge.plantuml.sequencediagram.GroupingLeaf"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.GroupingStart.getChildren#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.GroupingLeaf\u003e",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.GroupingStart.dealWith#91279732": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "someone",
+            "type": "net.sourceforge.plantuml.sequencediagram.Participant"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.GroupingStart.hasUrl#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.GroupingStart.goParallel#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.GroupingStart.getUsedStyles#1": {
+          "returnType": "Style[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.GroupingStart.getUrl#1": {
+          "returnType": "net.sourceforge.plantuml.url.Url",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.sequencediagram.Grouping",
+      "metric": {
+        "loc": "65",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "7"
+      }
+    }
+  },
+  "metric": {
+    "loc": "112",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

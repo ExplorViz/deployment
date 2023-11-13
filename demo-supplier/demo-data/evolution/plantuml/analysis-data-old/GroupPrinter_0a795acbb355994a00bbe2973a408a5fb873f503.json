@@ -1,0 +1,85 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "GroupPrinter.java",
+  "packageName": "net.sourceforge.plantuml.cucadiagram",
+  "importName": ["java.io.IOException", "java.io.PrintWriter", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SFile"],
+  "classData": {
+    "net.sourceforge.plantuml.cucadiagram.GroupPrinter": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "pw",
+        "type": "java.io.PrintWriter",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.cucadiagram.GroupPrinter.printLeaf#7c02d022": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "leaf",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.GroupPrinter.print#db0d935": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "f",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }, {
+            "name": "rootGroup",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.GroupPrinter.printGroup#7c02d022": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "group",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "31",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.GroupPrinter.GroupPrinter#563f757f": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "pw",
+            "type": "java.io.PrintWriter"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "55",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "99",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

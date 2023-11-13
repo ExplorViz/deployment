@@ -1,0 +1,103 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Hash.java",
+  "packageName": "net.sourceforge.plantuml.zopfli",
+  "classData": {
+    "net.sourceforge.plantuml.zopfli.Hash": {
+      "type": "CLASS",
+      "field": [{
+        "name": "seq",
+        "type": "int[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "head",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "prev",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "hashVal",
+        "type": "int[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "same",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "val",
+        "type": "int"
+      }, {
+        "name": "head2",
+        "type": "int[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "prev2",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "hashVal2",
+        "type": "int[]",
+        "modifier": ["final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.zopfli.Hash.init#8bb612e6": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "windowStart",
+            "type": "int"
+          }, {
+            "name": "from",
+            "type": "int"
+          }, {
+            "name": "to",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "50",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Hash.Hash#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "2",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Hash.updateHash#90e4ca29": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "pos",
+            "type": "int"
+          }, {
+            "name": "end",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "32",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "110",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "130"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

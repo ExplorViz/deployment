@@ -1,0 +1,284 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Colors.java",
+  "packageName": "net.sourceforge.plantuml.klimt.color",
+  "importName": ["java.util.EnumMap", "java.util.Map", "java.util.Objects", "java.util.StringTokenizer", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.decoration.LinkStyle", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.skin.ColorParam", "net.sourceforge.plantuml.skin.SkinParamColors", "net.sourceforge.plantuml.stereo.Stereotype", "net.sourceforge.plantuml.style.ISkinParam"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.color.Colors": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "map",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.klimt.color.ColorType, net.sourceforge.plantuml.klimt.color.HColor\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "lineStyle",
+        "type": "net.sourceforge.plantuml.decoration.LinkStyle",
+        "modifier": ["private"]
+      }, {
+        "name": "shadowing",
+        "type": "java.lang.Boolean",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.color.Colors.Colors#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.empty#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.Colors",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.getLineStyle#1": {
+          "returnType": "net.sourceforge.plantuml.decoration.LinkStyle",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.copy#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.Colors",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.getColor#ed84e93c": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorType"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.getSpecificLineStroke#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UStroke",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.applyStereotype#5ef5f854": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.Colors",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "param",
+            "type": "net.sourceforge.plantuml.skin.ColorParam"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.isEmpty#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.getShadowing#1": {
+          "returnType": "java.lang.Boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.muteStroke#24ac0f0c": {
+          "returnType": "net.sourceforge.plantuml.klimt.UStroke",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stroke",
+            "type": "net.sourceforge.plantuml.klimt.UStroke"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.add#3bbbe7d4": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.Colors",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "colorType",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorType"
+          }, {
+            "name": "other",
+            "type": "net.sourceforge.plantuml.klimt.color.Colors"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.addLegacyStroke#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.Colors",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.add#41d96a3f": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.Colors",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "type",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorType"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.applyStroke#bd3796de": {
+          "returnType": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.color.Colors"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.Colors#fe895be6": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "data",
+            "type": "java.lang.String"
+          }, {
+            "name": "set",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }, {
+            "name": "mainType",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorType"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.getColor#b09d2761": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key1",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorType"
+          }, {
+            "name": "key2",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorType"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.mute#98f78ae6": {
+          "returnType": "net.sourceforge.plantuml.style.ISkinParam",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.color.Colors.applyStereotypeForNote#5ef5f854": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.Colors",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "params",
+            "type": "net.sourceforge.plantuml.skin.ColorParam"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "156",
+        "cyclomatic_complexity": "20",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "6"
+      }
+    }
+  },
+  "metric": {
+    "loc": "207",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

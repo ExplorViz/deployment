@@ -1,0 +1,90 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "GitCurve.java",
+  "packageName": "net.sourceforge.plantuml.gitlog",
+  "importName": ["java.util.ArrayList", "java.util.List", "h.ST_Agedgeinfo_t", "h.ST_bezier", "h.ST_pointf", "h.ST_splines", "net.sourceforge.plantuml.jsondiagram.Arrow", "net.sourceforge.plantuml.jsondiagram.Mirror", "net.sourceforge.plantuml.klimt.UPath", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.geom.XPoint2D"],
+  "classData": {
+    "net.sourceforge.plantuml.gitlog.GitCurve": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "points",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.geom.XPoint2D\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "xMirror",
+        "type": "net.sourceforge.plantuml.jsondiagram.Mirror",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "sp",
+        "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ep",
+        "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.gitlog.GitCurve.getPoint#cd854c": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "splines",
+            "type": "h.ST_splines"
+          }, {
+            "name": "i",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.GitCurve.drawCurve#4b1687f9": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.gitlog.GitCurve.GitCurve#e2f6e51c": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "data",
+            "type": "h.ST_Agedgeinfo_t"
+          }, {
+            "name": "xMirror",
+            "type": "net.sourceforge.plantuml.jsondiagram.Mirror"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "61",
+        "cyclomatic_complexity": "9",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "108",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

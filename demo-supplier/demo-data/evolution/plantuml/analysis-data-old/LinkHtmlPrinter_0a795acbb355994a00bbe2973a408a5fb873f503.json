@@ -1,0 +1,120 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "LinkHtmlPrinter.java",
+  "packageName": "net.sourceforge.plantuml.html",
+  "importName": ["java.io.PrintWriter", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.abel.LeafType", "net.sourceforge.plantuml.abel.Link", "net.sourceforge.plantuml.decoration.LinkDecor"],
+  "classData": {
+    "net.sourceforge.plantuml.html.LinkHtmlPrinter": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "field": [{
+        "name": "link",
+        "type": "net.sourceforge.plantuml.abel.Link",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "chiral",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.html.LinkHtmlPrinter.printLink#563f757f": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "pw",
+            "type": "java.io.PrintWriter"
+          }],
+          "metric": {
+            "loc": "35",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.html.LinkHtmlPrinter.LinkHtmlPrinter#806332ea": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "link",
+            "type": "net.sourceforge.plantuml.abel.Link"
+          }, {
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.html.LinkHtmlPrinter.getHtmlChiral#874989e1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ent1",
+            "type": "java.lang.String"
+          }, {
+            "name": "ent2",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.html.LinkHtmlPrinter.htmlLink#7c02d022": {
+          "returnType": "java.lang.String",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "ent",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.html.LinkHtmlPrinter.getHtml#874989e1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ent1",
+            "type": "java.lang.String"
+          }, {
+            "name": "ent2",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.html.LinkHtmlPrinter.urlOf#7c02d022": {
+          "returnType": "java.lang.String",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "ent",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "142",
+        "cyclomatic_complexity": "35",
+        "cyclomatic_complexity_weighted": "7",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "187",
+    "cyclomatic_complexity": "7"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

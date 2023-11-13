@@ -1,0 +1,188 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "UGraphicCompressOnXorY.java",
+  "packageName": "net.sourceforge.plantuml.klimt.compress",
+  "importName": ["net.sourceforge.plantuml.activitydiagram3.ftile.CenteredText", "net.sourceforge.plantuml.klimt.UBackground", "net.sourceforge.plantuml.klimt.UChange", "net.sourceforge.plantuml.klimt.UShape", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.drawing.UGraphicDelegator", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.klimt.shape.URectangle"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.compress.UGraphicCompressOnXorY": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "mode",
+        "type": "net.sourceforge.plantuml.klimt.compress.CompressionMode",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "compressionTransform",
+        "type": "net.sourceforge.plantuml.klimt.compress.PiecewiseAffineTransform",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "translate",
+        "type": "net.sourceforge.plantuml.klimt.UTranslate",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.compress.UGraphicCompressOnXorY.create#4a48ebb0": {
+          "returnType": "net.sourceforge.plantuml.klimt.compress.UGraphicCompressOnXorY",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "mode",
+            "type": "net.sourceforge.plantuml.klimt.compress.CompressionMode"
+          }, {
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "compressionTransform",
+            "type": "net.sourceforge.plantuml.klimt.compress.PiecewiseAffineTransform"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.UGraphicCompressOnXorY.draw#95ce4c6b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.UShape"
+          }],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.UGraphicCompressOnXorY.drawLine#c3d23028": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.ULine"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.UGraphicCompressOnXorY.ct#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "v",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.UGraphicCompressOnXorY.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.UGraphicCompressOnXorY.apply#8adac84": {
+          "returnType": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "change",
+            "type": "net.sourceforge.plantuml.klimt.UChange"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.UGraphicCompressOnXorY.UGraphicCompressOnXorY#d16a2ac9": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "mode",
+            "type": "net.sourceforge.plantuml.klimt.compress.CompressionMode"
+          }, {
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "compressionTransform",
+            "type": "net.sourceforge.plantuml.klimt.compress.PiecewiseAffineTransform"
+          }, {
+            "name": "translate",
+            "type": "net.sourceforge.plantuml.klimt.UTranslate"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.UGraphicCompressOnXorY.getTranslate#1eef7de1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UTranslate",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "double",
+            "modifier": ["final "]
+          }, {
+            "name": "y",
+            "type": "double",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.compress.UGraphicCompressOnXorY.drawLine#3ff703c1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "y1",
+            "type": "double"
+          }, {
+            "name": "x2",
+            "type": "double"
+          }, {
+            "name": "y2",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.drawing.UGraphicDelegator",
+      "metric": {
+        "loc": "99",
+        "cyclomatic_complexity": "17",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "149",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

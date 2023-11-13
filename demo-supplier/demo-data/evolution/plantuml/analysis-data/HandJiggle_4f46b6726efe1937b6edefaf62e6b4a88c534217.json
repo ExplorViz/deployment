@@ -1,0 +1,224 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "HandJiggle.java",
+  "packageName": "net.sourceforge.plantuml.klimt.drawing.hand",
+  "importName": ["java.util.ArrayList", "java.util.Collection", "java.util.Random", "net.sourceforge.plantuml.klimt.UPath", "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.UPolygon"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.drawing.hand.HandJiggle": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "points",
+        "type": "java.util.Collection\u003cnet.sourceforge.plantuml.klimt.geom.XPoint2D\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "startX",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "startY",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "defaultVariation",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "rnd",
+        "type": "java.util.Random",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.drawing.hand.HandJiggle.randomMe#1": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.hand.HandJiggle.lineTo#1eef7de1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "endX",
+            "type": "double",
+            "modifier": ["final "]
+          }, {
+            "name": "endY",
+            "type": "double",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.hand.HandJiggle.arcTo#3d3491a1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "angle0",
+            "type": "double"
+          }, {
+            "name": "angle1",
+            "type": "double"
+          }, {
+            "name": "centerX",
+            "type": "double"
+          }, {
+            "name": "centerY",
+            "type": "double"
+          }, {
+            "name": "rx",
+            "type": "double"
+          }, {
+            "name": "ry",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.hand.HandJiggle.curveTo#33b7856e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "curve",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.hand.HandJiggle.appendTo#4d3a639": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "result",
+            "type": "net.sourceforge.plantuml.klimt.UPath"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.hand.HandJiggle.create#cd520d7b": {
+          "returnType": "net.sourceforge.plantuml.klimt.drawing.hand.HandJiggle",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "start",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "defaultVariation",
+            "type": "double"
+          }, {
+            "name": "rnd",
+            "type": "java.util.Random"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.hand.HandJiggle.lineTo#bf3c89": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "end",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.hand.HandJiggle.pointOnCircle#6fe0f030": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "centerX",
+            "type": "double"
+          }, {
+            "name": "centerY",
+            "type": "double"
+          }, {
+            "name": "angle",
+            "type": "double"
+          }, {
+            "name": "rx",
+            "type": "double"
+          }, {
+            "name": "ry",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.hand.HandJiggle.toUPolygon#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UPolygon",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.hand.HandJiggle.toUPath#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UPath",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.hand.HandJiggle.HandJiggle#207758d3": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "startX",
+            "type": "double"
+          }, {
+            "name": "startY",
+            "type": "double"
+          }, {
+            "name": "defaultVariation",
+            "type": "double"
+          }, {
+            "name": "rnd",
+            "type": "java.util.Random"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "119",
+        "cyclomatic_complexity": "11",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "164",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

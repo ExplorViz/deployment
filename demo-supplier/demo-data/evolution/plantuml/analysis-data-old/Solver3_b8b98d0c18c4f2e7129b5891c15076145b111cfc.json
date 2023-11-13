@@ -1,0 +1,96 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Solver3.java",
+  "packageName": "net.sourceforge.plantuml.project.solver",
+  "importName": ["net.sourceforge.plantuml.project.Load", "net.sourceforge.plantuml.project.core.TaskAttribute", "net.sourceforge.plantuml.project.core3.Histogram", "net.sourceforge.plantuml.project.core3.HistogramSimple", "net.sourceforge.plantuml.project.core3.TaskLoad", "net.sourceforge.plantuml.project.core3.TaskLoadImpl", "net.sourceforge.plantuml.project.time.Instant"],
+  "classData": {
+    "net.sourceforge.plantuml.project.solver.Solver3": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "workLoad",
+        "type": "net.sourceforge.plantuml.project.core3.Histogram",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.project.solver.Solver3.Solver3#de462163": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "workLoad",
+            "type": "net.sourceforge.plantuml.project.core3.Histogram"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.solver.Solver3.solveBackward#658d341": {
+          "returnType": "net.sourceforge.plantuml.project.core3.TaskLoad",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "totalLoad",
+            "type": "long"
+          }, {
+            "name": "end",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.solver.Solver3.solveForward#658d341": {
+          "returnType": "net.sourceforge.plantuml.project.core3.TaskLoad",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "totalLoad",
+            "type": "long"
+          }, {
+            "name": "start",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.project.solver.Solver3.computeEnd#1": {
+          "returnType": "net.sourceforge.plantuml.project.time.Instant",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.solver.Solver3.computeStart#1": {
+          "returnType": "net.sourceforge.plantuml.project.time.Instant",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.project.solver.AbstractSolver",
+      "metric": {
+        "loc": "55",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "100",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,344 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "TaskDrawSeparator.java",
+  "packageName": "net.sourceforge.plantuml.project.draw",
+  "importName": ["net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColorSet", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlockUtils", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.klimt.shape.URectangle", "net.sourceforge.plantuml.klimt.sprite.SpriteContainerEmpty", "net.sourceforge.plantuml.project.LabelStrategy", "net.sourceforge.plantuml.project.core.Task", "net.sourceforge.plantuml.project.core.TaskAttribute", "net.sourceforge.plantuml.project.lang.CenterBorderColor", "net.sourceforge.plantuml.project.time.Day", "net.sourceforge.plantuml.project.timescale.TimeScale", "net.sourceforge.plantuml.real.Real", "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleBuilder", "net.sourceforge.plantuml.style.StyleSignatureBasic", "net.sourceforge.plantuml.url.Url", "net.sourceforge.plantuml.utils.Direction"],
+  "classData": {
+    "net.sourceforge.plantuml.project.draw.TaskDrawSeparator": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.project.draw.TaskDraw"],
+      "field": [{
+        "name": "timeScale",
+        "type": "net.sourceforge.plantuml.project.timescale.TimeScale",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "y",
+        "type": "net.sourceforge.plantuml.real.Real",
+        "modifier": ["private"]
+      }, {
+        "name": "min",
+        "type": "net.sourceforge.plantuml.project.time.Day",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "max",
+        "type": "net.sourceforge.plantuml.project.time.Day",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "name",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "styleBuilder",
+        "type": "net.sourceforge.plantuml.style.StyleBuilder",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "colorSet",
+        "type": "net.sourceforge.plantuml.klimt.color.HColorSet",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getY#301f1126": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "direction",
+            "type": "net.sourceforge.plantuml.utils.Direction"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getTextHeight#395b4159": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.drawTitle#742ad095": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "labelStrategy",
+            "type": "net.sourceforge.plantuml.project.LabelStrategy"
+          }, {
+            "name": "colTitles",
+            "type": "double"
+          }, {
+            "name": "colBars",
+            "type": "double"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getFontConfiguration#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getFullHeightTask#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getTrueRow#1": {
+          "returnType": "net.sourceforge.plantuml.project.draw.TaskDraw",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getTitleWidth#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getY#395b4159": {
+          "returnType": "net.sourceforge.plantuml.real.Real",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getTitle#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getStyleSignature#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "39",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getFingerPrintNote#395b4159": {
+          "returnType": "net.sourceforge.plantuml.project.draw.FingerPrint",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getStyle#1": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getTask#1": {
+          "returnType": "net.sourceforge.plantuml.project.core.Task",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getX1#a2f62a96": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "taskAttribute",
+            "type": "net.sourceforge.plantuml.project.core.TaskAttribute"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.setColorsAndCompletion#18cceec1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.project.lang.CenterBorderColor"
+          }, {
+            "name": "completion",
+            "type": "int"
+          }, {
+            "name": "url",
+            "type": "net.sourceforge.plantuml.url.Url"
+          }, {
+            "name": "note",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getX2#a2f62a96": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "taskAttribute",
+            "type": "net.sourceforge.plantuml.project.core.TaskAttribute"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.TaskDrawSeparator#8eab92e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "timeScale",
+            "type": "net.sourceforge.plantuml.project.timescale.TimeScale"
+          }, {
+            "name": "y",
+            "type": "net.sourceforge.plantuml.real.Real"
+          }, {
+            "name": "min",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }, {
+            "name": "max",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }, {
+            "name": "styleBuilder",
+            "type": "net.sourceforge.plantuml.style.StyleBuilder"
+          }, {
+            "name": "colorSet",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getHeightMax#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawSeparator.getFingerPrint#395b4159": {
+          "returnType": "net.sourceforge.plantuml.project.draw.FingerPrint",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "166",
+        "cyclomatic_complexity": "12",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "232",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

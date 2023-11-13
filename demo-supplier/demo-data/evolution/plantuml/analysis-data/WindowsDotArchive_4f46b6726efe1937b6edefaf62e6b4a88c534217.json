@@ -1,0 +1,126 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "WindowsDotArchive.java",
+  "packageName": "net.sourceforge.plantuml.windowsdot",
+  "importName": ["java.io.BufferedOutputStream", "java.io.File", "java.io.FileOutputStream", "java.io.IOException", "java.io.InputStream", "java.io.OutputStream", "net.sourceforge.plantuml.brotli.BrotliInputStream", "net.sourceforge.plantuml.log.Logme"],
+  "classData": {
+    "net.sourceforge.plantuml.windowsdot.WindowsDotArchive": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "field": [{
+        "name": "singleton",
+        "type": "net.sourceforge.plantuml.windowsdot.WindowsDotArchive",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "isThereArchive",
+        "type": "java.lang.Boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "exe",
+        "type": "java.io.File",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.windowsdot.WindowsDotArchive.getInstance#1": {
+          "returnType": "net.sourceforge.plantuml.windowsdot.WindowsDotArchive",
+          "modifier": ["public", "final", "synchronized", "static"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.windowsdot.WindowsDotArchive.readByte#512cbbe9": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "is",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.windowsdot.WindowsDotArchive.readString#512cbbe9": {
+          "returnType": "java.lang.String",
+          "modifier": ["final", "static", "public"],
+          "parameter": [{
+            "name": "is",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.windowsdot.WindowsDotArchive.readNumber#512cbbe9": {
+          "returnType": "int",
+          "modifier": ["final", "static", "public"],
+          "parameter": [{
+            "name": "is",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.windowsdot.WindowsDotArchive.extract#2169bb": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "dir",
+            "type": "java.io.File"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.windowsdot.WindowsDotArchive.isThereArchive#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "synchronized"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.windowsdot.WindowsDotArchive.getWindowsExeLite#1": {
+          "returnType": "java.io.File",
+          "modifier": ["public", "synchronized"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.windowsdot.WindowsDotArchive.WindowsDotArchive#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "89",
+        "cyclomatic_complexity": "17",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "136",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

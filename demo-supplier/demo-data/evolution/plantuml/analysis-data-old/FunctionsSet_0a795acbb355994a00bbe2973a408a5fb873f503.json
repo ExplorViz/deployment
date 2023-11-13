@@ -1,0 +1,193 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "FunctionsSet.java",
+  "packageName": "net.sourceforge.plantuml.tim",
+  "importName": ["java.util.Collections", "java.util.HashMap", "java.util.HashSet", "java.util.Map", "java.util.Set", "net.sourceforge.plantuml.text.StringLocated"],
+  "classData": {
+    "net.sourceforge.plantuml.tim.FunctionsSet": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "functions",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.tim.TFunctionSignature, net.sourceforge.plantuml.tim.TFunction\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "functionsFinal",
+        "type": "java.util.Set\u003cnet.sourceforge.plantuml.tim.TFunctionSignature\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "functions3",
+        "type": "net.sourceforge.plantuml.tim.Trie",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "pendingFunction",
+        "type": "net.sourceforge.plantuml.tim.TFunctionImpl",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.tim.FunctionsSet.addFunction#fc9e446b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "func",
+            "type": "net.sourceforge.plantuml.tim.TFunction"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.FunctionsSet.executeDeclareProcedure#8252aa66": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.FunctionsSet.pendingFunction#1": {
+          "returnType": "net.sourceforge.plantuml.tim.TFunctionImpl",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.FunctionsSet.executeLegacyDefine#8252aa66": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.FunctionsSet.getLonguestMatchStartingIn#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.FunctionsSet.executeDeclareReturnFunction#8252aa66": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.FunctionsSet.size#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.FunctionsSet.getFunctionSmart#146b89eb": {
+          "returnType": "net.sourceforge.plantuml.tim.TFunction",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "searched",
+            "type": "net.sourceforge.plantuml.tim.TFunctionSignature"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.tim.FunctionsSet.executeLegacyDefineLong#8252aa66": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.FunctionsSet.executeEndfunction#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.FunctionsSet.functions#1": {
+          "returnType": "java.util.Map\u003cnet.sourceforge.plantuml.tim.TFunctionSignature, net.sourceforge.plantuml.tim.TFunction\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "121",
+        "cyclomatic_complexity": "23",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "165",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

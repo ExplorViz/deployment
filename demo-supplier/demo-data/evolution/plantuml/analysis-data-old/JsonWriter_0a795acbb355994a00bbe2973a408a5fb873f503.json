@@ -1,0 +1,218 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "JsonWriter.java",
+  "packageName": "net.sourceforge.plantuml.json",
+  "importName": ["java.io.IOException", "java.io.Writer"],
+  "classData": {
+    "net.sourceforge.plantuml.json.JsonWriter": {
+      "type": "CLASS",
+      "field": [{
+        "name": "CONTROL_CHARACTERS_END",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "QUOT_CHARS",
+        "type": "char[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "BS_CHARS",
+        "type": "char[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "LF_CHARS",
+        "type": "char[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "CR_CHARS",
+        "type": "char[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "TAB_CHARS",
+        "type": "char[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "UNICODE_2028_CHARS",
+        "type": "char[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "UNICODE_2029_CHARS",
+        "type": "char[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "HEX_DIGITS",
+        "type": "char[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "writer",
+        "type": "java.io.Writer",
+        "modifier": ["protected", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.json.JsonWriter.JsonWriter#9aed90b2": {
+          "parameter": [{
+            "name": "writer",
+            "type": "java.io.Writer"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonWriter.writeArrayOpen#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonWriter.writeString#943a4c50": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "string",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonWriter.writeArrayClose#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonWriter.writeObjectOpen#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonWriter.writeJsonString#943a4c50": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "string",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonWriter.writeObjectSeparator#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonWriter.getReplacementChars#2e9375": {
+          "returnType": "char[]",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ch",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonWriter.writeLiteral#943a4c50": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonWriter.writeNumber#943a4c50": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "string",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonWriter.writeObjectClose#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonWriter.writeArraySeparator#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonWriter.writeMemberSeparator#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.JsonWriter.writeMemberName#943a4c50": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "114",
+        "cyclomatic_complexity": "11",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "143",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,4599 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Macro.java",
+  "packageName": "smetana.core",
+  "importName": ["gen.lib.cdt.dtrestore__c.dtrestore", "gen.lib.cgraph.attr__c.agattr", "gen.lib.cgraph.edge__c.agedge", "smetana.core.JUtils.strcmp", "java.util.regex.Matcher", "java.util.regex.Pattern", "h.SHAPE_INFO", "h.ST_Agedge_s", "h.ST_Agedgeinfo_t", "h.ST_Agiddisc_s", "h.ST_Agiodisc_s", "h.ST_Agmemdisc_s", "h.ST_Agnode_s", "h.ST_Agnodeinfo_t", "h.ST_Agobj_s", "h.ST_Agraph_s", "h.ST_Agraphinfo_t", "h.ST_Agrec_s", "h.ST_Agsym_s", "h.ST_GVC_s", "h.ST_boxf", "h.ST_dt_s", "h.ST_dtdisc_s", "h.ST_dtlink_s", "h.ST_elist", "h.ST_layout_t", "h.ST_nlist_t", "h.ST_point", "h.ST_pointf", "h.ST_port", "h.ST_rank_t", "h.ST_shape_desc", "h.ST_splines", "h.ST_subtree_t", "h.ST_textlabel_t", "smetana.core.debug.SmetanaDebug"],
+  "classData": {
+    "smetana.core.Macro": {
+      "type": "CLASS",
+      "modifier": ["final", "public"],
+      "field": [{
+        "name": "AGRAPH",
+        "type": "int",
+        "modifier": ["public", "final", "static"]
+      }, {
+        "name": "AGNODE",
+        "type": "int",
+        "modifier": ["public", "final", "static"]
+      }, {
+        "name": "AGOUTEDGE",
+        "type": "int",
+        "modifier": ["public", "final", "static"]
+      }, {
+        "name": "AGINEDGE",
+        "type": "int",
+        "modifier": ["public", "final", "static"]
+      }, {
+        "name": "AGEDGE",
+        "type": "int",
+        "modifier": ["public", "final", "static"]
+      }, {
+        "name": "MAXSHORT",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "INT_MAX",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "INT_MIN",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "HUGE_VAL",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "MILLIPOINT",
+        "type": "double",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "MICROPOINT",
+        "type": "double",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "M_PI",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "SQRT2",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "LEFT",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "RIGHT",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "BOTTOM",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "TOP",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "LT_NONE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "LT_HTML",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "LT_RECD",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "EDGE_LABEL",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "HEAD_LABEL",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "TAIL_LABEL",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "GRAPH_LABEL",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "NODE_XLABEL",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "EDGE_XLABEL",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ET_NONE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ET_LINE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ET_CURVED",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ET_PLINE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ET_ORTHO",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ET_SPLINE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ET_COMPOUND",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "NEW_RANK",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "NORMAL",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "VIRTUAL",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "SLACKNODE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "REVERSED",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "FLATORDER",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "CLUSTER_EDGE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "IGNORED",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "NOCMD",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "SAMERANK",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "MINRANK",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "SOURCERANK",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "MAXRANK",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "SINKRANK",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "LEAFSET",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "CLUSTER",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "LABEL_AT_BOTTOM",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "LABEL_AT_TOP",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "LABEL_AT_LEFT",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "LABEL_AT_RIGHT",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "RANKDIR_TB",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "RANKDIR_LR",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "RANKDIR_BT",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "RANKDIR_RL",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "REGULAREDGE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "FLATEDGE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "SELFWPEDGE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "SELFNPEDGE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "SELFEDGE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "EDGETYPEMASK",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "LAYOUT_USES_RANKDIR",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_FOUND",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_SET",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_BAG",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_OSET",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_OBAG",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_LIST",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_STACK",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_QUEUE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_DEQUE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_METHODS",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_SAMECMP",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_SAMEHASH",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_INSERT",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_DELETE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_SEARCH",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_NEXT",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_PREV",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_RENEW",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_CLEAR",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_FIRST",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_LAST",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_MATCH",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_VSEARCH",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_ATTACH",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_DETACH",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_APPEND",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_OPEN",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_CLOSE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_DISC",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_METH",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_ENDOPEN",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_ENDCLOSE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_HASHSIZE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_FLATTEN",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_WALK",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_MALLOC",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DT_MEMORYF",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "GVRENDER_PLUGIN",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "NO_SUPPORT",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "LOCAL",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "GLOBAL",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "NOCLUST",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DEFAULT_NODESEP",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "MIN_NODESEP",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DEFAULT_RANKSEP",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "MIN_RANKSEP",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "POINTS_PER_INCH",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "GVBEGIN",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "GVSPLINES",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "Spring_coeff",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "MYHUGE",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "MAXDIM",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "NODENAME_ESC",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DEFAULT_NODESHAPE",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DEFAULT_NODEHEIGHT",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "MIN_NODEHEIGHT",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DEFAULT_NODEWIDTH",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "MIN_NODEWIDTH",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "BOTTOM_IX",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "RIGHT_IX",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "TOP_IX",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "LEFT_IX",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "GAP",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "CB_INITIALIZE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "CB_UPDATE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "CB_DELETION",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "CL_BACK",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "CL_OFFSET",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "CL_CROSS",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DEFAULT_FONTSIZE",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DEFAULT_LABEL_FONTSIZE",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "MIN_FONTSIZE",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "FILLED",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "RADIAL",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ROUNDED",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DIAGONALS",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "AUXLABELS",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "INVISIBLE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "STRIPED",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DOTTED",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DASHED",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "WEDGED",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "UNDERLINE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "FIXEDSHAPE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "SHAPE_MASK",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "HEAD_ID",
+        "type": "smetana.core.CString",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "TAIL_ID",
+        "type": "smetana.core.CString",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "SEARCHSIZE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "NODECARD",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "SMALLBUF",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ARR_NONE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ARR_TYPE_NONE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ARR_TYPE_NORM",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ARR_TYPE_CROW",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ARR_TYPE_TEE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ARR_TYPE_BOX",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ARR_TYPE_DIAMOND",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ARR_TYPE_DOT",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ARR_TYPE_CURVE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ARR_TYPE_GAP",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ARROW_LENGTH",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "NUMB_OF_ARROW_HEADS",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "BITS_PER_ARROW",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "BITS_PER_ARROW_TYPE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }],
+      "methodData": {
+        "smetana.core.Macro.UNSUPPORTED#943a4c50": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "comment",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_weight#133e7fb": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.hypot#1eef7de1": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "9",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_ht1#e4865a9e": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_shape_info#3a2eb453": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "h.SHAPE_INFO"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_node_type#efe70596": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.agfindedgeattr#cf11bb01": {
+          "returnType": "h.ST_Agsym_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "a",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_out#db107ab9": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "smetana.core.__struct__\u003ch.ST_elist\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_shape#372326b4": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_shape_desc"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.dtfirst#9ef75453": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "d",
+            "type": "h.ST_dt_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.M_agtail#dfa51166": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_to_orig#ce7d7e74": {
+          "returnType": "h.ST_Agedge_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.APPROXEQPT#8f57b1b0": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p",
+            "type": "h.ST_pointf"
+          }, {
+            "name": "q",
+            "type": "h.ST_pointf"
+          }, {
+            "name": "tol",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_rw#a0dce978": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_next#de72c179": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ALLOC_INT#62ccd43": {
+          "returnType": "int[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "size",
+            "type": "int"
+          }, {
+            "name": "old",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "smetana.core.Macro.ED_spl#ce7d7e74": {
+          "returnType": "h.ST_splines",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_maxrank#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_flags#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_mval#a0dce978": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.DISTSQ#dde21241": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "a",
+            "type": "h.ST_pointf"
+          }, {
+            "name": "b",
+            "type": "h.ST_pointf"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro._DTKEY#38324fcf": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "o",
+            "type": "smetana.core.__ptr__"
+          }, {
+            "name": "ky",
+            "type": "smetana.core.FieldOffset"
+          }, {
+            "name": "sz",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_tree_in#de72c179": {
+          "returnType": "h.ST_elist",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGHEAD#ce7d7e74": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_prev#de72c179": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_shape_info#de72c179": {
+          "returnType": "h.SHAPE_INFO",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_id#de72c179": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_clust#cf26671e": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "smetana.core.CArrayOfStar\u003ch.ST_Agraph_s\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_dist#b229cbdd": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_clust#e4865a9e": {
+          "returnType": "smetana.core.CArrayOfStar\u003ch.ST_Agraph_s\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_in#db107ab9": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "smetana.core.__struct__\u003ch.ST_elist\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_next#ce582f01": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_set_type#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_priority#efe70596": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.dtnext#cc58c56c": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "d",
+            "type": "h.ST_dt_s"
+          }, {
+            "name": "o",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_to_orig#cfafce61": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_gvc#e4865a9e": {
+          "returnType": "h.ST_GVC_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ROUND#b0f77bf0": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "f",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.UNFLATTEN#bb6637c1": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "dt",
+            "type": "h.ST_dt_s"
+          }],
+          "metric": {
+            "loc": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "smetana.core.Macro.ND_ht#de72c179": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_adjacent#133e7fb": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_fontnames#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_shape#de72c179": {
+          "returnType": "h.ST_shape_desc",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_tree_index#133e7fb": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.agfindnodeattr#cf11bb01": {
+          "returnType": "h.ST_Agsym_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "a",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_rankdir2#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_ln#e4865a9e": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_width#de72c179": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGDISC_mem#e4865a9e": {
+          "returnType": "h.ST_Agmemdisc_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_out#de72c179": {
+          "returnType": "h.ST_elist",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_weight_class#de72c179": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro._DTCMP#1b62c718": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "dt",
+            "type": "h.ST_dt_s"
+          }, {
+            "name": "k1",
+            "type": "smetana.core.__ptr__"
+          }, {
+            "name": "k2",
+            "type": "smetana.core.__ptr__"
+          }, {
+            "name": "dc",
+            "type": "h.ST_dtdisc_s",
+            "modifier": ["final "]
+          }, {
+            "name": "cmpf",
+            "type": "smetana.core.CFunction"
+          }, {
+            "name": "sz",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_spl#f0b4c2f0": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_splines"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGCLOS_mem#e4865a9e": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_showboxes#133e7fb": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.dtdelete#cc58c56c": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "d",
+            "type": "h.ST_dt_s"
+          }, {
+            "name": "o",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.dtinsert#cc58c56c": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "d",
+            "type": "h.ST_dt_s"
+          }, {
+            "name": "o",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_height#de72c179": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_n_nodes#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_lw#de72c179": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.flatindex#de72c179": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.LEN2#1eef7de1": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "a",
+            "type": "double"
+          }, {
+            "name": "b",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.alloc_elist#b19cc0d7": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "int"
+          }, {
+            "name": "L",
+            "type": "h.ST_elist"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGSEQ#df74a9c9": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "obj",
+            "type": "h.ST_Agobj_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_n_cluster#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_coord#de72c179": {
+          "returnType": "h.ST_pointf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_rank#efe70596": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.M_agtail#ce7d7e74": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_flat_out#de72c179": {
+          "returnType": "h.ST_elist",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_has_flat_edges#b020654a": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.INSIDE#a5840e6": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p",
+            "type": "h.ST_pointf"
+          }, {
+            "name": "b",
+            "type": "h.ST_boxf"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGTYPE#df74a9c9": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "obj",
+            "type": "h.ST_Agobj_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_rankleader#e4865a9e": {
+          "returnType": "smetana.core.CArrayOfStar\u003ch.ST_Agnode_s\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.free_list#b16b5744": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "L",
+            "type": "h.ST_elist"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "smetana.core.Macro.GD_installed#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_nodesep#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_label#afaae8e5": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_textlabel_t"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_adjacent#ce7d7e74": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_subtree#de72c179": {
+          "returnType": "h.ST_subtree_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGDISC_id#e4865a9e": {
+          "returnType": "h.ST_Agiddisc_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_outleaf#de72c179": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_has_labels#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_realflip#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_inleaf#de72c179": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_parent#90cb53a1": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_label_ontop#50dbc34": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_subtree_set#11fbcb9c": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "value",
+            "type": "h.ST_subtree_t"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGOUT2IN#ce7d7e74": {
+          "returnType": "h.ST_Agedge_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.SEQ#62eca6e": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "a",
+            "type": "int"
+          }, {
+            "name": "b",
+            "type": "int"
+          }, {
+            "name": "c",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.BETWEEN#6ff7ba10": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "a",
+            "type": "double"
+          }, {
+            "name": "b",
+            "type": "double"
+          }, {
+            "name": "c",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_charset#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_showboxes#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.streq#8f79ca41": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "a",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "b",
+            "type": "smetana.core.CString"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.LENGTH#ce7d7e74": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_clust#d46bc826": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_low#de72c179": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_minlen#ce7d7e74": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_showboxes#de72c179": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_low#efe70596": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_showboxes#efe70596": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_expanded#e4865a9e": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_head_port#bc9debab": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_port"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_rank#30937027": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "smetana.core.CArray\u003ch.ST_rank_t\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_onstack#efe70596": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_UF_parent#bde5d334": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agobj_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGOPP#ce7d7e74": {
+          "returnType": "h.ST_Agedge_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.PF2P#fab7ff": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "pf",
+            "type": "h.ST_pointf"
+          }, {
+            "name": "p",
+            "type": "h.ST_point"
+          }],
+          "metric": {
+            "loc": "4",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_lim#efe70596": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.rlink____warning#c6694741": {
+          "returnType": "h.ST_dtlink_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "r",
+            "type": "h.ST_dtlink_s"
+          }, {
+            "name": "x",
+            "type": "h.ST_dtlink_s"
+          }],
+          "metric": {
+            "loc": "4",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_count#ce7d7e74": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.YPAD#8eef1093": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "d",
+            "type": "h.ST_pointf"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_onstack#de72c179": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_to_virt#cfafce61": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_width#a0dce978": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.PS2INCH#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "a_points",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_weight#ce7d7e74": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_prev#ce582f01": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_tail_label#c0f7cb4a": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_textlabel_t"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_exact_ranksep#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_flat_in#de72c179": {
+          "returnType": "h.ST_elist",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_cutvalue#ce7d7e74": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_par#de72c179": {
+          "returnType": "h.ST_Agedge_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.PAD#8eef1093": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "d",
+            "type": "h.ST_pointf"
+          }],
+          "metric": {
+            "loc": "4",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.agfindedge#ee6e9670": {
+          "returnType": "h.ST_Agedge_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "t",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "h",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGMKOUT#ce7d7e74": {
+          "returnType": "h.ST_Agedge_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_height#a0dce978": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_mark#f3c0d9cf": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_tail_label#ce7d7e74": {
+          "returnType": "h.ST_textlabel_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGDATA#6af4e5fa": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "obj",
+            "type": "h.ST_Agobj_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agrec_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_has_port#f3c0d9cf": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.agfindgraphattr#cf11bb01": {
+          "returnType": "h.ST_Agsym_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "a",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.M_aghead#dfa51166": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_lw#a0dce978": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.DIST2#40f6ca01": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p",
+            "type": "h.ST_point"
+          }, {
+            "name": "q",
+            "type": "h.ST_point"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_tail_port#bc9debab": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_port"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_has_flat_edges#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_ht2#5d3c74f3": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGID#df74a9c9": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "obj",
+            "type": "h.ST_Agobj_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_nlist#8ab7ba7c": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_cutvalue#133e7fb": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_minset#e4865a9e": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.LEN#1eef7de1": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "a",
+            "type": "double"
+          }, {
+            "name": "b",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_mval#de72c179": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_label#de72c179": {
+          "returnType": "h.ST_textlabel_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_set_type#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.MAKEFWDEDGE#cfafce61": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "new_",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "old",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.lrotate#c6694741": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "x",
+            "type": "h.ST_dtlink_s"
+          }, {
+            "name": "y",
+            "type": "h.ST_dtlink_s"
+          }],
+          "metric": {
+            "loc": "4",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_save_in#de72c179": {
+          "returnType": "h.ST_elist",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.M_aghead#ce7d7e74": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_cleanup#e4865a9e": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_xlabel#ce7d7e74": {
+          "returnType": "h.ST_textlabel_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_xpenalty#ce7d7e74": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.UNSUPPORTED_INT#943a4c50": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "comment",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.POINTS#b0f77bf0": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "a_inches",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_lim#de72c179": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_label_pos#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_alg#be62ebfc": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "value",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_rank#e4865a9e": {
+          "returnType": "smetana.core.CArray\u003ch.ST_rank_t\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.createHackInitDimensionFromLabel#3301a1": {
+          "returnType": "smetana.core.CString",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_minlen#133e7fb": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_comp#e4865a9e": {
+          "returnType": "h.ST_nlist_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.elist_append#b29da731": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "item",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "L",
+            "type": "h.ST_elist"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_other#de72c179": {
+          "returnType": "h.ST_elist",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_node_type#de72c179": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_dist#ce7d7e74": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_leader#e4865a9e": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_label#c0f7cb4a": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_textlabel_t"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_tree_index#ce7d7e74": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_ranksep#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_bb#e4865a9e": {
+          "returnType": "h.ST_boxf",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_minrank#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_alg#de72c179": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_priority#de72c179": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.BETWEEN#62eca6e": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "a",
+            "type": "int"
+          }, {
+            "name": "b",
+            "type": "int"
+          }, {
+            "name": "c",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_rw#de72c179": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_flags#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_save_out#db107ab9": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "smetana.core.__struct__\u003ch.ST_elist\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_cleanup#d057de5d": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "data",
+            "type": "smetana.core.CFunction"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_showboxes#ce7d7e74": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_rankdir2#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_label#ce7d7e74": {
+          "returnType": "h.ST_textlabel_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_par#be62ebfc": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_UF_size#efe70596": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_maxrank#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_weight_class#efe70596": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_maxset#e4865a9e": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.streq#b738483e": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "a",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "b",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.flatindex#efe70596": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "data",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.INCH2PS#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "a_inches",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_count#133e7fb": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_ln#8ab7ba7c": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_edge_type#ce7d7e74": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_ht1#5d3c74f3": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_n_nodes#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_n_cluster#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.SLACK#ce7d7e74": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_tree_out#de72c179": {
+          "returnType": "h.ST_elist",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_dotroot#90cb53a1": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_dotroot#e4865a9e": {
+          "returnType": "h.ST_Agraph_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_gvc#5bfefdec": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_GVC_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_rn#e4865a9e": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_rank#de72c179": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_rn#8ab7ba7c": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_in#de72c179": {
+          "returnType": "h.ST_elist",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_label_ontop#ce7d7e74": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_charset#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_ranktype#efe70596": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_rankdir#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_UF_size#de72c179": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_has_port#de72c179": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGTAIL#ce7d7e74": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.dtsearch#cc58c56c": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "d",
+            "type": "h.ST_dt_s"
+          }, {
+            "name": "o",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_expanded#b020654a": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_UF_parent#8b564ae6": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agobj_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_minrank#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_exact_ranksep#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_parent#e4865a9e": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_fontnames#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_save_out#de72c179": {
+          "returnType": "h.ST_elist",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_head_port#ce7d7e74": {
+          "returnType": "h.ST_port",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_to_virt#ce7d7e74": {
+          "returnType": "h.ST_Agedge_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_ranksep#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.RADIANS#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "deg",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_leader#8ab7ba7c": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_ranktype#de72c179": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.DIST2#dde21241": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p",
+            "type": "h.ST_pointf"
+          }, {
+            "name": "q",
+            "type": "h.ST_pointf"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGCLOS_id#e4865a9e": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_drawing#e4865a9e": {
+          "returnType": "h.ST_layout_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_nlist#e4865a9e": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_border#e4865a9e": {
+          "returnType": "ST_pointf[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.TREE_EDGE#ce7d7e74": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_label#e4865a9e": {
+          "returnType": "h.ST_textlabel_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_tail_port#ce7d7e74": {
+          "returnType": "h.ST_port",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_edge_type#133e7fb": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_has_labels#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_label_pos#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGDISC_io#e4865a9e": {
+          "returnType": "h.ST_Agiodisc_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.XPAD#8eef1093": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "d",
+            "type": "h.ST_pointf"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_showboxes#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_realrankdir#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_head_label#ce7d7e74": {
+          "returnType": "h.ST_textlabel_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_ht#a0dce978": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_conc_opp_flag#50dbc34": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_label#6c0a7460": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_textlabel_t"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_conc_opp_flag#ce7d7e74": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_rankleader#12c6dba3": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "smetana.core.CArrayOfStar\u003ch.ST_Agnode_s\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_onstack#f3c0d9cf": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGIN2OUT#ce7d7e74": {
+          "returnType": "h.ST_Agedge_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_mark#efe70596": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_head_label#c0f7cb4a": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_textlabel_t"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_installed#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.SQR#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "a",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_save_in#db107ab9": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "smetana.core.__struct__\u003ch.ST_elist\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_ht2#e4865a9e": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.PF2P#dde21241": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "pf",
+            "type": "h.ST_pointf"
+          }, {
+            "name": "p",
+            "type": "h.ST_pointf"
+          }],
+          "metric": {
+            "loc": "4",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_nodesep#ac469111": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_order#efe70596": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.hackInitDimensionFromLabel#e32d4dfe": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "size",
+            "type": "h.ST_pointf"
+          }, {
+            "name": "label",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "13",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "smetana.core.Macro.ND_clust#de72c179": {
+          "returnType": "h.ST_Agraph_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_drawing#d2f221df": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "v",
+            "type": "h.ST_layout_t"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ED_xpenalty#133e7fb": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.AGMKIN#ce7d7e74": {
+          "returnType": "h.ST_Agedge_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.rrotate#c6694741": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "x",
+            "type": "h.ST_dtlink_s"
+          }, {
+            "name": "y",
+            "type": "h.ST_dtlink_s"
+          }],
+          "metric": {
+            "loc": "4",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.llink____warning#c6694741": {
+          "returnType": "h.ST_dtlink_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "l",
+            "type": "h.ST_dtlink_s"
+          }, {
+            "name": "x",
+            "type": "h.ST_dtlink_s"
+          }],
+          "metric": {
+            "loc": "4",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_xlabel#de72c179": {
+          "returnType": "h.ST_textlabel_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.UNSURE_ABOUT#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "comment",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_mark#de72c179": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.GD_flip#e4865a9e": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.Macro.ND_order#de72c179": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "n",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "1315",
+        "LCOM4": "155"
+      }
+    }
+  },
+  "metric": {
+    "loc": "1392"
+  },
+  "author": "plantuml@gmail.com"
+}

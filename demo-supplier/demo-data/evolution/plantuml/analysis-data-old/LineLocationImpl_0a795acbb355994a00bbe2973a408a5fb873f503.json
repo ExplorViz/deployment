@@ -1,0 +1,142 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "LineLocationImpl.java",
+  "packageName": "net.sourceforge.plantuml.utils",
+  "importName": ["java.util.Objects"],
+  "classData": {
+    "net.sourceforge.plantuml.utils.LineLocationImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.utils.LineLocation"],
+      "field": [{
+        "name": "desc",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "position",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "parent",
+        "type": "net.sourceforge.plantuml.utils.LineLocation",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.utils.LineLocationImpl.compareTo#4642d408": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.utils.LineLocationImpl.oneLineRead#1": {
+          "returnType": "net.sourceforge.plantuml.utils.LineLocationImpl",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.utils.LineLocationImpl.getParent#1": {
+          "returnType": "net.sourceforge.plantuml.utils.LineLocation",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.utils.LineLocationImpl.isStandardLibrary#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.utils.LineLocationImpl.LineLocationImpl#f0f1b976": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "desc",
+            "type": "java.lang.String"
+          }, {
+            "name": "parent",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }, {
+            "name": "position",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.utils.LineLocationImpl.LineLocationImpl#39521199": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "desc",
+            "type": "java.lang.String"
+          }, {
+            "name": "parent",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.utils.LineLocationImpl.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.utils.LineLocationImpl.getDescription#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.utils.LineLocationImpl.getPosition#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "53",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "92",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

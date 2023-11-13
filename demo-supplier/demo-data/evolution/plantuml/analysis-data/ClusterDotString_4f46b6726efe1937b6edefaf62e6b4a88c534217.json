@@ -1,0 +1,252 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "ClusterDotString.java",
+  "packageName": "net.sourceforge.plantuml.svek",
+  "importName": ["java.util.ArrayList", "java.util.Collection", "java.util.Collections", "java.util.EnumSet", "java.util.Iterator", "java.util.List", "java.util.Set", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.abel.EntityPosition", "net.sourceforge.plantuml.decoration.symbol.USymbols", "net.sourceforge.plantuml.dot.GraphvizVersion", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.skin.AlignmentParam", "net.sourceforge.plantuml.skin.UmlDiagramType", "net.sourceforge.plantuml.style.ISkinParam"],
+  "classData": {
+    "net.sourceforge.plantuml.svek.ClusterDotString": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "cluster",
+        "type": "net.sourceforge.plantuml.svek.Cluster",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ID_EE",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.svek.ClusterDotString.isThereALinkFromOrToGroup#cb5d2e82": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "lines",
+            "type": "java.util.Collection\u003cnet.sourceforge.plantuml.svek.SvekLine\u003e"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.svek.ClusterDotString.getSinkInPoint#bdf9f578": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "type",
+            "type": "net.sourceforge.plantuml.skin.UmlDiagramType"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.svek.ClusterDotString.isPacked#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.ClusterDotString.withPosition#f32ab017": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.svek.SvekNode\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "positions",
+            "type": "java.util.Set\u003cnet.sourceforge.plantuml.abel.EntityPosition\u003e"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.svek.ClusterDotString.protection0#bdf9f578": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "type",
+            "type": "net.sourceforge.plantuml.skin.UmlDiagramType"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.svek.ClusterDotString.empty#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.ClusterDotString.entityPositionsExceptNormal#1": {
+          "returnType": "java.util.Set\u003cnet.sourceforge.plantuml.abel.EntityPosition\u003e",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.svek.ClusterDotString.ClusterDotString#e8391fee": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cluster",
+            "type": "net.sourceforge.plantuml.svek.Cluster"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.ClusterDotString.printInternal#28e95706": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "sb",
+            "type": "java.lang.StringBuilder"
+          }, {
+            "name": "lines",
+            "type": "java.util.Collection\u003cnet.sourceforge.plantuml.svek.SvekLine\u003e"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "dotMode",
+            "type": "net.sourceforge.plantuml.svek.DotMode"
+          }, {
+            "name": "graphvizVersion",
+            "type": "net.sourceforge.plantuml.dot.GraphvizVersion"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.skin.UmlDiagramType"
+          }],
+          "metric": {
+            "loc": "127",
+            "cyclomatic_complexity": "27",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.svek.ClusterDotString.printRanks#5e9defed": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "rank",
+            "type": "java.lang.String"
+          }, {
+            "name": "entries",
+            "type": "java.util.List\u003cWildcardUsage{type\u003dEXTENDS, boundedType\u003dReferenceType{net.sourceforge.plantuml.svek.SvekNode, typeParametersMap\u003dTypeParametersMap{nameToValue\u003d{}}}}\u003e"
+          }, {
+            "name": "sb",
+            "type": "java.lang.StringBuilder"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.svek.ClusterDotString.hasPort#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.svek.ClusterDotString.getSourceInPoint#bdf9f578": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "type",
+            "type": "net.sourceforge.plantuml.skin.UmlDiagramType"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.svek.ClusterDotString.subgraphClusterWithLabel#c7ec6a29": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "sb",
+            "type": "java.lang.StringBuilder"
+          }, {
+            "name": "id",
+            "type": "java.lang.String"
+          }, {
+            "name": "label",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.ClusterDotString.protection1#bdf9f578": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "type",
+            "type": "net.sourceforge.plantuml.skin.UmlDiagramType"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.svek.ClusterDotString.subgraphClusterNoLabel#af164308": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "sb",
+            "type": "java.lang.StringBuilder"
+          }, {
+            "name": "id",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "259",
+        "cyclomatic_complexity": "47",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "315",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

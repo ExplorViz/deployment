@@ -1,0 +1,61 @@
+{
+  "commitID": "078bdc6cfbada99413041d859fdeb3d63685c40b",
+  "fileName": "JpaVisitRepositoryImpl.java",
+  "packageName": "org.springframework.samples.petclinic.repository.jpa",
+  "importName": ["java.util.List", "javax.persistence.EntityManager", "javax.persistence.PersistenceContext", "javax.persistence.Query", "org.springframework.samples.petclinic.model.Visit", "org.springframework.samples.petclinic.repository.VisitRepository", "org.springframework.stereotype.Repository"],
+  "classData": {
+    "org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["org.springframework.samples.petclinic.repository.VisitRepository"],
+      "field": [{
+        "name": "em",
+        "type": "javax.persistence.EntityManager",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl.findByPetId#d7ee193d": {
+          "returnType": "java.util.List\u003corg.springframework.samples.petclinic.model.Visit\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "petId",
+            "type": "java.lang.Integer"
+          }],
+          "annotation": ["java.lang.Override", "java.lang.SuppressWarnings"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl.save#4ed5d4a": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "visit",
+            "type": "org.springframework.samples.petclinic.model.Visit"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "annotation": ["Repository"],
+      "metric": {
+        "loc": "26",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "53",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "antoine.rey@gmail.com",
+  "addedLines": 64
+}

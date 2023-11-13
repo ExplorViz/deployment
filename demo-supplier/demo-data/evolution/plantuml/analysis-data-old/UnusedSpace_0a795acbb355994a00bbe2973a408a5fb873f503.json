@@ -1,0 +1,178 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "UnusedSpace.java",
+  "packageName": "net.sourceforge.plantuml.klimt.font",
+  "importName": ["java.awt.Graphics2D", "java.awt.image.BufferedImage", "java.util.ArrayList", "java.util.Arrays", "java.util.HashMap", "java.util.List", "java.util.Map"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.font.UnusedSpace": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "HALF_SIZE",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "meanX2",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "meanY2",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "points",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.font.UnusedSpace.Point\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "cache",
+        "type": "java.util.Map\u003cjava.lang.Object, net.sourceforge.plantuml.klimt.font.UnusedSpace\u003e",
+        "modifier": ["final", "private", "static"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.klimt.font.UnusedSpace.Point"],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.font.UnusedSpace.getCenterX#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UnusedSpace.getUnusedSpace#95491153": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UnusedSpace",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "font",
+            "type": "net.sourceforge.plantuml.klimt.font.UFont"
+          }, {
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UnusedSpace.isPoint#ed3106db": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "im",
+            "type": "java.awt.image.BufferedImage"
+          }, {
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UnusedSpace.UnusedSpace#95491153": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "font",
+            "type": "net.sourceforge.plantuml.klimt.font.UFont"
+          }, {
+            "name": "c",
+            "type": "char"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "47",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UnusedSpace.biggestDistSqFromPoint#49b658f": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.klimt.font.UnusedSpace.Point"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UnusedSpace.getCenterY#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "113",
+        "cyclomatic_complexity": "14",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "5"
+      }
+    },
+    "net.sourceforge.plantuml.klimt.font.UnusedSpace.Point": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "field": [{
+        "name": "x",
+        "type": "double",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "y",
+        "type": "double",
+        "modifier": ["final", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.font.UnusedSpace.Point.Point#1eef7de1": {
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UnusedSpace.Point.getDistSq#49b658f": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.klimt.font.UnusedSpace.Point"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "15",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "158",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

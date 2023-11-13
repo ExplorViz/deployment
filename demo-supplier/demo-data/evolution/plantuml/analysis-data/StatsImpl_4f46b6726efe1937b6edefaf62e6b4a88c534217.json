@@ -1,0 +1,172 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "StatsImpl.java",
+  "packageName": "net.sourceforge.plantuml.stats",
+  "importName": ["java.util.Date", "java.util.EnumMap", "java.util.Map", "java.util.TreeSet", "net.sourceforge.plantuml.api.NumberAnalyzed", "net.sourceforge.plantuml.stats.api.Stats", "net.sourceforge.plantuml.stats.api.StatsColumn", "net.sourceforge.plantuml.stats.api.StatsLine", "net.sourceforge.plantuml.stats.api.StatsTable"],
+  "classData": {
+    "net.sourceforge.plantuml.stats.StatsImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.stats.api.Stats"],
+      "field": [{
+        "name": "formatCounterCurrent",
+        "type": "net.sourceforge.plantuml.stats.FormatCounter",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "formatCounterEver",
+        "type": "net.sourceforge.plantuml.stats.FormatCounter",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "byTypeEver",
+        "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.stats.ParsedGenerated\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "byTypeCurrent",
+        "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.stats.ParsedGenerated\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fullEver",
+        "type": "net.sourceforge.plantuml.stats.ParsedGenerated",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "historicalData",
+        "type": "net.sourceforge.plantuml.stats.HistoricalData",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.stats.StatsImpl.getAllByDiagramType#1": {
+          "returnType": "net.sourceforge.plantuml.stats.api.StatsTable",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.StatsImpl.getAllByFormat#1": {
+          "returnType": "net.sourceforge.plantuml.stats.api.StatsTable",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.StatsImpl.createLineByDiagramType#6b385c70": {
+          "returnType": "net.sourceforge.plantuml.stats.api.StatsLine",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }, {
+            "name": "parse",
+            "type": "net.sourceforge.plantuml.api.NumberAnalyzed"
+          }, {
+            "name": "generate",
+            "type": "net.sourceforge.plantuml.api.NumberAnalyzed"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.StatsImpl.getCurrentSessionByDiagramType#1": {
+          "returnType": "net.sourceforge.plantuml.stats.api.StatsTable",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.StatsImpl.getLastSessions#1": {
+          "returnType": "net.sourceforge.plantuml.stats.api.StatsTable",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.stats.StatsImpl.getByDiagramType#bb5d6aeb": {
+          "returnType": "net.sourceforge.plantuml.stats.api.StatsTable",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "data",
+            "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.stats.ParsedGenerated\u003e"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.stats.StatsImpl.createDataLineSession#838387d": {
+          "returnType": "net.sourceforge.plantuml.stats.api.StatsLine",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "data",
+            "type": "net.sourceforge.plantuml.stats.ParsedGenerated",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.stats.StatsImpl.StatsImpl#fd971e6b": {
+          "parameter": [{
+            "name": "byTypeEver",
+            "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.stats.ParsedGenerated\u003e"
+          }, {
+            "name": "byTypeCurrent",
+            "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.stats.ParsedGenerated\u003e"
+          }, {
+            "name": "formatCounterCurrent",
+            "type": "net.sourceforge.plantuml.stats.FormatCounter"
+          }, {
+            "name": "formatCounterEver",
+            "type": "net.sourceforge.plantuml.stats.FormatCounter"
+          }, {
+            "name": "historicalData",
+            "type": "net.sourceforge.plantuml.stats.HistoricalData"
+          }, {
+            "name": "fullEver",
+            "type": "net.sourceforge.plantuml.stats.ParsedGenerated"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.StatsImpl.getCurrentSessionByFormat#1": {
+          "returnType": "net.sourceforge.plantuml.stats.api.StatsTable",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "106",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "154",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

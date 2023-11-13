@@ -1,0 +1,104 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "CreoleConverter.java",
+  "packageName": "net.sourceforge.plantuml.stats",
+  "importName": ["java.text.DateFormat", "java.util.ArrayList", "java.util.Collection", "java.util.Date", "java.util.List", "net.sourceforge.plantuml.stats.api.Stats", "net.sourceforge.plantuml.stats.api.StatsColumn", "net.sourceforge.plantuml.stats.api.StatsLine", "net.sourceforge.plantuml.stats.api.StatsTable"],
+  "classData": {
+    "net.sourceforge.plantuml.stats.CreoleConverter": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "formatter",
+        "type": "java.text.DateFormat",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "stats",
+        "type": "net.sourceforge.plantuml.stats.api.Stats",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.stats.CreoleConverter.getCreoleLine#260f627b": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "headers",
+            "type": "java.util.Collection\u003cnet.sourceforge.plantuml.stats.api.StatsColumn\u003e"
+          }, {
+            "name": "line",
+            "type": "net.sourceforge.plantuml.stats.api.StatsLine"
+          }, {
+            "name": "bold",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.stats.CreoleConverter.printTableCreole#3a29d301": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "table",
+            "type": "net.sourceforge.plantuml.stats.api.StatsTable"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.stats.CreoleConverter.CreoleConverter#4c7d49e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stats",
+            "type": "net.sourceforge.plantuml.stats.api.Stats"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.CreoleConverter.toCreole#1": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.stats.CreoleConverter.getCreoleHeader#e764fe86": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "headers",
+            "type": "java.util.Collection\u003cnet.sourceforge.plantuml.stats.api.StatsColumn\u003e"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "82",
+        "cyclomatic_complexity": "13",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "130",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

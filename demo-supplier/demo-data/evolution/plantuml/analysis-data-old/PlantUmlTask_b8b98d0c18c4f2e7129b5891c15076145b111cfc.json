@@ -1,0 +1,485 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "PlantUmlTask.java",
+  "packageName": "net.sourceforge.plantuml.ant",
+  "importName": ["java.io.File", "java.io.IOException", "java.util.ArrayList", "java.util.Collection", "java.util.List", "java.util.concurrent.Callable", "java.util.concurrent.ExecutorService", "java.util.concurrent.Executors", "java.util.concurrent.TimeUnit", "java.util.concurrent.atomic.AtomicInteger", "org.apache.tools.ant.BuildException", "org.apache.tools.ant.DirectoryScanner", "org.apache.tools.ant.Task", "org.apache.tools.ant.types.FileList", "org.apache.tools.ant.types.FileSet", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.GeneratedImage", "net.sourceforge.plantuml.Option", "net.sourceforge.plantuml.OptionFlags", "net.sourceforge.plantuml.SourceFileReader", "net.sourceforge.plantuml.Splash", "net.sourceforge.plantuml.dot.GraphvizUtils", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.preproc.Defines", "net.sourceforge.plantuml.stats.StatsUtils"],
+  "classData": {
+    "net.sourceforge.plantuml.ant.PlantUmlTask.processingSingleFile#2169bb.Callable\u003cBoolean\u003e": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.ant.PlantUmlTask.processingSingleFile#2169bb.Callable\u003cBoolean\u003e.call#1": {
+          "returnType": "java.lang.Boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.ant.PlantUmlTask": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "dir",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "option",
+        "type": "net.sourceforge.plantuml.Option",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "filesets",
+        "type": "java.util.ArrayList\u003corg.apache.tools.ant.types.FileSet\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "filelists",
+        "type": "java.util.ArrayList\u003corg.apache.tools.ant.types.FileList\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "nbFiles",
+        "type": "java.util.concurrent.atomic.AtomicInteger",
+        "modifier": ["private"]
+      }, {
+        "name": "executorService",
+        "type": "java.util.concurrent.ExecutorService",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.ant.PlantUmlTask.eventuallyFailfast#2169bb": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "error",
+            "type": "java.io.File",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setXmlStats#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setKeepTmpFiles#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setSplash#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.manageFileList#d7ff6079": {
+          "returnType": "java.io.File",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "fl",
+            "type": "org.apache.tools.ant.types.FileList"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setOutput#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setCheckOnly#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setGraphvizDot#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setDebugSvek#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setHtmlStats#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.processingSingleDirectory#2169bb": {
+          "returnType": "java.io.File",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "dir",
+            "type": "java.io.File"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setVerbose#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setFailFast2#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setFormat#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "41",
+            "cyclomatic_complexity": "13",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.myLog#943a4c50": {
+          "returnType": "void",
+          "modifier": ["private", "synchronized"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setOverwrite#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setConfig#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setDir#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setNbThreads#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setCharset#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setEnableStats#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.processingSingleFile#2169bb": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "f",
+            "type": "java.io.File",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.addFilelist#d7ff6079": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "list",
+            "type": "org.apache.tools.ant.types.FileList"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setRealTimeStats#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.doFile#24c25d9f": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "f",
+            "type": "java.io.File",
+            "modifier": ["final "]
+          }, {
+            "name": "sourceFileReader",
+            "type": "net.sourceforge.plantuml.SourceFileReader",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setFileSeparator#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.execute#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "39",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setFailFast#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.fileToProcess#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.manageFileSet#30422545": {
+          "returnType": "java.io.File",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "fs",
+            "type": "org.apache.tools.ant.types.FileSet"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.setNbThread#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ant.PlantUmlTask.addFileset#30422545": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "set",
+            "type": "org.apache.tools.ant.types.FileSet"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "org.apache.tools.ant.Task",
+      "metric": {
+        "loc": "331",
+        "cyclomatic_complexity": "53",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "12"
+      }
+    }
+  },
+  "metric": {
+    "loc": "398",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

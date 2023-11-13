@@ -1,0 +1,503 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "AbstractMessage.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram",
+  "importName": ["java.util.ArrayList", "java.util.EnumSet", "java.util.HashSet", "java.util.List", "java.util.Set", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.skin.ArrowConfiguration", "net.sourceforge.plantuml.stereo.Stereotype", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleBuilder", "net.sourceforge.plantuml.style.StyleSignature", "net.sourceforge.plantuml.style.StyleSignatureBasic", "net.sourceforge.plantuml.style.WithStyle", "net.sourceforge.plantuml.url.Url"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.AbstractMessage": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "interface": ["net.sourceforge.plantuml.sequencediagram.EventWithDeactivate", "net.sourceforge.plantuml.style.WithStyle", "net.sourceforge.plantuml.sequencediagram.EventWithNote"],
+      "field": [{
+        "name": "stereotype",
+        "type": "net.sourceforge.plantuml.stereo.Stereotype",
+        "modifier": ["private"]
+      }, {
+        "name": "label",
+        "type": "net.sourceforge.plantuml.klimt.creole.Display",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "arrowConfiguration",
+        "type": "net.sourceforge.plantuml.skin.ArrowConfiguration",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "lifeEventsType",
+        "type": "java.util.Set\u003cnet.sourceforge.plantuml.sequencediagram.LifeEventType\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "url",
+        "type": "net.sourceforge.plantuml.url.Url",
+        "modifier": ["private"]
+      }, {
+        "name": "messageNumber",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "parallel",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "parallelBrother",
+        "type": "net.sourceforge.plantuml.sequencediagram.AbstractMessage",
+        "modifier": ["private"]
+      }, {
+        "name": "styleBuilder",
+        "type": "net.sourceforge.plantuml.style.StyleBuilder",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "noteOnMessages",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.Note\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "firstIsActivate",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "noActivationAuthorized2",
+        "type": "java.util.Set\u003cnet.sourceforge.plantuml.sequencediagram.Participant\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "posYendLevel",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "posYstartLevel",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "anchor",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "anchor1",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "anchor2",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getMessageNumber#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.addLifeEvent#63c4f0fd": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "lifeEvent",
+            "type": "net.sourceforge.plantuml.sequencediagram.LifeEvent"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getPart1Anchor#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.isCreate#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getPart2Anchor#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getStyleSignature#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignature",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getPosYstartLevel#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.setParallelBrother#cb465584": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "brother",
+            "type": "net.sourceforge.plantuml.sequencediagram.AbstractMessage"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.isSelfMessage#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "abstract"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.addNote#252431": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "note",
+            "type": "net.sourceforge.plantuml.sequencediagram.Note"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getLabelNumbered#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Display",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getNoteOnMessages#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.Note\u003e",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getArrowConfiguration#1": {
+          "returnType": "net.sourceforge.plantuml.skin.ArrowConfiguration",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.setAnchor#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "anchor",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.isActivate#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Deprecated"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.isDestroy#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.hasUrl#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getLabel#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Display",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.compatibleForCreate#91279732": {
+          "returnType": "boolean",
+          "modifier": ["public", "abstract"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.sequencediagram.Participant"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.overrideNotePosition#47fdef7a": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.NotePosition",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "notePosition",
+            "type": "net.sourceforge.plantuml.sequencediagram.NotePosition"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getUsedStyles#1": {
+          "returnType": "Style[]",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.isParallel#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getAnchor#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.goParallel#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getParticipant1#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.Participant",
+          "modifier": ["public", "abstract"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getUrl#1": {
+          "returnType": "net.sourceforge.plantuml.url.Url",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.isDeactivateOrDestroy#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "annotation": ["java.lang.Deprecated"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.setUrl#14d6e": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "url",
+            "type": "net.sourceforge.plantuml.url.Url"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.setPosYendLevel#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "posYendLevel",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getParticipant2#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.Participant",
+          "modifier": ["public", "abstract"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.setPart2Anchor#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "anchor",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.setPosYstartLevel#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "posYstartLevel",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getPosYendLevel#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.AbstractMessage#a0f190dd": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "styleBuilder",
+            "type": "net.sourceforge.plantuml.style.StyleBuilder"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "arrowConfiguration",
+            "type": "net.sourceforge.plantuml.skin.ArrowConfiguration"
+          }, {
+            "name": "messageNumber",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.isDeactivate#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Deprecated"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.isActivateAndDeactive#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.getStereotype#9fdb4771": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.AbstractMessage.setPart1Anchor#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "anchor",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.sequencediagram.AbstractEvent",
+      "metric": {
+        "loc": "223",
+        "cyclomatic_complexity": "15",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "9"
+      }
+    }
+  },
+  "metric": {
+    "loc": "278",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

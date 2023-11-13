@@ -1,0 +1,343 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "BrailleGrid.java",
+  "packageName": "net.sourceforge.plantuml.braille",
+  "importName": ["java.util.HashSet", "java.util.List", "java.util.Set", "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.DotPath"],
+  "classData": {
+    "net.sourceforge.plantuml.braille.BrailleGrid": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "minX",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "minY",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "maxX",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "maxY",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "quanta",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "on",
+        "type": "java.util.Set\u003cnet.sourceforge.plantuml.braille.Coords\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.braille.BrailleGrid.rectangle#3ff703c1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "width",
+            "type": "double"
+          }, {
+            "name": "height",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.vline#6ff7ba10": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y1",
+            "type": "double"
+          }, {
+            "name": "y2",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.drawPointInternal#bfbf7aa9": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "pt",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.drawLineInternal#17e79101": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "a",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "b",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.drawDotPath#901a672d": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.DotPath"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.toInt#b0f77bf0": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "value",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.getState#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.drawCubic#f2b7c38e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "bez",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.setState#a089ea7": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }, {
+            "name": "state",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.line#3ff703c1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "y1",
+            "type": "double"
+          }, {
+            "name": "x2",
+            "type": "double"
+          }, {
+            "name": "y2",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.getMaxY#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.hline#6ff7ba10": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "x2",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.BrailleGrid#b0f77bf0": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "quanta",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.getMaxX#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.getMinY#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.setStateDouble#c2dbaa67": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "state",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.getMinX#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.getQuanta#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.braille.BrailleGrid.drawPolygon#2662a3b5": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "points",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.geom.XPoint2D\u003e"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "139",
+        "cyclomatic_complexity": "12",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "184",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

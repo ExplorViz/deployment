@@ -1,0 +1,126 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "USegment.java",
+  "packageName": "net.sourceforge.plantuml.klimt.geom",
+  "importName": ["java.awt.geom.AffineTransform", "java.util.Arrays"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.geom.USegment": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "coord",
+        "type": "double[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "pathType",
+        "type": "net.sourceforge.plantuml.klimt.geom.USegmentType",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.geom.USegment.rotate#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.USegment",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "theta",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.USegment.USegment#888c6ca6": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "coord",
+            "type": "double[]"
+          }, {
+            "name": "pathType",
+            "type": "net.sourceforge.plantuml.klimt.geom.USegmentType"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.USegment.getCoord#1": {
+          "returnType": "double[]",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.USegment.getSegmentType#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.USegmentType",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.USegment.translate#1eef7de1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.USegment",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dx",
+            "type": "double"
+          }, {
+            "name": "dy",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.USegment.affine#5d31adec": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.USegment",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "transform",
+            "type": "java.awt.geom.AffineTransform"
+          }, {
+            "name": "angle",
+            "type": "double"
+          }, {
+            "name": "scale",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.USegment.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "69",
+        "cyclomatic_complexity": "8",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "109",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

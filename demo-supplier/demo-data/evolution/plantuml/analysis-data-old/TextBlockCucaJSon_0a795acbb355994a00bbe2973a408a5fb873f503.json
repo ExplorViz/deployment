@@ -1,0 +1,344 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "TextBlockCucaJSon.java",
+  "packageName": "net.sourceforge.plantuml.cucadiagram",
+  "importName": ["net.sourceforge.plantuml.json.JsonArray", "net.sourceforge.plantuml.json.JsonObject", "net.sourceforge.plantuml.json.JsonValue", "net.sourceforge.plantuml.klimt.LineBreakStrategy", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.creole.CreoleMode", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlockUtils", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.svek.Ports", "net.sourceforge.plantuml.svek.WithPorts"],
+  "classData": {
+    "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.svek.WithPorts"],
+      "field": [{
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fontConfiguration",
+        "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "json",
+        "type": "net.sourceforge.plantuml.json.JsonValue",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "jsonTextBlock",
+        "type": "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockJson",
+        "modifier": ["private"]
+      }, {
+        "name": "mainTotalWidth",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "wordWrap",
+        "type": "net.sourceforge.plantuml.klimt.LineBreakStrategy",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockJson", "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockArray"],
+      "methodData": {
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.getFontConfiguration#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.setTotalWidth#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "totalWidth",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.getJsonTextBlock#1": {
+          "returnType": "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockJson",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.getTextBlock#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockCucaJSon#4c63416": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fontConfiguration",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "json",
+            "type": "net.sourceforge.plantuml.json.JsonValue"
+          }, {
+            "name": "wordWrap",
+            "type": "net.sourceforge.plantuml.klimt.LineBreakStrategy"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.getTextBlockValue#46ca8369": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "value",
+            "type": "net.sourceforge.plantuml.json.JsonValue"
+          }, {
+            "name": "width2",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.getPorts#395b4159": {
+          "returnType": "net.sourceforge.plantuml.svek.Ports",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock",
+      "metric": {
+        "loc": "173",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "5"
+      }
+    },
+    "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockArray": {
+      "type": "CLASS",
+      "field": [{
+        "name": "array",
+        "type": "net.sourceforge.plantuml.json.JsonArray",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "arrayTotalWidth",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockArray.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockArray.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockArray.TextBlockArray#23e6bf81": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "array",
+            "type": "net.sourceforge.plantuml.json.JsonArray"
+          }, {
+            "name": "totalWidth",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock",
+      "metric": {
+        "loc": "36",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockJson": {
+      "type": "CLASS",
+      "field": [{
+        "name": "obj",
+        "type": "net.sourceforge.plantuml.json.JsonObject",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "jsonTotalWidth",
+        "type": "double",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockJson.TextBlockJson#46ca8369": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "json",
+            "type": "net.sourceforge.plantuml.json.JsonValue"
+          }, {
+            "name": "totalWidth",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockJson.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockJson.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockJson.getWidth1#395b4159": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockJson.getHeight#395b4159": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.TextBlockCucaJSon.TextBlockJson.getWidth2#395b4159": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock",
+      "metric": {
+        "loc": "66",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "230",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,414 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "TimingRuler.java",
+  "packageName": "net.sourceforge.plantuml.timingdiagram",
+  "importName": ["java.math.BigDecimal", "java.util.Collection", "java.util.Comparator", "java.util.Map", "java.util.Map.Entry", "java.util.Set", "java.util.SortedSet", "java.util.TreeSet", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleSignatureBasic"],
+  "classData": {
+    "net.sourceforge.plantuml.timingdiagram.TimingRuler": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "times",
+        "type": "java.util.SortedSet\u003cnet.sourceforge.plantuml.timingdiagram.TimeTick\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "tickIntervalInPixels",
+        "type": "long",
+        "modifier": ["private"]
+      }, {
+        "name": "tickUnitary",
+        "type": "long",
+        "modifier": ["private"]
+      }, {
+        "name": "format",
+        "type": "net.sourceforge.plantuml.timingdiagram.TimingFormat",
+        "modifier": ["private"]
+      }, {
+        "name": "highestCommonFactorInternal",
+        "type": "long",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getStyleTimegrid#1": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getMin#1": {
+          "returnType": "net.sourceforge.plantuml.timingdiagram.TimeTick",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.drawTimeAxisManual#b3a5d367": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "codes",
+            "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.timingdiagram.TimeTick\u003e"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.highestCommonFactor#1": {
+          "returnType": "long",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.roundValues#1": {
+          "returnType": "java.util.Collection\u003cjava.lang.Long\u003e",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.tickToTime#1980e": {
+          "returnType": "long",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "i",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getPosInPixel#88084e49": {
+          "returnType": "double",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "when",
+            "type": "net.sourceforge.plantuml.timingdiagram.TimeTick"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getMax#1": {
+          "returnType": "net.sourceforge.plantuml.timingdiagram.TimeTick",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.ensureNotEmpty#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.addTime#88084e49": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "time",
+            "type": "net.sourceforge.plantuml.timingdiagram.TimeTick"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.TimingRuler#98f78ae6": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.drawTimeAxis#bf9013f6": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "timeAxisStategy",
+            "type": "net.sourceforge.plantuml.timingdiagram.TimeAxisStategy"
+          }, {
+            "name": "codes",
+            "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.timingdiagram.TimeTick\u003e"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.applyForVLines#7b1ecbc8": {
+          "returnType": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "style",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.tickUnitary#1": {
+          "returnType": "long",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getStyleTimeline#1": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getAbsolutesTicks#1": {
+          "returnType": "java.util.Set\u003cjava.lang.Long\u003e",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.drawTimeAxisAutomatic#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getTimeTextBlock#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "string",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getNbTick#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getTimeTextBlock#32c69b": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "time",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.drawVlines#f58b691f": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "height",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.computeHighestCommonFactor#658d341": {
+          "returnType": "long",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "a",
+            "type": "long"
+          }, {
+            "name": "b",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getHeight#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.scaleInPixels#658d341": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "tick",
+            "type": "long"
+          }, {
+            "name": "pixel",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getFirstPositiveOrZeroValue#1": {
+          "returnType": "java.math.BigDecimal",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getWidth#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getLabel#e81360f0": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "tick",
+            "type": "net.sourceforge.plantuml.timingdiagram.TimeTick"
+          }, {
+            "name": "codes",
+            "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.timingdiagram.TimeTick\u003e"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getPosInPixelInternal#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "time",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "266",
+        "cyclomatic_complexity": "35",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.timingdiagram.TimingRuler.getAbsolutesTicks#1.Comparator\u003cLong\u003e": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.timingdiagram.TimingRuler.getAbsolutesTicks#1.Comparator\u003cLong\u003e.compare#4875741": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "o1",
+            "type": "java.lang.Long"
+          }, {
+            "name": "o2",
+            "type": "java.lang.Long"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "328",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,70 @@
+{
+  "commitID": "89d0e24488af04f0c0a0d2172186d0ce2a3c3cdd",
+  "fileName": "VetController.java",
+  "packageName": "org.springframework.samples.petclinic.web",
+  "importName": ["java.util.Map", "org.springframework.beans.factory.annotation.Autowired", "org.springframework.http.MediaType", "org.springframework.samples.petclinic.model.Vets", "org.springframework.samples.petclinic.service.ClinicService", "org.springframework.stereotype.Controller", "org.springframework.web.bind.annotation.RequestMapping", "org.springframework.web.bind.annotation.ResponseBody"],
+  "classData": {
+    "org.springframework.samples.petclinic.web.VetController": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "clinicService",
+        "type": "org.springframework.samples.petclinic.service.ClinicService",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.web.VetController.showResourcesVetList#1": {
+          "returnType": "org.springframework.samples.petclinic.model.Vets",
+          "modifier": ["public"],
+          "annotation": ["RequestMapping", "ResponseBody"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.VetController.showVetList#b6c3b8e3": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "model",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e"
+          }],
+          "annotation": ["RequestMapping"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.VetController.VetController#8a3aa4ac": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "clinicService",
+            "type": "org.springframework.samples.petclinic.service.ClinicService"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Controller"],
+      "metric": {
+        "loc": "30",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "57",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "antoine.rey@gmail.com",
+  "modifiedLines": 2,
+  "addedLines": 1
+}

@@ -1,0 +1,110 @@
+{
+  "commitID": "09ed33a5fc01209b4190c74f405b2b1e523b739c",
+  "fileName": "CallMonitoringAspect.java",
+  "packageName": "org.springframework.samples.petclinic.util",
+  "importName": ["org.aspectj.lang.ProceedingJoinPoint", "org.aspectj.lang.annotation.Around", "org.aspectj.lang.annotation.Aspect", "org.springframework.jmx.export.annotation.ManagedAttribute", "org.springframework.jmx.export.annotation.ManagedOperation", "org.springframework.jmx.export.annotation.ManagedResource", "org.springframework.util.StopWatch"],
+  "classData": {
+    "org.springframework.samples.petclinic.util.CallMonitoringAspect": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "enabled",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "callCount",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "accumulatedCallTime",
+        "type": "long",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.util.CallMonitoringAspect.setEnabled#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "enabled",
+            "type": "boolean"
+          }],
+          "annotation": ["ManagedAttribute"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.util.CallMonitoringAspect.reset#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["ManagedOperation"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.util.CallMonitoringAspect.invoke#835cc871": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "joinPoint",
+            "type": "org.aspectj.lang.ProceedingJoinPoint"
+          }],
+          "annotation": ["Around"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.springframework.samples.petclinic.util.CallMonitoringAspect.getCallTime#1": {
+          "returnType": "long",
+          "modifier": ["public"],
+          "annotation": ["ManagedAttribute"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.util.CallMonitoringAspect.isEnabled#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["ManagedAttribute"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.util.CallMonitoringAspect.getCallCount#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["ManagedAttribute"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["ManagedResource", "Aspect"],
+      "metric": {
+        "loc": "61",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "86",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "antoine.rey@free.fr",
+  "modifiedLines": 6,
+  "addedLines": 5,
+  "deletedLines": 6
+}

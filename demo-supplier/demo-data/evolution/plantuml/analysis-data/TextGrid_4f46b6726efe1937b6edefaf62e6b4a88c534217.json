@@ -1,0 +1,2612 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "TextGrid.java",
+  "packageName": "org.stathissideris.ascii2image.text",
+  "importName": ["java.awt.Color", "java.io.UnsupportedEncodingException", "java.util.ArrayList", "java.util.Collection", "java.util.HashMap", "java.util.HashSet", "java.util.Iterator", "java.util.Stack", "java.util.regex.Matcher", "java.util.regex.Pattern", "org.stathissideris.ascii2image.core.ProcessingOptions"],
+  "classData": {
+    "org.stathissideris.ascii2image.text.TextGrid.Cell": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "x",
+        "type": "int",
+        "modifier": ["public"]
+      }, {
+        "name": "y",
+        "type": "int",
+        "modifier": ["public"]
+      }],
+      "methodData": {
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.isSouthOf#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.Cell#3301a1": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.getSE#1": {
+          "returnType": "org.stathissideris.ascii2image.text.TextGrid.Cell",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.getNE#1": {
+          "returnType": "org.stathissideris.ascii2image.text.TextGrid.Cell",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.getSouth#1": {
+          "returnType": "org.stathissideris.ascii2image.text.TextGrid.Cell",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.getWest#1": {
+          "returnType": "org.stathissideris.ascii2image.text.TextGrid.Cell",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.scale#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.isEastOf#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.isNextTo#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.getEast#1": {
+          "returnType": "org.stathissideris.ascii2image.text.TextGrid.Cell",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.isWestOf#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.getSW#1": {
+          "returnType": "org.stathissideris.ascii2image.text.TextGrid.Cell",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.Cell#1ffda1": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.equals#8c658f7e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "o",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.getNeighbours4#1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.isNorthOf#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.getNW#1": {
+          "returnType": "org.stathissideris.ascii2image.text.TextGrid.Cell",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.hashCode#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.getNeighbours8#1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.getNorth#1": {
+          "returnType": "org.stathissideris.ascii2image.text.TextGrid.Cell",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.Cell.isNextTo#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x2",
+            "type": "int"
+          }, {
+            "name": "y2",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "105",
+        "cyclomatic_complexity": "12",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "4"
+      }
+    },
+    "org.stathissideris.ascii2image.text.TextGrid.CellColorPair": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "color",
+        "type": "java.awt.Color",
+        "modifier": ["public"]
+      }, {
+        "name": "cell",
+        "type": "org.stathissideris.ascii2image.text.TextGrid.Cell",
+        "modifier": ["public"]
+      }],
+      "methodData": {
+        "org.stathissideris.ascii2image.text.TextGrid.CellColorPair.CellColorPair#7c3f5c2": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "color",
+            "type": "java.awt.Color"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "8",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "org.stathissideris.ascii2image.text.TextGrid.CellStringPair": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "cell",
+        "type": "org.stathissideris.ascii2image.text.TextGrid.Cell",
+        "modifier": ["public"]
+      }, {
+        "name": "string",
+        "type": "java.lang.String",
+        "modifier": ["public"]
+      }],
+      "methodData": {
+        "org.stathissideris.ascii2image.text.TextGrid.CellStringPair.CellStringPair#981a02b0": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "string",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "8",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "org.stathissideris.ascii2image.text.TextGrid.LineSegment": {
+      "type": "CLASS",
+      "modifier": ["private"],
+      "field": [{
+        "name": "x1",
+        "type": "int"
+      }, {
+        "name": "x2",
+        "type": "int"
+      }, {
+        "name": "y",
+        "type": "int"
+      }, {
+        "name": "dy",
+        "type": "int"
+      }],
+      "methodData": {
+        "org.stathissideris.ascii2image.text.TextGrid.LineSegment.LineSegment#bfac1b41": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x1",
+            "type": "int"
+          }, {
+            "name": "x2",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }, {
+            "name": "dy",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "9",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "org.stathissideris.ascii2image.text.TextGrid": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "DEBUG",
+        "type": "boolean",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "rows",
+        "type": "java.util.ArrayList\u003cjava.lang.StringBuffer\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "boundaries",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "undisputableBoundaries",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "horizontalLines",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "verticalLines",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "arrowHeads",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "cornerChars",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "pointMarkers",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "dashedLines",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "entryPoints1",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "entryPoints2",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "entryPoints3",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "entryPoints4",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "entryPoints5",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "entryPoints6",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "entryPoints7",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "entryPoints8",
+        "type": "char[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "humanColorCodes",
+        "type": "java.util.HashMap\u003cjava.lang.String, java.lang.String\u003e",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "markupTags",
+        "type": "java.util.HashSet\u003cjava.lang.String\u003e",
+        "modifier": ["private", "static"]
+      }],
+      "innerClass": ["org.stathissideris.ascii2image.text.TextGrid.CellColorPair", "org.stathissideris.ascii2image.text.TextGrid.CellStringPair", "org.stathissideris.ascii2image.text.TextGrid.CellTagPair", "org.stathissideris.ascii2image.text.TextGrid.Cell", "org.stathissideris.ascii2image.text.TextGrid.LineSegment"],
+      "methodData": {
+        "org.stathissideris.ascii2image.text.TextGrid.getSouthOf#3301a1": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followCorner1#1ffda1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followCorner1#3ffb401": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "blocked",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isK#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.replaceTypeOnLine#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "8"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followCorner4#1ffda1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.equals#c8024a52": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "grid",
+            "type": "org.stathissideris.ascii2image.text.TextGrid"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isOnHorizontalLine#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followCorner2#1ffda1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followCorner3#1ffda1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followLine#3301a1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isOnVerticalLine#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.matchesAll#5ef53f74": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "criteria",
+            "type": "org.stathissideris.ascii2image.text.GridPatternGroup"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isLine#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.writeStringTo#981a02b0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "str",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.removeArrowheads#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isT#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.copyCellsTo#952afe74": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cells",
+            "type": "org.stathissideris.ascii2image.text.CellSet"
+          }, {
+            "name": "grid",
+            "type": "org.stathissideris.ascii2image.text.TextGrid"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isLinesEnd#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isBullet#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isStringsEnd#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.replaceHumanColorCodes#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.hasEntryPoint#3e14e6e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "entryPointId",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "29",
+            "cyclomatic_complexity": "15",
+            "nestedBlockDepth": "9"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.setRow#946bb5e3": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "y",
+            "type": "int"
+          }, {
+            "name": "row",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getStringAt#3e14e6e": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "length",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isIntersection#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.removeMarkupTags#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isNormalCorner#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followCell#1ffda1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isCorner3#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isCorner1#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getHeight#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followStub#3ffb401": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "blocked",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getWidth#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getSubGrid#bfac1b41": {
+          "returnType": "org.stathissideris.ascii2image.text.TextGrid",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }, {
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.fillCellsWith#9d80c5": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cells",
+            "type": "java.lang.Iterable"
+          }, {
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getWestOf#1ffda1": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followLine#3ffb401": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "blocked",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.findMarkupTags#1": {
+          "returnType": "java.util.ArrayList\u003corg.stathissideris.ascii2image.text.TextGrid.CellTagPair\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isVerticalStarOnLine#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isBlank#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.TextGrid#c8024a52": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "otherGrid",
+            "type": "org.stathissideris.ascii2image.text.TextGrid"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.clear#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.set#40e49d5": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.findArrowheads#1": {
+          "returnType": "java.util.ArrayList",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isArrowhead#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followCell#3ffb401": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "blocked",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.cellContainsDashedLineChar#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getEastOf#3301a1": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.seedFill#40e49d5": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "seed",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "newChar",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "29",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followCorner2#3ffb401": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "blocked",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getNorthOf#3301a1": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followStub#1ffda1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isBoundary#2e9375": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.hasBlankCells#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.findBoundariesExpandingFrom#1ffda1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "seed",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "36",
+            "cyclomatic_complexity": "14",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isCorner#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isOutOfBounds#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.printDebug#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.containsAtLeastOneDashedLine#8abf3f9f": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "set",
+            "type": "org.stathissideris.ascii2image.text.CellSet"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isColumnBlank#1980e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isNormalCorner#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.get#3301a1": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isStringsStart#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getAllBlanksBetweenCharacters#1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getAllNonBlank#1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isHorizontalLine#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isVerticalLine#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.findStrings#1": {
+          "returnType": "java.util.ArrayList\u003corg.stathissideris.ascii2image.text.TextGrid.CellStringPair\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isVerticalLinesEnd#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followIntersection#3ffb401": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "blocked",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getRow#1980e": {
+          "returnType": "java.lang.StringBuffer",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isBoundary#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isCrossOnLine#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isBullet#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isCorner2#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isInverseK#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isEastArrowhead#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.matchesAny#5ef53f74": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "criteria",
+            "type": "org.stathissideris.ascii2image.text.GridPatternGroup"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.otherStringsEndInTheSameColumn#1ffda1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.set#65bc5d5": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }, {
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.exactlyOneNeighbourIsBoundary#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followCorner#1ffda1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.replaceAll#5d26e81": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "c1",
+            "type": "char"
+          }, {
+            "name": "c2",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followCorner3#3ffb401": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "blocked",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getAllBoundaries#1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isHorizontalLine#2e9375": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isStub#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isOnVerticalLine#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isLoneDiagonal#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getTestingSubGrid#1ffda1": {
+          "returnType": "org.stathissideris.ascii2image.text.TextGrid",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.replaceBullets#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.seedFillOld#40e49d5": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "seed",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "newChar",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isPointCell#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.otherStringsStartInTheSameColumn#1ffda1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followCrossOnLine#3ffb401": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "blocked",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isRoundCorner#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getSouthOf#1ffda1": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.fillContinuousArea#65bc5d5": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }, {
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isSouthArrowhead#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.seedFillLine#40e49d5": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "newChar",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "51",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.setRow#f1d48d83": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "y",
+            "type": "int"
+          }, {
+            "name": "row",
+            "type": "java.lang.StringBuffer"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.removeNonText#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.removeBoundaries#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.TextGrid#3301a1": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.get#1ffda1": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isHorizontalLinesEnd#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getWestOf#3301a1": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isIntersection#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.matchesAny#62d4f5d4": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "criteria",
+            "type": "org.stathissideris.ascii2image.text.GridPatternGroup"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isInverseT#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isWestArrowhead#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isVerticalCrossOnLine#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.add#c8024a52": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "grid",
+            "type": "org.stathissideris.ascii2image.text.TextGrid"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isNorthArrowhead#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followIntersection#1ffda1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isHorizontalStarOnLine#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isBlank#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getPointMarkersOnLine#1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getEastOf#1ffda1": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followCorner4#3ffb401": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "blocked",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isOutOfBounds#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.fillContinuousArea#40e49d5": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.initialiseWithLines#a9310aa4": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "lines",
+            "type": "java.util.ArrayList\u003cjava.lang.StringBuffer\u003e"
+          }, {
+            "name": "options",
+            "type": "org.stathissideris.ascii2image.core.ProcessingOptions"
+          }],
+          "metric": {
+            "loc": "67",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.initialiseWithText#271be19b": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "text",
+            "type": "java.lang.String"
+          }, {
+            "name": "options",
+            "type": "org.stathissideris.ascii2image.core.ProcessingOptions"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.findColorCodes#1": {
+          "returnType": "java.util.ArrayList\u003corg.stathissideris.ascii2image.text.TextGrid.CellColorPair\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.writeStringTo#9a677eb0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }, {
+            "name": "str",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isHorizontalLine#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isCross#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getDebugString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.addToMarkupTags#527dab4e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "tags",
+            "type": "java.util.Collection\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getCellTypeAsString#1ffda1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.fixTabs#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "tabSize",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getNorthOf#1ffda1": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isBlankBetweenCharacters#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isLinesEnd#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isVerticalLine#2e9375": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isCorner#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isHorizontalCrossOnLine#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isCorner4#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.replacePointMarkersOnLine#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "36",
+            "cyclomatic_complexity": "15",
+            "nestedBlockDepth": "8"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isVerticalLine#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isRoundCorner#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.matches#ac3a8569": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "criteria",
+            "type": "org.stathissideris.ascii2image.text.GridPattern"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getRows#1": {
+          "returnType": "java.util.ArrayList\u003cjava.lang.StringBuffer\u003e",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.makeSameSizeAs#c8024a52": {
+          "returnType": "org.stathissideris.ascii2image.text.TextGrid",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "grid",
+            "type": "org.stathissideris.ascii2image.text.TextGrid"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isOnHorizontalLine#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.removeColorCodes#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.getStringAt#62eca6e": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }, {
+            "name": "length",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isStarOnLine#1ffda1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followCorner#3ffb401": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "blocked",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.isBoundary#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.TextGrid#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.text.TextGrid.followLine#1ffda1": {
+          "returnType": "org.stathissideris.ascii2image.text.CellSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "1550",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "37"
+      }
+    },
+    "org.stathissideris.ascii2image.text.TextGrid.CellTagPair": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "cell",
+        "type": "org.stathissideris.ascii2image.text.TextGrid.Cell",
+        "modifier": ["public"]
+      }, {
+        "name": "tag",
+        "type": "java.lang.String",
+        "modifier": ["public"]
+      }],
+      "methodData": {
+        "org.stathissideris.ascii2image.text.TextGrid.CellTagPair.CellTagPair#981a02b0": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "tag",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "8",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "1587",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,241 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "LatexBuilder.java",
+  "packageName": "net.sourceforge.plantuml.math",
+  "importName": ["java.awt.Color", "java.awt.Graphics2D", "java.awt.image.BufferedImage", "java.io.IOException", "java.lang.reflect.InvocationTargetException", "javax.swing.Icon", "net.sourceforge.plantuml.klimt.MutableImage", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.UImageSvg"],
+  "classData": {
+    "net.sourceforge.plantuml.math.LatexBuilder.LatexImage": {
+      "type": "CLASS",
+      "interface": ["net.sourceforge.plantuml.klimt.MutableImage"],
+      "field": [{
+        "name": "scale",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "icon",
+        "type": "javax.swing.Icon",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "foregroundColor",
+        "type": "java.awt.Color",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "backgroundColor",
+        "type": "java.awt.Color",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "cache",
+        "type": "java.awt.image.BufferedImage",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.math.LatexBuilder.LatexImage.getImage#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.math.LatexBuilder.LatexImage.monochrome#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.MutableImage",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.LatexBuilder.LatexImage.getScale#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.LatexBuilder.LatexImage.muteColor#3e43f62": {
+          "returnType": "net.sourceforge.plantuml.klimt.MutableImage",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newColor",
+            "type": "java.awt.Color"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.LatexBuilder.LatexImage.LatexImage#9282a839": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "icon",
+            "type": "javax.swing.Icon"
+          }, {
+            "name": "scale",
+            "type": "double"
+          }, {
+            "name": "foregroundColor",
+            "type": "java.awt.Color"
+          }, {
+            "name": "backgroundColor",
+            "type": "java.awt.Color"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.LatexBuilder.LatexImage.muteTransparentColor#3e43f62": {
+          "returnType": "net.sourceforge.plantuml.klimt.MutableImage",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newColor",
+            "type": "java.awt.Color"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.LatexBuilder.LatexImage.withScale#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.klimt.MutableImage",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "scale",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "56",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.math.LatexBuilder": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.math.ScientificEquation"],
+      "field": [{
+        "name": "tex",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "dimension",
+        "type": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+        "modifier": ["private"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.math.LatexBuilder.LatexImage"],
+      "methodData": {
+        "net.sourceforge.plantuml.math.LatexBuilder.LatexBuilder#943a4c50": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "tex",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.LatexBuilder.getDimension#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.LatexBuilder.getSource#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.LatexBuilder.getImage#7c87ec21": {
+          "returnType": "net.sourceforge.plantuml.klimt.MutableImage",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "foregroundColor",
+            "type": "java.awt.Color"
+          }, {
+            "name": "backgroundColor",
+            "type": "java.awt.Color"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.LatexBuilder.getSvg#cd902850": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UImageSvg",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "scale",
+            "type": "double"
+          }, {
+            "name": "foregroundColor",
+            "type": "java.awt.Color"
+          }, {
+            "name": "backgroundColor",
+            "type": "java.awt.Color"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.LatexBuilder.buildIcon#3e43f62": {
+          "returnType": "javax.swing.Icon",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "foregroundColor",
+            "type": "java.awt.Color"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "99",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "148",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

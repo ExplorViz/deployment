@@ -1,0 +1,72 @@
+{
+  "commitID": "97aba3f4e6a3619763dcc200d355e064020c0ee8",
+  "fileName": "UsageLogAspect.java",
+  "packageName": "org.springframework.samples.petclinic.aspects",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.List", "org.aspectj.lang.annotation.Aspect", "org.aspectj.lang.annotation.Before"],
+  "classData": {
+    "org.springframework.samples.petclinic.aspects.UsageLogAspect": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "historySize",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "namesRequested",
+        "type": "java.util.List\u003cjava.lang.String\u003e",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.aspects.UsageLogAspect.getNamesRequested#1": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["public", "synchronized"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.aspects.UsageLogAspect.setHistorySize#1980e": {
+          "returnType": "void",
+          "modifier": ["public", "synchronized"],
+          "parameter": [{
+            "name": "historySize",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.aspects.UsageLogAspect.logNameRequest#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public", "synchronized"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["Before"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "annotation": ["Aspect"],
+      "metric": {
+        "loc": "26",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "35",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "misvy@vmware.com",
+  "modifiedLines": 1
+}

@@ -1,0 +1,198 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "UGraphicEps.java",
+  "packageName": "net.sourceforge.plantuml.klimt.drawing.eps",
+  "importName": ["java.io.IOException", "java.io.OutputStream", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.klimt.ClipContainer", "net.sourceforge.plantuml.klimt.UPath", "net.sourceforge.plantuml.klimt.color.ColorMapper", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.AbstractCommonUGraphic", "net.sourceforge.plantuml.klimt.drawing.AbstractUGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.shape.DotPath", "net.sourceforge.plantuml.klimt.shape.UCenteredCharacter", "net.sourceforge.plantuml.klimt.shape.UDrawable", "net.sourceforge.plantuml.klimt.shape.UEllipse", "net.sourceforge.plantuml.klimt.shape.UImage", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.klimt.shape.UPolygon", "net.sourceforge.plantuml.klimt.shape.URectangle", "net.sourceforge.plantuml.klimt.shape.UText", "net.sourceforge.plantuml.url.Url"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.drawing.eps.UGraphicEps": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.ClipContainer"],
+      "field": [{
+        "name": "strategyTOBEREMOVED",
+        "type": "net.sourceforge.plantuml.klimt.drawing.eps.EpsStrategy",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.drawing.eps.UGraphicEps.getEpsGraphics#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphics",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.UGraphicEps.register#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.UGraphicEps.UGraphicEps#6f40cb74": {
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.klimt.drawing.eps.UGraphicEps"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.UGraphicEps.getEPSCode#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.UGraphicEps.drawEps#8dc7f270": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "eps",
+            "type": "java.lang.String"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.UGraphicEps.startUrl#14d6e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "url",
+            "type": "net.sourceforge.plantuml.url.Url"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.UGraphicEps.writeToStream#8c1e6dfe": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "metadata",
+            "type": "java.lang.String"
+          }, {
+            "name": "dpi",
+            "type": "int"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.UGraphicEps.copyUGraphic#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.drawing.AbstractCommonUGraphic",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.UGraphicEps.UGraphicEps#23337eab": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "defaultBackground",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "colorMapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "strategy",
+            "type": "net.sourceforge.plantuml.klimt.drawing.eps.EpsStrategy"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.UGraphicEps.getEpsString#864d4ae2": {
+          "returnType": "java.lang.String",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "defaultBackground",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "colorMapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }, {
+            "name": "epsStrategy",
+            "type": "net.sourceforge.plantuml.klimt.drawing.eps.EpsStrategy"
+          }, {
+            "name": "udrawable",
+            "type": "net.sourceforge.plantuml.klimt.shape.UDrawable"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.UGraphicEps.closeUrl#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.UGraphicEps.close#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.drawing.AbstractUGraphic\u003cnet.sourceforge.plantuml.klimt.drawing.eps.EpsGraphics\u003e",
+      "metric": {
+        "loc": "77",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "135",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

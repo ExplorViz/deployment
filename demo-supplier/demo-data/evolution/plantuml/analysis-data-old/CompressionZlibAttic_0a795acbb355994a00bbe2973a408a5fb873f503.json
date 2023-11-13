@@ -1,0 +1,114 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "CompressionZlibAttic.java",
+  "packageName": "net.sourceforge.plantuml.code",
+  "importName": ["java.io.IOException", "java.util.zip.DataFormatException", "java.util.zip.Deflater", "java.util.zip.Inflater"],
+  "classData": {
+    "net.sourceforge.plantuml.code.CompressionZlibAttic": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.code.Compression"],
+      "field": [{
+        "name": "USE_ZOPFLI",
+        "type": "boolean",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "COMPRESSION_LEVEL",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.code.CompressionZlibAttic.tryDecompress#15309e86": {
+          "returnType": "byte[]",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "in",
+            "type": "byte[]"
+          }, {
+            "name": "len",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.code.CompressionZlibAttic.compress#ae1a4a89": {
+          "returnType": "byte[]",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "in",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.CompressionZlibAttic.copyArray#15309e86": {
+          "returnType": "byte[]",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "data",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }, {
+            "name": "len",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.code.CompressionZlibAttic.tryCompress#15309e86": {
+          "returnType": "byte[]",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "in",
+            "type": "byte[]"
+          }, {
+            "name": "len",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.CompressionZlibAttic.decompress#ae1a4a89": {
+          "returnType": "net.sourceforge.plantuml.code.ByteArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "in",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "annotation": ["java.lang.Deprecated"],
+      "metric": {
+        "loc": "81",
+        "cyclomatic_complexity": "15",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "123",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,626 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "SFile.java",
+  "packageName": "net.sourceforge.plantuml.security",
+  "importName": ["java.awt.image.BufferedImage", "java.io.BufferedInputStream", "java.io.BufferedOutputStream", "java.io.BufferedReader", "java.io.File", "java.io.FileInputStream", "java.io.FileNotFoundException", "java.io.FileOutputStream", "java.io.FileReader", "java.io.IOException", "java.io.InputStream", "java.io.PrintStream", "java.io.PrintWriter", "java.io.UnsupportedEncodingException", "java.lang.reflect.Method", "java.net.URI", "java.nio.charset.Charset", "java.nio.file.Path", "java.nio.file.Paths", "java.util.ArrayList", "java.util.Collection", "java.util.Collections", "java.util.List", "javax.imageio.stream.ImageInputStream", "javax.swing.ImageIcon", "net.sourceforge.plantuml.log.Logme"],
+  "classData": {
+    "net.sourceforge.plantuml.security.SFile": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["java.lang.Comparable\u003cnet.sourceforge.plantuml.security.SFile\u003e"],
+      "field": [{
+        "name": "separator",
+        "type": "java.lang.String",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "pathSeparator",
+        "type": "java.lang.String",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "separatorChar",
+        "type": "char",
+        "modifier": ["public", "static"]
+      }, {
+        "name": "internal",
+        "type": "java.io.File",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.security.SFile.getPath#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.delete#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.SFile#943a4c50": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "nameOrPath",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.getSanitizedPath#1": {
+          "returnType": "java.nio.file.Path",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.read32#512cbbe9": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "is",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.getBufferedImageFromWebpButHeader#512cbbe9": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "is",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.deleteOnExit#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.canRead#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.isInAllowList#a6e928c": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "allowlist",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.security.SFile\u003e"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.createPrintStream#8f45f94b": {
+          "returnType": "java.io.PrintStream",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "charset",
+            "type": "java.nio.charset.Charset"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.readWebp#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.getAbsolutePath#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.createTempFile#874989e1": {
+          "returnType": "net.sourceforge.plantuml.security.SFile",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "prefix",
+            "type": "java.lang.String"
+          }, {
+            "name": "suffix",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.isFile#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.SFile#874989e1": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dirname",
+            "type": "java.lang.String"
+          }, {
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.isDirectory#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.getCleanPathSecure#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.compareTo#4b3088e": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.getAbsoluteFile#1": {
+          "returnType": "net.sourceforge.plantuml.security.SFile",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.createFileOutputStream#1": {
+          "returnType": "java.io.FileOutputStream",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.createFileOutputStream#3db6c47": {
+          "returnType": "java.io.FileOutputStream",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "append",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.SFile#2169bb": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "internal",
+            "type": "java.io.File"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.SFile#1496b": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "uri",
+            "type": "java.net.URI"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.getPrintablePath#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.toURI#1": {
+          "returnType": "java.net.URI",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.listFiles#1": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.security.SFile\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.canWrite#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.equals#8c658f7e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "obj",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.isFileOk#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.createPrintWriter#1": {
+          "returnType": "java.io.PrintWriter",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.getParentFile#1": {
+          "returnType": "net.sourceforge.plantuml.security.SFile",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.getCanonicalFile#1": {
+          "returnType": "net.sourceforge.plantuml.security.SFile",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.setWritable#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "b",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.openBufferedReader#1": {
+          "returnType": "java.io.BufferedReader",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.createPrintWriter#943a4c50": {
+          "returnType": "java.io.PrintWriter",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "charset",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.hashCode#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.isAbsolute#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.renameTo#4b3088e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dest",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.length#1": {
+          "returnType": "long",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.list#1": {
+          "returnType": "String[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.fromFile#2169bb": {
+          "returnType": "net.sourceforge.plantuml.security.SFile",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "internal",
+            "type": "java.io.File"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.getName#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.file#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.security.SFile",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.exists#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.openFile#1": {
+          "returnType": "java.io.InputStream",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.createPrintStream#1": {
+          "returnType": "java.io.PrintStream",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.readRasterImageFromFile#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.SFile#25e85563": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "basedir",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }, {
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.conv#1": {
+          "returnType": "java.io.File",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.createPrintStream#943a4c50": {
+          "returnType": "java.io.PrintStream",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "charset",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.mkdirs#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.isDenied#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.createBufferedOutputStream#1": {
+          "returnType": "java.io.BufferedOutputStream",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SFile.lastModified#1": {
+          "returnType": "long",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "355",
+        "cyclomatic_complexity": "43",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "6"
+      }
+    }
+  },
+  "metric": {
+    "loc": "421",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

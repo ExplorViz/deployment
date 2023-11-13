@@ -1,0 +1,315 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "UFont.java",
+  "packageName": "net.sourceforge.plantuml.klimt.font",
+  "importName": ["java.awt.Font", "java.awt.GraphicsEnvironment", "java.util.HashSet", "java.util.Set", "net.sourceforge.plantuml.StringUtils"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.font.UFont": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "font",
+        "type": "java.awt.Font",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "family",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "names",
+        "type": "java.util.Set\u003cjava.lang.String\u003e",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.font.UFont.UFont#9848dd63": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "font",
+            "type": "java.awt.Font"
+          }, {
+            "name": "family",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.sansSerif#1980e": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UFont",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "size",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.monospaced#1980e": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UFont",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "size",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.serif#1980e": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UFont",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "size",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.doesFamilyExists#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.italic#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UFont",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.isBold#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.toStringDebug#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.equals#8c658f7e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "obj",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.hashCode#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.goTikz#1980e": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UFont",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "delta",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.getExistingFontFamily#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "fontFamily",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "11",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.withSize#5d0227b": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UFont",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "size",
+            "type": "float"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.getPortableFontName#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "11",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.byDefault#1980e": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UFont",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "size",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.getStyle#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.getSize#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.build#6f0b7630": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UFont",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "fontFamily",
+            "type": "java.lang.String"
+          }, {
+            "name": "fontStyle",
+            "type": "int"
+          }, {
+            "name": "fontSize",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.isItalic#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.getFamily#93bcaaea": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.klimt.font.UFontContext"
+          }],
+          "metric": {
+            "loc": "15",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.getUnderlayingFont#93bcaaea": {
+          "returnType": "java.awt.Font",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.klimt.font.UFontContext"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.getSize2D#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.withStyle#1980e": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UFont",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "style",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.courier#1980e": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UFont",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "size",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.UFont.bold#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UFont",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "158",
+        "LCOM4": "6"
+      }
+    }
+  },
+  "metric": {
+    "loc": "202"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

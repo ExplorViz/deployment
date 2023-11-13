@@ -1,0 +1,179 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "ClassDiagram.java",
+  "packageName": "net.sourceforge.plantuml.classdiagram",
+  "importName": ["java.io.IOException", "java.io.OutputStream", "java.util.Map", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.abel.Link", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram", "net.sourceforge.plantuml.plasma.Quark", "net.sourceforge.plantuml.skin.UmlDiagramType", "net.sourceforge.plantuml.svek.image.EntityImageClass"],
+  "classData": {
+    "net.sourceforge.plantuml.classdiagram.ClassDiagram": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "allowMixing",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "useLayoutExplicit",
+        "type": "int",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.classdiagram.ClassDiagram.exportLayoutExplicit#facb8d19": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["final", "protected"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.ClassDiagram.ClassDiagram#a4c08de4": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "skinParam",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.ClassDiagram.isAllowMixing#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.ClassDiagram.packSomePackage#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.ClassDiagram.checkIfPackageHierarchyIfOk#7c02d022": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.ClassDiagram.layoutNewLine#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.ClassDiagram.checkFinalError#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.ClassDiagram.setAllowMixing#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "allowMixing",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.ClassDiagram.getRawLayout#1980e": {
+          "returnType": "net.sourceforge.plantuml.classdiagram.RowLayout",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "raw",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.ClassDiagram.exportDiagramInternal#facb8d19": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["final", "protected"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.ClassDiagram.getEntityImageClass#7c02d022": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram",
+      "metric": {
+        "loc": "107",
+        "cyclomatic_complexity": "16",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "161",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

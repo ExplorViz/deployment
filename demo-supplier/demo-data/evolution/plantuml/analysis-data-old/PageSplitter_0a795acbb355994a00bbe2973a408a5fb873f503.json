@@ -1,0 +1,136 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "PageSplitter.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram.graphic",
+  "importName": ["java.util.ArrayList", "java.util.Arrays", "java.util.List", "java.util.Map", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.sequencediagram.Newpage"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.graphic.PageSplitter": {
+      "type": "CLASS",
+      "field": [{
+        "name": "fullHeight",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "positions",
+        "type": "java.util.List\u003cjava.lang.Double\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "titles",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.Display\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "headerHeight",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "tailHeight",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "signatureHeight",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "newpageHeight",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "diagramTitle",
+        "type": "net.sourceforge.plantuml.klimt.creole.Display",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.graphic.PageSplitter.onePage#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.Page",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.PageSplitter.getPages#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.graphic.Page\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.PageSplitter.lastPage#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.Page",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.PageSplitter.PageSplitter#d836d720": {
+          "parameter": [{
+            "name": "fullHeight",
+            "type": "double"
+          }, {
+            "name": "headerHeight",
+            "type": "double"
+          }, {
+            "name": "newpages",
+            "type": "java.util.Map\u003cnet.sourceforge.plantuml.sequencediagram.Newpage, java.lang.Double\u003e"
+          }, {
+            "name": "tailHeight",
+            "type": "double"
+          }, {
+            "name": "signatureHeight",
+            "type": "double"
+          }, {
+            "name": "newpageHeight",
+            "type": "double"
+          }, {
+            "name": "diagramTitle",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.PageSplitter.firstPage#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.Page",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.PageSplitter.createPage#1980e": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.Page",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "i",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "72",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "117",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

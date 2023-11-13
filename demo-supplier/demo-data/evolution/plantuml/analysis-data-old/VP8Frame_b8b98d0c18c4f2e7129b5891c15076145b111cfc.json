@@ -1,0 +1,810 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "VP8Frame.java",
+  "packageName": "net.sourceforge.plantuml.webp",
+  "importName": ["java.awt.image.BufferedImage", "java.awt.image.WritableRaster", "java.io.IOException", "java.util.ArrayList", "java.util.Vector", "javax.imageio.event.IIOReadProgressListener", "javax.imageio.stream.ImageInputStream", "net.sourceforge.plantuml.log.Logme"],
+  "classData": {
+    "net.sourceforge.plantuml.webp.VP8Frame": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "BLOCK_TYPES",
+        "type": "int",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "COEF_BANDS",
+        "type": "int",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "MAX_ENTROPY_TOKENS",
+        "type": "int",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "MAX_MODE_LF_DELTAS",
+        "type": "int",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "MAX_REF_LF_DELTAS",
+        "type": "int",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "PREV_COEF_CONTEXTS",
+        "type": "int",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "_listeners",
+        "type": "java.util.ArrayList\u003cjavax.imageio.event.IIOReadProgressListener\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "bufferCount",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "buffersToCreate",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "coefProbs",
+        "type": "int[][][][]",
+        "modifier": ["private"]
+      }, {
+        "name": "debug",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "filterLevel",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "filterType",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "frame",
+        "type": "javax.imageio.stream.ImageInputStream",
+        "modifier": ["private"]
+      }, {
+        "name": "frameType",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "height",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "macroBlockCols",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "macroBlockNoCoeffSkip",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "macroBlockRows",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "macroBlocks",
+        "type": "MacroBlock[][]",
+        "modifier": ["private"]
+      }, {
+        "name": "macroBlockSegementAbsoluteDelta",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "macroBlockSegmentTreeProbs",
+        "type": "int[]",
+        "modifier": ["private"]
+      }, {
+        "name": "modeLoopFilterDeltas",
+        "type": "int[]",
+        "modifier": ["private"]
+      }, {
+        "name": "modeRefLoopFilterDeltaEnabled",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "modeRefLoopFilterDeltaUpdate",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "multiTokenPartition",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "offset",
+        "type": "long",
+        "modifier": ["private"]
+      }, {
+        "name": "refLoopFilterDeltas",
+        "type": "int[]",
+        "modifier": ["private"]
+      }, {
+        "name": "refreshEntropyProbs",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "refreshLastFrame",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "segmentationIsEnabled",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "segmentQuants",
+        "type": "net.sourceforge.plantuml.webp.SegmentQuants",
+        "modifier": ["private"]
+      }, {
+        "name": "sharpnessLevel",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "simpleFilter",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "tokenBoolDecoder",
+        "type": "net.sourceforge.plantuml.webp.BoolDecoder",
+        "modifier": ["private"]
+      }, {
+        "name": "tokenBoolDecoders",
+        "type": "java.util.Vector\u003cnet.sourceforge.plantuml.webp.BoolDecoder\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "updateMacroBlockSegmentationMap",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "updateMacroBlockSegmentatonData",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "width",
+        "type": "int",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.webp.VP8Frame.getHeight#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getBufferedImage#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getSegmentQuants#1": {
+          "returnType": "net.sourceforge.plantuml.webp.SegmentQuants",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getYBuffer#1": {
+          "returnType": "int[][]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getFrameType#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.readModes#2aa175f9": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "bc",
+            "type": "net.sourceforge.plantuml.webp.BoolDecoder"
+          }],
+          "metric": {
+            "loc": "94",
+            "cyclomatic_complexity": "25",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.fireLFProgressUpdate#5d0227b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "p",
+            "type": "float"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.setFrame#7b087fce": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "frame",
+            "type": "javax.imageio.stream.ImageInputStream"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getAboveSubBlock#c8c46e6f": {
+          "returnType": "net.sourceforge.plantuml.webp.SubBlock",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "sb",
+            "type": "net.sourceforge.plantuml.webp.SubBlock"
+          }, {
+            "name": "plane",
+            "type": "net.sourceforge.plantuml.webp.SubBlock.PLANE"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.setBuffersToCreate#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "count",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.VP8Frame#7b087fce": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stream",
+            "type": "javax.imageio.stream.ImageInputStream"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.removeIIOReadProgressListener#f98101a5": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "listener",
+            "type": "javax.imageio.event.IIOReadProgressListener"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getDebugImagePredict#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "32",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.setupTokenDecoder#8800826": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "bc",
+            "type": "net.sourceforge.plantuml.webp.BoolDecoder"
+          }, {
+            "name": "first_partition_length_in_bytes",
+            "type": "int"
+          }, {
+            "name": "offset",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getUBuffer#1": {
+          "returnType": "int[][]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getBitAsInt#3301a1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "data",
+            "type": "int"
+          }, {
+            "name": "bit",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.addIIOReadProgressListener#f98101a5": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "listener",
+            "type": "javax.imageio.event.IIOReadProgressListener"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getBit#3301a1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "data",
+            "type": "int"
+          }, {
+            "name": "bit",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getCoefProbs#1": {
+          "returnType": "int[][][][]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getDebugImageUBuffer#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.fireRGBProgressUpdate#5d0227b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "p",
+            "type": "float"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.loopFilter#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getDebugImageYBuffer#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getMacroBlockCols#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getMacroBlockRows#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.readSubBlockMode#84ed999": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "bc",
+            "type": "net.sourceforge.plantuml.webp.BoolDecoder"
+          }, {
+            "name": "A",
+            "type": "int"
+          }, {
+            "name": "L",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getDebugImageUPredBuffer#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getDebugImageVPredBuffer#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.readPartitionSize#32c69b": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "l",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.readUvMode#2aa175f9": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "bc",
+            "type": "net.sourceforge.plantuml.webp.BoolDecoder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getMacroBlock#3301a1": {
+          "returnType": "net.sourceforge.plantuml.webp.MacroBlock",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "mbCol",
+            "type": "int"
+          }, {
+            "name": "mbRow",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getDebugImageYPredBuffer#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.fireProgressUpdate#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "mb_row",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getMacroBlockDebugString#bfac1b41": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "mbx",
+            "type": "int"
+          }, {
+            "name": "mby",
+            "type": "int"
+          }, {
+            "name": "sbx",
+            "type": "int"
+          }, {
+            "name": "sby",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.readYMode#2aa175f9": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "bc",
+            "type": "net.sourceforge.plantuml.webp.BoolDecoder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getDebugImageYDiffBuffer#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getFilterLevel#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getLeftSubBlock#c8c46e6f": {
+          "returnType": "net.sourceforge.plantuml.webp.SubBlock",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "sb",
+            "type": "net.sourceforge.plantuml.webp.SubBlock"
+          }, {
+            "name": "plane",
+            "type": "net.sourceforge.plantuml.webp.SubBlock.PLANE"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getDebugImageUDiffBuffer#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getDebugImageVDiffBuffer#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getQIndex#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getAboveRightSubBlock#c8c46e6f": {
+          "returnType": "net.sourceforge.plantuml.webp.SubBlock",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "sb",
+            "type": "net.sourceforge.plantuml.webp.SubBlock"
+          }, {
+            "name": "plane",
+            "type": "net.sourceforge.plantuml.webp.SubBlock.PLANE"
+          }],
+          "metric": {
+            "loc": "50",
+            "cyclomatic_complexity": "14",
+            "nestedBlockDepth": "8"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getTokenBoolDecoder#1": {
+          "returnType": "net.sourceforge.plantuml.webp.BoolDecoder",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getFilterType#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getWidth#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.useBufferedImage#f9520bbb": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dst",
+            "type": "java.awt.image.BufferedImage"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getDebugImageVBuffer#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getSharpnessLevel#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.decodeMacroBlockRow#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "mbRow",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getDebugImageDiff#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.decodeFrame#3db6c47": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "debug",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "187",
+            "cyclomatic_complexity": "42",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.getVBuffer#1": {
+          "returnType": "int[][]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.VP8Frame#e3a67d69": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stream",
+            "type": "javax.imageio.stream.ImageInputStream"
+          }, {
+            "name": "coefProbs",
+            "type": "int[][][][]"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.VP8Frame.createMacroBlocks#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "1058",
+        "cyclomatic_complexity": "179",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "1086",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "plantuml@gmail.com"
+}

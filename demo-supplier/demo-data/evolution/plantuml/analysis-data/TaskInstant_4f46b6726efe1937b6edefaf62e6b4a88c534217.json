@@ -1,0 +1,187 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "TaskInstant.java",
+  "packageName": "net.sourceforge.plantuml.project.core",
+  "importName": ["net.sourceforge.plantuml.project.GanttConstraintMode", "net.sourceforge.plantuml.project.LoadPlanable", "net.sourceforge.plantuml.project.time.Day"],
+  "classData": {
+    "net.sourceforge.plantuml.project.core.TaskInstant": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "task",
+        "type": "net.sourceforge.plantuml.project.core.Moment",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "attribute",
+        "type": "net.sourceforge.plantuml.project.core.TaskAttribute",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "delta",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "mode",
+        "type": "net.sourceforge.plantuml.project.GanttConstraintMode",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "calendar",
+        "type": "net.sourceforge.plantuml.project.LoadPlanable",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.project.core.TaskInstant.TaskInstant#4fcf8418": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "task",
+            "type": "net.sourceforge.plantuml.project.core.Moment"
+          }, {
+            "name": "attribute",
+            "type": "net.sourceforge.plantuml.project.core.TaskAttribute"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskInstant.manageDelta#10b9b": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "value",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskInstant.getInstantTheorical#1": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskInstant.getMoment#1": {
+          "returnType": "net.sourceforge.plantuml.project.core.Moment",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskInstant.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskInstant.getAttribute#1": {
+          "returnType": "net.sourceforge.plantuml.project.core.TaskAttribute",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskInstant.TaskInstant#ca61704c": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "task",
+            "type": "net.sourceforge.plantuml.project.core.Moment"
+          }, {
+            "name": "attribute",
+            "type": "net.sourceforge.plantuml.project.core.TaskAttribute"
+          }, {
+            "name": "delta",
+            "type": "int"
+          }, {
+            "name": "mode",
+            "type": "net.sourceforge.plantuml.project.GanttConstraintMode"
+          }, {
+            "name": "calendar",
+            "type": "net.sourceforge.plantuml.project.LoadPlanable"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskInstant.sameRowAs#48a0e09b": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dest",
+            "type": "net.sourceforge.plantuml.project.core.TaskInstant"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskInstant.isTask#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskInstant.withDelta#2484ffc3": {
+          "returnType": "net.sourceforge.plantuml.project.core.TaskInstant",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newDelta",
+            "type": "int"
+          }, {
+            "name": "mode",
+            "type": "net.sourceforge.plantuml.project.GanttConstraintMode"
+          }, {
+            "name": "calendar",
+            "type": "net.sourceforge.plantuml.project.LoadPlanable"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskInstant.getInstantPrecise#1": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "96",
+        "cyclomatic_complexity": "16",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "137",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

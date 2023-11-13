@@ -1,0 +1,73 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "TileBuilder.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram.teoz",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.Iterator", "java.util.List", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.real.Real", "net.sourceforge.plantuml.sequencediagram.Delay", "net.sourceforge.plantuml.sequencediagram.Divider", "net.sourceforge.plantuml.sequencediagram.Event", "net.sourceforge.plantuml.sequencediagram.GroupingLeaf", "net.sourceforge.plantuml.sequencediagram.GroupingStart", "net.sourceforge.plantuml.sequencediagram.GroupingType", "net.sourceforge.plantuml.sequencediagram.HSpace", "net.sourceforge.plantuml.sequencediagram.LifeEvent", "net.sourceforge.plantuml.sequencediagram.Message", "net.sourceforge.plantuml.sequencediagram.MessageExo", "net.sourceforge.plantuml.sequencediagram.Newpage", "net.sourceforge.plantuml.sequencediagram.Note", "net.sourceforge.plantuml.sequencediagram.NotePosition", "net.sourceforge.plantuml.sequencediagram.Notes", "net.sourceforge.plantuml.sequencediagram.Reference", "net.sourceforge.plantuml.skin.rose.Rose", "net.sourceforge.plantuml.style.ISkinParam"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.teoz.TileBuilder": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.teoz.TileBuilder.buildOne#efd61b75": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.teoz.Tile\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "it",
+            "type": "java.util.Iterator\u003cnet.sourceforge.plantuml.sequencediagram.Event\u003e"
+          }, {
+            "name": "tileArguments",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.TileArguments"
+          }, {
+            "name": "ev",
+            "type": "net.sourceforge.plantuml.sequencediagram.Event",
+            "modifier": ["final "]
+          }, {
+            "name": "parent",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.Tile"
+          }, {
+            "name": "currentY",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.YGauge"
+          }],
+          "metric": {
+            "loc": "107",
+            "cyclomatic_complexity": "43",
+            "nestedBlockDepth": "13"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.TileBuilder.buildSeveral#fd9c8589": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.teoz.Tile\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "it",
+            "type": "java.util.Iterator\u003cnet.sourceforge.plantuml.sequencediagram.Event\u003e"
+          }, {
+            "name": "tileArguments",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.TileArguments"
+          }, {
+            "name": "parent",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.Tile"
+          }, {
+            "name": "currentY",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.YGauge"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "127",
+        "cyclomatic_complexity": "46",
+        "cyclomatic_complexity_weighted": "23",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "189",
+    "cyclomatic_complexity": "23"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

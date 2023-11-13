@@ -1,0 +1,206 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "EmbeddedDiagram.java",
+  "packageName": "net.sourceforge.plantuml",
+  "importName": ["java.awt.image.BufferedImage", "java.io.ByteArrayOutputStream", "java.io.IOException", "java.util.ArrayList", "java.util.Arrays", "java.util.Iterator", "java.util.List", "net.atmp.PixelImage", "net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.klimt.AffineTransformType", "net.sourceforge.plantuml.klimt.UShape", "net.sourceforge.plantuml.klimt.creole.Neutron", "net.sourceforge.plantuml.klimt.creole.atom.Atom", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock", "net.sourceforge.plantuml.klimt.shape.Line", "net.sourceforge.plantuml.klimt.shape.UImage", "net.sourceforge.plantuml.klimt.shape.UImageSvg", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.preproc.Defines", "net.sourceforge.plantuml.security.SImageIO", "net.sourceforge.plantuml.style.ISkinSimple", "net.sourceforge.plantuml.text.StringLocated"],
+  "classData": {
+    "net.sourceforge.plantuml.EmbeddedDiagram": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.shape.Line", "net.sourceforge.plantuml.klimt.creole.atom.Atom"],
+      "field": [{
+        "name": "EMBEDDED_START",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "EMBEDDED_END",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "list",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinSimple",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "image",
+        "type": "java.awt.image.BufferedImage",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.EmbeddedDiagram.getStartingAltitude#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.EmbeddedDiagram.from#77ba1938": {
+          "returnType": "net.sourceforge.plantuml.EmbeddedDiagram",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinSimple"
+          }, {
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.EmbeddedDiagram.getHorizontalAlignment#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.EmbeddedDiagram.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.EmbeddedDiagram.getEmbeddedType#6aff0d76": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "cs",
+            "type": "java.lang.CharSequence"
+          }],
+          "metric": {
+            "loc": "52",
+            "cyclomatic_complexity": "16",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.EmbeddedDiagram.getImage#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.EmbeddedDiagram.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.EmbeddedDiagram.getNeutrons#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.Neutron\u003e",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.EmbeddedDiagram.createAndSkip#58aaa70f": {
+          "returnType": "net.sourceforge.plantuml.EmbeddedDiagram",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "type",
+            "type": "java.lang.String"
+          }, {
+            "name": "it",
+            "type": "java.util.Iterator\u003cjava.lang.CharSequence\u003e"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinSimple"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.EmbeddedDiagram.EmbeddedDiagram#f70a4144": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinSimple"
+          }, {
+            "name": "system",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.EmbeddedDiagram.getImageSlow#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.EmbeddedDiagram.getSystem#1": {
+          "returnType": "net.sourceforge.plantuml.core.Diagram",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.EmbeddedDiagram.getImageSvg#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock",
+      "metric": {
+        "loc": "171",
+        "cyclomatic_complexity": "30",
+        "cyclomatic_complexity_weighted": "6",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "236",
+    "cyclomatic_complexity": "6"
+  },
+  "author": "plantuml@gmail.com"
+}

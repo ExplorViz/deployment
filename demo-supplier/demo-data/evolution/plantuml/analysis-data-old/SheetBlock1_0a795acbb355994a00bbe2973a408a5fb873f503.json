@@ -1,0 +1,315 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "SheetBlock1.java",
+  "packageName": "net.sourceforge.plantuml.klimt.creole",
+  "importName": ["java.util.ArrayList", "java.util.LinkedHashMap", "java.util.List", "java.util.Map", "java.util.Objects", "net.atmp.InnerStrategy", "net.sourceforge.plantuml.klimt.LineBreakStrategy", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.creole.atom.Atom", "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.MinMax", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XRectangle2D", "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.Style"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.creole.SheetBlock1": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.creole.atom.Atom", "net.sourceforge.plantuml.klimt.creole.Stencil"],
+      "field": [{
+        "name": "sheet",
+        "type": "net.sourceforge.plantuml.klimt.creole.Sheet",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "stripes",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.Stripe\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "heights",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.klimt.creole.Stripe, java.lang.Double\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "widths",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.klimt.creole.Stripe, java.lang.Double\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "positions",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.klimt.creole.atom.Atom, net.sourceforge.plantuml.klimt.creole.Position\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "minMax",
+        "type": "net.sourceforge.plantuml.klimt.geom.MinMax",
+        "modifier": ["private"]
+      }, {
+        "name": "maxWidth",
+        "type": "net.sourceforge.plantuml.klimt.LineBreakStrategy",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "padding",
+        "type": "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "marginX1",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "marginX2",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "lastCaller",
+        "type": "java.lang.Class\u003cWildcardUsage{type\u003dEXTENDS, boundedType\u003dReferenceType{net.sourceforge.plantuml.klimt.font.StringBounder, typeParametersMap\u003dTypeParametersMap{nameToValue\u003d{}}}}\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "minimumWidth",
+        "type": "double",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.getHorizontalAlignment#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.SheetBlock1#12ac3951": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "sheet",
+            "type": "net.sourceforge.plantuml.klimt.creole.Sheet"
+          }, {
+            "name": "maxWidth",
+            "type": "net.sourceforge.plantuml.klimt.LineBreakStrategy"
+          }, {
+            "name": "style",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.getCellAlignment#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.getInnerPosition#82b92e1f": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XRectangle2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "member",
+            "type": "java.lang.String"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "strategy",
+            "type": "net.atmp.InnerStrategy"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.SheetBlock1#bedb8791": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "sheet",
+            "type": "net.sourceforge.plantuml.klimt.creole.Sheet"
+          }, {
+            "name": "maxWidth",
+            "type": "net.sourceforge.plantuml.klimt.LineBreakStrategy"
+          }, {
+            "name": "padding",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.getStartingX#a3046598": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.getMinimumWidth#1": {
+          "returnType": "double",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.getStartingAltitude#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.getNeutrons#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.Neutron\u003e",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.getEndingX#a3046598": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.SheetBlock1#801a764b": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "sheet",
+            "type": "net.sourceforge.plantuml.klimt.creole.Sheet"
+          }, {
+            "name": "maxWidth",
+            "type": "net.sourceforge.plantuml.klimt.LineBreakStrategy"
+          }, {
+            "name": "padding",
+            "type": "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft"
+          }, {
+            "name": "marginX1",
+            "type": "double"
+          }, {
+            "name": "marginX2",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.SheetBlock1#95076171": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "sheet",
+            "type": "net.sourceforge.plantuml.klimt.creole.Sheet"
+          }, {
+            "name": "maxWidth",
+            "type": "net.sourceforge.plantuml.klimt.LineBreakStrategy"
+          }, {
+            "name": "padding",
+            "type": "double"
+          }, {
+            "name": "marginX1",
+            "type": "double"
+          }, {
+            "name": "marginX2",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.SheetBlock1.initMap#395b4159": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "59",
+            "cyclomatic_complexity": "15",
+            "nestedBlockDepth": "5"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock",
+      "metric": {
+        "loc": "161",
+        "cyclomatic_complexity": "21",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "221",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

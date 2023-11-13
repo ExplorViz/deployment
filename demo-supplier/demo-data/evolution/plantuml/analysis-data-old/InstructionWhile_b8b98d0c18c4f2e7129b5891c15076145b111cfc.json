@@ -1,0 +1,371 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "InstructionWhile.java",
+  "packageName": "net.sourceforge.plantuml.activitydiagram3",
+  "importName": ["java.util.Objects", "java.util.Set", "net.sourceforge.plantuml.activitydiagram3.ftile.BoxStyle", "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile", "net.sourceforge.plantuml.activitydiagram3.ftile.FtileFactory", "net.sourceforge.plantuml.activitydiagram3.ftile.FtileKilled", "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane", "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileWithNoteOpale", "net.sourceforge.plantuml.activitydiagram3.gtile.Gtile", "net.sourceforge.plantuml.activitydiagram3.gtile.GtileWhile", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.decoration.Rainbow", "net.sourceforge.plantuml.klimt.color.Colors", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.VerticalAlignment", "net.sourceforge.plantuml.sequencediagram.NotePosition", "net.sourceforge.plantuml.sequencediagram.NoteType", "net.sourceforge.plantuml.style.ISkinParam"],
+  "classData": {
+    "net.sourceforge.plantuml.activitydiagram3.InstructionWhile": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.activitydiagram3.Instruction", "net.sourceforge.plantuml.activitydiagram3.InstructionCollection"],
+      "field": [{
+        "name": "repeatList",
+        "type": "net.sourceforge.plantuml.activitydiagram3.InstructionList",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "parent",
+        "type": "net.sourceforge.plantuml.activitydiagram3.Instruction",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "nextLinkRenderer",
+        "type": "net.sourceforge.plantuml.activitydiagram3.LinkRendering",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "color",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "killed",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "test",
+        "type": "net.sourceforge.plantuml.klimt.creole.Display",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "yes",
+        "type": "net.sourceforge.plantuml.klimt.creole.Display",
+        "modifier": ["private"]
+      }, {
+        "name": "testCalled",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "outColor",
+        "type": "net.sourceforge.plantuml.activitydiagram3.LinkRendering",
+        "modifier": ["private"]
+      }, {
+        "name": "swimlane",
+        "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "specialOut",
+        "type": "net.sourceforge.plantuml.activitydiagram3.Instruction",
+        "modifier": ["private"]
+      }, {
+        "name": "boxStyle",
+        "type": "net.sourceforge.plantuml.activitydiagram3.ftile.BoxStyle",
+        "modifier": ["private"]
+      }, {
+        "name": "swimlaneOut",
+        "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane",
+        "modifier": ["private"]
+      }, {
+        "name": "backward",
+        "type": "net.sourceforge.plantuml.klimt.creole.Display",
+        "modifier": ["private"]
+      }, {
+        "name": "incoming1",
+        "type": "net.sourceforge.plantuml.activitydiagram3.LinkRendering",
+        "modifier": ["private"]
+      }, {
+        "name": "incoming2",
+        "type": "net.sourceforge.plantuml.activitydiagram3.LinkRendering",
+        "modifier": ["private"]
+      }, {
+        "name": "backwardCalled",
+        "type": "boolean",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.outDisplay#c6ddb0c1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "out",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.incoming#f0d2dfb1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "incoming",
+            "type": "net.sourceforge.plantuml.activitydiagram3.LinkRendering"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.kill#1": {
+          "returnType": "boolean",
+          "modifier": ["final", "public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.setBackward#ab3afeb3": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "label",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "swimlaneOut",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane"
+          }, {
+            "name": "boxStyle",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.BoxStyle"
+          }, {
+            "name": "incoming1",
+            "type": "net.sourceforge.plantuml.activitydiagram3.LinkRendering"
+          }, {
+            "name": "incoming2",
+            "type": "net.sourceforge.plantuml.activitydiagram3.LinkRendering"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.getSwimlaneIn#1": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.getLast#1": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.Instruction",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.getSwimlaneOut#1": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.InstructionWhile#dbcd8fe3": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "swimlane",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane"
+          }, {
+            "name": "parent",
+            "type": "net.sourceforge.plantuml.activitydiagram3.Instruction"
+          }, {
+            "name": "test",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "nextLinkRenderer",
+            "type": "net.sourceforge.plantuml.activitydiagram3.LinkRendering"
+          }, {
+            "name": "yes",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.containsBreak#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.add#7562948d": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ins",
+            "type": "net.sourceforge.plantuml.activitydiagram3.Instruction"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.setSpecial#7562948d": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "special",
+            "type": "net.sourceforge.plantuml.activitydiagram3.Instruction"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.createFtile#6f2cee95": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "factory",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.FtileFactory"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.getParent#1": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.Instruction",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.overwriteYes#c6ddb0c1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "yes",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.getInLinkRendering#1": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.LinkRendering",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.outColor#9d4031b5": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "rainbow",
+            "type": "net.sourceforge.plantuml.decoration.Rainbow"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.createGtile#bf551314": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.gtile.Gtile",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.addNote#6c2d6776": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "note",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "position",
+            "type": "net.sourceforge.plantuml.sequencediagram.NotePosition"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.sequencediagram.NoteType"
+          }, {
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.color.Colors"
+          }, {
+            "name": "swimlaneNote",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.InstructionWhile.getSwimlanes#1": {
+          "returnType": "java.util.Set\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Swimlane\u003e",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.activitydiagram3.WithNote",
+      "metric": {
+        "loc": "151",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "210",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

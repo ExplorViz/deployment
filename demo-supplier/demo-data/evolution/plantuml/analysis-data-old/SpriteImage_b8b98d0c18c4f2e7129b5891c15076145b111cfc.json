@@ -1,0 +1,120 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "SpriteImage.java",
+  "packageName": "net.sourceforge.plantuml.klimt.sprite",
+  "importName": ["java.awt.image.BufferedImage", "java.io.IOException", "java.io.InputStream", "java.util.Objects", "net.atmp.PixelImage", "net.sourceforge.plantuml.klimt.AffineTransformType", "net.sourceforge.plantuml.klimt.color.ColorMapper", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.UImage", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SImageIO", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.sprite.SpriteImage": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.sprite.Sprite"],
+      "field": [{
+        "name": "img",
+        "type": "net.sourceforge.plantuml.klimt.shape.UImage",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.sprite.SpriteImage.asTextBlock#a5bd2f7": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor",
+            "modifier": ["final "]
+          }, {
+            "name": "scale",
+            "type": "double",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteImage.fromInternal#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.sprite.Sprite",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteImage.getInternalSprite#943a4c50": {
+          "returnType": "java.io.InputStream",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "inner",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteImage.SpriteImage#f9520bbb": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "img",
+            "type": "java.awt.image.BufferedImage"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "52",
+        "cyclomatic_complexity": "9",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.klimt.sprite.SpriteImage.asTextBlock#a5bd2f7.AbstractTextBlock": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.sprite.SpriteImage.asTextBlock#a5bd2f7.AbstractTextBlock.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.SpriteImage.asTextBlock#a5bd2f7.AbstractTextBlock.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "108",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

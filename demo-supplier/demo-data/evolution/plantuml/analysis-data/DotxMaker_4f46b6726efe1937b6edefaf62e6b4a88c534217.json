@@ -1,0 +1,105 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "DotxMaker.java",
+  "packageName": "net.sourceforge.plantuml.posimo",
+  "importName": ["java.util.Collection", "java.util.Objects", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.posimo.DotxMaker": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "root",
+        "type": "net.sourceforge.plantuml.posimo.Cluster",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "paths",
+        "type": "java.util.Collection\u003cnet.sourceforge.plantuml.posimo.Path\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.posimo.DotxMaker.createDotString#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dotStrings",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.DotxMaker.getPathString#25d864": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.posimo.Path"
+          }],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.DotxMaker.DotxMaker#86d18f42": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "root",
+            "type": "net.sourceforge.plantuml.posimo.Cluster"
+          }, {
+            "name": "paths",
+            "type": "java.util.Collection\u003cnet.sourceforge.plantuml.posimo.Path\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.DotxMaker.printCluster#b20fa0b1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "sb",
+            "type": "java.lang.StringBuilder"
+          }, {
+            "name": "cl",
+            "type": "net.sourceforge.plantuml.posimo.Cluster"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.DotxMaker.getNodeAttibute#3d4d48c": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "b",
+            "type": "net.sourceforge.plantuml.posimo.Block"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "92",
+        "cyclomatic_complexity": "13",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "135",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

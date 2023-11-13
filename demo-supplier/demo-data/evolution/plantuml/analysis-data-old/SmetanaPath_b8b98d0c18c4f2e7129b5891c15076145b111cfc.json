@@ -1,0 +1,221 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "SmetanaPath.java",
+  "packageName": "net.sourceforge.plantuml.sdot",
+  "importName": ["h.ST_Agedge_s", "h.ST_Agedgeinfo_t", "h.ST_bezier", "h.ST_pointf", "h.ST_splines", "h.ST_textlabel_t", "net.sourceforge.plantuml.abel.Link", "net.sourceforge.plantuml.abel.LinkStrategy", "net.sourceforge.plantuml.cucadiagram.ICucaDiagram", "net.sourceforge.plantuml.decoration.LinkType", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.ColorType", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.geom.RectangleArea", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.DotPath", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.UDrawable", "net.sourceforge.plantuml.klimt.shape.URectangle", "net.sourceforge.plantuml.skin.LineParam", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleSignatureBasic", "net.sourceforge.plantuml.svek.Bibliotekon", "net.sourceforge.plantuml.svek.Cluster", "net.sourceforge.plantuml.svek.extremity.Extremity", "net.sourceforge.plantuml.svek.extremity.ExtremityFactory", "net.sourceforge.plantuml.url.Url"],
+  "classData": {
+    "net.sourceforge.plantuml.sdot.SmetanaPath": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.shape.UDrawable"],
+      "field": [{
+        "name": "link",
+        "type": "net.sourceforge.plantuml.abel.Link",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "edge",
+        "type": "h.ST_Agedge_s",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ymirror",
+        "type": "net.sourceforge.plantuml.sdot.YMirror",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "diagram",
+        "type": "net.sourceforge.plantuml.cucadiagram.ICucaDiagram",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "label",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "headLabel",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "tailLabel",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "bibliotekon",
+        "type": "net.sourceforge.plantuml.svek.Bibliotekon",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sdot.SmetanaPath.getLinkStrategy#1": {
+          "returnType": "net.sourceforge.plantuml.abel.LinkStrategy",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.SmetanaPath.getLabelRectangleTranslate#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.UTranslate",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "fieldName",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.SmetanaPath.getDotPathInternal#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.DotPath",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.SmetanaPath.getPoint#cd854c": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "splines",
+            "type": "h.ST_splines"
+          }, {
+            "name": "i",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.SmetanaPath.getStartPoint#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.SmetanaPath.getEndPoint#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.SmetanaPath.getLabelURectangle#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.URectangle",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.SmetanaPath.printExtremityAtStart#43dd2966": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "dotPath",
+            "type": "net.sourceforge.plantuml.klimt.shape.DotPath"
+          }, {
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.SmetanaPath.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "62",
+            "cyclomatic_complexity": "15",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.SmetanaPath.SmetanaPath#717059e0": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "link",
+            "type": "net.sourceforge.plantuml.abel.Link"
+          }, {
+            "name": "edge",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "ymirror",
+            "type": "net.sourceforge.plantuml.sdot.YMirror"
+          }, {
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.cucadiagram.ICucaDiagram"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }, {
+            "name": "tailLabel",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }, {
+            "name": "headLabel",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }, {
+            "name": "bibliotekon",
+            "type": "net.sourceforge.plantuml.svek.Bibliotekon"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.SmetanaPath.getStyle#1": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.SmetanaPath.printExtremityAtEnd#43dd2966": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "dotPath",
+            "type": "net.sourceforge.plantuml.klimt.shape.DotPath"
+          }, {
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "227",
+        "cyclomatic_complexity": "36",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "296",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,171 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "ScientificEquationSafe.java",
+  "packageName": "net.sourceforge.plantuml.math",
+  "importName": ["net.atmp.ImageBuilder.plainImageBuilder", "java.awt.Color", "java.awt.image.BufferedImage", "java.io.ByteArrayOutputStream", "java.io.IOException", "java.io.OutputStream", "java.util.Arrays", "net.atmp.ImageBuilder", "net.atmp.PixelImage", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.api.ImageDataSimple", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.klimt.AffineTransformType", "net.sourceforge.plantuml.klimt.MutableImage", "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphics", "net.sourceforge.plantuml.klimt.shape.GraphicStrings", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.UImageSvg", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SImageIO", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.math.ScientificEquationSafe": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "equation",
+        "type": "net.sourceforge.plantuml.math.ScientificEquation",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "formula",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "dimSvg",
+        "type": "net.sourceforge.plantuml.core.ImageData",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.math.ScientificEquationSafe.getSvg#cd902850": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UImageSvg",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "scale",
+            "type": "double"
+          }, {
+            "name": "foregroundColor",
+            "type": "java.awt.Color"
+          }, {
+            "name": "backgroundColor",
+            "type": "java.awt.Color"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.math.ScientificEquationSafe.getRollback#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.ScientificEquationSafe.getImage#7c87ec21": {
+          "returnType": "net.sourceforge.plantuml.klimt.MutableImage",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "foregroundColor",
+            "type": "java.awt.Color"
+          }, {
+            "name": "backgroundColor",
+            "type": "java.awt.Color"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.math.ScientificEquationSafe.ScientificEquationSafe#2334c465": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "formula",
+            "type": "java.lang.String"
+          }, {
+            "name": "equation",
+            "type": "net.sourceforge.plantuml.math.ScientificEquation"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.ScientificEquationSafe.fromAsciiMath#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.math.ScientificEquationSafe",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "formula",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.math.ScientificEquationSafe.getFormula#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.math.ScientificEquationSafe.printTrace#cfc1f04e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "e",
+            "type": "java.lang.Exception"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.math.ScientificEquationSafe.fromLatex#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.math.ScientificEquationSafe",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "formula",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.math.ScientificEquationSafe.export#bd172fd4": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }, {
+            "name": "scale",
+            "type": "float"
+          }, {
+            "name": "foregroundColor",
+            "type": "java.awt.Color"
+          }, {
+            "name": "backgroundColor",
+            "type": "java.awt.Color"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "104",
+        "cyclomatic_complexity": "19",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "166",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

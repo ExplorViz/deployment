@@ -1,0 +1,294 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "FlowDiagram.java",
+  "packageName": "net.sourceforge.plantuml.flowdiagram",
+  "importName": ["net.atmp.ImageBuilder.imageBuilder", "java.io.IOException", "java.io.OutputStream", "java.util.HashMap", "java.util.Map", "net.atmp.ImageBuilder", "net.atmp.InnerStrategy", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.UmlDiagram", "net.sourceforge.plantuml.core.DiagramDescription", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.golem.MinMaxGolem", "net.sourceforge.plantuml.golem.Path", "net.sourceforge.plantuml.golem.Position", "net.sourceforge.plantuml.golem.Tile", "net.sourceforge.plantuml.golem.TileArea", "net.sourceforge.plantuml.golem.TileGeometry", "net.sourceforge.plantuml.golem.TilesField", "net.sourceforge.plantuml.klimt.UShape", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.MagneticBorder", "net.sourceforge.plantuml.klimt.geom.MagneticBorderNone", "net.sourceforge.plantuml.klimt.geom.MinMax", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.geom.XRectangle2D", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.UEllipse", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.skin.UmlDiagramType", "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft"],
+  "classData": {
+    "net.sourceforge.plantuml.flowdiagram.FlowDiagram": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.shape.TextBlock"],
+      "field": [{
+        "name": "SINGLE_SIZE_X",
+        "type": "double",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "SINGLE_SIZE_Y",
+        "type": "double",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "field",
+        "type": "net.sourceforge.plantuml.golem.TilesField",
+        "modifier": ["private"]
+      }, {
+        "name": "tilesBoxes",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.golem.Tile, net.sourceforge.plantuml.flowdiagram.ActivityBox\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "lastTile",
+        "type": "net.sourceforge.plantuml.golem.Tile",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.linkSimple#faf57692": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "orientation",
+            "type": "net.sourceforge.plantuml.golem.TileGeometry"
+          }, {
+            "name": "idDest",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.exportDiagramInternal#facb8d19": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.getMagneticBorder#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.MagneticBorder",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.getDescription#1": {
+          "returnType": "net.sourceforge.plantuml.core.DiagramDescription",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.createImageBuilder#618c8b27": {
+          "returnType": "net.atmp.ImageBuilder",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.FlowDiagram#5aaf4a0e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.getCenter#864af49a": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "area",
+            "type": "net.sourceforge.plantuml.golem.TileArea"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.getInnerPosition#82b92e1f": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XRectangle2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "member",
+            "type": "java.lang.String"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "strategy",
+            "type": "net.atmp.InnerStrategy"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.getMinMax#1": {
+          "returnType": "net.sourceforge.plantuml.golem.MinMaxGolem",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.getBackcolor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.lineSimple#f7f3a7df": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "orientation",
+            "type": "net.sourceforge.plantuml.golem.TileGeometry"
+          }, {
+            "name": "idDest",
+            "type": "java.lang.String"
+          }, {
+            "name": "label",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.movePoint#23cd3dff": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "pt",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "tile",
+            "type": "net.sourceforge.plantuml.golem.Tile"
+          }, {
+            "name": "tileGeometry",
+            "type": "net.sourceforge.plantuml.golem.TileGeometry"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.getMinMax#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.MinMax",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.getTextBlock#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.getTileById#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.golem.Tile",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "id",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.flowdiagram.FlowDiagram.getDefaultMargins#1": {
+          "returnType": "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.UmlDiagram",
+      "metric": {
+        "loc": "169",
+        "cyclomatic_complexity": "20",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "245",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

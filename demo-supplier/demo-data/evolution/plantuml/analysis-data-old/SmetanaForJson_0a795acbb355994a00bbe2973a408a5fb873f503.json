@@ -1,0 +1,343 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "SmetanaForJson.java",
+  "packageName": "net.sourceforge.plantuml.jsondiagram",
+  "importName": ["gen.lib.cgraph.attr__c.agsafeset", "gen.lib.cgraph.edge__c.agedge", "gen.lib.cgraph.graph__c.agopen", "gen.lib.cgraph.node__c.agnode", "gen.lib.gvc.gvc__c.gvContext", "gen.lib.gvc.gvlayout__c.gvLayoutJobs", "java.util.ArrayList", "java.util.Collections", "java.util.List", "h.ST_Agedge_s", "h.ST_Agedgeinfo_t", "h.ST_Agnode_s", "h.ST_Agnodeinfo_t", "h.ST_Agraph_s", "h.ST_GVC_s", "net.sourceforge.plantuml.json.JsonValue", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.skin.UmlDiagramType", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleSignatureBasic", "net.sourceforge.plantuml.yaml.Highlighted", "smetana.core.CString", "smetana.core.Globals", "smetana.core.debug.SmetanaDebug"],
+  "classData": {
+    "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.InternalNode": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "field": [{
+        "name": "block",
+        "type": "net.sourceforge.plantuml.jsondiagram.TextBlockJson",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "node",
+        "type": "h.ST_Agnode_s",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.InternalNode.InternalNode#ea29a9d3": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "block",
+            "type": "net.sourceforge.plantuml.jsondiagram.TextBlockJson"
+          }, {
+            "name": "node",
+            "type": "h.ST_Agnode_s"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.InternalNode.getMaxX#1": {
+          "returnType": "double",
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "18",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.jsondiagram.SmetanaForJson": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "NUM",
+        "type": "int",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "printFirst",
+        "type": "boolean",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "exitAfterFirst",
+        "type": "boolean",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "ug",
+        "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "num",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "g",
+        "type": "h.ST_Agraph_s",
+        "modifier": ["private"]
+      }, {
+        "name": "stringBounder",
+        "type": "net.sourceforge.plantuml.klimt.font.StringBounder",
+        "modifier": ["private"]
+      }, {
+        "name": "nodes",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.jsondiagram.SmetanaForJson.InternalNode\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "edges",
+        "type": "java.util.List\u003ch.ST_Agedge_s\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "xMirror",
+        "type": "net.sourceforge.plantuml.jsondiagram.Mirror",
+        "modifier": ["private"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.jsondiagram.SmetanaForJson.InternalNode"],
+      "methodData": {
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.createNode#7c11129c": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "dim",
+            "type": "net.sourceforge.plantuml.klimt.geom.XDimension2D"
+          }, {
+            "name": "isArray",
+            "type": "boolean"
+          }, {
+            "name": "colAwidth",
+            "type": "double"
+          }, {
+            "name": "colBwidth",
+            "type": "double"
+          }, {
+            "name": "lineHeights",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.getDotLabelArray#10081532": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "widthA",
+            "type": "double"
+          }, {
+            "name": "widthB",
+            "type": "double"
+          }, {
+            "name": "lineHeights",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.SmetanaForJson#dd8b7815": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.getDotLabelMap#10081532": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "widthA",
+            "type": "double"
+          }, {
+            "name": "widthB",
+            "type": "double"
+          }, {
+            "name": "lineHeights",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.createEdge#406b8920": {
+          "returnType": "h.ST_Agedge_s",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "a0",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "a1",
+            "type": "h.ST_Agnode_s"
+          }, {
+            "name": "num",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.getDiagramType#1": {
+          "returnType": "net.sourceforge.plantuml.style.SName",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.initGraph#a6183041": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "root",
+            "type": "net.sourceforge.plantuml.json.JsonValue"
+          }, {
+            "name": "highlighted",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.yaml.Highlighted\u003e"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.getStyleNode#1": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.getStyleArrow#1": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.upOneLevel#3546659": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.yaml.Highlighted\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }, {
+            "name": "list",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.yaml.Highlighted\u003e"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.drawMe#a6183041": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "root",
+            "type": "net.sourceforge.plantuml.json.JsonValue"
+          }, {
+            "name": "highlighted",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.yaml.Highlighted\u003e"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.manageOneNode#34aaa5ef": {
+          "returnType": "h.ST_Agnode_s",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "current",
+            "type": "net.sourceforge.plantuml.json.JsonValue"
+          }, {
+            "name": "highlighted",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.yaml.Highlighted\u003e"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.getCurve#b229cbdd": {
+          "returnType": "net.sourceforge.plantuml.jsondiagram.JsonCurve",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "e",
+            "type": "h.ST_Agedge_s"
+          }, {
+            "name": "veryFirstLine",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jsondiagram.SmetanaForJson.getPosition#de72c179": {
+          "returnType": "net.sourceforge.plantuml.klimt.UTranslate",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "node",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "221",
+        "cyclomatic_complexity": "19",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "13"
+      }
+    }
+  },
+  "metric": {
+    "loc": "291",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

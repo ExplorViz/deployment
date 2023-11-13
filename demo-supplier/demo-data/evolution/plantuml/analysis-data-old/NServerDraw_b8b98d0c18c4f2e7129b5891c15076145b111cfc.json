@@ -1,0 +1,255 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "NServerDraw.java",
+  "packageName": "net.sourceforge.plantuml.nwdiag.next",
+  "importName": ["java.util.Collections", "java.util.List", "java.util.Map", "java.util.Map.Entry", "java.util.TreeSet", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.MinMax", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.nwdiag.VerticalLine", "net.sourceforge.plantuml.nwdiag.core.NServer", "net.sourceforge.plantuml.nwdiag.core.Network", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.utils.MathUtils"],
+  "classData": {
+    "net.sourceforge.plantuml.nwdiag.next.NServerDraw": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "MAGIC",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "box",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "network",
+        "type": "net.sourceforge.plantuml.nwdiag.core.Network",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "server",
+        "type": "net.sourceforge.plantuml.nwdiag.core.NServer",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "conns",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.nwdiag.core.Network, java.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "networks",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.nwdiag.core.Network\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "topMargin",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "marginAd",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.nwdiag.next.NServerDraw.getMinMax#6e7fc939": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.MinMax",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "width",
+            "type": "double"
+          }, {
+            "name": "height",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NServerDraw.marginBoxW#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NServerDraw.isLinkedTo#d119f22d": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "some",
+            "type": "net.sourceforge.plantuml.nwdiag.core.Network"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NServerDraw.link2#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NServerDraw.getTextBlockLink1#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NServerDraw.drawLinks#df45177f": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "xstart",
+            "type": "double"
+          }, {
+            "name": "width",
+            "type": "double"
+          }, {
+            "name": "height",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "58",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NServerDraw.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NServerDraw.drawCenter#be4f5f2e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "block",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NServerDraw.marginBoxH#1": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NServerDraw.NServerDraw#4d2db4c2": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "server",
+            "type": "net.sourceforge.plantuml.nwdiag.core.NServer"
+          }, {
+            "name": "box",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }, {
+            "name": "conns",
+            "type": "java.util.Map\u003cnet.sourceforge.plantuml.nwdiag.core.Network, java.lang.String\u003e"
+          }, {
+            "name": "networks",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.nwdiag.core.Network\u003e"
+          }, {
+            "name": "topMargin",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NServerDraw.drawMe#6cd93692": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "width",
+            "type": "double"
+          }, {
+            "name": "height",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NServerDraw.naturalDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NServerDraw.getNetwork#1": {
+          "returnType": "net.sourceforge.plantuml.nwdiag.core.Network",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.nwdiag.next.NServerDraw.getServer#1": {
+          "returnType": "net.sourceforge.plantuml.nwdiag.core.NServer",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "160",
+        "cyclomatic_complexity": "11",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "214",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

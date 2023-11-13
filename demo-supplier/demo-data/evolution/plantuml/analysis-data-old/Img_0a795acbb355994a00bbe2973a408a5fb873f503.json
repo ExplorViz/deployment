@@ -1,0 +1,133 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Img.java",
+  "packageName": "net.sourceforge.plantuml.klimt.creole.command",
+  "importName": ["java.awt.image.BufferedImage", "java.io.IOException", "net.sourceforge.plantuml.FileSystem", "net.sourceforge.plantuml.FileUtils", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.klimt.geom.ImgValign", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.TileImage", "net.sourceforge.plantuml.klimt.shape.TileImageSvg", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.regex.Matcher2", "net.sourceforge.plantuml.regex.MyPattern", "net.sourceforge.plantuml.regex.Pattern2", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.security.SURL"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.creole.command.Img": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.creole.command.HtmlCommand"],
+      "field": [{
+        "name": "srcPattern",
+        "type": "net.sourceforge.plantuml.regex.Pattern2",
+        "modifier": ["final", "static", "private"]
+      }, {
+        "name": "vspacePattern",
+        "type": "net.sourceforge.plantuml.regex.Pattern2",
+        "modifier": ["final", "static", "private"]
+      }, {
+        "name": "valignPattern",
+        "type": "net.sourceforge.plantuml.regex.Pattern2",
+        "modifier": ["final", "static", "private"]
+      }, {
+        "name": "noSrcColonPattern",
+        "type": "net.sourceforge.plantuml.regex.Pattern2",
+        "modifier": ["final", "static", "private"]
+      }, {
+        "name": "tileImage",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.command.Img.createMonoImage#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.command.Img.getValign#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.ImgValign",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "html",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.command.Img.Img#37fde35f": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "image",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.command.Img.getVspace#943a4c50": {
+          "returnType": "int",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "html",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.command.Img.getInstance#f6eaa9d8": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.command.HtmlCommand",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "html",
+            "type": "java.lang.String"
+          }, {
+            "name": "withSrc",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.command.Img.build#ed02fa1c": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.command.HtmlCommand",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "m",
+            "type": "net.sourceforge.plantuml.regex.Matcher2",
+            "modifier": ["final "]
+          }, {
+            "name": "valign",
+            "type": "net.sourceforge.plantuml.klimt.geom.ImgValign",
+            "modifier": ["final "]
+          }, {
+            "name": "vspace",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "38",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "5"
+          }
+        }
+      },
+      "metric": {
+        "loc": "85",
+        "cyclomatic_complexity": "13",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "139",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

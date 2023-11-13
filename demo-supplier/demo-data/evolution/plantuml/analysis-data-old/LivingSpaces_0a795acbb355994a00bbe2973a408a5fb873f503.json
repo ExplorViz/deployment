@@ -1,0 +1,194 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "LivingSpaces.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram.teoz",
+  "importName": ["java.util.Collection", "java.util.Iterator", "java.util.LinkedHashMap", "java.util.Map", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.VerticalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.real.Real", "net.sourceforge.plantuml.sequencediagram.Participant", "net.sourceforge.plantuml.skin.Context2D"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpaces": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "all",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.sequencediagram.Participant, net.sourceforge.plantuml.sequencediagram.teoz.LivingSpace\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpaces.participants#1": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.sequencediagram.Participant\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpaces.values#1": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.sequencediagram.teoz.LivingSpace\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpaces.size#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpaces.drawLifeLines#1b1466e2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+            "modifier": ["final "]
+          }, {
+            "name": "height",
+            "type": "double"
+          }, {
+            "name": "context",
+            "type": "net.sourceforge.plantuml.skin.Context2D"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpaces.getHeadHeight#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpaces.addConstraints#395b4159": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpaces.delayOn#1eef7de1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "height",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpaces.put#5c2cf6cb": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "participant",
+            "type": "net.sourceforge.plantuml.sequencediagram.Participant"
+          }, {
+            "name": "livingSpace",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpace"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpaces.drawHeads#70c4335e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+            "modifier": ["final "]
+          }, {
+            "name": "context",
+            "type": "net.sourceforge.plantuml.skin.Context2D"
+          }, {
+            "name": "verticalAlignment",
+            "type": "net.sourceforge.plantuml.klimt.geom.VerticalAlignment"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpaces.next#c861a7dc": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpace",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "element",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpace"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpaces.get#91279732": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpace",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "participant",
+            "type": "net.sourceforge.plantuml.sequencediagram.Participant"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpaces.previous#c861a7dc": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpace",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "element",
+            "type": "net.sourceforge.plantuml.sequencediagram.teoz.LivingSpace"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "96",
+        "cyclomatic_complexity": "11",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "148",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,921 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CucaDiagram.java",
+  "packageName": "net.atmp",
+  "importName": ["java.io.IOException", "java.io.OutputStream", "java.util.ArrayList", "java.util.Collection", "java.util.Collections", "java.util.HashSet", "java.util.List", "java.util.Map", "java.util.Objects", "java.util.Set", "java.util.concurrent.atomic.AtomicInteger", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.UmlDiagram", "net.sourceforge.plantuml.abel.Bag", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.abel.EntityFactory", "net.sourceforge.plantuml.abel.EntityGender", "net.sourceforge.plantuml.abel.EntityPortion", "net.sourceforge.plantuml.abel.GroupType", "net.sourceforge.plantuml.abel.LeafType", "net.sourceforge.plantuml.abel.Link", "net.sourceforge.plantuml.abel.Together", "net.sourceforge.plantuml.api.ImageDataSimple", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.cucadiagram.GroupHierarchy", "net.sourceforge.plantuml.cucadiagram.HideOrShow", "net.sourceforge.plantuml.cucadiagram.ICucaDiagram", "net.sourceforge.plantuml.cucadiagram.LinkConstraint", "net.sourceforge.plantuml.cucadiagram.Magma", "net.sourceforge.plantuml.cucadiagram.MagmaList", "net.sourceforge.plantuml.cucadiagram.PortionShower", "net.sourceforge.plantuml.decoration.symbol.USymbol", "net.sourceforge.plantuml.dot.CucaDiagramTxtMaker", "net.sourceforge.plantuml.elk.CucaDiagramFileMakerElk", "net.sourceforge.plantuml.graphml.CucaDiagramGraphmlMaker", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.plasma.Quark", "net.sourceforge.plantuml.sdot.CucaDiagramFileMakerSmetana", "net.sourceforge.plantuml.security.SecurityUtils", "net.sourceforge.plantuml.skin.UmlDiagramType", "net.sourceforge.plantuml.skin.VisibilityModifier", "net.sourceforge.plantuml.statediagram.StateDiagram", "net.sourceforge.plantuml.stereo.Stereotype", "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft", "net.sourceforge.plantuml.svek.CucaDiagramFileMaker", "net.sourceforge.plantuml.svek.CucaDiagramFileMakerSvek", "net.sourceforge.plantuml.text.BackSlash", "net.sourceforge.plantuml.text.Guillemet", "net.sourceforge.plantuml.xmi.CucaDiagramXmiMaker", "net.sourceforge.plantuml.xmlsc.StateDiagramScxmlMaker"],
+  "classData": {
+    "net.atmp.CucaDiagram.EntityHideOrShow": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "field": [{
+        "name": "gender",
+        "type": "net.sourceforge.plantuml.abel.EntityGender",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "portion",
+        "type": "net.sourceforge.plantuml.abel.EntityPortion",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "show",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.atmp.CucaDiagram.EntityHideOrShow.EntityHideOrShow#4d90247": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "gender",
+            "type": "net.sourceforge.plantuml.abel.EntityGender"
+          }, {
+            "name": "portion",
+            "type": "net.sourceforge.plantuml.abel.EntityPortion"
+          }, {
+            "name": "show",
+            "type": "boolean"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "11",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.atmp.CucaDiagram": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "interface": ["net.sourceforge.plantuml.cucadiagram.GroupHierarchy", "net.sourceforge.plantuml.cucadiagram.PortionShower", "net.sourceforge.plantuml.cucadiagram.ICucaDiagram"],
+      "field": [{
+        "name": "hides2",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.cucadiagram.HideOrShow\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "removed",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.cucadiagram.HideOrShow\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "entityFactory",
+        "type": "net.sourceforge.plantuml.abel.EntityFactory",
+        "modifier": ["protected", "final"]
+      }, {
+        "name": "stacks",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.abel.Bag\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "visibilityModifierPresent",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "warningOrError",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "hideOrShows",
+        "type": "java.util.List\u003cnet.atmp.CucaDiagram.EntityHideOrShow\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "hides",
+        "type": "java.util.Set\u003cnet.sourceforge.plantuml.skin.VisibilityModifier\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "lastEntity",
+        "type": "net.sourceforge.plantuml.abel.Entity",
+        "modifier": ["protected"]
+      }, {
+        "name": "cpt",
+        "type": "java.util.concurrent.atomic.AtomicInteger",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.atmp.CucaDiagram.EntityHideOrShow"],
+      "methodData": {
+        "net.atmp.CucaDiagram.getLabelangle#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.atmp.CucaDiagram.getLinks#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.abel.Link\u003e",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.exportDiagramInternal#facb8d19": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "50",
+            "cyclomatic_complexity": "13",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.atmp.CucaDiagram.getDefaultMargins#1": {
+          "returnType": "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.hideOrShow#4d90247": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "gender",
+            "type": "net.sourceforge.plantuml.abel.EntityGender"
+          }, {
+            "name": "portions",
+            "type": "net.sourceforge.plantuml.abel.EntityPortion"
+          }, {
+            "name": "show",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.CucaDiagram.isVisibilityModifierPresent#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.addLink#242439": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "link",
+            "type": "net.sourceforge.plantuml.abel.Link"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.getTwoLastLinks#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.abel.Link\u003e",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.atmp.CucaDiagram.createFilesXmi#a7e0893": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "suggestedFile",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormat"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.incRawLayout#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.endGroup#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.CucaDiagram.getRootGroup#1": {
+          "returnType": "net.sourceforge.plantuml.abel.Entity",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.getCurrentGroup#1": {
+          "returnType": "net.sourceforge.plantuml.abel.Entity",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.atmp.CucaDiagram.createFilesGraphml#2062420": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "suggestedFile",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.isStandaloneForArgo#7c02d022": {
+          "returnType": "boolean",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "ent",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.atmp.CucaDiagram.isGroup#84b9d894": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "quark",
+            "type": "net.sourceforge.plantuml.plasma.Quark\u003cnet.sourceforge.plantuml.abel.Entity\u003e"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.CucaDiagram.hideOrShow#61bd488e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "visibilities",
+            "type": "java.util.Set\u003cnet.sourceforge.plantuml.skin.VisibilityModifier\u003e"
+          }, {
+            "name": "show",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.CucaDiagram.eventuallyBuildPhantomGroups#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.atmp.CucaDiagram.getPortFor#77c91625": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "entString",
+            "type": "java.lang.String"
+          }, {
+            "name": "ident",
+            "type": "net.sourceforge.plantuml.plasma.Quark\u003cnet.sourceforge.plantuml.abel.Entity\u003e"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.CucaDiagram.createFilesTxt#64feaac4": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormat"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.getLabeldistance#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.atmp.CucaDiagram.getLastEntity#1": {
+          "returnType": "net.sourceforge.plantuml.abel.Entity",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.getVisibleStereotypeLabels#7c02d022": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.atmp.CucaDiagram.isGroup#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "code",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.CucaDiagram.removeOrRestore#f6eaa9d8": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "what",
+            "type": "java.lang.String"
+          }, {
+            "name": "show",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.getTextBlock#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["final", "protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.quarkInContext#bcc68ca": {
+          "returnType": "net.sourceforge.plantuml.plasma.Quark\u003cnet.sourceforge.plantuml.abel.Entity\u003e",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "reuseExistingChild",
+            "type": "boolean"
+          }, {
+            "name": "full",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "31",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.atmp.CucaDiagram.gotoGroup#718c296b": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "quark",
+            "type": "net.sourceforge.plantuml.plasma.Quark\u003cnet.sourceforge.plantuml.abel.Entity\u003e"
+          }, {
+            "name": "display",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.abel.GroupType"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.CucaDiagram.updateLasts#7c02d022": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "result",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.gotoTogether#1": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.hideOrShow2#f6eaa9d8": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "what",
+            "type": "java.lang.String"
+          }, {
+            "name": "show",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.getLastLink#1": {
+          "returnType": "net.sourceforge.plantuml.abel.Link",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.atmp.CucaDiagram.constraintOnLinks#52ea09c1": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "link1",
+            "type": "net.sourceforge.plantuml.abel.Link"
+          }, {
+            "name": "link2",
+            "type": "net.sourceforge.plantuml.abel.Link"
+          }, {
+            "name": "display",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.getUniqueSequence#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "prefix",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.isNumber#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.exportDiagramGraphic#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.getUniqueSequence#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.reallyCreateLeaf#e0896083": {
+          "returnType": "net.sourceforge.plantuml.abel.Entity",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "ident",
+            "type": "net.sourceforge.plantuml.plasma.Quark\u003cnet.sourceforge.plantuml.abel.Entity\u003e"
+          }, {
+            "name": "display",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.abel.LeafType"
+          }, {
+            "name": "symbol",
+            "type": "net.sourceforge.plantuml.decoration.symbol.USymbol"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.CucaDiagram.createFilesScxml#2062420": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "suggestedFile",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.firstWithName#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.plasma.Quark\u003cnet.sourceforge.plantuml.abel.Entity\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.getHides#1": {
+          "returnType": "java.util.Set\u003cnet.sourceforge.plantuml.skin.VisibilityModifier\u003e",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.currentTogether#1": {
+          "returnType": "net.sourceforge.plantuml.abel.Together",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.CucaDiagram.getChildrenGroups#7c02d022": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.abel.Entity\u003e",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.resetPragmaLabel#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.getDotStrings#1": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["abstract", "protected"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.isHideEmptyDescriptionForState#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.setNamespaceSeparator#943a4c50": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "namespaceSeparator",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.showPortion#5c512de0": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "portion",
+            "type": "net.sourceforge.plantuml.abel.EntityPortion"
+          }, {
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.atmp.CucaDiagram.cleanId#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "id",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.CucaDiagram.getGroup#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.abel.Entity",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "code",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.CucaDiagram.removeLink#242439": {
+          "returnType": "void",
+          "modifier": ["final", "protected"],
+          "parameter": [{
+            "name": "link",
+            "type": "net.sourceforge.plantuml.abel.Link"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.getWarningOrError#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.CucaDiagram.applySingleStrategy#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.atmp.CucaDiagram.getPortId#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "id",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.CucaDiagram.hasUrl#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.atmp.CucaDiagram.getDotStringSkek#1": {
+          "returnType": "String[]",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.atmp.CucaDiagram.getEntityFactory#1": {
+          "returnType": "net.sourceforge.plantuml.abel.EntityFactory",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.setLastEntity#7c02d022": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "foo",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.isHiddenStereotypeLabel#2e231f4b": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stereoTypeLabel",
+            "type": "java.lang.String"
+          }, {
+            "name": "commands",
+            "type": "java.util.List\u003cnet.atmp.CucaDiagram.EntityHideOrShow\u003e"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.atmp.CucaDiagram.setVisibilityModifierPresent#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "visibilityModifierPresent",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.isEmpty#7c02d022": {
+          "returnType": "boolean",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.CucaDiagram#16d04a87": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.skin.UmlDiagramType"
+          }, {
+            "name": "orig",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.atmp.CucaDiagram.removePortId#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "id",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.atmp.CucaDiagram.isStandalone#7c02d022": {
+          "returnType": "boolean",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "ent",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.UmlDiagram",
+      "metric": {
+        "loc": "607",
+        "cyclomatic_complexity": "16",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "30"
+      }
+    }
+  },
+  "metric": {
+    "loc": "702",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

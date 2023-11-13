@@ -1,0 +1,130 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "VariableManager.java",
+  "packageName": "net.sourceforge.plantuml.tim",
+  "importName": ["net.sourceforge.plantuml.json.JsonArray", "net.sourceforge.plantuml.json.JsonObject", "net.sourceforge.plantuml.json.JsonValue", "net.sourceforge.plantuml.text.TLineType", "net.sourceforge.plantuml.tim.expression.TValue", "net.sourceforge.plantuml.utils.LineLocation"],
+  "classData": {
+    "net.sourceforge.plantuml.tim.VariableManager": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "memory",
+        "type": "net.sourceforge.plantuml.tim.TMemory",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "context",
+        "type": "net.sourceforge.plantuml.tim.TContext",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "location",
+        "type": "net.sourceforge.plantuml.utils.LineLocation",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.tim.VariableManager.replaceJson#1f273da4": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "jsonValue",
+            "type": "net.sourceforge.plantuml.json.JsonValue"
+          }, {
+            "name": "str",
+            "type": "java.lang.String"
+          }, {
+            "name": "i",
+            "type": "int"
+          }, {
+            "name": "result",
+            "type": "java.lang.StringBuilder"
+          }],
+          "metric": {
+            "loc": "57",
+            "cyclomatic_complexity": "21",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.tim.VariableManager.replaceVariables#b1f8306b": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "str",
+            "type": "java.lang.String"
+          }, {
+            "name": "i",
+            "type": "int"
+          }, {
+            "name": "result",
+            "type": "java.lang.StringBuilder"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.tim.VariableManager.VariableManager#7f3f406e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "location",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.VariableManager.getVarnameAt#f310d59f": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }, {
+            "name": "pos",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.VariableManager.justAfterBackslashN#f310d59f": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }, {
+            "name": "pos",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "117",
+        "cyclomatic_complexity": "32",
+        "cyclomatic_complexity_weighted": "10",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "160",
+    "cyclomatic_complexity": "10"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

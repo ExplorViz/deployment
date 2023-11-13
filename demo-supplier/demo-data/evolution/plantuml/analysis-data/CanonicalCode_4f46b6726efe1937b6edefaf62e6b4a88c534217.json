@@ -1,0 +1,73 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CanonicalCode.java",
+  "packageName": "net.sourceforge.plantuml.code.deflate",
+  "importName": ["java.io.IOException", "java.util.Arrays", "java.util.Objects"],
+  "classData": {
+    "net.sourceforge.plantuml.code.deflate.CanonicalCode": {
+      "type": "CLASS",
+      "modifier": ["final"],
+      "field": [{
+        "name": "symbolCodeBits",
+        "type": "int[]",
+        "modifier": ["private"]
+      }, {
+        "name": "symbolValues",
+        "type": "int[]",
+        "modifier": ["private"]
+      }, {
+        "name": "MAX_CODE_LENGTH",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.code.deflate.CanonicalCode.CanonicalCode#5fb63b0": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "codeLengths",
+            "type": "int[]"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "12",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.code.deflate.CanonicalCode.decodeNextSymbol#dc9750dc": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "in",
+            "type": "net.sourceforge.plantuml.code.deflate.BitInputStream"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.code.deflate.CanonicalCode.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "62",
+        "cyclomatic_complexity": "15",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "69",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "plantuml@gmail.com"
+}

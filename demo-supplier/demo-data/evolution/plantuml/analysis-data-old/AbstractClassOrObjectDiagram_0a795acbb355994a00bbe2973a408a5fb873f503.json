@@ -1,0 +1,346 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "AbstractClassOrObjectDiagram.java",
+  "packageName": "net.sourceforge.plantuml.objectdiagram",
+  "importName": ["java.util.ArrayList", "java.util.List", "java.util.Map", "net.sourceforge.plantuml.abel.DisplayPositioned", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.abel.LeafType", "net.sourceforge.plantuml.abel.Link", "net.sourceforge.plantuml.abel.LinkArg", "net.sourceforge.plantuml.abel.NoteLinkStrategy", "net.sourceforge.plantuml.classdiagram.AbstractEntityDiagram", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.decoration.LinkDecor", "net.sourceforge.plantuml.decoration.LinkType", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.plasma.Quark", "net.sourceforge.plantuml.skin.UmlDiagramType"],
+  "classData": {
+    "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.Association": {
+      "type": "CLASS",
+      "field": [{
+        "name": "entity1",
+        "type": "net.sourceforge.plantuml.abel.Entity",
+        "modifier": ["private"]
+      }, {
+        "name": "entity2",
+        "type": "net.sourceforge.plantuml.abel.Entity",
+        "modifier": ["private"]
+      }, {
+        "name": "associed",
+        "type": "net.sourceforge.plantuml.abel.Entity",
+        "modifier": ["private"]
+      }, {
+        "name": "point",
+        "type": "net.sourceforge.plantuml.abel.Entity",
+        "modifier": ["private"]
+      }, {
+        "name": "existingLink",
+        "type": "net.sourceforge.plantuml.abel.Link",
+        "modifier": ["private"]
+      }, {
+        "name": "entity1ToPoint",
+        "type": "net.sourceforge.plantuml.abel.Link",
+        "modifier": ["private"]
+      }, {
+        "name": "pointToEntity2",
+        "type": "net.sourceforge.plantuml.abel.Link",
+        "modifier": ["private"]
+      }, {
+        "name": "pointToAssocied",
+        "type": "net.sourceforge.plantuml.abel.Link",
+        "modifier": ["private"]
+      }, {
+        "name": "other",
+        "type": "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.Association",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.Association.sameCouple#805a0421": {
+          "returnType": "boolean",
+          "parameter": [{
+            "name": "entity1",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "entity2",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.Association.createInSecond#dce6786f": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "linkType",
+            "type": "net.sourceforge.plantuml.decoration.LinkType"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.Association.createNew#e2e2413c": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "mode",
+            "type": "int"
+          }, {
+            "name": "linkType",
+            "type": "net.sourceforge.plantuml.decoration.LinkType"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "49",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.Association.createSecondAssociation#d130ad8d": {
+          "returnType": "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.Association",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "mode2",
+            "type": "int"
+          }, {
+            "name": "associed2",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.Association.Association#c066a0d5": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "mode",
+            "type": "int"
+          }, {
+            "name": "entity1",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "entity2",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "associed",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "135",
+        "cyclomatic_complexity": "16",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "field": [{
+        "name": "associations",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.Association\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.Association"],
+      "methodData": {
+        "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.AbstractClassOrObjectDiagram#16d04a87": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.skin.UmlDiagramType"
+          }, {
+            "name": "orig",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.associationClass#ac4ae8af": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "entity1A",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "entity1B",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "entity2A",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "entity2B",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "linkType",
+            "type": "net.sourceforge.plantuml.decoration.LinkType"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.insertPointBetween#6e95002": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "entity1A",
+            "type": "net.sourceforge.plantuml.abel.Entity",
+            "modifier": ["final "]
+          }, {
+            "name": "entity1B",
+            "type": "net.sourceforge.plantuml.abel.Entity",
+            "modifier": ["final "]
+          }, {
+            "name": "point1",
+            "type": "net.sourceforge.plantuml.abel.Entity",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.getExistingAssociatedPoints#805a0421": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.Association\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "entity1",
+            "type": "net.sourceforge.plantuml.abel.Entity",
+            "modifier": ["final "]
+          }, {
+            "name": "entity2",
+            "type": "net.sourceforge.plantuml.abel.Entity",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.insertBetween#6e95002": {
+          "returnType": "boolean",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "entity1",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "entity2",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "node",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.setLegend#d35da9e9": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "legend",
+            "type": "net.sourceforge.plantuml.abel.DisplayPositioned"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.foundLink#805a0421": {
+          "returnType": "net.sourceforge.plantuml.abel.Link",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "entity1",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "entity2",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.getNbOfHozizontalLollipop#7c02d022": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram.associationClass#1e283443": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "mode",
+            "type": "int"
+          }, {
+            "name": "entity1",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "entity2",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "associed",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "linkType",
+            "type": "net.sourceforge.plantuml.decoration.LinkType"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.classdiagram.AbstractEntityDiagram",
+      "metric": {
+        "loc": "290",
+        "cyclomatic_complexity": "17",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "346",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

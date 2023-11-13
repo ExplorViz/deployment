@@ -1,0 +1,109 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "SegmentQuants.java",
+  "packageName": "net.sourceforge.plantuml.webp",
+  "importName": ["java.io.IOException"],
+  "classData": {
+    "net.sourceforge.plantuml.webp.SegmentQuants": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "qIndex",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "segQuants",
+        "type": "SegmentQuant[]",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.webp.SegmentQuants.get_delta_q#298ee116": {
+          "returnType": "net.sourceforge.plantuml.webp.DeltaQ",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "bc",
+            "type": "net.sourceforge.plantuml.webp.BoolDecoder"
+          }, {
+            "name": "prev",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SegmentQuants.getqIndex#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SegmentQuants.parse#838960b9": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "bc",
+            "type": "net.sourceforge.plantuml.webp.BoolDecoder"
+          }, {
+            "name": "segmentation_enabled",
+            "type": "boolean"
+          }, {
+            "name": "mb_segement_abs_delta",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SegmentQuants.getSegQuants#1": {
+          "returnType": "SegmentQuant[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SegmentQuants.setSegQuants#84e7a571": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "segQuants",
+            "type": "SegmentQuant[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SegmentQuants.SegmentQuants#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "76",
+        "cyclomatic_complexity": "8",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "95",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

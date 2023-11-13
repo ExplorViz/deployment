@@ -1,0 +1,278 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "EpsGraphicsMacro.java",
+  "packageName": "net.sourceforge.plantuml.klimt.drawing.eps",
+  "importName": ["java.awt.geom.PathIterator", "java.util.HashMap", "java.util.Map"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "data",
+        "type": "net.sourceforge.plantuml.klimt.drawing.eps.PostScriptData",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "rquadto",
+        "type": "net.sourceforge.plantuml.klimt.drawing.eps.PostScriptCommandMacro",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "posX",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "posY",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "macroCpt",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "macros",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.klimt.drawing.eps.PostScriptCommandMacro, java.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "macroInProgress",
+        "type": "net.sourceforge.plantuml.klimt.drawing.eps.PostScriptCommandMacro",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.getBodyString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.closeMacro#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.openMacro#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.append#f6eaa9d8": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }, {
+            "name": "checkConsistence",
+            "type": "boolean"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.moveto#1eef7de1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "y1",
+            "type": "double"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.EpsGraphicsMacro#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.epsHLine#6ff7ba10": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "ymin",
+            "type": "double"
+          }, {
+            "name": "ymax",
+            "type": "double"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.quadto#3ff703c1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "y1",
+            "type": "double"
+          }, {
+            "name": "x2",
+            "type": "double"
+          }, {
+            "name": "y2",
+            "type": "double"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.fill#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "windingRule",
+            "type": "int"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.curveto#3d3491a1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "y1",
+            "type": "double"
+          }, {
+            "name": "x2",
+            "type": "double"
+          }, {
+            "name": "y2",
+            "type": "double"
+          }, {
+            "name": "x3",
+            "type": "double"
+          }, {
+            "name": "y3",
+            "type": "double"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.macroName#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.newpath#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.closepath#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.epsVLine#6ff7ba10": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "xmin",
+            "type": "double"
+          }, {
+            "name": "xmax",
+            "type": "double"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphicsMacro.lineto#1eef7de1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "y1",
+            "type": "double"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.drawing.eps.EpsGraphics",
+      "metric": {
+        "loc": "169",
+        "cyclomatic_complexity": "17",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "210",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,676 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "DLXEngine.java",
+  "packageName": "net.sourceforge.plantuml.sudoku",
+  "importName": ["java.util.Random"],
+  "classData": {
+    "net.sourceforge.plantuml.sudoku.dlx_solver": {
+      "type": "CLASS",
+      "field": [{
+        "name": "M",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "M2",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "M4",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "A0",
+        "type": "int[][]"
+      }, {
+        "name": "A",
+        "type": "int[][]"
+      }, {
+        "name": "Rows",
+        "type": "int[]"
+      }, {
+        "name": "Cols",
+        "type": "int[]"
+      }, {
+        "name": "Row",
+        "type": "int[][]"
+      }, {
+        "name": "Col",
+        "type": "int[][]"
+      }, {
+        "name": "Ur",
+        "type": "int[]"
+      }, {
+        "name": "Uc",
+        "type": "int[]"
+      }, {
+        "name": "V",
+        "type": "int[]"
+      }, {
+        "name": "C",
+        "type": "int[]"
+      }, {
+        "name": "I",
+        "type": "int[]"
+      }, {
+        "name": "T",
+        "type": "int[]"
+      }, {
+        "name": "P",
+        "type": "int[]"
+      }, {
+        "name": "Mr",
+        "type": "int[]"
+      }, {
+        "name": "Mc",
+        "type": "int[]"
+      }, {
+        "name": "Mw",
+        "type": "int[]"
+      }, {
+        "name": "nocheck",
+        "type": "int"
+      }, {
+        "name": "max",
+        "type": "int"
+      }, {
+        "name": "_try_",
+        "type": "int"
+      }, {
+        "name": "rnd",
+        "type": "int",
+        "modifier": ["final"]
+      }, {
+        "name": "min",
+        "type": "int"
+      }, {
+        "name": "clues",
+        "type": "int"
+      }, {
+        "name": "gu",
+        "type": "int"
+      }, {
+        "name": "tries",
+        "type": "int"
+      }, {
+        "name": "Node",
+        "type": "long[]"
+      }, {
+        "name": "nodes",
+        "type": "long"
+      }, {
+        "name": "tnodes",
+        "type": "long"
+      }, {
+        "name": "solutions",
+        "type": "long"
+      }, {
+        "name": "vmax",
+        "type": "long"
+      }, {
+        "name": "smax",
+        "type": "long"
+      }, {
+        "name": "time0",
+        "type": "long"
+      }, {
+        "name": "time1",
+        "type": "long"
+      }, {
+        "name": "t1",
+        "type": "long"
+      }, {
+        "name": "x1",
+        "type": "long"
+      }, {
+        "name": "xx",
+        "type": "double"
+      }, {
+        "name": "yy",
+        "type": "double"
+      }, {
+        "name": "q",
+        "type": "int"
+      }, {
+        "name": "a",
+        "type": "int"
+      }, {
+        "name": "p",
+        "type": "int"
+      }, {
+        "name": "i",
+        "type": "int"
+      }, {
+        "name": "i1",
+        "type": "int"
+      }, {
+        "name": "j",
+        "type": "int"
+      }, {
+        "name": "k",
+        "type": "int"
+      }, {
+        "name": "l",
+        "type": "int"
+      }, {
+        "name": "r",
+        "type": "int"
+      }, {
+        "name": "r1",
+        "type": "int"
+      }, {
+        "name": "c",
+        "type": "int"
+      }, {
+        "name": "c1",
+        "type": "int"
+      }, {
+        "name": "c2",
+        "type": "int"
+      }, {
+        "name": "n",
+        "type": "int"
+      }, {
+        "name": "N",
+        "type": "int"
+      }, {
+        "name": "N2",
+        "type": "int"
+      }, {
+        "name": "N4",
+        "type": "int"
+      }, {
+        "name": "m",
+        "type": "int"
+      }, {
+        "name": "m0",
+        "type": "int"
+      }, {
+        "name": "m1",
+        "type": "int"
+      }, {
+        "name": "x",
+        "type": "int"
+      }, {
+        "name": "y",
+        "type": "int"
+      }, {
+        "name": "s",
+        "type": "int"
+      }, {
+        "name": "L",
+        "type": "char[]"
+      }, {
+        "name": "M6",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "M7",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "RESTART",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "M22",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "M3",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "M44",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "NEXT_TRY",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "END",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "random",
+        "type": "java.util.Random",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sudoku.dlx_solver.solve#943a4c50": {
+          "returnType": "java.lang.String",
+          "parameter": [{
+            "name": "puzzle",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "387",
+            "cyclomatic_complexity": "173",
+            "nestedBlockDepth": "9"
+          }
+        },
+        "net.sourceforge.plantuml.sudoku.dlx_solver.dlx_solver#9177d102": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "random",
+            "type": "java.util.Random"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sudoku.dlx_solver.shuffle#1": {
+          "returnType": "int",
+          "metric": {
+            "loc": "86",
+            "cyclomatic_complexity": "22",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.sudoku.dlx_solver.MWC#1": {
+          "returnType": "long",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "519",
+        "cyclomatic_complexity": "195",
+        "cyclomatic_complexity_weighted": "97",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.sudoku.dlx_generator": {
+      "type": "CLASS",
+      "field": [{
+        "name": "Rows",
+        "type": "int[]"
+      }, {
+        "name": "Cols",
+        "type": "int[]"
+      }, {
+        "name": "Row",
+        "type": "int[][]"
+      }, {
+        "name": "Col",
+        "type": "int[][]"
+      }, {
+        "name": "Ur",
+        "type": "int[]"
+      }, {
+        "name": "Uc",
+        "type": "int[]"
+      }, {
+        "name": "V",
+        "type": "int[]"
+      }, {
+        "name": "W",
+        "type": "int[]"
+      }, {
+        "name": "P",
+        "type": "int[]"
+      }, {
+        "name": "A",
+        "type": "int[]"
+      }, {
+        "name": "C",
+        "type": "int[]"
+      }, {
+        "name": "I",
+        "type": "int[]"
+      }, {
+        "name": "Two",
+        "type": "int[]"
+      }, {
+        "name": "B",
+        "type": "char[]"
+      }, {
+        "name": "H",
+        "type": "char[][]"
+      }, {
+        "name": "c2",
+        "type": "long"
+      }, {
+        "name": "w",
+        "type": "long"
+      }, {
+        "name": "b",
+        "type": "int"
+      }, {
+        "name": "f",
+        "type": "int"
+      }, {
+        "name": "s1",
+        "type": "int"
+      }, {
+        "name": "m0",
+        "type": "int"
+      }, {
+        "name": "c1",
+        "type": "int"
+      }, {
+        "name": "r1",
+        "type": "int"
+      }, {
+        "name": "l",
+        "type": "int"
+      }, {
+        "name": "i1",
+        "type": "int"
+      }, {
+        "name": "m1",
+        "type": "int"
+      }, {
+        "name": "m2",
+        "type": "int"
+      }, {
+        "name": "a",
+        "type": "int"
+      }, {
+        "name": "p",
+        "type": "int"
+      }, {
+        "name": "i",
+        "type": "int"
+      }, {
+        "name": "j",
+        "type": "int"
+      }, {
+        "name": "k",
+        "type": "int"
+      }, {
+        "name": "r",
+        "type": "int"
+      }, {
+        "name": "c",
+        "type": "int"
+      }, {
+        "name": "d",
+        "type": "int"
+      }, {
+        "name": "n",
+        "type": "int"
+      }, {
+        "name": "m",
+        "type": "int"
+      }, {
+        "name": "x",
+        "type": "int"
+      }, {
+        "name": "y",
+        "type": "int"
+      }, {
+        "name": "s",
+        "type": "int"
+      }, {
+        "name": "z",
+        "type": "int"
+      }, {
+        "name": "fi",
+        "type": "int"
+      }, {
+        "name": "mi1",
+        "type": "int"
+      }, {
+        "name": "mi2",
+        "type": "int"
+      }, {
+        "name": "q7",
+        "type": "int"
+      }, {
+        "name": "part",
+        "type": "int"
+      }, {
+        "name": "nt",
+        "type": "int"
+      }, {
+        "name": "rate",
+        "type": "int"
+      }, {
+        "name": "nodes",
+        "type": "int"
+      }, {
+        "name": "solutions",
+        "type": "int"
+      }, {
+        "name": "min",
+        "type": "int"
+      }, {
+        "name": "samples",
+        "type": "int"
+      }, {
+        "name": "sam1",
+        "type": "int"
+      }, {
+        "name": "clues",
+        "type": "int"
+      }, {
+        "name": "L",
+        "type": "char[]"
+      }, {
+        "name": "M0S",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "M0",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "MR1",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "MR3",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "MR4",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "M2",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "M3",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "M4",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "M9",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "MR",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "END",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "M6",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "DBG",
+        "type": "boolean"
+      }, {
+        "name": "random",
+        "type": "java.util.Random",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sudoku.dlx_generator.initialize#1": {
+          "returnType": "void",
+          "metric": {
+            "loc": "74",
+            "cyclomatic_complexity": "16",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.sudoku.dlx_generator.dbg#943a4c50": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sudoku.dlx_generator.rate#943a4c50": {
+          "returnType": "long",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "puzzle",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "84",
+            "cyclomatic_complexity": "32",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.sudoku.dlx_generator.dlx_generator#9177d102": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "random",
+            "type": "java.util.Random"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sudoku.dlx_generator.solve#1": {
+          "returnType": "int",
+          "metric": {
+            "loc": "174",
+            "cyclomatic_complexity": "72",
+            "nestedBlockDepth": "9"
+          }
+        },
+        "net.sourceforge.plantuml.sudoku.dlx_generator.MWC#1": {
+          "returnType": "long",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sudoku.dlx_generator.generate#3301a1": {
+          "returnType": "String[]",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "Samples",
+            "type": "int"
+          }, {
+            "name": "Rate",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "128",
+            "cyclomatic_complexity": "51",
+            "nestedBlockDepth": "7"
+          }
+        }
+      },
+      "metric": {
+        "loc": "509",
+        "cyclomatic_complexity": "172",
+        "cyclomatic_complexity_weighted": "34",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.sudoku.DLXEngine": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "generator",
+        "type": "net.sourceforge.plantuml.sudoku.dlx_generator"
+      }, {
+        "name": "solver",
+        "type": "net.sourceforge.plantuml.sudoku.dlx_solver"
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sudoku.DLXEngine.solve#943a4c50": {
+          "returnType": "java.lang.String",
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sudoku.DLXEngine.rate#943a4c50": {
+          "returnType": "long",
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sudoku.DLXEngine.generate#3301a1": {
+          "returnType": "java.lang.String",
+          "parameter": [{
+            "name": "minrating",
+            "type": "int"
+          }, {
+            "name": "maxrating",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sudoku.DLXEngine.DLXEngine#9177d102": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "random",
+            "type": "java.util.Random"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "25",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "1076",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

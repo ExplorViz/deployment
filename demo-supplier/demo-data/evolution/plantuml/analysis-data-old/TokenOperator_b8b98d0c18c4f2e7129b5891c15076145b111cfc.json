@@ -1,0 +1,109 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "TokenOperator.java",
+  "packageName": "net.sourceforge.plantuml.tim.expression",
+  "classData": {
+    "net.sourceforge.plantuml.tim.expression.TokenOperator": {
+      "type": "ENUM",
+      "modifier": ["public"],
+      "field": [{
+        "name": "precedence",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "display",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.tim.expression.TokenOperator.TokenOperator#946bb5e3": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "precedence",
+            "type": "int"
+          }, {
+            "name": "display",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.TokenOperator.getDisplay#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.TokenOperator.operate#8816b361": {
+          "returnType": "net.sourceforge.plantuml.tim.expression.TValue",
+          "modifier": ["public", "abstract"],
+          "parameter": [{
+            "name": "v1",
+            "type": "net.sourceforge.plantuml.tim.expression.TValue"
+          }, {
+            "name": "v2",
+            "type": "net.sourceforge.plantuml.tim.expression.TValue"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.TokenOperator.getPrecedence#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.TokenOperator.isLeftAssociativity#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.TokenOperator.getTokenOperator#5d26e81": {
+          "returnType": "net.sourceforge.plantuml.tim.expression.TokenOperator",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "ch",
+            "type": "char"
+          }, {
+            "name": "ch2",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "enumConstant": ["MULTIPLICATION", "DIVISION", "ADDITION", "SUBSTRACTION", "LESS_THAN", "GREATER_THAN", "LESS_THAN_OR_EQUALS", "GREATER_THAN_OR_EQUALS", "EQUALS", "NOT_EQUALS", "LOGICAL_AND", "LOGICAL_OR"],
+      "metric": {
+        "loc": "96",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "133",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

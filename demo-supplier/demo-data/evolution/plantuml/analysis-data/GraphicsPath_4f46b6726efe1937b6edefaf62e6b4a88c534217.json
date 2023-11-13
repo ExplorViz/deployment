@@ -1,0 +1,72 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "GraphicsPath.java",
+  "packageName": "net.sourceforge.plantuml.eggs",
+  "importName": ["java.awt.Color", "java.awt.Graphics2D", "java.awt.image.BufferedImage", "java.io.IOException", "java.io.OutputStream", "net.sourceforge.plantuml.EmptyImageBuilder", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.api.ImageDataSimple", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.klimt.UChange", "net.sourceforge.plantuml.klimt.UMotif", "net.sourceforge.plantuml.klimt.color.ColorMapper", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.drawing.g2d.UGraphicG2d", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.png.PngIO"],
+  "classData": {
+    "net.sourceforge.plantuml.eggs.GraphicsPath": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "path",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "colorMapper",
+        "type": "net.sourceforge.plantuml.klimt.color.ColorMapper",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.eggs.GraphicsPath.GraphicsPath#56f4910e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "colorMapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }, {
+            "name": "path",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.eggs.GraphicsPath.writeImage#2062420": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.eggs.GraphicsPath.createImage#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "32",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "87",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

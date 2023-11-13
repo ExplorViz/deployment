@@ -1,0 +1,103 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Transform.java",
+  "packageName": "net.sourceforge.plantuml.brotli",
+  "importName": ["java.nio.ByteBuffer"],
+  "classData": {
+    "net.sourceforge.plantuml.brotli.Transform": {
+      "type": "CLASS",
+      "modifier": ["final"],
+      "field": [{
+        "name": "NUM_TRANSFORMS",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "TRANSFORMS",
+        "type": "int[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "PREFIX_SUFFIX",
+        "type": "byte[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "PREFIX_SUFFIX_HEADS",
+        "type": "int[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "PREFIX_SUFFIX_SRC",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "TRANSFORMS_SRC",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.brotli.Transform.unpackTransforms#48d1ce49": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "prefixSuffix",
+            "type": "byte[]"
+          }, {
+            "name": "prefixSuffixHeads",
+            "type": "int[]"
+          }, {
+            "name": "transforms",
+            "type": "int[]"
+          }, {
+            "name": "prefixSuffixSrc",
+            "type": "java.lang.String"
+          }, {
+            "name": "transformsSrc",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Transform.transformDictionaryWord#31b4dd0d": {
+          "returnType": "int",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "dst",
+            "type": "byte[]"
+          }, {
+            "name": "dstOffset",
+            "type": "int"
+          }, {
+            "name": "data",
+            "type": "java.nio.ByteBuffer"
+          }, {
+            "name": "wordOffset",
+            "type": "int"
+          }, {
+            "name": "len",
+            "type": "int"
+          }, {
+            "name": "transformIndex",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "54",
+            "cyclomatic_complexity": "12",
+            "nestedBlockDepth": "5"
+          }
+        }
+      },
+      "metric": {
+        "loc": "92",
+        "cyclomatic_complexity": "15",
+        "cyclomatic_complexity_weighted": "7",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "104",
+    "cyclomatic_complexity": "7"
+  },
+  "author": "plantuml@gmail.com"
+}

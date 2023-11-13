@@ -1,0 +1,267 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Idea.java",
+  "packageName": "net.sourceforge.plantuml.mindmap",
+  "importName": ["java.util.ArrayList", "java.util.Collection", "java.util.Collections", "java.util.List", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.style.MergeStrategy", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleBuilder", "net.sourceforge.plantuml.style.StyleSignatureBasic", "net.sourceforge.plantuml.wbs.WElement"],
+  "classData": {
+    "net.sourceforge.plantuml.mindmap.Idea": {
+      "type": "CLASS",
+      "field": [{
+        "name": "label",
+        "type": "net.sourceforge.plantuml.klimt.creole.Display",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "level",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "parent",
+        "type": "net.sourceforge.plantuml.mindmap.Idea",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "children",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.mindmap.Idea\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "shape",
+        "type": "net.sourceforge.plantuml.mindmap.IdeaShape",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "backColor",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "styleBuilder",
+        "type": "net.sourceforge.plantuml.style.StyleBuilder",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "stereotype",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "STEP_BY_PARENT",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.mindmap.Idea.hasChildren#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.getBackColor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.getShape#1": {
+          "returnType": "net.sourceforge.plantuml.mindmap.IdeaShape",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.getStyleArrow#1": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.getDefaultStyleDefinitionNode#1980e": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "level",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.getStyleBuilder#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleBuilder",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.getStyle#1": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.createIdeaSimple#28184957": {
+          "returnType": "net.sourceforge.plantuml.mindmap.Idea",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "styleBuilder",
+            "type": "net.sourceforge.plantuml.style.StyleBuilder"
+          }, {
+            "name": "backColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.mindmap.IdeaShape"
+          }, {
+            "name": "stereotype",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.getLabel#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Display",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.getLevel#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.getChildren#1": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.mindmap.Idea\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.getParent#1": {
+          "returnType": "net.sourceforge.plantuml.mindmap.Idea",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.getStereotype#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.createIdea#ed99bac": {
+          "returnType": "net.sourceforge.plantuml.mindmap.Idea",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "styleBuilder",
+            "type": "net.sourceforge.plantuml.style.StyleBuilder"
+          }, {
+            "name": "backColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "newLevel",
+            "type": "int"
+          }, {
+            "name": "newDisplay",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "newShape",
+            "type": "net.sourceforge.plantuml.mindmap.IdeaShape"
+          }, {
+            "name": "stereotype",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.Idea#cd9c7cf": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "styleBuilder",
+            "type": "net.sourceforge.plantuml.style.StyleBuilder"
+          }, {
+            "name": "backColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "level",
+            "type": "int"
+          }, {
+            "name": "parent",
+            "type": "net.sourceforge.plantuml.mindmap.Idea"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.mindmap.IdeaShape"
+          }, {
+            "name": "stereotype",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.mindmap.Idea.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "120",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "171",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

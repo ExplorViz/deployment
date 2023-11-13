@@ -1,0 +1,278 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "PicoWebServer.java",
+  "packageName": "net.sourceforge.plantuml.picoweb",
+  "importName": ["java.nio.charset.StandardCharsets.UTF_8", "net.sourceforge.plantuml.ErrorUmlType.SYNTAX_ERROR", "java.io.BufferedInputStream", "java.io.BufferedOutputStream", "java.io.ByteArrayOutputStream", "java.io.IOException", "java.io.OutputStream", "java.io.PrintWriter", "java.net.InetAddress", "java.net.ServerSocket", "java.net.Socket", "java.net.URLEncoder", "java.util.Collections", "java.util.Date", "java.util.List", "net.sourceforge.plantuml.BlockUml", "net.sourceforge.plantuml.ErrorUml", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.Option", "net.sourceforge.plantuml.SourceStringReader", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.code.Transcoder", "net.sourceforge.plantuml.code.TranscoderUtil", "net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.eggs.QuoteUtils", "net.sourceforge.plantuml.error.PSystemError", "net.sourceforge.plantuml.error.PSystemErrorUtils", "net.sourceforge.plantuml.json.Json", "net.sourceforge.plantuml.json.JsonArray", "net.sourceforge.plantuml.json.JsonObject", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.text.StringLocated", "net.sourceforge.plantuml.utils.LineLocationImpl", "net.sourceforge.plantuml.version.Version"],
+  "classData": {
+    "net.sourceforge.plantuml.picoweb.PicoWebServer": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["java.lang.Runnable"],
+      "field": [{
+        "name": "connect",
+        "type": "java.net.Socket",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "enableStop",
+        "type": "boolean",
+        "modifier": ["private", "static"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.startServer#fce672a5": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "port",
+            "type": "int",
+            "modifier": ["final "]
+          }, {
+            "name": "bindAddress",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }, {
+            "name": "argEnableStop",
+            "type": "boolean",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.handleRenderRequest#4c68a6bb": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "request",
+            "type": "net.sourceforge.plantuml.picoweb.ReceivedHTTPRequest"
+          }, {
+            "name": "out",
+            "type": "java.io.BufferedOutputStream"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.handleGET#c6bd958": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "request",
+            "type": "net.sourceforge.plantuml.picoweb.ReceivedHTTPRequest"
+          }, {
+            "name": "out",
+            "type": "java.io.BufferedOutputStream"
+          }, {
+            "name": "format",
+            "type": "net.sourceforge.plantuml.FileFormat",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.sendDiagram#7d7a1f62": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "out",
+            "type": "java.io.BufferedOutputStream",
+            "modifier": ["final "]
+          }, {
+            "name": "system",
+            "type": "net.sourceforge.plantuml.core.Diagram",
+            "modifier": ["final "]
+          }, {
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption",
+            "modifier": ["final "]
+          }, {
+            "name": "returnCode",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }, {
+            "name": "imageData",
+            "type": "net.sourceforge.plantuml.core.ImageData",
+            "modifier": ["final "]
+          }, {
+            "name": "fileData",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "35",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.handleRenderRequest#b6a17168": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "renderRequest",
+            "type": "net.sourceforge.plantuml.picoweb.RenderRequest"
+          }, {
+            "name": "out",
+            "type": "java.io.BufferedOutputStream"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.main#6ed80f72": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "args",
+            "type": "String[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.handleInfo#785d929f": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "out",
+            "type": "java.io.BufferedOutputStream"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.handleStop#785d929f": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "out",
+            "type": "java.io.BufferedOutputStream"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.PicoWebServer#93ed0bb2": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "c",
+            "type": "java.net.Socket"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.serverLoop#7b5cd0d5": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "serverConnect",
+            "type": "java.net.ServerSocket",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.write#d2f8ac11": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.sendError#def34121": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "e",
+            "type": "java.lang.Throwable"
+          }, {
+            "name": "out",
+            "type": "java.io.BufferedOutputStream"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.httpReturnCode#1980e": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "status",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.run#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "59",
+            "cyclomatic_complexity": "20",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "267",
+        "cyclomatic_complexity": "38",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.picoweb.PicoWebServer.handleStop#785d929f.Runnable": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.picoweb.PicoWebServer.handleStop#785d929f.Runnable.run#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "345",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

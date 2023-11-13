@@ -1,0 +1,109 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "DriverTextG2d.java",
+  "packageName": "net.sourceforge.plantuml.klimt.drawing.g2d",
+  "importName": ["java.lang.Math.max", "java.awt.BasicStroke", "java.awt.Color", "java.awt.FontMetrics", "java.awt.GradientPaint", "java.awt.Graphics2D", "java.awt.RenderingHints", "java.awt.geom.AffineTransform", "java.awt.geom.Rectangle2D", "java.util.List", "net.sourceforge.plantuml.klimt.UParam", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.color.ColorMapper", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColorGradient", "net.sourceforge.plantuml.klimt.drawing.UDriver", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.FontStyle", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.font.UFont", "net.sourceforge.plantuml.klimt.font.UFontContext", "net.sourceforge.plantuml.klimt.geom.EnsureVisible", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.UText", "net.sourceforge.plantuml.text.StyledString"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.drawing.g2d.DriverTextG2d": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.drawing.UDriver\u003cnet.sourceforge.plantuml.klimt.shape.UText, java.awt.Graphics2D\u003e"],
+      "field": [{
+        "name": "visible",
+        "type": "net.sourceforge.plantuml.klimt.geom.EnsureVisible",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "stringBounder",
+        "type": "net.sourceforge.plantuml.klimt.font.StringBounder",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.drawing.g2d.DriverTextG2d.draw#360835a8": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.UText"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "mapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }, {
+            "name": "param",
+            "type": "net.sourceforge.plantuml.klimt.UParam"
+          }, {
+            "name": "g2d",
+            "type": "java.awt.Graphics2D"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.g2d.DriverTextG2d.DriverTextG2d#c1bd1147": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "visible",
+            "type": "net.sourceforge.plantuml.klimt.geom.EnsureVisible"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.g2d.DriverTextG2d.printSingleText#f854c7de": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "g2d",
+            "type": "java.awt.Graphics2D"
+          }, {
+            "name": "fontConfiguration",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+            "modifier": ["final "]
+          }, {
+            "name": "text",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "mapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }],
+          "metric": {
+            "loc": "83",
+            "cyclomatic_complexity": "15",
+            "nestedBlockDepth": "6"
+          }
+        }
+      },
+      "metric": {
+        "loc": "112",
+        "cyclomatic_complexity": "17",
+        "cyclomatic_complexity_weighted": "8",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "177",
+    "cyclomatic_complexity": "8"
+  },
+  "author": "plantuml@gmail.com"
+}

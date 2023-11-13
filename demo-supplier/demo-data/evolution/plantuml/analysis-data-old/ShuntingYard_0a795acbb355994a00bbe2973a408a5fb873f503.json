@@ -1,0 +1,133 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "ShuntingYard.java",
+  "packageName": "net.sourceforge.plantuml.tim.expression",
+  "importName": ["java.util.ArrayDeque", "java.util.Deque", "net.sourceforge.plantuml.tim.EaterException", "net.sourceforge.plantuml.tim.EaterExceptionLocated"],
+  "classData": {
+    "net.sourceforge.plantuml.tim.expression.ShuntingYard": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "ouputQueue",
+        "type": "net.sourceforge.plantuml.tim.expression.TokenStack",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "operatorStack",
+        "type": "java.util.Deque\u003cnet.sourceforge.plantuml.tim.expression.Token\u003e",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "TRACE",
+        "type": "boolean",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.tim.expression.ShuntingYard.thereIsAFunctionAtTheTopOfTheOperatorStack#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.ShuntingYard.thereIsAnOperatorAtTheTopOfTheOperatorStackWithGreaterPrecedence#4d3c9f8": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "token",
+            "type": "net.sourceforge.plantuml.tim.expression.Token"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.ShuntingYard.isVariableName#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.ShuntingYard.theOperatorAtTheTopOfTheOperatorStackIsNotALeftParenthesis#4d3c9f8": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "token",
+            "type": "net.sourceforge.plantuml.tim.expression.Token"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.ShuntingYard.theOperatorAtTheTopOfTheOperatorStackHasEqualPrecedenceAndIsLeftAssociative#4d3c9f8": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "token",
+            "type": "net.sourceforge.plantuml.tim.expression.Token"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.ShuntingYard.ShuntingYard#48e9eb98": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "it",
+            "type": "net.sourceforge.plantuml.tim.expression.TokenIterator"
+          }, {
+            "name": "knowledge",
+            "type": "net.sourceforge.plantuml.tim.expression.Knowledge"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "60",
+            "cyclomatic_complexity": "31",
+            "nestedBlockDepth": "12"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.ShuntingYard.traceMe#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.ShuntingYard.getQueue#1": {
+          "returnType": "net.sourceforge.plantuml.tim.expression.TokenStack",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "117",
+        "cyclomatic_complexity": "35",
+        "cyclomatic_complexity_weighted": "7",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "159",
+    "cyclomatic_complexity": "7"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

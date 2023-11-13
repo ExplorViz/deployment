@@ -1,0 +1,330 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "ChainImpl.java",
+  "packageName": "net.sourceforge.plantuml.bpm",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.ConcurrentModificationException", "java.util.List", "java.util.Objects"],
+  "classData": {
+    "net.sourceforge.plantuml.bpm.ChainImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.bpm.Chain\u003cO\u003e"],
+      "field": [{
+        "name": "positive",
+        "type": "java.util.List\u003cO\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "negative",
+        "type": "java.util.List\u003cO\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "currentVersion",
+        "type": "int",
+        "modifier": ["private"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.bpm.ChainImpl.InternalNavigator"],
+      "methodData": {
+        "net.sourceforge.plantuml.bpm.ChainImpl.contains#6e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "data",
+            "type": "O"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.cloneMe#1": {
+          "returnType": "net.sourceforge.plantuml.bpm.ChainImpl\u003cO\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.updateStructuralVersion#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.ChainImpl#6e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "root",
+            "type": "O"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.ensure#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "position",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.ensureInternal#6e420f3f": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "position",
+            "type": "int"
+          }, {
+            "name": "list",
+            "type": "java.util.List\u003cO\u003e"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.setInternal#316a01": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "position",
+            "type": "int"
+          }, {
+            "name": "data",
+            "type": "O"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.getInternal#1980e": {
+          "returnType": "O",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "position",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.toList#1": {
+          "returnType": "java.util.List\u003cO\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.ChainImpl#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.navigator#6e": {
+          "returnType": "net.sourceforge.plantuml.bpm.Navigator\u003cO\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "data",
+            "type": "O"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.remove#6e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "data",
+            "type": "O"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.insertInternal#316a01": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "position",
+            "type": "int"
+          }, {
+            "name": "data",
+            "type": "O"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.compare#da1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "a",
+            "type": "O"
+          }, {
+            "name": "b",
+            "type": "O"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "199",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.bpm.ChainImpl.InternalNavigator": {
+      "type": "CLASS",
+      "interface": ["net.sourceforge.plantuml.bpm.Navigator\u003cO\u003e"],
+      "field": [{
+        "name": "position",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "version",
+        "type": "int",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.bpm.ChainImpl.InternalNavigator.get#1": {
+          "returnType": "O",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.InternalNavigator.checkConsistency#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.InternalNavigator.next#1": {
+          "returnType": "O",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.InternalNavigator.insertAfter#6e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "data",
+            "type": "O"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.InternalNavigator.previous#1": {
+          "returnType": "O",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.InternalNavigator.set#6e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "data",
+            "type": "O"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.InternalNavigator.InternalNavigator#3301a1": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "position",
+            "type": "int"
+          }, {
+            "name": "version",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.bpm.ChainImpl.InternalNavigator.insertBefore#6e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "data",
+            "type": "O"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "48",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "242",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

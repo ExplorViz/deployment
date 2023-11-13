@@ -1,0 +1,160 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CornerCurved.java",
+  "packageName": "net.sourceforge.plantuml.ebnf",
+  "importName": ["net.sourceforge.plantuml.klimt.CopyForegroundColorToBackgroundColor", "net.sourceforge.plantuml.klimt.UPath", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.shape.UDrawable"],
+  "classData": {
+    "net.sourceforge.plantuml.ebnf.CornerType": {
+      "type": "ENUM",
+      "enumConstant": ["NW", "NE", "SE", "SW"],
+      "metric": {
+        "loc": "3",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.ebnf.CornerCurved": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.shape.UDrawable"],
+      "field": [{
+        "name": "delta",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "type",
+        "type": "net.sourceforge.plantuml.ebnf.CornerType",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "withArrow",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.ebnf.CornerCurved.createSW#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UDrawable",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "delta",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.CornerCurved.createNE_arrow#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UDrawable",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "delta",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.CornerCurved.createNW#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UDrawable",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "delta",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.CornerCurved.createNW_arrow#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UDrawable",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "delta",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.CornerCurved.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "32",
+            "cyclomatic_complexity": "16",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.CornerCurved.createSE#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UDrawable",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "delta",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.CornerCurved.CornerCurved#a3296665": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "type",
+            "type": "net.sourceforge.plantuml.ebnf.CornerType"
+          }, {
+            "name": "delta",
+            "type": "double"
+          }, {
+            "name": "withArrow",
+            "type": "boolean"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ebnf.CornerCurved.createNE#b0f77bf0": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UDrawable",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "delta",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "72",
+        "cyclomatic_complexity": "18",
+        "cyclomatic_complexity_weighted": "9",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "119",
+    "cyclomatic_complexity": "9"
+  },
+  "author": "plantuml@gmail.com"
+}

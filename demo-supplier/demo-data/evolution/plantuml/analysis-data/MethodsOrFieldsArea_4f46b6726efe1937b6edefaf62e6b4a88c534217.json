@@ -1,0 +1,465 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "MethodsOrFieldsArea.java",
+  "packageName": "net.sourceforge.plantuml.cucadiagram",
+  "importName": ["java.util.ArrayList", "java.util.Collection", "java.util.Collections", "java.util.Comparator", "java.util.Iterator", "java.util.List", "net.atmp.InnerStrategy", "net.sourceforge.plantuml.EmbeddedDiagram", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.creole.CreoleMode", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.PlacementStrategy", "net.sourceforge.plantuml.klimt.geom.PlacementStrategyVisibility", "net.sourceforge.plantuml.klimt.geom.PlacementStrategyY1Y2Center", "net.sourceforge.plantuml.klimt.geom.PlacementStrategyY1Y2Left", "net.sourceforge.plantuml.klimt.geom.PlacementStrategyY1Y2Right", "net.sourceforge.plantuml.klimt.geom.ULayoutGroup", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XRectangle2D", "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlockLineBefore", "net.sourceforge.plantuml.klimt.shape.TextBlockUtils", "net.sourceforge.plantuml.klimt.shape.TextBlockWithUrl", "net.sourceforge.plantuml.skin.VisibilityModifier", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.svek.Ports", "net.sourceforge.plantuml.svek.WithPorts", "net.sourceforge.plantuml.url.Url", "net.sourceforge.plantuml.utils.CharHidder"],
+  "classData": {
+    "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.getUBlock#3dca8207.AbstractTextBlock": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.getUBlock#3dca8207.AbstractTextBlock.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.getUBlock#3dca8207.AbstractTextBlock.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.getUBlock#3dca8207.AbstractTextBlock.getInnerPosition#82b92e1f": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XRectangle2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "member",
+            "type": "java.lang.String"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "strategy",
+            "type": "net.atmp.InnerStrategy"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.sortBySize#527dab4e.Comparator\u003cString\u003e": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.sortBySize#527dab4e.Comparator\u003cString\u003e.compare#874989e1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s1",
+            "type": "java.lang.String"
+          }, {
+            "name": "s2",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "3"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.svek.WithPorts"],
+      "field": [{
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "members",
+        "type": "net.sourceforge.plantuml.klimt.creole.Display",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "align",
+        "type": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "embeddeds",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.EmbeddedDiagram\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "leaf",
+        "type": "net.sourceforge.plantuml.abel.Entity",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "style",
+        "type": "net.sourceforge.plantuml.style.Style",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.TextBlockTracer"],
+      "methodData": {
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.getUBlock#3dca8207": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "modifier",
+            "type": "net.sourceforge.plantuml.skin.VisibilityModifier",
+            "modifier": ["final "]
+          }, {
+            "name": "url",
+            "type": "net.sourceforge.plantuml.url.Url"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.hasSmallIcon#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.getPorts#395b4159": {
+          "returnType": "net.sourceforge.plantuml.svek.Ports",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.getScore#874989e1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "cs",
+            "type": "java.lang.String"
+          }, {
+            "name": "shortName",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.calculateDimensionOnlyMembers#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.createTextBlock#6aff0d76": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "cs",
+            "type": "java.lang.CharSequence"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.getLayout#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.ULayoutGroup",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "29",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.contains#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "member",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.getInnerPosition#82b92e1f": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XRectangle2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "member",
+            "type": "java.lang.String"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "strategy",
+            "type": "net.atmp.InnerStrategy"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.MethodsOrFieldsArea#b8e35447": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "members",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "align",
+            "type": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment"
+          }, {
+            "name": "leaf",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "style",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.MethodsOrFieldsArea#82bb5e94": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "members",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "leaf",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "style",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.getElected#458ce8df": {
+          "returnType": "net.sourceforge.plantuml.cucadiagram.Elected",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cs",
+            "type": "java.lang.String"
+          }, {
+            "name": "shortNames",
+            "type": "java.util.Collection\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.sortBySize#527dab4e": {
+          "returnType": "java.util.Collection\u003cjava.lang.String\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "all",
+            "type": "java.util.Collection\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.asBlockMemberImpl#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.convert#6aff0d76": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "cs",
+            "type": "java.lang.CharSequence"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock",
+      "metric": {
+        "loc": "300",
+        "cyclomatic_complexity": "14",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "8"
+      }
+    },
+    "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.TextBlockTracer": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "interface": ["net.sourceforge.plantuml.klimt.shape.TextBlock"],
+      "field": [{
+        "name": "bloc",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "url",
+        "type": "net.sourceforge.plantuml.url.Url",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.TextBlockTracer.TextBlockTracer#d3c54787": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "m",
+            "type": "net.sourceforge.plantuml.cucadiagram.Member"
+          }, {
+            "name": "bloc",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.TextBlockTracer.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.TextBlockTracer.getInnerPosition#82b92e1f": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XRectangle2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "member",
+            "type": "java.lang.String"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "strategy",
+            "type": "net.atmp.InnerStrategy"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.cucadiagram.MethodsOrFieldsArea.TextBlockTracer.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock",
+      "metric": {
+        "loc": "31",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "378",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

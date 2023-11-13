@@ -1,0 +1,128 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "DirWatcher2.java",
+  "packageName": "net.sourceforge.plantuml.swing",
+  "importName": ["java.io.File", "java.io.IOException", "java.util.Collections", "java.util.List", "java.util.Map", "java.util.Set", "java.util.TreeMap", "java.util.concurrent.Callable", "java.util.concurrent.ConcurrentHashMap", "java.util.concurrent.ExecutorService", "java.util.concurrent.Executors", "java.util.concurrent.Future", "java.util.concurrent.TimeUnit", "net.sourceforge.plantuml.GeneratedImage", "net.sourceforge.plantuml.Option", "net.sourceforge.plantuml.SourceFileReader", "net.sourceforge.plantuml.file.FileWatcher", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.preproc.FileWithSuffix"],
+  "classData": {
+    "net.sourceforge.plantuml.swing.DirWatcher2": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "dir",
+        "type": "java.io.File",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "option",
+        "type": "net.sourceforge.plantuml.Option",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "pattern",
+        "type": "java.lang.String",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "modifieds",
+        "type": "java.util.Map\u003cjava.io.File, net.sourceforge.plantuml.file.FileWatcher\u003e",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "executorService",
+        "type": "java.util.concurrent.ExecutorService",
+        "modifier": ["final", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.swing.DirWatcher2.getDir#1": {
+          "returnType": "java.io.File",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.DirWatcher2.waitEnd#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.DirWatcher2.fileToProcess#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.DirWatcher2.DirWatcher2#2a675137": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dir",
+            "type": "java.io.File"
+          }, {
+            "name": "option",
+            "type": "net.sourceforge.plantuml.Option"
+          }, {
+            "name": "pattern",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.DirWatcher2.cancel#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.DirWatcher2.buildCreatedFiles#1": {
+          "returnType": "java.util.Map\u003cjava.io.File, java.util.concurrent.Future\u003cjava.util.List\u003cnet.sourceforge.plantuml.GeneratedImage\u003e\u003e\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "39",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "0"
+          }
+        }
+      },
+      "metric": {
+        "loc": "76",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.swing.DirWatcher2.buildCreatedFiles#1.Callable\u003cList\u003cGeneratedImage\u003e\u003e": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.swing.DirWatcher2.buildCreatedFiles#1.Callable\u003cList\u003cGeneratedImage\u003e\u003e.call#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.GeneratedImage\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "6"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "134",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

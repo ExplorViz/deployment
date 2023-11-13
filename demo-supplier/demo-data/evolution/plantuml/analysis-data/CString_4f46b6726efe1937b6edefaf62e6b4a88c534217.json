@@ -1,0 +1,341 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CString.java",
+  "packageName": "smetana.core",
+  "importName": ["h.ST_refstr_t"],
+  "classData": {
+    "smetana.core.CString": {
+      "type": "CLASS",
+      "modifier": ["final", "public"],
+      "interface": ["smetana.core.__ptr__"],
+      "field": [{
+        "name": "UID",
+        "type": "int",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "data",
+        "type": "java.lang.StringBuilder",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "currentStart",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "uid",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "parent",
+        "type": "h.ST_refstr_t",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "smetana.core.CString.isSameThan#6c7bce53": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "smetana.core.CString"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "smetana.core.CString.getParent#1": {
+          "returnType": "h.ST_refstr_t",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "smetana.core.CString.CString#943a4c50": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "string",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CString.length#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "smetana.core.CString.getUid#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CString.CString#1add8ec6": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "data",
+            "type": "java.lang.StringBuilder"
+          }, {
+            "name": "currentStart",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "smetana.core.CString.strdup#1": {
+          "returnType": "smetana.core.CString",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CString.gmalloc#1980e": {
+          "returnType": "smetana.core.CString",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "nbytes",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CString.strcmp#6c7bce53": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "smetana.core.CString"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "smetana.core.CString.strcmp#22ff93fc": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "num",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "smetana.core.CString.comparePointer#49ed1b8d": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "smetana.core.__ptr__"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "smetana.core.CString.getContent#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "smetana.core.CString.charAt#1980e": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "i",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CString.duplicate#1": {
+          "returnType": "smetana.core.CString",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CString.plus_#1980e": {
+          "returnType": "smetana.core.CString",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pointerMove",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CString.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CString.copyFrom#22ff93fc": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "nb",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "smetana.core.CString.getTheField#7132762c": {
+          "returnType": "smetana.core.__ptr__",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "bytes",
+            "type": "smetana.core.FieldOffset"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CString.getData2#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CString.isSame#6c7bce53": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "smetana.core.CString"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CString.setCharAt#5ffd08": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "i",
+            "type": "int"
+          }, {
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CString.strchr#2e9375": {
+          "returnType": "smetana.core.CString",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "smetana.core.CString.CString#1980e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "size",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "smetana.core.CString.setParent#4958f170": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "struct",
+            "type": "h.ST_refstr_t"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "smetana.core.UnsupportedC",
+      "metric": {
+        "loc": "166",
+        "cyclomatic_complexity": "24",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "6"
+      }
+    }
+  },
+  "metric": {
+    "loc": "206",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

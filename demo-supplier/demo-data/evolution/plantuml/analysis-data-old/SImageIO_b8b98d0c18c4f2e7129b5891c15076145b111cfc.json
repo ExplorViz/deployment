@@ -1,0 +1,193 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "SImageIO.java",
+  "packageName": "net.sourceforge.plantuml.security",
+  "importName": ["java.awt.image.BufferedImage", "java.awt.image.RenderedImage", "java.io.ByteArrayInputStream", "java.io.IOException", "java.io.InputStream", "java.io.OutputStream", "java.util.Iterator", "javax.imageio.ImageReader", "javax.imageio.ImageWriter", "javax.imageio.stream.ImageInputStream", "javax.imageio.stream.ImageOutputStream"],
+  "classData": {
+    "net.sourceforge.plantuml.security.SImageIO": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "net.sourceforge.plantuml.security.SImageIO.write#c6a25a55": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "image",
+            "type": "java.awt.image.RenderedImage"
+          }, {
+            "name": "format",
+            "type": "java.lang.String"
+          }, {
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SImageIO.createImageOutputStream#2062420": {
+          "returnType": "javax.imageio.stream.ImageOutputStream",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SImageIO.getImageReaders#7b087fce": {
+          "returnType": "java.util.Iterator\u003cjavax.imageio.ImageReader\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "iis",
+            "type": "javax.imageio.stream.ImageInputStream"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SImageIO.createImageInputStream#4b3088e": {
+          "returnType": "javax.imageio.stream.ImageInputStream",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "file",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SImageIO.createImageInputStream#8c658f7e": {
+          "returnType": "javax.imageio.stream.ImageInputStream",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "obj",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.security.SImageIO.read#512cbbe9": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "is",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SImageIO.read#ae1a4a89": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "bytes",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SImageIO.read#7ef655b7": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "file",
+            "type": "java.io.File"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SImageIO.read#4b3088e": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "file",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SImageIO.createImageInputStream#512cbbe9": {
+          "returnType": "javax.imageio.stream.ImageInputStream",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "is",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SImageIO.write#c94f3ec3": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "image",
+            "type": "java.awt.image.RenderedImage"
+          }, {
+            "name": "format",
+            "type": "java.lang.String"
+          }, {
+            "name": "file",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SImageIO.getImageWritersBySuffix#943a4c50": {
+          "returnType": "java.util.Iterator\u003cjavax.imageio.ImageWriter\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "string",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "54",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "6"
+      }
+    }
+  },
+  "metric": {
+    "loc": "104",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

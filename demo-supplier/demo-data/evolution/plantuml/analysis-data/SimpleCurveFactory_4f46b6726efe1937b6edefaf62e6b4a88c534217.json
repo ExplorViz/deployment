@@ -1,0 +1,70 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "SimpleCurveFactory.java",
+  "packageName": "jcckit.plot",
+  "importName": ["java.util.Properties", "java.util.StringTokenizer", "jcckit.graphic.ClippingShape", "jcckit.util.ConfigParameters", "jcckit.util.PropertiesBasedConfigData"],
+  "classData": {
+    "jcckit.plot.SimpleCurveFactory": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["jcckit.plot.CurveFactory"],
+      "field": [{
+        "name": "DEFINITIONS_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "_configs",
+        "type": "ConfigParameters[]",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "jcckit.plot.SimpleCurveFactory.SimpleCurveFactory#b6dbbb0b": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "config",
+            "type": "jcckit.util.ConfigParameters"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "jcckit.plot.SimpleCurveFactory.create#7e464d8f": {
+          "returnType": "jcckit.plot.Curve",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "curveIndex",
+            "type": "int"
+          }, {
+            "name": "numberOfCurves",
+            "type": "int"
+          }, {
+            "name": "clippingShape",
+            "type": "jcckit.graphic.ClippingShape"
+          }, {
+            "name": "legend",
+            "type": "jcckit.plot.Legend"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "23",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "50",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

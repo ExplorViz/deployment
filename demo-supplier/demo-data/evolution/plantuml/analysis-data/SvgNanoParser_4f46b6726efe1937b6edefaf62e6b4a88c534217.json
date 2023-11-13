@@ -1,0 +1,385 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "SvgNanoParser.java",
+  "packageName": "net.sourceforge.plantuml.emoji",
+  "importName": ["java.awt.Color", "java.util.ArrayList", "java.util.Collections", "java.util.List", "java.util.regex.Matcher", "java.util.regex.Pattern", "net.sourceforge.plantuml.klimt.UPath", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.ColorMapper", "net.sourceforge.plantuml.klimt.color.ColorUtils", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColorSet", "net.sourceforge.plantuml.klimt.color.HColorSimple", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.font.UFont", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.UEllipse", "net.sourceforge.plantuml.klimt.shape.UImageSvg", "net.sourceforge.plantuml.klimt.shape.UText", "net.sourceforge.plantuml.klimt.sprite.Sprite", "net.sourceforge.plantuml.openiconic.SvgPath"],
+  "classData": {
+    "net.sourceforge.plantuml.emoji.SvgNanoParser": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.sprite.Sprite"],
+      "field": [{
+        "name": "data",
+        "type": "java.util.List\u003cjava.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "minGray",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "maxGray",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "svgStart",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "keepColors",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.drawCircle#86bf1a9a": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ugs",
+            "type": "net.sourceforge.plantuml.emoji.UGraphicWithScale"
+          }, {
+            "name": "s",
+            "type": "java.lang.String"
+          }, {
+            "name": "colorForMonochrome",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.drawPath#86bf1a9a": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ugs",
+            "type": "net.sourceforge.plantuml.emoji.UGraphicWithScale"
+          }, {
+            "name": "s",
+            "type": "java.lang.String"
+          }, {
+            "name": "colorForMonochrome",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.drawText#86bf1a9a": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ugs",
+            "type": "net.sourceforge.plantuml.emoji.UGraphicWithScale"
+          }, {
+            "name": "s",
+            "type": "java.lang.String"
+          }, {
+            "name": "colorForMonochrome",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.SvgNanoParser#bd83d09a": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "svg",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "keepColors",
+            "type": "boolean"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.getTrueColor#71d069ab": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "code",
+            "type": "java.lang.String"
+          }, {
+            "name": "colorForMonochrome",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.applyTransform#214a4181": {
+          "returnType": "net.sourceforge.plantuml.emoji.UGraphicWithScale",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ugs",
+            "type": "net.sourceforge.plantuml.emoji.UGraphicWithScale"
+          }, {
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.computeMinMaxGray#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.asTextBlock#a5bd2f7": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor",
+            "modifier": ["final "]
+          }, {
+            "name": "scale",
+            "type": "double",
+            "modifier": ["final "]
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.extractData#874989e1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.getTranslate#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.UTranslate",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "transform",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.getScale#943a4c50": {
+          "returnType": "double[]",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "transform",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.applyRotate#214a4181": {
+          "returnType": "net.sourceforge.plantuml.emoji.UGraphicWithScale",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ugs",
+            "type": "net.sourceforge.plantuml.emoji.UGraphicWithScale"
+          }, {
+            "name": "transform",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.SvgNanoParser#f6eaa9d8": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "svg",
+            "type": "java.lang.String"
+          }, {
+            "name": "keepColors",
+            "type": "boolean"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.drawU#3aa2e6bc": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "scale",
+            "type": "double"
+          }, {
+            "name": "colorForMonochrome",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "31",
+            "cyclomatic_complexity": "16",
+            "nestedBlockDepth": "9"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.applyFill#86bf1a9a": {
+          "returnType": "net.sourceforge.plantuml.emoji.UGraphicWithScale",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ugs",
+            "type": "net.sourceforge.plantuml.emoji.UGraphicWithScale"
+          }, {
+            "name": "s",
+            "type": "java.lang.String"
+          }, {
+            "name": "colorForMonochrome",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.drawEllipse#86bf1a9a": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ugs",
+            "type": "net.sourceforge.plantuml.emoji.UGraphicWithScale"
+          }, {
+            "name": "s",
+            "type": "java.lang.String"
+          }, {
+            "name": "colorForMonochrome",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "41",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.justExtractColor#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.applyMatrix#214a4181": {
+          "returnType": "net.sourceforge.plantuml.emoji.UGraphicWithScale",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ugs",
+            "type": "net.sourceforge.plantuml.emoji.UGraphicWithScale"
+          }, {
+            "name": "transform",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.getGray#7ec12c1a": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "col",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "347",
+        "cyclomatic_complexity": "60",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.emoji.SvgNanoParser.asTextBlock#a5bd2f7.AbstractTextBlock": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.asTextBlock#a5bd2f7.AbstractTextBlock.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.emoji.SvgNanoParser.asTextBlock#a5bd2f7.AbstractTextBlock.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "414",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

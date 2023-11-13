@@ -1,0 +1,191 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "GraphicsPlotCanvas.java",
+  "packageName": "jcckit",
+  "importName": ["java.awt.Color", "java.awt.Dimension", "java.awt.Graphics2D", "java.awt.RenderingHints", "java.awt.image.BufferedImage", "jcckit.graphic.GraphicalElement", "jcckit.graphic.Renderer", "jcckit.plot.Plot", "jcckit.plot.PlotCanvas", "jcckit.renderer.Graphics2DRenderer", "jcckit.renderer.Transformation", "jcckit.util.ConfigParameters", "jcckit.util.Factory"],
+  "classData": {
+    "jcckit.GraphicsPlotCanvas": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "BACKGROUND_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "FOREGROUND_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DOUBLE_BUFFERING_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "img3",
+        "type": "java.awt.image.BufferedImage",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "g3",
+        "type": "java.awt.Graphics2D",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_transformation",
+        "type": "jcckit.renderer.Transformation",
+        "modifier": ["private"]
+      }, {
+        "name": "_renderer",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "_marker",
+        "type": "jcckit.graphic.GraphicalElement",
+        "modifier": ["private"]
+      }, {
+        "name": "background",
+        "type": "java.awt.Color",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "foreground",
+        "type": "java.awt.Color",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "jcckit.GraphicsPlotCanvas.prepare#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.GraphicsPlotCanvas.setRenderer#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "className",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.GraphicsPlotCanvas.drawPlot#260120": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "plot",
+            "type": "jcckit.plot.Plot"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.GraphicsPlotCanvas.paint#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.GraphicsPlotCanvas.createRenderer#1": {
+          "returnType": "jcckit.graphic.Renderer",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.GraphicsPlotCanvas.init#362d8d65": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "size",
+            "type": "java.awt.Dimension"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.GraphicsPlotCanvas.drawCoordinateSystem#8faa203c": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "size",
+            "type": "java.awt.Dimension"
+          }, {
+            "name": "plot",
+            "type": "jcckit.plot.Plot"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.GraphicsPlotCanvas.setMarker#2cee0aa8": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "marker",
+            "type": "jcckit.graphic.GraphicalElement"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.GraphicsPlotCanvas.GraphicsPlotCanvas#1dedb1f1": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "config",
+            "type": "jcckit.util.ConfigParameters"
+          }, {
+            "name": "img3",
+            "type": "java.awt.image.BufferedImage"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.GraphicsPlotCanvas.calculateTransformation#362d8d65": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "size",
+            "type": "java.awt.Dimension"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "jcckit.plot.PlotCanvas",
+      "metric": {
+        "loc": "92",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "127",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

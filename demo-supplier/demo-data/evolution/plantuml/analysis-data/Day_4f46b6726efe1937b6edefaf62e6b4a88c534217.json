@@ -1,0 +1,356 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Day.java",
+  "packageName": "net.sourceforge.plantuml.project.time",
+  "importName": ["java.util.Calendar", "java.util.TimeZone", "net.sourceforge.plantuml.project.Value", "net.sourceforge.plantuml.project.core.PrintScale"],
+  "classData": {
+    "net.sourceforge.plantuml.project.time.Day": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["java.lang.Comparable\u003cnet.sourceforge.plantuml.project.time.Day\u003e", "net.sourceforge.plantuml.project.Value"],
+      "field": [{
+        "name": "MILLISECONDS_PER_DAY",
+        "type": "long",
+        "modifier": ["static", "final", "public"]
+      }, {
+        "name": "gmt",
+        "type": "java.util.Calendar",
+        "modifier": ["static", "final", "private"]
+      }, {
+        "name": "dayOfMonth",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "monthYear",
+        "type": "net.sourceforge.plantuml.project.time.MonthYear",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ms1",
+        "type": "long",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.project.time.Day.create#32c69b": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "ms",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.monthYear#1": {
+          "returnType": "net.sourceforge.plantuml.project.time.MonthYear",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.addDays#1980e": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "nday",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.internalNumber#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.Day#32c69b": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ms",
+            "type": "long"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.getAbsoluteDayNum#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.compareTo#10b9b": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.increment#1": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.min#217341": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "wink1",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }, {
+            "name": "wink2",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.today#1": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.year#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.Day#8fb27e1d": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "year",
+            "type": "int"
+          }, {
+            "name": "month",
+            "type": "net.sourceforge.plantuml.project.time.Month"
+          }, {
+            "name": "dayOfMonth",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.increment#7e67e6dc": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "printScale",
+            "type": "net.sourceforge.plantuml.project.core.PrintScale"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.getMillis#1": {
+          "returnType": "long",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.hashCode#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.create#f90c9e6c": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "year",
+            "type": "int"
+          }, {
+            "name": "month",
+            "type": "java.lang.String"
+          }, {
+            "name": "dayOfMonth",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.month#1": {
+          "returnType": "net.sourceforge.plantuml.project.time.Month",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.decrement#1": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.getWeekOfYear#1d5cb72f": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "strategy",
+            "type": "net.sourceforge.plantuml.project.time.WeekNumberStrategy"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.getDayOfWeek#1": {
+          "returnType": "net.sourceforge.plantuml.project.time.DayOfWeek",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.getDayOfMonth#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.create#62eca6e": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "year",
+            "type": "int"
+          }, {
+            "name": "month",
+            "type": "int"
+          }, {
+            "name": "dayOfMonth",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.max#217341": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "wink1",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }, {
+            "name": "wink2",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.daysPerMonth#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.time.Day.equals#8c658f7e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "obj",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "154",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "197",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

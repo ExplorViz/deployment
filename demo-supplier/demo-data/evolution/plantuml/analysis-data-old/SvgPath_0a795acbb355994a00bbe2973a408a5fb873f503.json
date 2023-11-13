@@ -1,0 +1,143 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "SvgPath.java",
+  "packageName": "net.sourceforge.plantuml.openiconic",
+  "importName": ["java.awt.geom.AffineTransform", "java.util.ArrayList", "java.util.Iterator", "java.util.List", "java.util.StringTokenizer", "net.sourceforge.plantuml.klimt.UPath", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.geom.XPoint2D"],
+  "classData": {
+    "net.sourceforge.plantuml.openiconic.SvgPath": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "movements",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.openiconic.Movement\u003e",
+        "modifier": ["private"]
+      }, {
+        "name": "commands",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.openiconic.SvgCommand\u003e",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.openiconic.SvgPath.drawMe#f58b691f": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "factor",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.SvgPath.SvgPath#943a4c50": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "path",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "39",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.SvgPath.checkArguments#9168ead8": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "commands",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.openiconic.SvgCommand\u003e"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.SvgPath.drawMe#5528a3fb": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "at",
+            "type": "java.awt.geom.AffineTransform"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.SvgPath.toSvg#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.SvgPath.insertMissingLetter#9168ead8": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.openiconic.SvgCommand\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "commands",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.openiconic.SvgCommand\u003e"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.SvgPath.toUPath#1094b6cc": {
+          "returnType": "net.sourceforge.plantuml.klimt.UPath",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "at",
+            "type": "java.awt.geom.AffineTransform"
+          }],
+          "metric": {
+            "loc": "43",
+            "cyclomatic_complexity": "18",
+            "nestedBlockDepth": "9"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.SvgPath.toUPath#1eef7de1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UPath",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "factorx",
+            "type": "double"
+          }, {
+            "name": "factory",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "44",
+            "cyclomatic_complexity": "18",
+            "nestedBlockDepth": "9"
+          }
+        }
+      },
+      "metric": {
+        "loc": "190",
+        "cyclomatic_complexity": "51",
+        "cyclomatic_complexity_weighted": "8",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "237",
+    "cyclomatic_complexity": "8"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

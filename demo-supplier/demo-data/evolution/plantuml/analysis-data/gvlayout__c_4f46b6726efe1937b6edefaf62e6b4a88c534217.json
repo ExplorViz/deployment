@@ -1,0 +1,71 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "gvlayout__c.java",
+  "packageName": "gen.lib.gvc",
+  "importName": ["gen.lib.cgraph.obj__c.agroot", "gen.lib.cgraph.rec__c.agbindrec", "gen.lib.common.emit__c.gv_fixLocale", "gen.lib.common.input__c.graph_init", "smetana.core.JUtils.LOG2", "smetana.core.Macro.GD_cleanup", "smetana.core.Macro.GD_drawing", "smetana.core.Macro.GD_gvc", "smetana.core.Macro.GVRENDER_PLUGIN", "smetana.core.Macro.LAYOUT_USES_RANKDIR", "smetana.core.Macro.UNSUPPORTED", "smetana.core.debug.SmetanaDebug.ENTERING", "smetana.core.debug.SmetanaDebug.LEAVING", "gen.annotation.Original", "gen.annotation.Reviewed", "h.EN_layout_type", "h.ST_Agraph_s", "h.ST_GVC_s", "h.ST_gvlayout_engine_s", "h.ST_gvlayout_features_t", "h.ST_gvplugin_installed_t", "smetana.core.CString", "smetana.core.Globals", "smetana.core.ZType", "smetana.core.size_t"],
+  "classData": {
+    "gen.lib.gvc.gvlayout__c": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "dotgen_features",
+        "type": "h.ST_gvlayout_features_t",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "dotgen_engine",
+        "type": "h.ST_gvlayout_engine_s",
+        "modifier": ["private", "final", "static"]
+      }],
+      "methodData": {
+        "gen.lib.gvc.gvlayout__c.gvlayout_select#b402666b": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "gvc",
+            "type": "h.ST_GVC_s"
+          }, {
+            "name": "layout",
+            "type": "smetana.core.CString"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.gvc.gvlayout__c.gvLayoutJobs#ba9f6864": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "gvc",
+            "type": "h.ST_GVC_s"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "37",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "5"
+          }
+        }
+      },
+      "metric": {
+        "loc": "81",
+        "cyclomatic_complexity": "8",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "154",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

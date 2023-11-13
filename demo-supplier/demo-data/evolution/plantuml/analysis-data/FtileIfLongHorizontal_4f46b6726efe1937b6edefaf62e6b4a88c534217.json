@@ -1,0 +1,899 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "FtileIfLongHorizontal.java",
+  "packageName": "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact",
+  "importName": ["java.util.ArrayList", "java.util.Collection", "java.util.Collections", "java.util.HashSet", "java.util.List", "java.util.Objects", "java.util.Set", "net.sourceforge.plantuml.activitydiagram3.Branch", "net.sourceforge.plantuml.activitydiagram3.LinkRendering", "net.sourceforge.plantuml.activitydiagram3.ftile.AbstractConnection", "net.sourceforge.plantuml.activitydiagram3.ftile.AbstractFtile", "net.sourceforge.plantuml.activitydiagram3.ftile.Connection", "net.sourceforge.plantuml.activitydiagram3.ftile.ConnectionTranslatable", "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile", "net.sourceforge.plantuml.activitydiagram3.ftile.FtileAssemblySimple", "net.sourceforge.plantuml.activitydiagram3.ftile.FtileFactory", "net.sourceforge.plantuml.activitydiagram3.ftile.FtileGeometry", "net.sourceforge.plantuml.activitydiagram3.ftile.FtileMinWidthCentered", "net.sourceforge.plantuml.activitydiagram3.ftile.FtileUtils", "net.sourceforge.plantuml.activitydiagram3.ftile.MergeStrategy", "net.sourceforge.plantuml.activitydiagram3.ftile.Snake", "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane", "net.sourceforge.plantuml.activitydiagram3.ftile.vertical.FtileDiamondInside2", "net.sourceforge.plantuml.decoration.Rainbow", "net.sourceforge.plantuml.klimt.LineBreakStrategy", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.creole.CreoleMode", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.svek.ConditionStyle"],
+  "classData": {
+    "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionVerticalOut": {
+      "type": "CLASS",
+      "field": [{
+        "name": "color",
+        "type": "net.sourceforge.plantuml.decoration.Rainbow",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "out2",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionVerticalOut.getP1#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionVerticalOut.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionVerticalOut.ConnectionVerticalOut#85a4ebbd": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "tile",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.decoration.Rainbow"
+          }, {
+            "name": "out2",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.activitydiagram3.ftile.AbstractConnection",
+      "metric": {
+        "loc": "37",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal": {
+      "type": "CLASS",
+      "field": [{
+        "name": "xSeparation",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "tiles",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Ftile\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "tile2",
+        "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "diamonds",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Ftile\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "couples",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Ftile\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "arrowColor",
+        "type": "net.sourceforge.plantuml.decoration.Rainbow",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHorizontal", "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionIn", "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionLastElseIn", "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionLastElseOut", "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionVerticalIn", "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionVerticalOut", "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHline"],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.getTranslate2#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.UTranslate",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.create#5468d58c": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "swimlane",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane"
+          }, {
+            "name": "backColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "ftileFactory",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.FtileFactory"
+          }, {
+            "name": "conditionStyle",
+            "type": "net.sourceforge.plantuml.svek.ConditionStyle"
+          }, {
+            "name": "thens",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.Branch\u003e"
+          }, {
+            "name": "branch2",
+            "type": "net.sourceforge.plantuml.activitydiagram3.Branch"
+          }, {
+            "name": "topInlinkRendering",
+            "type": "net.sourceforge.plantuml.activitydiagram3.LinkRendering"
+          }, {
+            "name": "afterEndwhile",
+            "type": "net.sourceforge.plantuml.activitydiagram3.LinkRendering"
+          }, {
+            "name": "styleArrow",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }, {
+            "name": "styleDiamond",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }],
+          "metric": {
+            "loc": "108",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.getTranslate1#b7628387": {
+          "returnType": "net.sourceforge.plantuml.klimt.UTranslate",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "tile",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.calculateDimensionFtile#395b4159": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.ftile.FtileGeometry",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.getSwimlaneOut#1": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.getTranslateFor#b7628387": {
+          "returnType": "net.sourceforge.plantuml.klimt.UTranslate",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "child",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.FtileIfLongHorizontal#6da74e02": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "diamonds",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Ftile\u003e"
+          }, {
+            "name": "inlabelSizes",
+            "type": "java.util.List\u003cjava.lang.Double\u003e"
+          }, {
+            "name": "tiles",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Ftile\u003e"
+          }, {
+            "name": "tile2",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile"
+          }, {
+            "name": "arrowColor",
+            "type": "net.sourceforge.plantuml.decoration.Rainbow"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.getTranslateDiamond1#b7628387": {
+          "returnType": "net.sourceforge.plantuml.klimt.UTranslate",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "diamond",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.getMyChildren#1": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Ftile\u003e",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.alignDiamonds#1b8cea73": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Ftile\u003e",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "diamonds",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Ftile\u003e"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.getSwimlanes#1": {
+          "returnType": "java.util.Set\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Swimlane\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.getMaxOutY#1b8cea73": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "diamonds",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Ftile\u003e"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.calculateDimensionInternal#395b4159": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.ftile.FtileGeometry",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.getDiamondsHeight#395b4159": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.getYdiamontOutToLeft#331c5d35": {
+          "returnType": "double",
+          "modifier": ["static", "private"],
+          "parameter": [{
+            "name": "dimDiamond1",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.FtileGeometry"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.getSwimlaneIn#1": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.getTranslateCouple1#b7628387": {
+          "returnType": "net.sourceforge.plantuml.klimt.UTranslate",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "candidat",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.activitydiagram3.ftile.AbstractFtile",
+      "metric": {
+        "loc": "637",
+        "cyclomatic_complexity": "38",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "10"
+      }
+    },
+    "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHline": {
+      "type": "CLASS",
+      "field": [{
+        "name": "arrowColor",
+        "type": "net.sourceforge.plantuml.decoration.Rainbow",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHline.ftileDoesOutcomeInThatSwimlane#7c6dc6e1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ftile",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile"
+          }, {
+            "name": "swimlane",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHline.atLeastOne#14c2288d": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "intoSw",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane"
+          }, {
+            "name": "allTiles",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Ftile\u003e"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHline.getMinmax#8cbc0b88": {
+          "returnType": "double[]",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "width",
+            "type": "double"
+          }, {
+            "name": "allTiles",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Ftile\u003e"
+          }, {
+            "name": "intoSw",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Swimlane"
+          }, {
+            "name": "allSwimlanes",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Swimlane\u003e"
+          }],
+          "metric": {
+            "loc": "32",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHline.getFirstSwimlane#f66553d": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "allTiles",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Ftile\u003e"
+          }, {
+            "name": "allSwimlanes",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Swimlane\u003e"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHline.ConnectionHline#9d4031b5": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "arrowColor",
+            "type": "net.sourceforge.plantuml.decoration.Rainbow"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHline.getLeftOut#395b4159": {
+          "returnType": "java.lang.Double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHline.getLastSwimlane#f66553d": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "allTiles",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Ftile\u003e"
+          }, {
+            "name": "allSwimlanes",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Swimlane\u003e"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHline.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHline.getMinmaxSimple#b45018f0": {
+          "returnType": "double[]",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "width",
+            "type": "double"
+          }, {
+            "name": "allTiles",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Ftile\u003e"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.activitydiagram3.ftile.AbstractConnection",
+      "metric": {
+        "loc": "126",
+        "cyclomatic_complexity": "22",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHorizontal": {
+      "type": "CLASS",
+      "field": [{
+        "name": "color",
+        "type": "net.sourceforge.plantuml.decoration.Rainbow",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHorizontal.getP1#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHorizontal.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHorizontal.getP2#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionHorizontal.ConnectionHorizontal#5e287775": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diam1",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile"
+          }, {
+            "name": "diam2",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.decoration.Rainbow"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.activitydiagram3.ftile.AbstractConnection",
+      "metric": {
+        "loc": "35",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionVerticalIn": {
+      "type": "CLASS",
+      "interface": ["net.sourceforge.plantuml.activitydiagram3.ftile.ConnectionTranslatable"],
+      "field": [{
+        "name": "color",
+        "type": "net.sourceforge.plantuml.decoration.Rainbow",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionVerticalIn.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionVerticalIn.getP1#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionVerticalIn.drawTranslate#a09dcb92": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "translate1",
+            "type": "net.sourceforge.plantuml.klimt.UTranslate"
+          }, {
+            "name": "translate2",
+            "type": "net.sourceforge.plantuml.klimt.UTranslate"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionVerticalIn.getP2#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionVerticalIn.ConnectionVerticalIn#5e287775": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diamond",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile"
+          }, {
+            "name": "tile",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Ftile"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.decoration.Rainbow"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.activitydiagram3.ftile.AbstractConnection",
+      "metric": {
+        "loc": "48",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionLastElseIn": {
+      "type": "CLASS",
+      "field": [{
+        "name": "arrowColor",
+        "type": "net.sourceforge.plantuml.decoration.Rainbow",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionLastElseIn.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionLastElseIn.getP1#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionLastElseIn.ConnectionLastElseIn#9d4031b5": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "arrowColor",
+            "type": "net.sourceforge.plantuml.decoration.Rainbow"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.activitydiagram3.ftile.AbstractConnection",
+      "metric": {
+        "loc": "28",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionLastElseOut": {
+      "type": "CLASS",
+      "field": [{
+        "name": "arrowColor",
+        "type": "net.sourceforge.plantuml.decoration.Rainbow",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "out2",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "nbOut",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionLastElseOut.ConnectionLastElseOut#15bab524": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "arrowColor",
+            "type": "net.sourceforge.plantuml.decoration.Rainbow"
+          }, {
+            "name": "out2",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }, {
+            "name": "nbOut",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionLastElseOut.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.activitydiagram3.ftile.AbstractConnection",
+      "metric": {
+        "loc": "36",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionIn": {
+      "type": "CLASS",
+      "field": [{
+        "name": "arrowColor",
+        "type": "net.sourceforge.plantuml.decoration.Rainbow",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionIn.ConnectionIn#9d4031b5": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "arrowColor",
+            "type": "net.sourceforge.plantuml.decoration.Rainbow"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.vcompact.FtileIfLongHorizontal.ConnectionIn.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.activitydiagram3.ftile.AbstractConnection",
+      "metric": {
+        "loc": "22",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "715",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

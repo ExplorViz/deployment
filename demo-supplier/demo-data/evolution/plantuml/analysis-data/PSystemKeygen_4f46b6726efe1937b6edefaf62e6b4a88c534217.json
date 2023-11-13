@@ -1,0 +1,126 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "PSystemKeygen.java",
+  "packageName": "net.sourceforge.plantuml.version",
+  "importName": ["java.awt.Color", "java.awt.image.BufferedImage", "java.io.IOException", "java.util.ArrayList", "java.util.List", "java.util.prefs.BackingStoreException", "net.atmp.PixelImage", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.PlainDiagram", "net.sourceforge.plantuml.core.DiagramDescription", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.flashcode.FlashCodeFactory", "net.sourceforge.plantuml.flashcode.FlashCodeUtils", "net.sourceforge.plantuml.klimt.AffineTransformType", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.shape.GraphicStrings", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.UDrawable", "net.sourceforge.plantuml.klimt.shape.UImage", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.utils.SignatureUtils"],
+  "classData": {
+    "net.sourceforge.plantuml.version.PSystemKeygen": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "key",
+        "type": "java.lang.String",
+        "modifier": ["final", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.version.PSystemKeygen.getDescription#1": {
+          "returnType": "net.sourceforge.plantuml.core.DiagramDescription",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.version.PSystemKeygen.getRootDrawable#618c8b27": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UDrawable",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.version.PSystemKeygen.drawFlash#81c2e9bd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "info",
+            "type": "net.sourceforge.plantuml.version.LicenseInfo"
+          }],
+          "metric": {
+            "loc": "29",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.version.PSystemKeygen.drawInternal#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "39",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.version.PSystemKeygen.PSystemKeygen#8f7443e3": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.version.PSystemKeygen.header#1": {
+          "returnType": "java.util.ArrayList\u003cjava.lang.String\u003e",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.PlainDiagram",
+      "metric": {
+        "loc": "104",
+        "cyclomatic_complexity": "11",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.version.PSystemKeygen.getRootDrawable#618c8b27.UDrawable": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.version.PSystemKeygen.getRootDrawable#618c8b27.UDrawable.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "165",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

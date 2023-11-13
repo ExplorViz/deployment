@@ -1,0 +1,95 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "IconLoader.java",
+  "packageName": "net.sourceforge.plantuml.fun",
+  "importName": ["java.awt.image.BufferedImage", "java.io.IOException", "java.io.InputStream", "java.util.ArrayList", "java.util.Collections", "java.util.List", "java.util.Map", "java.util.concurrent.ConcurrentHashMap", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SImageIO"],
+  "classData": {
+    "net.sourceforge.plantuml.fun.IconLoader": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "NUMBER_OF_ICONS",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "all",
+        "type": "java.util.Map\u003cjava.lang.String, java.awt.image.BufferedImage\u003e",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "tmp",
+        "type": "java.util.List\u003cjava.lang.String\u003e",
+        "modifier": ["static", "private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.fun.IconLoader.addTransparent#f9520bbb": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ico",
+            "type": "java.awt.image.BufferedImage"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.fun.IconLoader.getSomeQuote#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.fun.IconLoader.getIcon#943a4c50": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.fun.IconLoader.getIconSlow#943a4c50": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.fun.IconLoader.getRandom#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "69",
+        "cyclomatic_complexity": "11",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "117",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

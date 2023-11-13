@@ -1,0 +1,165 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "ScrollablePicture.java",
+  "packageName": "net.sourceforge.plantuml.swing",
+  "importName": ["java.awt.Color", "java.awt.Dimension", "java.awt.Rectangle", "java.awt.event.MouseEvent", "java.awt.event.MouseMotionListener", "javax.swing.ImageIcon", "javax.swing.JLabel", "javax.swing.Scrollable", "javax.swing.SwingConstants"],
+  "classData": {
+    "net.sourceforge.plantuml.swing.ScrollablePicture": {
+      "type": "CLASS",
+      "interface": ["javax.swing.Scrollable", "java.awt.event.MouseMotionListener"],
+      "field": [{
+        "name": "maxUnitIncrement",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "missingPicture",
+        "type": "boolean",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.swing.ScrollablePicture.getScrollableTracksViewportHeight#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.ScrollablePicture.getPreferredSize#1": {
+          "returnType": "java.awt.Dimension",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.swing.ScrollablePicture.getScrollableUnitIncrement#47bd27ce": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "visibleRect",
+            "type": "java.awt.Rectangle"
+          }, {
+            "name": "orientation",
+            "type": "int"
+          }, {
+            "name": "direction",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.swing.ScrollablePicture.getScrollableTracksViewportWidth#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.ScrollablePicture.ScrollablePicture#1f96d1dc": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "i",
+            "type": "javax.swing.ImageIcon"
+          }, {
+            "name": "m",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.swing.ScrollablePicture.mouseDragged#b1764134": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "e",
+            "type": "java.awt.event.MouseEvent"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.ScrollablePicture.setMaxUnitIncrement#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pixels",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.ScrollablePicture.getPreferredScrollableViewportSize#1": {
+          "returnType": "java.awt.Dimension",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.ScrollablePicture.mouseMoved#b1764134": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "e",
+            "type": "java.awt.event.MouseEvent"
+          }],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.ScrollablePicture.getScrollableBlockIncrement#47bd27ce": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "visibleRect",
+            "type": "java.awt.Rectangle"
+          }, {
+            "name": "orientation",
+            "type": "int"
+          }, {
+            "name": "direction",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "javax.swing.JLabel",
+      "metric": {
+        "loc": "75",
+        "cyclomatic_complexity": "9",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "123",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,137 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CucaDiagramFileMakerSvek.java",
+  "packageName": "net.sourceforge.plantuml.svek",
+  "importName": ["java.io.IOException", "java.io.OutputStream", "java.util.ArrayList", "java.util.List", "net.sourceforge.plantuml.AnnotatedBuilder", "net.sourceforge.plantuml.AnnotatedWorker", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.abel.Link", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.cucadiagram.ICucaDiagram", "net.sourceforge.plantuml.dot.CucaDiagramSimplifierActivity", "net.sourceforge.plantuml.dot.CucaDiagramSimplifierState", "net.sourceforge.plantuml.dot.DotData", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.skin.UmlDiagramType"],
+  "classData": {
+    "net.sourceforge.plantuml.svek.CucaDiagramFileMakerSvek": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "interface": ["net.sourceforge.plantuml.svek.CucaDiagramFileMaker"],
+      "field": [{
+        "name": "diagram",
+        "type": "net.sourceforge.plantuml.cucadiagram.ICucaDiagram",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.svek.CucaDiagramFileMakerSvek.createDotDataImageBuilder#8b62140f": {
+          "returnType": "net.sourceforge.plantuml.svek.GeneralImageBuilder",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "dotMode",
+            "type": "net.sourceforge.plantuml.svek.DotMode"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.CucaDiagramFileMakerSvek.createFile#b44287d9": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "dotStrings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.svek.CucaDiagramFileMakerSvek.CucaDiagramFileMakerSvek#47b89a79": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.cucadiagram.ICucaDiagram"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.CucaDiagramFileMakerSvek.createOneGraphic#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.CucaDiagramFileMakerSvek.getOrderedLinks#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.abel.Link\u003e",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.svek.CucaDiagramFileMakerSvek.addLinkNew#9041b5": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "result",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.abel.Link\u003e"
+          }, {
+            "name": "link",
+            "type": "net.sourceforge.plantuml.abel.Link"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.svek.CucaDiagramFileMakerSvek.createFileInternal#b44287d9": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "dotStrings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "91",
+        "cyclomatic_complexity": "16",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "148",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

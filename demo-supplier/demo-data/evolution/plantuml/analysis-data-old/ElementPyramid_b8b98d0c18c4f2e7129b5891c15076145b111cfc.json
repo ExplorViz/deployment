@@ -1,0 +1,188 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "ElementPyramid.java",
+  "packageName": "net.sourceforge.plantuml.salt.element",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.HashMap", "java.util.List", "java.util.Map", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.font.UFont", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlockUtils", "net.sourceforge.plantuml.salt.Cell", "net.sourceforge.plantuml.salt.Positionner2", "net.sourceforge.plantuml.style.ISkinSimple"],
+  "classData": {
+    "net.sourceforge.plantuml.salt.element.ElementPyramid": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "rows",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "cols",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "title",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "tableStrategy",
+        "type": "net.sourceforge.plantuml.salt.element.TableStrategy",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "positions1",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.salt.element.Element, net.sourceforge.plantuml.salt.Cell\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "positions2",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.salt.Cell, net.sourceforge.plantuml.salt.element.Element\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "rowsStart",
+        "type": "double[]",
+        "modifier": ["private"]
+      }, {
+        "name": "colsStart",
+        "type": "double[]",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.salt.element.ElementPyramid.ensureRowHeight#b724ae50": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "first",
+            "type": "int"
+          }, {
+            "name": "last",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.ElementPyramid.getNbRows#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.ElementPyramid.drawU#542b5523": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "zIndex",
+            "type": "int"
+          }, {
+            "name": "dimToUse",
+            "type": "net.sourceforge.plantuml.klimt.geom.XDimension2D"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.ElementPyramid.getNbCols#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.ElementPyramid.init#395b4159": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.ElementPyramid.ElementPyramid#ab4e1e69": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "positionner",
+            "type": "net.sourceforge.plantuml.salt.Positionner2"
+          }, {
+            "name": "tableStrategy",
+            "type": "net.sourceforge.plantuml.salt.element.TableStrategy"
+          }, {
+            "name": "title",
+            "type": "java.lang.String"
+          }, {
+            "name": "spriteContainer",
+            "type": "net.sourceforge.plantuml.style.ISkinSimple"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.ElementPyramid.ensureColWidth#b724ae50": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "first",
+            "type": "int"
+          }, {
+            "name": "last",
+            "type": "int"
+          }, {
+            "name": "width",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.ElementPyramid.getPreferredDimension#6e7fc939": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.salt.element.AbstractElement",
+      "metric": {
+        "loc": "119",
+        "cyclomatic_complexity": "14",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "176",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

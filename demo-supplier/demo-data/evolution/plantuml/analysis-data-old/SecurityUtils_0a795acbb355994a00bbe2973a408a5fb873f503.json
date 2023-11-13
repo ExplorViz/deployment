@@ -1,0 +1,406 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "SecurityUtils.java",
+  "packageName": "net.sourceforge.plantuml.security",
+  "importName": ["java.awt.Image", "java.awt.image.BufferedImage", "java.io.BufferedReader", "java.io.File", "java.io.FileNotFoundException", "java.io.FileOutputStream", "java.io.FileReader", "java.io.IOException", "java.io.OutputStream", "java.io.PrintStream", "java.io.PrintWriter", "java.io.Reader", "java.io.UnsupportedEncodingException", "java.nio.charset.Charset", "java.util.ArrayList", "java.util.Collections", "java.util.List", "java.util.StringTokenizer", "java.util.regex.Pattern", "javax.swing.ImageIcon", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.json.Json", "net.sourceforge.plantuml.json.JsonValue", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.authentication.SecurityAccessInterceptor", "net.sourceforge.plantuml.security.authentication.SecurityAuthentication", "net.sourceforge.plantuml.security.authentication.SecurityAuthorizeManager", "net.sourceforge.plantuml.security.authentication.SecurityCredentials", "net.sourceforge.plantuml.security.authentication.SecurityDefaultNoopAccessInterceptor", "net.sourceforge.plantuml.security.authentication.SecurityDefaultNoopAuthorizeManager", "net.sourceforge.plantuml.security.authentication.basicauth.BasicAuthAccessInterceptor", "net.sourceforge.plantuml.security.authentication.basicauth.BasicAuthAuthorizeManager", "net.sourceforge.plantuml.security.authentication.oauth.OAuth2AccessInterceptor", "net.sourceforge.plantuml.security.authentication.oauth.OAuth2ClientAccessAuthorizeManager", "net.sourceforge.plantuml.security.authentication.oauth.OAuth2ResourceOwnerAccessAuthorizeManager", "net.sourceforge.plantuml.security.authentication.token.TokenAuthAccessInterceptor", "net.sourceforge.plantuml.security.authentication.token.TokenAuthAuthorizeManager", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.security.SecurityUtils": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "NO_CREDENTIALS",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "PATHS_CLASSES",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "PATHS_INCLUDES",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ALLOWLIST_LOCAL_PATHS",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ALLOWLIST_URL",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "PATHS_SECURITY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "SECURITY_ALLOW_NONSSL_AUTH",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "PUBLIC_AUTH_MANAGER",
+        "type": "net.sourceforge.plantuml.security.authentication.SecurityAuthorizeManager",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "PUBLIC_ACCESS_INTERCEPTOR",
+        "type": "net.sourceforge.plantuml.security.authentication.SecurityAccessInterceptor",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "TOKEN_AUTH_MANAGER",
+        "type": "net.sourceforge.plantuml.security.authentication.SecurityAuthorizeManager",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "TOKEN_ACCESS_INTERCEPTOR",
+        "type": "net.sourceforge.plantuml.security.authentication.SecurityAccessInterceptor",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "BASICAUTH_AUTH_MANAGER",
+        "type": "net.sourceforge.plantuml.security.authentication.SecurityAuthorizeManager",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "BASICAUTH_ACCESS_INTERCEPTOR",
+        "type": "net.sourceforge.plantuml.security.authentication.SecurityAccessInterceptor",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "OAUTH2_CLIENT_AUTH_MANAGER",
+        "type": "net.sourceforge.plantuml.security.authentication.SecurityAuthorizeManager",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "OAUTH2_RESOURCEOWNER_AUTH_MANAGER",
+        "type": "net.sourceforge.plantuml.security.authentication.SecurityAuthorizeManager",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "OAUTH2_ACCESS_INTERCEPTOR",
+        "type": "net.sourceforge.plantuml.security.authentication.SecurityAccessInterceptor",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "SECURE_CHARS",
+        "type": "java.util.regex.Pattern",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "current",
+        "type": "net.sourceforge.plantuml.security.SecurityProfile",
+        "modifier": ["static", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.security.SecurityUtils.loadSecurityCredentials#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.security.authentication.SecurityCredentials",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "userToken",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.createPrintStream#2062420": {
+          "returnType": "java.io.PrintStream",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.createPrintWriter#943a4c50": {
+          "returnType": "java.io.PrintWriter",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "path",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.createPrintWriter#2062420": {
+          "returnType": "java.io.PrintWriter",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.isNonSSLAuthenticationAllowed#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.createFileReader#943a4c50": {
+          "returnType": "java.io.FileReader",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "path",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.allowJavascriptInLink#1": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.createPrintWriter#4299cc08": {
+          "returnType": "java.io.PrintWriter",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "append",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.readRasterImage#43155473": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public", "synchronized", "static"],
+          "parameter": [{
+            "name": "imageIcon",
+            "type": "javax.swing.ImageIcon",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.getSecurityPath#1": {
+          "returnType": "net.sourceforge.plantuml.security.SFile",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.allowSvgText#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.getAuthenticationManager#57cd139b": {
+          "returnType": "net.sourceforge.plantuml.security.authentication.SecurityAuthorizeManager",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "credentialConfiguration",
+            "type": "net.sourceforge.plantuml.security.authentication.SecurityCredentials"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.checkFileSystemSaveCharactersStrict#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "pathNameToken",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.getAccessInterceptor#53882217": {
+          "returnType": "net.sourceforge.plantuml.security.authentication.SecurityAccessInterceptor",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "authentication",
+            "type": "net.sourceforge.plantuml.security.authentication.SecurityAuthentication"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.ignoreThisLink#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "url",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.createPrintStream#a4da0129": {
+          "returnType": "java.io.PrintStream",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "autoFlush",
+            "type": "boolean"
+          }, {
+            "name": "charset",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.existsSecurityCredentials#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "userToken",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.getenv#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.createPrintStream#9fe5ae24": {
+          "returnType": "java.io.PrintStream",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "autoFlush",
+            "type": "boolean"
+          }, {
+            "name": "charset",
+            "type": "java.nio.charset.Charset"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.getSecurityProfile#1": {
+          "returnType": "net.sourceforge.plantuml.security.SecurityProfile",
+          "modifier": ["public", "static", "synchronized"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.createFileOutputStream#943a4c50": {
+          "returnType": "java.io.FileOutputStream",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "path",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.getPath#943a4c50": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.security.SFile\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "prop",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.isJavascriptLink#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "url",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.SecurityUtils.loadJson#2169bb": {
+          "returnType": "net.sourceforge.plantuml.json.JsonValue",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "jsonFile",
+            "type": "java.io.File"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "238",
+        "cyclomatic_complexity": "36",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "10"
+      }
+    }
+  },
+  "metric": {
+    "loc": "316",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

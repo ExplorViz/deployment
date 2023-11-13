@@ -1,0 +1,134 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "MagicArray.java",
+  "packageName": "net.sourceforge.plantuml.api",
+  "classData": {
+    "net.sourceforge.plantuml.api.MagicArray": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "field": [{
+        "name": "data",
+        "type": "int[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "size",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "lastUpdatedKey",
+        "type": "long",
+        "modifier": ["private"]
+      }, {
+        "name": "lastUpdatedValue",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "sum",
+        "type": "long",
+        "modifier": ["private"]
+      }, {
+        "name": "maxSum",
+        "type": "long",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.api.MagicArray.setValue#627a4b4": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "key",
+            "type": "long"
+          }, {
+            "name": "value",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.api.MagicArray.getSum#1": {
+          "returnType": "long",
+          "modifier": ["synchronized", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.MagicArray.incKey#32c69b": {
+          "returnType": "void",
+          "modifier": ["synchronized", "public"],
+          "parameter": [{
+            "name": "key",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.MagicArray.getSumSlow#1": {
+          "returnType": "long",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.api.MagicArray.MagicArray#1980e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "size",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.MagicArray.incKey#627a4b4": {
+          "returnType": "void",
+          "modifier": ["synchronized", "public"],
+          "parameter": [{
+            "name": "key",
+            "type": "long"
+          }, {
+            "name": "delta",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.api.MagicArray.getMaxSum#1": {
+          "returnType": "long",
+          "modifier": ["synchronized", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "61",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "98",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

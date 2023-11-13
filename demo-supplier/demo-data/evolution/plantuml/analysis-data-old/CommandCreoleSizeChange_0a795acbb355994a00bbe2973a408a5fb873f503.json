@@ -1,0 +1,109 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "CommandCreoleSizeChange.java",
+  "packageName": "net.sourceforge.plantuml.klimt.creole.command",
+  "importName": ["net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.regex.Matcher2", "net.sourceforge.plantuml.regex.MyPattern", "net.sourceforge.plantuml.regex.Pattern2"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleSizeChange": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.creole.command.Command"],
+      "field": [{
+        "name": "mypattern",
+        "type": "net.sourceforge.plantuml.regex.Pattern2",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "pattern",
+        "type": "net.sourceforge.plantuml.regex.Pattern2",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "patternEol",
+        "type": "net.sourceforge.plantuml.regex.Pattern2",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleSizeChange.startingChars#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleSizeChange.CommandCreoleSizeChange#4e1eeae1": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.regex.Pattern2"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleSizeChange.executeAndGetRemaining#6704e22f": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }, {
+            "name": "stripe",
+            "type": "net.sourceforge.plantuml.klimt.creole.legacy.StripeSimple"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleSizeChange.create#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.command.Command",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleSizeChange.matchingSize#943a4c50": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.command.CommandCreoleSizeChange.createEol#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.command.Command",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "47",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "90",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

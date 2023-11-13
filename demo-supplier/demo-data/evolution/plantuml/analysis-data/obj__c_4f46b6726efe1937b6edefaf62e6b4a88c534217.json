@@ -1,0 +1,181 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "obj__c.java",
+  "packageName": "gen.lib.cgraph",
+  "importName": ["gen.lib.cgraph.edge__c.agsubedge", "gen.lib.cgraph.node__c.agidnode", "gen.lib.cgraph.pend__c.agrecord_callback", "smetana.core.Macro.AGINEDGE", "smetana.core.Macro.AGNODE", "smetana.core.Macro.AGOUTEDGE", "smetana.core.Macro.AGRAPH", "smetana.core.Macro.CB_UPDATE", "smetana.core.Macro.UNSUPPORTED", "smetana.core.debug.SmetanaDebug.ENTERING", "smetana.core.debug.SmetanaDebug.LEAVING", "gen.annotation.Original", "gen.annotation.Reviewed", "gen.annotation.Unused", "h.ST_Agcbstack_s", "h.ST_Agedge_s", "h.ST_Agnode_s", "h.ST_Agobj_s", "h.ST_Agraph_s", "h.ST_Agsym_s", "smetana.core.Globals", "smetana.core.__ptr__"],
+  "classData": {
+    "gen.lib.cgraph.obj__c": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "gen.lib.cgraph.obj__c.aginitcb#ea0faa49": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "obj",
+            "type": "smetana.core.__ptr__"
+          }, {
+            "name": "cbstack",
+            "type": "h.ST_Agcbstack_s"
+          }],
+          "annotation": ["gen.annotation.Original"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.cgraph.obj__c.agraphof#8b564ae6": {
+          "returnType": "h.ST_Agraph_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "obj",
+            "type": "h.ST_Agobj_s"
+          }],
+          "annotation": ["gen.annotation.Original", "gen.annotation.Reviewed"],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.cgraph.obj__c.agupdcb#338a47b2": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "obj",
+            "type": "smetana.core.__ptr__"
+          }, {
+            "name": "sym",
+            "type": "h.ST_Agsym_s"
+          }, {
+            "name": "cbstack",
+            "type": "h.ST_Agcbstack_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.cgraph.obj__c.agdelete#8c658f7e": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg_",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "gen.lib.cgraph.obj__c.agmethod_init#f6321490": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "obj",
+            "type": "smetana.core.__ptr__"
+          }],
+          "annotation": ["gen.annotation.Original"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.cgraph.obj__c.agcontains#c62db997": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "obj",
+            "type": "h.ST_Agobj_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.cgraph.obj__c.agobjkind#8b564ae6": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arg",
+            "type": "h.ST_Agobj_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.cgraph.obj__c.agmethod_upd#5ba9a607": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "obj",
+            "type": "smetana.core.__ptr__"
+          }, {
+            "name": "sym",
+            "type": "h.ST_Agsym_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.cgraph.obj__c.agroot#8b564ae6": {
+          "returnType": "h.ST_Agraph_s",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "obj",
+            "type": "h.ST_Agobj_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "160",
+        "cyclomatic_complexity": "35",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "6"
+      }
+    }
+  },
+  "metric": {
+    "loc": "230",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

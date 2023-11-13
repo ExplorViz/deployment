@@ -1,0 +1,79 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "CompressionZlib.java",
+  "packageName": "net.sourceforge.plantuml.code",
+  "importName": ["java.io.ByteArrayInputStream", "java.util.zip.Deflater", "net.sourceforge.plantuml.code.deflate.ByteBitInputStream", "net.sourceforge.plantuml.code.deflate.Decompressor"],
+  "classData": {
+    "net.sourceforge.plantuml.code.CompressionZlib": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.code.Compression"],
+      "field": [{
+        "name": "USE_ZOPFLI",
+        "type": "boolean",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "COMPRESSION_LEVEL",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.code.CompressionZlib.compress#ae1a4a89": {
+          "returnType": "byte[]",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "in",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.CompressionZlib.decompress#ae1a4a89": {
+          "returnType": "net.sourceforge.plantuml.code.ByteArray",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "input",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.CompressionZlib.copyArray#15309e86": {
+          "returnType": "byte[]",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "data",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }, {
+            "name": "len",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "47",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "90",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

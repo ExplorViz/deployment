@@ -1,0 +1,143 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "CommandHideShowByGender.java",
+  "packageName": "net.sourceforge.plantuml.classdiagram.command",
+  "importName": ["net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.UmlDiagram", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.abel.EntityGender", "net.sourceforge.plantuml.abel.EntityGenderUtils", "net.sourceforge.plantuml.abel.EntityPortion", "net.sourceforge.plantuml.abel.LeafType", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.command.SingleLineCommand2", "net.sourceforge.plantuml.descdiagram.DescriptionDiagram", "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram", "net.sourceforge.plantuml.plasma.Quark", "net.sourceforge.plantuml.regex.IRegex", "net.sourceforge.plantuml.regex.RegexConcat", "net.sourceforge.plantuml.regex.RegexLeaf", "net.sourceforge.plantuml.regex.RegexOptional", "net.sourceforge.plantuml.regex.RegexResult", "net.sourceforge.plantuml.sequencediagram.SequenceDiagram", "net.sourceforge.plantuml.utils.LineLocation"],
+  "classData": {
+    "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByGender": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "ME",
+        "type": "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByGender",
+        "modifier": ["public", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByGender.getEntityPortion#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.abel.EntityPortion",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByGender.executeDescriptionDiagram#dff15c6e": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.descdiagram.DescriptionDiagram"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }],
+          "metric": {
+            "loc": "41",
+            "cyclomatic_complexity": "27",
+            "nestedBlockDepth": "15"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByGender.CommandHideShowByGender#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByGender.emptyByGender#d5aff283": {
+          "returnType": "net.sourceforge.plantuml.abel.EntityGender",
+          "modifier": ["private", "final"],
+          "parameter": [{
+            "name": "portion",
+            "type": "net.sourceforge.plantuml.abel.EntityPortion"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByGender.executeClassDiagram#fe29a80a": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.objectdiagram.AbstractClassOrObjectDiagram"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }],
+          "metric": {
+            "loc": "65",
+            "cyclomatic_complexity": "34",
+            "nestedBlockDepth": "16"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByGender.getRegexConcat#1": {
+          "returnType": "net.sourceforge.plantuml.regex.IRegex",
+          "modifier": ["static"],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByGender.executeArg#56a53e79": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.UmlDiagram"
+          }, {
+            "name": "location",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByGender.executeSequenceDiagram#4e433773": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.sequencediagram.SequenceDiagram"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.command.SingleLineCommand2\u003cnet.sourceforge.plantuml.UmlDiagram\u003e",
+      "metric": {
+        "loc": "173",
+        "cyclomatic_complexity": "74",
+        "cyclomatic_complexity_weighted": "14",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "230",
+    "cyclomatic_complexity": "14"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

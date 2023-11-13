@@ -1,0 +1,143 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "labels__c.java",
+  "packageName": "gen.lib.common",
+  "importName": ["gen.lib.cgraph.edge__c.aghead", "gen.lib.cgraph.graph__c.agisdirected", "gen.lib.cgraph.id__c.agnameof", "gen.lib.cgraph.obj__c.agobjkind", "gen.lib.cgraph.obj__c.agraphof", "gen.lib.cgraph.obj__c.agroot", "gen.lib.common.htmltable__c.make_html_label", "gen.lib.common.utils__c.htmlEntityUTF8", "smetana.core.JUtils.EQ_CSTRING", "smetana.core.Macro.AGEDGE", "smetana.core.Macro.AGNODE", "smetana.core.Macro.AGRAPH", "smetana.core.Macro.ED_head_port", "smetana.core.Macro.ED_label", "smetana.core.Macro.ED_tail_port", "smetana.core.Macro.GD_charset", "smetana.core.Macro.GD_gvc", "smetana.core.Macro.GD_label", "smetana.core.Macro.LT_HTML", "smetana.core.Macro.LT_RECD", "smetana.core.Macro.M_agtail", "smetana.core.Macro.ND_label", "smetana.core.Macro.UNSUPPORTED", "smetana.core.Macro.hackInitDimensionFromLabel", "smetana.core.debug.SmetanaDebug.ENTERING", "smetana.core.debug.SmetanaDebug.LEAVING", "gen.annotation.Difficult", "gen.annotation.Doc", "gen.annotation.Original", "gen.annotation.Reviewed", "gen.annotation.Unused", "h.ST_Agedge_s", "h.ST_Agnode_s", "h.ST_Agobj_s", "h.ST_Agraph_s", "h.ST_GVC_s", "h.ST_pointf", "h.ST_port", "h.ST_textlabel_t", "h.ST_textspan_t", "smetana.core.CArray", "smetana.core.CString", "smetana.core.Globals", "smetana.core.Memory", "smetana.core.ZType", "smetana.core.__ptr__", "smetana.core.debug.SmetanaDebug"],
+  "classData": {
+    "gen.lib.common.labels__c": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "gen.lib.common.labels__c.strdup_and_subst_obj#6ceb177b": {
+          "returnType": "smetana.core.CString",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "str",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "obj",
+            "type": "smetana.core.__ptr__"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.labels__c.make_simple_label#95de8923": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "gvc",
+            "type": "h.ST_GVC_s"
+          }, {
+            "name": "lp",
+            "type": "h.ST_textlabel_t"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Doc", "gen.annotation.Original"],
+          "metric": {
+            "loc": "63",
+            "cyclomatic_complexity": "18",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "gen.lib.common.labels__c.make_label#419577e": {
+          "returnType": "h.ST_textlabel_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "obj",
+            "type": "h.ST_Agobj_s"
+          }, {
+            "name": "str",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "kind",
+            "type": "int"
+          }, {
+            "name": "fontsize",
+            "type": "double"
+          }, {
+            "name": "fontname",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "fontcolor",
+            "type": "smetana.core.CString"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "71",
+            "cyclomatic_complexity": "26",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "gen.lib.common.labels__c.strdup_and_subst_obj0#5ff26bad": {
+          "returnType": "smetana.core.CString",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "str",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "obj",
+            "type": "h.ST_Agobj_s"
+          }, {
+            "name": "escBackslash",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Difficult", "gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "159",
+            "cyclomatic_complexity": "83",
+            "nestedBlockDepth": "8"
+          }
+        },
+        "gen.lib.common.labels__c.storeline#bb8d5805": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "gvc",
+            "type": "h.ST_GVC_s"
+          }, {
+            "name": "lp",
+            "type": "h.ST_textlabel_t"
+          }, {
+            "name": "line",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "terminator",
+            "type": "char"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Difficult", "gen.annotation.Doc", "gen.annotation.Original"],
+          "metric": {
+            "loc": "32",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "361",
+        "cyclomatic_complexity": "130",
+        "cyclomatic_complexity_weighted": "26",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "456",
+    "cyclomatic_complexity": "26"
+  },
+  "author": "plantuml@gmail.com"
+}

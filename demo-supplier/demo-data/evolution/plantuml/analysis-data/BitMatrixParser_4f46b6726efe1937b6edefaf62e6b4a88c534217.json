@@ -1,0 +1,93 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "BitMatrixParser.java",
+  "packageName": "ext.plantuml.com.google.zxing.qrcode.decoder",
+  "importName": ["ext.plantuml.com.google.zxing.FormatException", "ext.plantuml.com.google.zxing.common.BitMatrix"],
+  "classData": {
+    "ext.plantuml.com.google.zxing.qrcode.decoder.BitMatrixParser": {
+      "type": "CLASS",
+      "modifier": ["final"],
+      "field": [{
+        "name": "bitMatrix",
+        "type": "ext.plantuml.com.google.zxing.common.BitMatrix",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "parsedVersion",
+        "type": "ext.plantuml.com.google.zxing.qrcode.decoder.Version",
+        "modifier": ["private"]
+      }, {
+        "name": "parsedFormatInfo",
+        "type": "ext.plantuml.com.google.zxing.qrcode.decoder.FormatInformation",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "ext.plantuml.com.google.zxing.qrcode.decoder.BitMatrixParser.readVersion#1": {
+          "returnType": "ext.plantuml.com.google.zxing.qrcode.decoder.Version",
+          "metric": {
+            "loc": "39",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.decoder.BitMatrixParser.readCodewords#1": {
+          "returnType": "byte[]",
+          "metric": {
+            "loc": "43",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.decoder.BitMatrixParser.copyBit#62eca6e": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "i",
+            "type": "int"
+          }, {
+            "name": "j",
+            "type": "int"
+          }, {
+            "name": "versionBits",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.decoder.BitMatrixParser.BitMatrixParser#5645632d": {
+          "parameter": [{
+            "name": "bitMatrix",
+            "type": "ext.plantuml.com.google.zxing.common.BitMatrix"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.decoder.BitMatrixParser.readFormatInformation#1": {
+          "returnType": "ext.plantuml.com.google.zxing.qrcode.decoder.FormatInformation",
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "137",
+        "cyclomatic_complexity": "27",
+        "cyclomatic_complexity_weighted": "6",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "158",
+    "cyclomatic_complexity": "6"
+  },
+  "author": "plantuml@gmail.com"
+}

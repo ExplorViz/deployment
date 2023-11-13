@@ -1,0 +1,424 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Encoder.java",
+  "packageName": "ext.plantuml.com.google.zxing.qrcode.encoder",
+  "importName": ["java.io.UnsupportedEncodingException", "java.util.Hashtable", "java.util.Vector", "ext.plantuml.com.google.zxing.EncodeHintType", "ext.plantuml.com.google.zxing.WriterException", "ext.plantuml.com.google.zxing.common.BitArray", "ext.plantuml.com.google.zxing.common.CharacterSetECI", "ext.plantuml.com.google.zxing.common.ECI", "ext.plantuml.com.google.zxing.common.reedsolomon.GF256", "ext.plantuml.com.google.zxing.common.reedsolomon.ReedSolomonEncoder", "ext.plantuml.com.google.zxing.qrcode.decoder.ErrorCorrectionLevel", "ext.plantuml.com.google.zxing.qrcode.decoder.Mode", "ext.plantuml.com.google.zxing.qrcode.decoder.Version"],
+  "classData": {
+    "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "field": [{
+        "name": "ALPHANUMERIC_TABLE",
+        "type": "int[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "DEFAULT_BYTE_MODE_ENCODING",
+        "type": "java.lang.String",
+        "modifier": ["static", "final"]
+      }],
+      "methodData": {
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.getAlphanumericCode#1980e": {
+          "returnType": "int",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "code",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.terminateBits#4468f31e": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "numDataBytes",
+            "type": "int"
+          }, {
+            "name": "bits",
+            "type": "ext.plantuml.com.google.zxing.common.BitArray"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.append8BitBytes#45cc6895": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "content",
+            "type": "java.lang.String"
+          }, {
+            "name": "bits",
+            "type": "ext.plantuml.com.google.zxing.common.BitArray"
+          }, {
+            "name": "encoding",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.encode#1f01663c": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "content",
+            "type": "java.lang.String"
+          }, {
+            "name": "ecLevel",
+            "type": "ext.plantuml.com.google.zxing.qrcode.decoder.ErrorCorrectionLevel"
+          }, {
+            "name": "hints",
+            "type": "java.util.Hashtable"
+          }, {
+            "name": "qrCode",
+            "type": "ext.plantuml.com.google.zxing.qrcode.encoder.QRCode"
+          }],
+          "metric": {
+            "loc": "47",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.appendModeInfo#48a897ca": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "mode",
+            "type": "ext.plantuml.com.google.zxing.qrcode.decoder.Mode"
+          }, {
+            "name": "bits",
+            "type": "ext.plantuml.com.google.zxing.common.BitArray"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.generateECBytes#15309e86": {
+          "returnType": "byte[]",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "dataBytes",
+            "type": "byte[]"
+          }, {
+            "name": "numEcBytesInBlock",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.Encoder#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.initQRCode#9afd4bbb": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "numInputBytes",
+            "type": "int"
+          }, {
+            "name": "ecLevel",
+            "type": "ext.plantuml.com.google.zxing.qrcode.decoder.ErrorCorrectionLevel"
+          }, {
+            "name": "mode",
+            "type": "ext.plantuml.com.google.zxing.qrcode.decoder.Mode"
+          }, {
+            "name": "qrCode",
+            "type": "ext.plantuml.com.google.zxing.qrcode.encoder.QRCode"
+          }],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.appendLengthInfo#821b16a": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "numLetters",
+            "type": "int"
+          }, {
+            "name": "version",
+            "type": "int"
+          }, {
+            "name": "mode",
+            "type": "ext.plantuml.com.google.zxing.qrcode.decoder.Mode"
+          }, {
+            "name": "bits",
+            "type": "ext.plantuml.com.google.zxing.common.BitArray"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.interleaveWithECBytes#e6c5c148": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "bits",
+            "type": "ext.plantuml.com.google.zxing.common.BitArray"
+          }, {
+            "name": "numTotalBytes",
+            "type": "int"
+          }, {
+            "name": "numDataBytes",
+            "type": "int"
+          }, {
+            "name": "numRSBlocks",
+            "type": "int"
+          }, {
+            "name": "result",
+            "type": "ext.plantuml.com.google.zxing.common.BitArray"
+          }],
+          "metric": {
+            "loc": "54",
+            "cyclomatic_complexity": "13",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.appendECI#4457ef22": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "eci",
+            "type": "ext.plantuml.com.google.zxing.common.ECI"
+          }, {
+            "name": "bits",
+            "type": "ext.plantuml.com.google.zxing.common.BitArray"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.encode#7c196400": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "content",
+            "type": "java.lang.String"
+          }, {
+            "name": "ecLevel",
+            "type": "ext.plantuml.com.google.zxing.qrcode.decoder.ErrorCorrectionLevel"
+          }, {
+            "name": "qrCode",
+            "type": "ext.plantuml.com.google.zxing.qrcode.encoder.QRCode"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.chooseMode#874989e1": {
+          "returnType": "ext.plantuml.com.google.zxing.qrcode.decoder.Mode",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "content",
+            "type": "java.lang.String"
+          }, {
+            "name": "encoding",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.appendKanjiBytes#3746c71c": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "content",
+            "type": "java.lang.String"
+          }, {
+            "name": "bits",
+            "type": "ext.plantuml.com.google.zxing.common.BitArray"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.appendAlphanumericBytes#3746c71c": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "content",
+            "type": "java.lang.String"
+          }, {
+            "name": "bits",
+            "type": "ext.plantuml.com.google.zxing.common.BitArray"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.isOnlyDoubleByteKanji#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "content",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.chooseMaskPattern#526a8fcd": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "bits",
+            "type": "ext.plantuml.com.google.zxing.common.BitArray"
+          }, {
+            "name": "ecLevel",
+            "type": "ext.plantuml.com.google.zxing.qrcode.decoder.ErrorCorrectionLevel"
+          }, {
+            "name": "version",
+            "type": "int"
+          }, {
+            "name": "matrix",
+            "type": "ext.plantuml.com.google.zxing.qrcode.encoder.ByteMatrix"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.calculateMaskPenalty#8917db28": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "matrix",
+            "type": "ext.plantuml.com.google.zxing.qrcode.encoder.ByteMatrix"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.chooseMode#943a4c50": {
+          "returnType": "ext.plantuml.com.google.zxing.qrcode.decoder.Mode",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "content",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.appendNumericBytes#3746c71c": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "content",
+            "type": "java.lang.String"
+          }, {
+            "name": "bits",
+            "type": "ext.plantuml.com.google.zxing.common.BitArray"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.getNumDataBytesAndNumECBytesForBlockID#447ec121": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "numTotalBytes",
+            "type": "int"
+          }, {
+            "name": "numDataBytes",
+            "type": "int"
+          }, {
+            "name": "numRSBlocks",
+            "type": "int"
+          }, {
+            "name": "blockID",
+            "type": "int"
+          }, {
+            "name": "numDataBytesInBlock",
+            "type": "int[]"
+          }, {
+            "name": "numECBytesInBlock",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "36",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.encoder.Encoder.appendBytes#ccdacaf8": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "content",
+            "type": "java.lang.String"
+          }, {
+            "name": "mode",
+            "type": "ext.plantuml.com.google.zxing.qrcode.decoder.Mode"
+          }, {
+            "name": "bits",
+            "type": "ext.plantuml.com.google.zxing.common.BitArray"
+          }, {
+            "name": "encoding",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "5"
+          }
+        }
+      },
+      "metric": {
+        "loc": "325",
+        "cyclomatic_complexity": "94",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "358",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "plantuml@gmail.com"
+}

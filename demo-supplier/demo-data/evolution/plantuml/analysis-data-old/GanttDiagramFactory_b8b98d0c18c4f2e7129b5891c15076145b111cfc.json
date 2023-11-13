@@ -1,0 +1,88 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "GanttDiagramFactory.java",
+  "packageName": "net.sourceforge.plantuml.project",
+  "importName": ["java.util.Arrays", "java.util.List", "java.util.Map", "net.sourceforge.plantuml.command.Command", "net.sourceforge.plantuml.command.CommandNope", "net.sourceforge.plantuml.command.CommonCommands", "net.sourceforge.plantuml.command.PSystemCommandFactory", "net.sourceforge.plantuml.core.DiagramType", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.project.command.CommandColorTask", "net.sourceforge.plantuml.project.command.CommandFootbox", "net.sourceforge.plantuml.project.command.CommandGanttArrow", "net.sourceforge.plantuml.project.command.CommandGanttArrow2", "net.sourceforge.plantuml.project.command.CommandGroupEnd", "net.sourceforge.plantuml.project.command.CommandGroupStart", "net.sourceforge.plantuml.project.command.CommandHideResourceFootbox", "net.sourceforge.plantuml.project.command.CommandHideResourceName", "net.sourceforge.plantuml.project.command.CommandLabelOnColumn", "net.sourceforge.plantuml.project.command.CommandLanguage", "net.sourceforge.plantuml.project.command.CommandNoteBottom", "net.sourceforge.plantuml.project.command.CommandPrintBetween", "net.sourceforge.plantuml.project.command.CommandPrintScale", "net.sourceforge.plantuml.project.command.CommandSeparator", "net.sourceforge.plantuml.project.command.CommandWeekNumberStrategy", "net.sourceforge.plantuml.project.command.NaturalCommand", "net.sourceforge.plantuml.project.lang.SentenceAnd", "net.sourceforge.plantuml.project.lang.SentenceAndAnd", "net.sourceforge.plantuml.project.lang.SentenceSimple", "net.sourceforge.plantuml.project.lang.Subject", "net.sourceforge.plantuml.project.lang.SubjectDayAsDate", "net.sourceforge.plantuml.project.lang.SubjectDayOfWeek", "net.sourceforge.plantuml.project.lang.SubjectDaysAsDates", "net.sourceforge.plantuml.project.lang.SubjectProject", "net.sourceforge.plantuml.project.lang.SubjectResource", "net.sourceforge.plantuml.project.lang.SubjectSeparator", "net.sourceforge.plantuml.project.lang.SubjectTask", "net.sourceforge.plantuml.project.lang.SubjectToday", "net.sourceforge.plantuml.style.CommandStyleImport", "net.sourceforge.plantuml.style.CommandStyleMultilinesCSS"],
+  "classData": {
+    "net.sourceforge.plantuml.project.GanttDiagramFactory": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "net.sourceforge.plantuml.project.GanttDiagramFactory.createEmptyDiagram#a4c08de4": {
+          "returnType": "net.sourceforge.plantuml.project.GanttDiagram",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "skinParam",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttDiagramFactory.addLanguageCommands#2ac0c3d0": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "cmd",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.command.Command\u003e"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttDiagramFactory.GanttDiagramFactory#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttDiagramFactory.initCommandsList#2ac0c3d0": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "cmds",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.command.Command\u003e"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "29",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.GanttDiagramFactory.subjects#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.project.lang.Subject\u003e",
+          "modifier": ["static", "private", "final"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.command.PSystemCommandFactory",
+      "metric": {
+        "loc": "73",
+        "cyclomatic_complexity": "9",
+        "cyclomatic_complexity_weighted": "9",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "151",
+    "cyclomatic_complexity": "9"
+  },
+  "author": "plantuml@gmail.com"
+}

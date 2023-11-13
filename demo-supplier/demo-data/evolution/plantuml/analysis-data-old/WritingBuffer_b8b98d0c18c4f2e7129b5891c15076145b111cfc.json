@@ -1,0 +1,139 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "WritingBuffer.java",
+  "packageName": "net.sourceforge.plantuml.json",
+  "importName": ["java.io.IOException", "java.io.Writer"],
+  "classData": {
+    "net.sourceforge.plantuml.json.WritingBuffer": {
+      "type": "CLASS",
+      "field": [{
+        "name": "writer",
+        "type": "java.io.Writer",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "buffer",
+        "type": "char[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fill",
+        "type": "int",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.json.WritingBuffer.flush#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.WritingBuffer.write#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "c",
+            "type": "int"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.json.WritingBuffer.WritingBuffer#9aed90b2": {
+          "parameter": [{
+            "name": "writer",
+            "type": "java.io.Writer"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.WritingBuffer.close#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.WritingBuffer.write#55c72577": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cbuf",
+            "type": "char[]"
+          }, {
+            "name": "off",
+            "type": "int"
+          }, {
+            "name": "len",
+            "type": "int"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.json.WritingBuffer.WritingBuffer#c2c61d7d": {
+          "parameter": [{
+            "name": "writer",
+            "type": "java.io.Writer"
+          }, {
+            "name": "bufferSize",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.WritingBuffer.write#6f0b7630": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "str",
+            "type": "java.lang.String"
+          }, {
+            "name": "off",
+            "type": "int"
+          }, {
+            "name": "len",
+            "type": "int"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "superClass": "java.io.Writer",
+      "metric": {
+        "loc": "60",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "89",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

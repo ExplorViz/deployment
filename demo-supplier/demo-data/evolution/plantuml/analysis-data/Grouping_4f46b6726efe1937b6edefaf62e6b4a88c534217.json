@@ -1,0 +1,177 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Grouping.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram",
+  "importName": ["net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleBuilder", "net.sourceforge.plantuml.style.StyleSignatureBasic", "net.sourceforge.plantuml.style.WithStyle"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.Grouping": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "interface": ["net.sourceforge.plantuml.sequencediagram.Event", "net.sourceforge.plantuml.style.WithStyle"],
+      "field": [{
+        "name": "title",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "type",
+        "type": "net.sourceforge.plantuml.sequencediagram.GroupingType",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "comment",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "backColorElement",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "style",
+        "type": "net.sourceforge.plantuml.style.Style",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "styleHeader",
+        "type": "net.sourceforge.plantuml.style.Style",
+        "modifier": ["final", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.Grouping.getStyleSignature#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Grouping.getHeaderStyleDefinition#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Grouping.getComment#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Grouping.isParallel#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "abstract"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Grouping.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Grouping.getTitle#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Grouping.getLevel#1": {
+          "returnType": "int",
+          "modifier": ["public", "abstract"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Grouping.getType#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.GroupingType",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Grouping.Grouping#b5fd866b": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "title",
+            "type": "java.lang.String"
+          }, {
+            "name": "comment",
+            "type": "java.lang.String"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.sequencediagram.GroupingType"
+          }, {
+            "name": "backColorElement",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "styleBuilder",
+            "type": "net.sourceforge.plantuml.style.StyleBuilder"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Grouping.getUsedStyles#1": {
+          "returnType": "Style[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Grouping.getBackColorGeneral#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public", "abstract"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.Grouping.getBackColorElement#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.sequencediagram.AbstractEvent",
+      "metric": {
+        "loc": "63",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "6"
+      }
+    }
+  },
+  "metric": {
+    "loc": "108",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

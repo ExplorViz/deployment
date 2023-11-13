@@ -1,0 +1,530 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "DrawableSetInitializer.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram.graphic",
+  "importName": ["java.util.ArrayList", "java.util.List", "java.util.Objects", "net.sourceforge.plantuml.OptionFlags", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.sequencediagram.AbstractMessage", "net.sourceforge.plantuml.sequencediagram.Delay", "net.sourceforge.plantuml.sequencediagram.Divider", "net.sourceforge.plantuml.sequencediagram.Doll", "net.sourceforge.plantuml.sequencediagram.Event", "net.sourceforge.plantuml.sequencediagram.GroupingLeaf", "net.sourceforge.plantuml.sequencediagram.GroupingStart", "net.sourceforge.plantuml.sequencediagram.GroupingType", "net.sourceforge.plantuml.sequencediagram.HSpace", "net.sourceforge.plantuml.sequencediagram.InGroupableList", "net.sourceforge.plantuml.sequencediagram.LifeEvent", "net.sourceforge.plantuml.sequencediagram.LifeEventType", "net.sourceforge.plantuml.sequencediagram.Message", "net.sourceforge.plantuml.sequencediagram.MessageExo", "net.sourceforge.plantuml.sequencediagram.Newpage", "net.sourceforge.plantuml.sequencediagram.Note", "net.sourceforge.plantuml.sequencediagram.NotePosition", "net.sourceforge.plantuml.sequencediagram.Notes", "net.sourceforge.plantuml.sequencediagram.Participant", "net.sourceforge.plantuml.sequencediagram.ParticipantEnglober", "net.sourceforge.plantuml.sequencediagram.ParticipantType", "net.sourceforge.plantuml.sequencediagram.Reference", "net.sourceforge.plantuml.skin.Component", "net.sourceforge.plantuml.skin.ComponentType", "net.sourceforge.plantuml.skin.PaddingParam", "net.sourceforge.plantuml.skin.SkinParamBackcolored", "net.sourceforge.plantuml.skin.SkinParamBackcoloredReference", "net.sourceforge.plantuml.skin.rose.Rose", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.Style"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareGroupingLeaf#e0340e02.Lazy": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareGroupingLeaf#e0340e02.Lazy.getNow#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "4"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer": {
+      "type": "CLASS",
+      "field": [{
+        "name": "defaultLineType",
+        "type": "net.sourceforge.plantuml.skin.ComponentType",
+        "modifier": ["private"]
+      }, {
+        "name": "drawableSet",
+        "type": "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSet",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "showTail",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "freeX",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "freeY2",
+        "type": "net.sourceforge.plantuml.sequencediagram.graphic.Frontier",
+        "modifier": ["private"]
+      }, {
+        "name": "lastFreeY2",
+        "type": "net.sourceforge.plantuml.sequencediagram.graphic.Frontier",
+        "modifier": ["private"]
+      }, {
+        "name": "autonewpage",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "constraintSet",
+        "type": "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet",
+        "modifier": ["private"]
+      }, {
+        "name": "inGroupableStack",
+        "type": "net.sourceforge.plantuml.sequencediagram.graphic.InGroupablesStack",
+        "modifier": ["final", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareMessageExo#5f04eeee": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "m",
+            "type": "net.sourceforge.plantuml.sequencediagram.MessageExo"
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.createDrawableSet#395b4159": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "76",
+            "cyclomatic_complexity": "33",
+            "nestedBlockDepth": "14"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareNote#342bd331": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "n",
+            "type": "net.sourceforge.plantuml.sequencediagram.Note"
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.getTotalHeight#a753434a": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareReference#f90afb38": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "reference",
+            "type": "net.sourceforge.plantuml.sequencediagram.Reference"
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "51",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.addParticipant#dd07b54f": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.sequencediagram.Participant"
+          }, {
+            "name": "participantEnglober",
+            "type": "net.sourceforge.plantuml.sequencediagram.ParticipantEnglober"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareNewpageSpecial#835e9306": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "newpage",
+            "type": "net.sourceforge.plantuml.sequencediagram.Newpage"
+          }, {
+            "name": "justBefore",
+            "type": "net.sourceforge.plantuml.sequencediagram.Event"
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareMessage#17fbd9fc": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "m",
+            "type": "net.sourceforge.plantuml.sequencediagram.Message"
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareGroupingStart#9cdd83e4": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "start",
+            "type": "net.sourceforge.plantuml.sequencediagram.GroupingStart"
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "29",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareParticipant#833480da": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "p",
+            "type": "net.sourceforge.plantuml.sequencediagram.Participant"
+          }],
+          "metric": {
+            "loc": "57",
+            "cyclomatic_complexity": "17",
+            "nestedBlockDepth": "9"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.DrawableSetInitializer#17830162": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "skin",
+            "type": "net.sourceforge.plantuml.skin.rose.Rose"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "showTail",
+            "type": "boolean"
+          }, {
+            "name": "autonewpage",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.takeParticipantEngloberPadding#395b4159": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareDelay#3db6190c": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "delay",
+            "type": "net.sourceforge.plantuml.sequencediagram.Delay"
+          }, {
+            "name": "participants",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.graphic.ParticipantBox\u003e"
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareLiveEvent#44859fe5": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "lifeEvent",
+            "type": "net.sourceforge.plantuml.sequencediagram.LifeEvent"
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "49",
+            "cyclomatic_complexity": "13",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.addEvent#4038299": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "event",
+            "type": "net.sourceforge.plantuml.sequencediagram.Event"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareNewpage#868622d4": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "newpage",
+            "type": "net.sourceforge.plantuml.sequencediagram.Newpage"
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.getYposition#c34dbdd6": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "newpage",
+            "type": "net.sourceforge.plantuml.sequencediagram.Newpage"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareHSpace#a4673b25": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "hspace",
+            "type": "net.sourceforge.plantuml.sequencediagram.HSpace"
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareNotes#bb18ea82": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "notes",
+            "type": "net.sourceforge.plantuml.sequencediagram.Notes"
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.createNoteBox#342bd331": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.NoteBox",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "n",
+            "type": "net.sourceforge.plantuml.sequencediagram.Note"
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareGroupingLeaf#e0340e02": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "m",
+            "type": "net.sourceforge.plantuml.sequencediagram.GroupingLeaf",
+            "modifier": ["final "]
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "55",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.getFullParticipantRange#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.takeParticipantEngloberTitleWidth#395b4159": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.getParticipantRange#4038299": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ev",
+            "type": "net.sourceforge.plantuml.sequencediagram.Event"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareDivider#493d292a": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "divider",
+            "type": "net.sourceforge.plantuml.sequencediagram.Divider"
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.useContinueLineBecauseOfDelay#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.DrawableSetInitializer.prepareMissingSpace#395b4159": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "48",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "580",
+        "cyclomatic_complexity": "109",
+        "cyclomatic_complexity_weighted": "7",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "656",
+    "cyclomatic_complexity": "7"
+  },
+  "author": "plantuml@gmail.com"
+}

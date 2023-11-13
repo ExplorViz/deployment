@@ -1,0 +1,87 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "AbstractSolver.java",
+  "packageName": "net.sourceforge.plantuml.project.solver",
+  "importName": ["java.util.Iterator", "java.util.LinkedHashMap", "java.util.Map", "java.util.Map.Entry", "net.sourceforge.plantuml.project.Load", "net.sourceforge.plantuml.project.Value", "net.sourceforge.plantuml.project.core.TaskAttribute", "net.sourceforge.plantuml.project.time.Day"],
+  "classData": {
+    "net.sourceforge.plantuml.project.solver.AbstractSolver": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "interface": ["net.sourceforge.plantuml.project.solver.Solver"],
+      "field": [{
+        "name": "values",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.project.core.TaskAttribute, net.sourceforge.plantuml.project.Value\u003e",
+        "modifier": ["protected", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.project.solver.AbstractSolver.removeFirstElement#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.solver.AbstractSolver.setData#c0b8c97b": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "attribute",
+            "type": "net.sourceforge.plantuml.project.core.TaskAttribute"
+          }, {
+            "name": "value",
+            "type": "net.sourceforge.plantuml.project.Value"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.project.solver.AbstractSolver.getData#a2f62a96": {
+          "returnType": "net.sourceforge.plantuml.project.Value",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "attribute",
+            "type": "net.sourceforge.plantuml.project.core.TaskAttribute"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.project.solver.AbstractSolver.computeStart#1": {
+          "returnType": "net.sourceforge.plantuml.project.Value",
+          "modifier": ["abstract", "protected"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.solver.AbstractSolver.computeEnd#1": {
+          "returnType": "net.sourceforge.plantuml.project.Value",
+          "modifier": ["abstract", "protected"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "45",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "92",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

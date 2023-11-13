@@ -1,0 +1,279 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Fission.java",
+  "packageName": "net.sourceforge.plantuml.klimt.creole",
+  "importName": ["java.util.ArrayDeque", "java.util.ArrayList", "java.util.Arrays", "java.util.Collections", "java.util.Deque", "java.util.List", "java.util.Objects", "net.sourceforge.plantuml.klimt.LineBreakStrategy", "net.sourceforge.plantuml.klimt.creole.atom.AbstractAtom", "net.sourceforge.plantuml.klimt.creole.atom.Atom", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.creole.Fission.StripeSimpleInternal": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "interface": ["net.sourceforge.plantuml.klimt.creole.Stripe"],
+      "field": [{
+        "name": "removeInitialSpaces",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "header",
+        "type": "net.sourceforge.plantuml.klimt.creole.atom.Atom",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "neutrons",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.Neutron\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "stringBounder",
+        "type": "net.sourceforge.plantuml.klimt.font.StringBounder",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "width",
+        "type": "double",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.Fission.StripeSimpleInternal.StripeSimpleInternal#6cdda9fe": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "removeInitialSpaces",
+            "type": "boolean"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "header",
+            "type": "net.sourceforge.plantuml.klimt.creole.atom.Atom"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.StripeSimpleInternal.removeFinalSpaces#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.StripeSimpleInternal.lastZwsp#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.StripeSimpleInternal.addNeutron#d126b77a": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "neutron",
+            "type": "net.sourceforge.plantuml.klimt.creole.Neutron"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.StripeSimpleInternal.slightyShorten#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.Neutron\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.StripeSimpleInternal.isWhite#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.StripeSimpleInternal.last#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Neutron",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.StripeSimpleInternal.getWidth#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.StripeSimpleInternal.getAtoms#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.atom.Atom\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.StripeSimpleInternal.getLHeader#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.atom.Atom",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.StripeSimpleInternal.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "109",
+        "cyclomatic_complexity": "23",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.klimt.creole.Fission.blank#1f4d90.AbstractAtom": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.Fission.blank#1f4d90.AbstractAtom.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.blank#1f4d90.AbstractAtom.getStartingAltitude#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.blank#1f4d90.AbstractAtom.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.klimt.creole.Fission": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "stripe",
+        "type": "net.sourceforge.plantuml.klimt.creole.Stripe",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "maxWidth",
+        "type": "net.sourceforge.plantuml.klimt.LineBreakStrategy",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.klimt.creole.Fission.StripeSimpleInternal"],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.Fission.Fission#c30f82d2": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stripe",
+            "type": "net.sourceforge.plantuml.klimt.creole.Stripe"
+          }, {
+            "name": "maxWidth",
+            "type": "net.sourceforge.plantuml.klimt.LineBreakStrategy"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.getSplitted#395b4159": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.Stripe\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "39",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.noHeader#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.atom.Atom\u003e",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.Fission.blank#1f4d90": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.atom.Atom",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "header",
+            "type": "net.sourceforge.plantuml.klimt.creole.atom.Atom",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        }
+      },
+      "metric": {
+        "loc": "189",
+        "cyclomatic_complexity": "24",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "241",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

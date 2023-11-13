@@ -1,0 +1,79 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "DriverImageG2d.java",
+  "packageName": "net.sourceforge.plantuml.klimt.drawing.g2d",
+  "importName": ["java.awt.Graphics2D", "java.awt.geom.AffineTransform", "net.sourceforge.plantuml.klimt.UParam", "net.sourceforge.plantuml.klimt.color.ColorMapper", "net.sourceforge.plantuml.klimt.drawing.UDriver", "net.sourceforge.plantuml.klimt.geom.EnsureVisible", "net.sourceforge.plantuml.klimt.shape.UImage"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.drawing.g2d.DriverImageG2d": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.drawing.UDriver\u003cnet.sourceforge.plantuml.klimt.shape.UImage, java.awt.Graphics2D\u003e"],
+      "field": [{
+        "name": "visible",
+        "type": "net.sourceforge.plantuml.klimt.geom.EnsureVisible",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "dpiFactor",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.drawing.g2d.DriverImageG2d.draw#70cdc544": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.UImage"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "mapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }, {
+            "name": "param",
+            "type": "net.sourceforge.plantuml.klimt.UParam"
+          }, {
+            "name": "g2d",
+            "type": "java.awt.Graphics2D"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.g2d.DriverImageG2d.DriverImageG2d#f457c44": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dpiFactor",
+            "type": "double"
+          }, {
+            "name": "visible",
+            "type": "net.sourceforge.plantuml.klimt.geom.EnsureVisible"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "25",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "71",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

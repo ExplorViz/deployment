@@ -1,0 +1,102 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "DiagramComponent.java",
+  "packageName": "org.stathissideris.ascii2image.graphics",
+  "importName": ["org.stathissideris.ascii2image.text.CellSet", "org.stathissideris.ascii2image.text.TextGrid"],
+  "classData": {
+    "org.stathissideris.ascii2image.graphics.DiagramComponent": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "field": [{
+        "name": "DEBUG",
+        "type": "boolean",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "org.stathissideris.ascii2image.graphics.DiagramComponent.createClosedFromBoundaryCells#1aa719ce": {
+          "returnType": "org.stathissideris.ascii2image.graphics.DiagramComponent",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "grid",
+            "type": "org.stathissideris.ascii2image.text.TextGrid"
+          }, {
+            "name": "cells",
+            "type": "org.stathissideris.ascii2image.text.CellSet"
+          }, {
+            "name": "cellWidth",
+            "type": "int"
+          }, {
+            "name": "cellHeight",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramComponent.makePointForCell#bf1585b1": {
+          "returnType": "org.stathissideris.ascii2image.graphics.ShapePoint",
+          "modifier": ["protected", "static"],
+          "parameter": [{
+            "name": "cell",
+            "type": "org.stathissideris.ascii2image.text.TextGrid.Cell"
+          }, {
+            "name": "grid",
+            "type": "org.stathissideris.ascii2image.text.TextGrid"
+          }, {
+            "name": "cellWidth",
+            "type": "int"
+          }, {
+            "name": "cellHeight",
+            "type": "int"
+          }, {
+            "name": "allRound",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "36",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramComponent.createClosedFromBoundaryCells#3e178c1a": {
+          "returnType": "org.stathissideris.ascii2image.graphics.DiagramComponent",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "grid",
+            "type": "org.stathissideris.ascii2image.text.TextGrid"
+          }, {
+            "name": "cells",
+            "type": "org.stathissideris.ascii2image.text.CellSet"
+          }, {
+            "name": "cellWidth",
+            "type": "int"
+          }, {
+            "name": "cellHeight",
+            "type": "int"
+          }, {
+            "name": "allRound",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "44",
+            "cyclomatic_complexity": "15",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "90",
+        "cyclomatic_complexity": "26",
+        "cyclomatic_complexity_weighted": "13",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "115",
+    "cyclomatic_complexity": "13"
+  },
+  "author": "plantuml@gmail.com"
+}

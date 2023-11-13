@@ -1,0 +1,110 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "StripeTree.java",
+  "packageName": "net.sourceforge.plantuml.klimt.creole.legacy",
+  "importName": ["java.util.Collections", "java.util.List", "net.sourceforge.plantuml.klimt.creole.CreoleContext", "net.sourceforge.plantuml.klimt.creole.CreoleMode", "net.sourceforge.plantuml.klimt.creole.Stripe", "net.sourceforge.plantuml.klimt.creole.StripeStyle", "net.sourceforge.plantuml.klimt.creole.StripeStyleType", "net.sourceforge.plantuml.klimt.creole.atom.Atom", "net.sourceforge.plantuml.klimt.creole.atom.AtomTree", "net.sourceforge.plantuml.klimt.creole.atom.AtomWithMargin", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.style.ISkinSimple"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.creole.legacy.StripeTree": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.creole.Stripe"],
+      "field": [{
+        "name": "fontConfiguration",
+        "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+        "modifier": ["private"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinSimple",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "tree",
+        "type": "net.sourceforge.plantuml.klimt.creole.atom.AtomTree",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "marged",
+        "type": "net.sourceforge.plantuml.klimt.creole.atom.Atom",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "stripeStyle",
+        "type": "net.sourceforge.plantuml.klimt.creole.StripeStyle",
+        "modifier": ["final", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTree.analyzeAndAdd#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTree.getLHeader#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.atom.Atom",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTree.StripeTree#93f0bdf": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fontConfiguration",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinSimple"
+          }, {
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTree.computeLevel#943a4c50": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.StripeTree.getAtoms#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.atom.Atom\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "55",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "106",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

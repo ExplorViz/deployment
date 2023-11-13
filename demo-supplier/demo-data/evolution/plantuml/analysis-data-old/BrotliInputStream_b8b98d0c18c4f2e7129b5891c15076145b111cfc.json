@@ -1,0 +1,116 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "BrotliInputStream.java",
+  "packageName": "net.sourceforge.plantuml.brotli",
+  "importName": ["java.io.IOException", "java.io.InputStream"],
+  "classData": {
+    "net.sourceforge.plantuml.brotli.BrotliInputStream": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "DEFAULT_INTERNAL_BUFFER_SIZE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "buffer",
+        "type": "byte[]",
+        "modifier": ["private"]
+      }, {
+        "name": "remainingBufferBytes",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "bufferOffset",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "state",
+        "type": "net.sourceforge.plantuml.brotli.State",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.brotli.BrotliInputStream.read#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BrotliInputStream.BrotliInputStream#d46c5926": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "java.io.InputStream"
+          }, {
+            "name": "byteReadBufferSize",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BrotliInputStream.read#90e4ca29": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "destBuffer",
+            "type": "byte[]"
+          }, {
+            "name": "destOffset",
+            "type": "int"
+          }, {
+            "name": "destLen",
+            "type": "int"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "38",
+            "cyclomatic_complexity": "16",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BrotliInputStream.close#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BrotliInputStream.BrotliInputStream#512cbbe9": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "java.io.InputStream"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "java.io.InputStream",
+      "metric": {
+        "loc": "88",
+        "cyclomatic_complexity": "26",
+        "cyclomatic_complexity_weighted": "8",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "101",
+    "cyclomatic_complexity": "8"
+  },
+  "author": "plantuml@gmail.com"
+}

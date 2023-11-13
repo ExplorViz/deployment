@@ -1,0 +1,302 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "BasicCharAreaImpl.java",
+  "packageName": "net.sourceforge.plantuml.asciiart",
+  "importName": ["java.io.PrintStream", "java.util.ArrayList", "java.util.Collections", "java.util.List", "net.sourceforge.plantuml.StringUtils"],
+  "classData": {
+    "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.asciiart.BasicCharArea"],
+      "field": [{
+        "name": "charSize1",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "charSize2",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "width",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "height",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "chars",
+        "type": "char[][]",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.print#4f8c208c": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ps",
+            "type": "java.io.PrintStream"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.drawHLine#c65fc6ba": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }, {
+            "name": "line",
+            "type": "int"
+          }, {
+            "name": "col1",
+            "type": "int"
+          }, {
+            "name": "col2",
+            "type": "int"
+          }, {
+            "name": "ifFound",
+            "type": "char"
+          }, {
+            "name": "thenUse",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.drawHLine#3248127a": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }, {
+            "name": "line",
+            "type": "int"
+          }, {
+            "name": "col1",
+            "type": "int"
+          }, {
+            "name": "col2",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.getLines#1": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.getHeight#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.isLong#2e9375": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.drawStringLR#6f0b7630": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "string",
+            "type": "java.lang.String"
+          }, {
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.ensurePossible#3301a1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.getLine#1980e": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "line",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.drawChar#af0a8815": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }, {
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.drawStringTB#6f0b7630": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "string",
+            "type": "java.lang.String"
+          }, {
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.drawVLine#3248127a": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }, {
+            "name": "col",
+            "type": "int"
+          }, {
+            "name": "line1",
+            "type": "int"
+          }, {
+            "name": "line2",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.fillRect#16bbd4b5": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }, {
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }, {
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.BasicCharAreaImpl#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.asciiart.BasicCharAreaImpl.getWidth#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "157",
+        "cyclomatic_complexity": "26",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "201",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,111 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "SequenceDiagramXmiMaker.java",
+  "packageName": "net.sourceforge.plantuml.xmi",
+  "importName": ["java.nio.charset.StandardCharsets.UTF_8", "java.io.IOException", "java.io.OutputStream", "javax.xml.parsers.DocumentBuilder", "javax.xml.parsers.ParserConfigurationException", "javax.xml.transform.OutputKeys", "javax.xml.transform.Result", "javax.xml.transform.Source", "javax.xml.transform.Transformer", "javax.xml.transform.TransformerException", "javax.xml.transform.dom.DOMSource", "javax.xml.transform.stream.StreamResult", "org.w3c.dom.Document", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.api.ImageDataSimple", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.sequencediagram.SequenceDiagram", "net.sourceforge.plantuml.sequencediagram.graphic.FileMaker", "net.sourceforge.plantuml.xml.XmlFactories"],
+  "classData": {
+    "net.sourceforge.plantuml.xmi.SequenceDiagramXmiMaker": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "interface": ["net.sourceforge.plantuml.sequencediagram.graphic.FileMaker"],
+      "field": [{
+        "name": "diagram",
+        "type": "net.sourceforge.plantuml.sequencediagram.SequenceDiagram",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fileFormat",
+        "type": "net.sourceforge.plantuml.FileFormat",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.xmi.SequenceDiagramXmiMaker.createOne#9d1a6e39": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "isWithMetadata",
+            "type": "boolean"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "29",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.SequenceDiagramXmiMaker.getNbPages#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.SequenceDiagramXmiMaker.SequenceDiagramXmiMaker#6ca2502": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "sequenceDiagram",
+            "type": "net.sourceforge.plantuml.sequencediagram.SequenceDiagram"
+          }, {
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormat"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.SequenceDiagramXmiMaker.createOneGraphic#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.SequenceDiagramXmiMaker.writeDocument#b1b599e7": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "document",
+            "type": "org.w3c.dom.Document"
+          }, {
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "63",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "91",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

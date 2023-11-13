@@ -1,0 +1,86 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "AParentFolderZip.java",
+  "packageName": "net.sourceforge.plantuml.file",
+  "importName": ["java.io.IOException", "net.sourceforge.plantuml.security.SFile"],
+  "classData": {
+    "net.sourceforge.plantuml.file.AParentFolderZip": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.file.AParentFolder"],
+      "field": [{
+        "name": "zipFile",
+        "type": "net.sourceforge.plantuml.security.SFile",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "parent",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.file.AParentFolderZip.getAFile#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.file.AFile",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "nameOrPath",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.file.AParentFolderZip.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.file.AParentFolderZip.AParentFolderZip#25e85563": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "zipFile",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }, {
+            "name": "entry",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.file.AParentFolderZip.merge#943a4c50": {
+          "returnType": "java.lang.String",
+          "parameter": [{
+            "name": "full",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "35",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "76",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,470 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "SubBlock.java",
+  "packageName": "net.sourceforge.plantuml.webp",
+  "importName": ["java.io.IOException"],
+  "classData": {
+    "net.sourceforge.plantuml.webp.SubBlock": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "UV",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "Y",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "Y_AFTER_Y2",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "Y2",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "above",
+        "type": "net.sourceforge.plantuml.webp.SubBlock",
+        "modifier": ["private"]
+      }, {
+        "name": "dest",
+        "type": "int[][]",
+        "modifier": ["private"]
+      }, {
+        "name": "diff",
+        "type": "int[][]",
+        "modifier": ["private"]
+      }, {
+        "name": "hasNoZeroToken",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "left",
+        "type": "net.sourceforge.plantuml.webp.SubBlock",
+        "modifier": ["private"]
+      }, {
+        "name": "macroBlock",
+        "type": "net.sourceforge.plantuml.webp.MacroBlock",
+        "modifier": ["private"]
+      }, {
+        "name": "mode",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "plane",
+        "type": "net.sourceforge.plantuml.webp.SubBlock.PLANE",
+        "modifier": ["private"]
+      }, {
+        "name": "predict",
+        "type": "int[][]",
+        "modifier": ["private"]
+      }, {
+        "name": "tokens",
+        "type": "int[]",
+        "modifier": ["private"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.webp.SubBlock.PLANE"],
+      "methodData": {
+        "net.sourceforge.plantuml.webp.SubBlock.getPredict#1": {
+          "returnType": "int[][]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.DCTextra#2f88acb8": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "bc2",
+            "type": "net.sourceforge.plantuml.webp.BoolDecoder"
+          }, {
+            "name": "p",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.getDebugString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.reconstruct#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "32",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.setPredict#74b0ced2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "predict",
+            "type": "int[][]"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.getLeft#1": {
+          "returnType": "net.sourceforge.plantuml.webp.SubBlock",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.setPixel#62eca6e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }, {
+            "name": "p",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.decodeToken#298ee116": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "bc2",
+            "type": "net.sourceforge.plantuml.webp.BoolDecoder"
+          }, {
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.getDest#1": {
+          "returnType": "int[][]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.setDiff#74b0ced2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diff",
+            "type": "int[][]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.drawDebug#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.getDiff#1": {
+          "returnType": "int[][]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.getMacroBlockPredict#1980e": {
+          "returnType": "int[][]",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "intra_mode",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.getPredict#40cd5da": {
+          "returnType": "int[][]",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "intra_bmode",
+            "type": "int"
+          }, {
+            "name": "left",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.getTokens#1": {
+          "returnType": "int[]",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.getPlane#1": {
+          "returnType": "net.sourceforge.plantuml.webp.SubBlock.PLANE",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.getAbove#1": {
+          "returnType": "net.sourceforge.plantuml.webp.SubBlock",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.planeToType#f3e56d0d": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "plane",
+            "type": "net.sourceforge.plantuml.webp.SubBlock.PLANE"
+          }, {
+            "name": "withY2",
+            "type": "java.lang.Boolean"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.drawDebugV#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.getMode#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.predict#d136b36e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "frame",
+            "type": "net.sourceforge.plantuml.webp.VP8Frame"
+          }],
+          "metric": {
+            "loc": "211",
+            "cyclomatic_complexity": "126",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.getMacroBlock#1": {
+          "returnType": "net.sourceforge.plantuml.webp.MacroBlock",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.dequantSubBlock#2d8dd370": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "frame",
+            "type": "net.sourceforge.plantuml.webp.VP8Frame"
+          }, {
+            "name": "Dc",
+            "type": "java.lang.Integer"
+          }],
+          "metric": {
+            "loc": "29",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.decodeSubBlock#a63030ea": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "bc2",
+            "type": "net.sourceforge.plantuml.webp.BoolDecoder"
+          }, {
+            "name": "coef_probs",
+            "type": "int[][][][]"
+          }, {
+            "name": "ilc",
+            "type": "int"
+          }, {
+            "name": "type",
+            "type": "int"
+          }, {
+            "name": "withY2",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "40",
+            "cyclomatic_complexity": "12",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.hasNoZeroToken#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.drawDebugH#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.isDest#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.setDest#74b0ced2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dest",
+            "type": "int[][]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.setMode#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "mode",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.SubBlock#10d3fd5b": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "macroBlock",
+            "type": "net.sourceforge.plantuml.webp.MacroBlock"
+          }, {
+            "name": "above",
+            "type": "net.sourceforge.plantuml.webp.SubBlock"
+          }, {
+            "name": "left",
+            "type": "net.sourceforge.plantuml.webp.SubBlock"
+          }, {
+            "name": "plane",
+            "type": "net.sourceforge.plantuml.webp.SubBlock.PLANE"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.webp.SubBlock.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "573",
+        "cyclomatic_complexity": "185",
+        "cyclomatic_complexity_weighted": "10",
+        "LCOM4": "27"
+      }
+    },
+    "net.sourceforge.plantuml.webp.SubBlock.PLANE": {
+      "type": "ENUM",
+      "modifier": ["public", "static"],
+      "enumConstant": ["U", "V", "Y1", "Y2"],
+      "metric": {
+        "loc": "3",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "592",
+    "cyclomatic_complexity": "10"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

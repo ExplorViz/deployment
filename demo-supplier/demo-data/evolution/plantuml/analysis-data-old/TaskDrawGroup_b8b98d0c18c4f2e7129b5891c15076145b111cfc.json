@@ -1,0 +1,291 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "TaskDrawGroup.java",
+  "packageName": "net.sourceforge.plantuml.project.draw",
+  "importName": ["net.sourceforge.plantuml.klimt.UPath", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.sprite.SpriteContainerEmpty", "net.sourceforge.plantuml.project.LabelStrategy", "net.sourceforge.plantuml.project.ToTaskDraw", "net.sourceforge.plantuml.project.core.Task", "net.sourceforge.plantuml.project.core.TaskAttribute", "net.sourceforge.plantuml.project.lang.CenterBorderColor", "net.sourceforge.plantuml.project.time.Day", "net.sourceforge.plantuml.project.timescale.TimeScale", "net.sourceforge.plantuml.real.Real", "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.StyleBuilder", "net.sourceforge.plantuml.style.StyleSignatureBasic"],
+  "classData": {
+    "net.sourceforge.plantuml.project.draw.TaskDrawGroup": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "end",
+        "type": "net.sourceforge.plantuml.project.time.Day",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "height",
+        "type": "double",
+        "modifier": ["final", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.getShapeHeight#395b4159": {
+          "returnType": "double",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.getShapeOld#1eef7de1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UPath",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "startPos",
+            "type": "double",
+            "modifier": ["final "]
+          }, {
+            "name": "endPos",
+            "type": "double",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.TaskDrawGroup#80e50f53": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "timeScale",
+            "type": "net.sourceforge.plantuml.project.timescale.TimeScale"
+          }, {
+            "name": "y",
+            "type": "net.sourceforge.plantuml.real.Real"
+          }, {
+            "name": "prettyDisplay",
+            "type": "java.lang.String"
+          }, {
+            "name": "start",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }, {
+            "name": "end",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "task",
+            "type": "net.sourceforge.plantuml.project.core.Task"
+          }, {
+            "name": "toTaskDraw",
+            "type": "net.sourceforge.plantuml.project.ToTaskDraw"
+          }, {
+            "name": "styleBuilder",
+            "type": "net.sourceforge.plantuml.style.StyleBuilder"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.getTitle#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.drawShape#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.getX2#a2f62a96": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "taskAttribute",
+            "type": "net.sourceforge.plantuml.project.core.TaskAttribute"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.getFingerPrintNote#395b4159": {
+          "returnType": "net.sourceforge.plantuml.project.draw.FingerPrint",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.getX1#a2f62a96": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "taskAttribute",
+            "type": "net.sourceforge.plantuml.project.core.TaskAttribute"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.applyColors#f1b230f2": {
+          "returnType": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.getFingerPrint#395b4159": {
+          "returnType": "net.sourceforge.plantuml.project.draw.FingerPrint",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.getStyleSignature#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.getShape#1eef7de1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UPath",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "startPos",
+            "type": "double",
+            "modifier": ["final "]
+          }, {
+            "name": "endPos",
+            "type": "double",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.getShapeOld2#1eef7de1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UPath",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "startPos",
+            "type": "double",
+            "modifier": ["final "]
+          }, {
+            "name": "endPos",
+            "type": "double",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.getHeightMax#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TaskDrawGroup.drawTitle#742ad095": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "labelStrategy",
+            "type": "net.sourceforge.plantuml.project.LabelStrategy"
+          }, {
+            "name": "colTitles",
+            "type": "double"
+          }, {
+            "name": "colBars",
+            "type": "double"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.project.draw.AbstractTaskDraw",
+      "metric": {
+        "loc": "189",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "251",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

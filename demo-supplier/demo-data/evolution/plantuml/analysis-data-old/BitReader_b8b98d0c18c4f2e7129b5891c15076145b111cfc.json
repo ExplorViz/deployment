@@ -1,0 +1,317 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "BitReader.java",
+  "packageName": "net.sourceforge.plantuml.brotli",
+  "classData": {
+    "net.sourceforge.plantuml.brotli.BitReader": {
+      "type": "CLASS",
+      "modifier": ["final"],
+      "field": [{
+        "name": "CHECK_UNUSED_BYTES_AFTER_END",
+        "type": "boolean",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "LOG_BITNESS",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "BITNESS",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "BYTENESS",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "CAPACITY",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "SLACK",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "BUFFER_SIZE",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "SAFEGUARD",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "WATERLINE",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "HALF_BITNESS",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "HALF_SIZE",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "HALVES_CAPACITY",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "HALF_BUFFER_SIZE",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "HALF_WATERLINE",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "LOG_HALF_SIZE",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.brotli.BitReader.readBits#9434555f": {
+          "returnType": "int",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }, {
+            "name": "n",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.doReadMoreInput#4c7d490": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.reload#4c7d490": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.doFillBitWindow#4c7d490": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.jumpToByteBoundary#4c7d490": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.peekBits#4c7d490": {
+          "returnType": "int",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.copyBytes#e35d773a": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }, {
+            "name": "data",
+            "type": "byte[]"
+          }, {
+            "name": "offset",
+            "type": "int"
+          }, {
+            "name": "length",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "47",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.checkHealth#9434555f": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }, {
+            "name": "endOfStream",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.prepare#4c7d490": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.fillBitWindow#4c7d490": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.readManyBits#9434555f": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }, {
+            "name": "n",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.initBitReader#4c7d490": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.bytesToNibbles#9434555f": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }, {
+            "name": "byteLen",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.readMoreInput#4c7d490": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.readFewBits#9434555f": {
+          "returnType": "int",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }, {
+            "name": "n",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.BitReader.halfAvailable#4c7d490": {
+          "returnType": "int",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.brotli.State"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "228",
+        "cyclomatic_complexity": "42",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "238",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

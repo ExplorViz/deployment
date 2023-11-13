@@ -1,0 +1,81 @@
+{
+  "commitID": "835f53da3097f7f1f564becf2107d0399a299ae5",
+  "fileName": "JdbcPetVisitExtractor.java",
+  "packageName": "org.springframework.samples.petclinic.repository.jdbc",
+  "importName": ["org.springframework.data.jdbc.core.OneToManyResultSetExtractor", "org.springframework.jdbc.core.ResultSetExtractor", "org.springframework.samples.petclinic.model.Visit", "java.sql.ResultSet", "java.sql.SQLException"],
+  "classData": {
+    "org.springframework.samples.petclinic.repository.jdbc.JdbcPetVisitExtractor": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "org.springframework.samples.petclinic.repository.jdbc.JdbcPetVisitExtractor.mapPrimaryKey#afdcb04": {
+          "returnType": "java.lang.Integer",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "rs",
+            "type": "java.sql.ResultSet"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jdbc.JdbcPetVisitExtractor.mapForeignKey#afdcb04": {
+          "returnType": "java.lang.Integer",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "rs",
+            "type": "java.sql.ResultSet"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jdbc.JdbcPetVisitExtractor.JdbcPetVisitExtractor#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jdbc.JdbcPetVisitExtractor.addChild#62c76968": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "root",
+            "type": "org.springframework.samples.petclinic.repository.jdbc.JdbcPet"
+          }, {
+            "name": "child",
+            "type": "org.springframework.samples.petclinic.model.Visit"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "org.springframework.data.jdbc.core.OneToManyResultSetExtractor\u003corg.springframework.samples.petclinic.repository.jdbc.JdbcPet, org.springframework.samples.petclinic.model.Visit, java.lang.Integer\u003e",
+      "metric": {
+        "loc": "26",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "50",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "antoine.rey@gmail.com",
+  "addedLines": 54
+}

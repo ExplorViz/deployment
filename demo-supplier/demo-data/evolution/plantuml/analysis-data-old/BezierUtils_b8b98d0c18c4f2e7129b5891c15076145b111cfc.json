@@ -1,0 +1,236 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "BezierUtils.java",
+  "packageName": "net.sourceforge.plantuml.klimt.geom",
+  "classData": {
+    "net.sourceforge.plantuml.klimt.geom.BezierUtils": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.geom.BezierUtils.middle#17e79101": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "p1",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "p2",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.BezierUtils.middle#b6cfd3dd": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "seg",
+            "type": "net.sourceforge.plantuml.klimt.geom.XLine2D"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.BezierUtils.getAngle#17e79101": {
+          "returnType": "double",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p1",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "p2",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.BezierUtils.subdivide#71ac69c3": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "src",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D"
+          }, {
+            "name": "left",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D"
+          }, {
+            "name": "right",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D"
+          }, {
+            "name": "coef",
+            "type": "double",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.BezierUtils.toRectangle#bd8c642": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XRectangle2D",
+          "modifier": ["static", "private"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.klimt.geom.Positionable"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.BezierUtils.isCutting#2fd3bcdb": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "bez",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D"
+          }, {
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.geom.XRectangle2D"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.BezierUtils.dist#33b7856e": {
+          "returnType": "double",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "seg",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.BezierUtils.getEndingAngle#33b7856e": {
+          "returnType": "double",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "left",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.BezierUtils.intersect#7b18c821": {
+          "returnType": "boolean",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "p1",
+            "type": "net.sourceforge.plantuml.klimt.geom.Positionable"
+          }, {
+            "name": "p2",
+            "type": "net.sourceforge.plantuml.klimt.geom.Positionable"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.BezierUtils.intersect#fc53c4c": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "orig",
+            "type": "net.sourceforge.plantuml.klimt.geom.XLine2D"
+          }, {
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.geom.XRectangle2D"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.BezierUtils.shorten#2fd3bcdb": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "bez",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D"
+          }, {
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.geom.XRectangle2D"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.BezierUtils.dist#b6cfd3dd": {
+          "returnType": "double",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "seg",
+            "type": "net.sourceforge.plantuml.klimt.geom.XLine2D"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.BezierUtils.getCenter#bd8c642": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.klimt.geom.Positionable"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.BezierUtils.getStartingAngle#33b7856e": {
+          "returnType": "double",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "left",
+            "type": "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "135",
+        "cyclomatic_complexity": "20",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "6"
+      }
+    }
+  },
+  "metric": {
+    "loc": "172",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

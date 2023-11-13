@@ -1,0 +1,284 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "TilesField.java",
+  "packageName": "net.sourceforge.plantuml.golem",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.HashMap", "java.util.List", "java.util.Map", "java.util.Objects", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.ULine"],
+  "classData": {
+    "net.sourceforge.plantuml.golem.TilesField": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.shape.TextBlock"],
+      "field": [{
+        "name": "size",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "root",
+        "type": "net.sourceforge.plantuml.golem.Tile",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "positions",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.golem.Tile, net.sourceforge.plantuml.golem.Position\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "paths",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.golem.Path\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.golem.TilesField.createTile#9cc69c13": {
+          "returnType": "net.sourceforge.plantuml.golem.Tile",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "start",
+            "type": "net.sourceforge.plantuml.golem.Tile"
+          }, {
+            "name": "position",
+            "type": "net.sourceforge.plantuml.golem.TileGeometry"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.isAdjoining#c95e9321": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "tileArea1",
+            "type": "net.sourceforge.plantuml.golem.TileArea"
+          }, {
+            "name": "tileArea2",
+            "type": "net.sourceforge.plantuml.golem.TileArea"
+          }],
+          "metric": {
+            "loc": "38",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.isOccuped#306cfd68": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "test",
+            "type": "net.sourceforge.plantuml.golem.Position"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.getXmin#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.getYmax#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.getFreePosition#9cc69c13": {
+          "returnType": "net.sourceforge.plantuml.golem.Position",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "start",
+            "type": "net.sourceforge.plantuml.golem.Tile"
+          }, {
+            "name": "position",
+            "type": "net.sourceforge.plantuml.golem.TileGeometry"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.addPath#321857ff": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "start",
+            "type": "net.sourceforge.plantuml.golem.Tile"
+          }, {
+            "name": "dest",
+            "type": "net.sourceforge.plantuml.golem.Tile"
+          }, {
+            "name": "startDirection",
+            "type": "net.sourceforge.plantuml.golem.TileGeometry"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.getPoint2D#42411d7c": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "dimSingle",
+            "type": "net.sourceforge.plantuml.klimt.geom.XDimension2D"
+          }, {
+            "name": "area",
+            "type": "net.sourceforge.plantuml.golem.TileArea"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.getYmin#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.moveAllToEast#306cfd68": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "startingPosition",
+            "type": "net.sourceforge.plantuml.golem.Position"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.getPosition#27c6ed": {
+          "returnType": "net.sourceforge.plantuml.golem.Position",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "tile",
+            "type": "net.sourceforge.plantuml.golem.Tile"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.getXmax#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.buildPath#c95e9321": {
+          "returnType": "net.sourceforge.plantuml.golem.Path",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "tileArea1",
+            "type": "net.sourceforge.plantuml.golem.TileArea"
+          }, {
+            "name": "tileArea2",
+            "type": "net.sourceforge.plantuml.golem.TileArea"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.getPaths#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.golem.Path\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.getTileAt#306cfd68": {
+          "returnType": "net.sourceforge.plantuml.golem.Tile",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.golem.Position"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.TilesField#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.golem.TilesField.getRoot#1": {
+          "returnType": "net.sourceforge.plantuml.golem.Tile",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock",
+      "metric": {
+        "loc": "244",
+        "cyclomatic_complexity": "43",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "298",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

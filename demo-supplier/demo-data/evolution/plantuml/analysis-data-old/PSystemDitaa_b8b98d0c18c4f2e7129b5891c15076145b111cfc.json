@@ -1,0 +1,141 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "PSystemDitaa.java",
+  "packageName": "net.sourceforge.plantuml.ditaa",
+  "importName": ["java.awt.Color", "java.awt.Font", "java.awt.image.BufferedImage", "java.io.IOException", "java.io.OutputStream", "java.lang.reflect.Field", "java.lang.reflect.Method", "java.util.ArrayList", "java.util.List", "net.sourceforge.plantuml.AbstractPSystem", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.UmlDiagram", "net.sourceforge.plantuml.api.ImageDataSimple", "net.sourceforge.plantuml.core.DiagramDescription", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SImageIO", "net.sourceforge.plantuml.svek.GraphvizCrash", "net.sourceforge.plantuml.text.BackSlash"],
+  "classData": {
+    "net.sourceforge.plantuml.ditaa.PSystemDitaa": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "processingOptions",
+        "type": "java.lang.Object",
+        "modifier": ["private"]
+      }, {
+        "name": "dropShadows",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "data",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "scale",
+        "type": "float",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "transparentBackground",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "font",
+        "type": "java.awt.Font",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "forceFontSize",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "performSeparationOfCommonEdges",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "allCornersAreRound",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.ditaa.PSystemDitaa.add#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.ditaa.PSystemDitaa",
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ditaa.PSystemDitaa.exportDiagramNow#facb8d19": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["final", "protected"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "num",
+            "type": "int"
+          }, {
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "64",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ditaa.PSystemDitaa.PSystemDitaa#ced611b2": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "data",
+            "type": "java.lang.String"
+          }, {
+            "name": "performSeparationOfCommonEdges",
+            "type": "boolean"
+          }, {
+            "name": "dropShadows",
+            "type": "boolean"
+          }, {
+            "name": "allCornersAreRound",
+            "type": "boolean"
+          }, {
+            "name": "transparentBackground",
+            "type": "boolean"
+          }, {
+            "name": "scale",
+            "type": "float"
+          }, {
+            "name": "font",
+            "type": "java.awt.Font"
+          }, {
+            "name": "forceFontSize",
+            "type": "boolean"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ditaa.PSystemDitaa.getDescription#1": {
+          "returnType": "net.sourceforge.plantuml.core.DiagramDescription",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.AbstractPSystem",
+      "metric": {
+        "loc": "111",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "170",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

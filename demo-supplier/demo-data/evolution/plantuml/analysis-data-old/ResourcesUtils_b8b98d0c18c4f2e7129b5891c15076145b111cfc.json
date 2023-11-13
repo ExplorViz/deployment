@@ -1,0 +1,95 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "ResourcesUtils.java",
+  "packageName": "net.sourceforge.plantuml.klimt.sprite",
+  "importName": ["java.nio.charset.StandardCharsets.UTF_8", "java.io.IOException", "java.net.URISyntaxException", "java.net.URL", "java.net.URLDecoder", "java.util.Collections", "java.util.Enumeration", "java.util.Set", "java.util.TreeSet", "java.util.jar.JarEntry", "java.util.jar.JarFile", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.version.Version"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.sprite.ResourcesUtils": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.sprite.ResourcesUtils.getJarFile#f6eaa9d8": {
+          "returnType": "java.util.Set\u003cjava.lang.String\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "path",
+            "type": "java.lang.String"
+          }, {
+            "name": "folder",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.ResourcesUtils.listEntry#4b3088e": {
+          "returnType": "java.util.Set\u003cjava.lang.String\u003e",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "dir",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.ResourcesUtils.getProtocol#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.ResourcesUtils.listFiles#6d21fcbb": {
+          "returnType": "java.util.Set\u003cjava.lang.String\u003e",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "jarFile",
+            "type": "java.util.jar.JarFile"
+          }, {
+            "name": "path",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.sprite.ResourcesUtils.listFolders#6d21fcbb": {
+          "returnType": "java.util.Set\u003cjava.lang.String\u003e",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "jarFile",
+            "type": "java.util.jar.JarFile"
+          }, {
+            "name": "path",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "72",
+        "cyclomatic_complexity": "14",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "126",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

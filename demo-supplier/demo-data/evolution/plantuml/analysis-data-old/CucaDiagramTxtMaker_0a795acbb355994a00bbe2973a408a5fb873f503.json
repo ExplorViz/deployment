@@ -1,0 +1,179 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "CucaDiagramTxtMaker.java",
+  "packageName": "net.sourceforge.plantuml.dot",
+  "importName": ["java.nio.charset.StandardCharsets.UTF_8", "java.io.IOException", "java.io.OutputStream", "java.util.ArrayList", "java.util.Collection", "java.util.Collections", "java.util.HashMap", "java.util.List", "java.util.Map", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.abel.EntityPortion", "net.sourceforge.plantuml.abel.Link", "net.sourceforge.plantuml.asciiart.BasicCharArea", "net.sourceforge.plantuml.cucadiagram.ICucaDiagram", "net.sourceforge.plantuml.cucadiagram.PortionShower", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.txt.UGraphicTxt", "net.sourceforge.plantuml.klimt.geom.XCubicCurve2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.DotPath", "net.sourceforge.plantuml.posimo.Block", "net.sourceforge.plantuml.posimo.Cluster", "net.sourceforge.plantuml.posimo.GraphvizSolverB", "net.sourceforge.plantuml.posimo.Path", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.security.SecurityUtils", "net.sourceforge.plantuml.text.BackSlash"],
+  "classData": {
+    "net.sourceforge.plantuml.dot.CucaDiagramTxtMaker": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "field": [{
+        "name": "fileFormat",
+        "type": "net.sourceforge.plantuml.FileFormat",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "globalUg",
+        "type": "net.sourceforge.plantuml.klimt.drawing.txt.UGraphicTxt",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "portionShower",
+        "type": "net.sourceforge.plantuml.cucadiagram.PortionShower",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.dot.CucaDiagramTxtMaker.createFiles#4b3088e": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.security.SFile\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "suggestedFile",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dot.CucaDiagramTxtMaker.getXPixelPerChar#1": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.CucaDiagramTxtMaker.CucaDiagramTxtMaker#7b1a5d5a": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.cucadiagram.ICucaDiagram"
+          }, {
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormat"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "40",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.dot.CucaDiagramTxtMaker.showMember#7c02d022": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.CucaDiagramTxtMaker.getWidth#7c02d022": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.dot.CucaDiagramTxtMaker.drawDotPath#be4228e4": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "dotPath",
+            "type": "net.sourceforge.plantuml.klimt.shape.DotPath"
+          }, {
+            "name": "area",
+            "type": "net.sourceforge.plantuml.asciiart.BasicCharArea"
+          }, {
+            "name": "pixelXPerChar",
+            "type": "double"
+          }, {
+            "name": "pixelYPerChar",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.dot.CucaDiagramTxtMaker.getYPixelPerChar#1": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.CucaDiagramTxtMaker.createFiles#3ebff7cf": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.CucaDiagramTxtMaker.printClass#739838bb": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ent",
+            "type": "net.sourceforge.plantuml.abel.Entity",
+            "modifier": ["final "]
+          }, {
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.txt.UGraphicTxt"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.dot.CucaDiagramTxtMaker.getHeight#7c02d022": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "126",
+        "cyclomatic_complexity": "18",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "196",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

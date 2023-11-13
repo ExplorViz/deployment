@@ -1,0 +1,452 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "TaskImpl.java",
+  "packageName": "net.sourceforge.plantuml.project.core",
+  "importName": ["java.util.Collection", "java.util.Collections", "java.util.HashSet", "java.util.Iterator", "java.util.LinkedHashMap", "java.util.Map", "java.util.Set", "java.util.SortedSet", "java.util.TreeSet", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.project.Load", "net.sourceforge.plantuml.project.LoadPlanable", "net.sourceforge.plantuml.project.PlanUtils", "net.sourceforge.plantuml.project.lang.CenterBorderColor", "net.sourceforge.plantuml.project.solver.Solver", "net.sourceforge.plantuml.project.solver.SolverImpl", "net.sourceforge.plantuml.project.time.Day", "net.sourceforge.plantuml.project.time.DayOfWeek", "net.sourceforge.plantuml.style.StyleBuilder", "net.sourceforge.plantuml.url.Url"],
+  "classData": {
+    "net.sourceforge.plantuml.project.core.TaskImpl.getResourcePlan#1.LoadPlanable": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.project.core.TaskImpl.getResourcePlan#1.LoadPlanable.getLoadAt#10b9b": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "instant",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "4"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.project.core.TaskImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.project.core.Task", "net.sourceforge.plantuml.project.LoadPlanable"],
+      "field": [{
+        "name": "pausedDay",
+        "type": "java.util.SortedSet\u003cnet.sourceforge.plantuml.project.time.Day\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "pausedDayOfWeek",
+        "type": "java.util.Set\u003cnet.sourceforge.plantuml.project.time.DayOfWeek\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "solver",
+        "type": "net.sourceforge.plantuml.project.solver.Solver",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "resources",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.project.core.Resource, java.lang.Integer\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "defaultPlan",
+        "type": "net.sourceforge.plantuml.project.LoadPlanable",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "diamond",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "completion",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "note",
+        "type": "net.sourceforge.plantuml.klimt.creole.Display",
+        "modifier": ["private"]
+      }, {
+        "name": "url",
+        "type": "net.sourceforge.plantuml.url.Url",
+        "modifier": ["private"]
+      }, {
+        "name": "colors",
+        "type": "CenterBorderColor[]",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.project.core.TaskImpl.isDiamond#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.pausedDayOfWeek#10b9b": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "instant",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.addResource#1407942": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "resource",
+            "type": "net.sourceforge.plantuml.project.core.Resource"
+          }, {
+            "name": "percentage",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.debug#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.isPaused#10b9b": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "instant",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.setEnd#10b9b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "end",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.addPause#4be6c926": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pause",
+            "type": "net.sourceforge.plantuml.project.time.DayOfWeek"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.getNote#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Display",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.TaskImpl#150c089c": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "styleBuilder",
+            "type": "net.sourceforge.plantuml.style.StyleBuilder"
+          }, {
+            "name": "code",
+            "type": "net.sourceforge.plantuml.project.core.TaskCode"
+          }, {
+            "name": "plan",
+            "type": "net.sourceforge.plantuml.project.LoadPlanable"
+          }, {
+            "name": "startingDay",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.getEnd#1": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.getCompletion#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.addAll#ab9faa8f": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "result",
+            "type": "java.util.SortedSet\u003cnet.sourceforge.plantuml.project.time.Day\u003e"
+          }, {
+            "name": "dayOfWeek",
+            "type": "net.sourceforge.plantuml.project.time.DayOfWeek"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.getDefaultPlan#1": {
+          "returnType": "net.sourceforge.plantuml.project.LoadPlanable",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.setStart#10b9b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "start",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.getUrl#1": {
+          "returnType": "net.sourceforge.plantuml.url.Url",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.getAllPaused#1": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.project.time.Day\u003e",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.getStart#1": {
+          "returnType": "net.sourceforge.plantuml.project.time.Day",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.getLoadAt#10b9b": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "instant",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.getPrettyDisplay#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.setLoad#243925": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "load",
+            "type": "net.sourceforge.plantuml.project.Load"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.setDiamond#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diamond",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.loadForResource#13feccf": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "res",
+            "type": "net.sourceforge.plantuml.project.core.Resource"
+          }, {
+            "name": "instant",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.setNote#c6ddb0c1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "note",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.getColors#1": {
+          "returnType": "net.sourceforge.plantuml.project.lang.CenterBorderColor",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.setCompletion#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "completion",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.getLoad#1": {
+          "returnType": "net.sourceforge.plantuml.project.Load",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.setColors#25150b01": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.project.lang.CenterBorderColor"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.getResourcePlan#1": {
+          "returnType": "net.sourceforge.plantuml.project.LoadPlanable",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.setUrl#14d6e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "url",
+            "type": "net.sourceforge.plantuml.url.Url"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.core.TaskImpl.addPause#10b9b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pause",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.project.core.AbstractTask",
+      "metric": {
+        "loc": "230",
+        "cyclomatic_complexity": "26",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "289",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,528 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Argon2.java",
+  "packageName": "net.sourceforge.plantuml.argon2",
+  "importName": ["java.nio.charset.StandardCharsets.UTF_8", "net.sourceforge.plantuml.argon2.Constants.Defaults.LANES_DEF", "net.sourceforge.plantuml.argon2.Constants.Defaults.LOG_M_COST_DEF", "net.sourceforge.plantuml.argon2.Constants.Defaults.OUTLEN_DEF", "net.sourceforge.plantuml.argon2.Constants.Defaults.TYPE_DEF", "net.sourceforge.plantuml.argon2.Constants.Defaults.T_COST_DEF", "net.sourceforge.plantuml.argon2.Constants.Defaults.VERSION_DEF", "java.nio.ByteBuffer", "java.nio.CharBuffer", "java.nio.charset.Charset", "java.util.Arrays", "net.sourceforge.plantuml.argon2.algorithm.FillMemory", "net.sourceforge.plantuml.argon2.algorithm.Finalize", "net.sourceforge.plantuml.argon2.algorithm.Initialize", "net.sourceforge.plantuml.argon2.model.Argon2Type", "net.sourceforge.plantuml.argon2.model.Instance"],
+  "classData": {
+    "net.sourceforge.plantuml.argon2.Argon2": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "output",
+        "type": "byte[]",
+        "modifier": ["private"]
+      }, {
+        "name": "outputLength",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "duration",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "password",
+        "type": "byte[]",
+        "modifier": ["private"]
+      }, {
+        "name": "salt",
+        "type": "byte[]",
+        "modifier": ["private"]
+      }, {
+        "name": "secret",
+        "type": "byte[]",
+        "modifier": ["private"]
+      }, {
+        "name": "additional",
+        "type": "byte[]",
+        "modifier": ["private"]
+      }, {
+        "name": "iterations",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "memory",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "lanes",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "version",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "type",
+        "type": "net.sourceforge.plantuml.argon2.model.Argon2Type",
+        "modifier": ["private"]
+      }, {
+        "name": "clearMemory",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "encodedOnly",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "rawOnly",
+        "type": "boolean",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.argon2.Argon2.setType#87299536": {
+          "returnType": "net.sourceforge.plantuml.argon2.Argon2",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "type",
+            "type": "net.sourceforge.plantuml.argon2.model.Argon2Type"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setSalt#ae1a4a89": {
+          "returnType": "net.sourceforge.plantuml.argon2.Argon2",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "salt",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.Argon2#1": {
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getOutputString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getPasswordLength#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.printSummary#1": {
+          "returnType": "void",
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setAdditional#ae1a4a89": {
+          "returnType": "net.sourceforge.plantuml.argon2.Argon2",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "additional",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.clear#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getMemory#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getOutput#1": {
+          "returnType": "byte[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getPassword#1": {
+          "returnType": "byte[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getType#1": {
+          "returnType": "net.sourceforge.plantuml.argon2.model.Argon2Type",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setClearMemory#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "clearMemory",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setParallelism#1980e": {
+          "returnType": "net.sourceforge.plantuml.argon2.Argon2",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "parallelism",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setVersion#1980e": {
+          "returnType": "net.sourceforge.plantuml.argon2.Argon2",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "version",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getAdditional#1": {
+          "returnType": "byte[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setRawOnly#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "rawOnly",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getOutputLength#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getCharset#1": {
+          "returnType": "java.nio.charset.Charset",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getSalt#1": {
+          "returnType": "byte[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setSecret#ae1a4a89": {
+          "returnType": "net.sourceforge.plantuml.argon2.Argon2",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "secret",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setMemory#1980e": {
+          "returnType": "net.sourceforge.plantuml.argon2.Argon2",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "memory",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getAdditionalLength#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getLanes#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setOutput#ae1a4a89": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "finalResult",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setPassword#ae1a4a89": {
+          "returnType": "net.sourceforge.plantuml.argon2.Argon2",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "password",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setMemoryInKiB#1980e": {
+          "returnType": "net.sourceforge.plantuml.argon2.Argon2",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "memory",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getSecretLength#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.hashNow#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getSaltLength#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getSecret#1": {
+          "returnType": "byte[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setIterations#1980e": {
+          "returnType": "net.sourceforge.plantuml.argon2.Argon2",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "iterations",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setSalt#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.argon2.Argon2",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "salt",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setEncodedOnly#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "encodedOnly",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.isClearMemory#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getEncoded#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setOutputLength#1980e": {
+          "returnType": "net.sourceforge.plantuml.argon2.Argon2",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "outputLength",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.setPassword#aed72157": {
+          "returnType": "net.sourceforge.plantuml.argon2.Argon2",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "password",
+            "type": "char[]"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getIterations#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.getVersion#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.Argon2.toByteArray#bb5302b5": {
+          "returnType": "byte[]",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "chars",
+            "type": "char[]"
+          }, {
+            "name": "charset",
+            "type": "java.nio.charset.Charset"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "239",
+        "cyclomatic_complexity": "9",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "7"
+      }
+    }
+  },
+  "metric": {
+    "loc": "265",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

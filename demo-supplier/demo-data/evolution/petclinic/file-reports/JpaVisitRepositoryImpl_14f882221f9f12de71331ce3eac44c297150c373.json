@@ -1,0 +1,63 @@
+{
+  "commitID": "14f882221f9f12de71331ce3eac44c297150c373",
+  "fileName": "JpaVisitRepositoryImpl.java",
+  "packageName": "org.springframework.samples.petclinic.repository.jpa",
+  "importName": ["org.springframework.samples.petclinic.model.Visit", "org.springframework.samples.petclinic.repository.VisitRepository", "org.springframework.stereotype.Repository", "javax.persistence.EntityManager", "javax.persistence.PersistenceContext", "javax.persistence.Query", "java.util.List"],
+  "classData": {
+    "org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["org.springframework.samples.petclinic.repository.VisitRepository"],
+      "field": [{
+        "name": "em",
+        "type": "javax.persistence.EntityManager",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl.findByPetId#d7ee193d": {
+          "returnType": "java.util.List\u003corg.springframework.samples.petclinic.model.Visit\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "petId",
+            "type": "java.lang.Integer"
+          }],
+          "annotation": ["java.lang.Override", "java.lang.SuppressWarnings"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl.save#4ed5d4a": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "visit",
+            "type": "org.springframework.samples.petclinic.model.Visit"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Repository"],
+      "metric": {
+        "loc": "22",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "48",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "gordon@gordondickens.com",
+  "modifiedLines": 14,
+  "addedLines": 5,
+  "deletedLines": 6
+}

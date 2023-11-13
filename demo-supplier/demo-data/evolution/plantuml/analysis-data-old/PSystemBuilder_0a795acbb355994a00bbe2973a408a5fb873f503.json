@@ -1,0 +1,62 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "PSystemBuilder.java",
+  "packageName": "net.sourceforge.plantuml",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.List", "java.util.Map", "com.plantuml.api.cheerpj.WasmLog", "net.sourceforge.plantuml.acearth.PSystemXearthFactory", "net.sourceforge.plantuml.activitydiagram.ActivityDiagramFactory", "net.sourceforge.plantuml.activitydiagram3.ActivityDiagramFactory3", "net.sourceforge.plantuml.api.PSystemFactory", "net.sourceforge.plantuml.board.BoardDiagramFactory", "net.sourceforge.plantuml.bpm.BpmDiagramFactory", "net.sourceforge.plantuml.classdiagram.ClassDiagramFactory", "net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.core.DiagramType", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.dedication.PSystemDedicationFactory", "net.sourceforge.plantuml.definition.PSystemDefinitionFactory", "net.sourceforge.plantuml.descdiagram.DescriptionDiagramFactory", "net.sourceforge.plantuml.directdot.PSystemDotFactory", "net.sourceforge.plantuml.ditaa.PSystemDitaaFactory", "net.sourceforge.plantuml.donors.PSystemDonorsFactory", "net.sourceforge.plantuml.donors.PSystemSkinparameterListFactory", "net.sourceforge.plantuml.ebnf.PSystemEbnfFactory", "net.sourceforge.plantuml.eggs.PSystemAppleTwoFactory", "net.sourceforge.plantuml.eggs.PSystemCharlieFactory", "net.sourceforge.plantuml.eggs.PSystemColorsFactory", "net.sourceforge.plantuml.eggs.PSystemEggFactory", "net.sourceforge.plantuml.eggs.PSystemPathFactory", "net.sourceforge.plantuml.eggs.PSystemRIPFactory", "net.sourceforge.plantuml.eggs.PSystemWelcomeFactory", "net.sourceforge.plantuml.emoji.PSystemListEmojiFactory", "net.sourceforge.plantuml.error.PSystemError", "net.sourceforge.plantuml.error.PSystemErrorUtils", "net.sourceforge.plantuml.error.PSystemUnsupported", "net.sourceforge.plantuml.filesdiagram.FilesDiagramFactory", "net.sourceforge.plantuml.flowdiagram.FlowDiagramFactory", "net.sourceforge.plantuml.font.PSystemListFontsFactory", "net.sourceforge.plantuml.gitlog.GitDiagramFactory", "net.sourceforge.plantuml.hcl.HclDiagramFactory", "net.sourceforge.plantuml.help.HelpFactory", "net.sourceforge.plantuml.jcckit.PSystemJcckitFactory", "net.sourceforge.plantuml.jsondiagram.JsonDiagramFactory", "net.sourceforge.plantuml.klimt.creole.legacy.PSystemCreoleFactory", "net.sourceforge.plantuml.klimt.sprite.ListSpriteDiagramFactory", "net.sourceforge.plantuml.klimt.sprite.PSystemListInternalSpritesFactory", "net.sourceforge.plantuml.klimt.sprite.StdlibDiagramFactory", "net.sourceforge.plantuml.math.PSystemLatexFactory", "net.sourceforge.plantuml.math.PSystemMathFactory", "net.sourceforge.plantuml.mindmap.MindMapDiagramFactory", "net.sourceforge.plantuml.nwdiag.NwDiagramFactory", "net.sourceforge.plantuml.openiconic.PSystemListOpenIconicFactory", "net.sourceforge.plantuml.openiconic.PSystemOpenIconicFactory", "net.sourceforge.plantuml.oregon.PSystemOregonFactory", "net.sourceforge.plantuml.project.GanttDiagramFactory", "net.sourceforge.plantuml.regex.RegexConcat", "net.sourceforge.plantuml.regexdiagram.PSystemRegexFactory", "net.sourceforge.plantuml.salt.PSystemSaltFactory", "net.sourceforge.plantuml.security.SecurityProfile", "net.sourceforge.plantuml.security.SecurityUtils", "net.sourceforge.plantuml.sequencediagram.SequenceDiagramFactory", "net.sourceforge.plantuml.statediagram.StateDiagramFactory", "net.sourceforge.plantuml.stats.StatsUtilsIncrement", "net.sourceforge.plantuml.sudoku.PSystemSudokuFactory", "net.sourceforge.plantuml.text.StringLocated", "net.sourceforge.plantuml.timingdiagram.TimingDiagramFactory", "net.sourceforge.plantuml.utils.Log", "net.sourceforge.plantuml.version.PSystemLicenseFactory", "net.sourceforge.plantuml.version.PSystemVersionFactory", "net.sourceforge.plantuml.wbs.WBSDiagramFactory", "net.sourceforge.plantuml.wire.WireDiagramFactory", "net.sourceforge.plantuml.yaml.YamlDiagramFactory"],
+  "classData": {
+    "net.sourceforge.plantuml.PSystemBuilder": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "startTime",
+        "type": "long",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "factories",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.api.PSystemFactory\u003e",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.PSystemBuilder.createPSystem#352e4f31": {
+          "returnType": "net.sourceforge.plantuml.core.Diagram",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "source",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e"
+          }, {
+            "name": "rawSource",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e"
+          }, {
+            "name": "skinParam",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "52",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.PSystemBuilder.isOk#c5dc08d2": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ps",
+            "type": "net.sourceforge.plantuml.core.Diagram"
+          }],
+          "metric": {
+            "loc": "6",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "138",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "249"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

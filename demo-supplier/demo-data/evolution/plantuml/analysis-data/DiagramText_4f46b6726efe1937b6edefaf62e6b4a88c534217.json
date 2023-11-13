@@ -1,0 +1,344 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "DiagramText.java",
+  "packageName": "org.stathissideris.ascii2image.graphics",
+  "importName": ["java.awt.Color", "java.awt.Font", "java.awt.geom.Rectangle2D"],
+  "classData": {
+    "org.stathissideris.ascii2image.graphics.DiagramText": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "DEFAULT_COLOR",
+        "type": "java.awt.Color",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "text",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "font",
+        "type": "java.awt.Font",
+        "modifier": ["private"]
+      }, {
+        "name": "xPos",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "yPos",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "color",
+        "type": "java.awt.Color",
+        "modifier": ["private"]
+      }, {
+        "name": "isTextOnLine",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "hasOutline",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "outlineColor",
+        "type": "java.awt.Color",
+        "modifier": ["private"]
+      }, {
+        "name": "fontMeasurer",
+        "type": "org.stathissideris.ascii2image.graphics.FontMeasurer",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "org.stathissideris.ascii2image.graphics.DiagramText.hasOutline#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.getText#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.setColor#3e43f62": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "color",
+            "type": "java.awt.Color"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.setFont#21808e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "font",
+            "type": "java.awt.Font"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.getFont#1": {
+          "returnType": "java.awt.Font",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.setXPos#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "i",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.setYPos#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "i",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.getYPos#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.centerHorizontallyBetween#3301a1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "minX",
+            "type": "int"
+          }, {
+            "name": "maxX",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.getBounds#1": {
+          "returnType": "java.awt.geom.Rectangle2D",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.centerInBounds#4789bc00": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "bounds",
+            "type": "java.awt.geom.Rectangle2D"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.centerVerticallyBetween#3301a1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "minY",
+            "type": "int"
+          }, {
+            "name": "maxY",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.alignRightEdgeTo#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.setOutlineColor#3e43f62": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "outlineColor",
+            "type": "java.awt.Color"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.setHasOutline#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "hasOutline",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.isTextOnLine#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.setText#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "string",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.setTextOnLine#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "b",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.getColor#1": {
+          "returnType": "java.awt.Color",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.getXPos#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.getOutlineColor#1": {
+          "returnType": "java.awt.Color",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.DiagramText.DiagramText#3c802c84": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "int"
+          }, {
+            "name": "text",
+            "type": "java.lang.String"
+          }, {
+            "name": "font",
+            "type": "java.awt.Font"
+          }, {
+            "name": "fontMeasurer",
+            "type": "org.stathissideris.ascii2image.graphics.FontMeasurer"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "org.stathissideris.ascii2image.graphics.DiagramComponent",
+      "metric": {
+        "loc": "128",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "6"
+      }
+    }
+  },
+  "metric": {
+    "loc": "154",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,207 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "PrettyPrint.java",
+  "packageName": "net.sourceforge.plantuml.json",
+  "importName": ["java.io.IOException", "java.io.Writer", "java.util.Arrays"],
+  "classData": {
+    "net.sourceforge.plantuml.json.PrettyPrint.PrettyPrintWriter": {
+      "type": "CLASS",
+      "modifier": ["private", "static"],
+      "field": [{
+        "name": "indentChars",
+        "type": "char[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "indent",
+        "type": "int",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.json.PrettyPrint.PrettyPrintWriter.writeObjectSeparator#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.json.PrettyPrint.PrettyPrintWriter.writeArrayOpen#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.PrettyPrint.PrettyPrintWriter.PrettyPrintWriter#719ba6c6": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "writer",
+            "type": "java.io.Writer"
+          }, {
+            "name": "indentChars",
+            "type": "char[]"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.PrettyPrint.PrettyPrintWriter.writeNewLine#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.json.PrettyPrint.PrettyPrintWriter.writeArrayClose#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.PrettyPrint.PrettyPrintWriter.writeObjectClose#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.PrettyPrint.PrettyPrintWriter.writeArraySeparator#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.json.PrettyPrint.PrettyPrintWriter.writeObjectOpen#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.PrettyPrint.PrettyPrintWriter.writeMemberSeparator#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.json.JsonWriter",
+      "metric": {
+        "loc": "72",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.json.PrettyPrint": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "indentChars",
+        "type": "char[]",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.json.PrettyPrint.PrettyPrintWriter"],
+      "methodData": {
+        "net.sourceforge.plantuml.json.PrettyPrint.createWriter#9aed90b2": {
+          "returnType": "net.sourceforge.plantuml.json.JsonWriter",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "writer",
+            "type": "java.io.Writer"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.PrettyPrint.PrettyPrint#aed72157": {
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "indentChars",
+            "type": "char[]"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.PrettyPrint.indentWithTabs#1": {
+          "returnType": "net.sourceforge.plantuml.json.PrettyPrint",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.json.PrettyPrint.indentWithSpaces#1980e": {
+          "returnType": "net.sourceforge.plantuml.json.PrettyPrint",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "number",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.json.PrettyPrint.singleLine#1": {
+          "returnType": "net.sourceforge.plantuml.json.PrettyPrint",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.json.WriterConfig",
+      "metric": {
+        "loc": "104",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "134",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

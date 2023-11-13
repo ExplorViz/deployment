@@ -1,0 +1,111 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "AbstractOAuth2AccessAuthorizeManager.java",
+  "packageName": "net.sourceforge.plantuml.security.authentication.oauth",
+  "importName": ["java.io.UnsupportedEncodingException", "java.net.Proxy", "java.net.URLEncoder", "java.nio.charset.StandardCharsets", "java.util.HashMap", "java.util.Map", "net.sourceforge.plantuml.json.Json", "net.sourceforge.plantuml.json.JsonObject", "net.sourceforge.plantuml.json.JsonValue", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SURL", "net.sourceforge.plantuml.security.authentication.SecurityAuthentication", "net.sourceforge.plantuml.security.authentication.SecurityAuthorizeManager"],
+  "classData": {
+    "net.sourceforge.plantuml.security.authentication.oauth.AbstractOAuth2AccessAuthorizeManager": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "interface": ["net.sourceforge.plantuml.security.authentication.SecurityAuthorizeManager"],
+      "methodData": {
+        "net.sourceforge.plantuml.security.authentication.oauth.AbstractOAuth2AccessAuthorizeManager.urlEncode#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "data",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.security.authentication.oauth.AbstractOAuth2AccessAuthorizeManager.buildAccessDataFromResponse#480d926b": {
+          "returnType": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "tokenResponse",
+            "type": "net.sourceforge.plantuml.json.JsonObject"
+          }, {
+            "name": "tokenType",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.security.authentication.oauth.AbstractOAuth2AccessAuthorizeManager.headers#1": {
+          "returnType": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.authentication.oauth.AbstractOAuth2AccessAuthorizeManager.toMap#e919f891": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "map",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e"
+          }, {
+            "name": "response",
+            "type": "net.sourceforge.plantuml.json.JsonObject"
+          }, {
+            "name": "name",
+            "type": "net.sourceforge.plantuml.security.authentication.oauth.OAuth2Tokens"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.security.authentication.oauth.AbstractOAuth2AccessAuthorizeManager.requestAndCreateAuthFromResponse#9578b096": {
+          "returnType": "net.sourceforge.plantuml.security.authentication.SecurityAuthentication",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "proxy",
+            "type": "java.net.Proxy"
+          }, {
+            "name": "grantType",
+            "type": "java.lang.String"
+          }, {
+            "name": "tokenType",
+            "type": "java.lang.String"
+          }, {
+            "name": "tokenService",
+            "type": "net.sourceforge.plantuml.security.SURL"
+          }, {
+            "name": "content",
+            "type": "java.lang.String"
+          }, {
+            "name": "basicAuth",
+            "type": "net.sourceforge.plantuml.security.authentication.SecurityAuthentication"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "65",
+        "cyclomatic_complexity": "14",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "117",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

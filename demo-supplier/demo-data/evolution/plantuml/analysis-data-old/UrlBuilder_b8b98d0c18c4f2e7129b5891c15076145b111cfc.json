@@ -1,0 +1,154 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "UrlBuilder.java",
+  "packageName": "net.sourceforge.plantuml.url",
+  "importName": ["net.sourceforge.plantuml.regex.IRegex", "net.sourceforge.plantuml.regex.Matcher2", "net.sourceforge.plantuml.regex.MyPattern", "net.sourceforge.plantuml.regex.Pattern2", "net.sourceforge.plantuml.regex.RegexLeaf", "net.sourceforge.plantuml.regex.RegexOptional"],
+  "classData": {
+    "net.sourceforge.plantuml.url.UrlBuilder": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "MANDATORY",
+        "type": "net.sourceforge.plantuml.regex.IRegex",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "OPTIONAL",
+        "type": "net.sourceforge.plantuml.regex.IRegex",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "START_PART",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "END_PART",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "S_QUOTED",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "S_ONLY_TOOLTIP",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "S_ONLY_TOOLTIP_AND_LABEL",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "S_LINK_TOOLTIP_NOLABEL",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "S_LINK_WITH_OPTIONAL_TOOLTIP_WITH_OPTIONAL_LABEL",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "QUOTED",
+        "type": "net.sourceforge.plantuml.regex.Pattern2",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "ONLY_TOOLTIP",
+        "type": "net.sourceforge.plantuml.regex.Pattern2",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "ONLY_TOOLTIP_AND_LABEL",
+        "type": "net.sourceforge.plantuml.regex.Pattern2",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "LINK_TOOLTIP_NOLABEL",
+        "type": "net.sourceforge.plantuml.regex.Pattern2",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "LINK_WITH_OPTIONAL_TOOLTIP_WITH_OPTIONAL_LABEL",
+        "type": "net.sourceforge.plantuml.regex.Pattern2",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "topurl",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "mode",
+        "type": "net.sourceforge.plantuml.url.UrlMode",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.url.UrlBuilder.matchesOrFind#158d017f": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "m",
+            "type": "net.sourceforge.plantuml.regex.Matcher2"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.url.UrlBuilder.getRegexp#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.url.UrlBuilder.withTopUrl#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "url",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.url.UrlBuilder.getUrl#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.url.Url",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.url.UrlBuilder.UrlBuilder#4c1ff942": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "topurl",
+            "type": "java.lang.String"
+          }, {
+            "name": "mode",
+            "type": "net.sourceforge.plantuml.url.UrlMode"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "82",
+        "cyclomatic_complexity": "11",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "126",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

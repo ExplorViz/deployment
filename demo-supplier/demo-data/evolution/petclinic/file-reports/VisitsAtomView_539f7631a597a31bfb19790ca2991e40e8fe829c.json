@@ -1,0 +1,67 @@
+{
+  "commitID": "539f7631a597a31bfb19790ca2991e40e8fe829c",
+  "fileName": "VisitsAtomView.java",
+  "packageName": "org.springframework.samples.petclinic.web",
+  "importName": ["java.util.ArrayList", "java.util.Date", "java.util.List", "java.util.Map", "javax.servlet.http.HttpServletRequest", "javax.servlet.http.HttpServletResponse", "org.springframework.samples.petclinic.Visit", "org.springframework.web.servlet.view.feed.AbstractAtomFeedView", "com.sun.syndication.feed.atom.Content", "com.sun.syndication.feed.atom.Entry", "com.sun.syndication.feed.atom.Feed"],
+  "classData": {
+    "org.springframework.samples.petclinic.web.VisitsAtomView": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "org.springframework.samples.petclinic.web.VisitsAtomView.buildFeedMetadata#1c857d77": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "model",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e"
+          }, {
+            "name": "feed",
+            "type": "com.sun.syndication.feed.atom.Feed"
+          }, {
+            "name": "request",
+            "type": "javax.servlet.http.HttpServletRequest"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.springframework.samples.petclinic.web.VisitsAtomView.buildFeedEntries#1006eef": {
+          "returnType": "java.util.ArrayList\u003ccom.sun.syndication.feed.atom.Entry\u003e",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "model",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e"
+          }, {
+            "name": "request",
+            "type": "javax.servlet.http.HttpServletRequest"
+          }, {
+            "name": "response",
+            "type": "javax.servlet.http.HttpServletResponse"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "org.springframework.web.servlet.view.feed.AbstractAtomFeedView",
+      "metric": {
+        "loc": "43",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "75",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "misvy@vmware.com",
+  "addedLines": 15
+}

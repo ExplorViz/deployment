@@ -1,0 +1,260 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "GraphvizUtils.java",
+  "packageName": "net.sourceforge.plantuml.dot",
+  "importName": ["java.io.ByteArrayOutputStream", "java.io.File", "java.io.IOException", "java.util.List", "java.util.regex.Matcher", "java.util.regex.Pattern", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.security.SecurityProfile", "net.sourceforge.plantuml.security.SecurityUtils", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.utils.Log", "net.sourceforge.plantuml.vizjs.GraphvizJs", "net.sourceforge.plantuml.vizjs.VizJsEngine"],
+  "classData": {
+    "net.sourceforge.plantuml.dot.GraphvizUtils": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "VIZJS",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DOT_VERSION_LIMIT",
+        "type": "int",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "dotExecutable",
+        "type": "java.lang.String",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "limitSize",
+        "type": "java.lang.ThreadLocal\u003cjava.lang.Integer\u003e",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "dotVersion",
+        "type": "java.lang.String",
+        "modifier": ["private", "static"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.dot.GraphvizUtils.createForSystemDot#c089ef86": {
+          "returnType": "net.sourceforge.plantuml.dot.Graphviz",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "dotString",
+            "type": "java.lang.String"
+          }, {
+            "name": "type",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.addDotStatus#bd83d09a": {
+          "returnType": "int",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "result",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "withRichText",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "73",
+            "cyclomatic_complexity": "19",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.removeLocalLimitSize#1": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.getDotExecutableForTest#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.isWindows#1": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.getenvGraphvizDot#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.retrieveVersion#943a4c50": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.setLocalImageLimit#1980e": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "value",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.setDotExecutable#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public", "static", "final"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.getDotVersion#1": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.getTestCreateSimpleFile#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["static"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.create#c089ef86": {
+          "returnType": "net.sourceforge.plantuml.dot.Graphviz",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "dotString",
+            "type": "java.lang.String"
+          }, {
+            "name": "type",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.useVizJs#98f78ae6": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.getenvImageLimit#1": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.getDotExe#1": {
+          "returnType": "java.io.File",
+          "modifier": ["static", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.getenvLogData#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.dotVersion#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.graphviz244onWindows#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizUtils.getenvDefaultConfigFilename#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "250",
+        "cyclomatic_complexity": "44",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "304",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

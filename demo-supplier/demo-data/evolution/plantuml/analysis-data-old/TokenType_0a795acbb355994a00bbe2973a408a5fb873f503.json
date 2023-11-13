@@ -1,0 +1,117 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "TokenType.java",
+  "packageName": "net.sourceforge.plantuml.tim.expression",
+  "importName": ["net.sourceforge.plantuml.text.TLineType", "net.sourceforge.plantuml.tim.Eater", "net.sourceforge.plantuml.tim.EaterException"],
+  "classData": {
+    "net.sourceforge.plantuml.tim.expression.TokenType": {
+      "type": "ENUM",
+      "modifier": ["public"],
+      "field": [{
+        "name": "COMMERCIAL_MINUS_SIGN",
+        "type": "char",
+        "modifier": ["public", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.tim.expression.TokenType.eatAndGetTokenPlainText#3fa2e04": {
+          "returnType": "java.lang.String",
+          "modifier": ["static", "private"],
+          "parameter": [{
+            "name": "eater",
+            "type": "net.sourceforge.plantuml.tim.Eater"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.TokenType.isTheMinusAnOperation#4d3c9f8": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "lastToken",
+            "type": "net.sourceforge.plantuml.tim.expression.Token"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.TokenType.fromChar#5d26e81": {
+          "returnType": "net.sourceforge.plantuml.tim.expression.TokenType",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ch",
+            "type": "char"
+          }, {
+            "name": "ch2",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "13",
+            "nestedBlockDepth": "8"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.TokenType.eatOneToken#9e3026db": {
+          "returnType": "net.sourceforge.plantuml.tim.expression.Token",
+          "modifier": ["final", "static", "public"],
+          "parameter": [{
+            "name": "lastToken",
+            "type": "net.sourceforge.plantuml.tim.expression.Token"
+          }, {
+            "name": "eater",
+            "type": "net.sourceforge.plantuml.tim.Eater"
+          }, {
+            "name": "manageColon",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "17",
+            "nestedBlockDepth": "8"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.TokenType.isSingleChar1#1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.expression.TokenType.isPlainTextBreak#5d26e81": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ch",
+            "type": "char"
+          }, {
+            "name": "ch2",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "enumConstant": ["QUOTED_STRING", "JSON_DATA", "OPERATOR", "OPEN_PAREN_MATH", "COMMA", "CLOSE_PAREN_MATH", "NUMBER", "PLAIN_TEXT", "SPACES", "FUNCTION_NAME", "OPEN_PAREN_FUNC", "CLOSE_PAREN_FUNC"],
+      "metric": {
+        "loc": "94",
+        "cyclomatic_complexity": "35",
+        "cyclomatic_complexity_weighted": "7",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "134",
+    "cyclomatic_complexity": "7"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,135 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Skeleton.java",
+  "packageName": "net.sourceforge.plantuml.salt.element",
+  "importName": ["java.util.ArrayList", "java.util.List", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.klimt.shape.URectangle"],
+  "classData": {
+    "net.sourceforge.plantuml.salt.element.Skeleton.Entry": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "field": [{
+        "name": "xpos",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ypos",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.salt.element.Skeleton.Entry.Entry#1eef7de1": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.Skeleton.Entry.drawRectangle#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "13",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.salt.element.Skeleton": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "entries",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.salt.element.Skeleton.Entry\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.salt.element.Skeleton.Entry"],
+      "methodData": {
+        "net.sourceforge.plantuml.salt.element.Skeleton.add#1eef7de1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.Skeleton.drawChild#cdecc6b2": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "parent",
+            "type": "net.sourceforge.plantuml.salt.element.Skeleton.Entry"
+          }, {
+            "name": "child",
+            "type": "net.sourceforge.plantuml.salt.element.Skeleton.Entry"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.Skeleton.draw#6cd93692": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "51",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "96",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,279 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "PSystemSalt.java",
+  "packageName": "net.sourceforge.plantuml.salt",
+  "importName": ["java.io.IOException", "java.io.OutputStream", "java.util.ArrayList", "java.util.Collection", "java.util.Iterator", "java.util.List", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.ScaleSimple", "net.sourceforge.plantuml.TitledDiagram", "net.sourceforge.plantuml.UmlDiagram", "net.sourceforge.plantuml.WithSprite", "net.sourceforge.plantuml.api.ImageDataSimple", "net.sourceforge.plantuml.command.Command", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.command.CommandFactorySprite", "net.sourceforge.plantuml.core.DiagramDescription", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.color.NoSuchColorException", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.sprite.Sprite", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.salt.element.Element", "net.sourceforge.plantuml.salt.factory.AbstractElementFactoryComplex", "net.sourceforge.plantuml.salt.factory.ElementFactory", "net.sourceforge.plantuml.salt.factory.ElementFactoryBorder", "net.sourceforge.plantuml.salt.factory.ElementFactoryButton", "net.sourceforge.plantuml.salt.factory.ElementFactoryCheckboxOff", "net.sourceforge.plantuml.salt.factory.ElementFactoryCheckboxOn", "net.sourceforge.plantuml.salt.factory.ElementFactoryDroplist", "net.sourceforge.plantuml.salt.factory.ElementFactoryImage", "net.sourceforge.plantuml.salt.factory.ElementFactoryLine", "net.sourceforge.plantuml.salt.factory.ElementFactoryMenu", "net.sourceforge.plantuml.salt.factory.ElementFactoryPyramid", "net.sourceforge.plantuml.salt.factory.ElementFactoryRadioOff", "net.sourceforge.plantuml.salt.factory.ElementFactoryRadioOn", "net.sourceforge.plantuml.salt.factory.ElementFactoryRetrieveFromDictonnary", "net.sourceforge.plantuml.salt.factory.ElementFactoryScroll", "net.sourceforge.plantuml.salt.factory.ElementFactoryTab", "net.sourceforge.plantuml.salt.factory.ElementFactoryText", "net.sourceforge.plantuml.salt.factory.ElementFactoryTextField", "net.sourceforge.plantuml.salt.factory.ElementFactoryTree", "net.sourceforge.plantuml.skin.UmlDiagramType", "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft", "net.sourceforge.plantuml.utils.BlocLines", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.salt.PSystemSalt.getTextBlock#96b5b25.AbstractTextBlock": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.salt.PSystemSalt.getTextBlock#96b5b25.AbstractTextBlock.getBackcolor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.getTextBlock#96b5b25.AbstractTextBlock.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.getTextBlock#96b5b25.AbstractTextBlock.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.salt.PSystemSalt": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.WithSprite"],
+      "field": [{
+        "name": "data",
+        "type": "java.util.List\u003cjava.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "dictionary",
+        "type": "net.sourceforge.plantuml.salt.SaltDictionary",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "iamSalt",
+        "type": "boolean",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.salt.PSystemSalt.getTextBlock#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["protected"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.manageSprite#1": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.isIamSalt#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.exportDiagramNow#facb8d19": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["final", "protected"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.getDescription#1": {
+          "returnType": "net.sourceforge.plantuml.core.DiagramDescription",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.setIamSalt#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "iamSalt",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.getBlack#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.getDefaultMargins#1": {
+          "returnType": "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.addSprite#87112c95": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "sprite",
+            "type": "net.sourceforge.plantuml.klimt.sprite.Sprite"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.PSystemSalt#5aaf4a0e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.add#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.getTextBlock#96b5b25": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "salt",
+            "type": "net.sourceforge.plantuml.salt.element.Element",
+            "modifier": ["final "]
+          }, {
+            "name": "size",
+            "type": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.PSystemSalt#8d9a3ce1": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "data",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.addSimpleFactory#21556966": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "cpxFactory",
+            "type": "net.sourceforge.plantuml.salt.factory.AbstractElementFactoryComplex",
+            "modifier": ["final "]
+          }, {
+            "name": "source",
+            "type": "net.sourceforge.plantuml.salt.DataSource",
+            "modifier": ["final "]
+          }, {
+            "name": "dictionary",
+            "type": "net.sourceforge.plantuml.salt.SaltDictionary"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.PSystemSalt.createElement#9260454e": {
+          "returnType": "net.sourceforge.plantuml.salt.element.Element",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "data",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.TitledDiagram",
+      "metric": {
+        "loc": "169",
+        "cyclomatic_complexity": "19",
+        "cyclomatic_complexity_weighted": "6",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "261",
+    "cyclomatic_complexity": "6"
+  },
+  "author": "plantuml@gmail.com"
+}

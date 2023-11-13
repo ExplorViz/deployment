@@ -1,0 +1,142 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CArray.java",
+  "packageName": "smetana.core",
+  "importName": ["com.plantuml.api.cheerpj.WasmLog"],
+  "classData": {
+    "smetana.core.CArray": {
+      "type": "CLASS",
+      "modifier": ["final", "public"],
+      "field": [{
+        "name": "type",
+        "type": "smetana.core.ZType",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "data",
+        "type": "Object[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "offset",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "smetana.core.CArray.ALLOC__#54db066": {
+          "returnType": "smetana.core.CArray\u003cO\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "size",
+            "type": "int"
+          }, {
+            "name": "type",
+            "type": "smetana.core.ZType"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "smetana.core.CArray.plus_#1980e": {
+          "returnType": "smetana.core.CArray\u003cO\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "delta",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CArray.minus_#84b31f94": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "smetana.core.CArray\u003cO\u003e"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "smetana.core.CArray.REALLOC__#1cc8e26d": {
+          "returnType": "smetana.core.CArray\u003cO\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "size",
+            "type": "int"
+          }, {
+            "name": "old",
+            "type": "smetana.core.CArray\u003cO\u003e"
+          }, {
+            "name": "type",
+            "type": "smetana.core.ZType"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "smetana.core.CArray.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CArray.CArray#bbb9a3c5": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "data",
+            "type": "Object[]"
+          }, {
+            "name": "offset",
+            "type": "int"
+          }, {
+            "name": "type",
+            "type": "smetana.core.ZType"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "smetana.core.CArray.get__#1980e": {
+          "returnType": "O",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "i",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "smetana.core.UnsupportedC",
+      "metric": {
+        "loc": "59",
+        "cyclomatic_complexity": "8",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "99",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,767 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "OptionFlags.java",
+  "packageName": "net.sourceforge.plantuml",
+  "importName": ["java.io.FileNotFoundException", "java.io.PrintStream", "java.util.concurrent.atomic.AtomicBoolean", "net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.dot.GraphvizUtils", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.security.SecurityUtils", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.OptionFlags": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "singleton",
+        "type": "net.sourceforge.plantuml.OptionFlags",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "STRICT_SELFMESSAGE_POSITION",
+        "type": "boolean",
+        "modifier": ["static", "public", "final"]
+      }, {
+        "name": "USE_INTERFACE_EYE1",
+        "type": "boolean",
+        "modifier": ["static", "public", "final"]
+      }, {
+        "name": "USE_INTERFACE_EYE2",
+        "type": "boolean",
+        "modifier": ["static", "public", "final"]
+      }, {
+        "name": "FORCE_TEOZ",
+        "type": "boolean",
+        "modifier": ["static", "public", "final"]
+      }, {
+        "name": "replaceWhiteBackgroundByTransparent",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "ADD_NICE_FOR_DOT",
+        "type": "boolean",
+        "modifier": ["static", "public"]
+      }, {
+        "name": "verbose",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "extractFromMetadata",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "word",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "systemExit",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "gui",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "quiet",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "checkDotError",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "printFonts",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "encodesprite",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "dumpHtmlStats",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "dumpStats",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "loopStats",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "overwrite",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "enableStats",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "stdLib",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "silentlyCompletelyIgnoreErrors",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "extractStdLib",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "clipboardLoop",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "clipboard",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "fileSeparator",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "timeoutMs",
+        "type": "long",
+        "modifier": ["private"]
+      }, {
+        "name": "logData",
+        "type": "net.sourceforge.plantuml.security.SFile",
+        "modifier": ["private"]
+      }, {
+        "name": "logDataInitized",
+        "type": "java.util.concurrent.atomic.AtomicBoolean",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.OptionFlags.setEncodesprite#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "encodesprite",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.getTimeoutMs#1": {
+          "returnType": "long",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.getInstance#1": {
+          "returnType": "net.sourceforge.plantuml.OptionFlags",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isStdLib#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setSilentlyCompletelyIgnoreErrors#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "silentlyCompletelyIgnoreErrors",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isClipboardLoop#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.logData#578a11e5": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "file",
+            "type": "net.sourceforge.plantuml.security.SFile",
+            "modifier": ["final "]
+          }, {
+            "name": "system",
+            "type": "net.sourceforge.plantuml.core.Diagram"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setStdLib#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "stdLib",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isVerbose#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isReplaceWhiteBackgroundByTransparent#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setCheckDotError#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "checkDotError",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.OptionFlags#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isQuiet#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setDumpStats#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "dumpStats",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isTrue#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setSystemExit#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "systemExit",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.getFileSeparator#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setMaxPixel#1980e": {
+          "returnType": "void",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "max",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isExtractStdLib#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isPrintFonts#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setOverwrite#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "overwrite",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isDumpStats#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setDotExecutable#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "dotExecutable",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setEnableStats#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "enableStats",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isExtractFromMetadata#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setDumpHtmlStats#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "value",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setFileSeparator#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "fileSeparator",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setWord#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "word",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setTimeoutMs#32c69b": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "timeoutMs",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setExtractStdLib#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "extractStdLib",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isCheckDotError#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isGui#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.reset#3db6c47": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "exit",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setClipboardLoop#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "clipboardLoop",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setClipboard#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "clipboard",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isOverwrite#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.defaultForStats#1": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isWord#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isClipboard#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setExtractFromMetadata#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "extractFromMetadata",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isEncodesprite#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setLogData#4b3088e": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "logData",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.reset#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setGui#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "gui",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setReplaceWhiteBackgroundByTransparent#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "replaceWhiteBackgroundByTransparent",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isEnableStats#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isUseSuggestEngine2#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isLoopStats#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.useJavaInsteadOfDot#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isDumpHtmlStats#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isSystemExit#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setLoopStats#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "loopStats",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setVerbose#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "verbose",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setPrintFonts#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "printFonts",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.setQuiet#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "quiet",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.OptionFlags.isSilentlyCompletelyIgnoreErrors#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "305",
+        "cyclomatic_complexity": "8",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "21"
+      }
+    }
+  },
+  "metric": {
+    "loc": "353",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

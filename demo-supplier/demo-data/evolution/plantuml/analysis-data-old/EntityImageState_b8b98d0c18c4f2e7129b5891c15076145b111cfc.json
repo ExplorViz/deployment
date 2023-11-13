@@ -1,0 +1,120 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "EntityImageState.java",
+  "packageName": "net.sourceforge.plantuml.svek.image",
+  "importName": ["java.util.Collections", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.klimt.UGroupType", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.creole.CreoleMode", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.UEllipse", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.stereo.Stereotype", "net.sourceforge.plantuml.style.ISkinParam"],
+  "classData": {
+    "net.sourceforge.plantuml.svek.image.EntityImageState": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "fields",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "MIN_WIDTH",
+        "type": "int",
+        "modifier": ["final", "private", "static"]
+      }, {
+        "name": "MIN_HEIGHT",
+        "type": "int",
+        "modifier": ["final", "private", "static"]
+      }, {
+        "name": "withSymbol",
+        "type": "boolean",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "smallRadius",
+        "type": "double",
+        "modifier": ["final", "static", "private"]
+      }, {
+        "name": "smallLine",
+        "type": "double",
+        "modifier": ["final", "static", "private"]
+      }, {
+        "name": "smallMarginX",
+        "type": "double",
+        "modifier": ["final", "static", "private"]
+      }, {
+        "name": "smallMarginY",
+        "type": "double",
+        "modifier": ["final", "static", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.svek.image.EntityImageState.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "37",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.EntityImageState.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.EntityImageState.drawSymbol#6cd93692": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "xSymbol",
+            "type": "double"
+          }, {
+            "name": "ySymbol",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.EntityImageState.EntityImageState#9d4ebee5": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.svek.image.EntityImageStateCommon",
+      "metric": {
+        "loc": "89",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "145",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

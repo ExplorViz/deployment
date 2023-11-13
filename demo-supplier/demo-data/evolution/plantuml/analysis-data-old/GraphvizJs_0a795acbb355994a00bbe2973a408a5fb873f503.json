@@ -1,0 +1,248 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "GraphvizJs.java",
+  "packageName": "net.sourceforge.plantuml.vizjs",
+  "importName": ["java.io.File", "java.io.OutputStream", "java.util.concurrent.Callable", "java.util.concurrent.ExecutorService", "java.util.concurrent.Executors", "java.util.concurrent.Future", "java.util.concurrent.ThreadFactory", "net.sourceforge.plantuml.dot.ExeState", "net.sourceforge.plantuml.dot.Graphviz", "net.sourceforge.plantuml.dot.GraphvizVersion", "net.sourceforge.plantuml.dot.ProcessState", "net.sourceforge.plantuml.log.Logme"],
+  "classData": {
+    "net.sourceforge.plantuml.vizjs.GraphvizJs.submitJob#1.Callable\u003cString\u003e": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.submitJob#1.Callable\u003cString\u003e.call#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.vizjs.GraphvizJs.executorService.ThreadFactory": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.executorService.ThreadFactory.newThread#354a375c": {
+          "returnType": "java.lang.Thread",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "runnable",
+            "type": "java.lang.Runnable"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.vizjs.GraphvizJs": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.dot.Graphviz"],
+      "field": [{
+        "name": "executorService",
+        "type": "java.util.concurrent.ExecutorService",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "dotString",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.vizjs.GraphvizJs.JsThread"],
+      "methodData": {
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.GraphvizJs#943a4c50": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dotString",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.createFile3#2062420": {
+          "returnType": "net.sourceforge.plantuml.dot.ProcessState",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.submitJob#1": {
+          "returnType": "java.util.concurrent.Future\u003cjava.lang.String\u003e",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.getDotExe#1": {
+          "returnType": "java.io.File",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.graphviz244onWindows#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.getExeState#1": {
+          "returnType": "net.sourceforge.plantuml.dot.ExeState",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.dotVersion#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.getGraphvizVersion#3db6c47": {
+          "returnType": "net.sourceforge.plantuml.dot.GraphvizVersion",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "modeSafe",
+            "type": "boolean",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        }
+      },
+      "metric": {
+        "loc": "100",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "7"
+      }
+    },
+    "net.sourceforge.plantuml.vizjs.GraphvizJs.getGraphvizVersion#3db6c47.GraphvizVersion": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.getGraphvizVersion#3db6c47.GraphvizVersion.useXLabelInsteadOfLabel#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.getGraphvizVersion#3db6c47.GraphvizVersion.useShieldForQuantifier#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.getGraphvizVersion#3db6c47.GraphvizVersion.useProtectionWhenThereALinkFromOrToGroup#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.getGraphvizVersion#3db6c47.GraphvizVersion.ignoreHorizontalLinks#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.getGraphvizVersion#3db6c47.GraphvizVersion.isVizjs#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.vizjs.GraphvizJs.JsThread": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "field": [{
+        "name": "runnable",
+        "type": "java.lang.Runnable",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "engine",
+        "type": "net.sourceforge.plantuml.vizjs.VizJsEngine",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.JsThread.JsThread#354a375c": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "runnable",
+            "type": "java.lang.Runnable"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.vizjs.GraphvizJs.JsThread.run#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "superClass": "java.lang.Thread",
+      "metric": {
+        "loc": "22",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "151",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

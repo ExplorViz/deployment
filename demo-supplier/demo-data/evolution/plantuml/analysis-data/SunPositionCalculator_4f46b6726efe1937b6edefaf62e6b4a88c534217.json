@@ -1,0 +1,176 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "SunPositionCalculator.java",
+  "packageName": "ext.plantuml.com.ctreber.acearth.util",
+  "importName": ["java.util.Calendar", "java.util.Date", "java.util.TimeZone"],
+  "classData": {
+    "ext.plantuml.com.ctreber.acearth.util.SunPositionCalculator": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "EPOCH_START",
+        "type": "long",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "RADS_PER_DAY",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "EPSILON_G",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "OMEGA_BAR_G",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "ECCENTRICITY",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "MOON_MEAN_LONGITUDE",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "MOON_MEAN_LONGITUDE_PERIGEE",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "MOON_MEAN_LONGITUDE_NODE",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "MOON_INCLINATION",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "SIDERAL_MONTH",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "ext.plantuml.com.ctreber.acearth.util.SunPositionCalculator.getJulianDate#62eca6e": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "pYear",
+            "type": "int"
+          }, {
+            "name": "pMonth",
+            "type": "int"
+          }, {
+            "name": "pDay",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.util.SunPositionCalculator.getSunPositionOnEarth#32c69b": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.util.Coordinate",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "pMillis",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.util.SunPositionCalculator.daysSinceEpoch#32c69b": {
+          "returnType": "double",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "pMillis",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.util.SunPositionCalculator.getMeanSunLongitude#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "pDays",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.util.SunPositionCalculator.doKepler#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "M",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.util.SunPositionCalculator.getGST#32c69b": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "pMillis",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.util.SunPositionCalculator.getSunEclipticLongitude#32c69b": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "pMillis",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.util.SunPositionCalculator.getMoonPositionOnEarth#32c69b": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.util.Coordinate",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "pMillis",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "161",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "167",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

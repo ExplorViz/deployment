@@ -1,0 +1,142 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "ACearth.java",
+  "packageName": "ext.plantuml.com.ctreber.acearth",
+  "importName": ["java.io.IOException", "java.io.OutputStream", "java.util.ArrayList", "java.util.Iterator", "java.util.List", "java.util.Random", "ext.plantuml.com.ctreber.acearth.gui.CanvasACearth", "ext.plantuml.com.ctreber.acearth.plugins.Plugin", "ext.plantuml.com.ctreber.acearth.plugins.markers.Marker", "ext.plantuml.com.ctreber.acearth.plugins.markers.PluginMarkers", "ext.plantuml.com.ctreber.acearth.projection.Projection", "ext.plantuml.com.ctreber.acearth.projection.ProjectionCyl", "ext.plantuml.com.ctreber.acearth.projection.ProjectionMerc", "ext.plantuml.com.ctreber.acearth.projection.ProjectionOrtho", "ext.plantuml.com.ctreber.acearth.renderer.Renderer", "ext.plantuml.com.ctreber.acearth.renderer.RowTypeRendererScanBit", "ext.plantuml.com.ctreber.acearth.renderer.RowTypeRendererScanDot", "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMap", "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMapDefault", "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMapOrtho", "ext.plantuml.com.ctreber.acearth.scandot.DotGeneratorLines", "ext.plantuml.com.ctreber.acearth.scandot.DotGeneratorStars", "ext.plantuml.com.ctreber.acearth.scandot.ScanDot", "ext.plantuml.com.ctreber.acearth.scandot.ScanDotGenerator", "ext.plantuml.com.ctreber.acearth.shader.Shader", "ext.plantuml.com.ctreber.acearth.shader.ShaderDefault", "ext.plantuml.com.ctreber.acearth.shader.ShaderFlat", "ext.plantuml.com.ctreber.acearth.shader.ShaderOrtho", "ext.plantuml.com.ctreber.acearth.util.Coordinate", "ext.plantuml.com.ctreber.acearth.util.SunPositionCalculator", "ext.plantuml.com.ctreber.acearth.util.Toolkit", "ext.plantuml.com.ctreber.aclib.sort.CTSort", "ext.plantuml.com.ctreber.aclib.sort.QuickSort"],
+  "classData": {
+    "ext.plantuml.com.ctreber.acearth.ACearth": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "VERSION",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "BUILD",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "fConf",
+        "type": "ext.plantuml.com.ctreber.acearth.ConfigurationACearth",
+        "modifier": ["private"]
+      }, {
+        "name": "fCurrentTime",
+        "type": "long",
+        "modifier": ["private"]
+      }, {
+        "name": "fCanvas",
+        "type": "ext.plantuml.com.ctreber.acearth.gui.CanvasACearth",
+        "modifier": ["private"]
+      }, {
+        "name": "fViewPos",
+        "type": "ext.plantuml.com.ctreber.acearth.util.Coordinate",
+        "modifier": ["private"]
+      }, {
+        "name": "fViewRotation",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fPlugins",
+        "type": "java.util.List",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "ext.plantuml.com.ctreber.acearth.ACearth.computePositions#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "14",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.ACearth.getOrbitPosition#32c69b": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.util.Coordinate",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "pTimeMillis",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "35",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.ACearth.ACearth#348f9645": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "markers",
+            "type": "java.util.List\u003cext.plantuml.com.ctreber.acearth.plugins.markers.Marker\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.ACearth.update#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "88",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.ACearth.getConf#1": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.ConfigurationACearth",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.ACearth.getRandomPosition#1": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.util.Coordinate",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.ACearth.getSunRelativePosition#1": {
+          "returnType": "ext.plantuml.com.ctreber.acearth.util.Coordinate",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.ACearth.exportPng#2062420": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "221",
+        "cyclomatic_complexity": "23",
+        "cyclomatic_complexity_weighted": "7",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "258",
+    "cyclomatic_complexity": "7"
+  },
+  "author": "plantuml@gmail.com"
+}

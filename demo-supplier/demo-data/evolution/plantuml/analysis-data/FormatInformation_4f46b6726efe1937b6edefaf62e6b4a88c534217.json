@@ -1,0 +1,144 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "FormatInformation.java",
+  "packageName": "ext.plantuml.com.google.zxing.qrcode.decoder",
+  "classData": {
+    "ext.plantuml.com.google.zxing.qrcode.decoder.FormatInformation": {
+      "type": "CLASS",
+      "modifier": ["final"],
+      "field": [{
+        "name": "FORMAT_INFO_MASK_QR",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "FORMAT_INFO_DECODE_LOOKUP",
+        "type": "int[][]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "BITS_SET_IN_HALF_BYTE",
+        "type": "int[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "errorCorrectionLevel",
+        "type": "ext.plantuml.com.google.zxing.qrcode.decoder.ErrorCorrectionLevel",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "dataMask",
+        "type": "byte",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "ext.plantuml.com.google.zxing.qrcode.decoder.FormatInformation.getErrorCorrectionLevel#1": {
+          "returnType": "ext.plantuml.com.google.zxing.qrcode.decoder.ErrorCorrectionLevel",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.decoder.FormatInformation.numBitsDiffering#3301a1": {
+          "returnType": "int",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "a",
+            "type": "int"
+          }, {
+            "name": "b",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.decoder.FormatInformation.getDataMask#1": {
+          "returnType": "byte",
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.decoder.FormatInformation.decodeFormatInformation#3301a1": {
+          "returnType": "ext.plantuml.com.google.zxing.qrcode.decoder.FormatInformation",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "maskedFormatInfo1",
+            "type": "int"
+          }, {
+            "name": "maskedFormatInfo2",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.decoder.FormatInformation.doDecodeFormatInformation#3301a1": {
+          "returnType": "ext.plantuml.com.google.zxing.qrcode.decoder.FormatInformation",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "maskedFormatInfo1",
+            "type": "int"
+          }, {
+            "name": "maskedFormatInfo2",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.decoder.FormatInformation.FormatInformation#1980e": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "formatInfo",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.decoder.FormatInformation.hashCode#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.google.zxing.qrcode.decoder.FormatInformation.equals#8c658f7e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "o",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "120",
+        "cyclomatic_complexity": "8",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "138",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

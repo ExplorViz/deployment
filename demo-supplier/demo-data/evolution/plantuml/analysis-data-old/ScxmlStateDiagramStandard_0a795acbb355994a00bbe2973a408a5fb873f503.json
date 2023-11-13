@@ -1,0 +1,140 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "ScxmlStateDiagramStandard.java",
+  "packageName": "net.sourceforge.plantuml.xmlsc",
+  "importName": ["java.nio.charset.StandardCharsets.UTF_8", "java.io.OutputStream", "javax.xml.parsers.DocumentBuilder", "javax.xml.parsers.ParserConfigurationException", "javax.xml.transform.OutputKeys", "javax.xml.transform.Result", "javax.xml.transform.Source", "javax.xml.transform.Transformer", "javax.xml.transform.TransformerException", "javax.xml.transform.dom.DOMSource", "javax.xml.transform.stream.StreamResult", "org.w3c.dom.Comment", "org.w3c.dom.Document", "org.w3c.dom.Element", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.abel.LeafType", "net.sourceforge.plantuml.abel.Link", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.statediagram.StateDiagram", "net.sourceforge.plantuml.stereo.Stereotype", "net.sourceforge.plantuml.text.Guillemet", "net.sourceforge.plantuml.xml.XmlFactories"],
+  "classData": {
+    "net.sourceforge.plantuml.xmlsc.ScxmlStateDiagramStandard": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "diagram",
+        "type": "net.sourceforge.plantuml.statediagram.StateDiagram",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "document",
+        "type": "org.w3c.dom.Document",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.xmlsc.ScxmlStateDiagramStandard.exportGroup#7f5df868": {
+          "returnType": "org.w3c.dom.Element",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "dest",
+            "type": "org.w3c.dom.Element"
+          }, {
+            "name": "ent",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.xmlsc.ScxmlStateDiagramStandard.transformerXml#2062420": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmlsc.ScxmlStateDiagramStandard.createState#7c02d022": {
+          "returnType": "org.w3c.dom.Element",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "31",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.xmlsc.ScxmlStateDiagramStandard.getInitial#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.xmlsc.ScxmlStateDiagramStandard.ScxmlStateDiagramStandard#76c28341": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.statediagram.StateDiagram"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.xmlsc.ScxmlStateDiagramStandard.getId#7c02d022": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmlsc.ScxmlStateDiagramStandard.createGroup#7c02d022": {
+          "returnType": "org.w3c.dom.Element",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmlsc.ScxmlStateDiagramStandard.addLink#37f4c7f": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "state",
+            "type": "org.w3c.dom.Element"
+          }, {
+            "name": "link",
+            "type": "net.sourceforge.plantuml.abel.Link"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "114",
+        "cyclomatic_complexity": "17",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "178",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

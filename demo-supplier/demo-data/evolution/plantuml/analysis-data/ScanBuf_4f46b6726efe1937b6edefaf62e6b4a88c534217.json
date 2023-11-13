@@ -1,0 +1,127 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "ScanBuf.java",
+  "packageName": "ext.plantuml.com.ctreber.acearth.scanbit",
+  "importName": ["java.util.ArrayList", "java.util.List", "ext.plantuml.com.ctreber.aclib.sort.CTSort", "ext.plantuml.com.ctreber.aclib.sort.QuickSort"],
+  "classData": {
+    "ext.plantuml.com.ctreber.acearth.scanbit.ScanBuf": {
+      "type": "CLASS",
+      "field": [{
+        "name": "fScanbuf",
+        "type": "List[]",
+        "modifier": ["private"]
+      }, {
+        "name": "fLineMin",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "fLineMax",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "fLines",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fPoints",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fScanBufsAdded",
+        "type": "boolean",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "ext.plantuml.com.ctreber.acearth.scanbit.ScanBuf.getYMax#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.scanbit.ScanBuf.containsPoints#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.scanbit.ScanBuf.addLine#3ff703c1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pXFrom",
+            "type": "double"
+          }, {
+            "name": "pYFrom",
+            "type": "double"
+          }, {
+            "name": "pXTo",
+            "type": "double"
+          }, {
+            "name": "pYTo",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "58",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.scanbit.ScanBuf.getYMin#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.scanbit.ScanBuf.getScanbits#1980e": {
+          "returnType": "java.util.List",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pCurveType",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.scanbit.ScanBuf.ScanBuf#3301a1": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pLines",
+            "type": "int"
+          }, {
+            "name": "pPoints",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "133",
+        "cyclomatic_complexity": "16",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "141",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "plantuml@gmail.com"
+}

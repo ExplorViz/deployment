@@ -1,0 +1,205 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "AbstractGraphviz.java",
+  "packageName": "net.sourceforge.plantuml.dot",
+  "importName": ["java.io.File", "java.io.OutputStream", "java.util.Arrays", "java.util.List", "java.util.Objects", "net.sourceforge.plantuml.OptionFlags", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.dot.AbstractGraphviz": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["abstract"],
+      "interface": ["net.sourceforge.plantuml.dot.Graphviz"],
+      "field": [{
+        "name": "dotExe",
+        "type": "java.io.File",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "dotString",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "type",
+        "type": "String[]",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.specificDotExe#1": {
+          "returnType": "java.io.File",
+          "modifier": ["abstract", "protected"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.getExeName#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["abstract", "protected"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.AbstractGraphviz#c089ef86": {
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "dotString",
+            "type": "java.lang.String"
+          }, {
+            "name": "type",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.createFile3#2062420": {
+          "returnType": "net.sourceforge.plantuml.dot.ProcessState",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "39",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.findExecutableOnPath#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.executeCmd#6ed80f72": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "cmd",
+            "type": "String[]",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.getType#1": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.findExecutableOnPath#1": {
+          "returnType": "boolean",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.getDotExe#1": {
+          "returnType": "java.io.File",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.dotVersion#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.getCommandLine#1": {
+          "returnType": "String[]",
+          "modifier": ["final"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.getCommandLineVersion#1": {
+          "returnType": "String[]",
+          "modifier": ["final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.getDotString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.getExeState#1": {
+          "returnType": "net.sourceforge.plantuml.dot.ExeState",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.searchDotExe#1": {
+          "returnType": "java.io.File",
+          "modifier": ["final", "protected"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dot.AbstractGraphviz.isWindows#1": {
+          "returnType": "boolean",
+          "modifier": ["static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "153",
+        "cyclomatic_complexity": "22",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "203",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

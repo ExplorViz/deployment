@@ -1,0 +1,141 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "TranscoderImpl.java",
+  "packageName": "net.sourceforge.plantuml.code",
+  "importName": ["java.nio.charset.StandardCharsets.UTF_8", "java.io.IOException"],
+  "classData": {
+    "net.sourceforge.plantuml.code.TranscoderImpl.Format": {
+      "type": "ENUM",
+      "modifier": ["static"],
+      "enumConstant": ["UTF8", "UPF9"],
+      "metric": {
+        "loc": "3",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.code.TranscoderImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.code.Transcoder"],
+      "field": [{
+        "name": "compression",
+        "type": "net.sourceforge.plantuml.code.Compression",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "urlEncoder",
+        "type": "net.sourceforge.plantuml.code.URLEncoder",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "stringCompressor",
+        "type": "net.sourceforge.plantuml.code.StringCompressor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "format",
+        "type": "net.sourceforge.plantuml.code.TranscoderImpl.Format",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.code.TranscoderImpl.Format"],
+      "methodData": {
+        "net.sourceforge.plantuml.code.TranscoderImpl.TranscoderImpl#d5ab17b": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "urlEncoder",
+            "type": "net.sourceforge.plantuml.code.URLEncoder"
+          }, {
+            "name": "stringCompressor",
+            "type": "net.sourceforge.plantuml.code.StringCompressor"
+          }, {
+            "name": "compression",
+            "type": "net.sourceforge.plantuml.code.Compression"
+          }, {
+            "name": "format",
+            "type": "net.sourceforge.plantuml.code.TranscoderImpl.Format"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.code.TranscoderImpl.upf9#a188f61c": {
+          "returnType": "net.sourceforge.plantuml.code.Transcoder",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "urlEncoder",
+            "type": "net.sourceforge.plantuml.code.URLEncoder"
+          }, {
+            "name": "stringCompressor",
+            "type": "net.sourceforge.plantuml.code.StringCompressor"
+          }, {
+            "name": "compression",
+            "type": "net.sourceforge.plantuml.code.Compression"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.code.TranscoderImpl.encode#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "text",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.TranscoderImpl.decode#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "code",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.code.TranscoderImpl.utf8#a188f61c": {
+          "returnType": "net.sourceforge.plantuml.code.Transcoder",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "urlEncoder",
+            "type": "net.sourceforge.plantuml.code.URLEncoder"
+          }, {
+            "name": "stringCompressor",
+            "type": "net.sourceforge.plantuml.code.StringCompressor"
+          }, {
+            "name": "compression",
+            "type": "net.sourceforge.plantuml.code.Compression"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "56",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "97",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

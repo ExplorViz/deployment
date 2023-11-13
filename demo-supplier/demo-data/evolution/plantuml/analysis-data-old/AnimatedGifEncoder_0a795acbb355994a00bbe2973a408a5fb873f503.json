@@ -1,0 +1,889 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "AnimatedGifEncoder.java",
+  "packageName": "net.sourceforge.plantuml",
+  "importName": ["java.awt.Color", "java.awt.Graphics2D", "java.awt.image.BufferedImage", "java.awt.image.DataBufferByte", "java.io.IOException", "java.io.OutputStream"],
+  "classData": {
+    "net.sourceforge.plantuml.NeuQuant": {
+      "type": "CLASS",
+      "field": [{
+        "name": "netsize",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "prime1",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "prime2",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "prime3",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "prime4",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "minpicturebytes",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "maxnetpos",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "netbiasshift",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "ncycles",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "intbiasshift",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "intbias",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "gammashift",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "gamma",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "betashift",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "beta",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "betagamma",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "initrad",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "radiusbiasshift",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "radiusbias",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "initradius",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "radiusdec",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "alphabiasshift",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "initalpha",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "alphadec",
+        "type": "int",
+        "modifier": ["protected"]
+      }, {
+        "name": "radbiasshift",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "radbias",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "alpharadbshift",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "alpharadbias",
+        "type": "int",
+        "modifier": ["protected", "static", "final"]
+      }, {
+        "name": "thepicture",
+        "type": "byte[]",
+        "modifier": ["protected"]
+      }, {
+        "name": "lengthcount",
+        "type": "int",
+        "modifier": ["protected"]
+      }, {
+        "name": "samplefac",
+        "type": "int",
+        "modifier": ["protected"]
+      }, {
+        "name": "network",
+        "type": "int[][]",
+        "modifier": ["protected"]
+      }, {
+        "name": "netindex",
+        "type": "int[]",
+        "modifier": ["protected"]
+      }, {
+        "name": "bias",
+        "type": "int[]",
+        "modifier": ["protected"]
+      }, {
+        "name": "freq",
+        "type": "int[]",
+        "modifier": ["protected"]
+      }, {
+        "name": "radpower",
+        "type": "int[]",
+        "modifier": ["protected"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.NeuQuant.colorMap#1": {
+          "returnType": "byte[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.NeuQuant.altersingle#35d8e4ce": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "alpha",
+            "type": "int"
+          }, {
+            "name": "i",
+            "type": "int"
+          }, {
+            "name": "b",
+            "type": "int"
+          }, {
+            "name": "g",
+            "type": "int"
+          }, {
+            "name": "r",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.NeuQuant.map#62eca6e": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "b",
+            "type": "int"
+          }, {
+            "name": "g",
+            "type": "int"
+          }, {
+            "name": "r",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "58",
+            "cyclomatic_complexity": "17",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.NeuQuant.NeuQuant#90e4ca29": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "thepic",
+            "type": "byte[]"
+          }, {
+            "name": "len",
+            "type": "int"
+          }, {
+            "name": "sample",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.NeuQuant.process#1": {
+          "returnType": "byte[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.NeuQuant.alterneigh#35d8e4ce": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "rad",
+            "type": "int"
+          }, {
+            "name": "i",
+            "type": "int"
+          }, {
+            "name": "b",
+            "type": "int"
+          }, {
+            "name": "g",
+            "type": "int"
+          }, {
+            "name": "r",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "36",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.NeuQuant.inxbuild#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "43",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.NeuQuant.contest#62eca6e": {
+          "returnType": "int",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "b",
+            "type": "int"
+          }, {
+            "name": "g",
+            "type": "int"
+          }, {
+            "name": "r",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "42",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.NeuQuant.learn#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "68",
+            "cyclomatic_complexity": "18",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.NeuQuant.unbiasnet#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "375",
+        "cyclomatic_complexity": "61",
+        "cyclomatic_complexity_weighted": "7",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.AnimatedGifEncoder": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "width",
+        "type": "int",
+        "modifier": ["protected"]
+      }, {
+        "name": "height",
+        "type": "int",
+        "modifier": ["protected"]
+      }, {
+        "name": "transparent",
+        "type": "java.awt.Color",
+        "modifier": ["protected"]
+      }, {
+        "name": "transIndex",
+        "type": "int",
+        "modifier": ["protected"]
+      }, {
+        "name": "repeat",
+        "type": "int",
+        "modifier": ["protected"]
+      }, {
+        "name": "delay",
+        "type": "int",
+        "modifier": ["protected"]
+      }, {
+        "name": "started",
+        "type": "boolean",
+        "modifier": ["protected"]
+      }, {
+        "name": "out",
+        "type": "java.io.OutputStream",
+        "modifier": ["protected"]
+      }, {
+        "name": "image",
+        "type": "java.awt.image.BufferedImage",
+        "modifier": ["protected"]
+      }, {
+        "name": "pixels",
+        "type": "byte[]",
+        "modifier": ["protected"]
+      }, {
+        "name": "indexedPixels",
+        "type": "byte[]",
+        "modifier": ["protected"]
+      }, {
+        "name": "colorDepth",
+        "type": "int",
+        "modifier": ["protected"]
+      }, {
+        "name": "colorTab",
+        "type": "byte[]",
+        "modifier": ["protected"]
+      }, {
+        "name": "usedEntry",
+        "type": "boolean[]",
+        "modifier": ["protected"]
+      }, {
+        "name": "palSize",
+        "type": "int",
+        "modifier": ["protected"]
+      }, {
+        "name": "dispose",
+        "type": "int",
+        "modifier": ["protected"]
+      }, {
+        "name": "closeStream",
+        "type": "boolean",
+        "modifier": ["protected"]
+      }, {
+        "name": "firstFrame",
+        "type": "boolean",
+        "modifier": ["protected"]
+      }, {
+        "name": "sizeSet",
+        "type": "boolean",
+        "modifier": ["protected"]
+      }, {
+        "name": "sample",
+        "type": "int",
+        "modifier": ["protected"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.AnimatedGifEncoder.addFrame#f9520bbb": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "im",
+            "type": "java.awt.image.BufferedImage"
+          }],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.writeGraphicCtrlExt#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.setDispose#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "code",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.setDelay#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ms",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.analyzePixels#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.setQuality#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "quality",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.writeLSD#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.writeNetscapeExt#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.writePixels#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.setFrameRate#5d0227b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "fps",
+            "type": "float"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.start#2062420": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.finish#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.setSize#3301a1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "w",
+            "type": "int"
+          }, {
+            "name": "h",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.writeShort#1980e": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "value",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.writeImageDesc#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.setRepeat#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "iter",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.writePalette#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.findClosest#3e43f62": {
+          "returnType": "int",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "c",
+            "type": "java.awt.Color"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.setTransparent#3e43f62": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "c",
+            "type": "java.awt.Color"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.writeString#943a4c50": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.AnimatedGifEncoder.getImagePixels#1": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "252",
+        "cyclomatic_complexity": "35",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.LZWEncoder": {
+      "type": "CLASS",
+      "field": [{
+        "name": "EOF",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "imgW",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "imgH",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "pixAry",
+        "type": "byte[]",
+        "modifier": ["private"]
+      }, {
+        "name": "initCodeSize",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "remaining",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "curPixel",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "BITS",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "HSIZE",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "n_bits",
+        "type": "int"
+      }, {
+        "name": "maxbits",
+        "type": "int"
+      }, {
+        "name": "maxcode",
+        "type": "int"
+      }, {
+        "name": "maxmaxcode",
+        "type": "int"
+      }, {
+        "name": "htab",
+        "type": "int[]"
+      }, {
+        "name": "codetab",
+        "type": "int[]"
+      }, {
+        "name": "hsize",
+        "type": "int"
+      }, {
+        "name": "free_ent",
+        "type": "int"
+      }, {
+        "name": "clear_flg",
+        "type": "boolean"
+      }, {
+        "name": "g_init_bits",
+        "type": "int"
+      }, {
+        "name": "ClearCode",
+        "type": "int"
+      }, {
+        "name": "EOFCode",
+        "type": "int"
+      }, {
+        "name": "cur_accum",
+        "type": "int"
+      }, {
+        "name": "cur_bits",
+        "type": "int"
+      }, {
+        "name": "masks",
+        "type": "int[]"
+      }, {
+        "name": "a_count",
+        "type": "int"
+      }, {
+        "name": "accum",
+        "type": "byte[]"
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.LZWEncoder.encode#2062420": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.LZWEncoder.MAXCODE#1980e": {
+          "returnType": "int",
+          "modifier": ["final"],
+          "parameter": [{
+            "name": "n_bits",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.LZWEncoder.output#2378db3": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "code",
+            "type": "int"
+          }, {
+            "name": "outs",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "39",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.LZWEncoder.LZWEncoder#d4a9b826": {
+          "parameter": [{
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }, {
+            "name": "pixels",
+            "type": "byte[]"
+          }, {
+            "name": "color_depth",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.LZWEncoder.nextPixel#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.LZWEncoder.flush_char#2062420": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "outs",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.LZWEncoder.compress#2378db3": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "init_bits",
+            "type": "int"
+          }, {
+            "name": "outs",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "58",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.LZWEncoder.char_out#7a3e7ba": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "c",
+            "type": "byte"
+          }, {
+            "name": "outs",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.LZWEncoder.cl_hash#1980e": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "hsize",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.LZWEncoder.cl_block#2062420": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "outs",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "207",
+        "cyclomatic_complexity": "24",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "883",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,72 @@
+{
+  "commitID": "1f42b7615d159bf5aef0ebe28db199f20209dffb",
+  "fileName": "DandelionConfig.java",
+  "packageName": "org.springframework.samples.petclinic.config",
+  "importName": ["com.github.dandelion.core.web.DandelionFilter", "com.github.dandelion.core.web.DandelionServlet", "com.github.dandelion.datatables.core.web.filter.DatatablesFilter", "org.springframework.beans.factory.annotation.Autowired", "org.springframework.boot.context.embedded.FilterRegistrationBean", "org.springframework.boot.context.embedded.ServletRegistrationBean", "org.springframework.context.annotation.Bean", "org.springframework.context.annotation.Configuration", "org.springframework.context.annotation.Description", "org.springframework.context.annotation.Profile", "org.springframework.core.env.Environment", "javax.annotation.PostConstruct"],
+  "classData": {
+    "org.springframework.samples.petclinic.config.DandelionConfig": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "environment",
+        "type": "org.springframework.core.env.Environment",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.config.DandelionConfig.servletRegistrationBean#1": {
+          "returnType": "org.springframework.boot.context.embedded.ServletRegistrationBean",
+          "modifier": ["public"],
+          "annotation": ["Bean"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.config.DandelionConfig.init#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["javax.annotation.PostConstruct"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.config.DandelionConfig.datatablesRegistrationBean#1": {
+          "returnType": "org.springframework.boot.context.embedded.FilterRegistrationBean",
+          "modifier": ["public"],
+          "annotation": ["Bean", "Description"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.config.DandelionConfig.filterRegistrationBean#1": {
+          "returnType": "org.springframework.boot.context.embedded.FilterRegistrationBean",
+          "modifier": ["public"],
+          "annotation": ["Bean", "Description"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Configuration"],
+      "metric": {
+        "loc": "38",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "70",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "antoine.rey@gmail.com",
+  "addedLines": 75
+}

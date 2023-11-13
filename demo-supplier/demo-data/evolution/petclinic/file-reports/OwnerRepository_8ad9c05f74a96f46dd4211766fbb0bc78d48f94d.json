@@ -1,0 +1,81 @@
+{
+  "commitID": "8ad9c05f74a96f46dd4211766fbb0bc78d48f94d",
+  "fileName": "OwnerRepository.java",
+  "packageName": "org.springframework.samples.petclinic.owner",
+  "importName": ["org.springframework.data.domain.Page", "org.springframework.data.domain.Pageable", "org.springframework.data.jpa.repository.Query", "org.springframework.data.repository.Repository", "org.springframework.data.repository.query.Param", "org.springframework.transaction.annotation.Transactional"],
+  "classData": {
+    "org.springframework.samples.petclinic.owner.OwnerRepository": {
+      "modifier": ["public"],
+      "interface": ["org.springframework.data.repository.Repository\u003corg.springframework.samples.petclinic.owner.Owner, java.lang.Integer\u003e"],
+      "methodData": {
+        "org.springframework.samples.petclinic.owner.OwnerRepository.findByLastName#2a29ba39": {
+          "returnType": "org.springframework.data.domain.Page\u003corg.springframework.samples.petclinic.owner.Owner\u003e",
+          "parameter": [{
+            "name": "lastName",
+            "type": "java.lang.String"
+          }, {
+            "name": "pageable",
+            "type": "org.springframework.data.domain.Pageable"
+          }],
+          "annotation": ["Query", "Transactional"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.OwnerRepository.findById#d7ee193d": {
+          "returnType": "org.springframework.samples.petclinic.owner.Owner",
+          "parameter": [{
+            "name": "id",
+            "type": "java.lang.Integer"
+          }],
+          "annotation": ["Query", "Transactional"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.OwnerRepository.save#49102b2": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.owner.Owner"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.OwnerRepository.findAll#371a7ca8": {
+          "returnType": "org.springframework.data.domain.Page\u003corg.springframework.samples.petclinic.owner.Owner\u003e",
+          "parameter": [{
+            "name": "pageable",
+            "type": "org.springframework.data.domain.Pageable"
+          }],
+          "annotation": ["Query", "Transactional"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "18",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "42",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "simrinjoshi@yahoo.com",
+  "modifiedLines": 5,
+  "addedLines": 7
+}

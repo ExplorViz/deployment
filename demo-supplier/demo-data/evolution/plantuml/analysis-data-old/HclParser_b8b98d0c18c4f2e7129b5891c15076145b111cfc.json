@@ -1,0 +1,170 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "HclParser.java",
+  "packageName": "net.sourceforge.plantuml.hcl",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.Iterator", "java.util.LinkedHashMap", "java.util.List", "java.util.Map", "java.util.Map.Entry", "net.sourceforge.plantuml.json.Json", "net.sourceforge.plantuml.json.JsonArray", "net.sourceforge.plantuml.json.JsonObject", "net.sourceforge.plantuml.json.JsonString", "net.sourceforge.plantuml.json.JsonValue"],
+  "classData": {
+    "net.sourceforge.plantuml.hcl.HclParser": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "terms",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.hcl.HclTerm\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.hcl.HclParser.getArray#9c621cae": {
+          "returnType": "java.lang.Object",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "it",
+            "type": "java.util.Iterator\u003cnet.sourceforge.plantuml.hcl.HclTerm\u003e"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.hcl.HclParser.getBracketData#9c621cae": {
+          "returnType": "net.sourceforge.plantuml.json.JsonObject",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "it",
+            "type": "java.util.Iterator\u003cnet.sourceforge.plantuml.hcl.HclTerm\u003e"
+          }],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "16",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.hcl.HclParser.getValue#9c621cae": {
+          "returnType": "java.lang.Object",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "it",
+            "type": "java.util.Iterator\u003cnet.sourceforge.plantuml.hcl.HclTerm\u003e"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.hcl.HclParser.getType#2e9375": {
+          "returnType": "net.sourceforge.plantuml.hcl.SymbolType",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "c",
+            "type": "char",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "19",
+            "nestedBlockDepth": "11"
+          }
+        },
+        "net.sourceforge.plantuml.hcl.HclParser.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.hcl.HclParser.HclParser#cfb893de": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "java.lang.Iterable\u003cjava.lang.Character\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.hcl.HclParser.eatUntilDoubleQuote#e0df3a62": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "it",
+            "type": "java.util.Iterator\u003cjava.lang.Character\u003e"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.hcl.HclParser.parseMe#1": {
+          "returnType": "net.sourceforge.plantuml.json.JsonObject",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.hcl.HclParser.getModuleOrSomething#9c621cae": {
+          "returnType": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.json.JsonObject\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "it",
+            "type": "java.util.Iterator\u003cnet.sourceforge.plantuml.hcl.HclTerm\u003e"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.hcl.HclParser.getFunctionData#8f715a3f": {
+          "returnType": "net.sourceforge.plantuml.json.JsonValue",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "functionName",
+            "type": "java.lang.String"
+          }, {
+            "name": "it",
+            "type": "java.util.Iterator\u003cnet.sourceforge.plantuml.hcl.HclTerm\u003e"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "15",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.hcl.HclParser.parse#e0df3a62": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "it",
+            "type": "java.util.Iterator\u003cjava.lang.Character\u003e"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "207",
+        "cyclomatic_complexity": "85",
+        "cyclomatic_complexity_weighted": "9",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "258",
+    "cyclomatic_complexity": "9"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,177 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Graphics2DRenderer.java",
+  "packageName": "jcckit.renderer",
+  "importName": ["java.awt.BasicStroke", "java.awt.Color", "java.awt.Font", "java.awt.Graphics2D", "java.awt.Shape", "java.awt.geom.AffineTransform", "java.awt.geom.Ellipse2D", "java.awt.geom.GeneralPath", "java.awt.geom.Point2D", "java.awt.geom.Rectangle2D", "jcckit.graphic.BasicGraphicalElement", "jcckit.graphic.ClippingRectangle", "jcckit.graphic.ClippingShape", "jcckit.graphic.FillAttributes", "jcckit.graphic.FontStyle", "jcckit.graphic.GraphPoint", "jcckit.graphic.GraphicAttributes", "jcckit.graphic.GraphicalComposite", "jcckit.graphic.GraphicalCompositeRenderer", "jcckit.graphic.LineAttributes", "jcckit.graphic.Oval", "jcckit.graphic.OvalRenderer", "jcckit.graphic.Polygon", "jcckit.graphic.PolygonRenderer", "jcckit.graphic.Rectangle", "jcckit.graphic.RectangleRenderer", "jcckit.graphic.Text", "jcckit.graphic.TextAttributes", "jcckit.graphic.TextRenderer"],
+  "classData": {
+    "jcckit.renderer.Graphics2DRenderer": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["jcckit.graphic.GraphicalCompositeRenderer", "jcckit.graphic.PolygonRenderer", "jcckit.graphic.OvalRenderer", "jcckit.graphic.TextRenderer", "jcckit.graphic.RectangleRenderer"],
+      "field": [{
+        "name": "FS",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "DEFAULT_FONT_NAME",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "DEFAULT_FONT_STYLE",
+        "type": "jcckit.graphic.FontStyle",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "DEFAULT_FONT_SIZE",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "_defaultColor",
+        "type": "java.awt.Color",
+        "modifier": ["private"]
+      }, {
+        "name": "_graphics",
+        "type": "java.awt.Graphics2D",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "jcckit.renderer.Graphics2DRenderer.init#ff52165c": {
+          "returnType": "jcckit.renderer.Graphics2DRenderer",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "graphics",
+            "type": "java.awt.Graphics2D"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.renderer.Graphics2DRenderer.render#ba47cd6e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "rectangle",
+            "type": "jcckit.graphic.Rectangle"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.renderer.Graphics2DRenderer.startRendering#658faef3": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "composite",
+            "type": "jcckit.graphic.GraphicalComposite"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.renderer.Graphics2DRenderer.render#4b86ed39": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "polygon",
+            "type": "jcckit.graphic.Polygon"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "jcckit.renderer.Graphics2DRenderer.render#27b96c": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "text",
+            "type": "jcckit.graphic.Text"
+          }],
+          "metric": {
+            "loc": "57",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "jcckit.renderer.Graphics2DRenderer.createFont#335c29ac": {
+          "returnType": "java.awt.Font",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "attributes",
+            "type": "jcckit.graphic.TextAttributes"
+          }, {
+            "name": "size",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "jcckit.renderer.Graphics2DRenderer.drawShape#33cf772c": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "shape",
+            "type": "java.awt.Shape"
+          }, {
+            "name": "element",
+            "type": "jcckit.graphic.BasicGraphicalElement"
+          }, {
+            "name": "backupColor",
+            "type": "java.awt.Color"
+          }],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "jcckit.renderer.Graphics2DRenderer.finishRendering#658faef3": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "composite",
+            "type": "jcckit.graphic.GraphicalComposite"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.renderer.Graphics2DRenderer.render#25b091": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "oval",
+            "type": "jcckit.graphic.Oval"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "185",
+        "cyclomatic_complexity": "23",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "236",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,193 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Path.java",
+  "packageName": "net.sourceforge.plantuml.posimo",
+  "importName": ["java.util.Objects", "net.sourceforge.plantuml.klimt.shape.DotPath"],
+  "classData": {
+    "net.sourceforge.plantuml.posimo.Path": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "label",
+        "type": "net.sourceforge.plantuml.posimo.Label",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "start",
+        "type": "net.sourceforge.plantuml.posimo.Block",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "end",
+        "type": "net.sourceforge.plantuml.posimo.Block",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "length",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "dotPath",
+        "type": "net.sourceforge.plantuml.klimt.shape.DotPath",
+        "modifier": ["private"]
+      }, {
+        "name": "invis",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.posimo.Path.getLabel#1": {
+          "returnType": "net.sourceforge.plantuml.posimo.Label",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.Path.getEnd#1": {
+          "returnType": "net.sourceforge.plantuml.posimo.Block",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.Path.getDotPath#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.DotPath",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.Path.setLabelPosition#1eef7de1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.Path.setDotPath#d11a290d": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dotPath",
+            "type": "net.sourceforge.plantuml.klimt.shape.DotPath"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.Path.setLabelPositionCenter#1eef7de1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "labelX",
+            "type": "double"
+          }, {
+            "name": "labelY",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.Path.Path#dd142993": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "start",
+            "type": "net.sourceforge.plantuml.posimo.Block"
+          }, {
+            "name": "end",
+            "type": "net.sourceforge.plantuml.posimo.Block"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.posimo.Label"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.Path.Path#ecbce2ec": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "start",
+            "type": "net.sourceforge.plantuml.posimo.Block"
+          }, {
+            "name": "end",
+            "type": "net.sourceforge.plantuml.posimo.Block"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.posimo.Label"
+          }, {
+            "name": "length",
+            "type": "int"
+          }, {
+            "name": "invis",
+            "type": "boolean"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.Path.getStart#1": {
+          "returnType": "net.sourceforge.plantuml.posimo.Block",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.Path.getLength#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.Path.isInvis#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "64",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "6"
+      }
+    }
+  },
+  "metric": {
+    "loc": "105",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

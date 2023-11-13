@@ -1,0 +1,169 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "FontParam.java",
+  "packageName": "net.sourceforge.plantuml.klimt.font",
+  "importName": ["java.awt.Font", "net.sourceforge.plantuml.skin.UmlDiagramType", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.SName", "net.sourceforge.plantuml.style.StyleSignatureBasic"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.font.FontParamConstant": {
+      "field": [{
+        "name": "FAMILY",
+        "type": "java.lang.String"
+      }, {
+        "name": "COLOR",
+        "type": "java.lang.String"
+      }],
+      "metric": {
+        "loc": "4",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.klimt.font.FontParam": {
+      "type": "ENUM",
+      "modifier": ["public"],
+      "field": [{
+        "name": "defaultSize",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fontStyle",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "defaultColor",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "defaultFamily",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.font.FontParam.getDefaultFontStyle#89d53e02": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "inPackageTitle",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontParam.getDefaultColor#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontParam.FontParam#46c2a381": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "defaultSize",
+            "type": "int"
+          }, {
+            "name": "fontStyle",
+            "type": "int"
+          }, {
+            "name": "defaultColor",
+            "type": "java.lang.String"
+          }, {
+            "name": "defaultFamily",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontParam.getDefaultFamily#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontParam.getFontConfiguration#98f78ae6": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontParam.FontParam#3301a1": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "defaultSize",
+            "type": "int"
+          }, {
+            "name": "fontStyle",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontParam.getStyleDefinition#4b68d9d": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagramType",
+            "type": "net.sourceforge.plantuml.style.SName"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.font.FontParam.getDefaultSize#98f78ae6": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "enumConstant": ["TIMING", "ACTIVITY", "ACTIVITY_DIAMOND", "ARROW", "CIRCLED_CHARACTER", "OBJECT_ATTRIBUTE", "OBJECT", "OBJECT_STEREOTYPE", "CLASS_ATTRIBUTE", "CLASS", "CLASS_STEREOTYPE", "COMPONENT", "INTERFACE", "INTERFACE_STEREOTYPE", "COMPONENT_STEREOTYPE", "NOTE", "PACKAGE", "PACKAGE_STEREOTYPE", "ACTOR", "ARTIFACT", "CLOUD", "FOLDER", "FILE", "FRAME", "STORAGE", "BOUNDARY", "CONTROL", "ENTITY", "AGENT", "RECTANGLE", "LABEL", "HEXAGON", "PERSON", "ARCHIMATE", "CARD", "NODE", "DATABASE", "QUEUE", "STACK", "SEQUENCE_BOX", "SEQUENCE_DIVIDER", "SEQUENCE_REFERENCE", "SEQUENCE_DELAY", "SEQUENCE_GROUP", "SEQUENCE_GROUP_HEADER", "PARTICIPANT", "PARTICIPANT_STEREOTYPE", "STATE", "STATE_ATTRIBUTE", "LEGEND", "TITLE", "CAPTION", "SWIMLANE_TITLE", "FOOTER", "HEADER", "USECASE", "USECASE_STEREOTYPE", "ARTIFACT_STEREOTYPE", "CLOUD_STEREOTYPE", "STORAGE_STEREOTYPE", "BOUNDARY_STEREOTYPE", "CONTROL_STEREOTYPE", "ENTITY_STEREOTYPE", "AGENT_STEREOTYPE", "RECTANGLE_STEREOTYPE", "LABEL_STEREOTYPE", "PERSON_STEREOTYPE", "HEXAGON_STEREOTYPE", "ARCHIMATE_STEREOTYPE", "CARD_STEREOTYPE", "NODE_STEREOTYPE", "FOLDER_STEREOTYPE", "FILE_STEREOTYPE", "FRAME_STEREOTYPE", "DATABASE_STEREOTYPE", "QUEUE_STEREOTYPE", "STACK_STEREOTYPE", "ACTOR_STEREOTYPE", "SEQUENCE_STEREOTYPE", "PARTITION", "DESIGNED_DOMAIN", "DESIGNED_DOMAIN_STEREOTYPE", "DOMAIN", "DOMAIN_STEREOTYPE", "MACHINE", "MACHINE_STEREOTYPE", "REQUIREMENT", "REQUIREMENT_STEREOTYPE"],
+      "metric": {
+        "loc": "69",
+        "cyclomatic_complexity": "9",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "6"
+      }
+    }
+  },
+  "metric": {
+    "loc": "119",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

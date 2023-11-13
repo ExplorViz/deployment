@@ -1,0 +1,56 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "BasicAuthAccessInterceptor.java",
+  "packageName": "net.sourceforge.plantuml.security.authentication.basicauth",
+  "importName": ["java.net.URLConnection", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.security.authentication.SecurityAccessInterceptor", "net.sourceforge.plantuml.security.authentication.SecurityAuthentication", "net.sourceforge.plantuml.utils.Base64Coder"],
+  "classData": {
+    "net.sourceforge.plantuml.security.authentication.basicauth.BasicAuthAccessInterceptor": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.security.authentication.SecurityAccessInterceptor"],
+      "methodData": {
+        "net.sourceforge.plantuml.security.authentication.basicauth.BasicAuthAccessInterceptor.apply#425fae56": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "authentication",
+            "type": "net.sourceforge.plantuml.security.authentication.SecurityAuthentication"
+          }, {
+            "name": "connection",
+            "type": "java.net.URLConnection"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.security.authentication.basicauth.BasicAuthAccessInterceptor.getAuth#53882217": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "authentication",
+            "type": "net.sourceforge.plantuml.security.authentication.SecurityAuthentication"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "23",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "67",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

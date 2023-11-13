@@ -1,0 +1,361 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "UmlDiagram.java",
+  "packageName": "net.sourceforge.plantuml",
+  "importName": ["net.atmp.ImageBuilder.plainImageBuilder", "java.awt.Color", "java.awt.image.BufferedImage", "java.io.BufferedOutputStream", "java.io.File", "java.io.FileNotFoundException", "java.io.FileOutputStream", "java.io.IOException", "java.io.OutputStream", "java.io.PrintWriter", "java.util.List", "java.util.Map", "net.atmp.PixelImage", "net.sourceforge.plantuml.api.ImageDataSimple", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.cucadiagram.DisplaySection", "net.sourceforge.plantuml.dot.UnparsableGraphvizException", "net.sourceforge.plantuml.file.SuggestedFile", "net.sourceforge.plantuml.flashcode.FlashCodeFactory", "net.sourceforge.plantuml.flashcode.FlashCodeUtils", "net.sourceforge.plantuml.fun.IconLoader", "net.sourceforge.plantuml.klimt.AffineTransformType", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontParam", "net.sourceforge.plantuml.klimt.geom.GraphicPosition", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.GraphicStrings", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.UDrawable", "net.sourceforge.plantuml.klimt.shape.UImage", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.pdf.PdfConverter", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.security.SecurityUtils", "net.sourceforge.plantuml.skin.UmlDiagramType", "net.sourceforge.plantuml.style.NoStyleAvailableException", "net.sourceforge.plantuml.svek.EmptySvgException", "net.sourceforge.plantuml.svek.GraphvizCrash", "net.sourceforge.plantuml.utils.Log", "net.sourceforge.plantuml.version.Version"],
+  "classData": {
+    "net.sourceforge.plantuml.UmlDiagram": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "interface": ["net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.Annotated", "net.sourceforge.plantuml.WithSprite"],
+      "field": [{
+        "name": "rotation",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "minwidth",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "lastInfo",
+        "type": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.UmlDiagram.getFailureText1#f369ab9f": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["static", "private"],
+          "parameter": [{
+            "name": "exception",
+            "type": "java.lang.Throwable"
+          }, {
+            "name": "graphvizVersion",
+            "type": "java.lang.String"
+          }, {
+            "name": "textDiagram",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.setMinwidth#1980e": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "minwidth",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.changeName#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.exportDiagramErrorText#92038c2f": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "exception",
+            "type": "java.lang.Throwable"
+          }, {
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.getFlashData#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.getFailureText2#facffad2": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "exception",
+            "type": "java.lang.Throwable"
+          }, {
+            "name": "textDiagram",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.getMinwidth#1": {
+          "returnType": "int",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.exportDiagramNow#facb8d19": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["final", "protected"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.exportDiagramError#5904bb29": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "exception",
+            "type": "java.lang.Throwable"
+          }, {
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }, {
+            "name": "graphvizVersion",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.setHideEmptyDescription#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "hideEmptyDescription",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.exportCmap#7c649134": {
+          "returnType": "void",
+          "modifier": ["final", "protected"],
+          "parameter": [{
+            "name": "suggestedFile",
+            "type": "net.sourceforge.plantuml.file.SuggestedFile"
+          }, {
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "cmapdata",
+            "type": "net.sourceforge.plantuml.core.ImageData",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.exportDiagramInternal#facb8d19": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["protected", "abstract"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "fileFormatOption",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.setRotation#3db6c47": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "rotation",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.isRotation#1": {
+          "returnType": "boolean",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.UmlDiagram#16d04a87": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.skin.UmlDiagramType"
+          }, {
+            "name": "orig",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.exportDiagramInternalPdf#3ebff7cf": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "index",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.getFooterOrHeaderTeoz#1acd957d": {
+          "returnType": "net.sourceforge.plantuml.cucadiagram.DisplaySection",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "param",
+            "type": "net.sourceforge.plantuml.klimt.font.FontParam"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.getWarningOrError#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.UmlDiagram.exportDiagramError#ca76e91b": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "exception",
+            "type": "java.lang.Throwable"
+          }, {
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }, {
+            "name": "seed",
+            "type": "long"
+          }, {
+            "name": "metadata",
+            "type": "java.lang.String"
+          }, {
+            "name": "flash",
+            "type": "java.lang.String"
+          }, {
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }],
+          "metric": {
+            "loc": "37",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "0"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.TitledDiagram",
+      "metric": {
+        "loc": "216",
+        "cyclomatic_complexity": "25",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "8"
+      }
+    },
+    "net.sourceforge.plantuml.UmlDiagram.exportDiagramError#ca76e91b.UDrawable": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.UmlDiagram.exportDiagramError#ca76e91b.UDrawable.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "3"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "300",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

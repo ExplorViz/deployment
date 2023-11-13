@@ -1,0 +1,90 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "PSystemJcckit.java",
+  "packageName": "net.sourceforge.plantuml.jcckit",
+  "importName": ["java.awt.image.BufferedImage", "java.io.IOException", "java.io.OutputStream", "java.util.Properties", "jcckit.GraphicsPlotCanvas", "jcckit.data.DataPlot", "jcckit.util.ConfigParameters", "jcckit.util.PropertiesBasedConfigData", "net.sourceforge.plantuml.AbstractPSystem", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.api.ImageDataSimple", "net.sourceforge.plantuml.core.DiagramDescription", "net.sourceforge.plantuml.core.ImageData", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.security.SImageIO"],
+  "classData": {
+    "net.sourceforge.plantuml.jcckit.PSystemJcckit": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "prop",
+        "type": "jcckit.util.PropertiesBasedConfigData",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "width",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "height",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.jcckit.PSystemJcckit.getDescription#1": {
+          "returnType": "net.sourceforge.plantuml.core.DiagramDescription",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jcckit.PSystemJcckit.exportDiagramNow#facb8d19": {
+          "returnType": "net.sourceforge.plantuml.core.ImageData",
+          "modifier": ["final", "protected"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "num",
+            "type": "int"
+          }, {
+            "name": "fileFormat",
+            "type": "net.sourceforge.plantuml.FileFormatOption"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.jcckit.PSystemJcckit.PSystemJcckit#ea3831a5": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "p",
+            "type": "java.util.Properties"
+          }, {
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.AbstractPSystem",
+      "metric": {
+        "loc": "33",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "87",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

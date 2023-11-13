@@ -1,0 +1,130 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Activity.java",
+  "packageName": "net.sourceforge.plantuml.board",
+  "importName": ["java.util.concurrent.atomic.AtomicInteger", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.style.ISkinParam"],
+  "classData": {
+    "net.sourceforge.plantuml.board.Activity": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "node",
+        "type": "net.sourceforge.plantuml.board.BNode",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "cursor",
+        "type": "net.sourceforge.plantuml.board.BNode",
+        "modifier": ["private"]
+      }, {
+        "name": "boardDiagram",
+        "type": "net.sourceforge.plantuml.board.BoardDiagram",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "array",
+        "type": "net.sourceforge.plantuml.board.BArray",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.board.Activity.addRelease#946bb5e3": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stage",
+            "type": "int"
+          }, {
+            "name": "label",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.board.Activity.getArray#1": {
+          "returnType": "net.sourceforge.plantuml.board.BArray",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.board.Activity.getBox#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.board.Activity.getMaxStage#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.board.Activity.drawMe#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.board.Activity.Activity#95d92102": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "boardDiagram",
+            "type": "net.sourceforge.plantuml.board.BoardDiagram"
+          }, {
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.board.Activity.getFullWidth#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "75",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "120",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

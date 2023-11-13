@@ -1,0 +1,133 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "input__c.java",
+  "packageName": "gen.lib.common",
+  "importName": ["gen.lib.cgraph.attr__c.agattr", "gen.lib.cgraph.attr__c.agget", "gen.lib.cgraph.obj__c.agroot", "gen.lib.cgraph.refstr__c.aghtmlstr", "gen.lib.common.emit__c.init_xdot", "gen.lib.common.labels__c.make_label", "gen.lib.common.labels__c.strdup_and_subst_obj", "gen.lib.common.utils__c.late_double", "gen.lib.common.utils__c.late_int", "gen.lib.common.utils__c.late_nnstring", "gen.lib.common.utils__c.late_string", "gen.lib.common.utils__c.mapbool", "gen.lib.common.utils__c.maptoken", "smetana.core.JUtils.atof", "smetana.core.JUtils.atoi", "smetana.core.JUtils.getenv", "smetana.core.Macro.AGNODE", "smetana.core.Macro.AGRAPH", "smetana.core.Macro.BOTTOM_IX", "smetana.core.Macro.DEFAULT_NODESEP", "smetana.core.Macro.DEFAULT_RANKSEP", "smetana.core.Macro.GD_border", "smetana.core.Macro.GD_charset", "smetana.core.Macro.GD_drawing", "smetana.core.Macro.GD_exact_ranksep", "smetana.core.Macro.GD_flip", "smetana.core.Macro.GD_fontnames", "smetana.core.Macro.GD_has_labels", "smetana.core.Macro.GD_label", "smetana.core.Macro.GD_label_pos", "smetana.core.Macro.GD_nodesep", "smetana.core.Macro.GD_rankdir2", "smetana.core.Macro.GD_ranksep", "smetana.core.Macro.GD_showboxes", "smetana.core.Macro.GLOBAL", "smetana.core.Macro.GRAPH_LABEL", "smetana.core.Macro.GVBEGIN", "smetana.core.Macro.LABEL_AT_BOTTOM", "smetana.core.Macro.LABEL_AT_TOP", "smetana.core.Macro.LEFT_IX", "smetana.core.Macro.LOCAL", "smetana.core.Macro.LT_HTML", "smetana.core.Macro.LT_NONE", "smetana.core.Macro.MIN_NODESEP", "smetana.core.Macro.MYHUGE", "smetana.core.Macro.NOCLUST", "smetana.core.Macro.NODENAME_ESC", "smetana.core.Macro.PAD", "smetana.core.Macro.POINTS", "smetana.core.Macro.RANKDIR_LR", "smetana.core.Macro.RANKDIR_TB", "smetana.core.Macro.RIGHT_IX", "smetana.core.Macro.TOP_IX", "smetana.core.Macro.UNSUPPORTED", "smetana.core.Macro.agfindedgeattr", "smetana.core.Macro.agfindgraphattr", "smetana.core.Macro.agfindnodeattr", "smetana.core.Macro.streq", "smetana.core.debug.SmetanaDebug.ENTERING", "smetana.core.debug.SmetanaDebug.LEAVING", "gen.annotation.Original", "gen.annotation.Reviewed", "h.EN_fontname_kind", "h.ST_Agraph_s", "h.ST_layout_t", "h.ST_pointf", "smetana.core.CString", "smetana.core.Globals"],
+  "classData": {
+    "gen.lib.common.input__c": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "rankname",
+        "type": "CString[]",
+        "modifier": ["static"]
+      }, {
+        "name": "rankcode",
+        "type": "int[]",
+        "modifier": ["static"]
+      }, {
+        "name": "fontnamenames",
+        "type": "CString[]",
+        "modifier": ["static"]
+      }, {
+        "name": "fontnamecodes",
+        "type": "int[]",
+        "modifier": ["static"]
+      }],
+      "methodData": {
+        "gen.lib.common.input__c.setRatio#c8177730": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.input__c.getdoubles2ptf#d20373f0": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "name",
+            "type": "smetana.core.CString"
+          }, {
+            "name": "result",
+            "type": "h.ST_pointf"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.common.input__c.findCharset#e4865a9e": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.common.input__c.do_graph_label#c8177730": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "sg",
+            "type": "h.ST_Agraph_s"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "61",
+            "cyclomatic_complexity": "14",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "gen.lib.common.input__c.graph_init#3eb2daf8": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "zz",
+            "type": "smetana.core.Globals"
+          }, {
+            "name": "g",
+            "type": "h.ST_Agraph_s"
+          }, {
+            "name": "use_rankdir",
+            "type": "boolean"
+          }],
+          "annotation": ["gen.annotation.Reviewed", "gen.annotation.Original"],
+          "metric": {
+            "loc": "167",
+            "cyclomatic_complexity": "18",
+            "nestedBlockDepth": "5"
+          }
+        }
+      },
+      "metric": {
+        "loc": "302",
+        "cyclomatic_complexity": "37",
+        "cyclomatic_complexity_weighted": "7",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "418",
+    "cyclomatic_complexity": "7"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,110 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "ST_Agedge_s.java",
+  "packageName": "h",
+  "importName": ["smetana.core.FieldOffset", "smetana.core.__ptr__", "smetana.core.__struct__"],
+  "classData": {
+    "h.ST_Agedge_s": {
+      "type": "CLASS",
+      "modifier": ["final", "public"],
+      "field": [{
+        "name": "PREV",
+        "type": "h.ST_Agedge_s",
+        "modifier": ["public"]
+      }, {
+        "name": "NEXT",
+        "type": "h.ST_Agedge_s",
+        "modifier": ["public"]
+      }, {
+        "name": "base",
+        "type": "h.ST_Agobj_s",
+        "modifier": ["public", "final"]
+      }, {
+        "name": "id_link",
+        "type": "h.ST_dtlink_s",
+        "modifier": ["public", "final"]
+      }, {
+        "name": "seq_link",
+        "type": "h.ST_dtlink_s",
+        "modifier": ["public", "final"]
+      }, {
+        "name": "node",
+        "type": "h.ST_Agnode_s",
+        "modifier": ["public"]
+      }, {
+        "name": "NAME",
+        "type": "java.lang.String",
+        "modifier": ["public"]
+      }],
+      "methodData": {
+        "h.ST_Agedge_s.getTheField#7132762c": {
+          "returnType": "java.lang.Object",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "offset",
+            "type": "smetana.core.FieldOffset"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "h.ST_Agedge_s.___#18482274": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "arg",
+            "type": "smetana.core.__struct__"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "h.ST_Agedge_s.isSameThan#49ed1b8d": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "smetana.core.__ptr__"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "h.ST_Agedge_s.plus_#1980e": {
+          "returnType": "h.ST_Agedge_s",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pointerMove",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "h.ST_Agobj_s",
+      "metric": {
+        "loc": "53",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "105",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

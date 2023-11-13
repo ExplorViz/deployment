@@ -1,0 +1,346 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Opale.java",
+  "packageName": "net.sourceforge.plantuml.svek.image",
+  "importName": ["net.sourceforge.plantuml.klimt.UPath", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.utils.Direction", "net.sourceforge.plantuml.utils.MathUtils"],
+  "classData": {
+    "net.sourceforge.plantuml.svek.image.Opale": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.shape.TextBlock"],
+      "field": [{
+        "name": "cornersize",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "noteBackgroundColor",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "borderColor",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "marginX1",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "marginX2",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "marginY",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "shadowing2",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "strategy",
+        "type": "net.sourceforge.plantuml.utils.Direction",
+        "modifier": ["private"]
+      }, {
+        "name": "pp1",
+        "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+        "modifier": ["private"]
+      }, {
+        "name": "pp2",
+        "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+        "modifier": ["private"]
+      }, {
+        "name": "withLink",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "roundCorner",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "stroke",
+        "type": "net.sourceforge.plantuml.klimt.UStroke",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "textBlock",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "delta",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.svek.image.Opale.setRoundCorner#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "roundCorner",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.Opale.getPolygonRight#6777dc59": {
+          "returnType": "net.sourceforge.plantuml.klimt.UPath",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder",
+            "modifier": ["final "]
+          }, {
+            "name": "pp1",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+            "modifier": ["final "]
+          }, {
+            "name": "pp2",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.Opale.getWidth#395b4159": {
+          "returnType": "double",
+          "modifier": ["final", "private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.Opale.getPolygonNormal#6ff7ba10": {
+          "returnType": "net.sourceforge.plantuml.klimt.UPath",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "width",
+            "type": "double"
+          }, {
+            "name": "height",
+            "type": "double"
+          }, {
+            "name": "roundCorner",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.Opale.getHeight#395b4159": {
+          "returnType": "double",
+          "modifier": ["final", "private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.Opale.getPolygonDown#6777dc59": {
+          "returnType": "net.sourceforge.plantuml.klimt.UPath",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder",
+            "modifier": ["final "]
+          }, {
+            "name": "pp1",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+            "modifier": ["final "]
+          }, {
+            "name": "pp2",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.Opale.getMarginX1#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.Opale.Opale#cefa79b5": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "shadowing",
+            "type": "double"
+          }, {
+            "name": "borderColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "noteBackgroundColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "textBlock",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }, {
+            "name": "withLink",
+            "type": "boolean"
+          }, {
+            "name": "stroke",
+            "type": "net.sourceforge.plantuml.klimt.UStroke"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.Opale.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.Opale.getPolygonNormal#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.UPath",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.Opale.getPolygonUp#6777dc59": {
+          "returnType": "net.sourceforge.plantuml.klimt.UPath",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder",
+            "modifier": ["final "]
+          }, {
+            "name": "pp1",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+            "modifier": ["final "]
+          }, {
+            "name": "pp2",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.Opale.setOpale#1a0dcd3e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "strategy",
+            "type": "net.sourceforge.plantuml.utils.Direction"
+          }, {
+            "name": "pp1",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "pp2",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.Opale.getCorner#1eef7de1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UPath",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "width",
+            "type": "double"
+          }, {
+            "name": "roundCorner",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.Opale.getPolygonLeft#6777dc59": {
+          "returnType": "net.sourceforge.plantuml.klimt.UPath",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder",
+            "modifier": ["final "]
+          }, {
+            "name": "pp1",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+            "modifier": ["final "]
+          }, {
+            "name": "pp2",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.image.Opale.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "12",
+            "nestedBlockDepth": "6"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.shape.AbstractTextBlock",
+      "metric": {
+        "loc": "220",
+        "cyclomatic_complexity": "16",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "270",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

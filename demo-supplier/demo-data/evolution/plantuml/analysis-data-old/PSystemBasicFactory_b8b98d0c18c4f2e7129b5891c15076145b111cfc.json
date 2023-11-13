@@ -1,0 +1,113 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "PSystemBasicFactory.java",
+  "packageName": "net.sourceforge.plantuml.command",
+  "importName": ["java.util.Map", "net.sourceforge.plantuml.AbstractPSystem", "net.sourceforge.plantuml.ErrorUml", "net.sourceforge.plantuml.ErrorUmlType", "net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.core.DiagramType", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.error.PSystemErrorUtils", "net.sourceforge.plantuml.text.StringLocated", "net.sourceforge.plantuml.utils.StartUtils", "net.sourceforge.plantuml.version.IteratorCounter2"],
+  "classData": {
+    "net.sourceforge.plantuml.command.PSystemBasicFactory": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "methodData": {
+        "net.sourceforge.plantuml.command.PSystemBasicFactory.createSystem#a4c08de4": {
+          "returnType": "net.sourceforge.plantuml.core.Diagram",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "skinParam",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemBasicFactory.executeLine#3f546f": {
+          "returnType": "P",
+          "modifier": ["public", "abstract"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "system",
+            "type": "P"
+          }, {
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemBasicFactory.initDiagram#8f7443e3": {
+          "returnType": "P",
+          "modifier": ["public", "abstract"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "startLine",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemBasicFactory.PSystemBasicFactory#f29a7aac": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagramType",
+            "type": "net.sourceforge.plantuml.core.DiagramType"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemBasicFactory.isEmptyLine#49563e00": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "result",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.PSystemBasicFactory.PSystemBasicFactory#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.command.PSystemAbstractFactory",
+      "metric": {
+        "loc": "47",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "97",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "plantuml@gmail.com"
+}

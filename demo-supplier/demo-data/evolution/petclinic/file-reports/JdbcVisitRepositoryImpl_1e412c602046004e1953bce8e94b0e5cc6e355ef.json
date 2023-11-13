@@ -1,0 +1,91 @@
+{
+  "commitID": "1e412c602046004e1953bce8e94b0e5cc6e355ef",
+  "fileName": "JdbcVisitRepositoryImpl.java",
+  "packageName": "org.springframework.samples.petclinic.repository.jdbc",
+  "importName": ["org.springframework.beans.factory.annotation.Autowired", "org.springframework.dao.DataAccessException", "org.springframework.jdbc.core.JdbcTemplate", "org.springframework.jdbc.core.namedparam.MapSqlParameterSource", "org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate", "org.springframework.jdbc.core.simple.SimpleJdbcInsert", "org.springframework.samples.petclinic.model.Visit", "org.springframework.samples.petclinic.repository.VisitRepository", "org.springframework.stereotype.Repository", "javax.sql.DataSource", "java.util.HashMap", "java.util.List", "java.util.Map"],
+  "classData": {
+    "org.springframework.samples.petclinic.repository.jdbc.JdbcVisitRepositoryImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["org.springframework.samples.petclinic.repository.VisitRepository"],
+      "field": [{
+        "name": "jdbcTemplate",
+        "type": "org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate",
+        "modifier": ["private"]
+      }, {
+        "name": "insertVisit",
+        "type": "org.springframework.jdbc.core.simple.SimpleJdbcInsert",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.repository.jdbc.JdbcVisitRepositoryImpl.JdbcVisitRepositoryImpl#c2aa38a4": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dataSource",
+            "type": "javax.sql.DataSource"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jdbc.JdbcVisitRepositoryImpl.save#4ed5d4a": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "visit",
+            "type": "org.springframework.samples.petclinic.model.Visit"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jdbc.JdbcVisitRepositoryImpl.createVisitParameterSource#4ed5d4a": {
+          "returnType": "org.springframework.jdbc.core.namedparam.MapSqlParameterSource",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "visit",
+            "type": "org.springframework.samples.petclinic.model.Visit"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jdbc.JdbcVisitRepositoryImpl.findByPetId#d7ee193d": {
+          "returnType": "java.util.List\u003corg.springframework.samples.petclinic.model.Visit\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "petId",
+            "type": "java.lang.Integer"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "annotation": ["Repository"],
+      "metric": {
+        "loc": "58",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "91",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "antoine.rey@gmail.com",
+  "addedLines": 105
+}

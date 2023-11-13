@@ -1,0 +1,70 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "OutputStreamProtected.java",
+  "packageName": "net.sourceforge.plantuml.code.deflate",
+  "importName": ["java.io.ByteArrayOutputStream", "java.io.Closeable", "java.io.IOException"],
+  "classData": {
+    "net.sourceforge.plantuml.code.deflate.OutputStreamProtected": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["java.io.Closeable"],
+      "field": [{
+        "name": "MAX_OUTPUT_SIZE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "baos",
+        "type": "java.io.ByteArrayOutputStream",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "counter",
+        "type": "int",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.code.deflate.OutputStreamProtected.close#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.code.deflate.OutputStreamProtected.write#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "b",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.deflate.OutputStreamProtected.toByteArray#1": {
+          "returnType": "byte[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "25",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "33",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,435 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Style.java",
+  "packageName": "net.sourceforge.plantuml.style",
+  "importName": ["java.util.EnumMap", "java.util.Map", "java.util.Map.Entry", "java.util.StringTokenizer", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.klimt.Fashion", "net.sourceforge.plantuml.klimt.LineBreakStrategy", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.color.ColorType", "net.sourceforge.plantuml.klimt.color.Colors", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColorSet", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.UFont", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.TextBlockUtils"],
+  "classData": {
+    "net.sourceforge.plantuml.style.Style": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "map",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.style.PName, net.sourceforge.plantuml.style.Value\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "signature",
+        "type": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ID_TITLE",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ID_CAPTION",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "ID_LEGEND",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.style.Style.value#48c471a": {
+          "returnType": "net.sourceforge.plantuml.style.Value",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "net.sourceforge.plantuml.style.PName"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.eventuallyOverride#2136e857": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "param",
+            "type": "net.sourceforge.plantuml.style.PName"
+          }, {
+            "name": "value",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.applyStrokeAndLineColor#d6323fb5": {
+          "returnType": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "colorSet",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.eventuallyOverride#24ac0f0c": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stroke",
+            "type": "net.sourceforge.plantuml.klimt.UStroke"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.Style#7a19d1b8": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "signature",
+            "type": "net.sourceforge.plantuml.style.StyleSignatureBasic"
+          }, {
+            "name": "map",
+            "type": "java.util.Map\u003cnet.sourceforge.plantuml.style.PName, net.sourceforge.plantuml.style.Value\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.getFontConfiguration#1acfa7ca": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "set",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }, {
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.color.Colors"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.createTextBlockInternal#61aa968d": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "display",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "set",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }, {
+            "name": "spriteContainer",
+            "type": "net.sourceforge.plantuml.style.ISkinSimple"
+          }, {
+            "name": "alignment",
+            "type": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.createTextBlockBordered#5d437cbf": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "note",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "set",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }, {
+            "name": "spriteContainer",
+            "type": "net.sourceforge.plantuml.style.ISkinSimple"
+          }, {
+            "name": "id",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.deltaPriority#1980e": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "delta",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.eventuallyOverride#bbdc821": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "param",
+            "type": "net.sourceforge.plantuml.style.PName"
+          }, {
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.getFontConfiguration#919e5286": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "set",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.eventuallyOverride#78a3a9af": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.color.Colors"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.eventuallyOverride#22ffb5b7": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "symbolContext",
+            "type": "net.sourceforge.plantuml.klimt.Fashion"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.getStroke#9188e321": {
+          "returnType": "net.sourceforge.plantuml.klimt.UStroke",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "thicknessParam",
+            "type": "net.sourceforge.plantuml.style.PName",
+            "modifier": ["final "]
+          }, {
+            "name": "styleParam",
+            "type": "net.sourceforge.plantuml.style.PName",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.getUFont#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.UFont",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.getSymbolContext#919e5286": {
+          "returnType": "net.sourceforge.plantuml.klimt.Fashion",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "set",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.getMargin#1": {
+          "returnType": "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.getStroke#78a3a9af": {
+          "returnType": "net.sourceforge.plantuml.klimt.UStroke",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.color.Colors"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.getSymbolContext#1acfa7ca": {
+          "returnType": "net.sourceforge.plantuml.klimt.Fashion",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "set",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }, {
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.color.Colors"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.hasValue#48c471a": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "net.sourceforge.plantuml.style.PName"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.mergeWith#df8aabfb": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }, {
+            "name": "strategy",
+            "type": "net.sourceforge.plantuml.style.MergeStrategy"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.wrapWidth#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.LineBreakStrategy",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.getHorizontalAlignment#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.getSignature#1": {
+          "returnType": "net.sourceforge.plantuml.style.StyleSignatureBasic",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.eventuallyOverride#3df417f7": {
+          "returnType": "net.sourceforge.plantuml.style.Style",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "param",
+            "type": "net.sourceforge.plantuml.style.PName"
+          }, {
+            "name": "value",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.getPadding#1": {
+          "returnType": "net.sourceforge.plantuml.style.ClockwiseTopRightBottomLeft",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.printMe#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.Style.getStroke#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UStroke",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "262",
+        "cyclomatic_complexity": "28",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "321",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

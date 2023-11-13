@@ -1,0 +1,45 @@
+{
+  "commitID": "14f882221f9f12de71331ce3eac44c297150c373",
+  "fileName": "JpaVetRepositoryImpl.java",
+  "packageName": "org.springframework.samples.petclinic.repository.jpa",
+  "importName": ["org.springframework.cache.annotation.Cacheable", "org.springframework.samples.petclinic.model.Vet", "org.springframework.samples.petclinic.repository.VetRepository", "org.springframework.stereotype.Repository", "javax.persistence.EntityManager", "javax.persistence.PersistenceContext", "java.util.Collection"],
+  "classData": {
+    "org.springframework.samples.petclinic.repository.jpa.JpaVetRepositoryImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["org.springframework.samples.petclinic.repository.VetRepository"],
+      "field": [{
+        "name": "em",
+        "type": "javax.persistence.EntityManager",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.repository.jpa.JpaVetRepositoryImpl.findAll#1": {
+          "returnType": "java.util.Collection\u003corg.springframework.samples.petclinic.model.Vet\u003e",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override", "Cacheable", "java.lang.SuppressWarnings"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Repository"],
+      "metric": {
+        "loc": "15",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "41",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "gordon@gordondickens.com",
+  "modifiedLines": 10,
+  "addedLines": 4,
+  "deletedLines": 5
+}

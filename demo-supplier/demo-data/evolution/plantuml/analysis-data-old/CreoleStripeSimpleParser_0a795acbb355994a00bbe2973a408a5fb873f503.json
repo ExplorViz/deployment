@@ -1,0 +1,84 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "CreoleStripeSimpleParser.java",
+  "packageName": "net.sourceforge.plantuml.klimt.creole.legacy",
+  "importName": ["java.util.Objects", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.klimt.creole.CreoleContext", "net.sourceforge.plantuml.klimt.creole.CreoleMode", "net.sourceforge.plantuml.klimt.creole.Stripe", "net.sourceforge.plantuml.klimt.creole.StripeStyle", "net.sourceforge.plantuml.klimt.creole.StripeStyleType", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.regex.Matcher2", "net.sourceforge.plantuml.regex.MyPattern", "net.sourceforge.plantuml.regex.Pattern2", "net.sourceforge.plantuml.style.ISkinSimple", "net.sourceforge.plantuml.text.BackSlash", "net.sourceforge.plantuml.utils.CharHidder"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.creole.legacy.CreoleStripeSimpleParser": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "line",
+        "type": "java.lang.String",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "style",
+        "type": "net.sourceforge.plantuml.klimt.creole.StripeStyle",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "modeSimpleLine",
+        "type": "net.sourceforge.plantuml.klimt.creole.CreoleMode",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fontConfiguration",
+        "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.style.ISkinSimple",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.legacy.CreoleStripeSimpleParser.createStripe#a81e40bc": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Stripe",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.klimt.creole.CreoleContext"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.legacy.CreoleStripeSimpleParser.CreoleStripeSimpleParser#477cd357": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }, {
+            "name": "creoleContext",
+            "type": "net.sourceforge.plantuml.klimt.creole.CreoleContext"
+          }, {
+            "name": "fontConfiguration",
+            "type": "net.sourceforge.plantuml.klimt.font.FontConfiguration"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinSimple"
+          }, {
+            "name": "mode",
+            "type": "net.sourceforge.plantuml.klimt.creole.CreoleMode"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "92",
+            "cyclomatic_complexity": "14",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "109",
+        "cyclomatic_complexity": "14",
+        "cyclomatic_complexity_weighted": "14",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "162",
+    "cyclomatic_complexity": "14"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

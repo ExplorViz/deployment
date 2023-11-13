@@ -1,0 +1,211 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Rainbow.java",
+  "packageName": "net.sourceforge.plantuml.decoration",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.List", "java.util.Objects", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColorSet", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.color.NoSuchColorException", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.Style", "net.sourceforge.plantuml.style.Value", "net.sourceforge.plantuml.style.ValueNull"],
+  "classData": {
+    "net.sourceforge.plantuml.decoration.Rainbow": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "colors",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.decoration.HtmlColorAndStyle\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "colorArrowSeparationSpace",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.decoration.Rainbow.withDefault#9d4031b5": {
+          "returnType": "net.sourceforge.plantuml.decoration.Rainbow",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "defaultColor",
+            "type": "net.sourceforge.plantuml.decoration.Rainbow"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.Rainbow.isInvisible#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.Rainbow.getArrowHeadColor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.Rainbow.build#25dbdab7": {
+          "returnType": "net.sourceforge.plantuml.decoration.Rainbow",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "style",
+            "type": "net.sourceforge.plantuml.style.Style"
+          }, {
+            "name": "set",
+            "type": "net.sourceforge.plantuml.klimt.color.HColorSet"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.Rainbow.getColorArrowSeparationSpace#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.Rainbow.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.Rainbow.fromColor#d8258321": {
+          "returnType": "net.sourceforge.plantuml.decoration.Rainbow",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "arrowColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "arrowHeadColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.Rainbow.getColors#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.decoration.HtmlColorAndStyle\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.Rainbow.getColor#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.color.HColor",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.Rainbow.build#2c513b44": {
+          "returnType": "net.sourceforge.plantuml.decoration.Rainbow",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }, {
+            "name": "colorString",
+            "type": "java.lang.String"
+          }, {
+            "name": "colorArrowSeparationSpace",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.Rainbow.build#c18138b1": {
+          "returnType": "net.sourceforge.plantuml.decoration.Rainbow",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "color",
+            "type": "net.sourceforge.plantuml.decoration.HtmlColorAndStyle"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.Rainbow.size#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.Rainbow.none#1": {
+          "returnType": "net.sourceforge.plantuml.decoration.Rainbow",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.Rainbow.build#98f78ae6": {
+          "returnType": "net.sourceforge.plantuml.decoration.Rainbow",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "annotation": ["java.lang.Deprecated"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.Rainbow.Rainbow#1980e": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "colorArrowSeparationSpace",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "97",
+        "cyclomatic_complexity": "10",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "149",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

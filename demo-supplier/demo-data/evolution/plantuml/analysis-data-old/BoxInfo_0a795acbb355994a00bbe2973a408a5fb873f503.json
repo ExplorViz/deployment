@@ -1,0 +1,116 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "BoxInfo.java",
+  "packageName": "net.sourceforge.plantuml.sdot",
+  "importName": ["h.ST_Agnode_s", "h.ST_Agnodeinfo_t", "h.ST_Agraphinfo_t", "h.ST_boxf", "h.ST_textlabel_t", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D"],
+  "classData": {
+    "net.sourceforge.plantuml.sdot.BoxInfo": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "upperRight",
+        "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "lowerLeft",
+        "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sdot.BoxInfo.fromTextlabel#bfc57b5d": {
+          "returnType": "net.sourceforge.plantuml.sdot.BoxInfo",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "label",
+            "type": "h.ST_textlabel_t"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.BoxInfo.fromNode#de72c179": {
+          "returnType": "net.sourceforge.plantuml.sdot.BoxInfo",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "node",
+            "type": "h.ST_Agnode_s"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.BoxInfo.getLowerLeft#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.BoxInfo.getUpperRight#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.BoxInfo.getDimension#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.BoxInfo.BoxInfo#17e79101": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "upperRight",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "lowerLeft",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sdot.BoxInfo.fromGraphInfo#3dc10e4d": {
+          "returnType": "net.sourceforge.plantuml.sdot.BoxInfo",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "data",
+            "type": "h.ST_Agraphinfo_t"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "61",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "106",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

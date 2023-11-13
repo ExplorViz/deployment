@@ -1,0 +1,280 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "NumberAnalyzed2.java",
+  "packageName": "net.sourceforge.plantuml.api",
+  "importName": ["java.util.StringTokenizer", "java.util.concurrent.atomic.AtomicLong", "java.util.prefs.Preferences", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.api.NumberAnalyzed2": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.api.INumberAnalyzed"],
+      "field": [{
+        "name": "SLIDING_WINDOW",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "nb",
+        "type": "java.util.concurrent.atomic.AtomicLong",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "sum",
+        "type": "java.util.concurrent.atomic.AtomicLong",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "min",
+        "type": "java.util.concurrent.atomic.AtomicLong",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "max",
+        "type": "java.util.concurrent.atomic.AtomicLong",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "sumOfSquare",
+        "type": "java.util.concurrent.atomic.AtomicLong",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "sliddingSum",
+        "type": "java.util.concurrent.atomic.AtomicLong",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "name",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.NumberAnalyzed2#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.NumberAnalyzed2#943a4c50": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.reset#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.getCopyImmutable#1": {
+          "returnType": "net.sourceforge.plantuml.api.INumberAnalyzed",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.getSavedString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.longToString#7f15df86": {
+          "returnType": "java.lang.String",
+          "modifier": ["protected", "final"],
+          "parameter": [{
+            "name": "val",
+            "type": "java.util.concurrent.atomic.AtomicLong"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.getNb#1": {
+          "returnType": "long",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.getMin#1": {
+          "returnType": "long",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.NumberAnalyzed2#42649ed0": {
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "nb",
+            "type": "long"
+          }, {
+            "name": "sum",
+            "type": "long"
+          }, {
+            "name": "min",
+            "type": "long"
+          }, {
+            "name": "max",
+            "type": "long"
+          }, {
+            "name": "sumOfSquare",
+            "type": "long"
+          }, {
+            "name": "sliddingSum",
+            "type": "long"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.addValue#32c69b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "v",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.save#da0486f7": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "prefs",
+            "type": "java.util.prefs.Preferences"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.load#cd13c488": {
+          "returnType": "net.sourceforge.plantuml.api.NumberAnalyzed2",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "prefs",
+            "type": "java.util.prefs.Preferences"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.add#b47ce550": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.api.NumberAnalyzed2"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.getName#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["final", "public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.getSum#1": {
+          "returnType": "long",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.getSliddingMean#1": {
+          "returnType": "long",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.getMax#1": {
+          "returnType": "long",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.api.NumberAnalyzed2.getMean#1": {
+          "returnType": "long",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "145",
+        "cyclomatic_complexity": "13",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "182",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,116 @@
+{
+  "commitID": "e0ba8bfa74bcc0cf8aa08da5a53d0f5c6ecf6911",
+  "fileName": "JdbcPetRepositoryImpl.java",
+  "packageName": "org.springframework.samples.petclinic.repository.jdbc",
+  "importName": ["java.util.HashMap", "java.util.List", "java.util.Map", "javax.sql.DataSource", "org.springframework.beans.factory.annotation.Autowired", "org.springframework.dao.DataAccessException", "org.springframework.dao.EmptyResultDataAccessException", "org.springframework.jdbc.core.namedparam.MapSqlParameterSource", "org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate", "org.springframework.jdbc.core.simple.ParameterizedBeanPropertyRowMapper", "org.springframework.jdbc.core.simple.SimpleJdbcInsert", "org.springframework.orm.ObjectRetrievalFailureException", "org.springframework.samples.petclinic.model.Owner", "org.springframework.samples.petclinic.model.Pet", "org.springframework.samples.petclinic.model.PetType", "org.springframework.samples.petclinic.model.Visit", "org.springframework.samples.petclinic.repository.OwnerRepository", "org.springframework.samples.petclinic.repository.PetRepository", "org.springframework.samples.petclinic.repository.VisitRepository", "org.springframework.samples.petclinic.util.EntityUtils", "org.springframework.stereotype.Repository"],
+  "classData": {
+    "org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["org.springframework.samples.petclinic.repository.PetRepository"],
+      "field": [{
+        "name": "namedParameterJdbcTemplate",
+        "type": "org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate",
+        "modifier": ["private"]
+      }, {
+        "name": "insertPet",
+        "type": "org.springframework.jdbc.core.simple.SimpleJdbcInsert",
+        "modifier": ["private"]
+      }, {
+        "name": "ownerRepository",
+        "type": "org.springframework.samples.petclinic.repository.OwnerRepository",
+        "modifier": ["private"]
+      }, {
+        "name": "visitRepository",
+        "type": "org.springframework.samples.petclinic.repository.VisitRepository",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl.findById#1980e": {
+          "returnType": "org.springframework.samples.petclinic.model.Pet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "id",
+            "type": "int"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl.createPetParameterSource#1391e": {
+          "returnType": "org.springframework.jdbc.core.namedparam.MapSqlParameterSource",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "pet",
+            "type": "org.springframework.samples.petclinic.model.Pet"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl.JdbcPetRepositoryImpl#b13863dc": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dataSource",
+            "type": "javax.sql.DataSource"
+          }, {
+            "name": "ownerRepository",
+            "type": "org.springframework.samples.petclinic.repository.OwnerRepository"
+          }, {
+            "name": "visitRepository",
+            "type": "org.springframework.samples.petclinic.repository.VisitRepository"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl.save#1391e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pet",
+            "type": "org.springframework.samples.petclinic.model.Pet"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl.findPetTypes#1": {
+          "returnType": "java.util.List\u003corg.springframework.samples.petclinic.model.PetType\u003e",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Repository"],
+      "metric": {
+        "loc": "81",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "122",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "misvy@vmware.com",
+  "addedLines": 6,
+  "deletedLines": 5
+}

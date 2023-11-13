@@ -1,0 +1,193 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "SpriteWindow.java",
+  "packageName": "net.sourceforge.plantuml.swing",
+  "importName": ["java.awt.BorderLayout", "java.awt.Font", "java.awt.Toolkit", "java.awt.datatransfer.DataFlavor", "java.awt.datatransfer.Transferable", "java.awt.datatransfer.UnsupportedFlavorException", "java.awt.event.ActionEvent", "java.awt.event.ActionListener", "java.awt.image.BufferedImage", "java.io.IOException", "javax.swing.JFrame", "javax.swing.JScrollPane", "javax.swing.JTextArea", "javax.swing.SwingUtilities", "javax.swing.Timer", "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel", "net.sourceforge.plantuml.klimt.sprite.SpriteUtils", "net.sourceforge.plantuml.utils.Log", "net.sourceforge.plantuml.version.PSystemVersion"],
+  "classData": {
+    "net.sourceforge.plantuml.swing.SpriteWindow": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "area",
+        "type": "javax.swing.JTextArea",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "last",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.swing.SpriteWindow.printData#943a4c50": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.swing.SpriteWindow.encode#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.swing.SpriteWindow.encodeCompressed#f0e34129": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "img",
+            "type": "java.awt.image.BufferedImage"
+          }, {
+            "name": "level",
+            "type": "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel"
+          }, {
+            "name": "sb",
+            "type": "java.lang.StringBuilder"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.SpriteWindow.main#6ed80f72": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "args",
+            "type": "String[]"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.SpriteWindow.getClipboard#1": {
+          "returnType": "java.awt.image.BufferedImage",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.swing.SpriteWindow.encode#f0e34129": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "img",
+            "type": "java.awt.image.BufferedImage"
+          }, {
+            "name": "level",
+            "type": "net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel"
+          }, {
+            "name": "sb",
+            "type": "java.lang.StringBuilder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.SpriteWindow.SpriteWindow#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.swing.SpriteWindow.startTimer#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.swing.SpriteWindow.tick#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.swing.SpriteWindow.encodeColor#73ddbdcf": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "img",
+            "type": "java.awt.image.BufferedImage"
+          }, {
+            "name": "sb",
+            "type": "java.lang.StringBuilder"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "javax.swing.JFrame",
+      "metric": {
+        "loc": "106",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "3"
+      }
+    },
+    "net.sourceforge.plantuml.swing.SpriteWindow.startTimer#1.ActionListener": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.swing.SpriteWindow.startTimer#1.ActionListener.actionPerformed#c0621e03": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "e",
+            "type": "java.awt.event.ActionEvent"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.swing.SpriteWindow.tick#1.Runnable": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.swing.SpriteWindow.tick#1.Runnable.run#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "165",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,147 @@
+{
+  "commitID": "c9c8c4e085015b14ca6c3db077bac05e36859907",
+  "fileName": "JpaClinicImpl.java",
+  "packageName": "org.springframework.samples.petclinic.repository.jpa",
+  "importName": ["java.util.Collection", "javax.persistence.EntityManager", "javax.persistence.PersistenceContext", "javax.persistence.Query", "org.springframework.samples.petclinic.Owner", "org.springframework.samples.petclinic.Pet", "org.springframework.samples.petclinic.PetType", "org.springframework.samples.petclinic.Vet", "org.springframework.samples.petclinic.Visit", "org.springframework.samples.petclinic.service.ClinicService", "org.springframework.stereotype.Repository", "org.springframework.transaction.annotation.Transactional", "org.springframework.dao.DataAccessException"],
+  "classData": {
+    "org.springframework.samples.petclinic.repository.jpa.JpaClinicImpl": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["org.springframework.samples.petclinic.service.ClinicService"],
+      "field": [{
+        "name": "em",
+        "type": "javax.persistence.EntityManager",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.repository.jpa.JpaClinicImpl.findOwner#1980e": {
+          "returnType": "org.springframework.samples.petclinic.Owner",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "id",
+            "type": "int"
+          }],
+          "annotation": ["Transactional"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jpa.JpaClinicImpl.storeVisit#4ed5d4a": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "visit",
+            "type": "org.springframework.samples.petclinic.Visit"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jpa.JpaClinicImpl.findOwners#943a4c50": {
+          "returnType": "java.util.Collection\u003corg.springframework.samples.petclinic.Owner\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "lastName",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["Transactional", "java.lang.SuppressWarnings"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jpa.JpaClinicImpl.storeOwner#49102b2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.Owner"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jpa.JpaClinicImpl.findPet#1980e": {
+          "returnType": "org.springframework.samples.petclinic.Pet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "id",
+            "type": "int"
+          }],
+          "annotation": ["Transactional"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jpa.JpaClinicImpl.getVets#1": {
+          "returnType": "java.util.Collection\u003corg.springframework.samples.petclinic.Vet\u003e",
+          "modifier": ["public"],
+          "annotation": ["Transactional", "java.lang.SuppressWarnings"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jpa.JpaClinicImpl.getPetTypes#1": {
+          "returnType": "java.util.Collection\u003corg.springframework.samples.petclinic.PetType\u003e",
+          "modifier": ["public"],
+          "annotation": ["Transactional", "java.lang.SuppressWarnings"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jpa.JpaClinicImpl.storePet#1391e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pet",
+            "type": "org.springframework.samples.petclinic.Pet"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.repository.jpa.JpaClinicImpl.deletePet#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "id",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Repository", "Transactional"],
+      "metric": {
+        "loc": "57",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "75",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "misvy@vmware.com",
+  "addedLines": 86
+}

@@ -1,0 +1,68 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "AcceptTelnetClient.java",
+  "packageName": "net.sourceforge.plantuml.telnet",
+  "importName": ["java.io.BufferedReader", "java.io.IOException", "java.io.InputStreamReader", "java.io.OutputStream", "java.net.Socket", "net.sourceforge.plantuml.FileFormat", "net.sourceforge.plantuml.FileFormatOption", "net.sourceforge.plantuml.SourceStringReader", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.telnet.AcceptTelnetClient": {
+      "type": "CLASS",
+      "field": [{
+        "name": "clientSocket",
+        "type": "java.net.Socket",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "br",
+        "type": "java.io.BufferedReader",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "os",
+        "type": "java.io.OutputStream",
+        "modifier": ["final", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.telnet.AcceptTelnetClient.AcceptTelnetClient#93ed0bb2": {
+          "parameter": [{
+            "name": "socket",
+            "type": "java.net.Socket"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.telnet.AcceptTelnetClient.run#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.telnet.AcceptTelnetClient.runInternal#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "superClass": "java.lang.Thread",
+      "metric": {
+        "loc": "44",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "93",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

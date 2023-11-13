@@ -1,0 +1,120 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "ULayoutGroup.java",
+  "packageName": "net.sourceforge.plantuml.klimt.geom",
+  "importName": ["java.util.Map", "java.util.Map.Entry", "java.util.Set", "net.atmp.InnerStrategy", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.shape.TextBlock"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.geom.ULayoutGroup": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "placementStrategy",
+        "type": "net.sourceforge.plantuml.klimt.geom.PlacementStrategy",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.geom.ULayoutGroup.drawU#6cd93692": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "width",
+            "type": "double"
+          }, {
+            "name": "height",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.ULayoutGroup.getInnerPosition#64919cca": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XRectangle2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "member",
+            "type": "java.lang.String"
+          }, {
+            "name": "width",
+            "type": "double"
+          }, {
+            "name": "height",
+            "type": "double"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.ULayoutGroup.tryOne#2afede87": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XRectangle2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "all",
+            "type": "java.util.Set\u003cjava.util.Map.Entry\u003cnet.sourceforge.plantuml.klimt.shape.TextBlock, net.sourceforge.plantuml.klimt.geom.XPoint2D\u003e\u003e",
+            "modifier": ["final "]
+          }, {
+            "name": "member",
+            "type": "java.lang.String"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "mode",
+            "type": "net.atmp.InnerStrategy"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.ULayoutGroup.add#37fde35f": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "block",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.geom.ULayoutGroup.ULayoutGroup#7711a577": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "placementStrategy",
+            "type": "net.sourceforge.plantuml.klimt.geom.PlacementStrategy"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "44",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "91",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

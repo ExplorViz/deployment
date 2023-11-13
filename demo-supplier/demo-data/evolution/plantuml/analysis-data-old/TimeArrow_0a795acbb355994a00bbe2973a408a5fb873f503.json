@@ -1,0 +1,204 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "TimeArrow.java",
+  "packageName": "net.sourceforge.plantuml.timingdiagram.graphic",
+  "importName": ["net.sourceforge.plantuml.decoration.WithLinkType", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.FontConfiguration", "net.sourceforge.plantuml.klimt.font.UFont", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.UDrawable", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.klimt.shape.UPolygon", "net.sourceforge.plantuml.style.ISkinSimple"],
+  "classData": {
+    "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.shape.UDrawable"],
+      "field": [{
+        "name": "start",
+        "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "end",
+        "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "label",
+        "type": "net.sourceforge.plantuml.klimt.creole.Display",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "spriteContainer",
+        "type": "net.sourceforge.plantuml.style.ISkinSimple",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "type",
+        "type": "net.sourceforge.plantuml.decoration.WithLinkType",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow.onCircle#c81fd068": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "pt",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "alpha",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow.TimeArrow#1f7a8d23": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "start",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "end",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "spriteContainer",
+            "type": "net.sourceforge.plantuml.style.ISkinSimple"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.decoration.WithLinkType"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow.translate#d295a098": {
+          "returnType": "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "translate",
+            "type": "net.sourceforge.plantuml.klimt.UTranslate"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow.shorter#32d57e81": {
+          "returnType": "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "arrow1",
+            "type": "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow"
+          }, {
+            "name": "arrow2",
+            "type": "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow"
+          }, {
+            "name": "arrow3",
+            "type": "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow"
+          }, {
+            "name": "arrow4",
+            "type": "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow.len#1": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow.shorter#ff412741": {
+          "returnType": "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "arrow1",
+            "type": "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow"
+          }, {
+            "name": "arrow2",
+            "type": "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow.getFontConfiguration#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.font.FontConfiguration",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow.getAngle#1": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow.create#1e6b6243": {
+          "returnType": "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "pt1",
+            "type": "net.sourceforge.plantuml.timingdiagram.graphic.IntricatedPoint"
+          }, {
+            "name": "pt2",
+            "type": "net.sourceforge.plantuml.timingdiagram.graphic.IntricatedPoint"
+          }, {
+            "name": "label",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }, {
+            "name": "spriteContainer",
+            "type": "net.sourceforge.plantuml.style.ISkinSimple"
+          }, {
+            "name": "type",
+            "type": "net.sourceforge.plantuml.decoration.WithLinkType"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.graphic.TimeArrow.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "29",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "94",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "146",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,117 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "GraphicalComposite.java",
+  "packageName": "jcckit.graphic",
+  "importName": ["java.util.Vector"],
+  "classData": {
+    "jcckit.graphic.GraphicalComposite": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["jcckit.graphic.GraphicalElement"],
+      "field": [{
+        "name": "_elements",
+        "type": "java.util.Vector",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_clippingShape",
+        "type": "jcckit.graphic.ClippingShape",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "jcckit.graphic.GraphicalComposite.addElement#2cee0aa8": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "element",
+            "type": "jcckit.graphic.GraphicalElement"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.graphic.GraphicalComposite.removeAllElements#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.graphic.GraphicalComposite.throwNullPointerException#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.graphic.GraphicalComposite.GraphicalComposite#85ea3bfe": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "clippingShape",
+            "type": "jcckit.graphic.ClippingShape"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.graphic.GraphicalComposite.getClippingShape#1": {
+          "returnType": "jcckit.graphic.ClippingShape",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.graphic.GraphicalComposite.replaceElementAt#2d1f743b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "index",
+            "type": "int"
+          }, {
+            "name": "element",
+            "type": "jcckit.graphic.GraphicalElement"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.graphic.GraphicalComposite.renderWith#e65ba502": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "renderer",
+            "type": "jcckit.graphic.Renderer"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "51",
+        "cyclomatic_complexity": "9",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "73",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

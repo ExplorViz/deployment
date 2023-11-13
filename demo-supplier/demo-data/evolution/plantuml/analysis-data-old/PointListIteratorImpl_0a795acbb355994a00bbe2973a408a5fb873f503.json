@@ -1,0 +1,99 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "PointListIteratorImpl.java",
+  "packageName": "net.sourceforge.plantuml.svek",
+  "importName": ["java.util.Collections", "java.util.List", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.svek.PointListIteratorImpl": {
+      "type": "CLASS",
+      "interface": ["net.sourceforge.plantuml.svek.PointListIterator"],
+      "field": [{
+        "name": "svg",
+        "type": "net.sourceforge.plantuml.svek.SvgResult",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "pos",
+        "type": "int",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.svek.PointListIteratorImpl.cloneMe#1": {
+          "returnType": "net.sourceforge.plantuml.svek.PointListIterator",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.PointListIteratorImpl.remove#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.PointListIteratorImpl.PointListIteratorImpl#ce4f37a0": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "svg",
+            "type": "net.sourceforge.plantuml.svek.SvgResult"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.svek.PointListIteratorImpl.create#fb99544f": {
+          "returnType": "net.sourceforge.plantuml.svek.PointListIterator",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "svg",
+            "type": "net.sourceforge.plantuml.svek.SvgResult"
+          }, {
+            "name": "lineColor",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.svek.PointListIteratorImpl.next#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.klimt.geom.XPoint2D\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.svek.PointListIteratorImpl.hasNext#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "52",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "95",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

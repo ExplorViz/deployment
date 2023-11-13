@@ -1,0 +1,104 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "StyleLoader.java",
+  "packageName": "net.sourceforge.plantuml.style",
+  "importName": ["java.io.IOException", "java.io.InputStream", "java.util.EnumMap", "java.util.Map", "java.util.Map.Entry", "net.sourceforge.plantuml.FileSystem", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.skin.SkinParam", "net.sourceforge.plantuml.style.parser.StyleParser", "net.sourceforge.plantuml.style.parser.StyleParsingException", "net.sourceforge.plantuml.utils.BlocLines", "net.sourceforge.plantuml.utils.LineLocationImpl", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.style.StyleLoader": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "skinParam",
+        "type": "net.sourceforge.plantuml.skin.SkinParam",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "styleBuilder",
+        "type": "net.sourceforge.plantuml.style.StyleBuilder",
+        "modifier": ["private"]
+      }, {
+        "name": "DELTA_PRIORITY_FOR_STEREOTYPE",
+        "type": "int",
+        "modifier": ["public", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.style.StyleLoader.addPriorityForStereotype#be9d6b7d": {
+          "returnType": "java.util.Map\u003cnet.sourceforge.plantuml.style.PName, net.sourceforge.plantuml.style.Value\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "tmp",
+            "type": "java.util.Map\u003cnet.sourceforge.plantuml.style.PName, net.sourceforge.plantuml.style.Value\u003e"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.StyleLoader.StyleLoader#f006490f": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.skin.SkinParam"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.style.StyleLoader.getInputStreamForStyle#943a4c50": {
+          "returnType": "java.io.InputStream",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "filename",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.style.StyleLoader.loadSkin#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.style.StyleBuilder",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "filename",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.style.StyleLoader.loadSkinInternal#a9c76200": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "lines",
+            "type": "net.sourceforge.plantuml.utils.BlocLines",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "69",
+        "cyclomatic_complexity": "12",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "121",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

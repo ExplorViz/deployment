@@ -1,0 +1,205 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CommandExecutionResult.java",
+  "packageName": "net.sourceforge.plantuml.command",
+  "importName": ["java.util.ArrayList", "java.util.List", "net.sourceforge.plantuml.AbstractPSystem"],
+  "classData": {
+    "net.sourceforge.plantuml.command.CommandExecutionResult": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "error",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "newDiagram",
+        "type": "net.sourceforge.plantuml.AbstractPSystem",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "debugLines",
+        "type": "java.util.List\u003cjava.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "score",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.command.CommandExecutionResult.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandExecutionResult.error#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "error",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandExecutionResult.getScore#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandExecutionResult.getDebugLines#1": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandExecutionResult.error#1fa8b6d0": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "error",
+            "type": "java.lang.String"
+          }, {
+            "name": "t",
+            "type": "java.lang.Throwable"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandExecutionResult.getStackTrace#2c99793f": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "exception",
+            "type": "java.lang.Throwable"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandExecutionResult.badColor#1": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandExecutionResult.getError#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandExecutionResult.newDiagram#4b96a03c": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "result",
+            "type": "net.sourceforge.plantuml.AbstractPSystem"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandExecutionResult.CommandExecutionResult#4eea5555": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "newDiagram",
+            "type": "net.sourceforge.plantuml.AbstractPSystem"
+          }, {
+            "name": "error",
+            "type": "java.lang.String"
+          }, {
+            "name": "score",
+            "type": "int"
+          }, {
+            "name": "debugLines",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandExecutionResult.ok#1": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandExecutionResult.isOk#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandExecutionResult.withDiagram#4b96a03c": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "newDiagram",
+            "type": "net.sourceforge.plantuml.AbstractPSystem"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.command.CommandExecutionResult.getNewDiagram#1": {
+          "returnType": "net.sourceforge.plantuml.AbstractPSystem",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "85",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "127",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

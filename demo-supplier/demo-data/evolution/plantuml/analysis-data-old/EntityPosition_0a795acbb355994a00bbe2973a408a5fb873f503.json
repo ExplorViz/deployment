@@ -1,0 +1,195 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "EntityPosition.java",
+  "packageName": "net.sourceforge.plantuml.abel",
+  "importName": ["java.util.EnumSet", "net.sourceforge.plantuml.klimt.Shadowable", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.geom.Rankdir", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.UEllipse", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.klimt.shape.URectangle", "net.sourceforge.plantuml.svek.ShapeType"],
+  "classData": {
+    "net.sourceforge.plantuml.abel.EntityPosition": {
+      "type": "ENUM",
+      "modifier": ["public"],
+      "field": [{
+        "name": "RADIUS",
+        "type": "double",
+        "modifier": ["public", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.abel.EntityPosition.usePortP#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.EntityPosition.getPointOnCircle#3ff703c1": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XPoint2D",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "xc",
+            "type": "double"
+          }, {
+            "name": "yc",
+            "type": "double"
+          }, {
+            "name": "angle",
+            "type": "double"
+          }, {
+            "name": "radius",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.EntityPosition.getNormals#1": {
+          "returnType": "java.util.EnumSet\u003cnet.sourceforge.plantuml.abel.EntityPosition\u003e",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.EntityPosition.getInputs#1": {
+          "returnType": "java.util.EnumSet\u003cnet.sourceforge.plantuml.abel.EntityPosition\u003e",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.EntityPosition.isNormal#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.EntityPosition.fromStereotype#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.abel.EntityPosition",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "label",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.EntityPosition.isInput#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.EntityPosition.isOutput#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.EntityPosition.getShapeType#1": {
+          "returnType": "net.sourceforge.plantuml.svek.ShapeType",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.abel.EntityPosition.drawSymbol#e2193e0f": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "rankdir",
+            "type": "net.sourceforge.plantuml.klimt.geom.Rankdir"
+          }],
+          "metric": {
+            "loc": "36",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.abel.EntityPosition.isPort#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.EntityPosition.drawLine#65d149b2": {
+          "returnType": "void",
+          "modifier": ["static", "private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "p1",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }, {
+            "name": "p2",
+            "type": "net.sourceforge.plantuml.klimt.geom.XPoint2D"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.abel.EntityPosition.getDimension#9d8550e0": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "rankdir",
+            "type": "net.sourceforge.plantuml.klimt.geom.Rankdir"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.abel.EntityPosition.getOutputs#1": {
+          "returnType": "java.util.EnumSet\u003cnet.sourceforge.plantuml.abel.EntityPosition\u003e",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "enumConstant": ["NORMAL", "ENTRY_POINT", "EXIT_POINT", "INPUT_PIN", "OUTPUT_PIN", "EXPANSION_INPUT", "EXPANSION_OUTPUT", "PORTIN", "PORTOUT"],
+      "metric": {
+        "loc": "133",
+        "cyclomatic_complexity": "24",
+        "cyclomatic_complexity_weighted": "6",
+        "LCOM4": "8"
+      }
+    }
+  },
+  "metric": {
+    "loc": "184",
+    "cyclomatic_complexity": "6"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

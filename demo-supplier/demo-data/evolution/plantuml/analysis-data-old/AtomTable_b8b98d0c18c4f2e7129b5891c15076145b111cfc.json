@@ -1,0 +1,328 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "AtomTable.java",
+  "packageName": "net.sourceforge.plantuml.klimt.creole.atom",
+  "importName": ["java.util.ArrayList", "java.util.HashMap", "java.util.List", "java.util.Map", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.creole.Position", "net.sourceforge.plantuml.klimt.creole.SheetBlock1", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.HorizontalAlignment", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.klimt.shape.URectangle"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.Line": {
+      "type": "CLASS",
+      "field": [{
+        "name": "cells",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.atom.Atom\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "cellsBackColor",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.color.HColor\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "lineBackColor",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.Line.size#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.Line.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.Line.add#828b906b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "net.sourceforge.plantuml.klimt.creole.atom.Atom"
+          }, {
+            "name": "cellBackColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.Line.Line#7ec12c1a": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "lineBackColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "23",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.klimt.creole.atom.AtomTable": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.creole.atom.Atom"],
+      "field": [{
+        "name": "lines",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.creole.atom.AtomTable.Line\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "positions",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.klimt.creole.atom.Atom, net.sourceforge.plantuml.klimt.creole.Position\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "lineColor",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.klimt.creole.atom.AtomTable.Line"],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.getNbLines#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.getEndingY#1980e": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.addCell#828b906b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "net.sourceforge.plantuml.klimt.creole.atom.Atom"
+          }, {
+            "name": "cellBackColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.initMap#395b4159": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.calculateDimension#395b4159": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.getPosition#3301a1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Position",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "int"
+          }, {
+            "name": "col",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.drawU#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "56",
+            "cyclomatic_complexity": "12",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.getStartingAltitude#395b4159": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.getNbCols#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.getColWidth#1980e": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "col",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.lastLine#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.Line",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.AtomTable#7ec12c1a": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "lineColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.getStartingY#1980e": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.newLine#7ec12c1a": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "lineBackColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.getLineHeight#1980e": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.getEndingX#1980e": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "col",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.creole.atom.AtomTable.getStartingX#1980e": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "col",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.creole.atom.AbstractAtom",
+      "metric": {
+        "loc": "216",
+        "cyclomatic_complexity": "27",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "16"
+      }
+    }
+  },
+  "metric": {
+    "loc": "270",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

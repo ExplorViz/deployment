@@ -1,0 +1,143 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Positionner2.java",
+  "packageName": "net.sourceforge.plantuml.salt",
+  "importName": ["java.util.Collections", "java.util.LinkedHashMap", "java.util.Map", "net.sourceforge.plantuml.salt.element.Element"],
+  "classData": {
+    "net.sourceforge.plantuml.salt.Positionner2": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "row",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "col",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "maxRow",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "maxCol",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "positions",
+        "type": "java.util.Map\u003cnet.sourceforge.plantuml.salt.element.Element, net.sourceforge.plantuml.salt.Cell\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "last",
+        "type": "net.sourceforge.plantuml.salt.Cell",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.salt.Positionner2.addWithoutMove#1bb6fb": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "elmt",
+            "type": "net.sourceforge.plantuml.salt.element.Element"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.Positionner2.getAll#1": {
+          "returnType": "java.util.Map\u003cnet.sourceforge.plantuml.salt.element.Element, net.sourceforge.plantuml.salt.Cell\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.Positionner2.getNbCols#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.Positionner2.getNbRows#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.Positionner2.add#b2f61a5a": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "element",
+            "type": "net.sourceforge.plantuml.salt.Terminated\u003cnet.sourceforge.plantuml.salt.element.Element\u003e"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.salt.Positionner2.moveNextRow#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.Positionner2.mergeLeft#28ceeba6": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "terminator",
+            "type": "net.sourceforge.plantuml.salt.Terminator"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.salt.Positionner2.updateMax#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.salt.Positionner2.moveNextColumn#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "70",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "113",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

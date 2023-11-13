@@ -1,0 +1,151 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "GraphvizSolverB.java",
+  "packageName": "net.sourceforge.plantuml.posimo",
+  "importName": ["java.nio.charset.StandardCharsets.UTF_8", "java.io.ByteArrayOutputStream", "java.io.IOException", "java.io.OutputStream", "java.util.Collection", "java.util.List", "java.util.regex.Matcher", "java.util.regex.Pattern", "net.sourceforge.plantuml.dot.Graphviz", "net.sourceforge.plantuml.dot.GraphvizUtils", "net.sourceforge.plantuml.dot.ProcessState", "net.sourceforge.plantuml.klimt.geom.MinFinder", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.DotPath", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.svek.SvgResult", "net.sourceforge.plantuml.svek.YDelta"],
+  "classData": {
+    "net.sourceforge.plantuml.posimo.GraphvizSolverB": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "net.sourceforge.plantuml.posimo.GraphvizSolverB.getMaxY#2662a3b5": {
+          "returnType": "double",
+          "modifier": ["static", "private"],
+          "parameter": [{
+            "name": "points",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.geom.XPoint2D\u003e"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.GraphvizSolverB.getMinY#2662a3b5": {
+          "returnType": "double",
+          "modifier": ["static", "private"],
+          "parameter": [{
+            "name": "points",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.geom.XPoint2D\u003e"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.GraphvizSolverB.extractPointsList#ad6f920": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.klimt.geom.XPoint2D\u003e",
+          "modifier": ["static", "private"],
+          "parameter": [{
+            "name": "svg",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }, {
+            "name": "starting",
+            "type": "int",
+            "modifier": ["final "]
+          }, {
+            "name": "yDelta",
+            "type": "net.sourceforge.plantuml.svek.YDelta",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.GraphvizSolverB.getPath#93ad519a": {
+          "returnType": "net.sourceforge.plantuml.posimo.Path",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "paths",
+            "type": "java.util.Collection\u003cnet.sourceforge.plantuml.posimo.Path\u003e"
+          }, {
+            "name": "start",
+            "type": "int"
+          }, {
+            "name": "end",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.GraphvizSolverB.getMaxX#2662a3b5": {
+          "returnType": "double",
+          "modifier": ["static", "private"],
+          "parameter": [{
+            "name": "points",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.geom.XPoint2D\u003e"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.GraphvizSolverB.getMinX#2662a3b5": {
+          "returnType": "double",
+          "modifier": ["static", "private"],
+          "parameter": [{
+            "name": "points",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.geom.XPoint2D\u003e"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.GraphvizSolverB.exportPng#f7c2461f": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "dotString",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }, {
+            "name": "f",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.posimo.GraphvizSolverB.solve#86d18f42": {
+          "returnType": "net.sourceforge.plantuml.klimt.geom.XDimension2D",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "root",
+            "type": "net.sourceforge.plantuml.posimo.Cluster"
+          }, {
+            "name": "paths",
+            "type": "java.util.Collection\u003cnet.sourceforge.plantuml.posimo.Path\u003e"
+          }],
+          "metric": {
+            "loc": "81",
+            "cyclomatic_complexity": "14",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "149",
+        "cyclomatic_complexity": "28",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "207",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

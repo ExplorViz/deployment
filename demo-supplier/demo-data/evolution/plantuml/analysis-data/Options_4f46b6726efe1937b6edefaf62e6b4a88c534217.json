@@ -1,0 +1,88 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Options.java",
+  "packageName": "net.sourceforge.plantuml.zopfli",
+  "classData": {
+    "net.sourceforge.plantuml.zopfli.Options.BlockSplitting": {
+      "type": "ENUM",
+      "modifier": ["public", "static"],
+      "enumConstant": ["FIRST", "LAST", "NONE"],
+      "metric": {
+        "loc": "3",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.zopfli.Options": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "numIterations",
+        "type": "int",
+        "modifier": ["public", "final"]
+      }, {
+        "name": "blockSplitting",
+        "type": "net.sourceforge.plantuml.zopfli.Options.BlockSplitting",
+        "modifier": ["public", "final"]
+      }, {
+        "name": "outputType",
+        "type": "net.sourceforge.plantuml.zopfli.Options.OutputFormat",
+        "modifier": ["public", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.zopfli.Options.BlockSplitting", "net.sourceforge.plantuml.zopfli.Options.OutputFormat"],
+      "methodData": {
+        "net.sourceforge.plantuml.zopfli.Options.Options#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Options.Options#c281370b": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "outputType",
+            "type": "net.sourceforge.plantuml.zopfli.Options.OutputFormat"
+          }, {
+            "name": "blockSplitting",
+            "type": "net.sourceforge.plantuml.zopfli.Options.BlockSplitting"
+          }, {
+            "name": "numIterations",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "23",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.zopfli.Options.OutputFormat": {
+      "type": "ENUM",
+      "modifier": ["public", "static"],
+      "enumConstant": ["DEFLATE", "GZIP", "ZLIB"],
+      "metric": {
+        "loc": "3",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "43",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

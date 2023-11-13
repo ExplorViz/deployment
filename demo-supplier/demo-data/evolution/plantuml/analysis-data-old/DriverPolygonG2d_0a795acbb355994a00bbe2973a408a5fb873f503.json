@@ -1,0 +1,80 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "DriverPolygonG2d.java",
+  "packageName": "net.sourceforge.plantuml.klimt.drawing.g2d",
+  "importName": ["java.awt.BasicStroke", "java.awt.GradientPaint", "java.awt.Graphics2D", "java.awt.geom.GeneralPath", "net.sourceforge.plantuml.klimt.UParam", "net.sourceforge.plantuml.klimt.color.ColorMapper", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColorGradient", "net.sourceforge.plantuml.klimt.drawing.UDriver", "net.sourceforge.plantuml.klimt.geom.EnsureVisible", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.UPolygon"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.drawing.g2d.DriverPolygonG2d": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.drawing.UDriver\u003cnet.sourceforge.plantuml.klimt.shape.UPolygon, java.awt.Graphics2D\u003e"],
+      "field": [{
+        "name": "dpiFactor",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "visible",
+        "type": "net.sourceforge.plantuml.klimt.geom.EnsureVisible",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.drawing.g2d.DriverPolygonG2d.draw#a820f385": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.UPolygon"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "mapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }, {
+            "name": "param",
+            "type": "net.sourceforge.plantuml.klimt.UParam"
+          }, {
+            "name": "g2d",
+            "type": "java.awt.Graphics2D"
+          }],
+          "metric": {
+            "loc": "63",
+            "cyclomatic_complexity": "17",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.drawing.g2d.DriverPolygonG2d.DriverPolygonG2d#f457c44": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dpiFactor",
+            "type": "double"
+          }, {
+            "name": "visible",
+            "type": "net.sourceforge.plantuml.klimt.geom.EnsureVisible"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.drawing.g2d.DriverShadowedG2d",
+      "metric": {
+        "loc": "75",
+        "cyclomatic_complexity": "17",
+        "cyclomatic_complexity_weighted": "17",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "126",
+    "cyclomatic_complexity": "17"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

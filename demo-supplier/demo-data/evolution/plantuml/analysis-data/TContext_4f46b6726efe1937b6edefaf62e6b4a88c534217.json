@@ -1,0 +1,669 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "TContext.java",
+  "packageName": "net.sourceforge.plantuml.tim",
+  "importName": ["java.util.Objects.requireNonNull", "java.io.IOException", "java.io.Reader", "java.nio.charset.Charset", "java.util.ArrayList", "java.util.Collections", "java.util.HashMap", "java.util.HashSet", "java.util.List", "java.util.Map", "java.util.Set", "net.sourceforge.plantuml.DefinitionsContainer", "net.sourceforge.plantuml.FileSystem", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.json.Json", "net.sourceforge.plantuml.json.JsonValue", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.preproc.Defines", "net.sourceforge.plantuml.preproc.FileWithSuffix", "net.sourceforge.plantuml.preproc.ImportedFiles", "net.sourceforge.plantuml.preproc.ReadLine", "net.sourceforge.plantuml.preproc.ReadLineList", "net.sourceforge.plantuml.preproc.ReadLineReader", "net.sourceforge.plantuml.preproc.StartDiagramExtractReader", "net.sourceforge.plantuml.preproc.Sub", "net.sourceforge.plantuml.preproc.UncommentReadLine", "net.sourceforge.plantuml.preproc2.PreprocessorIncludeStrategy", "net.sourceforge.plantuml.preproc2.PreprocessorUtils", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.security.SURL", "net.sourceforge.plantuml.text.StringLocated", "net.sourceforge.plantuml.text.TLineType", "net.sourceforge.plantuml.theme.ThemeUtils", "net.sourceforge.plantuml.tim.expression.Knowledge", "net.sourceforge.plantuml.tim.expression.TValue", "net.sourceforge.plantuml.tim.iterator.CodeIterator", "net.sourceforge.plantuml.tim.iterator.CodeIteratorAffectation", "net.sourceforge.plantuml.tim.iterator.CodeIteratorForeach", "net.sourceforge.plantuml.tim.iterator.CodeIteratorIf", "net.sourceforge.plantuml.tim.iterator.CodeIteratorImpl", "net.sourceforge.plantuml.tim.iterator.CodeIteratorInnerComment", "net.sourceforge.plantuml.tim.iterator.CodeIteratorLegacyDefine", "net.sourceforge.plantuml.tim.iterator.CodeIteratorLongComment", "net.sourceforge.plantuml.tim.iterator.CodeIteratorProcedure", "net.sourceforge.plantuml.tim.iterator.CodeIteratorReturnFunction", "net.sourceforge.plantuml.tim.iterator.CodeIteratorShortComment", "net.sourceforge.plantuml.tim.iterator.CodeIteratorSub", "net.sourceforge.plantuml.tim.iterator.CodeIteratorWhile", "net.sourceforge.plantuml.tim.stdlib.AlwaysFalse", "net.sourceforge.plantuml.tim.stdlib.AlwaysTrue", "net.sourceforge.plantuml.tim.stdlib.CallUserFunction", "net.sourceforge.plantuml.tim.stdlib.Chr", "net.sourceforge.plantuml.tim.stdlib.Darken", "net.sourceforge.plantuml.tim.stdlib.DateFunction", "net.sourceforge.plantuml.tim.stdlib.Dec2hex", "net.sourceforge.plantuml.tim.stdlib.Dirpath", "net.sourceforge.plantuml.tim.stdlib.Eval", "net.sourceforge.plantuml.tim.stdlib.Feature", "net.sourceforge.plantuml.tim.stdlib.FileExists", "net.sourceforge.plantuml.tim.stdlib.Filename", "net.sourceforge.plantuml.tim.stdlib.FunctionExists", "net.sourceforge.plantuml.tim.stdlib.GetJsonKey", "net.sourceforge.plantuml.tim.stdlib.GetJsonType", "net.sourceforge.plantuml.tim.stdlib.GetVariableValue", "net.sourceforge.plantuml.tim.stdlib.GetVersion", "net.sourceforge.plantuml.tim.stdlib.Getenv", "net.sourceforge.plantuml.tim.stdlib.Hex2dec", "net.sourceforge.plantuml.tim.stdlib.HslColor", "net.sourceforge.plantuml.tim.stdlib.IntVal", "net.sourceforge.plantuml.tim.stdlib.InvokeProcedure", "net.sourceforge.plantuml.tim.stdlib.IsDark", "net.sourceforge.plantuml.tim.stdlib.IsLight", "net.sourceforge.plantuml.tim.stdlib.JsonKeyExists", "net.sourceforge.plantuml.tim.stdlib.Lighten", "net.sourceforge.plantuml.tim.stdlib.LoadJson", "net.sourceforge.plantuml.tim.stdlib.LogicalAnd", "net.sourceforge.plantuml.tim.stdlib.LogicalNand", "net.sourceforge.plantuml.tim.stdlib.LogicalNor", "net.sourceforge.plantuml.tim.stdlib.LogicalNot", "net.sourceforge.plantuml.tim.stdlib.LogicalNxor", "net.sourceforge.plantuml.tim.stdlib.LogicalOr", "net.sourceforge.plantuml.tim.stdlib.LogicalXor", "net.sourceforge.plantuml.tim.stdlib.Lower", "net.sourceforge.plantuml.tim.stdlib.Newline", "net.sourceforge.plantuml.tim.stdlib.Now", "net.sourceforge.plantuml.tim.stdlib.Ord", "net.sourceforge.plantuml.tim.stdlib.RetrieveProcedure", "net.sourceforge.plantuml.tim.stdlib.ReverseColor", "net.sourceforge.plantuml.tim.stdlib.ReverseHsluvColor", "net.sourceforge.plantuml.tim.stdlib.SetVariableValue", "net.sourceforge.plantuml.tim.stdlib.Size", "net.sourceforge.plantuml.tim.stdlib.SplitStr", "net.sourceforge.plantuml.tim.stdlib.StringFunction", "net.sourceforge.plantuml.tim.stdlib.Strlen", "net.sourceforge.plantuml.tim.stdlib.Strpos", "net.sourceforge.plantuml.tim.stdlib.Substr", "net.sourceforge.plantuml.tim.stdlib.Upper", "net.sourceforge.plantuml.tim.stdlib.VariableExists", "net.sourceforge.plantuml.utils.LineLocation"],
+  "classData": {
+    "net.sourceforge.plantuml.tim.TContext": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "resultList",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "debug",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "functionsSet",
+        "type": "net.sourceforge.plantuml.tim.FunctionsSet",
+        "modifier": ["public", "final"]
+      }, {
+        "name": "importedFiles",
+        "type": "net.sourceforge.plantuml.preproc.ImportedFiles",
+        "modifier": ["private"]
+      }, {
+        "name": "charset",
+        "type": "java.nio.charset.Charset",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "subs",
+        "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.preproc.Sub\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "definitionsContainer",
+        "type": "net.sourceforge.plantuml.DefinitionsContainer",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "filesUsedCurrent",
+        "type": "java.util.Set\u003cnet.sourceforge.plantuml.preproc.FileWithSuffix\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "pendingAdd",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.tim.TContext.buildCodeIterator#c360a527": {
+          "returnType": "net.sourceforge.plantuml.tim.iterator.CodeIterator",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "body",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.TContext#d136a43b": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "importedFiles",
+            "type": "net.sourceforge.plantuml.preproc.ImportedFiles"
+          }, {
+            "name": "defines",
+            "type": "net.sourceforge.plantuml.preproc.Defines"
+          }, {
+            "name": "charset",
+            "type": "java.nio.charset.Charset"
+          }, {
+            "name": "definitionsContainer",
+            "type": "net.sourceforge.plantuml.DefinitionsContainer"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeLinesInternal#e8e7415f": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "body",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e"
+          }, {
+            "name": "ftype",
+            "type": "net.sourceforge.plantuml.tim.TFunctionType"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeOneLineNotSafe#1d5095cf": {
+          "returnType": "net.sourceforge.plantuml.tim.expression.TValue",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }, {
+            "name": "ftype",
+            "type": "net.sourceforge.plantuml.tim.TFunctionType"
+          }, {
+            "name": "modeSpecial",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "58",
+            "cyclomatic_complexity": "31",
+            "nestedBlockDepth": "11"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeUndef#fb0675cd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.isLegacyDefine#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "functionName",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.getFunctionNameAt#f310d59f": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }, {
+            "name": "pos",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.appendEndOfLine#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "endOfLine",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.addPlain#fb0675cd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.doesFunctionExist#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "functionName",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.getDebug#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeAssert#fb0675cd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.appendToLastResult#943a4c50": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "remaining",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeIncludeDef#fb0675cd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeLines#37dc56a9": {
+          "returnType": "net.sourceforge.plantuml.tim.expression.TValue",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "body",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e"
+          }, {
+            "name": "ftype",
+            "type": "net.sourceforge.plantuml.tim.TFunctionType"
+          }, {
+            "name": "modeSpecial",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeVoid3#4b203773": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "location",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "java.lang.String"
+          }, {
+            "name": "function",
+            "type": "net.sourceforge.plantuml.tim.TFunction"
+          }, {
+            "name": "call",
+            "type": "net.sourceforge.plantuml.tim.EaterFunctionCall"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.applyFunctionsAndVariables#9aa8bafc": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "location",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }, {
+            "name": "str",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "49",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.getResultList#1": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.getFilesUsedCurrent#1": {
+          "returnType": "java.util.Set\u003cnet.sourceforge.plantuml.preproc.FileWithSuffix\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeLog#fb0675cd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.applyFunctionsAndVariablesInternal#fb0675cd": {
+          "returnType": "StringLocated[]",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "located",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.extractFromResultList#1980e": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "n1",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeOneLineSafe#1d5095cf": {
+          "returnType": "net.sourceforge.plantuml.tim.expression.TValue",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }, {
+            "name": "ftype",
+            "type": "net.sourceforge.plantuml.tim.TFunctionType"
+          }, {
+            "name": "modeSpecial",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.getFunctionSmart#146b89eb": {
+          "returnType": "net.sourceforge.plantuml.tim.TFunction",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "signature",
+            "type": "net.sourceforge.plantuml.tim.TFunctionSignature"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeAffectationDefine#fb0675cd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.fromJson#bda8d36c": {
+          "returnType": "net.sourceforge.plantuml.tim.expression.TValue",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "location",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.getFileWithSuffix#874989e1": {
+          "returnType": "net.sourceforge.plantuml.preproc.FileWithSuffix",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "from",
+            "type": "java.lang.String"
+          }, {
+            "name": "realName",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeIncludesub#fb0675cd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "46",
+            "cyclomatic_complexity": "13",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.addStandardFunctions#bf4ff617": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "defines",
+            "type": "net.sourceforge.plantuml.preproc.Defines"
+          }],
+          "metric": {
+            "loc": "52",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeDumpMemory#fb0675cd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.isUnquoted#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "functionName",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeInclude#fb0675cd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "81",
+            "cyclomatic_complexity": "28",
+            "nestedBlockDepth": "8"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.asKnowledge#f7f30bd5": {
+          "returnType": "net.sourceforge.plantuml.tim.expression.Knowledge",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory",
+            "modifier": ["final "]
+          }, {
+            "name": "location",
+            "type": "net.sourceforge.plantuml.utils.LineLocation",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeTheme#fb0675cd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.simulatePlain#fb0675cd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.executeImport#fb0675cd": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "636",
+        "cyclomatic_complexity": "135",
+        "cyclomatic_complexity_weighted": "6",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.tim.TContext.asKnowledge#f7f30bd5.Knowledge": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.tim.TContext.asKnowledge#f7f30bd5.Knowledge.getFunction#146b89eb": {
+          "returnType": "net.sourceforge.plantuml.tim.TFunction",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "net.sourceforge.plantuml.tim.TFunctionSignature"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.TContext.asKnowledge#f7f30bd5.Knowledge.getVariable#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.tim.expression.TValue",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "3"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "774",
+    "cyclomatic_complexity": "6"
+  },
+  "author": "plantuml@gmail.com"
+}

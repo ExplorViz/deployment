@@ -1,0 +1,83 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "PairOfSomething.java",
+  "packageName": "net.sourceforge.plantuml.project.lang",
+  "importName": ["net.sourceforge.plantuml.project.Failable", "net.sourceforge.plantuml.project.GanttDiagram", "net.sourceforge.plantuml.regex.IRegex", "net.sourceforge.plantuml.regex.RegexConcat", "net.sourceforge.plantuml.regex.RegexLeaf", "net.sourceforge.plantuml.regex.RegexResult"],
+  "classData": {
+    "net.sourceforge.plantuml.project.lang.PairOfSomething": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.project.lang.Something"],
+      "field": [{
+        "name": "complement1",
+        "type": "net.sourceforge.plantuml.project.lang.Something",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "complement2",
+        "type": "net.sourceforge.plantuml.project.lang.Something",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.project.lang.PairOfSomething.toRegex#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.regex.IRegex",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "suffix",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.PairOfSomething.PairOfSomething#b8d50f01": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "complement1",
+            "type": "net.sourceforge.plantuml.project.lang.Something"
+          }, {
+            "name": "complement2",
+            "type": "net.sourceforge.plantuml.project.lang.Something"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.PairOfSomething.getMe#227bc42b": {
+          "returnType": "net.sourceforge.plantuml.project.Failable\u003cWildcardUsage{type\u003dEXTENDS, boundedType\u003dReferenceType{java.lang.Object, typeParametersMap\u003dTypeParametersMap{nameToValue\u003d{}}}}\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "system",
+            "type": "net.sourceforge.plantuml.project.GanttDiagram"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }, {
+            "name": "suffix",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "30",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "74",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

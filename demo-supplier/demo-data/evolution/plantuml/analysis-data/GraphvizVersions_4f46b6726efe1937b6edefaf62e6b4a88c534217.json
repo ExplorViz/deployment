@@ -1,0 +1,78 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "GraphvizVersions.java",
+  "packageName": "net.sourceforge.plantuml.dot",
+  "importName": ["java.io.File", "java.util.Map", "java.util.concurrent.ConcurrentHashMap"],
+  "classData": {
+    "net.sourceforge.plantuml.dot.GraphvizVersions": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "singleton",
+        "type": "net.sourceforge.plantuml.dot.GraphvizVersions",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "map",
+        "type": "java.util.Map\u003cjava.io.File, net.sourceforge.plantuml.dot.GraphvizVersion\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.dot.GraphvizVersions.GraphvizVersions#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizVersions.getInstance#1": {
+          "returnType": "net.sourceforge.plantuml.dot.GraphvizVersions",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizVersions.getVersion#2169bb": {
+          "returnType": "net.sourceforge.plantuml.dot.GraphvizVersion",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "f",
+            "type": "java.io.File"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dot.GraphvizVersions.checkVersionSlow#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.dot.GraphvizVersion",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "pathExecutable",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "32",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "73",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

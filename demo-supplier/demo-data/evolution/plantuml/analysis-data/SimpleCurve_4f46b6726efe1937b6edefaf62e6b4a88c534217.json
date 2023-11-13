@@ -1,0 +1,151 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "SimpleCurve.java",
+  "packageName": "jcckit.plot",
+  "importName": ["java.awt.Color", "jcckit.graphic.ClippingShape", "jcckit.graphic.GraphPoint", "jcckit.graphic.GraphicalComposite", "jcckit.graphic.GraphicalElement", "jcckit.graphic.LineAttributes", "jcckit.graphic.Polygon", "jcckit.graphic.ShapeAttributes", "jcckit.util.ConfigParameters", "jcckit.util.Factory"],
+  "classData": {
+    "jcckit.plot.SimpleCurve": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["jcckit.plot.Curve"],
+      "field": [{
+        "name": "SYMBOL_FACTORY_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "WITH_LINE_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "SOFT_CLIPPING_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "LINE_ATTRIBUTES_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "INITIAL_HINT_FOR_NEXT_POINT_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "_clippingShape",
+        "type": "jcckit.graphic.ClippingShape",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_symbolFactory",
+        "type": "jcckit.plot.SymbolFactory",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_symbols",
+        "type": "jcckit.graphic.GraphicalComposite",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_completeCurve",
+        "type": "jcckit.graphic.GraphicalComposite",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_legendSymbol",
+        "type": "jcckit.graphic.GraphicalElement",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_initialHintForNextPoint",
+        "type": "jcckit.plot.Hint",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_curve",
+        "type": "jcckit.graphic.Polygon",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_softClipping",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_hintForNextPoint",
+        "type": "jcckit.plot.Hint",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "jcckit.plot.SimpleCurve.getLegendSymbol#1": {
+          "returnType": "jcckit.graphic.GraphicalElement",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.plot.SimpleCurve.removeAllPoints#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.plot.SimpleCurve.getView#1": {
+          "returnType": "jcckit.graphic.GraphicalElement",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.plot.SimpleCurve.SimpleCurve#9b597399": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "config",
+            "type": "jcckit.util.ConfigParameters"
+          }, {
+            "name": "curveIndex",
+            "type": "int"
+          }, {
+            "name": "numberOfCurves",
+            "type": "int"
+          }, {
+            "name": "clippingShape",
+            "type": "jcckit.graphic.ClippingShape"
+          }, {
+            "name": "legend",
+            "type": "jcckit.plot.Legend"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "41",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "jcckit.plot.SimpleCurve.addPoint#c10f55a6": {
+          "returnType": "jcckit.plot.Hint",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "point",
+            "type": "jcckit.graphic.GraphPoint"
+          }, {
+            "name": "hintFromPreviousCurve",
+            "type": "jcckit.plot.Hint"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "95",
+        "cyclomatic_complexity": "12",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "127",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

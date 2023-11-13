@@ -1,0 +1,324 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "ProcessRunner.java",
+  "packageName": "net.sourceforge.plantuml.dot",
+  "importName": ["java.io.IOException", "java.io.InputStream", "java.io.OutputStream", "java.util.concurrent.locks.Lock", "java.util.concurrent.locks.ReentrantLock", "net.sourceforge.plantuml.OptionFlags", "net.sourceforge.plantuml.api.MyRunnable", "net.sourceforge.plantuml.api.TimeoutExecutor", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SFile"],
+  "classData": {
+    "net.sourceforge.plantuml.dot.ProcessRunner.ThreadStream": {
+      "type": "CLASS",
+      "field": [{
+        "name": "streamToRead",
+        "type": "java.io.InputStream",
+        "modifier": ["private", "volatile"]
+      }, {
+        "name": "redirection",
+        "type": "java.io.OutputStream",
+        "modifier": ["private", "volatile"]
+      }, {
+        "name": "sb",
+        "type": "java.lang.StringBuffer",
+        "modifier": ["private", "volatile"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.dot.ProcessRunner.ThreadStream.ThreadStream#d670e538": {
+          "parameter": [{
+            "name": "streamToRead",
+            "type": "java.io.InputStream"
+          }, {
+            "name": "redirection",
+            "type": "java.io.OutputStream"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.ThreadStream.run#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.ThreadStream.cancel#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.ThreadStream.getString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "java.lang.Thread",
+      "metric": {
+        "loc": "48",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.dot.ProcessRunner.MainThread": {
+      "type": "CLASS",
+      "interface": ["net.sourceforge.plantuml.api.MyRunnable"],
+      "field": [{
+        "name": "cmd",
+        "type": "String[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "dir",
+        "type": "net.sourceforge.plantuml.security.SFile",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "redirection",
+        "type": "java.io.OutputStream",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "in",
+        "type": "byte[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "process",
+        "type": "java.lang.Process",
+        "modifier": ["private", "volatile"]
+      }, {
+        "name": "errorStream",
+        "type": "net.sourceforge.plantuml.dot.ProcessRunner.ThreadStream",
+        "modifier": ["private", "volatile"]
+      }, {
+        "name": "outStream",
+        "type": "net.sourceforge.plantuml.dot.ProcessRunner.ThreadStream",
+        "modifier": ["private", "volatile"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.dot.ProcessRunner.MainThread.startThreads#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "37",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.MainThread.joinInternal#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.MainThread.runJob#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.MainThread.getOut#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.MainThread.MainThread#9a18b286": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cmd",
+            "type": "String[]"
+          }, {
+            "name": "dir",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }, {
+            "name": "redirection",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "in",
+            "type": "byte[]"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.MainThread.getError#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.MainThread.cancelJob#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "107",
+        "cyclomatic_complexity": "14",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.dot.ProcessRunner": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "cmd",
+        "type": "String[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "error",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "out",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "state",
+        "type": "net.sourceforge.plantuml.dot.ProcessState",
+        "modifier": ["private", "volatile"]
+      }, {
+        "name": "changeState",
+        "type": "java.util.concurrent.locks.Lock",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.dot.ProcessRunner.MainThread", "net.sourceforge.plantuml.dot.ProcessRunner.ThreadStream"],
+      "methodData": {
+        "net.sourceforge.plantuml.dot.ProcessRunner.close#2062420": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.getError#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.ProcessRunner#6ed80f72": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cmd",
+            "type": "String[]"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.close#512cbbe9": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "is",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.run#d42330d7": {
+          "returnType": "net.sourceforge.plantuml.dot.ProcessState",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "in",
+            "type": "byte[]"
+          }, {
+            "name": "redirection",
+            "type": "java.io.OutputStream"
+          }, {
+            "name": "dir",
+            "type": "net.sourceforge.plantuml.security.SFile"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.run#17352a98": {
+          "returnType": "net.sourceforge.plantuml.dot.ProcessState",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "in",
+            "type": "byte[]"
+          }, {
+            "name": "redirection",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessRunner.getOut#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "231",
+        "cyclomatic_complexity": "13",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "280",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

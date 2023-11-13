@@ -1,0 +1,330 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Cookie.java",
+  "packageName": "net.sourceforge.plantuml.zopfli",
+  "classData": {
+    "net.sourceforge.plantuml.zopfli.Cookie.Node": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "field": [{
+        "name": "weight",
+        "type": "int"
+      }, {
+        "name": "tail",
+        "type": "net.sourceforge.plantuml.zopfli.Cookie.Node"
+      }, {
+        "name": "count",
+        "type": "int"
+      }],
+      "metric": {
+        "loc": "5",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.zopfli.Cookie": {
+      "type": "CLASS",
+      "field": [{
+        "name": "SPLIT_PARTITIONS",
+        "type": "int",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "POOL_MAX",
+        "type": "int",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "intZeroes",
+        "type": "int[]",
+        "modifier": ["final", "static"]
+      }, {
+        "name": "charZeroes",
+        "type": "char[]",
+        "modifier": ["final", "static"]
+      }, {
+        "name": "byteZeroes",
+        "type": "byte[]",
+        "modifier": ["final", "static"]
+      }, {
+        "name": "intMOnes",
+        "type": "int[]",
+        "modifier": ["final", "static"]
+      }, {
+        "name": "charOnes",
+        "type": "char[]",
+        "modifier": ["final", "static"]
+      }, {
+        "name": "costMax",
+        "type": "long[]",
+        "modifier": ["final", "static"]
+      }, {
+        "name": "list0",
+        "type": "Node[]",
+        "modifier": ["final"]
+      }, {
+        "name": "list1",
+        "type": "Node[]",
+        "modifier": ["final"]
+      }, {
+        "name": "leaves1",
+        "type": "Node[]",
+        "modifier": ["final"]
+      }, {
+        "name": "leaves2",
+        "type": "Node[]",
+        "modifier": ["final"]
+      }, {
+        "name": "nodes",
+        "type": "Node[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "nextNode",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "i320a",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "i320b",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "i320c",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "i288a",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "i288b",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "i288c",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "i289a",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "c259a",
+        "type": "char[]",
+        "modifier": ["final"]
+      }, {
+        "name": "i32a",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "i32b",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "i32c",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "i19a",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "i19b",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "i19c",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "i16a",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "i16b",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "p",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "vp",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "lengthArray",
+        "type": "char[]",
+        "modifier": ["final"]
+      }, {
+        "name": "costs",
+        "type": "long[]",
+        "modifier": ["final"]
+      }, {
+        "name": "path",
+        "type": "char[]",
+        "modifier": ["final"]
+      }, {
+        "name": "splitPoints",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "splitSize",
+        "type": "int[]",
+        "modifier": ["final"]
+      }, {
+        "name": "stats",
+        "type": "net.sourceforge.plantuml.zopfli.SymbolStats",
+        "modifier": ["final"]
+      }, {
+        "name": "bestStats",
+        "type": "net.sourceforge.plantuml.zopfli.SymbolStats",
+        "modifier": ["final"]
+      }, {
+        "name": "lastStats",
+        "type": "net.sourceforge.plantuml.zopfli.SymbolStats",
+        "modifier": ["final"]
+      }, {
+        "name": "h",
+        "type": "net.sourceforge.plantuml.zopfli.Hash",
+        "modifier": ["final"]
+      }, {
+        "name": "lenVal",
+        "type": "int"
+      }, {
+        "name": "distVal",
+        "type": "int"
+      }, {
+        "name": "rnd",
+        "type": "int"
+      }, {
+        "name": "store1",
+        "type": "net.sourceforge.plantuml.zopfli.LzStore",
+        "modifier": ["final"]
+      }, {
+        "name": "store2",
+        "type": "net.sourceforge.plantuml.zopfli.LzStore",
+        "modifier": ["final"]
+      }, {
+        "name": "lmc",
+        "type": "net.sourceforge.plantuml.zopfli.LongestMatchCache",
+        "modifier": ["final"]
+      }, {
+        "name": "masterBlockSize",
+        "type": "int",
+        "modifier": ["final"]
+      }, {
+        "name": "blockSplittingMax",
+        "type": "int",
+        "modifier": ["final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.zopfli.Cookie.Node"],
+      "methodData": {
+        "net.sourceforge.plantuml.zopfli.Cookie.node#65254a1": {
+          "returnType": "net.sourceforge.plantuml.zopfli.Cookie.Node",
+          "modifier": ["final"],
+          "parameter": [{
+            "name": "weight",
+            "type": "int"
+          }, {
+            "name": "count",
+            "type": "int"
+          }, {
+            "name": "tail",
+            "type": "net.sourceforge.plantuml.zopfli.Cookie.Node"
+          }],
+          "metric": {
+            "loc": "7",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Cookie.expand#8c658f7e": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "array",
+            "type": "java.lang.Object"
+          }],
+          "metric": {
+            "loc": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Cookie.resetPool#1": {
+          "returnType": "void",
+          "modifier": ["final"],
+          "metric": {
+            "loc": "3",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Cookie.fill0#b972aa3f": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "array",
+            "type": "int[]"
+          }, {
+            "name": "length",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Cookie.fillCostMax#14cad492": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "array",
+            "type": "long[]"
+          }, {
+            "name": "length",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Cookie.Cookie#1980e": {
+          "parameter": [{
+            "name": "masterBlockSize",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "9",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.zopfli.Cookie.fill0#2c0ea178": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "array",
+            "type": "char[]"
+          }, {
+            "name": "length",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "144",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "164",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,262 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "ConstraintSet.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram.graphic",
+  "importName": ["java.util.ArrayList", "java.util.Arrays", "java.util.Collection", "java.util.HashMap", "java.util.List", "java.util.Map", "java.util.Objects", "net.sourceforge.plantuml.klimt.font.StringBounder"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "firstBorder",
+        "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantBoxSimple",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "lastborder",
+        "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantBoxSimple",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "participantList",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.graphic.Pushable\u003e",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "constraints",
+        "type": "java.util.Map\u003cjava.util.List\u003cnet.sourceforge.plantuml.sequencediagram.graphic.Pushable\u003e, net.sourceforge.plantuml.sequencediagram.graphic.Constraint\u003e",
+        "modifier": ["final", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.ensureSpaceAfter#8a2ded58": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "p1",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable"
+          }, {
+            "name": "p2",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable"
+          }, {
+            "name": "space",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.getConstraintBefore#6dbb8bb3": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.Constraint",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "p1",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.pushToLeftParticipantBox#9e999304": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "deltaX",
+            "type": "double"
+          }, {
+            "name": "firstToChange",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable"
+          }, {
+            "name": "including",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.getOtherParticipant#49b7829c": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable"
+          }, {
+            "name": "delta",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.getConstraint#b7717641": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.Constraint",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "p1",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable"
+          }, {
+            "name": "p2",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.getNext#6dbb8bb3": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.getMaxX#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.pushToLeft#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "delta",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.getLastborder#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.ConstraintSet#f1e1c34e": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "all",
+            "type": "java.util.Collection\u003cWildcardUsage{type\u003dEXTENDS, boundedType\u003dReferenceType{net.sourceforge.plantuml.sequencediagram.graphic.Pushable, typeParametersMap\u003dTypeParametersMap{nameToValue\u003d{}}}}\u003e"
+          }, {
+            "name": "freeX",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.pushEverybody#f20e81b6": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "dist",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.getConstraintAfter#6dbb8bb3": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.Constraint",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "p1",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.takeConstraintIntoAccount#395b4159": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.getFirstBorder#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.ConstraintSet.getPrevious#6dbb8bb3": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "131",
+        "cyclomatic_complexity": "20",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "178",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

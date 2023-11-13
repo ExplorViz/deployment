@@ -1,0 +1,86 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "RowTypeRendererScanBit.java",
+  "packageName": "ext.plantuml.com.ctreber.acearth.renderer",
+  "importName": ["ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMap", "ext.plantuml.com.ctreber.acearth.scanbit.ScanBit"],
+  "classData": {
+    "ext.plantuml.com.ctreber.acearth.renderer.RowTypeRendererScanBit": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["ext.plantuml.com.ctreber.acearth.renderer.RowTypeRenderer"],
+      "field": [{
+        "name": "fScanBitIndex",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "fScanBits",
+        "type": "ScanBit[]",
+        "modifier": ["private"]
+      }, {
+        "name": "fScanToPixelType",
+        "type": "int[]",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "ext.plantuml.com.ctreber.acearth.renderer.RowTypeRendererScanBit.getPixelTypes#62ccd43": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pRowNo",
+            "type": "int"
+          }, {
+            "name": "pPixelTypes",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.renderer.RowTypeRendererScanBit.generateScanToPixelTypeTable#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.renderer.RowTypeRendererScanBit.startNewRun#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.renderer.RowTypeRendererScanBit.setScanBits#90968b1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pScanBits",
+            "type": "ScanBit[]"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "53",
+        "cyclomatic_complexity": "8",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "58",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

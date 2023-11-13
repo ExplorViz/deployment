@@ -1,0 +1,64 @@
+{
+  "commitID": "0c59090c1a805923f01bebde87004a3d3e8948e8",
+  "fileName": "OwnerRepository.java",
+  "packageName": "org.springframework.samples.petclinic.owner",
+  "importName": ["java.util.Collection", "org.springframework.data.jpa.repository.Query", "org.springframework.data.repository.Repository", "org.springframework.data.repository.query.Param", "org.springframework.transaction.annotation.Transactional"],
+  "classData": {
+    "org.springframework.samples.petclinic.owner.OwnerRepository": {
+      "modifier": ["public"],
+      "interface": ["org.springframework.data.repository.Repository\u003corg.springframework.samples.petclinic.owner.Owner, java.lang.Integer\u003e"],
+      "methodData": {
+        "org.springframework.samples.petclinic.owner.OwnerRepository.findByLastName#943a4c50": {
+          "returnType": "java.util.Collection\u003corg.springframework.samples.petclinic.owner.Owner\u003e",
+          "parameter": [{
+            "name": "lastName",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["Query", "Transactional"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.OwnerRepository.findById#d7ee193d": {
+          "returnType": "org.springframework.samples.petclinic.owner.Owner",
+          "parameter": [{
+            "name": "id",
+            "type": "java.lang.Integer"
+          }],
+          "annotation": ["Query", "Transactional"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.OwnerRepository.save#49102b2": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.owner.Owner"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "14",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "38",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "snicoll@pivotal.io",
+  "modifiedLines": 3
+}

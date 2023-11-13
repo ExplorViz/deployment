@@ -1,0 +1,1522 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Blake2b.java",
+  "packageName": "net.sourceforge.plantuml.argon2.blake2",
+  "importName": ["net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Assert.assertFail", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Assert.exclusiveLowerBound", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Assert.inclusiveLowerBound", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Assert.inclusiveUpperBound", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.LittleEndian.readInt", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.LittleEndian.readLong", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.LittleEndian.writeInt", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.LittleEndian.writeLong", "java.io.PrintStream", "java.security.Key", "java.security.spec.AlgorithmParameterSpec", "java.util.Arrays"],
+  "classData": {
+    "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Assert": {
+      "type": "CLASS",
+      "modifier": ["public", "static", "final"],
+      "field": [{
+        "name": "exclusiveUpperBound",
+        "type": "java.lang.String",
+        "modifier": ["public", "final", "static"]
+      }, {
+        "name": "inclusiveUpperBound",
+        "type": "java.lang.String",
+        "modifier": ["public", "final", "static"]
+      }, {
+        "name": "exclusiveLowerBound",
+        "type": "java.lang.String",
+        "modifier": ["public", "final", "static"]
+      }, {
+        "name": "inclusiveLowerBound",
+        "type": "java.lang.String",
+        "modifier": ["public", "final", "static"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Assert.assertFail#5f470747": {
+          "returnType": "java.lang.String",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }, {
+            "name": "v",
+            "type": "T",
+            "modifier": ["final "]
+          }, {
+            "name": "err",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }, {
+            "name": "spec",
+            "type": "T",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "11",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.flag": {
+      "field": [{
+        "name": "last_block",
+        "type": "int"
+      }, {
+        "name": "last_node",
+        "type": "int"
+      }],
+      "metric": {
+        "loc": "4",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.argon2.blake2.Blake2b": {
+      "modifier": ["public"],
+      "innerClass": ["net.sourceforge.plantuml.argon2.blake2.Blake2b.Spec", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Digest", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Mac", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Tree", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param"],
+      "methodData": {
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.digest#1": {
+          "returnType": "byte[]",
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.digest#90e4ca29": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "output",
+            "type": "byte[]"
+          }, {
+            "name": "offset",
+            "type": "int"
+          }, {
+            "name": "len",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.update#ae1a4a89": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "input",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.reset#1": {
+          "returnType": "void",
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.digest#ae1a4a89": {
+          "returnType": "byte[]",
+          "parameter": [{
+            "name": "input",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.update#90e4ca29": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "input",
+            "type": "byte[]"
+          }, {
+            "name": "offset",
+            "type": "int"
+          }, {
+            "name": "len",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.update#2e6127": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "input",
+            "type": "byte"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "1067",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.Default": {
+      "modifier": ["public"],
+      "field": [{
+        "name": "digest_length",
+        "type": "byte"
+      }, {
+        "name": "key_length",
+        "type": "byte"
+      }, {
+        "name": "fanout",
+        "type": "byte"
+      }, {
+        "name": "depth",
+        "type": "byte"
+      }, {
+        "name": "leaf_length",
+        "type": "int"
+      }, {
+        "name": "node_offset",
+        "type": "long"
+      }, {
+        "name": "node_depth",
+        "type": "byte"
+      }, {
+        "name": "inner_length",
+        "type": "byte"
+      }],
+      "metric": {
+        "loc": "10",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.argon2.blake2.Blake2b.Digest": {
+      "type": "CLASS",
+      "modifier": ["public", "static"],
+      "interface": ["net.sourceforge.plantuml.argon2.blake2.Blake2b"],
+      "methodData": {
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Digest.newInstance#1980e": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Digest",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "digestLength",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Digest.newInstance#495288c": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Digest",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Digest.Digest#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Digest.Digest#495288c": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+            "modifier": ["final "]
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Digest.newInstance#1": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Digest",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine",
+      "metric": {
+        "loc": "21",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.Xoff": {
+      "field": [{
+        "name": "digest_length",
+        "type": "int"
+      }, {
+        "name": "key_length",
+        "type": "int"
+      }, {
+        "name": "fanout",
+        "type": "int"
+      }, {
+        "name": "depth",
+        "type": "int"
+      }, {
+        "name": "leaf_length",
+        "type": "int"
+      }, {
+        "name": "node_offset",
+        "type": "int"
+      }, {
+        "name": "node_depth",
+        "type": "int"
+      }, {
+        "name": "inner_length",
+        "type": "int"
+      }, {
+        "name": "reserved",
+        "type": "int"
+      }, {
+        "name": "salt",
+        "type": "int"
+      }, {
+        "name": "personal",
+        "type": "int"
+      }],
+      "metric": {
+        "loc": "13",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param": {
+      "type": "CLASS",
+      "modifier": ["public", "static"],
+      "interface": ["java.security.spec.AlgorithmParameterSpec"],
+      "field": [{
+        "name": "default_bytes",
+        "type": "byte[]",
+        "modifier": ["final", "static"]
+      }, {
+        "name": "default_h",
+        "type": "long[]",
+        "modifier": ["final", "static"]
+      }, {
+        "name": "h",
+        "type": "long[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "hasKey",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "key_bytes",
+        "type": "byte[]",
+        "modifier": ["private"]
+      }, {
+        "name": "bytes",
+        "type": "byte[]",
+        "modifier": ["private"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.Xoff", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.Default"],
+      "methodData": {
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.setFanout#1980e": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "fanout",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.setNodeOffset#32c69b": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "node_offset",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.setKey#1265e": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.security.Key",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.getKeyLength#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.setPersonal#ae1a4a89": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "personal",
+            "type": "byte[]"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.getFanout#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.setSalt#ae1a4a89": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "salt",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.initialized_H#1": {
+          "returnType": "long[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.lazyInitBytes#1": {
+          "returnType": "void",
+          "modifier": ["final"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.getDigestLength#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.getDepth#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.setInnerLength#1980e": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "inner_length",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.setDepth#1980e": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "depth",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.getInnerLength#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.getIntParam#1980e": {
+          "returnType": "int",
+          "modifier": ["final"],
+          "parameter": [{
+            "name": "xoffset",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.setLeafLength#1980e": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "leaf_length",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.getNodeDepth#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.clone#1": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.setNodeDepth#1980e": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "node_depth",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.getBytes#1": {
+          "returnType": "byte[]",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.Param#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.setDigestLength#1980e": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "len",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.getLongParam#1980e": {
+          "returnType": "long",
+          "modifier": ["final"],
+          "parameter": [{
+            "name": "xoffset",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.getLeafLength#1": {
+          "returnType": "int",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.hasKey#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.setKey#ae1a4a89": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "key",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.getNodeOffset#1": {
+          "returnType": "long",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param.getByteParam#1980e": {
+          "returnType": "byte",
+          "modifier": ["final"],
+          "parameter": [{
+            "name": "xoffset",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "286",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.argon2.blake2.Blake2b.Tree": {
+      "type": "CLASS",
+      "modifier": ["public", "static"],
+      "field": [{
+        "name": "depth",
+        "type": "int",
+        "modifier": ["final"]
+      }, {
+        "name": "fanout",
+        "type": "int",
+        "modifier": ["final"]
+      }, {
+        "name": "leaf_length",
+        "type": "int",
+        "modifier": ["final"]
+      }, {
+        "name": "inner_length",
+        "type": "int",
+        "modifier": ["final"]
+      }, {
+        "name": "digest_length",
+        "type": "int",
+        "modifier": ["final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Tree.getNode#3301a1": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Digest",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "depth",
+            "type": "int",
+            "modifier": ["final "]
+          }, {
+            "name": "offset",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Tree.treeParam#1": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Tree.getRoot#1": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Digest",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Tree.Tree#35d8e4ce": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "depth",
+            "type": "int",
+            "modifier": ["final "]
+          }, {
+            "name": "fanout",
+            "type": "int",
+            "modifier": ["final "]
+          }, {
+            "name": "leaf_length",
+            "type": "int",
+            "modifier": ["final "]
+          }, {
+            "name": "inner_length",
+            "type": "int",
+            "modifier": ["final "]
+          }, {
+            "name": "digest_length",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "33",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Debug": {
+      "type": "CLASS",
+      "modifier": ["public", "static"],
+      "methodData": {
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Debug.dumpState#841d6be3": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine"
+          }, {
+            "name": "mark",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Debug.dumpBuffer#3e2fb1e5": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "out",
+            "type": "java.io.PrintStream",
+            "modifier": ["final "]
+          }, {
+            "name": "label",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }, {
+            "name": "b",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Debug.dumpBuffer#50123b5e": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "out",
+            "type": "java.io.PrintStream",
+            "modifier": ["final "]
+          }, {
+            "name": "b",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Debug.dumpArray#b1aa608e": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "label",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }, {
+            "name": "b",
+            "type": "long[]",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Debug.dumpBuffer#713dca85": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "out",
+            "type": "java.io.PrintStream",
+            "modifier": ["final "]
+          }, {
+            "name": "label",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }, {
+            "name": "b",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }, {
+            "name": "offset",
+            "type": "int",
+            "modifier": ["final "]
+          }, {
+            "name": "len",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Debug.dumpBuffer#94a3d9be": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "out",
+            "type": "java.io.PrintStream",
+            "modifier": ["final "]
+          }, {
+            "name": "b",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }, {
+            "name": "offset",
+            "type": "int",
+            "modifier": ["final "]
+          }, {
+            "name": "len",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "47",
+        "cyclomatic_complexity": "6",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "interface": ["net.sourceforge.plantuml.argon2.blake2.Blake2b"],
+      "field": [{
+        "name": "sig_g00",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g01",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g10",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g11",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g20",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g21",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g30",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g31",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g40",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g41",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g50",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g51",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g60",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g61",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g70",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "sig_g71",
+        "type": "int[]",
+        "modifier": ["static", "final"]
+      }, {
+        "name": "zeropad",
+        "type": "byte[]",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "h",
+        "type": "long[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "t",
+        "type": "long[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "f",
+        "type": "long[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "m",
+        "type": "long[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "v",
+        "type": "long[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "buffer",
+        "type": "byte[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "param",
+        "type": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "outlen",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "last_node",
+        "type": "boolean",
+        "modifier": ["private"]
+      }, {
+        "name": "buflen",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "oneByte",
+        "type": "byte[]",
+        "modifier": ["private"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.flag", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Debug", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Assert", "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.LittleEndian"],
+      "methodData": {
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.reset#1": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.digest#90e4ca29": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "output",
+            "type": "byte[]"
+          }, {
+            "name": "off",
+            "type": "int"
+          }, {
+            "name": "len",
+            "type": "int"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.main#943a4c50": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "args",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.update#ae1a4a89": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "input",
+            "type": "byte[]"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.digest#ae1a4a89": {
+          "returnType": "byte[]",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "input",
+            "type": "byte[]"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.digest#1": {
+          "returnType": "byte[]",
+          "modifier": ["final", "public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.initialize#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.update#90e4ca29": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "b",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }, {
+            "name": "off",
+            "type": "int"
+          }, {
+            "name": "len",
+            "type": "int"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.hashout#90e4ca29": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "out",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }, {
+            "name": "offset",
+            "type": "int",
+            "modifier": ["final "]
+          }, {
+            "name": "hashlen",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Engine#495288c": {
+          "parameter": [{
+            "name": "param",
+            "type": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+            "modifier": ["final "]
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.update#2e6127": {
+          "returnType": "void",
+          "modifier": ["final", "public"],
+          "parameter": [{
+            "name": "b",
+            "type": "byte"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.Engine#1": {
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.compress#15309e86": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "b",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }, {
+            "name": "offset",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "288",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "634",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.argon2.blake2.Blake2b.Spec": {
+      "modifier": ["public"],
+      "field": [{
+        "name": "param_bytes",
+        "type": "int"
+      }, {
+        "name": "block_bytes",
+        "type": "int"
+      }, {
+        "name": "max_digest_bytes",
+        "type": "int"
+      }, {
+        "name": "max_key_bytes",
+        "type": "int"
+      }, {
+        "name": "max_salt_bytes",
+        "type": "int"
+      }, {
+        "name": "max_personalization_bytes",
+        "type": "int"
+      }, {
+        "name": "state_space_len",
+        "type": "int"
+      }, {
+        "name": "max_tree_fantout",
+        "type": "int"
+      }, {
+        "name": "max_tree_depth",
+        "type": "int"
+      }, {
+        "name": "max_tree_leaf_length",
+        "type": "int"
+      }, {
+        "name": "max_node_offset",
+        "type": "long"
+      }, {
+        "name": "max_tree_inner_length",
+        "type": "int"
+      }, {
+        "name": "IV",
+        "type": "long[]"
+      }, {
+        "name": "sigma",
+        "type": "byte[][]",
+        "modifier": ["static"]
+      }],
+      "metric": {
+        "loc": "41",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    },
+    "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.LittleEndian": {
+      "type": "CLASS",
+      "modifier": ["public", "static"],
+      "field": [{
+        "name": "hex_digits",
+        "type": "byte[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "HEX_digits",
+        "type": "byte[]",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.LittleEndian.readInt#15309e86": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "b",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }, {
+            "name": "off",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.LittleEndian.writeInt#1b2c6753": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "v",
+            "type": "int"
+          }, {
+            "name": "b",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }, {
+            "name": "off",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.LittleEndian.toHexStr#ae1a4a89": {
+          "returnType": "java.lang.String",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "b",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "2",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.LittleEndian.toHexStr#190a72bf": {
+          "returnType": "java.lang.String",
+          "modifier": ["static", "public"],
+          "parameter": [{
+            "name": "b",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }, {
+            "name": "upperCase",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.LittleEndian.writeLong#d3cc26a0": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "v",
+            "type": "long"
+          }, {
+            "name": "b",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }, {
+            "name": "off",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine.LittleEndian.readLong#15309e86": {
+          "returnType": "long",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "b",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }, {
+            "name": "off",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "68",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "5"
+      }
+    },
+    "net.sourceforge.plantuml.argon2.blake2.Blake2b.Mac": {
+      "type": "CLASS",
+      "modifier": ["public", "static"],
+      "interface": ["net.sourceforge.plantuml.argon2.blake2.Blake2b"],
+      "methodData": {
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Mac.newInstance#15309e86": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Mac",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "key",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }, {
+            "name": "digestLength",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Mac.newInstance#495288c": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Mac",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Mac.Mac#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Mac.newInstance#253d51": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Mac",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.security.Key",
+            "modifier": ["final "]
+          }, {
+            "name": "digestLength",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Mac.Mac#495288c": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "p",
+            "type": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Param",
+            "modifier": ["final "]
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.argon2.blake2.Blake2b.Mac.newInstance#ae1a4a89": {
+          "returnType": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Mac",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "key",
+            "type": "byte[]",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.argon2.blake2.Blake2b.Engine",
+      "metric": {
+        "loc": "27",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "1091",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

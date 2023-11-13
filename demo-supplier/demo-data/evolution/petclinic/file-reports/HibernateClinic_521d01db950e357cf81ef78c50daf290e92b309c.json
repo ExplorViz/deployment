@@ -1,0 +1,160 @@
+{
+  "commitID": "521d01db950e357cf81ef78c50daf290e92b309c",
+  "fileName": "HibernateClinic.java",
+  "packageName": "org.springframework.samples.petclinic.hibernate",
+  "importName": ["java.util.Collection", "org.hibernate.SessionFactory", "org.springframework.beans.factory.annotation.Autowired", "org.springframework.dao.DataAccessException", "org.springframework.samples.petclinic.Clinic", "org.springframework.samples.petclinic.Owner", "org.springframework.samples.petclinic.Pet", "org.springframework.samples.petclinic.PetType", "org.springframework.samples.petclinic.Vet", "org.springframework.samples.petclinic.Visit", "org.springframework.stereotype.Repository", "org.springframework.transaction.annotation.Transactional"],
+  "classData": {
+    "org.springframework.samples.petclinic.hibernate.HibernateClinic": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["org.springframework.samples.petclinic.Clinic"],
+      "field": [{
+        "name": "sessionFactory",
+        "type": "org.hibernate.SessionFactory",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.hibernate.HibernateClinic.loadOwner#1980e": {
+          "returnType": "org.springframework.samples.petclinic.Owner",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "id",
+            "type": "int"
+          }],
+          "annotation": ["Transactional"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.hibernate.HibernateClinic.deletePet#1980e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "id",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.hibernate.HibernateClinic.HibernateClinic#ecd41dd3": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "sessionFactory",
+            "type": "org.hibernate.SessionFactory"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.hibernate.HibernateClinic.storeOwner#49102b2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.Owner"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.hibernate.HibernateClinic.findOwners#943a4c50": {
+          "returnType": "java.util.Collection\u003corg.springframework.samples.petclinic.Owner\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "lastName",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["Transactional", "java.lang.SuppressWarnings"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.hibernate.HibernateClinic.storeVisit#4ed5d4a": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "visit",
+            "type": "org.springframework.samples.petclinic.Visit"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.hibernate.HibernateClinic.storePet#1391e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pet",
+            "type": "org.springframework.samples.petclinic.Pet"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.hibernate.HibernateClinic.loadPet#1980e": {
+          "returnType": "org.springframework.samples.petclinic.Pet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "id",
+            "type": "int"
+          }],
+          "annotation": ["Transactional"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.hibernate.HibernateClinic.getVets#1": {
+          "returnType": "java.util.Collection\u003corg.springframework.samples.petclinic.Vet\u003e",
+          "modifier": ["public"],
+          "annotation": ["Transactional", "java.lang.SuppressWarnings"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.hibernate.HibernateClinic.getPetTypes#1": {
+          "returnType": "java.util.Collection\u003corg.springframework.samples.petclinic.PetType\u003e",
+          "modifier": ["public"],
+          "annotation": ["Transactional", "java.lang.SuppressWarnings"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Repository", "Transactional"],
+      "metric": {
+        "loc": "58",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "75",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "cleau@vmware.com",
+  "addedLines": 98
+}

@@ -1,0 +1,374 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Stdlib.java",
+  "packageName": "net.sourceforge.plantuml.preproc",
+  "importName": ["java.nio.charset.StandardCharsets.UTF_8", "java.awt.image.BufferedImage", "java.io.BufferedReader", "java.io.ByteArrayInputStream", "java.io.ByteArrayOutputStream", "java.io.DataInputStream", "java.io.IOException", "java.io.InputStream", "java.io.InputStreamReader", "java.io.PrintWriter", "java.lang.ref.SoftReference", "java.util.ArrayList", "java.util.Collection", "java.util.Collections", "java.util.HashMap", "java.util.List", "java.util.Map", "java.util.Set", "java.util.TreeSet", "java.util.concurrent.ConcurrentHashMap", "java.util.regex.Matcher", "java.util.regex.Pattern", "javax.imageio.ImageIO", "net.sourceforge.plantuml.brotli.BrotliInputStream", "net.sourceforge.plantuml.klimt.creole.atom.AtomImg", "net.sourceforge.plantuml.log.Logme", "net.sourceforge.plantuml.security.SFile", "net.sourceforge.plantuml.utils.Base64Coder", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.preproc.Stdlib": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "all",
+        "type": "java.util.Map\u003cjava.lang.String, net.sourceforge.plantuml.preproc.Stdlib\u003e",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "SEPARATOR",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "sizePattern",
+        "type": "java.util.regex.Pattern",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "cache",
+        "type": "java.util.Map\u003cjava.lang.String, java.lang.ref.SoftReference\u003cjava.lang.String\u003e\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "name",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "info",
+        "type": "java.util.Map\u003cjava.lang.String, java.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.preproc.Stdlib.readOneImage#45102155": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "is",
+            "type": "java.io.InputStream"
+          }, {
+            "name": "colors",
+            "type": "java.util.List\u003cjava.lang.Integer\u003e"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.extractMeFull#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "42",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.skipSprite#5759ee49": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }, {
+            "name": "inputStream",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.getResourceAsStream#943a4c50": {
+          "returnType": "java.io.InputStream",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "fullname",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.readSprite#5759ee49": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }, {
+            "name": "inputStream",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.getDataStream#1": {
+          "returnType": "java.io.DataInputStream",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.getVersion#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.getDataImagePngBase64#1": {
+          "returnType": "java.io.InputStream",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.loadResource#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "file",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "90",
+            "cyclomatic_complexity": "21",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.read1byte#512cbbe9": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "is",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.toHexString#1980e": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "b",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.getSpriteStream#1": {
+          "returnType": "java.io.InputStream",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.getSource#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.getAll#1": {
+          "returnType": "java.util.Collection\u003cjava.lang.String\u003e",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.extractStdLib#1": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.read2bytes#512cbbe9": {
+          "returnType": "int",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "is",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.addInfoVersion#bd83d09a": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "strings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "details",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.getDataStream#943a4c50": {
+          "returnType": "java.io.DataInputStream",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.fillMap#943a4c50": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "infoString",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.retrieve#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.preproc.Stdlib",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.getLinkFromInfo#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "infoString",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.isSpriteLine#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.getInternalInputStream#874989e1": {
+          "returnType": "java.io.InputStream",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "fullname",
+            "type": "java.lang.String"
+          }, {
+            "name": "extension",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.Stdlib#874989e1": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "info",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.printStdLib#1": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.Stdlib.extractAllSprites#1": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "39",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "6"
+          }
+        }
+      },
+      "metric": {
+        "loc": "402",
+        "cyclomatic_complexity": "71",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "437",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,126 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "ExecutionContextWhile.java",
+  "packageName": "net.sourceforge.plantuml.tim",
+  "importName": ["net.sourceforge.plantuml.tim.expression.TValue", "net.sourceforge.plantuml.tim.expression.TokenStack", "net.sourceforge.plantuml.tim.iterator.CodePosition", "net.sourceforge.plantuml.utils.LineLocation"],
+  "classData": {
+    "net.sourceforge.plantuml.tim.ExecutionContextWhile": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "whileExpression",
+        "type": "net.sourceforge.plantuml.tim.expression.TokenStack",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "codePosition",
+        "type": "net.sourceforge.plantuml.tim.iterator.CodePosition",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skipMe",
+        "type": "boolean",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.tim.ExecutionContextWhile.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContextWhile.conditionValue#2e0f5d22": {
+          "returnType": "net.sourceforge.plantuml.tim.expression.TValue",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "location",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }, {
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContextWhile.skipMe#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContextWhile.ExecutionContextWhile#b93883c8": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "whileExpression",
+            "type": "net.sourceforge.plantuml.tim.expression.TokenStack"
+          }, {
+            "name": "codePosition",
+            "type": "net.sourceforge.plantuml.tim.iterator.CodePosition"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContextWhile.isSkipMe#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContextWhile.getStartWhile#1": {
+          "returnType": "net.sourceforge.plantuml.tim.iterator.CodePosition",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.ExecutionContextWhile.fromValue#b93883c8": {
+          "returnType": "net.sourceforge.plantuml.tim.ExecutionContextWhile",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "whileExpression",
+            "type": "net.sourceforge.plantuml.tim.expression.TokenStack"
+          }, {
+            "name": "codePosition",
+            "type": "net.sourceforge.plantuml.tim.iterator.CodePosition"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "38",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "79",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

@@ -1,0 +1,134 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "XmiDescriptionDiagram.java",
+  "packageName": "net.sourceforge.plantuml.xmi",
+  "importName": ["java.nio.charset.StandardCharsets.UTF_8", "java.io.OutputStream", "javax.xml.parsers.DocumentBuilder", "javax.xml.parsers.ParserConfigurationException", "javax.xml.transform.OutputKeys", "javax.xml.transform.Result", "javax.xml.transform.Source", "javax.xml.transform.Transformer", "javax.xml.transform.TransformerException", "javax.xml.transform.dom.DOMSource", "javax.xml.transform.stream.StreamResult", "org.w3c.dom.Document", "org.w3c.dom.Element", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.abel.Link", "net.sourceforge.plantuml.decoration.LinkDecor", "net.sourceforge.plantuml.descdiagram.DescriptionDiagram", "net.sourceforge.plantuml.klimt.creole.Display", "net.sourceforge.plantuml.xml.XmlFactories"],
+  "classData": {
+    "net.sourceforge.plantuml.xmi.XmiDescriptionDiagram": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.xmi.XmlDiagramTransformer"],
+      "field": [{
+        "name": "diagram",
+        "type": "net.sourceforge.plantuml.descdiagram.DescriptionDiagram",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "document",
+        "type": "org.w3c.dom.Document",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ownedElement",
+        "type": "org.w3c.dom.Element",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.xmi.XmiDescriptionDiagram.createEntityNode#7c02d022": {
+          "returnType": "org.w3c.dom.Element",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiDescriptionDiagram.addElement#472eafa": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "tobeAdded",
+            "type": "net.sourceforge.plantuml.abel.Entity",
+            "modifier": ["final "]
+          }, {
+            "name": "container",
+            "type": "org.w3c.dom.Element"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiDescriptionDiagram.forXMI#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiDescriptionDiagram.transformerXml#2062420": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiDescriptionDiagram.addLink#242439": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "link",
+            "type": "net.sourceforge.plantuml.abel.Link"
+          }],
+          "metric": {
+            "loc": "50",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiDescriptionDiagram.forXMI#c6ddb0c1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.klimt.creole.Display"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.xmi.XmiDescriptionDiagram.XmiDescriptionDiagram#40690d76": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.descdiagram.DescriptionDiagram"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "44",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "148",
+        "cyclomatic_complexity": "16",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "209",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

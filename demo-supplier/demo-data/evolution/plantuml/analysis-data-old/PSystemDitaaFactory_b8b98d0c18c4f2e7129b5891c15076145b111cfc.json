@@ -1,0 +1,98 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "PSystemDitaaFactory.java",
+  "packageName": "net.sourceforge.plantuml.ditaa",
+  "importName": ["java.awt.Font", "java.util.regex.Matcher", "java.util.regex.Pattern", "net.sourceforge.plantuml.command.PSystemBasicFactory", "net.sourceforge.plantuml.core.DiagramType", "net.sourceforge.plantuml.core.UmlSource"],
+  "classData": {
+    "net.sourceforge.plantuml.ditaa.PSystemDitaaFactory": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "net.sourceforge.plantuml.ditaa.PSystemDitaaFactory.initDiagram#8f7443e3": {
+          "returnType": "net.sourceforge.plantuml.ditaa.PSystemDitaa",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "startLine",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "29",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.ditaa.PSystemDitaaFactory.PSystemDitaaFactory#1": {
+          "modifier": ["public"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.ditaa.PSystemDitaaFactory.executeLine#4fc7db2f": {
+          "returnType": "net.sourceforge.plantuml.ditaa.PSystemDitaa",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "system",
+            "type": "net.sourceforge.plantuml.ditaa.PSystemDitaa"
+          }, {
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.ditaa.PSystemDitaaFactory.extractFont#943a4c50": {
+          "returnType": "java.awt.Font",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "37",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.ditaa.PSystemDitaaFactory.extractScale#943a4c50": {
+          "returnType": "float",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.command.PSystemBasicFactory\u003cnet.sourceforge.plantuml.ditaa.PSystemDitaa\u003e",
+      "metric": {
+        "loc": "122",
+        "cyclomatic_complexity": "24",
+        "cyclomatic_complexity_weighted": "6",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "166",
+    "cyclomatic_complexity": "6"
+  },
+  "author": "plantuml@gmail.com"
+}

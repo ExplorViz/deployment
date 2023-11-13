@@ -1,0 +1,234 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "WormMutation.java",
+  "packageName": "net.sourceforge.plantuml.activitydiagram3.ftile",
+  "importName": ["java.util.ArrayList", "java.util.List", "java.util.Objects", "net.sourceforge.plantuml.klimt.UTranslate"],
+  "classData": {
+    "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.MinMax": {
+      "type": "CLASS",
+      "modifier": ["static", "private"],
+      "field": [{
+        "name": "min",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "max",
+        "type": "double",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.MinMax.append#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "v",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.MinMax.getExtreme#1": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "22",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "translations",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.UTranslate\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.MinMax"],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.getDefinition#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "signature",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "22",
+            "cyclomatic_complexity": "17",
+            "nestedBlockDepth": "10"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.WormMutation#a406b981": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "definition",
+            "type": "java.lang.String"
+          }, {
+            "name": "delta",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.reverse#1": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.getLast#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UTranslate",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.create#b5f5aabf": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "worm",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Worm"
+          }, {
+            "name": "delta",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.WormMutation#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.mute#293b52": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.ftile.Worm",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "original",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Worm"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.getFirst#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UTranslate",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.isDxNegative#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.size#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.translation#b128e583": {
+          "returnType": "net.sourceforge.plantuml.klimt.UTranslate",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "type",
+            "type": "int"
+          }, {
+            "name": "delta",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.getTextTranslate#1980e": {
+          "returnType": "net.sourceforge.plantuml.klimt.UTranslate",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "size",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation.createFromLongSignature#a406b981": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.ftile.WormMutation",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "signature",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }, {
+            "name": "delta",
+            "type": "double",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "153",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "196",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

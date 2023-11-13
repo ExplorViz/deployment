@@ -1,0 +1,120 @@
+{
+  "commitID": "aeeeace8a2276516960bc9b99a46f13a41bcccd0",
+  "fileName": "EditPetController.java",
+  "packageName": "org.springframework.samples.petclinic.web",
+  "importName": ["java.util.Collection", "org.springframework.beans.factory.annotation.Autowired", "org.springframework.samples.petclinic.Clinic", "org.springframework.samples.petclinic.Pet", "org.springframework.samples.petclinic.PetType", "org.springframework.samples.petclinic.validation.PetValidator", "org.springframework.stereotype.Controller", "org.springframework.ui.Model", "org.springframework.validation.BindingResult", "org.springframework.web.bind.WebDataBinder", "org.springframework.web.bind.annotation.InitBinder", "org.springframework.web.bind.annotation.ModelAttribute", "org.springframework.web.bind.annotation.PathVariable", "org.springframework.web.bind.annotation.RequestMapping", "org.springframework.web.bind.annotation.RequestMethod", "org.springframework.web.bind.annotation.SessionAttributes", "org.springframework.web.bind.support.SessionStatus"],
+  "classData": {
+    "org.springframework.samples.petclinic.web.EditPetController": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "clinic",
+        "type": "org.springframework.samples.petclinic.Clinic",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.web.EditPetController.setupForm#4a274bb": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "petId",
+            "type": "int"
+          }, {
+            "name": "model",
+            "type": "org.springframework.ui.Model"
+          }],
+          "annotation": ["RequestMapping"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.EditPetController.EditPetController#78780127": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "clinic",
+            "type": "org.springframework.samples.petclinic.Clinic"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.EditPetController.setAllowedFields#bc79c867": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dataBinder",
+            "type": "org.springframework.web.bind.WebDataBinder"
+          }],
+          "annotation": ["InitBinder"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.EditPetController.deletePet#1980e": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "petId",
+            "type": "int"
+          }],
+          "annotation": ["RequestMapping"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.EditPetController.processSubmit#a119104": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pet",
+            "type": "org.springframework.samples.petclinic.Pet"
+          }, {
+            "name": "result",
+            "type": "org.springframework.validation.BindingResult"
+          }, {
+            "name": "status",
+            "type": "org.springframework.web.bind.support.SessionStatus"
+          }],
+          "annotation": ["RequestMapping"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.web.EditPetController.populatePetTypes#1": {
+          "returnType": "java.util.Collection\u003corg.springframework.samples.petclinic.PetType\u003e",
+          "modifier": ["public"],
+          "annotation": ["ModelAttribute"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Controller", "RequestMapping", "SessionAttributes"],
+      "metric": {
+        "loc": "51",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "73",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "misvy@vmware.com",
+  "addedLines": 80
+}

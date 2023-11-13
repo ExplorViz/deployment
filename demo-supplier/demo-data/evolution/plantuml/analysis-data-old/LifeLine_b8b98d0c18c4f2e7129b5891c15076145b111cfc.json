@@ -1,0 +1,368 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "LifeLine.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram.graphic",
+  "importName": ["java.util.ArrayList", "java.util.Collection", "java.util.Collections", "java.util.Iterator", "java.util.List", "net.sourceforge.plantuml.klimt.Fashion", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.skin.ColorParam", "net.sourceforge.plantuml.skin.Component", "net.sourceforge.plantuml.skin.ComponentType", "net.sourceforge.plantuml.skin.SkinParamBackcolored", "net.sourceforge.plantuml.skin.SkinParamForceColor", "net.sourceforge.plantuml.skin.rose.Rose", "net.sourceforge.plantuml.style.ISkinParam", "net.sourceforge.plantuml.style.PName", "net.sourceforge.plantuml.style.Style"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "participant",
+        "type": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "nominalPreferredWidth",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "events",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.graphic.LifeLine.Variation\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "stairs",
+        "type": "net.sourceforge.plantuml.sequencediagram.graphic.Stairs",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "maxLevel",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "shadowing",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "create",
+        "type": "double",
+        "modifier": ["private"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.Variation"],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getRightShiftAtLevel#1980e": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "level",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getSegment#1980e": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.SegmentColored",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "i",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.setCreate#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "create",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.drawU#eb98ffaa": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "skin",
+            "type": "net.sourceforge.plantuml.skin.rose.Rose"
+          }, {
+            "name": "skinParam",
+            "type": "net.sourceforge.plantuml.style.ISkinParam"
+          }],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getCreate#1": {
+          "returnType": "double",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getMaxLeftShift#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getStartingX#395b4159": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getRightShift#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getDestroy#1": {
+          "returnType": "double",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.shadowing#1": {
+          "returnType": "boolean",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.finish#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getLeftShift#b0f77bf0": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getLeftShiftAtLevel#1980e": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "level",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getMaxRightShift#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getSegmentsCutted#f20e81b6": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.sequencediagram.graphic.SegmentColored\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "i",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getMaxLevel#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.addSegmentVariation#cf7cfca2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "type",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.LifeSegmentVariation"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "colors",
+            "type": "net.sourceforge.plantuml.klimt.Fashion"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getMissingClose#1": {
+          "returnType": "int",
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.LifeLine#5edad56a": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "participant",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.Pushable"
+          }, {
+            "name": "nominalPreferredWidth",
+            "type": "double"
+          }, {
+            "name": "shadowing",
+            "type": "boolean"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getColors#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.Fashion",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.getLevel#b0f77bf0": {
+          "returnType": "int",
+          "parameter": [{
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "203",
+        "cyclomatic_complexity": "21",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "19"
+      }
+    },
+    "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.Variation": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "field": [{
+        "name": "type",
+        "type": "net.sourceforge.plantuml.sequencediagram.graphic.LifeSegmentVariation",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "colors",
+        "type": "net.sourceforge.plantuml.klimt.Fashion",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "y",
+        "type": "double",
+        "modifier": ["final", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.Variation.Variation#cf7cfca2": {
+          "parameter": [{
+            "name": "type",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.LifeSegmentVariation"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "backcolor",
+            "type": "net.sourceforge.plantuml.klimt.Fashion"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.LifeLine.Variation.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "16",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "261",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

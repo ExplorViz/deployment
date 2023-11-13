@@ -1,0 +1,183 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "BitmapRenderer.java",
+  "packageName": "org.stathissideris.ascii2image.graphics",
+  "importName": ["java.awt.BasicStroke", "java.awt.Canvas", "java.awt.Color", "java.awt.Graphics", "java.awt.Graphics2D", "java.awt.Image", "java.awt.Rectangle", "java.awt.RenderingHints", "java.awt.Stroke", "java.awt.geom.AffineTransform", "java.awt.geom.GeneralPath", "java.awt.image.BufferedImage", "java.awt.image.ConvolveOp", "java.awt.image.Kernel", "java.awt.image.RenderedImage", "java.util.ArrayList", "java.util.Collections", "java.util.Iterator", "org.stathissideris.ascii2image.core.RenderingOptions", "org.stathissideris.ascii2image.core.Shape3DOrderingComparator"],
+  "classData": {
+    "org.stathissideris.ascii2image.graphics.BitmapRenderer": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "DEBUG",
+        "type": "boolean",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "IDREGEX",
+        "type": "java.lang.String",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "normalStroke",
+        "type": "java.awt.Stroke"
+      }, {
+        "name": "dashStroke",
+        "type": "java.awt.Stroke"
+      }],
+      "innerClass": ["org.stathissideris.ascii2image.graphics.BitmapRenderer.TextCanvas"],
+      "methodData": {
+        "org.stathissideris.ascii2image.graphics.BitmapRenderer.isColorDark#3e43f62": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "color",
+            "type": "java.awt.Color"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.BitmapRenderer.renderCustomPNGShape#b28d2110": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "shape",
+            "type": "org.stathissideris.ascii2image.graphics.DiagramShape"
+          }, {
+            "name": "g2",
+            "type": "java.awt.Graphics2D"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.BitmapRenderer.renderTextLayer#824492f6": {
+          "returnType": "java.awt.image.RenderedImage",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "textObjects",
+            "type": "java.util.ArrayList"
+          }, {
+            "name": "width",
+            "type": "int"
+          }, {
+            "name": "height",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.BitmapRenderer.renderToImage#5375800": {
+          "returnType": "java.awt.image.RenderedImage",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "org.stathissideris.ascii2image.graphics.Diagram"
+          }, {
+            "name": "options",
+            "type": "org.stathissideris.ascii2image.core.RenderingOptions"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.BitmapRenderer.render#ff7ecac8": {
+          "returnType": "java.awt.image.RenderedImage",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "org.stathissideris.ascii2image.graphics.Diagram"
+          }, {
+            "name": "image",
+            "type": "java.awt.image.BufferedImage"
+          }, {
+            "name": "options",
+            "type": "org.stathissideris.ascii2image.core.RenderingOptions"
+          }],
+          "metric": {
+            "loc": "231",
+            "cyclomatic_complexity": "33",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.BitmapRenderer.renderCustomShape#b28d2110": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "shape",
+            "type": "org.stathissideris.ascii2image.graphics.DiagramShape"
+          }, {
+            "name": "g2",
+            "type": "java.awt.Graphics2D"
+          }],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "352",
+        "cyclomatic_complexity": "16",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "4"
+      }
+    },
+    "org.stathissideris.ascii2image.graphics.BitmapRenderer.TextCanvas": {
+      "type": "CLASS",
+      "modifier": ["private"],
+      "field": [{
+        "name": "textObjects",
+        "type": "java.util.ArrayList"
+      }],
+      "methodData": {
+        "org.stathissideris.ascii2image.graphics.BitmapRenderer.TextCanvas.paint#9db0eca": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "g",
+            "type": "java.awt.Graphics"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.stathissideris.ascii2image.graphics.BitmapRenderer.TextCanvas.TextCanvas#227fe296": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "textObjects",
+            "type": "java.util.ArrayList"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "java.awt.Canvas",
+      "metric": {
+        "loc": "25",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "396",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

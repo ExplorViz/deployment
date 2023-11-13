@@ -1,0 +1,86 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "PSystemErrorUtils.java",
+  "packageName": "net.sourceforge.plantuml.error",
+  "importName": ["java.util.ArrayList", "java.util.Collection", "java.util.List", "net.sourceforge.plantuml.ErrorUml", "net.sourceforge.plantuml.core.Diagram", "net.sourceforge.plantuml.core.UmlSource", "net.sourceforge.plantuml.text.StringLocated"],
+  "classData": {
+    "net.sourceforge.plantuml.error.PSystemErrorUtils": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "net.sourceforge.plantuml.error.PSystemErrorUtils.buildV2#b7bb9fea": {
+          "returnType": "net.sourceforge.plantuml.error.PSystemError",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.core.UmlSource"
+          }, {
+            "name": "singleError",
+            "type": "net.sourceforge.plantuml.ErrorUml"
+          }, {
+            "name": "debugLines",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "list",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.error.PSystemErrorUtils.merge#f09db256": {
+          "returnType": "net.sourceforge.plantuml.error.PSystemError",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "ps",
+            "type": "java.util.Collection\u003cnet.sourceforge.plantuml.error.PSystemError\u003e"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.error.PSystemErrorUtils.mergeV2#a8a2fafa": {
+          "returnType": "net.sourceforge.plantuml.error.PSystemErrorV2",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "errorsV2",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.error.PSystemErrorV2\u003e"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.error.PSystemErrorUtils.isDiagramError#dbee8c56": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "type",
+            "type": "java.lang.Class\u003cWildcardUsage{type\u003dEXTENDS, boundedType\u003dReferenceType{net.sourceforge.plantuml.core.Diagram, typeParametersMap\u003dTypeParametersMap{nameToValue\u003d{}}}}\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "48",
+        "cyclomatic_complexity": "12",
+        "cyclomatic_complexity_weighted": "6",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "93",
+    "cyclomatic_complexity": "6"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

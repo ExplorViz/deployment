@@ -1,0 +1,155 @@
+{
+  "commitID": "e5254156eca3a8461fa758f17dc5fae27e738ab5",
+  "fileName": "Pet.java",
+  "packageName": "org.springframework.samples.petclinic.model",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.HashSet", "java.util.List", "java.util.Set", "javax.persistence.CascadeType", "javax.persistence.Column", "javax.persistence.Entity", "javax.persistence.FetchType", "javax.persistence.JoinColumn", "javax.persistence.ManyToOne", "javax.persistence.OneToMany", "javax.persistence.Table", "org.hibernate.annotations.Type", "org.joda.time.DateTime", "org.joda.time.LocalDate", "org.springframework.beans.support.MutableSortDefinition", "org.springframework.beans.support.PropertyComparator", "org.springframework.format.annotation.DateTimeFormat"],
+  "classData": {
+    "org.springframework.samples.petclinic.model.Pet": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "birthDate",
+        "type": "org.joda.time.LocalDate",
+        "modifier": ["private"]
+      }, {
+        "name": "type",
+        "type": "org.springframework.samples.petclinic.model.PetType",
+        "modifier": ["private"]
+      }, {
+        "name": "owner",
+        "type": "org.springframework.samples.petclinic.model.Owner",
+        "modifier": ["private"]
+      }, {
+        "name": "visits",
+        "type": "java.util.Set\u003corg.springframework.samples.petclinic.model.Visit\u003e",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.model.Pet.setVisitsInternal#c38bf94c": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "visits",
+            "type": "java.util.Set\u003corg.springframework.samples.petclinic.model.Visit\u003e"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.model.Pet.getBirthDate#1": {
+          "returnType": "org.joda.time.LocalDate",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.model.Pet.setBirthDate#2f94b5b8": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "birthDate",
+            "type": "org.joda.time.LocalDate"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.model.Pet.getOwner#1": {
+          "returnType": "org.springframework.samples.petclinic.model.Owner",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.model.Pet.addVisit#4ed5d4a": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "visit",
+            "type": "org.springframework.samples.petclinic.model.Visit"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.model.Pet.setOwner#49102b2": {
+          "returnType": "void",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.model.Owner"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.model.Pet.setType#3ad6a4f8": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "type",
+            "type": "org.springframework.samples.petclinic.model.PetType"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.model.Pet.getVisitsInternal#1": {
+          "returnType": "java.util.Set\u003corg.springframework.samples.petclinic.model.Visit\u003e",
+          "modifier": ["protected"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.model.Pet.getVisits#1": {
+          "returnType": "java.util.List\u003corg.springframework.samples.petclinic.model.Visit\u003e",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.model.Pet.getType#1": {
+          "returnType": "org.springframework.samples.petclinic.model.PetType",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "org.springframework.samples.petclinic.model.NamedEntity",
+      "annotation": ["Entity", "Table"],
+      "metric": {
+        "loc": "67",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "106",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "antoine.rey@gmail.com",
+  "deletedLines": 4
+}

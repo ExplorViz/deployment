@@ -1,0 +1,132 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Highlighted.java",
+  "packageName": "net.sourceforge.plantuml.yaml",
+  "importName": ["java.util.ArrayList", "java.util.List", "java.util.regex.Matcher", "java.util.regex.Pattern", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.stereo.Stereotype"],
+  "classData": {
+    "net.sourceforge.plantuml.yaml.Highlighted": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "HIGHLIGHTED",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "pattern",
+        "type": "java.util.regex.Pattern",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "paths",
+        "type": "java.util.List\u003cjava.lang.String\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "stereotype",
+        "type": "net.sourceforge.plantuml.stereo.Stereotype",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.yaml.Highlighted.Highlighted#5983abc4": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "paths",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "stereotype",
+            "type": "net.sourceforge.plantuml.stereo.Stereotype"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.yaml.Highlighted.toList#943a4c50": {
+          "returnType": "java.util.List\u003cjava.lang.String\u003e",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "paths",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.yaml.Highlighted.matchesDefinition#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.yaml.Highlighted.getStereotype#1": {
+          "returnType": "net.sourceforge.plantuml.stereo.Stereotype",
+          "modifier": ["public", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.yaml.Highlighted.build#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.yaml.Highlighted",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "line",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.yaml.Highlighted.isKeyHighlight#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.yaml.Highlighted.upOneLevel#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.yaml.Highlighted",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "62",
+        "cyclomatic_complexity": "9",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "107",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

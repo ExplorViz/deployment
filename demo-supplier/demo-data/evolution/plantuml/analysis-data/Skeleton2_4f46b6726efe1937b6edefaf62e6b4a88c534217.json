@@ -1,0 +1,167 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Skeleton2.java",
+  "packageName": "net.sourceforge.plantuml.salt.element",
+  "importName": ["java.util.ArrayList", "java.util.List", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.klimt.shape.URectangle"],
+  "classData": {
+    "net.sourceforge.plantuml.salt.element.Skeleton2": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "entries",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.salt.element.Skeleton2.Entry\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "sizeX",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.salt.element.Skeleton2.Entry"],
+      "methodData": {
+        "net.sourceforge.plantuml.salt.element.Skeleton2.getXStartForLevel#1980e": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "level",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.Skeleton2.add#b128e583": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "level",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.Skeleton2.getMotherOrSister#1980e": {
+          "returnType": "net.sourceforge.plantuml.salt.element.Skeleton2.Entry",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "idx",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.Skeleton2.getXEndForLevel#1980e": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "level",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.Skeleton2.draw#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "60",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "5"
+      }
+    },
+    "net.sourceforge.plantuml.salt.element.Skeleton2.Entry": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "field": [{
+        "name": "level",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ypos",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.salt.element.Skeleton2.Entry.drawHline#f1b230f2": {
+          "returnType": "void",
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.Skeleton2.Entry.Entry#b128e583": {
+          "parameter": [{
+            "name": "level",
+            "type": "int"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.Skeleton2.Entry.drawVline#f58b691f": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "lastY",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "20",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "105",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

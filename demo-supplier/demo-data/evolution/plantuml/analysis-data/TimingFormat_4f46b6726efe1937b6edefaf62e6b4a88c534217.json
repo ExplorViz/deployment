@@ -1,0 +1,124 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "TimingFormat.java",
+  "packageName": "net.sourceforge.plantuml.timingdiagram",
+  "importName": ["java.math.BigDecimal", "java.text.SimpleDateFormat", "java.util.Calendar", "java.util.GregorianCalendar", "java.util.TimeZone"],
+  "classData": {
+    "net.sourceforge.plantuml.timingdiagram.TimingFormat": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "field": [{
+        "name": "GMT",
+        "type": "java.util.TimeZone",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "gc",
+        "type": "java.util.GregorianCalendar",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "DECIMAL",
+        "type": "net.sourceforge.plantuml.timingdiagram.TimingFormat",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "HOUR",
+        "type": "net.sourceforge.plantuml.timingdiagram.TimingFormat",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "DATE",
+        "type": "net.sourceforge.plantuml.timingdiagram.TimingFormat",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "sdf",
+        "type": "java.text.SimpleDateFormat",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.timingdiagram.TimingFormat.create#ff4a34d6": {
+          "returnType": "net.sourceforge.plantuml.timingdiagram.TimingFormat",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "sdf",
+            "type": "java.text.SimpleDateFormat"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingFormat.formatTime#32c69b": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "time",
+            "type": "long"
+          }],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingFormat.createDate#9440cc53": {
+          "returnType": "net.sourceforge.plantuml.timingdiagram.TimeTick",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "yyyy",
+            "type": "int"
+          }, {
+            "name": "mm",
+            "type": "int"
+          }, {
+            "name": "dd",
+            "type": "int"
+          }, {
+            "name": "format",
+            "type": "net.sourceforge.plantuml.timingdiagram.TimingFormat"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingFormat.TimingFormat#ff4a34d6": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "sdf",
+            "type": "java.text.SimpleDateFormat"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.timingdiagram.TimingFormat.formatTime#55bf6a70": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "time",
+            "type": "java.math.BigDecimal"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "61",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "103",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

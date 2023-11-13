@@ -1,0 +1,90 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "GraphmlDescriptionDiagram.java",
+  "packageName": "net.sourceforge.plantuml.graphml",
+  "importName": ["java.nio.charset.StandardCharsets.UTF_8", "java.io.OutputStream", "javax.xml.parsers.DocumentBuilder", "javax.xml.parsers.ParserConfigurationException", "javax.xml.transform.OutputKeys", "javax.xml.transform.Result", "javax.xml.transform.Source", "javax.xml.transform.Transformer", "javax.xml.transform.TransformerException", "javax.xml.transform.dom.DOMSource", "javax.xml.transform.stream.StreamResult", "org.w3c.dom.Document", "org.w3c.dom.Element", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.descdiagram.DescriptionDiagram", "net.sourceforge.plantuml.xmi.XmlDiagramTransformer", "net.sourceforge.plantuml.xml.XmlFactories"],
+  "classData": {
+    "net.sourceforge.plantuml.graphml.GraphmlDescriptionDiagram": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.xmi.XmlDiagramTransformer"],
+      "field": [{
+        "name": "diagram",
+        "type": "net.sourceforge.plantuml.descdiagram.DescriptionDiagram",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "document",
+        "type": "org.w3c.dom.Document",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.graphml.GraphmlDescriptionDiagram.GraphmlDescriptionDiagram#40690d76": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.descdiagram.DescriptionDiagram"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.graphml.GraphmlDescriptionDiagram.addElement#472eafa": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "tobeAdded",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }, {
+            "name": "container",
+            "type": "org.w3c.dom.Element"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.graphml.GraphmlDescriptionDiagram.createEntityNode#7c02d022": {
+          "returnType": "org.w3c.dom.Element",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "entity",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.graphml.GraphmlDescriptionDiagram.transformerXml#2062420": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "os",
+            "type": "java.io.OutputStream"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "53",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "112",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

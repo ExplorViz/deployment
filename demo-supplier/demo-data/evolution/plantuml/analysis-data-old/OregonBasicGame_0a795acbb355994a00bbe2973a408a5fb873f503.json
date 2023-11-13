@@ -1,0 +1,569 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "OregonBasicGame.java",
+  "packageName": "net.sourceforge.plantuml.oregon",
+  "importName": ["java.util.Random", "net.sourceforge.plantuml.StringUtils"],
+  "classData": {
+    "net.sourceforge.plantuml.oregon.OregonBasicGame": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.oregon.BasicGame"],
+      "field": [{
+        "name": "screen",
+        "type": "net.sourceforge.plantuml.oregon.Screen",
+        "modifier": ["private"]
+      }, {
+        "name": "skb",
+        "type": "net.sourceforge.plantuml.oregon.SmartKeyboard",
+        "modifier": ["private"]
+      }, {
+        "name": "rnd",
+        "type": "java.util.Random",
+        "modifier": ["private"]
+      }, {
+        "name": "ks",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "kh",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "kp",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "kb",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "km",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "kq",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "ma",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "da",
+        "type": "String[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ep",
+        "type": "int[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "e",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "a",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "b",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "f",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "c",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "r",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "t",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "dr",
+        "type": "int",
+        "modifier": ["private"]
+      }, {
+        "name": "m",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "NB_WORDS",
+        "type": "int",
+        "modifier": ["private", "static"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.oregon.OregonBasicGame.ShootingWord"],
+      "methodData": {
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.die3000#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.run#21e0d826": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "keyboard",
+            "type": "net.sourceforge.plantuml.oregon.Keyboard"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.eating1310#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.printInitialScenario490#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.riders1390#1980e": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "68",
+            "cyclomatic_complexity": "17",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.print#943a4c50": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.riderShoot#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "br",
+            "type": "int",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.southPass2750#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.dealWithIllness2880#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.shoot3870#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "27",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.die3030#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.outOfMedicalSupplies3020#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.die3060#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.question1000#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.getTime#1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.montains2640#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "28",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.printb#943a4c50": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.blizzard2840#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.print3110#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.madeIt3190#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.initialShootingRanking920#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.hunt1200#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "25",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.init#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "44",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.stopAtFort1100#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "30",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.execEvent#3301a1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "i",
+            "type": "int"
+          }, {
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "160",
+            "cyclomatic_complexity": "91",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.needDoctorBadly3010#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.printInventory3350#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "24",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.whereAreWe#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "46",
+            "cyclomatic_complexity": "14",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.initialPurchasesOfPlayer690#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "82",
+            "cyclomatic_complexity": "11",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.rnd#1": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.getScreen#1": {
+          "returnType": "net.sourceforge.plantuml.oregon.Screen",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.events1800#1980e": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "j",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.protect#1980e": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.print#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "894",
+        "cyclomatic_complexity": "10",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "4"
+      }
+    },
+    "net.sourceforge.plantuml.oregon.OregonBasicGame.ShootingWord": {
+      "type": "ENUM",
+      "methodData": {
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.ShootingWord.encode#1980e": {
+          "returnType": "net.sourceforge.plantuml.oregon.OregonBasicGame.ShootingWord",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "v",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.ShootingWord.safeValueOf#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.oregon.OregonBasicGame.ShootingWord",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.oregon.OregonBasicGame.ShootingWord.decode#b705d14c": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "net.sourceforge.plantuml.oregon.OregonBasicGame.ShootingWord"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "enumConstant": ["POW", "BANG", "BLAM", "WHOP", "WHAM", "ZING", "ZACK", "ZANG", "WOOSH", "BAM", "ZAP", "BOOM", "WOW", "CLANG", "BOING", "ZOW", "PANG", "ZOSH", "KAZ", "KOOG", "ZOOP", "PONG", "PING", "BAZ", "ZONG", "PAM", "POOM", "DOING"],
+      "metric": {
+        "loc": "24",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "3"
+      }
+    }
+  },
+  "metric": {
+    "loc": "935",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

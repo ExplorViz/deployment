@@ -1,0 +1,117 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "CommandHideShowByVisibility.java",
+  "packageName": "net.sourceforge.plantuml.classdiagram.command",
+  "importName": ["java.util.EnumSet", "java.util.Set", "java.util.StringTokenizer", "net.sourceforge.plantuml.StringUtils", "net.sourceforge.plantuml.UmlDiagram", "net.sourceforge.plantuml.abel.EntityPortion", "net.sourceforge.plantuml.classdiagram.ClassDiagram", "net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.command.SingleLineCommand2", "net.sourceforge.plantuml.regex.IRegex", "net.sourceforge.plantuml.regex.RegexConcat", "net.sourceforge.plantuml.regex.RegexLeaf", "net.sourceforge.plantuml.regex.RegexResult", "net.sourceforge.plantuml.skin.VisibilityModifier", "net.sourceforge.plantuml.utils.LineLocation"],
+  "classData": {
+    "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByVisibility": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "ME",
+        "type": "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByVisibility",
+        "modifier": ["public", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByVisibility.executeArgClass#767dadea": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "classDiagram",
+            "type": "net.sourceforge.plantuml.classdiagram.ClassDiagram"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByVisibility.getEntityPortion#943a4c50": {
+          "returnType": "net.sourceforge.plantuml.abel.EntityPortion",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "s",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByVisibility.getRegexConcat#1": {
+          "returnType": "net.sourceforge.plantuml.regex.IRegex",
+          "modifier": ["static"],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByVisibility.CommandHideShowByVisibility#1": {
+          "modifier": ["private"],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByVisibility.addVisibilities#ad04d127": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "token",
+            "type": "java.lang.String"
+          }, {
+            "name": "portion",
+            "type": "net.sourceforge.plantuml.abel.EntityPortion"
+          }, {
+            "name": "result",
+            "type": "java.util.Set\u003cnet.sourceforge.plantuml.skin.VisibilityModifier\u003e"
+          }],
+          "metric": {
+            "loc": "26",
+            "cyclomatic_complexity": "8",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.classdiagram.command.CommandHideShowByVisibility.executeArg#56a53e79": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["protected"],
+          "parameter": [{
+            "name": "classDiagram",
+            "type": "net.sourceforge.plantuml.UmlDiagram"
+          }, {
+            "name": "location",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.command.SingleLineCommand2\u003cnet.sourceforge.plantuml.UmlDiagram\u003e",
+      "metric": {
+        "loc": "75",
+        "cyclomatic_complexity": "14",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "129",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

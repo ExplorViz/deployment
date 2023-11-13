@@ -1,0 +1,268 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CollisionDetector.java",
+  "packageName": "net.sourceforge.plantuml.activitydiagram3.ftile",
+  "importName": ["net.sourceforge.plantuml.utils.ObjectUtils.instanceOfAny", "java.util.ArrayList", "java.util.List", "net.sourceforge.plantuml.klimt.UBackground", "net.sourceforge.plantuml.klimt.UChange", "net.sourceforge.plantuml.klimt.UShape", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.color.HColors", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.drawing.UGraphicNo", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.MinMax", "net.sourceforge.plantuml.klimt.geom.XLine2D", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.klimt.shape.UPolygon", "net.sourceforge.plantuml.klimt.shape.URectangle"],
+  "classData": {
+    "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.Context": {
+      "type": "CLASS",
+      "modifier": ["static"],
+      "field": [{
+        "name": "rectangles",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.klimt.geom.MinMax\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "snakes",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.activitydiagram3.ftile.Snake\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "manageSnakes",
+        "type": "boolean",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.Context.drawDebug#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.Context.drawLine#fb63c10c": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "line",
+            "type": "net.sourceforge.plantuml.klimt.geom.XLine2D"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.Context.collision#895ff9f1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "r",
+            "type": "net.sourceforge.plantuml.klimt.geom.MinMax"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.Context.collision#b6cfd3dd": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "hline",
+            "type": "net.sourceforge.plantuml.klimt.geom.XLine2D"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "44",
+        "cyclomatic_complexity": "10",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "context",
+        "type": "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.Context",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.Context"],
+      "methodData": {
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.draw#95ce4c6b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.UShape"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.CollisionDetector#6b9e8b4f": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "translate",
+            "type": "net.sourceforge.plantuml.klimt.UTranslate"
+          }, {
+            "name": "context",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.Context"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.setManageSnakes#3db6c47": {
+          "returnType": "void",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "manageSnakes",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.apply#8adac84": {
+          "returnType": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "change",
+            "type": "net.sourceforge.plantuml.klimt.UChange"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.create#395b4159": {
+          "returnType": "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.drawSnake#4c5193f": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.Snake"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.drawRectangle#d6aa5cb9": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.URectangle"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.CollisionDetector#6601e2e": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector"
+          }, {
+            "name": "change",
+            "type": "net.sourceforge.plantuml.klimt.UChange"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.drawPolygone#c94ad344": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.UPolygon"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.collisionCheck#596f17ed": {
+          "returnType": "boolean",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "rect",
+            "type": "net.sourceforge.plantuml.klimt.geom.MinMax"
+          }, {
+            "name": "hline",
+            "type": "net.sourceforge.plantuml.klimt.geom.XLine2D"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.activitydiagram3.ftile.CollisionDetector.drawDebug#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.klimt.drawing.UGraphicNo",
+      "metric": {
+        "loc": "125",
+        "cyclomatic_complexity": "22",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "8"
+      }
+    }
+  },
+  "metric": {
+    "loc": "183",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

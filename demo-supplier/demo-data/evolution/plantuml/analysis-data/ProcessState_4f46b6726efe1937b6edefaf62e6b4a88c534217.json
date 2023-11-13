@@ -1,0 +1,184 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "ProcessState.java",
+  "packageName": "net.sourceforge.plantuml.dot",
+  "importName": ["java.io.IOException"],
+  "classData": {
+    "net.sourceforge.plantuml.dot.ProcessState": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "name",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "cause",
+        "type": "java.io.IOException",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "INIT",
+        "type": "net.sourceforge.plantuml.dot.ProcessState",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "RUNNING",
+        "type": "net.sourceforge.plantuml.dot.ProcessState",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "TERMINATED_OK",
+        "type": "net.sourceforge.plantuml.dot.ProcessState",
+        "modifier": ["private", "final", "static"]
+      }, {
+        "name": "TIMEOUT",
+        "type": "net.sourceforge.plantuml.dot.ProcessState",
+        "modifier": ["private", "final", "static"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.dot.ProcessState.INIT#1": {
+          "returnType": "net.sourceforge.plantuml.dot.ProcessState",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessState.getCause#1": {
+          "returnType": "java.lang.Throwable",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessState.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessState.IO_EXCEPTION2#a7a2d1e8": {
+          "returnType": "net.sourceforge.plantuml.dot.ProcessState",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "java.io.IOException"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessState.ProcessState#9ab20f79": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "name",
+            "type": "java.lang.String"
+          }, {
+            "name": "cause",
+            "type": "java.io.IOException"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessState.TIMEOUT#1": {
+          "returnType": "net.sourceforge.plantuml.dot.ProcessState",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessState.equals#8c658f7e": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "o",
+            "type": "java.lang.Object"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessState.RUNNING#1": {
+          "returnType": "net.sourceforge.plantuml.dot.ProcessState",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessState.differs#7ff2b7a1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "other",
+            "type": "net.sourceforge.plantuml.dot.ProcessState"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessState.hashCode#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessState.TERMINATED_OK#1": {
+          "returnType": "net.sourceforge.plantuml.dot.ProcessState",
+          "modifier": ["public", "static"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.ProcessState.IO_EXCEPTION1#a7a2d1e8": {
+          "returnType": "net.sourceforge.plantuml.dot.ProcessState",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "e",
+            "type": "java.io.IOException"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "67",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "4"
+      }
+    }
+  },
+  "metric": {
+    "loc": "106",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

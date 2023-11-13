@@ -1,0 +1,203 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Movement.java",
+  "packageName": "net.sourceforge.plantuml.openiconic",
+  "importName": ["java.util.Arrays", "java.util.Collections", "java.util.Iterator", "java.util.List", "java.util.Objects"],
+  "classData": {
+    "net.sourceforge.plantuml.openiconic.Movement": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "letter",
+        "type": "net.sourceforge.plantuml.openiconic.SvgCommandLetter",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "arguments",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.openiconic.SvgCommandNumber\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.openiconic.Movement.mutoToC#b7f5bfac": {
+          "returnType": "net.sourceforge.plantuml.openiconic.Movement",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "mirrorControlPoint",
+            "type": "net.sourceforge.plantuml.openiconic.SvgPosition"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.Movement.getLetter#1": {
+          "returnType": "char",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.Movement.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.Movement.Movement#41ddfaa8": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "it",
+            "type": "java.util.Iterator\u003cnet.sourceforge.plantuml.openiconic.SvgCommand\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.Movement.toAbsoluteUpperCase#b7f5bfac": {
+          "returnType": "net.sourceforge.plantuml.openiconic.Movement",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "delta",
+            "type": "net.sourceforge.plantuml.openiconic.SvgPosition"
+          }],
+          "metric": {
+            "loc": "51",
+            "cyclomatic_complexity": "14",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.Movement.getSvgPosition#1980e": {
+          "returnType": "net.sourceforge.plantuml.openiconic.SvgPosition",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "index",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.Movement.Movement#9ab5438c": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "letter",
+            "type": "net.sourceforge.plantuml.openiconic.SvgCommandLetter"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.Movement.Movement#73e8ed81": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "letter",
+            "type": "net.sourceforge.plantuml.openiconic.SvgCommandLetter"
+          }, {
+            "name": "pos",
+            "type": "net.sourceforge.plantuml.openiconic.SvgPosition"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.Movement.is#2e9375": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "c",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.Movement.getArgument#1980e": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "index",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.Movement.toSvg#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.Movement.Movement#5af02884": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "letter",
+            "type": "net.sourceforge.plantuml.openiconic.SvgCommandLetter"
+          }, {
+            "name": "args",
+            "type": "net.sourceforge.plantuml.openiconic.SvgCommandNumber"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.Movement.lastPosition#1": {
+          "returnType": "net.sourceforge.plantuml.openiconic.SvgPosition",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.openiconic.Movement.getMirrorControlPoint#1": {
+          "returnType": "net.sourceforge.plantuml.openiconic.SvgPosition",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "158",
+        "cyclomatic_complexity": "27",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "201",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

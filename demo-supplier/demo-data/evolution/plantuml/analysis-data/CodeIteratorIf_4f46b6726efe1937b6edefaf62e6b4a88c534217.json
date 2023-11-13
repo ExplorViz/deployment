@@ -1,0 +1,184 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CodeIteratorIf.java",
+  "packageName": "net.sourceforge.plantuml.tim.iterator",
+  "importName": ["java.util.List", "net.sourceforge.plantuml.text.StringLocated", "net.sourceforge.plantuml.text.TLineType", "net.sourceforge.plantuml.tim.EaterElseIf", "net.sourceforge.plantuml.tim.EaterException", "net.sourceforge.plantuml.tim.EaterExceptionLocated", "net.sourceforge.plantuml.tim.EaterIf", "net.sourceforge.plantuml.tim.EaterIfdef", "net.sourceforge.plantuml.tim.EaterIfndef", "net.sourceforge.plantuml.tim.ExecutionContextIf", "net.sourceforge.plantuml.tim.TContext", "net.sourceforge.plantuml.tim.TMemory"],
+  "classData": {
+    "net.sourceforge.plantuml.tim.iterator.CodeIteratorIf": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "context",
+        "type": "net.sourceforge.plantuml.tim.TContext",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "memory",
+        "type": "net.sourceforge.plantuml.tim.TMemory",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "logs",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.tim.iterator.CodeIteratorIf.CodeIteratorIf#b1d92167": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "source",
+            "type": "net.sourceforge.plantuml.tim.iterator.CodeIterator"
+          }, {
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "logs",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.text.StringLocated\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.iterator.CodeIteratorIf.executeIfndef#8252aa66": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.iterator.CodeIteratorIf.executeEndif#8252aa66": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.iterator.CodeIteratorIf.peek#1": {
+          "returnType": "net.sourceforge.plantuml.text.StringLocated",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "45",
+            "cyclomatic_complexity": "15",
+            "nestedBlockDepth": "9"
+          }
+        },
+        "net.sourceforge.plantuml.tim.iterator.CodeIteratorIf.executeElseIf#8252aa66": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.tim.iterator.CodeIteratorIf.executeElse#8252aa66": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.tim.iterator.CodeIteratorIf.executeIf#8252aa66": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.tim.iterator.CodeIteratorIf.executeIfdef#8252aa66": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "context",
+            "type": "net.sourceforge.plantuml.tim.TContext"
+          }, {
+            "name": "memory",
+            "type": "net.sourceforge.plantuml.tim.TMemory"
+          }, {
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.tim.iterator.AbstractCodeIterator",
+      "metric": {
+        "loc": "115",
+        "cyclomatic_complexity": "23",
+        "cyclomatic_complexity_weighted": "5",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "165",
+    "cyclomatic_complexity": "5"
+  },
+  "author": "plantuml@gmail.com"
+}

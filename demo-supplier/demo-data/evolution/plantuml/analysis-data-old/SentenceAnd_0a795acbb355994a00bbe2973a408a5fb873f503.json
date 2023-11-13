@@ -1,0 +1,76 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "SentenceAnd.java",
+  "packageName": "net.sourceforge.plantuml.project.lang",
+  "importName": ["net.sourceforge.plantuml.command.CommandExecutionResult", "net.sourceforge.plantuml.project.Failable", "net.sourceforge.plantuml.project.GanttDiagram", "net.sourceforge.plantuml.regex.IRegex", "net.sourceforge.plantuml.regex.RegexConcat", "net.sourceforge.plantuml.regex.RegexLeaf", "net.sourceforge.plantuml.regex.RegexResult"],
+  "classData": {
+    "net.sourceforge.plantuml.project.lang.SentenceAnd": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.project.lang.Sentence"],
+      "field": [{
+        "name": "sentence1",
+        "type": "net.sourceforge.plantuml.project.lang.SentenceSimple",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "sentence2",
+        "type": "net.sourceforge.plantuml.project.lang.SentenceSimple",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.project.lang.SentenceAnd.SentenceAnd#ef054661": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "sentence1",
+            "type": "net.sourceforge.plantuml.project.lang.SentenceSimple"
+          }, {
+            "name": "sentence2",
+            "type": "net.sourceforge.plantuml.project.lang.SentenceSimple"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.SentenceAnd.execute#f412a0c6": {
+          "returnType": "net.sourceforge.plantuml.command.CommandExecutionResult",
+          "modifier": ["public", "final"],
+          "parameter": [{
+            "name": "project",
+            "type": "net.sourceforge.plantuml.project.GanttDiagram"
+          }, {
+            "name": "arg",
+            "type": "net.sourceforge.plantuml.regex.RegexResult"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.project.lang.SentenceAnd.toRegex#1": {
+          "returnType": "net.sourceforge.plantuml.regex.IRegex",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "36",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "81",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,156 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "TimeHeaderCalendar.java",
+  "packageName": "net.sourceforge.plantuml.project.draw",
+  "importName": ["java.util.Locale", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.project.TimeHeaderParameters", "net.sourceforge.plantuml.project.time.Day", "net.sourceforge.plantuml.project.timescale.TimeScale"],
+  "classData": {
+    "net.sourceforge.plantuml.project.draw.TimeHeaderCalendar": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["public", "abstract"],
+      "field": [{
+        "name": "thParam",
+        "type": "net.sourceforge.plantuml.project.TimeHeaderParameters",
+        "modifier": ["private", "final"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.project.draw.TimeHeaderCalendar.Pending"],
+      "methodData": {
+        "net.sourceforge.plantuml.project.draw.TimeHeaderCalendar.isBold#10b9b": {
+          "returnType": "boolean",
+          "modifier": ["protected", "final"],
+          "parameter": [{
+            "name": "wink",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderCalendar.TimeHeaderCalendar#ea8c493a": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "thParam",
+            "type": "net.sourceforge.plantuml.project.TimeHeaderParameters"
+          }, {
+            "name": "timeScale",
+            "type": "net.sourceforge.plantuml.project.timescale.TimeScale"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderCalendar.locale#1": {
+          "returnType": "java.util.Locale",
+          "modifier": ["protected", "final"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderCalendar.getLoadAt#10b9b": {
+          "returnType": "int",
+          "modifier": ["protected", "final"],
+          "parameter": [{
+            "name": "instant",
+            "type": "net.sourceforge.plantuml.project.time.Day"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderCalendar.drawTextsBackground#f58b691f": {
+          "returnType": "void",
+          "modifier": ["protected", "final"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "totalHeightWithoutFooter",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "37",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "superClass": "net.sourceforge.plantuml.project.draw.TimeHeader",
+      "metric": {
+        "loc": "77",
+        "cyclomatic_complexity": "10",
+        "cyclomatic_complexity_weighted": "10",
+        "LCOM4": "2"
+      }
+    },
+    "net.sourceforge.plantuml.project.draw.TimeHeaderCalendar.Pending": {
+      "type": "CLASS",
+      "field": [{
+        "name": "x1",
+        "type": "double",
+        "modifier": ["final"]
+      }, {
+        "name": "x2",
+        "type": "double"
+      }, {
+        "name": "color",
+        "type": "net.sourceforge.plantuml.klimt.color.HColor",
+        "modifier": ["final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.project.draw.TimeHeaderCalendar.Pending.draw#f58b691f": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "height",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.project.draw.TimeHeaderCalendar.Pending.Pending#f21607ba": {
+          "parameter": [{
+            "name": "color",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }, {
+            "name": "x1",
+            "type": "double"
+          }, {
+            "name": "x2",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "15",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "122",
+    "cyclomatic_complexity": "10"
+  },
+  "author": "plantuml@gmail.com"
+}

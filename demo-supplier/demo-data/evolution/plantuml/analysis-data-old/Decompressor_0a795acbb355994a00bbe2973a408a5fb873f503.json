@@ -1,0 +1,164 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Decompressor.java",
+  "packageName": "net.sourceforge.plantuml.code.deflate",
+  "importName": ["java.io.EOFException", "java.io.IOException", "java.util.Arrays", "java.util.Objects", "java.util.zip.DataFormatException"],
+  "classData": {
+    "net.sourceforge.plantuml.code.deflate.Decompressor": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "field": [{
+        "name": "input",
+        "type": "net.sourceforge.plantuml.code.deflate.BitInputStream",
+        "modifier": ["private"]
+      }, {
+        "name": "output",
+        "type": "net.sourceforge.plantuml.code.deflate.OutputStreamProtected",
+        "modifier": ["private"]
+      }, {
+        "name": "dictionary",
+        "type": "net.sourceforge.plantuml.code.deflate.ByteHistory",
+        "modifier": ["private"]
+      }, {
+        "name": "FIXED_LITERAL_LENGTH_CODE",
+        "type": "net.sourceforge.plantuml.code.deflate.CanonicalCode",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "FIXED_DISTANCE_CODE",
+        "type": "net.sourceforge.plantuml.code.deflate.CanonicalCode",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.code.deflate.Decompressor.decompressHuffmanBlock#c36b9fe1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "litLenCode",
+            "type": "net.sourceforge.plantuml.code.deflate.CanonicalCode"
+          }, {
+            "name": "distCode",
+            "type": "net.sourceforge.plantuml.code.deflate.CanonicalCode"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.code.deflate.Decompressor.decompress#dc9750dc": {
+          "returnType": "byte[]",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "in",
+            "type": "net.sourceforge.plantuml.code.deflate.BitInputStream"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.code.deflate.Decompressor.decompress#366b2351": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "in",
+            "type": "net.sourceforge.plantuml.code.deflate.BitInputStream"
+          }, {
+            "name": "out",
+            "type": "net.sourceforge.plantuml.code.deflate.OutputStreamProtected"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.code.deflate.Decompressor.Decompressor#366b2351": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "in",
+            "type": "net.sourceforge.plantuml.code.deflate.BitInputStream"
+          }, {
+            "name": "out",
+            "type": "net.sourceforge.plantuml.code.deflate.OutputStreamProtected"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "21",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.code.deflate.Decompressor.decodeRunLength#1980e": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "sym",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.code.deflate.Decompressor.decodeHuffmanCodes#1": {
+          "returnType": "CanonicalCode[]",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "80",
+            "cyclomatic_complexity": "31",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "net.sourceforge.plantuml.code.deflate.Decompressor.decodeDistance#1980e": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "sym",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.code.deflate.Decompressor.readInt#1980e": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "numBits",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.code.deflate.Decompressor.decompressUncompressedBlock#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "6",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "218",
+        "cyclomatic_complexity": "77",
+        "cyclomatic_complexity_weighted": "11",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "226",
+    "cyclomatic_complexity": "11"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

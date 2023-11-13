@@ -1,0 +1,62 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Trim.java",
+  "packageName": "net.sourceforge.plantuml.command",
+  "importName": ["java.util.regex.Pattern", "net.sourceforge.plantuml.text.StringLocated"],
+  "classData": {
+    "net.sourceforge.plantuml.command.Trim": {
+      "type": "ENUM",
+      "modifier": ["public"],
+      "field": [{
+        "name": "LTRIM",
+        "type": "java.util.regex.Pattern",
+        "modifier": ["private", "static"]
+      }, {
+        "name": "RTRIM",
+        "type": "java.util.regex.Pattern",
+        "modifier": ["private", "static"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.command.Trim.trim#49563e00": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "s",
+            "type": "net.sourceforge.plantuml.text.StringLocated"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.command.Trim.ltrim#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "tmp1",
+            "type": "java.lang.String",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "enumConstant": ["BOTH", "LEFT_ONLY", "NONE"],
+      "metric": {
+        "loc": "19",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "60",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

@@ -1,0 +1,127 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "CartesianTransformation.java",
+  "packageName": "jcckit.transformation",
+  "importName": ["jcckit.data.DataPoint", "jcckit.graphic.GraphPoint", "jcckit.util.Util"],
+  "classData": {
+    "jcckit.transformation.CartesianTransformation": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["jcckit.transformation.Transformation"],
+      "field": [{
+        "name": "_xLogScale",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_xOffset",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_xScale",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_yLogScale",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_yOffset",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_yScale",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "jcckit.transformation.CartesianTransformation.CartesianTransformation#10e7d4f9": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "xLogScale",
+            "type": "boolean"
+          }, {
+            "name": "yLogScale",
+            "type": "boolean"
+          }, {
+            "name": "dataPoint1",
+            "type": "jcckit.data.DataPoint"
+          }, {
+            "name": "graphPoint1",
+            "type": "jcckit.graphic.GraphPoint"
+          }, {
+            "name": "dataPoint2",
+            "type": "jcckit.data.DataPoint"
+          }, {
+            "name": "graphPoint2",
+            "type": "jcckit.graphic.GraphPoint"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.transformation.CartesianTransformation.transformToGraph#60f3d005": {
+          "returnType": "jcckit.graphic.GraphPoint",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "point",
+            "type": "jcckit.data.DataPoint"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.transformation.CartesianTransformation.check#e2de77c1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "valueToCheck",
+            "type": "double"
+          }, {
+            "name": "type",
+            "type": "java.lang.String"
+          }, {
+            "name": "axis",
+            "type": "java.lang.String"
+          }, {
+            "name": "value",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.transformation.CartesianTransformation.transformToData#fdf72121": {
+          "returnType": "jcckit.data.DataPoint",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "point",
+            "type": "jcckit.graphic.GraphPoint"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "49",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "73",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

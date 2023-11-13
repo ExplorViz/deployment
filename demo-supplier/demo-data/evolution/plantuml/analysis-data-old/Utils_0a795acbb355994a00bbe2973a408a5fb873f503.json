@@ -1,0 +1,129 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "Utils.java",
+  "packageName": "net.sourceforge.plantuml.brotli",
+  "importName": ["java.io.IOException", "java.io.InputStream"],
+  "classData": {
+    "net.sourceforge.plantuml.brotli.Utils": {
+      "type": "CLASS",
+      "modifier": ["final"],
+      "field": [{
+        "name": "BYTE_ZEROES",
+        "type": "byte[]",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "INT_ZEROES",
+        "type": "int[]",
+        "modifier": ["private", "static", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.brotli.Utils.fillBytesWithZeroes#90e4ca29": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "dest",
+            "type": "byte[]"
+          }, {
+            "name": "start",
+            "type": "int"
+          }, {
+            "name": "end",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Utils.closeInput#512cbbe9": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "src",
+            "type": "java.io.InputStream"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Utils.readInput#f5a3a541": {
+          "returnType": "int",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "src",
+            "type": "java.io.InputStream"
+          }, {
+            "name": "dst",
+            "type": "byte[]"
+          }, {
+            "name": "offset",
+            "type": "int"
+          }, {
+            "name": "length",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Utils.fillIntsWithZeroes#74e43590": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "dest",
+            "type": "int[]"
+          }, {
+            "name": "start",
+            "type": "int"
+          }, {
+            "name": "end",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.brotli.Utils.copyBytesWithin#8bb612e6": {
+          "returnType": "void",
+          "modifier": ["static"],
+          "parameter": [{
+            "name": "bytes",
+            "type": "byte[]"
+          }, {
+            "name": "target",
+            "type": "int"
+          }, {
+            "name": "start",
+            "type": "int"
+          }, {
+            "name": "end",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "40",
+        "cyclomatic_complexity": "5",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "53",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

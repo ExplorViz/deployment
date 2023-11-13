@@ -1,0 +1,359 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "ConfigParameters.java",
+  "packageName": "jcckit.util",
+  "importName": ["java.awt.Color", "java.util.StringTokenizer", "net.sourceforge.plantuml.klimt.color.ColorMapper", "net.sourceforge.plantuml.klimt.color.HColorSet", "net.sourceforge.plantuml.klimt.color.NoSuchColorException"],
+  "classData": {
+    "jcckit.util.ConfigParameters": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "_configData",
+        "type": "jcckit.util.ConfigData",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "colors",
+        "type": "net.sourceforge.plantuml.klimt.color.HColorSet",
+        "modifier": ["static", "private"]
+      }],
+      "methodData": {
+        "jcckit.util.ConfigParameters.getNode#943a4c50": {
+          "returnType": "jcckit.util.ConfigParameters",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.util.ConfigParameters.getDouble#a406b981": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }, {
+            "name": "defaultValue",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.util.ConfigParameters.getFullKey#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.util.ConfigParameters.get#874989e1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }, {
+            "name": "defaultValue",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.util.ConfigParameters.ConfigParameters#a85a524b": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "configData",
+            "type": "jcckit.util.ConfigData"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.util.ConfigParameters.get#943a4c50": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.util.ConfigParameters.parseInt#874989e1": {
+          "returnType": "int",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String"
+          }, {
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.util.ConfigParameters.getInt#f310d59f": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }, {
+            "name": "defaultValue",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.util.ConfigParameters.getBoolean#943a4c50": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.util.ConfigParameters.getInt#943a4c50": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.util.ConfigParameters.parseDouble#874989e1": {
+          "returnType": "double",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String"
+          }, {
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.util.ConfigParameters.getDoubleArray#441714a3": {
+          "returnType": "double[]",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }, {
+            "name": "defaultValue",
+            "type": "double[]"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.util.ConfigParameters.getColor#f6f37cf3": {
+          "returnType": "java.awt.Color",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }, {
+            "name": "defaultValue",
+            "type": "java.awt.Color"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.util.ConfigParameters.decodeInternal#943a4c50": {
+          "returnType": "java.awt.Color",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "jcckit.util.ConfigParameters.getColor#943a4c50": {
+          "returnType": "java.awt.Color",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.util.ConfigParameters.createNumberFormatException#f621fe70": {
+          "returnType": "java.lang.NumberFormatException",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "text",
+            "type": "java.lang.String"
+          }, {
+            "name": "value",
+            "type": "java.lang.String"
+          }, {
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.util.ConfigParameters.parseDoubleArray#874989e1": {
+          "returnType": "double[]",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String"
+          }, {
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "jcckit.util.ConfigParameters.parseColor#874989e1": {
+          "returnType": "java.awt.Color",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String"
+          }, {
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.util.ConfigParameters.parseBoolean#874989e1": {
+          "returnType": "boolean",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "value",
+            "type": "java.lang.String"
+          }, {
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "jcckit.util.ConfigParameters.getDoubleArray#943a4c50": {
+          "returnType": "double[]",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.util.ConfigParameters.getBoolean#f6eaa9d8": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }, {
+            "name": "defaultValue",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.util.ConfigParameters.getDouble#943a4c50": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "key",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "142",
+        "cyclomatic_complexity": "24",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "7"
+      }
+    }
+  },
+  "metric": {
+    "loc": "170",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}

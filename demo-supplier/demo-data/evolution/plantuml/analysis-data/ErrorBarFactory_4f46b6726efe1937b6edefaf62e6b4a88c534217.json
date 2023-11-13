@@ -1,0 +1,91 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "ErrorBarFactory.java",
+  "packageName": "jcckit.plot",
+  "importName": ["jcckit.graphic.GraphPoint", "jcckit.graphic.GraphicAttributes", "jcckit.graphic.GraphicalComposite", "jcckit.graphic.GraphicalElement", "jcckit.graphic.Rectangle", "jcckit.util.ConfigParameters", "jcckit.util.Factory"],
+  "classData": {
+    "jcckit.plot.ErrorBarFactory": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["jcckit.plot.SymbolFactory"],
+      "field": [{
+        "name": "SYMBOL_FACTORY_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "_symbolFactory",
+        "type": "jcckit.plot.SymbolFactory",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_attributes",
+        "type": "jcckit.graphic.GraphicAttributes",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "_size",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "jcckit.plot.ErrorBarFactory.ErrorBarFactory#b6dbbb0b": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "config",
+            "type": "jcckit.util.ConfigParameters"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.plot.ErrorBarFactory.createLegendSymbol#71e47ed0": {
+          "returnType": "jcckit.graphic.GraphicalElement",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "centerPosition",
+            "type": "jcckit.graphic.GraphPoint"
+          }, {
+            "name": "size",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.plot.ErrorBarFactory.createSymbol#60fdb1c1": {
+          "returnType": "jcckit.plot.Symbol",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "point",
+            "type": "jcckit.graphic.GraphPoint"
+          }, {
+            "name": "hintFromPreviousPoint",
+            "type": "jcckit.plot.Hint"
+          }, {
+            "name": "hintFromPreviousCurve",
+            "type": "jcckit.plot.Hint"
+          }],
+          "metric": {
+            "loc": "32",
+            "cyclomatic_complexity": "7",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "54",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "7",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "82",
+    "cyclomatic_complexity": "7"
+  },
+  "author": "plantuml@gmail.com"
+}

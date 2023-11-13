@@ -1,0 +1,204 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "FrontierStackImpl.java",
+  "packageName": "net.sourceforge.plantuml.sequencediagram.graphic",
+  "importName": ["java.util.ArrayList", "java.util.Collections", "java.util.List"],
+  "classData": {
+    "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.Stack": {
+      "type": "CLASS",
+      "field": [{
+        "name": "current",
+        "type": "net.sourceforge.plantuml.sequencediagram.graphic.FrontierComplex",
+        "modifier": ["final", "private"]
+      }, {
+        "name": "envelop",
+        "type": "net.sourceforge.plantuml.sequencediagram.graphic.FrontierComplex",
+        "modifier": ["final", "private"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.Stack.Stack#e6cddfe2": {
+          "parameter": [{
+            "name": "current",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.FrontierComplex"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.Stack.addEnvelop#e6cddfe2": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.Stack",
+          "parameter": [{
+            "name": "env",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.FrontierComplex"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.Stack.Stack#d9bbfc21": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "current",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.FrontierComplex"
+          }, {
+            "name": "envelop",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.FrontierComplex"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "20",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    },
+    "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl": {
+      "type": "CLASS",
+      "interface": ["net.sourceforge.plantuml.sequencediagram.graphic.FrontierStack"],
+      "field": [{
+        "name": "all",
+        "type": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.Stack\u003e",
+        "modifier": ["final", "private"]
+      }],
+      "innerClass": ["net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.Stack"],
+      "methodData": {
+        "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.restore#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStack",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.copy#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.FrontierStackImpl#cf307b3": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "all",
+            "type": "java.util.List\u003cnet.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.Stack\u003e"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.add#4e1427fa": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "delta",
+            "type": "double"
+          }, {
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.openBar#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStack",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.closeBar#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStack",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.getLast#1": {
+          "returnType": "net.sourceforge.plantuml.sequencediagram.graphic.FrontierComplex",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.FrontierStackImpl#6df999ff": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "freeY",
+            "type": "double"
+          }, {
+            "name": "rangeEnd",
+            "type": "int"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.sequencediagram.graphic.FrontierStackImpl.getFreeY#e01c2609": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "range",
+            "type": "net.sourceforge.plantuml.sequencediagram.graphic.ParticipantRange"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "87",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "7"
+      }
+    }
+  },
+  "metric": {
+    "loc": "128",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

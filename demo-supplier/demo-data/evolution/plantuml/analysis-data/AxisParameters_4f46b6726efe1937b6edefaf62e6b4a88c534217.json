@@ -1,0 +1,278 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "AxisParameters.java",
+  "packageName": "jcckit.plot",
+  "importName": ["java.util.Properties", "jcckit.graphic.BasicGraphicAttributes", "jcckit.graphic.GraphPoint", "jcckit.graphic.LineAttributes", "jcckit.graphic.ShapeAttributes", "jcckit.graphic.TextAttributes", "jcckit.util.ConfigData", "jcckit.util.ConfigParameters", "jcckit.util.ConfigParametersBasedConfigData", "jcckit.util.Factory", "jcckit.util.Format", "jcckit.util.PropertiesBasedConfigData", "jcckit.util.TicLabelFormat", "jcckit.util.Util"],
+  "classData": {
+    "jcckit.plot.AxisParameters": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "LOG_SCALE_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "MINIMUM_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "MAXIMUM_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "AXIS_LENGTH_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "AXIS_ATTRIBUTES_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "AXIS_LABEL_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "AXIS_LABEL_POSITION_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "AXIS_LABEL_ATTRIBUTES_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "AUTOMATIC_TIC_CALCULATION_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "MINIMUM_TIC_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "MAXIMUM_TIC_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "NUMBER_OF_TICS_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "TIC_LENGTH_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "TIC_ATTRIBUTES_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "TIC_LABEL_FORMAT_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "TIC_LABEL_POSITION_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "TIC_LABEL_ATTRIBUTES_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "GRID_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "GRID_ATTRIBUTES_KEY",
+        "type": "java.lang.String",
+        "modifier": ["public", "static", "final"]
+      }, {
+        "name": "LN10",
+        "type": "double",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "logScale",
+        "type": "boolean"
+      }, {
+        "name": "minimum",
+        "type": "double"
+      }, {
+        "name": "maximum",
+        "type": "double"
+      }, {
+        "name": "axisLength",
+        "type": "double"
+      }, {
+        "name": "axisAttributes",
+        "type": "jcckit.graphic.LineAttributes"
+      }, {
+        "name": "automaticTicCalculation",
+        "type": "boolean"
+      }, {
+        "name": "minimumTic",
+        "type": "double"
+      }, {
+        "name": "maximumTic",
+        "type": "double"
+      }, {
+        "name": "numberOfTics",
+        "type": "int"
+      }, {
+        "name": "ticLength",
+        "type": "double"
+      }, {
+        "name": "ticAttributes",
+        "type": "jcckit.graphic.LineAttributes"
+      }, {
+        "name": "ticLabelFormat",
+        "type": "jcckit.util.TicLabelFormat"
+      }, {
+        "name": "ticLabelPosition",
+        "type": "jcckit.graphic.GraphPoint"
+      }, {
+        "name": "ticLabelAttributes",
+        "type": "jcckit.graphic.TextAttributes"
+      }, {
+        "name": "grid",
+        "type": "boolean"
+      }, {
+        "name": "gridAttributes",
+        "type": "jcckit.graphic.LineAttributes"
+      }, {
+        "name": "axisLabel",
+        "type": "java.lang.String"
+      }, {
+        "name": "axisLabelPosition",
+        "type": "jcckit.graphic.GraphPoint"
+      }, {
+        "name": "axisLabelAttributes",
+        "type": "jcckit.graphic.TextAttributes"
+      }],
+      "methodData": {
+        "jcckit.plot.AxisParameters.createYAxis#b6dbbb0b": {
+          "returnType": "jcckit.plot.AxisParameters",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "config",
+            "type": "jcckit.util.ConfigParameters"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.plot.AxisParameters.createXAxis#b6dbbb0b": {
+          "returnType": "jcckit.plot.AxisParameters",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "config",
+            "type": "jcckit.util.ConfigParameters"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.plot.AxisParameters.calculateTics#1": {
+          "returnType": "double[]",
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "jcckit.plot.AxisParameters.createDefaultYAxisProperties#1": {
+          "returnType": "java.util.Properties",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.plot.AxisParameters.calculateTicsParameters#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "jcckit.plot.AxisParameters.createTicLabelFormat#b6dbbb0b": {
+          "returnType": "jcckit.util.TicLabelFormat",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "c",
+            "type": "jcckit.util.ConfigParameters"
+          }],
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.plot.AxisParameters.createAxis#643b0fa8": {
+          "returnType": "jcckit.plot.AxisParameters",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "config",
+            "type": "jcckit.util.ConfigParameters"
+          }, {
+            "name": "p",
+            "type": "java.util.Properties"
+          }],
+          "metric": {
+            "loc": "39",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "jcckit.plot.AxisParameters.adjust#1eef7de1": {
+          "returnType": "double",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "adjustingValue",
+            "type": "double"
+          }, {
+            "name": "value",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.plot.AxisParameters.createDefaultAxisProperties#1": {
+          "returnType": "java.util.Properties",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "31",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "jcckit.plot.AxisParameters.createDefaultXAxisProperties#1": {
+          "returnType": "java.util.Properties",
+          "modifier": ["private", "static"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "215",
+        "cyclomatic_complexity": "7",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "251",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

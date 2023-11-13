@@ -1,0 +1,72 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "DriverPolygonBraille.java",
+  "packageName": "net.sourceforge.plantuml.braille",
+  "importName": ["java.util.ArrayList", "java.util.List", "net.sourceforge.plantuml.klimt.ClipContainer", "net.sourceforge.plantuml.klimt.UClip", "net.sourceforge.plantuml.klimt.UParam", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.ColorMapper", "net.sourceforge.plantuml.klimt.drawing.UDriver", "net.sourceforge.plantuml.klimt.geom.XPoint2D", "net.sourceforge.plantuml.klimt.shape.UPolygon"],
+  "classData": {
+    "net.sourceforge.plantuml.braille.DriverPolygonBraille": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.drawing.UDriver\u003cnet.sourceforge.plantuml.klimt.shape.UPolygon, net.sourceforge.plantuml.braille.BrailleGrid\u003e"],
+      "field": [{
+        "name": "clipContainer",
+        "type": "net.sourceforge.plantuml.klimt.ClipContainer",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.braille.DriverPolygonBraille.DriverPolygonBraille#fc1eb310": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "clipContainer",
+            "type": "net.sourceforge.plantuml.klimt.ClipContainer"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.braille.DriverPolygonBraille.draw#ace0717b": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "shape",
+            "type": "net.sourceforge.plantuml.klimt.shape.UPolygon"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "mapper",
+            "type": "net.sourceforge.plantuml.klimt.color.ColorMapper"
+          }, {
+            "name": "param",
+            "type": "net.sourceforge.plantuml.klimt.UParam"
+          }, {
+            "name": "grid",
+            "type": "net.sourceforge.plantuml.braille.BrailleGrid"
+          }],
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "4"
+          }
+        }
+      },
+      "metric": {
+        "loc": "28",
+        "cyclomatic_complexity": "4",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "76",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

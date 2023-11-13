@@ -1,0 +1,110 @@
+{
+  "commitID": "bca9c48e9247237b39efb84178ac5a51b7f0d597",
+  "fileName": "VisitController.java",
+  "packageName": "org.springframework.samples.petclinic.web",
+  "importName": ["java.util.Map", "javax.validation.Valid", "org.springframework.beans.factory.annotation.Autowired", "org.springframework.samples.petclinic.model.Pet", "org.springframework.samples.petclinic.model.Visit", "org.springframework.samples.petclinic.service.ClinicService", "org.springframework.stereotype.Controller", "org.springframework.validation.BindingResult", "org.springframework.web.bind.WebDataBinder", "org.springframework.web.bind.annotation.InitBinder", "org.springframework.web.bind.annotation.PathVariable", "org.springframework.web.bind.annotation.RequestMapping", "org.springframework.web.bind.annotation.RequestMethod", "org.springframework.web.bind.annotation.SessionAttributes", "org.springframework.web.bind.support.SessionStatus", "org.springframework.web.servlet.ModelAndView"],
+  "classData": {
+    "org.springframework.samples.petclinic.web.VisitController": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "clinicService",
+        "type": "org.springframework.samples.petclinic.service.ClinicService",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.web.VisitController.showVisits#1980e": {
+          "returnType": "org.springframework.web.servlet.ModelAndView",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "petId",
+            "type": "int"
+          }],
+          "annotation": ["RequestMapping"],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.VisitController.initNewVisitForm#b6f52276": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "petId",
+            "type": "int"
+          }, {
+            "name": "model",
+            "type": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e"
+          }],
+          "annotation": ["RequestMapping"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.VisitController.VisitController#8a3aa4ac": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "clinicService",
+            "type": "org.springframework.samples.petclinic.service.ClinicService"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.web.VisitController.processNewVisitForm#84855a30": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "visit",
+            "type": "org.springframework.samples.petclinic.model.Visit"
+          }, {
+            "name": "result",
+            "type": "org.springframework.validation.BindingResult"
+          }, {
+            "name": "status",
+            "type": "org.springframework.web.bind.support.SessionStatus"
+          }],
+          "annotation": ["RequestMapping"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.web.VisitController.setAllowedFields#bc79c867": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "dataBinder",
+            "type": "org.springframework.web.bind.WebDataBinder"
+          }],
+          "annotation": ["InitBinder"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Controller", "SessionAttributes"],
+      "metric": {
+        "loc": "45",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "81",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "misvy@vmware.com",
+  "deletedLines": 1
+}

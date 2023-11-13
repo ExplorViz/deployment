@@ -1,0 +1,201 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "Shader.java",
+  "packageName": "ext.plantuml.com.ctreber.acearth.shader",
+  "importName": ["java.awt.Color", "ext.plantuml.com.ctreber.acearth.projection.Projection", "ext.plantuml.com.ctreber.acearth.scanbit.BitGeneratorMap", "ext.plantuml.com.ctreber.acearth.util.Coordinate", "ext.plantuml.com.ctreber.acearth.util.Point3D"],
+  "classData": {
+    "ext.plantuml.com.ctreber.acearth.shader.Shader": {
+      "type": "ABSTRACT_CLASS",
+      "modifier": ["abstract", "public"],
+      "field": [{
+        "name": "COLOR_SPACE",
+        "type": "java.awt.Color",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "COLOR_STAR",
+        "type": "java.awt.Color",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "COLOR_WATER",
+        "type": "java.awt.Color",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "COLOR_LAND",
+        "type": "java.awt.Color",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "COLOR_GRID_LAND",
+        "type": "java.awt.Color",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "COLOR_GRID_WATER",
+        "type": "java.awt.Color",
+        "modifier": ["private", "static", "final"]
+      }, {
+        "name": "fProjection",
+        "type": "ext.plantuml.com.ctreber.acearth.projection.Projection"
+      }, {
+        "name": "fSunPos",
+        "type": "ext.plantuml.com.ctreber.acearth.util.Coordinate",
+        "modifier": ["private"]
+      }, {
+        "name": "fNightSideBrightness",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fDaySideBrightness",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fTerminatorDiscontinuity",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fDaySideValueBase",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fDaySideValueRange",
+        "type": "double",
+        "modifier": ["private"]
+      }, {
+        "name": "fLightVector",
+        "type": "ext.plantuml.com.ctreber.acearth.util.Point3D"
+      }],
+      "methodData": {
+        "ext.plantuml.com.ctreber.acearth.shader.Shader.setDaySideBrightness#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pDaySideBrightness",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.shader.Shader.setTerminatorDiscontinuity#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pTerminatorDiscontinuity",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.shader.Shader.setProjection#166a68e": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pProjection",
+            "type": "ext.plantuml.com.ctreber.acearth.projection.Projection"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.shader.Shader.getShadedColors#62ccd43": {
+          "returnType": "Color[]",
+          "modifier": ["abstract", "public"],
+          "parameter": [{
+            "name": "pRowNo",
+            "type": "int"
+          }, {
+            "name": "pRowTypes",
+            "type": "int[]"
+          }],
+          "metric": {
+            "loc": "1",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.shader.Shader.setSunPos#82ad51b7": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pSunPos",
+            "type": "ext.plantuml.com.ctreber.acearth.util.Coordinate"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.shader.Shader.getShadedColorForType#b128e583": {
+          "returnType": "java.awt.Color",
+          "parameter": [{
+            "name": "pType",
+            "type": "int"
+          }, {
+            "name": "pSunValue",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "39",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.shader.Shader.setNightSideBrightness#b0f77bf0": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "pNightSideBrightness",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.shader.Shader.init#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "8",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "ext.plantuml.com.ctreber.acearth.shader.Shader.shade#299b28af": {
+          "returnType": "java.awt.Color",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "pColor",
+            "type": "java.awt.Color"
+          }, {
+            "name": "pBrightness",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "103",
+        "cyclomatic_complexity": "9",
+        "cyclomatic_complexity_weighted": "9",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "112",
+    "cyclomatic_complexity": "9"
+  },
+  "author": "plantuml@gmail.com"
+}

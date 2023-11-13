@@ -1,0 +1,120 @@
+{
+  "commitID": "0a795acbb355994a00bbe2973a408a5fb873f503",
+  "fileName": "LinkDecor.java",
+  "packageName": "net.sourceforge.plantuml.decoration",
+  "importName": ["net.sourceforge.plantuml.OptionFlags", "net.sourceforge.plantuml.abel.LinkStrategy", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.svek.extremity.ExtremityFactory", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryArrow", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryArrowAndCircle", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryCircle", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryCircleConnect", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryCircleCross", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryCircleCrowfoot", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryCircleLine", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryCrowfoot", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryDiamond", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryDoubleLine", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryExtendsLike", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryHalfArrow", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryLineCrowfoot", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryNotNavigable", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryParenthesis", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryPlus", "net.sourceforge.plantuml.svek.extremity.ExtremityFactorySquare", "net.sourceforge.plantuml.svek.extremity.ExtremityFactoryTriangle"],
+  "classData": {
+    "net.sourceforge.plantuml.decoration.LinkDecor": {
+      "type": "ENUM",
+      "modifier": ["public"],
+      "field": [{
+        "name": "arrowSize",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "margin",
+        "type": "int",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "fill",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.decoration.LinkDecor.isExtendsLike#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.LinkDecor.getExtremityFactoryComplete#7ec12c1a": {
+          "returnType": "net.sourceforge.plantuml.svek.extremity.ExtremityFactory",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "backgroundColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.LinkDecor.LinkDecor#2e856137": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "margin",
+            "type": "int"
+          }, {
+            "name": "fill",
+            "type": "boolean"
+          }, {
+            "name": "arrowSize",
+            "type": "double"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.LinkDecor.getMargin#1": {
+          "returnType": "int",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.LinkDecor.getExtremityFactoryLegacy#7ec12c1a": {
+          "returnType": "net.sourceforge.plantuml.svek.extremity.ExtremityFactory",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "backgroundColor",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "48",
+            "cyclomatic_complexity": "22",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.LinkDecor.isFill#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.decoration.LinkDecor.getArrowSize#1": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "enumConstant": ["NONE", "EXTENDS", "COMPOSITION", "AGREGATION", "NOT_NAVIGABLE", "REDEFINES", "DEFINEDBY", "CROWFOOT", "CIRCLE_CROWFOOT", "CIRCLE_LINE", "DOUBLE_LINE", "LINE_CROWFOOT", "ARROW", "ARROW_TRIANGLE", "ARROW_AND_CIRCLE", "CIRCLE", "CIRCLE_FILL", "CIRCLE_CONNECT", "PARENTHESIS", "SQUARE", "CIRCLE_CROSS", "PLUS", "HALF_ARROW", "SQUARE_toberemoved"],
+      "metric": {
+        "loc": "99",
+        "cyclomatic_complexity": "23",
+        "cyclomatic_complexity_weighted": "11",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "160",
+    "cyclomatic_complexity": "11"
+  },
+  "author": "dietrich.travkin@solunar.de"
+}

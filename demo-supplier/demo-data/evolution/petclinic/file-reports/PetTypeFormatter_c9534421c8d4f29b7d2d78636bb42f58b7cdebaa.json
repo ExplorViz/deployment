@@ -1,0 +1,80 @@
+{
+  "commitID": "c9534421c8d4f29b7d2d78636bb42f58b7cdebaa",
+  "fileName": "PetTypeFormatter.java",
+  "packageName": "org.springframework.samples.petclinic.owner",
+  "importName": ["org.springframework.beans.factory.annotation.Autowired", "org.springframework.format.Formatter", "org.springframework.stereotype.Component", "java.text.ParseException", "java.util.Collection", "java.util.Locale"],
+  "classData": {
+    "org.springframework.samples.petclinic.owner.PetTypeFormatter": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["org.springframework.format.Formatter\u003corg.springframework.samples.petclinic.owner.PetType\u003e"],
+      "field": [{
+        "name": "owners",
+        "type": "org.springframework.samples.petclinic.owner.OwnerRepository",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.owner.PetTypeFormatter.PetTypeFormatter#7721de5c": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "owners",
+            "type": "org.springframework.samples.petclinic.owner.OwnerRepository"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.PetTypeFormatter.parse#7b0a382a": {
+          "returnType": "org.springframework.samples.petclinic.owner.PetType",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "text",
+            "type": "java.lang.String"
+          }, {
+            "name": "locale",
+            "type": "java.util.Locale"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "org.springframework.samples.petclinic.owner.PetTypeFormatter.print#a7f8f482": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "petType",
+            "type": "org.springframework.samples.petclinic.owner.PetType"
+          }, {
+            "name": "locale",
+            "type": "java.util.Locale"
+          }],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Component"],
+      "metric": {
+        "loc": "27",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "52",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "dsyer@vmware.com",
+  "modifiedLines": 4
+}

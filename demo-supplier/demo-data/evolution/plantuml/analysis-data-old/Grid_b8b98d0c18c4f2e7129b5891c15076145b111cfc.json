@@ -1,0 +1,116 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "Grid.java",
+  "packageName": "net.sourceforge.plantuml.salt.element",
+  "importName": ["java.util.HashSet", "java.util.Set", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.color.HColor", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.geom.XDimension2D", "net.sourceforge.plantuml.klimt.shape.TextBlock", "net.sourceforge.plantuml.klimt.shape.ULine", "net.sourceforge.plantuml.klimt.shape.URectangle", "net.sourceforge.plantuml.salt.Cell"],
+  "classData": {
+    "net.sourceforge.plantuml.salt.element.Grid": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "rowsStart",
+        "type": "double[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "colsStart",
+        "type": "double[]",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "strategy",
+        "type": "net.sourceforge.plantuml.salt.element.TableStrategy",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "title",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "horizontals",
+        "type": "java.util.Set\u003cnet.sourceforge.plantuml.salt.element.Segment\u003e",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "verticals",
+        "type": "java.util.Set\u003cnet.sourceforge.plantuml.salt.element.Segment\u003e",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.salt.element.Grid.drawU#ad0ec7a9": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "x",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "white",
+            "type": "net.sourceforge.plantuml.klimt.color.HColor"
+          }],
+          "metric": {
+            "loc": "23",
+            "cyclomatic_complexity": "3",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.Grid.addCell#1ffda1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "cell",
+            "type": "net.sourceforge.plantuml.salt.Cell"
+          }],
+          "metric": {
+            "loc": "20",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.Grid.Grid#481a400": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "rowsStart",
+            "type": "double[]"
+          }, {
+            "name": "colsStart",
+            "type": "double[]"
+          }, {
+            "name": "strategy",
+            "type": "net.sourceforge.plantuml.salt.element.TableStrategy"
+          }, {
+            "name": "title",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "10",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.salt.element.Grid.addOutside#1": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "metric": {
+        "loc": "80",
+        "cyclomatic_complexity": "11",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "129",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

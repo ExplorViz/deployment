@@ -1,0 +1,137 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "ReadLineReader.java",
+  "packageName": "net.sourceforge.plantuml.preproc",
+  "importName": ["java.io.BufferedReader", "java.io.IOException", "java.io.Reader", "net.sourceforge.plantuml.text.StringLocated", "net.sourceforge.plantuml.utils.LineLocation", "net.sourceforge.plantuml.utils.LineLocationImpl", "net.sourceforge.plantuml.utils.Log"],
+  "classData": {
+    "net.sourceforge.plantuml.preproc.ReadLineReader": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.preproc.ReadLine"],
+      "field": [{
+        "name": "br",
+        "type": "java.io.BufferedReader",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "location",
+        "type": "net.sourceforge.plantuml.utils.LineLocationImpl",
+        "modifier": ["private"]
+      }, {
+        "name": "description",
+        "type": "java.lang.String",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.preproc.ReadLineReader.close#1": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.ReadLineReader.readLine#1": {
+          "returnType": "net.sourceforge.plantuml.text.StringLocated",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "12",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.ReadLineReader.create#37d8a76f": {
+          "returnType": "net.sourceforge.plantuml.preproc.ReadLine",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "reader",
+            "type": "java.io.Reader"
+          }, {
+            "name": "description",
+            "type": "java.lang.String"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.ReadLineReader.create#97f1a5a": {
+          "returnType": "net.sourceforge.plantuml.preproc.ReadLine",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "reader",
+            "type": "java.io.Reader"
+          }, {
+            "name": "description",
+            "type": "java.lang.String"
+          }, {
+            "name": "parent",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.ReadLineReader.ReadLineReader#97f1a5a": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "reader",
+            "type": "java.io.Reader"
+          }, {
+            "name": "description",
+            "type": "java.lang.String"
+          }, {
+            "name": "parent",
+            "type": "net.sourceforge.plantuml.utils.LineLocation"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.ReadLineReader.ReadLineReader#37d8a76f": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "reader",
+            "type": "java.io.Reader"
+          }, {
+            "name": "desc",
+            "type": "java.lang.String"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.preproc.ReadLineReader.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "51",
+        "cyclomatic_complexity": "3",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "97",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "plantuml@gmail.com"
+}

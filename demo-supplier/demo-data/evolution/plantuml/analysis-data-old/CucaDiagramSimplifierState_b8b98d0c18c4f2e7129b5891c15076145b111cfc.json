@@ -1,0 +1,105 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "CucaDiagramSimplifierState.java",
+  "packageName": "net.sourceforge.plantuml.dot",
+  "importName": ["java.io.IOException", "java.util.ArrayList", "java.util.Collection", "java.util.LinkedHashSet", "java.util.List", "net.sourceforge.plantuml.abel.Entity", "net.sourceforge.plantuml.abel.GroupType", "net.sourceforge.plantuml.abel.LeafType", "net.sourceforge.plantuml.cucadiagram.ICucaDiagram", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.svek.GroupMakerState", "net.sourceforge.plantuml.svek.IEntityImage"],
+  "classData": {
+    "net.sourceforge.plantuml.dot.CucaDiagramSimplifierState": {
+      "type": "CLASS",
+      "modifier": ["public", "final"],
+      "field": [{
+        "name": "diagram",
+        "type": "net.sourceforge.plantuml.cucadiagram.ICucaDiagram",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "stringBounder",
+        "type": "net.sourceforge.plantuml.klimt.font.StringBounder",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.dot.CucaDiagramSimplifierState.computeImage#7c02d022": {
+          "returnType": "net.sourceforge.plantuml.svek.IEntityImage",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "g",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.dot.CucaDiagramSimplifierState.addOneLevel#63c5a1bc": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "currents",
+            "type": "java.util.Collection\u003cnet.sourceforge.plantuml.abel.Entity\u003e"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "net.sourceforge.plantuml.dot.CucaDiagramSimplifierState.reverse#63c5a1bc": {
+          "returnType": "java.util.List\u003cnet.sourceforge.plantuml.abel.Entity\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "source",
+            "type": "java.util.Collection\u003cnet.sourceforge.plantuml.abel.Entity\u003e"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.dot.CucaDiagramSimplifierState.CucaDiagramSimplifierState#2eff8224": {
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "diagram",
+            "type": "net.sourceforge.plantuml.cucadiagram.ICucaDiagram"
+          }, {
+            "name": "dotStrings",
+            "type": "java.util.List\u003cjava.lang.String\u003e"
+          }, {
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "19",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "net.sourceforge.plantuml.dot.CucaDiagramSimplifierState.getOrdered#7c02d022": {
+          "returnType": "java.util.Collection\u003cnet.sourceforge.plantuml.abel.Entity\u003e",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "root",
+            "type": "net.sourceforge.plantuml.abel.Entity"
+          }],
+          "metric": {
+            "loc": "18",
+            "cyclomatic_complexity": "4",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "65",
+        "cyclomatic_complexity": "9",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "2"
+      }
+    }
+  },
+  "metric": {
+    "loc": "116",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "plantuml@gmail.com"
+}

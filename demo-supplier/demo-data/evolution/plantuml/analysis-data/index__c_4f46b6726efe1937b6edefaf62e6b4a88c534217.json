@@ -1,0 +1,200 @@
+{
+  "commitID": "4f46b6726efe1937b6edefaf62e6b4a88c534217",
+  "fileName": "index__c.java",
+  "packageName": "gen.lib.label",
+  "importName": ["gen.lib.label.node__c.AddBranch", "gen.lib.label.node__c.DisconBranch", "gen.lib.label.node__c.NodeCover", "gen.lib.label.node__c.PickBranch", "gen.lib.label.node__c.RTreeNewNode", "gen.lib.label.rectangle__c.CombineRect", "gen.lib.label.rectangle__c.Overlap", "smetana.core.Macro.UNSUPPORTED", "smetana.core.debug.SmetanaDebug.ENTERING", "smetana.core.debug.SmetanaDebug.LEAVING", "gen.annotation.Original", "gen.annotation.Unused", "h.ST_Branch_t", "h.ST_LeafList_t", "h.ST_Node_t___", "h.ST_Node_t___or_object_t", "h.ST_RTree", "h.ST_Rect_t", "smetana.core.Memory", "smetana.core.__ptr__"],
+  "classData": {
+    "gen.lib.label.index__c": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "methodData": {
+        "gen.lib.label.index__c.RTreeClose#b054cfd1": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "rtp",
+            "type": "h.ST_RTree"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.label.index__c.RTreeNewIndex#b054cfd1": {
+          "returnType": "h.ST_Node_t___",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "rtp",
+            "type": "h.ST_RTree"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.label.index__c.RTreeClose2#ee5f3179": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "rtp",
+            "type": "h.ST_RTree"
+          }, {
+            "name": "n",
+            "type": "h.ST_Node_t___"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "34",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "6"
+          }
+        },
+        "gen.lib.label.index__c.RTreeSearch#38b51a3e": {
+          "returnType": "h.ST_LeafList_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "rtp",
+            "type": "h.ST_RTree"
+          }, {
+            "name": "n",
+            "type": "h.ST_Node_t___"
+          }, {
+            "name": "r",
+            "type": "h.ST_Rect_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "10",
+            "nestedBlockDepth": "7"
+          }
+        },
+        "gen.lib.label.index__c.RTreeInsert#d5e628ab": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "rtp",
+            "type": "h.ST_RTree"
+          }, {
+            "name": "r",
+            "type": "h.ST_Rect_t"
+          }, {
+            "name": "data",
+            "type": "smetana.core.__ptr__"
+          }, {
+            "name": "n",
+            "type": "ST_Node_t___[]"
+          }, {
+            "name": "level",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "33",
+            "cyclomatic_complexity": "5",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.label.index__c.RTreeNewLeafList#75faf974": {
+          "returnType": "h.ST_LeafList_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "lp",
+            "type": "h.ST_Branch_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "gen.lib.label.index__c.RTreeLeafListFree#182caaee": {
+          "returnType": "void",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "llp",
+            "type": "h.ST_LeafList_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "16",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.label.index__c.RTreeOpen#1": {
+          "returnType": "h.ST_RTree",
+          "modifier": ["public", "static"],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        },
+        "gen.lib.label.index__c.RTreeInsert2#4113f7c5": {
+          "returnType": "int",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "rtp",
+            "type": "h.ST_RTree"
+          }, {
+            "name": "r",
+            "type": "h.ST_Rect_t"
+          }, {
+            "name": "data",
+            "type": "smetana.core.__ptr__"
+          }, {
+            "name": "n",
+            "type": "h.ST_Node_t___"
+          }, {
+            "name": "new_",
+            "type": "ST_Node_t___[]"
+          }, {
+            "name": "level",
+            "type": "int"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "31",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "4"
+          }
+        },
+        "gen.lib.label.index__c.RTreeLeafListAdd#6363ac27": {
+          "returnType": "h.ST_LeafList_t",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "llp",
+            "type": "h.ST_LeafList_t"
+          }, {
+            "name": "lp",
+            "type": "h.ST_Branch_t"
+          }],
+          "annotation": ["gen.annotation.Unused", "gen.annotation.Original"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "3"
+          }
+        }
+      },
+      "metric": {
+        "loc": "247",
+        "cyclomatic_complexity": "43",
+        "cyclomatic_complexity_weighted": "4",
+        "LCOM4": "5"
+      }
+    }
+  },
+  "metric": {
+    "loc": "315",
+    "cyclomatic_complexity": "4"
+  },
+  "author": "plantuml@gmail.com"
+}

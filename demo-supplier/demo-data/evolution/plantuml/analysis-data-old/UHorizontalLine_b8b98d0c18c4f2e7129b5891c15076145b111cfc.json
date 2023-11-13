@@ -1,0 +1,405 @@
+{
+  "commitID": "b8b98d0c18c4f2e7129b5891c15076145b111cfc",
+  "fileName": "UHorizontalLine.java",
+  "packageName": "net.sourceforge.plantuml.klimt.shape",
+  "importName": ["net.sourceforge.plantuml.klimt.UShape", "net.sourceforge.plantuml.klimt.UStroke", "net.sourceforge.plantuml.klimt.UTranslate", "net.sourceforge.plantuml.klimt.creole.Stencil", "net.sourceforge.plantuml.klimt.drawing.UGraphic", "net.sourceforge.plantuml.klimt.font.StringBounder", "net.sourceforge.plantuml.klimt.geom.XDimension2D"],
+  "classData": {
+    "net.sourceforge.plantuml.klimt.shape.UHorizontalLine": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "interface": ["net.sourceforge.plantuml.klimt.UShape"],
+      "field": [{
+        "name": "skipAtStart",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "skipAtEnd",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "title",
+        "type": "net.sourceforge.plantuml.klimt.shape.TextBlock",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "blankTitle",
+        "type": "boolean",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "style",
+        "type": "char",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "defaultThickness",
+        "type": "double",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.infinite#18de8e26": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UHorizontalLine",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "defaultThickness",
+            "type": "double"
+          }, {
+            "name": "skipAtStart",
+            "type": "double"
+          }, {
+            "name": "skipAtEnd",
+            "type": "double"
+          }, {
+            "name": "title",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }, {
+            "name": "style",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.firstHalf#9e20d76": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Stencil",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "stencil",
+            "type": "net.sourceforge.plantuml.klimt.creole.Stencil",
+            "modifier": ["final "]
+          }, {
+            "name": "widthTitle",
+            "type": "double",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.getStroke#1": {
+          "returnType": "net.sourceforge.plantuml.klimt.UStroke",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "9",
+            "nestedBlockDepth": "5"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.secondHalf#9e20d76": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Stencil",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "stencil",
+            "type": "net.sourceforge.plantuml.klimt.creole.Stencil",
+            "modifier": ["final "]
+          }, {
+            "name": "widthTitle",
+            "type": "double",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.drawHLine#2411d21d": {
+          "returnType": "void",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stencil",
+            "type": "net.sourceforge.plantuml.klimt.creole.Stencil"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.isDouble#1": {
+          "returnType": "boolean",
+          "modifier": ["public"],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.drawLineInternal#c6590da6": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic",
+            "modifier": ["final "]
+          }, {
+            "name": "stencil",
+            "type": "net.sourceforge.plantuml.klimt.creole.Stencil"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "defaultStroke",
+            "type": "net.sourceforge.plantuml.klimt.UStroke"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.UHorizontalLine#75100b5e": {
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "defaultThickness",
+            "type": "double"
+          }, {
+            "name": "skipAtStart",
+            "type": "double"
+          }, {
+            "name": "skipAtEnd",
+            "type": "double"
+          }, {
+            "name": "title",
+            "type": "net.sourceforge.plantuml.klimt.shape.TextBlock"
+          }, {
+            "name": "blankTitle",
+            "type": "boolean"
+          }, {
+            "name": "style",
+            "type": "char"
+          }],
+          "isConstructor": true,
+          "metric": {
+            "loc": "9",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.drawSimpleHline#57cbc627": {
+          "returnType": "void",
+          "modifier": ["private", "static"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "stencil",
+            "type": "net.sourceforge.plantuml.klimt.creole.Stencil"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.infinite#8f2e1b46": {
+          "returnType": "net.sourceforge.plantuml.klimt.shape.UHorizontalLine",
+          "modifier": ["public", "static"],
+          "parameter": [{
+            "name": "defaultThickness",
+            "type": "double"
+          }, {
+            "name": "skipAtStart",
+            "type": "double"
+          }, {
+            "name": "skipAtEnd",
+            "type": "double"
+          }, {
+            "name": "style",
+            "type": "char"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.drawTitleInternal#d394489": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }, {
+            "name": "startingX",
+            "type": "double"
+          }, {
+            "name": "endingX",
+            "type": "double"
+          }, {
+            "name": "y",
+            "type": "double"
+          }, {
+            "name": "clearArea",
+            "type": "boolean"
+          }],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.addSkip#f25a25bb": {
+          "returnType": "net.sourceforge.plantuml.klimt.creole.Stencil",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "stencil",
+            "type": "net.sourceforge.plantuml.klimt.creole.Stencil",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "0"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.drawMe#f1b230f2": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ug",
+            "type": "net.sourceforge.plantuml.klimt.drawing.UGraphic"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "metric": {
+        "loc": "139",
+        "cyclomatic_complexity": "13",
+        "cyclomatic_complexity_weighted": "3",
+        "LCOM4": "3"
+      }
+    },
+    "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.firstHalf#9e20d76.Stencil": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.firstHalf#9e20d76.Stencil.getStartingX#a3046598": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.firstHalf#9e20d76.Stencil.getEndingX#a3046598": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.secondHalf#9e20d76.Stencil": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.secondHalf#9e20d76.Stencil.getEndingX#a3046598": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.secondHalf#9e20d76.Stencil.getStartingX#a3046598": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "6",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      }
+    },
+    "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.addSkip#f25a25bb.Stencil": {
+      "type": "ANONYMOUS_CLASS",
+      "methodData": {
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.addSkip#f25a25bb.Stencil.getStartingX#a3046598": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "net.sourceforge.plantuml.klimt.shape.UHorizontalLine.addSkip#f25a25bb.Stencil.getEndingX#a3046598": {
+          "returnType": "double",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "stringBounder",
+            "type": "net.sourceforge.plantuml.klimt.font.StringBounder"
+          }, {
+            "name": "y",
+            "type": "double"
+          }],
+          "metric": {
+            "loc": "3",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      }
+    }
+  },
+  "metric": {
+    "loc": "184",
+    "cyclomatic_complexity": "3"
+  },
+  "author": "plantuml@gmail.com"
+}
