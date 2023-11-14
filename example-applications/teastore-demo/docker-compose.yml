@@ -1,0 +1,89 @@
+# docker-compose --env-file .env-custom up -d
+
+# docker-compose --env-file .env-custom down -v
+
+version: "3.5"
+services:
+  registry:
+    image: alexanderkrause/teastore-registry
+    networks:
+      - explorviz
+    expose:
+      - "8080"
+    environment:
+      EXPLORVIZ_APPLICATION_NAME: "teastore-registry"
+
+  db:
+    image: descartesresearch/teastore-db
+    networks:
+      - explorviz
+    expose:
+      - "3306"
+    ports:
+      - ${TEASTORE_DB_PORT}:3306
+
+  persistence:
+    image: alexanderkrause/teastore-persistence
+    networks:
+      - explorviz
+    expose:
+      - "8080"
+    environment:
+      HOST_NAME: "persistence"
+      REGISTRY_HOST: "registry"
+      DB_HOST: "db"
+      DB_PORT: "3306"
+      EXPLORVIZ_APPLICATION_NAME: "teastore-persistence"
+
+  auth:
+    image: alexanderkrause/teastore-auth
+    networks:
+      - explorviz
+    expose:
+      - "8080"
+    environment:
+      HOST_NAME: "auth"
+      REGISTRY_HOST: "registry"
+      EXPLORVIZ_APPLICATION_NAME: "teastore-auth"
+
+  image:
+    image: alexanderkrause/teastore-image
+    networks:
+      - explorviz
+    expose:
+      - "8080"
+    environment:
+      HOST_NAME: "image"
+      REGISTRY_HOST: "registry"
+      EXPLORVIZ_APPLICATION_NAME: "teastore-image"
+
+  recommender:
+    image: alexanderkrause/teastore-recommender
+    networks:
+      - explorviz
+    expose:
+      - "8080"
+    environment:
+      HOST_NAME: "recommender"
+      REGISTRY_HOST: "registry"
+      EXPLORVIZ_APPLICATION_NAME: "teastore-recommender"
+
+  webui:
+    image: alexanderkrause/teastore-webui
+    networks:
+      - explorviz
+    expose:
+      - "8080"
+    environment:
+      HOST_NAME: "webui"
+      REGISTRY_HOST: "registry"
+      EXPLORVIZ_APPLICATION_NAME: "teastore-webui"
+    ports:
+      - ${TEASTORE_WEBUI_PORT}:8080
+
+volumes:
+  agent-vol:
+
+networks:
+  explorviz:
+    name: explorviz
