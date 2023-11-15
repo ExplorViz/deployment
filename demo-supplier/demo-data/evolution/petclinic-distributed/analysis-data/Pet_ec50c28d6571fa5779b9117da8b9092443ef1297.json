@@ -1,0 +1,57 @@
+{
+  "commitID": "ec50c28d6571fa5779b9117da8b9092443ef1297",
+  "fileName": "Pet.java",
+  "packageName": "org.springframework.samples.petclinic.customers.model",
+  "importName": ["java.util.Date", "jakarta.persistence.Column", "jakarta.persistence.Entity", "jakarta.persistence.GeneratedValue", "jakarta.persistence.GenerationType", "jakarta.persistence.Id", "jakarta.persistence.JoinColumn", "jakarta.persistence.ManyToOne", "jakarta.persistence.Table", "jakarta.persistence.Temporal", "jakarta.persistence.TemporalType", "com.fasterxml.jackson.annotation.JsonIgnore", "lombok.Data", "org.springframework.core.style.ToStringCreator"],
+  "classData": {
+    "org.springframework.samples.petclinic.customers.model.Pet": {
+      "type": "CLASS",
+      "modifier": ["public"],
+      "field": [{
+        "name": "id",
+        "type": "java.lang.Integer",
+        "modifier": ["private"]
+      }, {
+        "name": "name",
+        "type": "java.lang.String",
+        "modifier": ["private"]
+      }, {
+        "name": "birthDate",
+        "type": "java.util.Date",
+        "modifier": ["private"]
+      }, {
+        "name": "type",
+        "type": "PetType",
+        "modifier": ["private"]
+      }, {
+        "name": "owner",
+        "type": "Owner",
+        "modifier": ["private"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.customers.model.Pet.toString#1": {
+          "returnType": "java.lang.String",
+          "modifier": ["public"],
+          "annotation": ["java.lang.Override"],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["Data", "Entity", "Table"],
+      "metric": {
+        "loc": "37",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "0"
+      }
+    }
+  },
+  "metric": {
+    "loc": "71",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "antoine.rey@free.fr"
+}

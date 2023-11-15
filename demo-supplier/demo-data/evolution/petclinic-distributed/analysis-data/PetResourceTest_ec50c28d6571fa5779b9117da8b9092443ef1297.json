@@ -1,0 +1,53 @@
+{
+  "commitID": "ec50c28d6571fa5779b9117da8b9092443ef1297",
+  "fileName": "PetResourceTest.java",
+  "packageName": "org.springframework.samples.petclinic.customers.web",
+  "importName": ["java.util.Optional", "org.junit.jupiter.api.Test", "org.junit.jupiter.api.extension.ExtendWith", "org.springframework.beans.factory.annotation.Autowired", "org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest", "org.springframework.boot.test.mock.mockito.MockBean", "org.springframework.http.MediaType", "org.springframework.samples.petclinic.customers.model.Owner", "org.springframework.samples.petclinic.customers.model.OwnerRepository", "org.springframework.samples.petclinic.customers.model.Pet", "org.springframework.samples.petclinic.customers.model.PetRepository", "org.springframework.samples.petclinic.customers.model.PetType", "org.springframework.test.context.ActiveProfiles", "org.springframework.test.context.junit.jupiter.SpringExtension", "org.springframework.test.web.servlet.MockMvc", "org.mockito.BDDMockito.given", "org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get", "org.springframework.test.web.servlet.result.MockMvcResultMatchers.content", "org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath", "org.springframework.test.web.servlet.result.MockMvcResultMatchers.status"],
+  "classData": {
+    "org.springframework.samples.petclinic.customers.web.PetResourceTest": {
+      "type": "CLASS",
+      "field": [{
+        "name": "mvc",
+        "type": "org.springframework.test.web.servlet.MockMvc"
+      }, {
+        "name": "petRepository",
+        "type": "org.springframework.samples.petclinic.customers.model.PetRepository"
+      }, {
+        "name": "ownerRepository",
+        "type": "org.springframework.samples.petclinic.customers.model.OwnerRepository"
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.customers.web.PetResourceTest.shouldGetAPetInJSonFormat#1": {
+          "returnType": "void",
+          "annotation": ["Test"],
+          "metric": {
+            "loc": "15",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.customers.web.PetResourceTest.setupPet#1": {
+          "returnType": "org.springframework.samples.petclinic.customers.model.Pet",
+          "modifier": ["private"],
+          "metric": {
+            "loc": "17",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["ExtendWith", "WebMvcTest", "ActiveProfiles"],
+      "metric": {
+        "loc": "48",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "74",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "antoine.rey@free.fr"
+}

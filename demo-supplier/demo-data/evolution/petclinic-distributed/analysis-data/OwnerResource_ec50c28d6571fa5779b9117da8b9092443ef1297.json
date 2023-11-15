@@ -1,0 +1,85 @@
+{
+  "commitID": "ec50c28d6571fa5779b9117da8b9092443ef1297",
+  "fileName": "OwnerResource.java",
+  "packageName": "org.springframework.samples.petclinic.customers.web",
+  "importName": ["io.micrometer.core.annotation.Timed", "lombok.RequiredArgsConstructor", "lombok.extern.slf4j.Slf4j", "org.springframework.http.HttpStatus", "org.springframework.samples.petclinic.customers.model.Owner", "org.springframework.samples.petclinic.customers.model.OwnerRepository", "org.springframework.web.bind.annotation", "jakarta.validation.Valid", "jakarta.validation.constraints.Min", "java.util.List", "java.util.Optional"],
+  "classData": {
+    "org.springframework.samples.petclinic.customers.web.OwnerResource": {
+      "type": "CLASS",
+      "field": [{
+        "name": "ownerRepository",
+        "type": "org.springframework.samples.petclinic.customers.model.OwnerRepository",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.customers.web.OwnerResource.updateOwner#4c26c45": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ownerId",
+            "type": "int"
+          }, {
+            "name": "ownerRequest",
+            "type": "org.springframework.samples.petclinic.customers.model.Owner"
+          }],
+          "annotation": ["PutMapping", "ResponseStatus"],
+          "metric": {
+            "loc": "14",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.customers.web.OwnerResource.findOwner#1980e": {
+          "returnType": "java.util.Optional\u003corg.springframework.samples.petclinic.customers.model.Owner\u003e",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "ownerId",
+            "type": "int"
+          }],
+          "annotation": ["GetMapping"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.customers.web.OwnerResource.createOwner#49102b2": {
+          "returnType": "org.springframework.samples.petclinic.customers.model.Owner",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "owner",
+            "type": "org.springframework.samples.petclinic.customers.model.Owner"
+          }],
+          "annotation": ["PostMapping", "ResponseStatus"],
+          "metric": {
+            "loc": "5",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.customers.web.OwnerResource.findAll#1": {
+          "returnType": "java.util.List\u003corg.springframework.samples.petclinic.customers.model.Owner\u003e",
+          "modifier": ["public"],
+          "annotation": ["GetMapping"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        }
+      },
+      "annotation": ["RequestMapping", "RestController", "Timed", "RequiredArgsConstructor", "Slf4j"],
+      "metric": {
+        "loc": "40",
+        "cyclomatic_complexity": "1",
+        "cyclomatic_complexity_weighted": "1",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "70",
+    "cyclomatic_complexity": "1"
+  },
+  "author": "antoine.rey@free.fr"
+}

@@ -171,10 +171,10 @@ function createExpressApplication(port) {
   return app;
 }
 
-createLandscapeSample({
+/*createLandscapeSample({
   filePrefix: "plantuml",
   token: "somerandomtoken",
-});
+});*/
 
 /**
  * @typedef {(data: any) => any} DataModifier
@@ -198,6 +198,57 @@ async function createLandscapeSample({
   structureModifier,
   initializer,
 }) {
+
+
+  if (filePrefix === "petclinic-distributed") {
+
+    const evolutionDataBranches = JSON.parse(
+      await readFile(`demo-data/evolution/${filePrefix}/branches.json`)
+    );
+
+    landscapeApp.get(`${landscapeRootUrl}/${token}/branches`, (req, res) => {
+      res.json(evolutionDataBranches);
+    }
+    );
+
+    landscapeApp.get(
+      `${landscapeRootUrl}/${token}/commit-report/:cid`,
+      async (req, res) => {
+        const commitData = await readFile(
+          `demo-data/evolution/${filePrefix}/analysis-data/CommitReport_${req.params.cid}.json`
+        );
+        const commitDataParsed = JSON.parse(commitData);
+        res.json(commitDataParsed);
+      }
+    );
+
+
+    landscapeApp.get(
+      `${landscapeRootUrl}/${token}/commit-structure/:cid`,
+      async (req, res) => {
+        
+        const commitStructureData = await readFile(
+            `demo-data/evolution/${filePrefix}/commit-structure/CommitStructure_${req.params.cid}.json`
+          );
+        
+        const commitStructureDataParsed = JSON.parse(commitStructureData);
+        res.json(commitStructureDataParsed);
+      }
+    );
+
+    landscapeApp.get(
+      `${landscapeRootUrl}/${token}/commit-dynamic/:cid`,
+      async (req, res) => {
+        res.json(traceModifier ? traceModifier(dynamicData) : dynamicData);
+      }
+    );
+
+  }
+
+
+
+
+
   const structureData = JSON.parse(
     await readFile(`demo-data/${filePrefix}-structure.json`)
   );
@@ -205,6 +256,22 @@ async function createLandscapeSample({
   const dynamicData = JSON.parse(
     await readFile(`demo-data/${filePrefix}-dynamic.json`)
   );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   if (filePrefix === "petclinic") {
     // currently only petclinic evolution files available
@@ -274,11 +341,12 @@ async function createLandscapeSample({
       }
     );
 
+
     landscapeApp.get(
       `${landscapeRootUrl}/${token}/commit-structure/:cid`,
       async (req, res) => {
         const commitStructureData = await readFile(
-          `demo-data/${filePrefix}-structure.json`
+          `demo-data/evolution/${filePrefix}/commit-structure/CommitStructure_${req.params.cid}.json`
         );
         const commitStructureDataParsed = JSON.parse(commitStructureData);
         res.json(commitStructureDataParsed);
@@ -394,7 +462,7 @@ async function createApplicationStructureFromCommitReport(
           parentPackage = currentPackage;
         }
 
-        const id = packageName + "fileNameWithoutFileFormat";
+        const id = packageName + fileNameWithoutFileFormat;
         let clazz = fqnClassNameToClass.get(id);
         if (!clazz) {
           clazz = {
@@ -617,14 +685,14 @@ async function createApplicationStructureFromCommitReport(
 
 async function testApplicationStructure() {
   const commitReport = await readFile(
-    `demo-data/evolution/plantuml/analysis-data/CommitReport_4f46b6726efe1937b6edefaf62e6b4a88c534217_0.json`
+    `demo-data/evolution/petclinic-distributed/analysis-data/CommitReport_ec50c28d6571fa5779b9117da8b9092443ef1297_0.json`
   );
   createApplicationStructureFromCommitReport(
     JSON.parse(commitReport),
-    "plantuml",
+    "petclinic-distributed",
     "somerandomtoken"
   );
 }
 
-testApplicationStructure();
+//testApplicationStructure();
 //orderCommitReports();

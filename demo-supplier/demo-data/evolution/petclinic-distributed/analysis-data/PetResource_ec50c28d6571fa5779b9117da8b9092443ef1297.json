@@ -1,0 +1,120 @@
+{
+  "commitID": "ec50c28d6571fa5779b9117da8b9092443ef1297",
+  "fileName": "PetResource.java",
+  "packageName": "org.springframework.samples.petclinic.customers.web",
+  "importName": ["io.micrometer.core.annotation.Timed", "lombok.RequiredArgsConstructor", "lombok.extern.slf4j.Slf4j", "org.springframework.http.HttpStatus", "org.springframework.samples.petclinic.customers.model", "org.springframework.web.bind.annotation", "jakarta.validation.constraints.Min", "java.util.List", "java.util.Optional"],
+  "classData": {
+    "org.springframework.samples.petclinic.customers.web.PetResource": {
+      "type": "CLASS",
+      "field": [{
+        "name": "petRepository",
+        "type": "PetRepository",
+        "modifier": ["private", "final"]
+      }, {
+        "name": "ownerRepository",
+        "type": "OwnerRepository",
+        "modifier": ["private", "final"]
+      }],
+      "methodData": {
+        "org.springframework.samples.petclinic.customers.web.PetResource.processUpdateForm#8c8304af": {
+          "returnType": "void",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "petRequest",
+            "type": "PetRequest"
+          }],
+          "annotation": ["PutMapping", "ResponseStatus"],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.customers.web.PetResource.findPet#1980e": {
+          "returnType": "PetDetails",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "petId",
+            "type": "int"
+          }],
+          "annotation": ["GetMapping"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.customers.web.PetResource.getPetTypes#1": {
+          "returnType": "java.util.List\u003cPetType\u003e",
+          "modifier": ["public"],
+          "annotation": ["GetMapping"],
+          "metric": {
+            "loc": "4",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.customers.web.PetResource.findPetById#1980e": {
+          "returnType": "Pet",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "petId",
+            "type": "int"
+          }],
+          "metric": {
+            "loc": "7",
+            "cyclomatic_complexity": "2",
+            "nestedBlockDepth": "2"
+          }
+        },
+        "org.springframework.samples.petclinic.customers.web.PetResource.save#8ca8ef32": {
+          "returnType": "Pet",
+          "modifier": ["private"],
+          "parameter": [{
+            "name": "pet",
+            "type": "Pet",
+            "modifier": ["final "]
+          }, {
+            "name": "petRequest",
+            "type": "PetRequest",
+            "modifier": ["final "]
+          }],
+          "metric": {
+            "loc": "11",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "1"
+          }
+        },
+        "org.springframework.samples.petclinic.customers.web.PetResource.processCreationForm#3df2920": {
+          "returnType": "Pet",
+          "modifier": ["public"],
+          "parameter": [{
+            "name": "petRequest",
+            "type": "PetRequest"
+          }, {
+            "name": "ownerId",
+            "type": "int"
+          }],
+          "annotation": ["PostMapping", "ResponseStatus"],
+          "metric": {
+            "loc": "13",
+            "cyclomatic_complexity": "1",
+            "nestedBlockDepth": "2"
+          }
+        }
+      },
+      "annotation": ["RestController", "Timed", "RequiredArgsConstructor", "Slf4j"],
+      "metric": {
+        "loc": "64",
+        "cyclomatic_complexity": "2",
+        "cyclomatic_complexity_weighted": "2",
+        "LCOM4": "1"
+      }
+    }
+  },
+  "metric": {
+    "loc": "92",
+    "cyclomatic_complexity": "2"
+  },
+  "author": "antoine.rey@free.fr"
+}
