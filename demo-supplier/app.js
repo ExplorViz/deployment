@@ -236,10 +236,16 @@ async function createLandscapeSample({
       }
     );
 
+
+
     landscapeApp.get(
       `${landscapeRootUrl}/${token}/commit-dynamic/:cid`,
       async (req, res) => {
-        res.json(traceModifier ? traceModifier(dynamicData) : dynamicData);
+        const dynamicData1 = await readFile(
+          `demo-data/evolution/${filePrefix}/commit-dynamic/CommitDynamic_${req.params.cid}.json`
+        );
+        const dynamicData1Parsed = JSON.parse(dynamicData1);
+        res.json(traceModifier ? traceModifier(dynamicData1Parsed) : dynamicData1Parsed);
       }
     );
 
