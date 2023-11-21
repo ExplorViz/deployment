@@ -16,15 +16,35 @@ inspectit:
 
   instrumentation:
     scopes:
-      s_allClasses:
+      s_allClasses_samples:
         type:
           name: org.springframework.samples
           matcher-mode: STARTS_WITH_IGNORE_CASE
+      s_allClasses:
+        type:
+          name: springframework
+          matcher-mode: CONTAINS_IGNORE_CASE
+      s_jetty:
+        type:
+          name: jetty
+          matcher-mode: CONTAINS_IGNORE_CASE
+      s_reactor:
+        type:
+          name: reactor
+          matcher-mode: CONTAINS_IGNORE_CASE
+      s_web:
+        type:
+          name: web
+          matcher-mode: CONTAINS_IGNORE_CASE
 
     rules:
       r_all_methods_no_input_return:
         scopes:
+          s_allClasses_samples: true
           s_allClasses: true
+          s_jetty: true
+          s_reactor: true
+          s_web: true
         tracing:
           start-span: true
           attributes:
@@ -46,7 +66,8 @@ inspectit:
 
   exporters:
     tracing:
-      open-census-agent:
-        address: "oc-collector:55678"
-        service-name: "OC Agent Local"
-        use-insecure: true
+      service-name: "Ocelot Otel Exporter"
+      otlp:
+        enabled: true
+        endpoint: "http://otel-collector:55678"
+        protocol: grpc

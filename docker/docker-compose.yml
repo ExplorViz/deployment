@@ -179,7 +179,7 @@ services:
 
   span-service-jvm:
     hostname: span-service
-    image: explorviz/span-service-jvm:latest
+    image: explorviz/span-service-jvm:workaround
     profiles: ["jvm"]
     depends_on:
       init-kafka:
@@ -201,9 +201,6 @@ services:
       - QUARKUS_CASSANDRA_REQUEST_TIMEOUT=10
       - QUARKUS_KAFKA_STREAMS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - EXPLORVIZ_LOG_LVL=DEBUG
-    deploy:
-      mode: replicated
-      replicas: ${SPAN_REPLICAS}
 
   ## User-Service ##
 
@@ -248,7 +245,7 @@ services:
   frontend-dev:
     hostname: explorviz-frontend
     #image: explorviz/explorviz-frontend:dev
-    image: explorviz/explorviz-frontend:dev-noauth
+    image: explorviz/explorviz-frontend:span-service-wip
     profiles: ["jvm"]
     depends_on:
       - span-service-jvm
@@ -308,9 +305,6 @@ services:
       - QUARKUS_CASSANDRA_REQUEST_TIMEOUT=10
       - QUARKUS_KAFKA_STREAMS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - EXPLORVIZ_LOG_LVL=DEBUG
-    deploy:
-      mode: replicated
-      replicas: ${SPAN_REPLICAS}
 
   ## User-Service ##
 
