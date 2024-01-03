@@ -5,38 +5,38 @@ setup() {
   export KUBECONFIG="/Users/alex/.kube/config-se"
 
   echo
-  echo adding grafana repo  
+  echo adding grafana repo
   helm repo add grafana https://grafana.github.io/helm-charts
 
   echo
-  echo adding prometheus repo  
+  echo adding prometheus repo
   helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 
   echo
-  echo adding helm repo  
+  echo adding helm repo
   helm repo add bitnami https://charts.bitnami.com/bitnami
 
   echo
   echo installing grafana
   #helm install -f grafana/values.yml grafana grafana/grafana
   sleep 1
-  
+
 
   echo
   echo installing prometheus
   #helm install -f prometheus/values.yml prometheus prometheus-community/prometheus
-  sleep 1  
+  sleep 1
 
   echo
   echo installing kafka
   helm install -f kafka/values.yml kafka bitnami/kafka
   sleep 1
-  
+
   echo
   echo installing the schema registry
   kubectl create -f registry/manifest.yml
   sleep 1
-  
+
   echo
   echo installing apache cassandra for structure
   helm install -f cassandra-structure/values.yml cassandra-structure bitnami/cassandra
@@ -50,7 +50,7 @@ setup() {
   # Wait until Kafka is ready
   echo
   echo waiting for kafka to be ready
-  kubectl wait --for=condition=Ready --timeout=360s pod/kafka-0 
+  kubectl wait --for=condition=Ready --timeout=360s pod/kafka-0
 
   # Install the service after Kafka is ready
   echo
@@ -58,7 +58,7 @@ setup() {
   kubectl create -f oc-collector/manifest.yml
 
   # Install MongoDB for token
-  echo 
+  echo
   echo installing landscape token MongoDB
   helm install -f mongodb-token/values.yml mongo-token bitnami/mongodb
 

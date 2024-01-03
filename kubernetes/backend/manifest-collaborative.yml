@@ -15,12 +15,12 @@ spec:
         app: explorviz-collaborative-service
     spec:
       containers:
-      - name: explorviz-collaborative-service
-        image: explorviz/collaborative-service-jvm:latest
-        ports:
-          - containerPort: 80
+        - name: explorviz-collaborative-service
+          image: explorviz/collaborative-service-jvm:latest
+          ports:
+            - containerPort: 80
       nodeSelector:
-        env: prod 
+        env: prod
 ---
 apiVersion: v1
 kind: Service
