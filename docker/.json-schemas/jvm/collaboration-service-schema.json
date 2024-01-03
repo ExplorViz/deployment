@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "properties": {
+    "image": { "const": "explorviz/collaboration-service-js:latest" },
+    "environment": {
+      "type": "array",
+      "allOf": [
+        {
+          "contains": {
+            "enum": ["REDIS_HOST=redis-collab"]
+          }
+        },
+        {
+          "contains": {
+            "enum": ["REDIS_PORT=6379"]
+          }
+        }
+      ]
+    }
+  },
+  "required": ["image", "environment"]
+}

@@ -1,174 +1,247 @@
-const express = require('express');
-const fs = require('fs');
-const cors = require('cors')
+const express = require("express");
+const { readFile } = require("node:fs/promises");
+const cors = require("cors");
+const compression = require("compression");
+const {
+  removeRandomTraces,
+  recursivelyRandomizeAllHashCodesOfPackages,
+  copyPackageAndTraces,
+  createRandomHex,
+  calculateTenSecondLaterNeighbourTimestamp,
+} = require("./utils.js");
+const { time } = require("node:console");
 
-const landscapeApp = express();
-const traceApp = express();
-const userApp = express();
+const spanApp = createExpressApplication(8083);
+const userApp = createExpressApplication(8084);
 
-// Disable caching to prevent HTTP 304
-landscapeApp.disable('etag');
-traceApp.disable('etag');
-userApp.disable('etag');
-
-const landscapePort = 8082;
-const tracePort = 8083;
-const userPort = 8084;
-
-traceApp.use(cors());
-landscapeApp.use(cors());
-userApp.use(cors());
-
-traceApp.listen(tracePort, () => {});
-landscapeApp.listen(landscapePort, () => {});
-userApp.listen(userPort, () => {});
-
-let user = {};
-
-const landscapeRootUrl = "/v2/landscapes";
-const traceRootUrl = "/v2/landscapes";
+const spanRootUrl = "/v2/landscapes";
 const userRootUrl = "/user/:uid/token";
 
+(async () => {
+  const user = JSON.parse(await readFile("./user.json"));
+  userApp.get(`${userRootUrl}`, (req, res) => res.json(user));
+})();
 
-fs.readFile('./user.json', (err, json) => {
-  user = JSON.parse(json);
+createLandscapeSample({
+  filePrefix: "plantuml",
+  token: "7cd8a9a7-b840-4735-9ef0-2dbbfa01c039",
 });
 
-userApp.get(`${userRootUrl}`, function(req, res) {
-  res.json(user);
+createLandscapeSample({
+  filePrefix: "petclinic-distributed",
+  token: "26844195-7235-4254-a17b-0f7fb49adb0a",
 });
 
-// BEGIN Fibonacci Sample
+createLandscapeSample({
+  filePrefix: "petclinic",
+  token: "19844195-7235-4254-a17b-0f7fb49adb0a",
+  traceModifier: removeRandomTraces,
+  timestampModifier: (latestTimestandEpochMilli) => {
+    const nextTimestampMilli = calculateTenSecondLaterNeighbourTimestamp(
+      parseInt(latestTimestandEpochMilli),
+    );
+    const randomSpanCount = parseInt(Math.random() * (150 - 50) + 50);
 
-const fibonacciToken = "17844195-6144-4254-a17b-0f7fb49adb0a";
-const fibonacciFilePrefix = "fibonacci";
-let structureFibonacci = {};
-let dynamicFibonacci = {};
-
-fs.readFile(`./${fibonacciFilePrefix}-structure.json`, (err, json) => {
-  structureFibonacci = JSON.parse(json);
+    return {
+      epochMilli: nextTimestampMilli,
+      spanCount: randomSpanCount,
+    };
+  },
 });
 
-fs.readFile(`./${fibonacciFilePrefix}-dynamic.json`, (err, json) => {
-  dynamicFibonacci = JSON.parse(json);
+createLandscapeSample({
+  filePrefix: "big-landscape",
+  token: "a87167e5-8ec1-4b98-830a-dba87d213bb0",
 });
 
-landscapeApp.get(`${landscapeRootUrl}/${fibonacciToken}/structure`, function(req, res) {
-  res.json(structureFibonacci);
+createLandscapeSample({
+  filePrefix: "vissoft23",
+  token: "12444195-6144-4254-a17b-asdgfewefg",
 });
 
-traceApp.get(`${traceRootUrl}/${fibonacciToken}/dynamic`, function(req, res) {
-  res.json(dynamicFibonacci);
+// BEGIN BIG SL Sample
+createLandscapeSample({
+  filePrefix: "petclinic",
+  token: "1d8c9223-b790-4873-9b5d-fdf68cdc082f",
+  initializer: (structure, traces) => {
+    const originalTraces = structuredClone(traces);
+
+    const node = structure.nodes[0];
+    const app = node.applications[0];
+    const package = app.packages[0];
+
+    app.name = "large-demo-landscape";
+
+    app.packages.unshift({
+      name: "changing",
+      subPackages: [],
+      classes: Array.from({ length: 12 }, () => ({
+        name: "C" + createRandomHex(6),
+        methods: [],
+      })),
+    });
+
+    for (let i = 0; i < 15; i++) {
+      const { packageCopy, newTraces } = copyPackageAndTraces(
+        package,
+        originalTraces,
+      );
+
+      app.packages.push({
+        name: `petclinic${i}`,
+        subPackages: [packageCopy],
+        classes: [],
+      });
+
+      traces.push(...newTraces);
+    }
+  },
+  structureModifier: (structure) => {
+    const changingPackage = structure.nodes[0].applications[0].packages[0];
+    changingPackage.classes.forEach((c) => (c.name = "C" + createRandomHex(6)));
+    return structure;
+  },
 });
+// END BIG SL Sample
 
-// END Fibonacci Sample
+{
+  // BEGIN Increasing SL Sample
+  let previousStructure = null;
 
-// BEGIN Petclinic-Distributed Sample
+  createLandscapeSample({
+    filePrefix: "petclinic",
+    token: "12444195-6144-4254-a17b-0f7fb49adb0a",
+    structureModifier: (structureData) => {
+      if (!previousStructure) {
+        previousStructure = structuredClone(structureData);
+        return previousStructure;
+      }
 
-const petclinicDistributedToken = "26844195-7235-4254-a17b-0f7fb49adb0a";
-const petclinicDistributedFilePrefix = "petclinic-distributed";
-let structurePetclinicDistributed = {};
-let dynamicPetclinicDistributed = {};
+      const node = structureData.nodes[0];
+      const app = node.applications[0];
+      const package = app.packages[0];
 
-fs.readFile(`./${petclinicDistributedFilePrefix}-structure.json`, (err, json) => {
-  structurePetclinicDistributed = JSON.parse(json);
-});
+      const newStructure = addTopLevelPackageToFirstApplication(
+        package,
+        previousStructure,
+      );
+      previousStructure = newStructure;
 
-fs.readFile(`./${petclinicDistributedFilePrefix}-dynamic.json`, (err, json) => {
-  dynamicPetclinicDistributed = JSON.parse(json);
-});
+      return previousStructure;
+    },
+    timestampModifier: (latestTimestandEpochMilli) => {
+      const nextTimestampMilli = calculateTenSecondLaterNeighbourTimestamp(
+        parseInt(latestTimestandEpochMilli),
+      );
+      const randomSpanCount = parseInt(Math.random() * (150 - 50) + 50);
 
-landscapeApp.get(`${landscapeRootUrl}/${petclinicDistributedToken}/structure`, function(req, res) {
-  res.json(structurePetclinicDistributed);
-});
+      return {
+        epochMilli: nextTimestampMilli,
+        spanCount: randomSpanCount,
+      };
+    },
+  });
 
-traceApp.get(`${traceRootUrl}/${petclinicDistributedToken}/dynamic`, function(req, res) {
-  res.json(dynamicPetclinicDistributed);
-});
+  function addTopLevelPackageToFirstApplication(
+    topLevelPackage,
+    structureRecord,
+  ) {
+    const deepCopyPackage = structuredClone(topLevelPackage);
+    recursivelyRandomizeAllHashCodesOfPackages(deepCopyPackage);
 
-// END Petclinic-Distributed Sample
+    const node = structureRecord.nodes[0];
+    const app = node.applications[0];
 
-// BEGIN Petclinic Sample
+    const newTopLevelPackage = {
+      name: `copy${app.packages.length - 1}`,
+      subPackages: [deepCopyPackage],
+      classes: [],
+    };
 
-const petclinicToken = "19844195-7235-4254-a17b-0f7fb49adb0a";
-const petclinicFilePrefix = "petclinic";
-let structurePetclinic = {};
-let dynamicPetclinic = {};
+    app.packages.push(newTopLevelPackage);
 
-fs.readFile(`./${petclinicFilePrefix}-structure.json`, (err, json) => {
-  structurePetclinic = JSON.parse(json);
-});
-
-fs.readFile(`./${petclinicFilePrefix}-dynamic.json`, (err, json) => {
-  dynamicPetclinic = JSON.parse(json);
-});
-
-landscapeApp.get(`${landscapeRootUrl}/${petclinicToken}/structure`, function(req, res) {
-  res.json(structurePetclinic);
-});
-
-traceApp.get(`${traceRootUrl}/${petclinicToken}/dynamic`, function(req, res) {
-    res.json(removeRandomTraces(dynamicPetclinic));
-});
-
-// END Petclinic Sample
-
-// BEGIN Big Landscape Sample
-
-const bigLandscapeToken = "a87167e5-8ec1-4b98-830a-dba87d213bb0";
-const bigLandscapeFilePrefix = "big-landscape";
-let structureBigLandscape = {};
-let dynamicBigLandscape = {};
-
-fs.readFile(`./${bigLandscapeFilePrefix}-structure.json`, (err, json) => {
-  structureBigLandscape = JSON.parse(json);
-});
-
-fs.readFile(`./${bigLandscapeFilePrefix}-dynamic.json`, (err, json) => {
-  dynamicBigLandscape = JSON.parse(json);
-});
-
-landscapeApp.get(`${landscapeRootUrl}/${bigLandscapeToken}/structure`, function(req, res) {
-  res.json(structureBigLandscape);
-});
-
-traceApp.get(`${traceRootUrl}/${bigLandscapeToken}/dynamic`, function(req, res) {
-  res.json(dynamicBigLandscape);
-});
-
-// END Big Landscape Sample
+    return structureRecord;
+  }
+} // END Increasing SL Sample
 
 /**
- * Shuffles array in place. ES6 version
- * @param {Array} a items An array containing the items.
- * https://stackoverflow.com/a/6274381
+ * Creates and configures a express application instance.
+ * @param {number} port
+ * @returns a express application instance
  */
- function shuffle(a) {
-  for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
+function createExpressApplication(port) {
+  const app = express();
+
+  // Disable caching to prevent HTTP 304
+  app.disable("etag");
+
+  app.use(compression());
+  app.use(cors());
+  app.listen(port, () => {});
+
+  return app;
 }
 
-function removeRandomTraces(traceArray) {
-  const uniqueTraceIds = [];
+/**
+ * @typedef {(data: any) => any} DataModifier
+ */
 
-  for (const trace of traceArray) {
-    const traceId = trace["traceId"];
-    if(traceId && !uniqueTraceIds.includes(traceId)) {
-      uniqueTraceIds.push(traceId);
+/**
+ * Create a sample landscape for the ExplorViz demo.
+ * Loads the data and sets up express routes.
+ * @param {{
+ *  filePrefix: string;
+ *  token: string;
+ *  traceModifier?: DataModifier,
+ *  structureModifier?: DataModifier,
+ *  timestampModifier?: DataModifier,
+ *  initializer?: (structure, trace) => void
+ * }} options
+ */
+async function createLandscapeSample({
+  filePrefix,
+  token,
+  traceModifier,
+  structureModifier,
+  timestampModifier,
+  initializer,
+}) {
+  const structureData = JSON.parse(
+    await readFile(`demo-data/${filePrefix}-structure.json`),
+  );
+  const dynamicData = JSON.parse(
+    await readFile(`demo-data/${filePrefix}-dynamic.json`),
+  );
+  const timestampData = JSON.parse(
+    await readFile(`demo-data/${filePrefix}-timestamp.json`),
+  );
+
+  structureData.landscapeToken = token;
+  initializer?.(structureData, dynamicData);
+
+  spanApp.get(`${spanRootUrl}/${token}/structure`, (req, res) =>
+    res.json(
+      structureModifier ? structureModifier(structureData) : structureData,
+    ),
+  );
+
+  spanApp.get(`${spanRootUrl}/${token}/dynamic`, (req, res) =>
+    res.json(traceModifier ? traceModifier(dynamicData) : dynamicData),
+  );
+
+  spanApp.get(`${spanRootUrl}/${token}/timestamps`, (req, res) => {
+    const potentialLatestTimestamp = req.query.newest;
+    if (potentialLatestTimestamp && timestampModifier) {
+      const newTimestamp = timestampModifier(potentialLatestTimestamp);
+
+      if (newTimestamp) {
+        timestampData.push(newTimestamp);
+        res.json([newTimestamp]);
+      } else {
+        res.json([]);
+      }
+    } else {
+      res.json(timestampData);
     }
-  }
-
-  // remove random count of uniqueTraceIds
-
-  let itemsToRemove = uniqueTraceIds.length > 1 ? Math.floor(Math.random() * uniqueTraceIds.length) : 1;
-
-  let shuffledTraceIdArray = shuffle(uniqueTraceIds);
-  shuffledTraceIdArray.splice(itemsToRemove);
-
-  const randomizedTraces = traceArray.filter(trace => shuffledTraceIdArray.includes(trace["traceId"]));
-
-  return randomizedTraces;
+  });
 }
