@@ -1,0 +1,71 @@
+
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+        cors:
+         allowed_origins:
+          - http://*
+          - https://*
+
+processors:
+  batch:
+    timeout: 5s
+    #send_batch_size: 200
+  # The batch processor combines multiple incoming telemetry data items into batches.
+  # It waits up to 5 seconds or until 200 items are in a batch before sending it further.
+  
+  attributes:
+    actions:
+      - key: landscape_token
+        value: 9f0292a0-0c0f-4ada-8e43-3ca9f9da7110 #${LANDSCAPE_TOKEN_ID}
+        action: insert
+      - key: token_secret
+        value: xxVhBjNkuixfTYeJ # ${LANDSCAPE_TOKEN_SECRET}
+        action: insert
+      - key: application_name
+        value: "spring-petclinic-angular"
+        action: insert
+      - key: application_instance_id
+        value: "0"
+        action: insert
+      - key: application_language
+        value: "angular"
+        action: insert
+        
+
+exporters:
+  otlp:
+    endpoint: "http://otel-collector:55678"      #otelcol:4317
+    tls:
+      insecure: true
+    #endpoint: otelcol:4317
+  #debug:
+  #prometheus:
+   # endpoint: "0.0.0.0:9464"
+  
+
+extensions:
+  health_check:
+  pprof:
+  zpages:
+
+service:
+  extensions: [health_check, pprof, zpages]
+  telemetry:
+    logs:
+      level: debug
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch, attributes]
+      exporters: [otlp]
+    # metrics:
+    #   receivers: [otlp]
+    #   processors: [batch, attributes]
+    #   exporters: [otlp]
+    # logs:
+    #   receivers: [otlp]
+    #   processors: [batch]
+    #   exporters: [otlp]
