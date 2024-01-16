@@ -17,11 +17,14 @@ const exporter = new OTLPTraceExporter({
 });
 
 const provider = new WebTracerProvider();
-provider.addSpanProcessor(new SimpleSpanProcessor(new OTLPTraceExporter()));
+provider.addSpanProcessor(new SimpleSpanProcessor(exporter)); 
 provider.register({
   contextManager: new ZoneContextManager(),
   propagator: new B3Propagator(),
 });
+
+
+
 
 registerInstrumentations({
   tracerProvider: provider,

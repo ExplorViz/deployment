@@ -16,11 +16,14 @@ npm install @opentelemetry/exporter-metrics-otlp-proto
 
 npm install @opentelemetry/exporter-collector //depreciated
 
-
 npm install @opentelemetry/sdk-trace-web
 npm install @opentelemetry/auto-instrumentations-web
 npm install @opentelemetry/context-zone
 
+
+# Connect to ExplorViz
+
+Insert the ID and Secret 
 
 
 # Run the Application 
@@ -29,14 +32,7 @@ To use this application in a docker environment, first you need to build this ap
 
 docker-compose up --build -d
 
-docker-compose --env-file .env-custom up -d
 
-docker-compose --env-file .env-custom down -v
-
-
-
-
-Go to http://localhost:18080/rolldice to generate more trace data.
 
 
 
