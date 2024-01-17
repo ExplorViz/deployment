@@ -37,13 +37,15 @@ processors:
 
 exporters:
   otlp:
-    endpoint: "http://otel-collector:55678"      #otelcol:4317
-    tls:
-      insecure: true
-    #endpoint: otelcol:4317
+    # endpoint: "http://otel-collector:55678"      #otelcol:4317
+    # tls:
+    #   insecure: true
+    endpoint: otelcol:4317
   #debug:
-  #prometheus:
-   # endpoint: "0.0.0.0:9464"
+  zipkin:
+    endpoint: http://zipkin:9411/api/v2/spans
+  prometheus:
+    endpoint: "0.0.0.0:9464"
   
 
 extensions:
@@ -60,11 +62,11 @@ service:
     traces:
       receivers: [otlp]
       processors: [batch, attributes]
-      exporters: [otlp]
-    # metrics:
-    #   receivers: [otlp]
-    #   processors: [batch, attributes]
-    #   exporters: [otlp]
+      exporters: [zipkin]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [prometheus]
     # logs:
     #   receivers: [otlp]
     #   processors: [batch]

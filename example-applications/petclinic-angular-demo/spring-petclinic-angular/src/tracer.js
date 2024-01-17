@@ -8,10 +8,15 @@ const { registerInstrumentations } = require('@opentelemetry/instrumentation');
 const { ZoneContextManager } = require('@opentelemetry/context-zone');
 const { B3Propagator } = require('@opentelemetry/propagator-b3');
 
+// metrics
+const { MeterProvider, ConsoleMetricExporter } = require('@opentelemetry/sdk-metrics-base');
+const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-http');
+
+
 
 const exporter = new OTLPTraceExporter({
   // optional - default url is http://localhost:4318/v1/traces
-  url: "http://otel-collector:4318/v1/traces",
+  url: "http://otel-collector:4318/v1/traces",   
   // optional - collection of custom headers to be sent with each request, empty by default
   headers: {},
 });
@@ -24,6 +29,21 @@ provider.register({
 });
 
 
+const otlpExporter = new OTLPMetricExporter({
+  url: "http://otel-collector:4318/v1/metrics",
+  headers: {},
+});
+
+const consoleExporter = new ConsoleMetricExporter();
+
+// Erstellen eines MeterProviders mit beiden Exportern
+const meterProvider = new MeterProvider({
+  exporter: [otlpExporter, consoleExporter],
+  interval: 1000, // Exportintervall in Millisekunden
+});
+
+// Registrierung des MeterProviders
+// meterProvider.register();
 
 
 registerInstrumentations({
@@ -35,6 +55,9 @@ registerInstrumentations({
         propagateTraceHeaderCorsUrls: /.*/,
         clearTimingResources: true,
       },
+      // '@opentelemetry/instrumentation-document-load': {},
+      // '@opentelemetry/instrumentation-user-interaction': {},
+      // '@opentelemetry/instrumentation-fetch': {},
     }),
   ],
 });
