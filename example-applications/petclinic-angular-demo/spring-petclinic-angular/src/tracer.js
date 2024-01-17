@@ -11,13 +11,13 @@ const { B3Propagator } = require('@opentelemetry/propagator-b3');
 
 const exporter = new OTLPTraceExporter({
   // optional - default url is http://localhost:4318/v1/traces
-  url: "http://otel-collector:4318/v1/traces",
+  url: "http://localhost:4318/v1/traces",
   // optional - collection of custom headers to be sent with each request, empty by default
   headers: {},
 });
 
 const provider = new WebTracerProvider();
-provider.addSpanProcessor(new SimpleSpanProcessor(exporter)); 
+provider.addSpanProcessor(new SimpleSpanProcessor(new OTLPTraceExporter())); 
 provider.register({
   contextManager: new ZoneContextManager(),
   propagator: new B3Propagator(),
