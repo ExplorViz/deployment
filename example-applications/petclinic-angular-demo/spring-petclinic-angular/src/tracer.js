@@ -16,7 +16,7 @@ const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-htt
 
 const exporter = new OTLPTraceExporter({
   // optional - default url is http://localhost:4318/v1/traces
-  url: "http://otel-collector:4318/v1/traces",   
+  url: "http://localhost:4318/v1/traces",   
   // optional - collection of custom headers to be sent with each request, empty by default
   headers: {},
 });
@@ -30,7 +30,7 @@ provider.register({
 
 
 const otlpExporter = new OTLPMetricExporter({
-  url: "http://otel-collector:4318/v1/metrics",
+  url: "http://localhost:4318/v1/metrics",
   headers: {},
 });
 
