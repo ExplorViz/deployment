@@ -4,13 +4,39 @@ services:
   
   petclinic-backend:
     image: springcommunity/spring-petclinic-rest
+    container_name: spring-petclinic-backend
+    depends_on:
+      - ocelot-agent
     ports:
       - "9966:9966"
     networks:
       - explorviz
-    
+    environment:
+      - LANDSCAPE_TOKEN_ID=${LANDSCAPE_TOKEN_ID}
+      - LANDSCAPE_TOKEN_SECRET=${LANDSCAPE_TOKEN_SECRET}
+    volumes:
+      - agent-vol:/agent
+      - ./inspectit.yml:/agent/inspectit.yml
+    # entrypoint:
+    #   [
+    #     "sh",
+    #     "-c",
+    #     'java -Dinspectit.config.file-based.path="/agent/" -javaagent:/agent/inspectit-ocelot-agent.jar -jar /app.jar',
+    #   ]
+    command: java -Dinspectit.config.file-based.path="/agent/" -javaagent:/agent/inspectit-ocelot-agent.jar -jar /app.jar
+
+
+
+  ocelot-agent:
+    image: inspectit/inspectit-ocelot-agent:2.1.1
+    container_name: ocelot-agent-petclinic-backend
+    networks:
+      - explorviz
+    volumes:
+      - agent-vol:/agent
+
+
   petclinic-frontend:
-    #docker run --rm -p 8080:8080 spring-petclinic-angular:latest
     build:
       context: ./spring-petclinic-angular
       args:
@@ -25,18 +51,7 @@ services:
     depends_on:
       - petclinic-backend
 
-    # Zipkin
-  # zipkin-all-in-one:
-  #   image: openzipkin/zipkin:latest
-  #   hostname: zipkin
-  #   ports:
-  #     - "9411:9411"
-  #   environment: 
-  #     - JAVA_OPTS=-Dlogging.level.zipkin=DEBUG -Dlogging.level.zipkin2=DEBUG
-  #   networks:
-  #     - opentelemetry
-
-      
+        
   # Collector
   collector:
     image: otel/opentelemetry-collector:latest
@@ -53,7 +68,19 @@ services:
     networks:
       - explorviz
     # depends_on:
-    #   - zipkin-all-in-on   
+    #   - zipkin-all-in-on 
+
+
+  # # Zipkin
+  # zipkin-all-in-one:
+  #   image: openzipkin/zipkin:latest
+  #   hostname: zipkin
+  #   ports:
+  #     - "9411:9411"
+  #   environment: 
+  #     - JAVA_OPTS=-Dlogging.level.zipkin=DEBUG -Dlogging.level.zipkin2=DEBUG
+  #   networks:
+  #     - explorviz  
 
 
   # Prometheus
@@ -67,6 +94,8 @@ services:
   #   networks:
   #     - explorviz
 
+volumes:
+  agent-vol:
 
 networks:
   explorviz:

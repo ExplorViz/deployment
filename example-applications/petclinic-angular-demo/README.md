@@ -32,6 +32,10 @@ To use this application in a docker environment, first you need to build this ap
 
 docker-compose up --build -d
 
+docker-compose --env-file .env-custom up --build -d
+
+docker-compose --env-file .env-custom down -v
+
 
 
 
