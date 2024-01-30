@@ -16,15 +16,20 @@ const exporter = new OTLPTraceExporter({
   headers: {},
 });
 
+class CustomSpanProcessor extends SimpleSpanProcessor {
+  process(span) {
+    console.log(new Error().stack);
+    span.setAttribute("methodName", "meineMethode");
+    super.process(span);
+  }
+}
+
 const provider = new WebTracerProvider();
-provider.addSpanProcessor(new SimpleSpanProcessor(new OTLPTraceExporter())); 
+provider.addSpanProcessor(new CustomSpanProcessor(new OTLPTraceExporter())); 
 provider.register({
   contextManager: new ZoneContextManager(),
   propagator: new B3Propagator(),
 });
-
-
-
 
 registerInstrumentations({
   tracerProvider: provider,

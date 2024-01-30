@@ -1,9 +1,11 @@
-version: '3.8'
+version: '3.5'
 
 services:
   
   petclinic-backend:
-    image: springcommunity/spring-petclinic-rest
+    #image: springcommunity/spring-petclinic-rest
+    build:
+      context: .
     container_name: spring-petclinic-backend
     depends_on:
       - ocelot-agent
@@ -23,8 +25,12 @@ services:
     #     "-c",
     #     'java -Dinspectit.config.file-based.path="/agent/" -javaagent:/agent/inspectit-ocelot-agent.jar -jar /app.jar',
     #   ]
-    command: java -Dinspectit.config.file-based.path="/agent/" -javaagent:/agent/inspectit-ocelot-agent.jar -jar /app.jar
-
+    command:
+      [
+        "sh",
+        "-c",
+        'java -Dinspectit.config.file-based.path="/agent/" -javaagent:/agent/inspectit-ocelot-agent.jar -jar /app.jar',
+      ]
 
 
   ocelot-agent:
