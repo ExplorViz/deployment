@@ -40,16 +40,16 @@ exporters:
   #   endpoint: "http://otel-collector:55678"   #otelcol:4317
   #   tls:
   #     insecure: true
-  # otlphttp:
-  #   endpoint: "http://metric-service:8085"
-  #   tls:
-  #     insecure: true
+  otlphttp:
+    endpoint: "http://metric-service:8085"
+    tls:
+      insecure: true
 
   #debug:
   zipkin:
     endpoint: http://zipkin:9411/api/v2/spans
-  prometheus:
-    endpoint: "0.0.0.0:9464"
+  # prometheus:
+  #   endpoint: "0.0.0.0:9464"
   
 
 extensions:
@@ -70,7 +70,7 @@ service:
     metrics:
       receivers: [otlp]
       processors: [batch, attributes]
-      exporters: [prometheus]
+      exporters: [otlphttp]
     # logs:
     #   receivers: [otlp]
     #   processors: [batch]

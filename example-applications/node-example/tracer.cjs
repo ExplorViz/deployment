@@ -3,8 +3,8 @@ const { NodeSDK } = require("@opentelemetry/sdk-node");
 const { OTLPTraceExporter } = require("@opentelemetry/exporter-trace-otlp-proto");
 const { getNodeAutoInstrumentations } = require("@opentelemetry/auto-instrumentations-node");
 const { PeriodicExportingMetricReader, ConsoleMetricExporter } = require("@opentelemetry/sdk-metrics");
-const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-http');
-// const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-proto');
+// const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-http');
+const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-proto');
 
 const sdk = new NodeSDK({
   traceExporter: new OTLPTraceExporter({
