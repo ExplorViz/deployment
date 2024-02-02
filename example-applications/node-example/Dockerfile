@@ -3,6 +3,9 @@ FROM node:18-alpine3.16 AS build
 WORKDIR /dockerbuild
 COPY . .
 
+# Install git
+RUN apk update && apk add --no-cache git 
+
 RUN yarn install \
     && yarn build \
     && rm -rf /dockerbuild/lib/scripts
@@ -14,6 +17,9 @@ FROM node:18-alpine3.16
 ENV ME_CONFIG_MONGODB_URL="mongodb://mongo:27017"
 ENV ME_CONFIG_MONGODB_ENABLE_ADMIN="true"
 ENV VCAP_APP_HOST="0.0.0.0"
+ENV OTEL_EXPORTER_OTLP_PROTOCOL=http/json 
+ENV OTEL_EXPORTER_OTLP_TRACES_PROTOCOL=http/json 
+ENV OTEL_EXPORTER_OTLP_METRICS_PROTOCOL=http/json
 
 WORKDIR /opt/mongo-express
 
@@ -27,7 +33,7 @@ COPY --from=build /dockerbuild/.yarn /opt/mongo-express/.yarn/
 COPY --from=build /dockerbuild/yarn.lock /opt/mongo-express/
 COPY --from=build /dockerbuild/.yarnrc.yml /opt/mongo-express/
 COPY --from=build /dockerbuild/.npmignore /opt/mongo-express/
-# COPY --from=build /dockerbuild/tracer.js /opt/mongo-express/ 
+COPY --from=build /dockerbuild/tracer.cjs /opt/mongo-express/ 
 # COPY --from=build /dockerbuild/bootstrap.js /opt/mongo-express/
 
 RUN apk -U add --no-cache \
@@ -37,4 +43,6 @@ RUN apk -U add --no-cache \
 
 EXPOSE 8081
 
-CMD ["/sbin/tini", "--", "yarn", "start"]
+CMD ["/sbin/tini", "--", "node", "--require", "./tracer.cjs", "app.js"]
+
+# CMD ["/sbin/tini", "--", "yarn", "start"]

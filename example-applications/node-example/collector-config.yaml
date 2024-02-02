@@ -36,8 +36,15 @@ processors:
 
 
 exporters:
-  otlp:
-    endpoint: # "http://otel-collector:55678"   #otelcol:4317
+  # otlp:
+  #   endpoint: "http://otel-collector:55678"   #otelcol:4317
+  #   tls:
+  #     insecure: true
+  # otlphttp:
+  #   endpoint: "http://metric-service:8085"
+  #   tls:
+  #     insecure: true
+
   #debug:
   zipkin:
     endpoint: http://zipkin:9411/api/v2/spans
