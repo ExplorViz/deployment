@@ -13,13 +13,7 @@ exporters:
 
   logging:
     loglevel: debug
-
-  otlphttp:
-    endpoint: "http://metric-service:8085"
-    tls:
-      insecure: true
     
-
 extensions:
   zpages:
     endpoint: :55679
@@ -33,8 +27,4 @@ service:
         - otlp
       exporters:
         - kafka
-    metrics:
-      receivers:
-        - otlp
-      exporters:
-        - otlphttp
+    
