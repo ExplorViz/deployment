@@ -6,8 +6,8 @@ services:
     image: mongo
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
     volumes:
       - mongo_data:/data/db
     networks:
@@ -17,27 +17,27 @@ services:
     build: .
     restart: always
     ports:
-      - 18080:8081
+      - ${EXTERNAL_PORT}:8081
     environment:
       ME_CONFIG_MONGODB_ENABLE_ADMIN: true
-      ME_CONFIG_MONGODB_ADMINUSERNAME: root
-      ME_CONFIG_MONGODB_ADMINPASSWORD: example
-      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${ME_CONFIG_MONGODB_ADMINUSERNAME}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${ME_CONFIG_MONGODB_ADMINPASSWORD}
+      ME_CONFIG_MONGODB_URL: ${ME_CONFIG_MONGODB_URL}
       ME_CONFIG_MONGODB_SERVE: mongo
     networks:
       - explorviz
 
 
-  # Zipkin
-  zipkin-all-in-one:
-    image: openzipkin/zipkin:latest
-    hostname: zipkin
-    ports:
-      - "9411:9411"
-    environment: 
-      - JAVA_OPTS=-Dlogging.level.zipkin=DEBUG -Dlogging.level.zipkin2=DEBUG
-    networks:
-      - explorviz
+  # # Zipkin
+  # zipkin-all-in-one:
+  #   image: openzipkin/zipkin:latest
+  #   hostname: zipkin
+  #   ports:
+  #     - "9411:9411"
+  #   environment: 
+  #     - JAVA_OPTS=-Dlogging.level.zipkin=DEBUG -Dlogging.level.zipkin2=DEBUG
+  #   networks:
+  #     - explorviz
 
       
   # Collector
@@ -54,22 +54,22 @@ services:
       
     networks:
       - explorviz
-    depends_on:
-      - zipkin-all-in-one
-      - prometheus
+    # depends_on:
+    #   - zipkin-all-in-one
+    #   - prometheus
     
 
 
-  # Prometheus
-  prometheus:
-    image: prom/prometheus:latest
-    hostname: prometheus
-    volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
-    ports:
-      - "9090:9090"
-    networks:
-      - explorviz
+  # # Prometheus
+  # prometheus:
+  #   image: prom/prometheus:latest
+  #   hostname: prometheus
+  #   volumes:
+  #     - ./prometheus.yml:/etc/prometheus/prometheus.yml
+  #   ports:
+  #     - "9090:9090"
+  #   networks:
+  #     - explorviz
 
 
 volumes:

@@ -19,10 +19,10 @@ processors:
   attributes:
     actions:
       - key: landscape_token
-        value: 1d246ed1-1474-4933-b8f1-df140ea1d429 #${LANDSCAPE_TOKEN_ID}
+        value: ffb31fc2-24d3-4718-b72b-6f054055b69e # Inserting your own landscape token!!!
         action: insert
       - key: token_secret
-        value: EM6jrrRkog2uEq8U # ${LANDSCAPE_TOKEN_SECRET}
+        value: 0CgsRRsidIsv3Yw3 # Inserting your own token secret!!!
         action: insert
       - key: application_name
         value: "meine-express-app"
@@ -36,18 +36,18 @@ processors:
 
 
 exporters:
-  # otlp:
-  #   endpoint: "http://otel-collector:55678"   #otelcol:4317
-  #   tls:
-  #     insecure: true
+  otlp:
+    endpoint: "http://otel-collector:55678"   #otelcol:4317
+    tls:
+      insecure: true
   otlphttp:
     endpoint: "http://metric-service:8085"
     tls:
       insecure: true
 
-  #debug:
-  zipkin:
-    endpoint: http://zipkin:9411/api/v2/spans
+  # debug:
+  # zipkin:
+  #   endpoint: http://zipkin:9411/api/v2/spans
   # prometheus:
   #   endpoint: "0.0.0.0:9464"
   
@@ -66,12 +66,8 @@ service:
     traces:
       receivers: [otlp]
       processors: [batch, attributes]
-      exporters: [zipkin]
+      exporters: [otlp]
     metrics:
       receivers: [otlp]
       processors: [batch, attributes]
       exporters: [otlphttp]
-    # logs:
-    #   receivers: [otlp]
-    #   processors: [batch]
-    #   exporters: [otlp]
