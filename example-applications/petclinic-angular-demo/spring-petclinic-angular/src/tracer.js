@@ -36,10 +36,22 @@ registerInstrumentations({
   instrumentations: [
     getWebAutoInstrumentations({
       // load custom configuration for xml-http-request instrumentation
-      '@opentelemetry/instrumentation-xml-http-request': {
-        propagateTraceHeaderCorsUrls: /.*/,
-        clearTimingResources: true,
-      },
+      // '@opentelemetry/instrumentation-xml-http-request': {
+      //   propagateTraceHeaderCorsUrls: /.*/,
+      //   clearTimingResources: true,
+      // },
+      // 'opentelemetry/instrumentation-document-load':{
+      //   propagateTraceHeaderCorsUrls: /.*/,
+      //   clearTimingResources: true,
+      // },
+      // '@opentelemetry/instrumentation-fetch': {
+      //   propagateTraceHeaderCorsUrls: /.*/,
+      //   clearTimingResources: true,
+      // },
+      // '@opentelemetry/instrumentation-user-interaction': {
+      //   propagateTraceHeaderCorsUrls: /.*/,
+      //   clearTimingResources: true,
+      // },
     }),
   ],
 });

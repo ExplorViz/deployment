@@ -24,6 +24,10 @@ RUN ./mvnw package -q && mv target/*.jar /app.jar
 
 FROM eclipse-temurin:17-alpine
 COPY --from=build /app.jar /app.jar
+
+## Set environment variable for Service name
+ENV OTEL_SERVICE_NAME="Petclinic-Angular"
+
 CMD java -jar /app.jar
 
 ## END Publish stage
