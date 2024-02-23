@@ -13,9 +13,11 @@ const { time } = require("node:console");
 
 const spanApp = createExpressApplication(8083);
 const userApp = createExpressApplication(8084);
+const metricApp = createExpressApplication(8085);
 
 const spanRootUrl = "/v2/landscapes";
 const userRootUrl = "/user/:uid/token";
+const metricRootUrl = "/metrics";
 
 (async () => {
   const user = JSON.parse(await readFile("./user.json"));
@@ -58,6 +60,17 @@ createLandscapeSample({
   filePrefix: "vissoft23",
   token: "12444195-6144-4254-a17b-asdgfewefg",
 });
+
+createLandscapeSample({
+  filePrefix: "petclinic-angular",
+  token: "e0296ba3-983e-4b05-b559-ba48c778ef3e",
+});
+
+createLandscapeSample({
+  filePrefix: "mongo-express",
+  token: "0ad5c1cd-e2de-4404-9cc8-6da758d82010",
+});
+
 
 // BEGIN BIG SL Sample
 createLandscapeSample({
@@ -245,3 +258,37 @@ async function createLandscapeSample({
     }
   });
 }
+
+// for every landscape with metrics an an array with the token as identifier
+const landscapeMetrics = {
+  "0ad5c1cd-e2de-4404-9cc8-6da758d82010": {
+    filePrefix: "mongo-express",
+    timestamp: 1708675770000, 
+  },
+  // for other landscape with metrics
+};
+
+/**
+ * Respond accordingly to the metric request by the frontend. As of now, every metric within the JSON is returned,
+ * which means you cannot get metrics from different timestamps other than the one initialized in landscapeMetrics
+ */
+metricApp.get(metricRootUrl, async (req, res) => {
+  const { landscapeToken, timeStamp } = req.query;
+  console.log(req.query);
+  const landscapeConfig = landscapeMetrics[landscapeToken];
+  console.log(landscapeConfig);
+  console.log(landscapeConfig.timestamp.toString());
+
+  if (!landscapeConfig || landscapeConfig.timestamp.toString() !== timeStamp) {
+    return res.status(404).send("Landscape not found or timestamp mismatch");
+  }
+
+  try {
+    const filePath = `demo-data/${landscapeConfig.filePrefix}-metric.json`;
+    const metricData = JSON.parse(await readFile(filePath));
+    res.json(metricData);
+  } catch (error) {
+    console.error("Error reading metric data:", error);
+    res.status(500).send("Error loading metric data");
+  }
+});
