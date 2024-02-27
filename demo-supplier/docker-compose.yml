@@ -4,13 +4,16 @@ services:
 
   demo-supplier:
     container_name: explorviz-demo-supplier
-    image: explorviz/demo-supplier:latest
+    #image: explorviz/demo-supplier:latest
+    build: .
     networks:
       - explorviz
     ports:
       - 8083:8083
       - 8084:8084
+      - 8085:8085
 
 networks:
   explorviz:
     name: explorviz
+    external: true
