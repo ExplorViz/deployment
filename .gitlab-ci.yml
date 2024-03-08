@@ -12,12 +12,8 @@ publish-amd64-manifest:
   variables:
     MANIFEST_PLATFORMS: "linux/amd64"
   script:
-    - "--username ${DOCKERHUB_USER}
-      --password ${DOCKERHUB_PASSWORD}
-      push from-args
-      --platforms ${MANIFEST_PLATFORMS}
-      --template ${DOCKERHUB_ORGA}/${DOCKERHUB_IMAGE_NAME}:ARCH
-      --target ${DOCKERHUB_ORGA}/${DOCKERHUB_IMAGE_NAME}:latest"
+    - manifest-tool --username ${DOCKERHUB_USER} --password ${DOCKERHUB_PASSWORD} push from-args --platforms ${MANIFEST_PLATFORMS} --template ${DOCKERHUB_ORGA}/${DOCKERHUB_IMAGE_NAME}:ARCH --target ${DOCKERHUB_ORGA}/${DOCKERHUB_IMAGE_NAME}:latest
+
 
 publish-multi-arch-manifest:
   extends: publish-amd64-manifest
