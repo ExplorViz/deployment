@@ -19,10 +19,10 @@ processors:
   attributes:
     actions:
       - key: landscape_token
-        value: ffb31fc2-24d3-4718-b72b-6f054055b69e # Inserting your own landscape token!!!
+        value: ${env:LANDSCAPE_TOKEN}
         action: insert
       - key: token_secret
-        value: 0CgsRRsidIsv3Yw3 # Inserting your own token secret!!!
+        value: ${env:TOKEN_SECRET} 
         action: insert
       - key: application_name
         value: "mongo-express-example"

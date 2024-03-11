@@ -4,7 +4,6 @@ services:
 
   mongo:
     image: mongo
-    restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
@@ -15,7 +14,6 @@ services:
 
   mongo-express:
     build: .
-    restart: always
     ports:
       - ${EXTERNAL_PORT}:8081
     environment:
@@ -28,22 +26,27 @@ services:
       - explorviz
 
 
-  # # Zipkin
-  # zipkin-all-in-one:
-  #   image: openzipkin/zipkin:latest
-  #   hostname: zipkin
-  #   ports:
-  #     - "9411:9411"
-  #   environment: 
-  #     - JAVA_OPTS=-Dlogging.level.zipkin=DEBUG -Dlogging.level.zipkin2=DEBUG
-  #   networks:
-  #     - explorviz
+  # Zipkin
+  zipkin-all-in-one:
+    image: openzipkin/zipkin:latest
+    hostname: zipkin
+    ports:
+      - "9411:9411"
+    environment: 
+      - JAVA_OPTS=-Dlogging.level.zipkin=DEBUG -Dlogging.level.zipkin2=DEBUG
+    networks:
+      - explorviz
 
       
   # Collector
   collector:
     image: otel/opentelemetry-collector:latest
     hostname: node-collector
+    env_file:
+      - ./.env
+    environment:
+      - LANDSCAPE_TOKEN=${LANDSCAPE_TOKEN}
+      - TOKEN_SECRET=${TOKEN_SECRET}
     command: ["--config=/conf/collector-config.yaml"]
     volumes:
       - ./collector-config.yaml:/conf/collector-config.yaml
