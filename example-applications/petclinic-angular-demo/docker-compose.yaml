@@ -61,8 +61,10 @@ services:
   # Collector
   collector:
     image: otel/opentelemetry-collector:latest
-    hostname: node-collector      # eigene Benennung 
-#    image: otel/opentelemetry-collector-contrib:latest
+    hostname: collector 
+    environment:
+      - LANDSCAPE_TOKEN_ID=${LANDSCAPE_TOKEN_ID}
+      - LANDSCAPE_TOKEN_SECRET=${LANDSCAPE_TOKEN_SECRET}
     command: ["--config=/conf/collector-config.yaml"]
     volumes:
       - ./collector-config.yaml:/conf/collector-config.yaml

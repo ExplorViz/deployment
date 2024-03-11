@@ -19,10 +19,10 @@ processors:
   attributes:
     actions:
       - key: landscape_token
-        value: 8852338b-ea7b-4b8b-bbc0-ac1061435a4a #${LANDSCAPE_TOKEN_ID}
+        value: ${env:LANDSCAPE_TOKEN_ID}
         action: insert
       - key: token_secret
-        value: PiBlsbKQ8vzOzFoj # ${LANDSCAPE_TOKEN_SECRET}
+        value: ${env:LANDSCAPE_TOKEN_SECRET}
         action: insert
       - key: application_name
         value: "spring-petclinic-angular"
@@ -41,7 +41,10 @@ exporters:
     tls:
       insecure: true
     #endpoint: otelcol:4317
+  # zipkin:
+  #   endpoint: http://zipkin:9411/api/v2/spans
   #debug:
+
   #prometheus:
    # endpoint: "0.0.0.0:9464"
   
@@ -61,11 +64,3 @@ service:
       receivers: [otlp]
       processors: [batch, attributes]
       exporters: [otlp]
-    # metrics:
-    #   receivers: [otlp]
-    #   processors: [batch, attributes]
-    #   exporters: [otlp]
-    # logs:
-    #   receivers: [otlp]
-    #   processors: [batch]
-    #   exporters: [otlp]
