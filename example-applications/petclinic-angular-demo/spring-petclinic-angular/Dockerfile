@@ -18,6 +18,7 @@ RUN echo "registry = \"$NPM_REGISTRY\"" > /workspace/.npmrc                     
 
 FROM $DOCKER_HUB/library/nginx:$NGINX_VERSION AS runtime
 
+ENV OTEL_SERVICE_NAME="Petclinic-Angular"
 
 COPY  --from=build /workspace/dist/ /usr/share/nginx/html/
 

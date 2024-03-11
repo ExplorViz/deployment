@@ -7,6 +7,9 @@ const { SimpleSpanProcessor } = require('@opentelemetry/sdk-trace-base');
 const { registerInstrumentations } = require('@opentelemetry/instrumentation');
 const { ZoneContextManager } = require('@opentelemetry/context-zone');
 const { B3Propagator } = require('@opentelemetry/propagator-b3');
+const { Resource } = require('@opentelemetry/resources');
+const { SemanticResourceAttributes } = require('@opentelemetry/semantic-conventions');
+
 
 
 const exporter = new OTLPTraceExporter({
@@ -16,6 +19,10 @@ const exporter = new OTLPTraceExporter({
   headers: {},
 });
 
+const resource = new Resource({
+  [SemanticResourceAttributes.SERVICE_NAME]: "Petclinic-Angular"
+})
+
 class CustomSpanProcessor extends SimpleSpanProcessor {
   process(span) {
     console.log(new Error().stack);
@@ -24,7 +31,9 @@ class CustomSpanProcessor extends SimpleSpanProcessor {
   }
 }
 
-const provider = new WebTracerProvider();
+const provider = new WebTracerProvider({
+  resource: resource,
+});
 provider.addSpanProcessor(new CustomSpanProcessor(new OTLPTraceExporter())); 
 provider.register({
   contextManager: new ZoneContextManager(),
@@ -35,7 +44,7 @@ registerInstrumentations({
   tracerProvider: provider,
   instrumentations: [
     getWebAutoInstrumentations({
-      // load custom configuration for xml-http-request instrumentation
+      //load custom configuration for xml-http-request instrumentation
       // '@opentelemetry/instrumentation-xml-http-request': {
       //   propagateTraceHeaderCorsUrls: /.*/,
       //   clearTimingResources: true,
@@ -55,33 +64,4 @@ registerInstrumentations({
     }),
   ],
 });
-
-
-
-
-
-// const sdk = new NodeSDK({
-//   traceExporter: new OTLPTraceExporter({
-//     // optional - default url is http://localhost:4318/v1/traces
-//     url: "http://otel-collector:4318/v1/traces",
-//     // optional - collection of custom headers to be sent with each request, empty by default
-//     headers: {},
-//   }),
-//   metricReader: new PeriodicExportingMetricReader({
-//     exporter: new ConsoleMetricExporter(),
-//   }),
-//   instrumentations: [getNodeAutoInstrumentations()],
-// });
-
-// // initialize the SDK and register with the OpenTelemetry API
-// // this enables the API to record telemetry
-// sdk.start();
-
-// // gracefully shut down the SDK on process exit
-// process.on('SIGTERM', () => {
-//   sdk.shutdown()
-//     .then(() => console.log('Tracing terminated'))
-//     .catch((error) => console.log('Error terminating tracing', error))
-//     .finally(() => process.exit(0));
-// });
 
