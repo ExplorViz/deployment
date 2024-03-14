@@ -9,7 +9,7 @@ run-pre-commit:
   stage: test
   image: explorviz/pre-commit:latest
   tags:
-    - exec-docker
+    - node1
   script:
     - pre-commit run --all-files --config .pre-commit-config.yaml
 
