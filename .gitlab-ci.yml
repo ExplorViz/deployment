@@ -9,6 +9,14 @@ trigger-multi-project-pipeline:
     forward:
       pipeline_variables: true
 
+trigger-metrics-pipeline:
+  stage: prepare
+  trigger:
+    project: ExplorViz/code/metrics-service
+    forward:
+      pipeline_variables: true
+
+
 job1:
   stage: prepare
   tags:
