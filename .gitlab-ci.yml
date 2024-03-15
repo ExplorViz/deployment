@@ -8,8 +8,6 @@ job1:
     - exec-docker
   script:
     - echo "Preparing with MULTI_ARCH = $MULTI_ARCH"
-  rules:
-    - if: $MULTI_ARCH
 
 job2:
   stage: deploy
