@@ -7,15 +7,9 @@ job1:
   tags:
     - exec-docker
   script:
-    - echo "Preparing with VARIABLE1 = $VARIABLE1"
-    - touch prepared_file.txt
-    - echo "Preparation complete" > prepared_file.txt
-  artifacts:
-    paths:
-      - prepared_file.txt
+    - echo "Preparing with MULTI_ARCH = $MULTI_ARCH"
   rules:
-    - if: $MULTI-ARCH
-      when: never
+    - if: $MULTI_ARCH
 
 job2:
   stage: deploy
@@ -23,6 +17,6 @@ job2:
     - exec-docker
   script:
     - echo "Deploying with VARIABLE2 = $VARIABLE2"
-    - if [ -f prepared_file.txt ]; then echo "Found prepared file."; else echo "Prepared file not found."; fi
   rules:
-    - if: $MULTI-ARCH
+    - if: $MULTI_ARCH
+      when: never
