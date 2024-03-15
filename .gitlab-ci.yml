@@ -2,6 +2,13 @@ stages:
   - prepare
   - deploy
 
+trigger-multi-project-pipeline:
+  stage: prepare
+  trigger:
+    project: ExplorViz/code/collaboration-service-js
+    forward:
+      yaml_variables: true
+
 job1:
   stage: prepare
   tags:
