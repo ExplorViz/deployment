@@ -17,5 +17,5 @@ job2:
     - exec-docker
   script:
     - echo "Deploying with VARIABLE2 = $VARIABLE2"
-  dependencies:
+  needs:
     - job1
