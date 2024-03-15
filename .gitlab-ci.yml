@@ -13,10 +13,10 @@ job1:
 
 job2:
   stage: deploy
-  allow_failure: true
   tags:
     - exec-docker
   script:
     - echo "Deploying with VARIABLE2 = $VARIABLE2"
   needs:
     - job1
+  allow_failure: true
