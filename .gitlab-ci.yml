@@ -18,6 +18,6 @@ job2:
   script:
     - echo "Deploying with VARIABLE2 = $VARIABLE2"
   rules:
-    - when: on_success
     - if: $MULTI_ARCH
       when: never
+    - when: on_success
