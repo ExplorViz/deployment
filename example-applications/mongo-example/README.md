@@ -5,7 +5,7 @@ You need to have Docker and Docker-compose installed.
 # Mongo-Example
 
 The following provides the README.md of the MongoDB admin panel software:
-    [Link:](https://github.com/mongo-express/mongo-express/blob/master/README.md)
+    [Link](https://github.com/mongo-express/mongo-express/blob/master/README.md)
 
 There all the installation hints what you need to build the software completely from scratch.
 
