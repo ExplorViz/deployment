@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
 
+  # Mongo database
   mongo:
     image: mongo
     environment:
@@ -12,6 +13,7 @@ services:
     networks:
       - explorviz
 
+  # Mongo application
   mongo-express:
     build: .
     ports:
@@ -24,26 +26,13 @@ services:
       ME_CONFIG_MONGODB_SERVE: mongo
     networks:
       - explorviz
-
-
-  # # Zipkin
-  # zipkin-all-in-one:
-  #   image: openzipkin/zipkin:latest
-  #   hostname: zipkin
-  #   ports:
-  #     - "9411:9411"
-  #   environment: 
-  #     - JAVA_OPTS=-Dlogging.level.zipkin=DEBUG -Dlogging.level.zipkin2=DEBUG
-  #   networks:
-  #     - explorviz
-
       
   # Collector
   collector:
     image: otel/opentelemetry-collector:latest
     hostname: node-collector
     env_file:
-      - ./.env
+      - ./.env      # required to use the environment variables
     environment:
       - LANDSCAPE_TOKEN=${LANDSCAPE_TOKEN}
       - TOKEN_SECRET=${TOKEN_SECRET}
@@ -51,29 +40,11 @@ services:
     volumes:
       - ./collector-config.yaml:/conf/collector-config.yaml
     ports:
-      - "9464:9464"
-      - "4317:4317"
-      - "4318:4318"
+      - "4317:4317"   # the port for gRPC transports, which we do not use, but maybe necessary in the future
+      - "4318:4318"   # the port for HTTP transports
       
     networks:
       - explorviz
-    # depends_on:
-    #   - zipkin-all-in-one
-    #   - prometheus
-    
-
-
-  # # Prometheus
-  # prometheus:
-  #   image: prom/prometheus:latest
-  #   hostname: prometheus
-  #   volumes:
-  #     - ./prometheus.yml:/etc/prometheus/prometheus.yml
-  #   ports:
-  #     - "9090:9090"
-  #   networks:
-  #     - explorviz
-
 
 volumes:
   mongo_data:

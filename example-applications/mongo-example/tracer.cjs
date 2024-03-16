@@ -2,24 +2,20 @@
 const { NodeSDK } = require("@opentelemetry/sdk-node");
 const { OTLPTraceExporter } = require("@opentelemetry/exporter-trace-otlp-proto");
 const { getNodeAutoInstrumentations } = require("@opentelemetry/auto-instrumentations-node");
-const { PeriodicExportingMetricReader, ConsoleMetricExporter } = require("@opentelemetry/sdk-metrics");
-// const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-http');
+const { PeriodicExportingMetricReader } = require("@opentelemetry/sdk-metrics");
 const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-proto');
 
 const sdk = new NodeSDK({
   traceExporter: new OTLPTraceExporter({
-    // optional - default url is http://localhost:4318/v1/traces
-    url: "http://node-collector:4318/v1/traces",
-    // optional - collection of custom headers to be sent with each request, empty by default
-    headers: {},
+    url: "http://node-collector:4318/v1/traces",    // send to trace HTTP/Protobuf receiver of collector
   }),
-  metricReader: new PeriodicExportingMetricReader({
+
+  metricReader: new PeriodicExportingMetricReader({   // exporting metrics in periods not constantly
     exporter: new OTLPMetricExporter({
-      url: "http://node-collector:4318/v1/metrics",
-      headers: {},
+      url: "http://node-collector:4318/v1/metrics", // send to metric HTTP/Protobuf receiver of collector
     }),
   }),
-  instrumentations: [getNodeAutoInstrumentations()],
+  instrumentations: [getNodeAutoInstrumentations()],  // configured type of instrumentation
 });
 
 // initialize the SDK and register with the OpenTelemetry API
@@ -33,5 +29,3 @@ process.on('SIGTERM', () => {
     .catch((error) => console.log('Error terminating tracing', error))
     .finally(() => process.exit(0));
 });
-
-

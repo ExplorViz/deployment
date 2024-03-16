@@ -42,5 +42,3 @@ RUN apk -U add --no-cache \
 EXPOSE 8081
 
 CMD ["/sbin/tini", "--", "node", "--require", "./tracer.cjs", "app.js"]
-
-# CMD ["/sbin/tini", "--", "yarn", "start"]
