@@ -13,11 +13,11 @@ const { time } = require("node:console");
 
 const spanApp = createExpressApplication(8083);
 const userApp = createExpressApplication(8084);
-const metricApp = createExpressApplication(8085);
+const metricApp = createExpressApplication(8085); // open port for mocked metric-service
 
 const spanRootUrl = "/v2/landscapes";
 const userRootUrl = "/user/:uid/token";
-const metricRootUrl = "/metrics";
+const metricRootUrl = "/metrics"; // add required suffix to get request
 
 (async () => {
   const user = JSON.parse(await readFile("./user.json"));
@@ -271,13 +271,13 @@ const landscapeMetrics = {
 /**
  * Respond accordingly to the metric request by the frontend. As of now, every metric within the JSON is returned,
  * which means you cannot get metrics from different timestamps other than the one initialized in landscapeMetrics
+ * 
+ * The route is no different to the existing ones, it checks if the landscape token or timestamp exist and are the ones expected
+ * then the JSON are loaded from the demo data and are responded to the request
  */
 metricApp.get(metricRootUrl, async (req, res) => {
   const { landscapeToken, timeStamp } = req.query;
-  console.log(req.query);
   const landscapeConfig = landscapeMetrics[landscapeToken];
-  console.log(landscapeConfig);
-  console.log(landscapeConfig.timestamp.toString());
 
   if (!landscapeConfig || landscapeConfig.timestamp.toString() !== timeStamp) {
     return res.status(404).send("Landscape not found or timestamp mismatch");
