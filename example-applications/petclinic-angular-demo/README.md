@@ -5,10 +5,10 @@ You need to have Docker and Docker-compose installed.
 # Pet Clinic application
 
 The following provides the README.md of the backend:
-    [Link:](https://github.com/spring-petclinic/spring-petclinic-rest/blob/master/readme.md)
+    [Link](https://github.com/spring-petclinic/spring-petclinic-rest/blob/master/readme.md)
 
 The following provides the README.md of the frontend (which can also be found in spring-petclinic-angular/README.md):
-    [Link:](https://github.com/spring-petclinic/spring-petclinic-angular/blob/master/README.md)
+    [Link](https://github.com/spring-petclinic/spring-petclinic-angular/blob/master/README.md)
 
 There all the installation hints what you need to build the software completely from scratch.
 
