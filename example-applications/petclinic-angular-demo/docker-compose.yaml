@@ -19,12 +19,6 @@ services:
     volumes:
       - agent-vol:/agent
       - ./inspectit.yml:/agent/inspectit.yml
-    # entrypoint:
-    #   [
-    #     "sh",
-    #     "-c",
-    #     'java -Dinspectit.config.file-based.path="/agent/" -javaagent:/agent/inspectit-ocelot-agent.jar -jar /app.jar',
-    #   ]
     command:
       [
         "sh",
@@ -48,7 +42,7 @@ services:
       args:
         NODE_VERSION: 18.10.0
     ports:
-      - ${EXTERNAL_PORT}:8080 #${EXTERNAL_PORT} = 18080
+      - ${EXTERNAL_PORT}:8080 
     environment:
       - LANDSCAPE_TOKEN_ID=${LANDSCAPE_TOKEN_ID}
       - LANDSCAPE_TOKEN_SECRET=${LANDSCAPE_TOKEN_SECRET}
