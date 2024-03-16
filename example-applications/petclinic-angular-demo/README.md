@@ -1,40 +1,34 @@
+# Requirements for deploying the example application
 
+You need to have Docker and Docker-compose installed. 
 
+# Pet Clinic application
 
-## Automatic instrumentation setup
+The following provides the README.md of the backend:
+    [Link:](https://github.com/spring-petclinic/spring-petclinic-rest/blob/master/readme.md)
 
-First download all necessary packages:
+The following provides the README.md of the frontend (which can also be found in spring-petclinic-angular/README.md):
+    [Link:](https://github.com/spring-petclinic/spring-petclinic-angular/blob/master/README.md)
 
-npm install express mongoose body-parser
-npm install @opentelemetry/api @opentelemetry/sdk-node @opentelemetry/auto-instrumentations-node
-npm install @opentelemetry/sdk-node
-npm install @opentelemetry/auto-instrumentations-node
-npm install @opentelemetry/node
-npm install @opentelemetry/tracing
-npm install @opentelemetry/exporter-collector
-npm install @opentelemetry/exporter-metrics-otlp-proto
+There all the installation hints what you need to build the software completely from scratch.
 
-npm install @opentelemetry/exporter-collector //depreciated
+To build and run the example use following command:
 
-npm install @opentelemetry/sdk-trace-web
-npm install @opentelemetry/auto-instrumentations-web
-npm install @opentelemetry/context-zone
+    docker-compose up --build -d
 
+If a custom .env should be used, the following command builds and runs the example:
 
-# Connect to ExplorViz
+    docker-compose --env-file .env-custom up --build -d
 
-Insert the ID and Secret 
+If you plan to stop everything and delete the created volumes, use this command:
 
+    docker-compose down -v or docker-compose --env-file .env-custom down -v
 
-# Run the Application 
+# Connect application to ExplorViz
 
-To use this application in a docker environment, first you need to build this application:
+Insert the created landscape token and token secret in  new created, but not versioned .env-custom as new values for the variables LANDSCAPE_TOKEN and TOKEN_SECRET. The blueprint of .env-custom is the provided .env file.
 
-docker-compose up --build -d
-
-docker-compose --env-file .env-custom up --build -d
-
-docker-compose --env-file .env-custom down -v
+The traces are sent to ExplorViz's collector, which must run within the Docker network "explorviz".
 
 
 
