@@ -7,7 +7,6 @@ RUN apt update && apt install -y git && rm -rf /var/lib/apt/lists/*
 
 # Clone the repository
 RUN git clone https://github.com/spring-petclinic/spring-petclinic-rest.git
-    #cd spring-petclinic-rest && git checkout master
 
 # Change directory
 WORKDIR /spring-petclinic-rest

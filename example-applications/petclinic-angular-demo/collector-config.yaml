@@ -4,17 +4,12 @@ receivers:
     protocols:
       grpc:
       http:
-        cors:
-         allowed_origins:
-          - http://*
-          - https://*
 
 processors:
   batch:
     timeout: 5s
-    #send_batch_size: 200
   # The batch processor combines multiple incoming telemetry data items into batches.
-  # It waits up to 5 seconds or until 200 items are in a batch before sending it further.
+  # It waits up to 5 seconds before sending it further.
   
   attributes:
     actions:
@@ -37,16 +32,9 @@ processors:
 
 exporters:
   otlp:
-    endpoint: "http://otel-collector:55678"      #otelcol:4317
+    endpoint: "http://otel-collector:55678"      
     tls:
       insecure: true
-    #endpoint: otelcol:4317
-  # zipkin:
-  #   endpoint: http://zipkin:9411/api/v2/spans
-  #debug:
-
-  #prometheus:
-   # endpoint: "0.0.0.0:9464"
   
 
 extensions:
