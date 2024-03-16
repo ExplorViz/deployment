@@ -263,7 +263,7 @@ async function createLandscapeSample({
 const landscapeMetrics = {
   "0ad5c1cd-e2de-4404-9cc8-6da758d82010": {
     filePrefix: "mongo-express",
-    timestamp: 1708675770000, 
+    timestamp: 1708675770000,
   },
   // for other landscape with metrics
 };
