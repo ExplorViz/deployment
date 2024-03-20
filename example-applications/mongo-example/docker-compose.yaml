@@ -26,6 +26,8 @@ services:
       ME_CONFIG_MONGODB_SERVE: mongo
     networks:
       - explorviz
+    depends_on:
+      - mongo
       
   # Collector
   collector:
