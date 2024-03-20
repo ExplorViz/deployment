@@ -15,7 +15,11 @@ import session from 'express-session';
 const pkg = JSON.parse(fs.readFileSync('./package.json'));
 
 const app = express();
-app.use(session({ secret: 'somevalue' }));
+app.use(session({ 
+  secret: 'somevalue', 
+  resave: false,
+  saveUninitialized: false 
+}));
 
 let defaultPort = 80;
 let server = app;
