@@ -308,8 +308,8 @@ services:
         condition: service_completed_successfully
       mongo-code:
         condition: service_started
-    #ports:
-    #- ${USER_PORT}:8080
+    ports:
+      - ${CODE_GRPC_PORT}:8080
     environment:
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-code:27017
       - EXPLORVIZ_LOG_LVL=DEBUG
