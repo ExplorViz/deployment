@@ -5,7 +5,7 @@
 version: "3.5"
 services:
   ocelot-agent:
-    image: inspectit/inspectit-ocelot-agent:2.1.1
+    image: inspectit/inspectit-ocelot-agent:2.6.4
     container_name: ocelot-agent-petclinic
     networks:
       - explorviz
@@ -24,6 +24,7 @@ services:
     environment:
       - LANDSCAPE_TOKEN_ID=${LANDSCAPE_TOKEN_ID}
       - LANDSCAPE_TOKEN_SECRET=${LANDSCAPE_TOKEN_SECRET}
+      - GIT_COMMIT_CHECKSUM=${GIT_COMMIT_CHECKSUM}
     volumes:
       - agent-vol:/agent
       - ./inspectit.yml:/agent/inspectit.yml
