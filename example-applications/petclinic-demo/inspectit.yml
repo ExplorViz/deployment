@@ -7,9 +7,21 @@ inspectit:
       application_name: "petclinic"
       application_instance_id: 0
       application_language: "java"
+      host_address: 0.0.0.0
+      host: default-node
 
   tracing:
-    add-common-tags: ALWAYS
+    # Common tags include real values for 'host' and 'host_address'.
+    # They are provided by InspectIt Ocelot:
+    # https://inspectit.github.io/inspectit-ocelot/docs/metrics/common-tags
+    # This however impedes the mapping to static code analysis data,
+    # since these attributes are among others used for that.
+    # If your host_address and host(name) do not change (no dev env)
+    # then you can use the real values and include them in the configuration
+    # of the ExplorViz code-agent.
+
+    #add-common-tags: ALWAYS
+    add-common-tags: NEVER
 
   metrics:
     enabled: false
