@@ -156,6 +156,19 @@ services:
     expose:
       - 6379
 
+  ## Code-Service ##
+
+  mongo-code:
+    image: mongo:6.0
+    hostname: code-mongo
+    profiles: ["env"]
+    ports:
+      - ${MONGO_CODE_SERV_PORT}:27017
+    volumes:
+      - code-mongo-data:/data/db
+      - code-mongo-configdb:/data/configdb
+
+
   #endregion Environment
 
   #region monitoring

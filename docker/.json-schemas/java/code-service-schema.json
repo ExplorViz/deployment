@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "properties": {
+    "image": { "const": "explorviz/code-service-jvm:${CODE_SERVICE_IMAGE_TAG}" },
+    "ports": {
+      "type": "array",
+      "items": [{ "enum": ["${CODE_GRPC_PORT}:8080"] }]
+    },
+    "environment": {
+      "type": "array",
+      "allOf": [
+        {
+          "contains": {
+            "enum": [
+              "QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-code:${MONGO_CODE_SERV_PORT}"
+            ]
+          }
+        },
+        {
+          "contains": {
+            "enum": ["EXPLORVIZ_LOG_LVL=DEBUG"]
+          }
+        }
+      ]
+    }
+  },
+  "required": ["image", "ports", "environment"]
+}
