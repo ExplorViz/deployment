@@ -6,6 +6,14 @@ inspectit:
       application_name: "petclinic"
       application_instance_id: 0
       application_language: "java"
+      k8s.container.name: "petclinic"
+      k8s.deployment.name: "petclinic"
+      k8s.namespace.name: default
+      k8s.node.name: node1
+      k8s.pod.name: petclinic2
+      k8s.replicaset.name: "petclinicreplicaset"
+      service.instance.id: "petclinicinstance1"
+      service.version: latest
 
   tracing:
     add-common-tags: ALWAYS
@@ -40,13 +48,10 @@ inspectit:
         value: "new StringBuilder(_class.getName()).append('.').append(_methodName).toString()"
 
   logging:
-    debug: true
+    debug: false
     trace: false
 
   exporters:
     tracing:
       service-name: "Ocelot Otel Exporter"
-      otlp:
-        enabled: true
-        endpoint: "http://otel-collector:55678"
-        protocol: grpc
+      logging:
