@@ -111,7 +111,7 @@ services:
       - HEAP_NEWSIZE=200M
     volumes:
       - ./configurations/cassandra/custom-entrypoint.sh:/usr/local/bin/custom-entrypoint.sh
-      - cassandra:/var/lib/cassandra
+      - ./cassandra:/var/lib/cassandra
     entrypoint: ["/usr/local/bin/custom-entrypoint.sh"]
     healthcheck:
       test:

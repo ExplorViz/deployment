@@ -4,6 +4,13 @@ receivers:
       grpc:
         endpoint: :55678
 
+processors:
+  resource:
+    attributes:
+      - key: a
+        from_attribute: k8s.pod.name
+        action: update
+
 exporters:
   kafka:
     protocol_version: 2.0.0
@@ -25,5 +32,8 @@ service:
     traces:
       receivers:
         - otlp
+      processors:
+        - resource
       exporters:
         - kafka
+        - logging
