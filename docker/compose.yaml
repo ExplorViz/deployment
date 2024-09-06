@@ -30,14 +30,15 @@ services:
     environment:
       - QUARKUS_KAFKA_STREAMS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - EXPLORVIZ_LOG_LVL=DEBUG
-      - EXPLORVIZ_VALIDATE_TOKEN_EXISTENCE=true
+      - EXPLORVIZ_VALIDATE_TOKEN_EXISTENCE=false
     deploy:
       mode: replicated
       replicas: ${ADAPTER_REPLICAS}
 
   span-service:
     hostname: span-service
-    image: explorviz/span-service-${EXPLORVIZ_JAVA_IMAGE_TYPE}:${SPAN_SERVICE_IMAGE_TAG}
+    #image: explorviz/span-service-jvm:dev # :1387-2e0d653e
+    image: explorviz/span-service-jvm:mr-18-jvm
     env_file:
        - path: ./.env
        - path: ./.env-custom
