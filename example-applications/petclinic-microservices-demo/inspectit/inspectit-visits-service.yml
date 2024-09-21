@@ -13,6 +13,10 @@ inspectit:
       application_name: "petclinic-visits-service"
       application_instance_id: 0
       application_language: "java"
+      # k8s.deployment.name: "petclinic-visits-service"
+      # k8s.namespace.name: default
+      # k8s.node.name: node3
+      # k8s.pod.name: petclinic-visits-service
 
   tracing:
     add-common-tags: ALWAYS
@@ -66,8 +70,11 @@ inspectit:
 
   exporters:
     tracing:
-      service-name: "Ocelot Otel Exporter"
+      service-name: "Visits Service"
       otlp:
         enabled: true
         endpoint: "http://otel-collector:55678"
         protocol: grpc
+      zipkin:
+        enabled: true 
+        endpoint: http://zipkin:9411/api/v2/spans
