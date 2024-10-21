@@ -23,6 +23,31 @@ const userRootUrl = "/user/:uid/token";
 })();
 
 createLandscapeSample({
+  filePrefix: "tracegen-small-world-low-communication",
+  token: "26844295-7235-4254-a17b-0f7fb49adb0g",
+});
+createLandscapeSample({
+  filePrefix: "tracegen-small-world-high-communication",
+  token: "26844295-7235-4254-a17b-0f7fb49adb0f",
+});
+createLandscapeSample({
+  filePrefix: "tracegen-middle-world-low-communication",
+  token: "26844295-7235-4254-a17b-0f7fb49adb0e",
+});
+createLandscapeSample({
+  filePrefix: "tracegen-middle-world-high-communication",
+  token: "26844295-7235-4254-a17b-0f7fb49adb0d",
+});
+createLandscapeSample({
+  filePrefix: "tracegen-large-world-low-communication",
+  token: "26844295-7235-4254-a17b-0f7fb49adb0c",
+});
+createLandscapeSample({
+  filePrefix: "tracegen-large-world-high-communication",
+  token: "26844295-7235-4254-a17b-0f7fb49adb0b",
+});
+
+createLandscapeSample({
   filePrefix: "plantuml",
   token: "7cd8a9a7-b840-4735-9ef0-2dbbfa01c039",
 });

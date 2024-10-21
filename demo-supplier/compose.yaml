@@ -2,8 +2,8 @@ services:
   ## Demo-Supplier ##
 
   demo-supplier:
-    container_name: explorviz-demo-supplier
-    image: explorviz/demo-supplier:latest
+    container_name: explorviz-demo-supplier-extended
+    image: demo-supplier/extendeddataset
     networks:
       - explorviz
     ports:
@@ -13,3 +13,4 @@ services:
 networks:
   explorviz:
     name: explorviz
+    external: true
