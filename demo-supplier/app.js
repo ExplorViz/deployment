@@ -46,6 +46,30 @@ createLandscapeSample({
   filePrefix: "tracegen-large-world-high-communication",
   token: "26844295-7235-4254-a17b-0f7fb49adb0b",
 });
+createLandscapeSample({
+  filePrefix: "tracegen-extralarge-world-low-communication",
+  token: "26844295-7235-4254-a17b-0f7fb49adbaa",
+});
+createLandscapeSample({
+  filePrefix: "tracegen-extralarge-world-high-communication",
+  token: "26844295-7235-4254-a17b-0f7fb49adbab",
+});
+createLandscapeSample({
+  filePrefix: "tracegen-xxl-world-low-communication",
+  token: "26844295-7235-4254-a17b-0f7fb49adbac",
+});
+createLandscapeSample({
+  filePrefix: "tracegen-xxl-world-high-communication",
+  token: "26844295-7235-4254-a17b-0f7fb49adbad",
+});
+createLandscapeSample({
+  filePrefix: "tracegen-xxxl-world-low-communication",
+  token: "26844295-7235-4254-a17b-0f7fb49adbae",
+});
+createLandscapeSample({
+  filePrefix: "tracegen-xxxl-world-high-communication",
+  token: "26844295-7235-4254-a17b-0f7fb49adbaf",
+});
 
 createLandscapeSample({
   filePrefix: "plantuml",
