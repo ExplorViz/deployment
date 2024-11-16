@@ -92,7 +92,7 @@ services:
       - INIT_TOKEN_VALUE=mytokenvalue
       - INIT_TOKEN_SECRET=mytokensecret
       - MP_MESSAGING_OUTGOING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
-      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-user:${MONGO_USER_SERV_PORT}
+      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://${LOCALHOST_ALIAS}:${MONGO_USER_SERV_PORT}
       - EXPLORVIZ_LOG_LVL=DEBUG
 
   code-service:
@@ -110,5 +110,5 @@ services:
     ports:
       - ${CODE_GRPC_PORT}:8080
     environment:
-      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-code:${MONGO_CODE_SERV_PORT}
+      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://${LOCALHOST_ALIAS}:${MONGO_CODE_SERV_PORT}
       - EXPLORVIZ_LOG_LVL=DEBUG
