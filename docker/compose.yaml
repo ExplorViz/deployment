@@ -69,6 +69,8 @@ services:
 
   user-service:
     hostname: user-service
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     image: explorviz/user-service-${EXPLORVIZ_JAVA_IMAGE_TYPE}:${USER_SERVICE_IMAGE_TAG}
     env_file:
        - path: ./.env
@@ -97,6 +99,8 @@ services:
 
   code-service:
     hostname: code-service
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     image: explorviz/code-service-jvm:${CODE_SERVICE_IMAGE_TAG}
     env_file:
        - path: ./.env
