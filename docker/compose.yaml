@@ -87,6 +87,7 @@ services:
     #- ${USER_PORT}:8080
     environment:
       - QUARKUS_OIDC_ENABLED=false
+      - QUARKUS_HTTP_CORS_ORIGINS=${EXPLORVIZ_USER_SERVICE_CORS_ORIGINS}
       - INIT_TOKEN_ENABLED=true
       - INIT_TOKEN_VALUE=mytokenvalue
       - INIT_TOKEN_SECRET=mytokensecret
