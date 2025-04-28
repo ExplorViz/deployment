@@ -15,22 +15,17 @@
       "allOf": [
         {
           "contains": {
-            "enum": ["LANDSCAPE_URL=http://${SPAN_HOSTNAME}:${SPAN_PORT}"]
+            "enum": ["VITE_SPAN_SERV_URL=http://${SPAN_HOSTNAME}:${SPAN_PORT}"]
           }
         },
         {
           "contains": {
-            "enum": ["TRACE_URL=http://${SPAN_HOSTNAME}:${SPAN_PORT}"]
+            "enum": ["VITE_USER_SERV_URL=http://${USER_HOSTNAME}:${USER_PORT}"]
           }
         },
         {
           "contains": {
-            "enum": ["USER_URL=http://${USER_HOSTNAME}:${USER_PORT}"]
-          }
-        },
-        {
-          "contains": {
-            "enum": ["COLLABORATION_URL=http://${COLLABORATION_HOSTNAME}:${COLLABORATION_PORT}"]
+            "enum": ["VITE_COLLAB_SERV_URL=http://${COLLABORATION_HOSTNAME}:${COLLABORATION_PORT}"]
           }
         },
         {
@@ -41,21 +36,6 @@
         {
           "contains": {
             "enum": ["FRONTEND_HOST_URL=http://${FRONTEND_HOST_NAME}:${FRONTEND_PORT}"]
-          }
-        },
-        {
-          "contains": {
-            "enum": ["AUTH0_LOGO_URL=${AUTH0_LOGO_URL}"]
-          }
-        },
-        {
-          "contains": {
-            "enum": ["AUTH0_CALLBACK_URL=${AUTH0_CALLBACK_URL}"]
-          }
-        },
-        {
-          "contains": {
-            "enum": ["AUTH0_LOGOUT_URL=${AUTH0_LOGOUT_URL}"]
           }
         }
       ]
