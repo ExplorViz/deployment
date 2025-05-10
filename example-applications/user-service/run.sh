@@ -1,0 +1,1 @@
+java -Dinspectit.config.file-based.path="/Users/mhansen/Documents/ExplorViz/deployment/example-applications/user-service" -javaagent:"inspectit-ocelot-agent-2.6.9.jar" -jar user-service.jar
