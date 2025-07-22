@@ -7,15 +7,16 @@
 # or start with `EXPLORVIZ_JAVA_IMAGE_TYPE=native docker compose up -d`
 
 # Using custom .env file, e.g., `docker compose --env-file .env-custom up -d`
-# Specify which environment to use in env-file, i.e. enable self-monitoring
 
 include:
   - ./compose/compose.base.yaml
 
 services:
   span-service:
-    hostname: span-service
     image: explorviz/span-service-${EXPLORVIZ_JAVA_IMAGE_TYPE}:${SPAN_SERVICE_IMAGE_TAG}
+    hostname: span-service
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     profiles: ["backend"]
     env_file:
       - path: ./.env
@@ -48,6 +49,8 @@ services:
 
   user-service:
     hostname: user-service
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     image: explorviz/user-service-${EXPLORVIZ_JAVA_IMAGE_TYPE}:${USER_SERVICE_IMAGE_TAG}
     profiles: ["backend"]
     env_file:
@@ -71,5 +74,26 @@ services:
       - INIT_TOKEN_VALUE=mytokenvalue
       - INIT_TOKEN_SECRET=mytokensecret
       - MP_MESSAGING_OUTGOING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
-      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-user:27017
+      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://${LOCALHOST_ALIAS}:${MONGO_USER_SERV_PORT}
+      - EXPLORVIZ_LOG_LVL=DEBUG
+
+  code-service:
+    hostname: code-service
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    profiles: ["backend"]
+    image: explorviz/code-service-jvm:${CODE_SERVICE_IMAGE_TAG}
+    env_file:
+      - path: ./.env
+      - path: ./.env-custom
+        required: false
+    depends_on:
+      init-kafka:
+        condition: service_completed_successfully
+      mongo-code:
+        condition: service_started
+    ports:
+      - ${CODE_GRPC_PORT}:8080
+    environment:
+      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://${LOCALHOST_ALIAS}:${MONGO_CODE_SERV_PORT}
       - EXPLORVIZ_LOG_LVL=DEBUG

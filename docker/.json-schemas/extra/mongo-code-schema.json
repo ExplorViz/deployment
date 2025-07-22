@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "properties": {
+    "image": { "const": "mongo:6.0" },
+    "container_name": { "const": "code-mongo" },
+    "ports": {
+      "type": "array",
+      "items": [{ "enum": ["${MONGO_CODE_SERV_PORT}:27017"] }]
+    },
+    "volumes": {
+      "type": "array",
+      "allOf": [
+        {
+          "contains": {
+            "enum": ["code-mongo-data:/data/db"]
+          }
+        },
+        {
+          "contains": {
+            "enum": ["code-mongo-configdb:/data/configdb"]
+          }
+        }
+      ]
+    }
+  },
+  "required": ["image", "ports", "volumes"]
+}
