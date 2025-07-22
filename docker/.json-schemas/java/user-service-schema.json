@@ -27,16 +27,12 @@
         },
         {
           "contains": {
-            "enum": [
-              "MP_MESSAGING_OUTGOING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081"
-            ]
+            "enum": ["MP_MESSAGING_OUTGOING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081"]
           }
         },
         {
           "contains": {
-            "enum": [
-              "QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-user:27017"
-            ]
+            "enum": ["QUARKUS_MONGODB_CONNECTION_STRING=mongodb://${LOCALHOST_ALIAS}:${MONGO_USER_SERV_PORT}"]
           }
         },
         {

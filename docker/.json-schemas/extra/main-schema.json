@@ -26,6 +26,9 @@
         },
         "mongo-user": {
           "$ref": "mongo-user-schema.json"
+        },
+        "mongo-code": {
+          "$ref": "mongo-code-schema.json"
         }
       },
       "required": [
@@ -34,7 +37,8 @@
         "schema-registry",
         "otel-collector",
         "cassandra",
-        "mongo-user"
+        "mongo-user",
+        "mongo-code"
       ]
     },
     "volumes": {
@@ -81,6 +85,18 @@
           },
           "required": ["name"]
         },
+        "code-mongo-data": {
+          "properties": {
+            "name": { "const": "explorviz-mongo-code-data" }
+          },
+          "required": ["name"]
+        },
+        "code-mongo-configdb": {
+          "properties": {
+            "name": { "const": "explorviz-mongo-code-config" }
+          },
+          "required": ["name"]
+        },
         "cassandra": {
           "properties": {
             "name": { "const": "explorviz-cassandra" }
@@ -96,6 +112,8 @@
         "schema-registry",
         "user-mongo-data",
         "user-mongo-configdb",
+        "code-mongo-data",
+        "code-mongo-configdb",
         "cassandra"
       ]
     },

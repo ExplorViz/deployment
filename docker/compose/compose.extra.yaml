@@ -143,6 +143,18 @@ services:
     expose:
       - 6379
 
+  ## Code-Service ##
+
+  mongo-code:
+    image: mongo:6.0
+    hostname: code-mongo
+    profiles: ["env"]
+    ports:
+      - ${MONGO_CODE_SERV_PORT}:27017
+    volumes:
+      - code-mongo-data:/data/db
+      - code-mongo-configdb:/data/configdb
+
   #endregion Environment
 
   #region generator
@@ -231,6 +243,10 @@ volumes:
     name: explorviz-mongo-user-data
   user-mongo-configdb:
     name: explorviz-mongo-user-config
+  code-mongo-data:
+    name: explorviz-mongo-code-data
+  code-mongo-configdb:
+    name: explorviz-mongo-code-config
   cassandra:
     name: explorviz-cassandra
   prometheus-data:
