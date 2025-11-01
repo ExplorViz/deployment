@@ -184,6 +184,8 @@ services:
     profiles: ["generator"]
     ports:
       - ${TRACE_GENERATOR_PORT}:8079
+    extra_hosts:
+      - "localhost:host-gateway"
 
   #endregion generator
 
