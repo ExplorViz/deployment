@@ -124,6 +124,26 @@ services:
       cassandra:
         condition: service_healthy
 
+  ## Neo4j
+
+  neo4j:
+    image: neo4j:2025.10.1
+    hostname: neo4j
+    profiles: ["env"]
+    ports:
+      - ${NEO4J_HTTP_PORT}:7474
+      - ${NEO4J_BOLT_PORT}:7687
+    volumes:
+      - neo4j:/data
+    environment:
+      - NEO4J_AUTH=none
+      - NEO4J_dbms_usage__report_enabled=false
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider localhost:7474 || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+
   ## User-Service ##
 
   mongo-user:
@@ -249,6 +269,8 @@ volumes:
     name: explorviz-mongo-code-config
   cassandra:
     name: explorviz-cassandra
+  neo4j:
+    name: neo4j
   prometheus-data:
     name: explorviz-prometheus-data
   grafana-data:
