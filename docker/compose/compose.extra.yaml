@@ -11,7 +11,7 @@ services:
   ## Kafka ##
 
   kafka:
-    image: confluentinc/cp-kafka:7.3.0
+    image: confluentinc/cp-kafka:7.3.15
     hostname: kafka
     profiles: ["env"]
     ports:
@@ -46,7 +46,7 @@ services:
       retries: 10
 
   init-kafka:
-    image: confluentinc/cp-kafka:7.3.0
+    image: confluentinc/cp-kafka:7.3.15
     profiles: ["env", "init-env"]
     depends_on:
       kafka:
@@ -62,7 +62,7 @@ services:
 
   schema-registry:
     hostname: schema-registry
-    image: confluentinc/cp-schema-registry:7.3.0
+    image: confluentinc/cp-schema-registry:7.3.15
     profiles: ["env"]
     depends_on:
       kafka:
