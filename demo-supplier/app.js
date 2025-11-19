@@ -9,7 +9,7 @@ const {
   recursivelyRandomizeAllHashCodesOfPackages,
   copyPackageAndTraces,
   createRandomHex,
-  calculateTenSecondLaterNeighbourTimestamp,
+  calculateTenSecondLaterNeighborTimestamp,
 } = require("./utils.js");
 
 const spanApp = createExpressApplication(8083);
@@ -72,16 +72,17 @@ createLandscapeSample({
   token: "19844195-7235-4254-a17b-0f7fb49adb0a",
   alias: "Petclinic Sample (Random traces and increasing, unrelated timestamps (with random gaps))",
   traceModifier: removeRandomTraces,
-  timestampModifier: (latestTimestandEpochMilli) => {
-    let nextTimestampMilli = calculateTenSecondLaterNeighbourTimestamp(parseInt(latestTimestandEpochMilli));
+  timestampModifier: (latestTimestampEpochNano) => {
+    let nextTimestampNano = calculateTenSecondLaterNeighborTimestamp(parseInt(latestTimestampEpochNano));
     let randomSpanCount = parseInt(Math.random() * (150 - 50) + 50);
 
     if (Math.random() > 0.75) {
-      nextTimestampMilli += 10000;
+      // Add 10 seconds in nanoseconds
+      nextTimestampNano += 10_000_000_000;
     }
 
     return {
-      epochMilli: nextTimestampMilli,
+      epochNano: nextTimestampNano,
       spanCount: randomSpanCount,
     };
   },
@@ -153,12 +154,12 @@ createLandscapeSample({
 
       return previousStructure;
     },
-    timestampModifier: (latestTimestandEpochMilli) => {
-      const nextTimestampMilli = calculateTenSecondLaterNeighbourTimestamp(parseInt(latestTimestandEpochMilli));
+    timestampModifier: (latestTimestampEpochNano) => {
+      const nextTimestampNano = calculateTenSecondLaterNeighborTimestamp(parseInt(latestTimestampEpochNano));
       const randomSpanCount = parseInt(Math.random() * (150 - 50) + 50);
 
       return {
-        epochMilli: nextTimestampMilli,
+        epochNano: nextTimestampNano,
         spanCount: randomSpanCount,
       };
     },
@@ -258,7 +259,7 @@ async function createLandscapeSample({
   } catch {
     timestampData = [
       {
-        epochMilli: 0,
+        epochNano: 0,
         spanCount: 0,
       },
     ];
@@ -298,7 +299,7 @@ async function createLandscapeSample({
   landscapes.push({
     value: landscapeToken,
     ownerId: "github|123456",
-    created: timestampData && timestampData.length > 0 ? timestampData[0].epochMilli : 0,
+    created: timestampData && timestampData.length > 0 ? timestampData[0].epochNano / 1000000 : 0,
     alias: alias ? alias : folder,
     sharedUsersIds: [],
   });
