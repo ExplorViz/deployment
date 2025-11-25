@@ -236,7 +236,7 @@ async function createLandscapeSample({
     console.error("Could not read structure data for:", folder);
   }
 
-  const landscapeToken = token ? token : structureData.landscapeToken;
+  const landscapeToken = token ? token : structureData.landscapeToken ?? folder;
 
   spanApp.get(`${spanRootUrl}/${landscapeToken}/structure`, (req, res) =>
     res.json(structureModifier ? structureModifier(structureData) : structureData)
@@ -270,29 +270,44 @@ async function createLandscapeSample({
     const potentialLatestTimestamp = req.query.newest;
     const commit = req.query.commit;
 
-    let timestampData;
+    let timestampDataToUse = timestampData;
 
     // Use try-catch block since we only provide a mockup for the evolution to the distributed-petclinic by now
     try {
       const commitIdToTimestampsMap = JSON.parse(
         await readFile(`demo-data/petclinic-distributed-commit-timestamps.json`)
       );
-      timestampData = commit ? commitIdToTimestampsMap[commit] ?? [] : commitIdToTimestampsMap["cross-commit"];
+      timestampDataToUse = commit ? commitIdToTimestampsMap[commit] ?? [] : commitIdToTimestampsMap["cross-commit"];
     } catch (error) {
-      timestampData = JSON.parse(await readFile(`demo-data/${folder}/timestamps.json`));
+      try {
+        timestampDataToUse = JSON.parse(await readFile(`demo-data/${folder}/timestamps.json`));
+      } catch (innerError) {
+        // Fall back to the timestampData set earlier (or default if that also failed)
+        timestampDataToUse = timestampData;
+      }
+    }
+
+    // Ensure we have a valid array
+    if (!timestampDataToUse || !Array.isArray(timestampDataToUse)) {
+      timestampDataToUse = [
+        {
+          epochNano: 0,
+          spanCount: 0,
+        },
+      ];
     }
 
     if (potentialLatestTimestamp && timestampModifier) {
       const newTimestamp = timestampModifier(potentialLatestTimestamp);
 
       if (newTimestamp) {
-        timestampData.push(newTimestamp);
+        timestampDataToUse.push(newTimestamp);
         res.json([newTimestamp]);
       } else {
         res.json([]);
       }
     } else {
-      res.json(timestampData);
+      res.json(timestampDataToUse);
     }
   });
 
