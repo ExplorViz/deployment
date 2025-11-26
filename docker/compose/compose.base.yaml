@@ -14,8 +14,8 @@ services:
       - path: ../.env
       - path: ../.env-custom
         required: false
-    #ports:
-    #- ${COLLABORATION_PORT}:4444
+    ports:
+      - ${COLLABORATION_PORT}:4444
     environment:
       - REDIS_HOST=redis-collab
       - REDIS_PORT=6379
