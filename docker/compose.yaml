@@ -93,7 +93,8 @@ services:
       mongo-code:
         condition: service_started
     ports:
-      - ${CODE_GRPC_PORT}:8080
+      - ${CODE_GRPC_PORT}:${CODE_PORT_INTERNAL}
+      - ${CODE_PORT}:${CODE_PORT_INTERNAL}
     environment:
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://${LOCALHOST_ALIAS}:${MONGO_CODE_SERV_PORT}
       - EXPLORVIZ_LOG_LVL=DEBUG
