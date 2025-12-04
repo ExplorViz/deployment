@@ -30,6 +30,7 @@ runs:
       run: |
         ./gradlew clean assemble \
           -Dquarkus.native.enabled=true \
+          -Dquarkus.package.jar.enabled=false \
           -Dquarkus.container-image.push=true \
           -Dquarkus.jib.platforms=${{ inputs.platforms }} \
           -Dquarkus.container-image.name=${{ inputs.image-name }} \
