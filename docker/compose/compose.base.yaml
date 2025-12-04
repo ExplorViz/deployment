@@ -37,6 +37,7 @@ services:
     environment:
       - FRONTEND_HOST_URL=http://${FRONTEND_HOST_NAME}:${FRONTEND_PORT} # Determines base URL for backend services that frontend calls
       - FRONTEND_HOST_NAME=${FRONTEND_HOST_NAME}
+      - CODE_AGENT_URL=http://${CODE_AGENT_HOSTNAME}:${CODE_AGENT_PORT_INTERNAL}
       - CODE_SERV_URL=http://${CODE_HOSTNAME}:${CODE_PORT}
       - LANDSCAPE_URL=http://${SPAN_HOSTNAME}:${SPAN_PORT_INTERNAL}
       - TRACE_URL=http://${SPAN_HOSTNAME}:${SPAN_PORT_INTERNAL}
