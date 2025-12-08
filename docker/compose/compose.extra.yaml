@@ -155,6 +155,25 @@ services:
       - code-mongo-data:/data/db
       - code-mongo-configdb:/data/configdb
 
+  ## Keycloak
+  postgres-keycloak:
+    image: postgres:15
+    container_name: postgres-keycloak
+    profiles: ["env", "backend"]
+    environment:
+      POSTGRES_DB: ${KEYCLOAK_DB_NAME}
+      POSTGRES_USER: ${KEYCLOAK_DB_USER}
+      POSTGRES_PASSWORD: ${KEYCLOAK_DB_PWD}  
+    volumes:
+      - postgres-keycloak-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U keycloak"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - default
+
   #endregion Environment
 
   #region generator
@@ -253,6 +272,8 @@ volumes:
     name: explorviz-prometheus-data
   grafana-data:
     name: explorviz-grafana-data
+  postgres-keycloak-data:
+    name: explorviz-postgres-keycloak-data
 
 networks:
   default:

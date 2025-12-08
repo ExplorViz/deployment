@@ -48,3 +48,42 @@ services:
       - AUTH0_CALLBACK_URL=${AUTH0_CALLBACK_URL}
       - AUTH0_LOGOUT_URL=${AUTH0_LOGOUT_URL}
       - NO_AUTH_USER_NICKNAME=${NO_AUTH_USER_NICKNAME}
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.4.7
+    container_name: keycloak
+    profiles:
+      - backend
+    command: 
+      - start-dev
+      - --import-realm
+    volumes:
+      - ${KEYCLOAK_REALM_CONFIG}:/opt/keycloak/data/import/explorviz-realm.json
+    ports:
+      - "${KEYCLOAK_PORT}:8080"
+    env_file:
+      - ../.env
+    environment:
+      #db config
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres-keycloak:5432/keycloak
+      KC_DB_USERNAME: ${KEYCLOAK_DB_USER}
+      KC_DB_PASSWORD: ${KEYCLOAK_DB_PWD}
+
+      # admin config
+      KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN_USER}
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASS}
+
+      # network config
+      KC_HTTP_HOST: "0.0.0.0" 
+      KC_HOSTNAME: localhost
+      KC_HOSTNAME_PORT: ${KEYCLOAK_PORT}
+      KC_HOSTNAME_SCHEME: http
+      
+      # Security relaxations for local dev
+      KC_HOSTNAME_STRICT: "false"
+      KC_HOSTNAME_STRICT_HTTPS: "false"
+      KC_HTTP_ENABLED: "true"
+      KC_HEALTH_ENABLED: "true"
+    networks:
+      - default
