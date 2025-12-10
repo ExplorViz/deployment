@@ -4,7 +4,7 @@
     "image": { "const": "explorviz/code-service-jvm:${CODE_SERVICE_IMAGE_TAG}" },
     "ports": {
       "type": "array",
-      "items": [{ "enum": ["${CODE_GRPC_PORT}:8080"] }]
+      "items": [{ "enum": ["${CODE_GRPC_PORT}:${CODE_PORT_INTERNAL}"] }]
     },
     "environment": {
       "type": "array",
