@@ -81,6 +81,20 @@ services:
       - QUARKUS_OIDC_JWKS_PATH=/protocol/openid-connect/certs
       - QUARKUS_OIDC_CLIENT_ID=${USER_SERVICE_KC_CLIENT}
 
+  code-agent:
+    hostname: code-agent
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    profiles: ["backend"]
+    image: explorviz/code-agent-jvm:${CODE_AGENT_IMAGE_TAG}
+    env_file:
+      - path: ./.env
+      - path: ./.env-custom
+        required: false
+    ports:
+      - ${CODE_AGENT_PORT}:${CODE_AGENT_PORT_INTERNAL}
+    environment:
+      - EXPLORVIZ_LOG_LVL=DEBUG
   code-service:
     hostname: code-service
     extra_hosts:
