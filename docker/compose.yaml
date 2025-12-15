@@ -69,7 +69,7 @@ services:
     ports:
       - ${USER_PORT}:${USER_PORT_INTERNAL}
     environment:
-      - QUARKUS_OIDC_ENABLED=true
+      - QUARKUS_OIDC_ENABLED=${KEYCLOAK_AUTH_ENABLED}
       - INIT_TOKEN_ENABLED=true
       - INIT_TOKEN_VALUE=mytokenvalue
       - INIT_TOKEN_SECRET=mytokensecret
