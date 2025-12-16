@@ -69,13 +69,17 @@ services:
     ports:
       - ${USER_PORT}:${USER_PORT_INTERNAL}
     environment:
-      - QUARKUS_OIDC_ENABLED=false
+      - QUARKUS_OIDC_ENABLED=${KEYCLOAK_AUTH_ENABLED}
       - INIT_TOKEN_ENABLED=true
       - INIT_TOKEN_VALUE=mytokenvalue
       - INIT_TOKEN_SECRET=mytokensecret
       - MP_MESSAGING_OUTGOING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://${LOCALHOST_ALIAS}:${MONGO_USER_SERV_PORT}
       - EXPLORVIZ_LOG_LVL=DEBUG
+      - QUARKUS_OIDC_AUTH_SERVER_URL=http://${KEYCLOAK_HOSTNAME}:${KEYCLOAK_PORT_INTERNAL}/realms/${KEYCLOAK_REALM}
+      - QUARKUS_OIDC_TOKEN_ISSUER=http://localhost:${KEYCLOAK_PORT}/realms/${KEYCLOAK_REALM}
+      - QUARKUS_OIDC_JWKS_PATH=/protocol/openid-connect/certs
+      - QUARKUS_OIDC_CLIENT_ID=${USER_SERVICE_KC_CLIENT}
 
   code-agent:
     hostname: code-agent
