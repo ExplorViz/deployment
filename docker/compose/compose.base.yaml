@@ -28,10 +28,6 @@ services:
       - path: ../.env
       - path: ../.env-custom
         required: false
-    depends_on:
-      - span-service
-      - user-service
-      - collaboration-service
     ports:
       - ${FRONTEND_PORT}:80
     environment:
