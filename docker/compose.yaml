@@ -116,3 +116,13 @@ services:
     environment:
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://${LOCALHOST_ALIAS}:${MONGO_CODE_SERV_PORT}
       - EXPLORVIZ_LOG_LVL=DEBUG
+
+  chatbot-service:
+    hostname: ${COPILOT_HOSTNAME}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    profiles: ["chatbot"]
+    image: explorviz/ai-chat-service:${COPILOT_IMAGE_TAG}
+    env_file: ./.llm-api-keys.env
+    ports:
+      - ${COPILOT_PORT}:${COPILOT_PORT_INTERNAL}
