@@ -20,12 +20,12 @@
       "allOf": [
         {
           "contains": {
-            "enum": ["FRONTEND_HOST_URL=http://${FRONTEND_HOST_NAME}:${FRONTEND_PORT}"]
+            "enum": ["FRONTEND_HOST_URL=http://${FRONTEND_HOSTNAME}:${FRONTEND_PORT}"]
           }
         },
         {
           "contains": {
-            "enum": ["FRONTEND_HOST_NAME=${FRONTEND_HOST_NAME}"]
+            "enum": ["FRONTEND_HOSTNAME=${FRONTEND_HOSTNAME}"]
           }
         },
         {
@@ -55,7 +55,7 @@
         },
         {
           "contains": {
-            "enum": ["VSCODE_SERV_URL=http://${FRONTEND_HOST_NAME}:${FRONTEND_PORT}"]
+            "enum": ["VSCODE_SERV_URL=http://${FRONTEND_HOSTNAME}:${FRONTEND_PORT}"]
           }
         },
         {

@@ -13,9 +13,9 @@
         "SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS": {
           "enum": ["PLAINTEXT://kafka:${KAFKA_INT_PORT}"]
         },
-        "SCHEMA_REGISTRY_HOST_NAME": { "const": "127.0.0.1" }
+        "SCHEMA_REGISTRY_HOSTNAME": { "const": "127.0.0.1" }
       },
-      "required": ["SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS", "SCHEMA_REGISTRY_HOST_NAME"]
+      "required": ["SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS", "SCHEMA_REGISTRY_HOSTNAME"]
     },
     "depends_on": {
       "type": "object",
