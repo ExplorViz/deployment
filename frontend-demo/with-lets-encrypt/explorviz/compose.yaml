@@ -14,19 +14,24 @@ services:
     environment:
       - VIRTUAL_HOST=${LETSENCRYPT_HOSTNAME}
       - LETSENCRYPT_HOST=${LETSENCRYPT_HOSTNAME}
-      - FRONTEND_HOST_URL=https://${FRONTEND_HOST_NAME}
-      - FRONTEND_HOST_NAME=${FRONTEND_HOST_NAME}
-      - CODE_SERV_URL=http://${FRONTEND_HOST_NAME}:${FRONTEND_PORT}
-      - COLLAB_SERV_URL=http://${COLLABORATION_HOSTNAME}:${COLLABORATION_PORT}
+      - FRONTEND_HOST_URL=http://${FRONTEND_HOSTNAME}:${FRONTEND_PORT} # Determines base URL for backend services that frontend calls
+      - FRONTEND_HOSTNAME=${FRONTEND_HOSTNAME}
+      - CODE_AGENT_URL=http://${DEMO_HOSTNAME}:${DEMO_PORT}
+      - CODE_SERV_URL=http://${DEMO_HOSTNAME}:${DEMO_PORT}
+      - COPILOT_SERV_URL=http://${DEMO_HOSTNAME}:${DEMO_PORT}
       - SPAN_SERV_URL=http://${SPAN_HOSTNAME}:${SPAN_PORT}
       - USER_SERV_URL=http://${USER_HOSTNAME}:${USER_PORT}
-      - VSCODE_SERV_URL=http://${FRONTEND_HOST_NAME}:${FRONTEND_PORT}
-
+      - COLLAB_SERV_URL=http://${COLLABORATION_HOSTNAME}:${COLLABORATION_PORT}
+      - VSCODE_SERV_URL=http://${DEMO_HOSTNAME}:${DEMO_PORT}
+      - KEYCLOAK_URL=http://${DEMO_HOSTNAME}:${DEMO_PORT}
+      
   demo-supplier:
     container_name: explorviz-demo-supplier
     image: explorviz/demo-supplier:latest
     expose:
-      - "8083-8085"
+      - 8083
+      - 8084
+      - 8085
 
   redis-collab:
     image: redis:7.2.2
