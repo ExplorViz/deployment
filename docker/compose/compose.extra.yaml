@@ -71,7 +71,7 @@ services:
       - ${SCHEMA_REGISTRY_PORT}:8081
     environment:
       SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: PLAINTEXT://kafka:${KAFKA_INT_PORT}
-      SCHEMA_REGISTRY_HOSTNAME: 127.0.0.1
+      SCHEMA_REGISTRY_HOST_NAME: 127.0.0.1
     volumes:
       - schema-registry:/etc/schema-registry/secrets
 
