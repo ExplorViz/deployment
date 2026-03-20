@@ -99,11 +99,11 @@ services:
   ## Neo4j
 
   neo4j:
-    image: neo4j:2025.10.1
+    image: neo4j:2026.02.2
     hostname: neo4j
     profiles: ["env"]
     ports:
-      - ${NEO4J_HTTP_PORT}:7474
+      - ${NEO4J_BROWSER_PORT}:7474
       - ${NEO4J_BOLT_PORT}:7687
     volumes:
       - neo4j:/data
@@ -139,18 +139,6 @@ services:
     image: redis:7.2.2
     expose:
       - 6379
-
-  ## Code-Service ##
-
-  mongo-code:
-    image: mongo:6.0
-    hostname: code-mongo
-    profiles: ["env"]
-    ports:
-      - ${MONGO_CODE_SERV_PORT}:27017
-    volumes:
-      - code-mongo-data:/data/db
-      - code-mongo-configdb:/data/configdb
 
   #endregion Environment
 
@@ -242,10 +230,6 @@ volumes:
     name: explorviz-mongo-user-data
   user-mongo-configdb:
     name: explorviz-mongo-user-config
-  code-mongo-data:
-    name: explorviz-mongo-code-data
-  code-mongo-configdb:
-    name: explorviz-mongo-code-config
   neo4j:
     name: neo4j
   prometheus-data:
