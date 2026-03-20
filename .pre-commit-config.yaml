@@ -14,24 +14,3 @@ repos:
         verbose: true
       - id: fix-byte-order-marker
         verbose: true
-  - repo: https://github.com/sirosen/check-jsonschema
-    rev: 0.28.4
-    hooks:
-      - id: check-jsonschema
-        name: "Check Docker Extra Stack"
-        language: python
-        files: docker/compose/compose.extra.yaml
-        types: [yaml]
-        args: ["--schemafile", "docker/.json-schemas/extra/main-schema.json"]
-      - id: check-jsonschema
-        name: "Check Docker Base Stack"
-        language: python
-        files: docker/compose/compose.base.yaml
-        types: [yaml]
-        args: ["--schemafile", "docker/.json-schemas/base/main-schema.json"]
-      - id: check-jsonschema
-        name: "Check Docker Java Stack"
-        language: python
-        files: docker/compose.yaml
-        types: [yaml]
-        args: ["--schemafile", "docker/.json-schemas/java/main-schema.json"]

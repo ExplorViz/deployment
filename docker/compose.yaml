@@ -55,16 +55,20 @@ services:
         condition: service_started
       schema-registry:
         condition: service_started
-    # ports:
-    #   - ${USER_PORT}:8080
+    ports:
+      - ${USER_PORT}:${USER_PORT_INTERNAL}
     environment:
-      - QUARKUS_OIDC_ENABLED=false
+      - QUARKUS_OIDC_ENABLED=${KEYCLOAK_AUTH_ENABLED}
       - INIT_TOKEN_ENABLED=true
       - INIT_TOKEN_VALUE=mytokenvalue
       - INIT_TOKEN_SECRET=mytokensecret
       - MP_MESSAGING_OUTGOING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://${LOCALHOST_ALIAS}:${MONGO_USER_SERV_PORT}
       - EXPLORVIZ_LOG_LVL=DEBUG
+      - QUARKUS_OIDC_AUTH_SERVER_URL=http://${KEYCLOAK_HOSTNAME}:${KEYCLOAK_PORT_INTERNAL}/realms/${KEYCLOAK_REALM}
+      - QUARKUS_OIDC_TOKEN_ISSUER=http://localhost:${KEYCLOAK_PORT}/realms/${KEYCLOAK_REALM}
+      - QUARKUS_OIDC_JWKS_PATH=/protocol/openid-connect/certs
+      - QUARKUS_OIDC_CLIENT_ID=${USER_SERVICE_KC_CLIENT}
 
   persistence-service:
     hostname: persistence-service
@@ -82,4 +86,30 @@ services:
       neo4j:
         condition: service_healthy
     ports:
+      - ${PERSISTENCE_PORT}:${PERSISTENCE_PORT_INTERNAL}
       - ${PERSISTENCE_GRPC_PORT}:9000
+
+  code-agent:
+    hostname: code-agent
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    profiles: ["backend"]
+    image: explorviz/code-agent-jvm:${CODE_AGENT_IMAGE_TAG}
+    env_file:
+      - path: ./.env
+      - path: ./.env-custom
+        required: false
+    ports:
+      - ${CODE_AGENT_PORT}:${CODE_AGENT_PORT_INTERNAL}
+    environment:
+      - EXPLORVIZ_LOG_LVL=DEBUG
+
+  chatbot-service:
+    hostname: ${COPILOT_HOSTNAME}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    profiles: ["chatbot"]
+    image: explorviz/ai-chat-service:${COPILOT_IMAGE_TAG}
+    env_file: ./.llm-api-keys.env
+    ports:
+      - ${COPILOT_PORT}:${COPILOT_PORT_INTERNAL}

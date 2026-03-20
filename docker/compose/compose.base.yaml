@@ -14,8 +14,8 @@ services:
       - path: ../.env
       - path: ../.env-custom
         required: false
-    #ports:
-    #- ${COLLABORATION_PORT}:4444
+    ports:
+      - ${COLLABORATION_PORT}:4444
     environment:
       - REDIS_HOST=redis-collab
       - REDIS_PORT=6379
@@ -28,23 +28,16 @@ services:
       - path: ../.env
       - path: ../.env-custom
         required: false
-    depends_on:
-      - span-service
-      - user-service
-      - collaboration-service
     ports:
       - ${FRONTEND_PORT}:80
     environment:
-      - FRONTEND_HOST_URL=http://${FRONTEND_HOST_NAME}:${FRONTEND_PORT} # Determines base URL for backend services that frontend calls
-      - FRONTEND_HOST_NAME=${FRONTEND_HOST_NAME}
+      - FRONTEND_HOST_URL=http://${FRONTEND_HOSTNAME}:${FRONTEND_PORT} # Determines base URL for backend services that frontend calls
+      - FRONTEND_HOSTNAME=${FRONTEND_HOSTNAME}
+      - CODE_AGENT_URL=http://${CODE_AGENT_HOSTNAME}:${CODE_AGENT_PORT_INTERNAL}
       - CODE_SERV_URL=http://${PERSISTENCE_HOSTNAME}:${PERSISTENCE_PORT}
-      - LANDSCAPE_URL=http://${PERSISTENCE_HOSTNAME}:${PERSISTENCE_PORT}
-      - TRACE_URL=http://${PERSISTENCE_HOSTNAME}:${PERSISTENCE_PORT}
-      - TIMESTAMPS_URL=http://${PERSISTENCE_HOSTNAME}:${PERSISTENCE_PORT}
-      - USER_URL=http://${USER_HOSTNAME}:${USER_PORT}
-      - COLLABORATION_URL=http://${COLLABORATION_HOSTNAME}:${COLLABORATION_PORT}
-      - VSCODE_SERV_URL=http://${FRONTEND_HOST_NAME}:${FRONTEND_PORT}
-      - AUTH0_LOGO_URL=${AUTH0_LOGO_URL}
-      - AUTH0_CALLBACK_URL=${AUTH0_CALLBACK_URL}
-      - AUTH0_LOGOUT_URL=${AUTH0_LOGOUT_URL}
-      - NO_AUTH_USER_NICKNAME=${NO_AUTH_USER_NICKNAME}
+      - COPILOT_SERV_URL=http://${COPILOT_HOSTNAME}:${COPILOT_PORT_INTERNAL}
+      - SPAN_SERV_URL=http://${PERSISTENCE_HOSTNAME}:${PERSISTENCE_PORT}
+      - USER_SERV_URL=http://${USER_HOSTNAME}:${USER_PORT_INTERNAL}
+      - COLLAB_SERV_URL=http://${COLLABORATION_HOSTNAME}:${COLLABORATION_PORT}
+      - VSCODE_SERV_URL=http://${FRONTEND_HOSTNAME}:${FRONTEND_PORT}
+      - KEYCLOAK_URL=http://${KEYCLOAK_HOSTNAME}:${KEYCLOAK_PORT}

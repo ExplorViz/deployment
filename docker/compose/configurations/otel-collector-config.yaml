@@ -20,6 +20,9 @@ exporters:
     brokers:
       - kafka:9092
     topic: otlp_spans
+    sending_queue:
+      enabled: true
+      queue_size: 25000
   debug:
     verbosity: detailed
 
