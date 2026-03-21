@@ -19,7 +19,8 @@ exporters:
     protocol_version: 2.0.0
     brokers:
       - kafka:9092
-    topic: otlp_spans
+    traces:
+      topic: otlp_spans
     sending_queue:
       enabled: true
       queue_size: 25000
