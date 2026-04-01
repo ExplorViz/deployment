@@ -25,24 +25,13 @@ services:
     depends_on:
       init-kafka:
         condition: service_completed_successfully
-      init-cassandra:
-        condition: service_completed_successfully
       kafka:
-        condition: service_healthy
-      cassandra:
         condition: service_healthy
       schema-registry:
         condition: service_started
-    ports:
-    - ${SPAN_PORT}:${SPAN_PORT_INTERNAL}
     environment:
-      - QUARKUS_CASSANDRA_CONTACT_POINTS=cassandra:9042
-      - QUARKUS_CASSANDRA_AUTH_USERNAME=cassandra
-      - QUARKUS_CASSANDRA_AUTH_PASSWORD=cassandra
-      - QUARKUS_CASSANDRA_REQUEST_TIMEOUT=10
       - QUARKUS_KAFKA_STREAMS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - EXPLORVIZ_LOG_LVL=DEBUG
-      - EXPLORVIZ_SPAN_API_TIME_RANGES_ENABLED=true
     deploy:
       mode: replicated
       replicas: ${SPAN_REPLICAS}
@@ -81,6 +70,25 @@ services:
       - QUARKUS_OIDC_JWKS_PATH=/protocol/openid-connect/certs
       - QUARKUS_OIDC_CLIENT_ID=${USER_SERVICE_KC_CLIENT}
 
+  persistence-service:
+    hostname: persistence-service
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    profiles: ["backend"]
+    image: explorviz/persistence-service-jvm:${PERSISTENCE_SERVICE_IMAGE_TAG}
+    env_file:
+      - path: ./.env
+      - path: ./.env-custom
+        required: false
+    depends_on:
+      init-kafka:
+        condition: service_completed_successfully
+      neo4j:
+        condition: service_healthy
+    ports:
+      - ${PERSISTENCE_PORT}:${PERSISTENCE_PORT_INTERNAL}
+      - ${PERSISTENCE_GRPC_PORT}:9000
+
   code-agent:
     hostname: code-agent
     extra_hosts:
@@ -94,27 +102,6 @@ services:
     ports:
       - ${CODE_AGENT_PORT}:${CODE_AGENT_PORT_INTERNAL}
     environment:
-      - EXPLORVIZ_LOG_LVL=DEBUG
-  code-service:
-    hostname: code-service
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    profiles: ["backend"]
-    image: explorviz/code-service-jvm:${CODE_SERVICE_IMAGE_TAG}
-    env_file:
-      - path: ./.env
-      - path: ./.env-custom
-        required: false
-    depends_on:
-      init-kafka:
-        condition: service_completed_successfully
-      mongo-code:
-        condition: service_started
-    ports:
-      - ${CODE_GRPC_PORT}:${CODE_PORT_INTERNAL}
-      - ${CODE_PORT}:${CODE_PORT_INTERNAL}
-    environment:
-      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://${LOCALHOST_ALIAS}:${MONGO_CODE_SERV_PORT}
       - EXPLORVIZ_LOG_LVL=DEBUG
 
   chatbot-service:

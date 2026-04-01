@@ -96,33 +96,30 @@ services:
     depends_on:
       - schema-registry
 
-  ## Cassandra for Span Service ##
+  ## Neo4j
 
-  cassandra:
-    image: cassandra:3.11.14
-    hostname: cassandra-explorviz
+  neo4j:
+    image: neo4j:2026.02.2
+    hostname: neo4j
     profiles: ["env"]
     ports:
-      - ${CASSANDRA_PORT}:9042
-    environment:
-      - MAX_HEAP_SIZE=1G
-      - HEAP_NEWSIZE=200M
+      - ${NEO4J_BROWSER_PORT}:7474
+      - ${NEO4J_BOLT_PORT}:7687
     volumes:
-      - ./configurations/cassandra/custom-entrypoint.sh:/usr/local/bin/custom-entrypoint.sh
-      - cassandra:/var/lib/cassandra
-    entrypoint: ["/usr/local/bin/custom-entrypoint.sh"]
+      - neo4j:/data
+      - ./configurations/neo4j/init.cypher:/import/init.cypher
+    environment:
+      - NEO4J_AUTH=none
+      - NEO4J_dbms_usage__report_enabled=false
+      - NEO4J_db_query_default__language=CYPHER_25
+      - NEO4J_PLUGINS=["apoc", "apoc-extended"]
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_initializer_neo4j_0=CALL apoc.cypher.runSchemaFile("init.cypher")
     healthcheck:
-      test: ["CMD", "cqlsh", "-u cassandra", "-p cassandra", "-e describe keyspaces"]
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider localhost:7474 || exit 1"]
       interval: 15s
       timeout: 10s
       retries: 10
-
-  init-cassandra:
-    image: explorviz/init-cassandra
-    profiles: ["env", "init-env"]
-    depends_on:
-      cassandra:
-        condition: service_healthy
 
   ## User-Service ##
 
@@ -143,18 +140,6 @@ services:
     expose:
       - 6379
 
-  ## Code-Service ##
-
-  mongo-code:
-    image: mongo:6.0
-    hostname: code-mongo
-    profiles: ["env"]
-    ports:
-      - ${MONGO_CODE_SERV_PORT}:27017
-    volumes:
-      - code-mongo-data:/data/db
-      - code-mongo-configdb:/data/configdb
-
   #endregion Environment
 
   #region generator
@@ -164,6 +149,8 @@ services:
     profiles: ["generator"]
     ports:
       - ${TRACE_GENERATOR_PORT}:8079
+    extra_hosts:
+      - "localhost:host-gateway"
 
   #endregion generator
 
@@ -298,12 +285,8 @@ volumes:
     name: explorviz-mongo-user-data
   user-mongo-configdb:
     name: explorviz-mongo-user-config
-  code-mongo-data:
-    name: explorviz-mongo-code-data
-  code-mongo-configdb:
-    name: explorviz-mongo-code-config
-  cassandra:
-    name: explorviz-cassandra
+  neo4j:
+    name: neo4j
   prometheus-data:
     name: explorviz-prometheus-data
   grafana-data:
