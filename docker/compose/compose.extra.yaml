@@ -12,7 +12,7 @@ services:
 
   kafka:
     image: confluentinc/cp-kafka:7.3.15
-    hostname: kafka
+    hostname: ${KAFKA_HOSTNAME}
     profiles: ["env"]
     ports:
       - "${KAFKA_EXT_PORT}:${KAFKA_EXT_PORT}"
@@ -61,7 +61,7 @@ services:
     command: "/tmp/init_kafka_topics.sh"
 
   schema-registry:
-    hostname: schema-registry
+    hostname: ${SCHEMA_REGISTRY_HOSTNAME}
     image: confluentinc/cp-schema-registry:7.3.15
     profiles: ["env"]
     depends_on:
@@ -79,7 +79,7 @@ services:
 
   otel-collector:
     image: otel/opentelemetry-collector-contrib
-    hostname: otel-collector
+    hostname: ${COLLECTOR_HOSTNAME}
     profiles: ["env"]
     command: ["--config=/etc/otel-collector-config.yaml"]
     # command: ["--config=/etc/otel-collector-record-config.yaml"]
@@ -100,7 +100,7 @@ services:
 
   neo4j:
     image: neo4j:2026.02.2
-    hostname: neo4j
+    hostname: ${NEO4J_HOSTNAME}
     profiles: ["env"]
     ports:
       - ${NEO4J_BROWSER_PORT}:7474
@@ -125,7 +125,7 @@ services:
 
   mongo-user:
     image: mongo:6.0
-    hostname: user-mongo
+    hostname: ${MONGO_USER_HOSTNAME}
     profiles: ["env"]
     ports:
       - ${MONGO_USER_SERV_PORT}:27017
@@ -157,7 +157,7 @@ services:
   #region monitoring
 
   prometheus:
-    hostname: prometheus
+    hostname: ${PROMETHEUS_HOSTNAME}
     image: prom/prometheus:latest
     profiles: ["monitoring"]
     volumes:
@@ -176,7 +176,7 @@ services:
       - "host.docker.internal:host-gateway"
 
   kafka-lag-exporter:
-    hostname: kafka-lag-exporter
+    hostname: ${LAG_EXPORTER_HOSTNAME}
     image: seglo/kafka-lag-exporter:0.8.2
     profiles: ["monitoring"]
     depends_on:
@@ -190,7 +190,7 @@ services:
 
   grafana:
     image: grafana/grafana:latest
-    hostname: grafana
+    hostname: ${GRAFANA_HOSTNAME}
     profiles: ["monitoring"]
     depends_on:
       - prometheus

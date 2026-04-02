@@ -14,7 +14,7 @@ include:
 services:
   span-service:
     image: explorviz/span-service-${EXPLORVIZ_JAVA_IMAGE_TYPE}:${SPAN_SERVICE_IMAGE_TAG}
-    hostname: span-service
+    hostname: ${SPAN_HOSTNAME}
     extra_hosts:
       - "host.docker.internal:host-gateway"
     profiles: ["backend"]
@@ -37,7 +37,7 @@ services:
       replicas: ${SPAN_REPLICAS}
 
   user-service:
-    hostname: user-service
+    hostname: ${USER_HOSTNAME}
     extra_hosts:
       - "host.docker.internal:host-gateway"
     image: explorviz/user-service-${EXPLORVIZ_JAVA_IMAGE_TYPE}:${USER_SERVICE_IMAGE_TAG}
@@ -71,7 +71,7 @@ services:
       - QUARKUS_OIDC_CLIENT_ID=${USER_SERVICE_KC_CLIENT}
 
   persistence-service:
-    hostname: persistence-service
+    hostname: ${PERSISTENCE_HOSTNAME}
     extra_hosts:
       - "host.docker.internal:host-gateway"
     profiles: ["backend"]
@@ -90,7 +90,7 @@ services:
       - ${PERSISTENCE_GRPC_PORT}:9000
 
   code-agent:
-    hostname: code-agent
+    hostname: ${CODE_AGENT_HOSTNAME}
     extra_hosts:
       - "host.docker.internal:host-gateway"
     profiles: ["backend"]
