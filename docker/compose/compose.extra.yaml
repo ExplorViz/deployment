@@ -133,13 +133,6 @@ services:
       - user-mongo-data:/data/db
       - user-mongo-configdb:/data/configdb
 
-  ## Collaboration-Service ##
-
-  redis-collab:
-    image: redis:7.2.2
-    expose:
-      - 6379
-
   #endregion Environment
 
   #region generator

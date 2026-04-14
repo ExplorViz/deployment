@@ -1,13 +1,4 @@
 services:
-  collaboration-service:
-    hostname: collaboration-service
-    image: explorviz/collaboration-service:latest
-    expose:
-      - "4444"
-    environment:
-      - REDIS_HOST=redis-collab
-      - REDIS_PORT=6379
-
   frontend:
     container_name: frontend
     image: explorviz/frontend:latest
@@ -16,27 +7,19 @@ services:
       - LETSENCRYPT_HOST=${LETSENCRYPT_HOSTNAME}
       - FRONTEND_HOST_URL=http://${FRONTEND_HOSTNAME}:${FRONTEND_PORT} # Determines base URL for backend services that frontend calls
       - FRONTEND_HOSTNAME=${FRONTEND_HOSTNAME}
-      - CODE_AGENT_URL=http://${DEMO_HOSTNAME}:${DEMO_PORT}
-      - CODE_SERV_URL=http://${DEMO_HOSTNAME}:${DEMO_PORT}
-      - COPILOT_SERV_URL=http://${DEMO_HOSTNAME}:${DEMO_PORT}
-      - SPAN_SERV_URL=http://${SPAN_HOSTNAME}:${SPAN_PORT}
-      - USER_SERV_URL=http://${USER_HOSTNAME}:${USER_PORT}
-      - COLLAB_SERV_URL=http://${COLLABORATION_HOSTNAME}:${COLLABORATION_PORT}
-      - VSCODE_SERV_URL=http://${DEMO_HOSTNAME}:${DEMO_PORT}
-      - KEYCLOAK_URL=http://${DEMO_HOSTNAME}:${DEMO_PORT}
+      - CODE_AGENT_URL=http://${DEMO_HOSTNAME}:${PERSISTENCE_PORT}
+      - PERSISTENCE_SERV_URL=http://${DEMO_HOSTNAME}:${PERSISTENCE_PORT}
+      - COPILOT_SERV_URL=http://${DEMO_HOSTNAME}:${PERSISTENCE_PORT}
+      - USER_SERV_URL=http://${DEMO_HOSTNAME}:${USER_PORT}
+      - VSCODE_SERV_URL=http://${DEMO_HOSTNAME}:${PERSISTENCE_PORT}
+      - KEYCLOAK_URL=http://${DEMO_HOSTNAME}:${PERSISTENCE_PORT}
 
   demo-supplier:
     container_name: explorviz-demo-supplier
     image: explorviz/demo-supplier:latest
     expose:
-      - 8083
       - 8084
       - 8085
-
-  redis-collab:
-    image: redis:7.2.2
-    expose:
-      - "6379"
 
 networks:
   default:

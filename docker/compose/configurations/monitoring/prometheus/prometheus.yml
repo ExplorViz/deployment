@@ -64,14 +64,3 @@ scrape_configs:
     static_configs:
       - targets:
           - "host.docker.internal:8086" # dev-mode
-
-  - job_name: "collaboration-service"
-    metrics_path: "/q/metrics"
-    dns_sd_configs:
-      - names:
-          - "push-service"
-        type: "A"
-        port: 8080
-    static_configs:
-      - targets:
-          - "host.docker.internal:8085" # dev-mode
