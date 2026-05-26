@@ -258,6 +258,19 @@ services:
 
 #endregion auth
 
+#region VSCode
+
+  vs-code-backend:
+    image: explorviz/vs-code-backend:${VSCODE_IMAGE_TAG}
+    hostname: ${VSCODE_HOSTNAME}
+    environment:
+      - EXPERIMENT_MODE=true
+    ports:
+      - ${VSCODE_EXT_PORT}:3000
+
+
+#endregion VSCode
+
 #region Volumes + Network
 
 # Delete all ExplorViz volumes:
