@@ -12,9 +12,9 @@ include:
   - ./compose/compose.base.yaml
 
 services:
-  span-service:
-    image: explorviz/span-service-${EXPLORVIZ_JAVA_IMAGE_TYPE}:${SPAN_SERVICE_IMAGE_TAG}
-    hostname: ${SPAN_HOSTNAME}
+  trace-service:
+    image: explorviz/trace-service:${TRACE_SERVICE_IMAGE_TAG}
+    hostname: ${TRACE_HOSTNAME}
     extra_hosts:
       - "host.docker.internal:host-gateway"
     profiles: ["backend"]
@@ -34,7 +34,7 @@ services:
       - EXPLORVIZ_LOG_LVL=DEBUG
     deploy:
       mode: replicated
-      replicas: ${SPAN_REPLICAS}
+      replicas: ${TRACE_REPLICAS}
 
   user-service:
     hostname: ${USER_HOSTNAME}
@@ -70,12 +70,12 @@ services:
       - QUARKUS_OIDC_JWKS_PATH=/protocol/openid-connect/certs
       - QUARKUS_OIDC_CLIENT_ID=${USER_SERVICE_KC_CLIENT}
 
-  persistence-service:
-    hostname: ${PERSISTENCE_HOSTNAME}
+  landscape-service:
+    hostname: ${LANDSCAPE_HOSTNAME}
     extra_hosts:
       - "host.docker.internal:host-gateway"
     profiles: ["backend"]
-    image: explorviz/persistence-service-jvm:${PERSISTENCE_SERVICE_IMAGE_TAG}
+    image: explorviz/landscape-service:${LANDSCAPE_SERVICE_IMAGE_TAG}
     env_file:
       - path: ./.env
       - path: ./.env-custom
@@ -86,21 +86,21 @@ services:
       neo4j:
         condition: service_healthy
     ports:
-      - ${PERSISTENCE_PORT}:${PERSISTENCE_PORT_INTERNAL}
-      - ${PERSISTENCE_GRPC_PORT}:9000
+      - ${LANDSCAPE_PORT}:${LANDSCAPE_PORT_INTERNAL}
+      - ${LANDSCAPE_GRPC_PORT}:9000
 
-  code-agent:
-    hostname: ${CODE_AGENT_HOSTNAME}
+  code-analyzer:
+    hostname: ${CODE_ANALYZER_HOSTNAME}
     extra_hosts:
       - "host.docker.internal:host-gateway"
     profiles: ["backend"]
-    image: explorviz/code-agent-jvm:${CODE_AGENT_IMAGE_TAG}
+    image: explorviz/code-analyzer:${CODE_ANALYZER_IMAGE_TAG}
     env_file:
       - path: ./.env
       - path: ./.env-custom
         required: false
     ports:
-      - ${CODE_AGENT_PORT}:${CODE_AGENT_PORT_INTERNAL}
+      - ${CODE_ANALYZER_PORT}:${CODE_ANALYZER_PORT_INTERNAL}
     environment:
       - EXPLORVIZ_LOG_LVL=DEBUG
 
