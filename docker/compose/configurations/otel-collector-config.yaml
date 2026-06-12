@@ -7,10 +7,10 @@ receivers:
 processors:
   attributes/add_default_landscape_token:
     actions:
-      - key: landscape_token
+      - key: explorviz.token.id
         value: "mytokenvalue"
         action: insert
-      - key: token_secret
+      - key: explorviz.token.secret
         value: "mytokensecret"
         action: insert
 
@@ -20,7 +20,7 @@ exporters:
     brokers:
       - kafka:9092
     traces:
-      topic: otlp_spans
+      topic: telemetry.spans.raw
     sending_queue:
       enabled: true
       queue_size: 25000

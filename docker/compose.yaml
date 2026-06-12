@@ -27,11 +27,9 @@ services:
         condition: service_completed_successfully
       kafka:
         condition: service_healthy
-      schema-registry:
-        condition: service_started
-    environment:
-      - QUARKUS_KAFKA_STREAMS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
-      - EXPLORVIZ_LOG_LVL=DEBUG
+    # TODO env variables for Go rewrite
+    # environment:
+    #   - ...
     deploy:
       mode: replicated
       replicas: ${TRACE_REPLICAS}
@@ -53,8 +51,6 @@ services:
         condition: service_healthy
       mongo-user:
         condition: service_started
-      schema-registry:
-        condition: service_started
     ports:
       - ${USER_PORT}:${USER_PORT_INTERNAL}
     environment:
@@ -62,7 +58,6 @@ services:
       - INIT_TOKEN_ENABLED=true
       - INIT_TOKEN_VALUE=mytokenvalue
       - INIT_TOKEN_SECRET=mytokensecret
-      - MP_MESSAGING_OUTGOING_TOKEN_EVENTS_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://${LOCALHOST_ALIAS}:${MONGO_USER_SERV_PORT}
       - EXPLORVIZ_LOG_LVL=DEBUG
       - QUARKUS_OIDC_AUTH_SERVER_URL=http://${KEYCLOAK_HOSTNAME}:${KEYCLOAK_PORT_INTERNAL}/realms/${KEYCLOAK_REALM}
