@@ -27,9 +27,9 @@ services:
         condition: service_completed_successfully
       kafka:
         condition: service_healthy
-    # TODO env variables for Go rewrite
-    # environment:
-    #   - ...
+    environment:
+      - EXPLORVIZ_BROKER: ${KAFKA_HOSTNAME}:${KAFKA_INT_PORT}
+      - EXPLORVIZ_VALIDATE_TOKENS: false
     deploy:
       mode: replicated
       replicas: ${TRACE_REPLICAS}
