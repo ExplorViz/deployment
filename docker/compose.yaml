@@ -29,7 +29,7 @@ services:
         condition: service_healthy
     environment:
       - EXPLORVIZ_BROKER=${KAFKA_HOSTNAME}:${KAFKA_INT_PORT}
-      - EXPLORVIZ_VALIDATE_TOKENS=false
+      - EXPLORVIZ_VALIDATE_TOKENS=true
     deploy:
       mode: replicated
       replicas: ${TRACE_REPLICAS}
