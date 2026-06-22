@@ -1,13 +1,16 @@
 inspectit:
+  service-name: PlantUML
+
   tags:
     extra:
       explorviz.token.id: ${LANDSCAPE_TOKEN_ID}
       explorviz.token.secret: ${LANDSCAPE_TOKEN_SECRET}
+
+      # The following attributes are for compatibility with older ExplorViz versions.
+      # If you are working with a recent version of ExplorViz, they can be left out.
       service.name: "PlantUML"
       service.instance.id: "0"
       telemetry.sdk.language: "java"
-
-      # The following attributes are for compatibility with older ExplorViz versions
       landscape_token: ${LANDSCAPE_TOKEN_ID}
       token_secret: ${LANDSCAPE_TOKEN_SECRET}
       application_name: "PlantUML"
@@ -34,18 +37,27 @@ inspectit:
         tracing:
           start-span: true
           attributes:
-            code.function: method_name
-            code.namespace: class_fqn
-            java.fqn: method_fqn_attr # For compatibility with older ExplorViz versions
+            code.function.name: method_fqn_attr
+
+            # The following attributes are for compatibility with older ExplorViz versions.
+            # If you are working with a recent version of ExplorViz, they can be left out.
+            code.function: method_name # Deprecated OTel semconv attribute
+            code.namespace: class_fqn # Deprecated OTel semconv attribute
+            java.fqn: method_fqn
         entry:
+          method_fqn:
+            action: a_get_method_fqn
           method_name:
             action: a_get_method_name
           class_fqn:
             action: a_get_class_fqn
-          method_fqn_attr:
-            action: a_get_method_fqn
 
     actions:
+      a_get_method_fqn:
+        input:
+          _methodName: String
+          _class: Class
+        value: "new StringBuilder(_class.getName()).append('.').append(_methodName).toString()"
       a_get_method_name:
         input:
           _methodName: String
@@ -54,11 +66,6 @@ inspectit:
         input:
           _class: Class
         value: "_class.getName()"
-      a_get_method_fqn:
-        input:
-          _methodName: String
-          _class: Class
-        value: "new StringBuilder(_class.getName()).append('.').append(_methodName).toString()"
 
   logging:
     debug: true
@@ -66,8 +73,7 @@ inspectit:
 
   exporters:
     tracing:
-      service-name: "Ocelot Otel Exporter"
       otlp:
-        enabled: true
+        enabled: ENABLED
         endpoint: "http://otel-collector:55678"
         protocol: grpc
