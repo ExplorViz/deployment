@@ -60,22 +60,7 @@ services:
       - ./configurations/kafka/init_kafka_topics.sh:/tmp/init_kafka_topics.sh
     command: "/tmp/init_kafka_topics.sh"
 
-  schema-registry:
-    hostname: ${SCHEMA_REGISTRY_HOSTNAME}
-    image: confluentinc/cp-schema-registry:7.3.15
-    profiles: ["env"]
-    depends_on:
-      kafka:
-        condition: service_healthy
-    ports:
-      - ${SCHEMA_REGISTRY_PORT}:8081
-    environment:
-      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: PLAINTEXT://kafka:${KAFKA_INT_PORT}
-      SCHEMA_REGISTRY_HOST_NAME: 127.0.0.1
-    volumes:
-      - schema-registry:/etc/schema-registry/secrets
-
-  ## Open Telemetry ##
+  ## OpenTelemetry ##
 
   otel-collector:
     image: otel/opentelemetry-collector-contrib
@@ -93,8 +78,6 @@ services:
     ports:
       - ${OTEL_COLLECTOR_PORT}:55678
       - ${OTEL_COLLECTOR_ZPAGES_PORT}:55679 # zPages
-    depends_on:
-      - schema-registry
 
   ## Neo4j
 
@@ -285,8 +268,6 @@ volumes:
     name: explorviz-init-kafka-data
   init-kafka-secrets:
     name: explorviz-init-kafka-secrets
-  schema-registry:
-    name: explorviz-schema-registry
   user-mongo-data:
     name: explorviz-mongo-user-data
   user-mongo-configdb:
