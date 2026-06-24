@@ -49,7 +49,7 @@ default:
       when: never
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
   script:
-    - ./gradlew clean assemble
+    - ./gradlew clean assemble --full-stacktrace
       -Dquarkus.package.type=native -Dquarkus.container-image.push=true
       -Dquarkus.container-image.name=$DOCKERHUB_IMAGE_NAME_NATIVE
       -Dquarkus.container-image.tag=$IMAGE_TAG
@@ -72,7 +72,7 @@ default:
   before_script:
     - export GRADLE_USER_HOME=`pwd`/.gradle
   script:
-    - ./gradlew clean assemble
+    - ./gradlew clean assemble --full-stacktrace
       -Dquarkus.container-image.build=true
       -Dquarkus.container-image.push=true
       -Dquarkus.container-image.name=$IMAGE_NAME
