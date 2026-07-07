@@ -12,27 +12,27 @@ include:
   - ./compose/compose.base.yaml
 
 services:
-  trace-service:
-    image: explorviz/trace-service:${TRACE_SERVICE_IMAGE_TAG}
-    hostname: ${TRACE_HOSTNAME}
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    profiles: ["backend"]
-    env_file:
-      - path: ./.env
-      - path: ./.env-custom
-        required: false
-    depends_on:
-      init-kafka:
-        condition: service_completed_successfully
-      kafka:
-        condition: service_healthy
-    environment:
-      - EXPLORVIZ_BROKER=${KAFKA_HOSTNAME}:${KAFKA_INT_PORT}
-      - EXPLORVIZ_VALIDATE_TOKENS=true
-    deploy:
-      mode: replicated
-      replicas: ${TRACE_REPLICAS}
+  # trace-service:
+  #   image: explorviz/trace-service:${TRACE_SERVICE_IMAGE_TAG}
+  #   hostname: ${TRACE_HOSTNAME}
+  #   extra_hosts:
+  #     - "host.docker.internal:host-gateway"
+  #   profiles: ["backend"]
+  #   env_file:
+  #     - path: ./.env
+  #     - path: ./.env-custom
+  #       required: false
+  #   depends_on:
+  #     init-kafka:
+  #       condition: service_completed_successfully
+  #     neo4j:
+  #       condition: service_healthy
+  #   environment:
+  #     - EXPLORVIZ_BROKER=${KAFKA_HOSTNAME}:${KAFKA_INT_PORT}
+  #     - EXPLORVIZ_VALIDATE_TOKENS=true
+  #   deploy:
+  #     mode: replicated
+  #     replicas: ${TRACE_REPLICAS}
 
   user-service:
     hostname: ${USER_HOSTNAME}
