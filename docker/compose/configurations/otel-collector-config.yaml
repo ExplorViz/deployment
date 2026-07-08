@@ -5,6 +5,8 @@ receivers:
         endpoint: :55678
 
 processors:
+  explorviz_parsing:
+    validate_tokens: false
   attributes/add_default_landscape_token:
     actions:
       - key: explorviz.token.id
@@ -15,30 +17,30 @@ processors:
         action: insert
 
 exporters:
-  kafka:
-    protocol_version: 2.0.0
-    brokers:
-      - kafka:9092
-    traces:
-      topic: telemetry.spans.raw
-    sending_queue:
-      enabled: true
-      queue_size: 25000
+  explorviz:
+    broker: kafka:9092
+    topic: telemetry.spans.parsed
+
   debug:
     verbosity: detailed
 
 extensions:
-  zpages:
-    endpoint: :55679
+  explorviz_token_validator:
+    broker: kafka:9092
+    topic: tokens.events
 
 service:
-  extensions:
-    - zpages
+  extensions: [explorviz_token_validator]
   pipelines:
     traces:
-      receivers:
-        - otlp
-      processors:
-        - attributes/add_default_landscape_token
+      receivers: [otlp]
+      processors: [explorviz_parsing]
       exporters:
-        - kafka
+        - explorviz
+        # - debug # Uncomment for direct output to stdout
+    metrics:
+      receivers: [otlp]
+      exporters: [debug]
+    logs:
+      receivers: [otlp]
+      exporters: [debug]

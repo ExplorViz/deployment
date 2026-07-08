@@ -27,6 +27,8 @@ services:
         condition: service_completed_successfully
       kafka:
         condition: service_healthy
+    ports:
+      - ${TRACE_PORT}:${TRACE_PORT_INTERNAL}
     environment:
       - EXPLORVIZ_BROKER=${KAFKA_HOSTNAME}:${KAFKA_INT_PORT}
       - EXPLORVIZ_VALIDATE_TOKENS=true
