@@ -6,18 +6,16 @@ receivers:
 
 exporters:
   file:
-    path: "/etc/otel/traces.json"
-
-extensions:
-  zpages:
-    endpoint: :55679
+    path: "/etc/otel/telemetry.json"
 
 service:
-  extensions:
-    - zpages
   pipelines:
     traces:
-      receivers:
-        - otlp
-      exporters:
-        - file
+      receivers: [otlp]
+      exporters: [file]
+    metrics:
+      receivers: [otlp]
+      exporters: [file]
+    logs:
+      receivers: [otlp]
+      exporters: [file]
