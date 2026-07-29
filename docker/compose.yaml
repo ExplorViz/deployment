@@ -23,15 +23,13 @@ services:
       - path: ./.env-custom
         required: false
     depends_on:
-      init-kafka:
-        condition: service_completed_successfully
-      kafka:
+      clickhouse:
         condition: service_healthy
     ports:
       - ${TRACE_PORT}:${TRACE_PORT_INTERNAL}
     environment:
-      - EXPLORVIZ_BROKER=${KAFKA_HOSTNAME}:${KAFKA_INT_PORT}
-      - EXPLORVIZ_VALIDATE_TOKENS=true
+      - EXPLORVIZ_DB_ADDR=${CLICKHOUSE_HOSTNAME}:${CLICKHOUSE_NATIVE_PORT_INTERNAL}
+      - EXPLORVIZ_PORT=${TRACE_PORT_INTERNAL}
     deploy:
       mode: replicated
       replicas: ${TRACE_REPLICAS}

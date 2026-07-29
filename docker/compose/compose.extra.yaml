@@ -70,6 +70,11 @@ services:
     # command: ["--config=/etc/otel-collector-record-config.yaml"]
     # command: ["--config=/etc/otel-collector-replay-config.yaml"]
     restart: on-failure
+    depends_on:
+      init-kafka:
+        condition: service_completed_successfully
+      kafka:
+        condition: service_healthy
     volumes:
       - ./configurations/otel-collector-config.yaml:/etc/otel-collector-config.yaml
       # - ./configurations/otel-collector-record-config.yaml:/etc/otel-collector-record-config.yaml
@@ -124,6 +129,8 @@ services:
       nofile:
         soft: 262144
         hard: 262144
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://localhost:8123/?query=SELECT%201 || exit 1
 
   ## User-Service ##
 
