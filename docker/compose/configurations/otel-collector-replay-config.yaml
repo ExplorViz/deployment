@@ -36,14 +36,19 @@ service:
   extensions: [explorviz_token_validator]
   pipelines:
     traces:
-      receivers: [otlp,otlpjsonfile]
+      receivers: [otlp, otlpjsonfile]
       processors: [explorviz_parsing]
       exporters:
         - explorviz
+        - clickhouse
         # - debug # Uncomment for direct output to stdout
     metrics:
-      receivers: [otlp,otlpjsonfile]
-      exporters: [debug]
+      receivers: [otlp, otlpjsonfile]
+      exporters:
+        - explorviz
+        - clickhouse
     logs:
-      receivers: [otlp,otlpjsonfile]
-      exporters: [debug]
+      receivers: [otlp, otlpjsonfile]
+      exporters:
+        - explorviz
+        - clickhouse
