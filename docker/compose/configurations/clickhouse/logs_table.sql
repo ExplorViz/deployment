@@ -19,6 +19,9 @@ CREATE TABLE IF NOT EXISTS otel_logs (
     `LogAttributes` Map(LowCardinality(String), String) COMMENT 'Log record attributes' CODEC(ZSTD(1)),
     `EventName` String COMMENT 'Event name for log records representing events' CODEC(ZSTD(1)),
 
+    -- Custom columns for ExplorViz
+    `LogId` UUID DEFAULT generateUUIDv4(),
+
     -- Materialized columns for ExplorViz
     Timestamp_ns Int64 MATERIALIZED toUnixTimestamp64Nano(Timestamp),
     CommitHash String MATERIALIZED LogAttributes['vcs.ref.head.revision'],
