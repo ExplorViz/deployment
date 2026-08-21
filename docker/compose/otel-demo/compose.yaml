@@ -1,0 +1,20 @@
+# Starts the OpenTelemetry Demo (https://github.com/open-telemetry/opentelemetry-demo),
+# and configures the demo collector to forward telemetry data to our custom collector.
+# Useful for producing example data when working with telemetry visualization.
+#
+# Start: `docker compose up -d` (from this directory), or `docker compose -f ./compose/otel-demo/compose.yaml up -d` (from `docker` directory).
+# NOTE: Do not attempt to merge with main compose (e.g. `docker compose -f compose.yaml -f ./compose/otel-demo/compose.yaml`).
+# This will likely fail due to service naming conflicts, as the external demo compose may use similar service and variable names.
+
+include:
+  - path:
+      - https://github.com/open-telemetry/opentelemetry-demo.git#main:compose.yaml
+      - https://github.com/open-telemetry/opentelemetry-demo.git#main:compose.full.yaml
+
+services:
+  # Overrides / merges configuration from the included external compose
+  otel-collector:
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./demo-collector-config.yaml:/etc/otelcol-config-extras.yml
