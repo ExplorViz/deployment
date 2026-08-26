@@ -12,6 +12,30 @@ include:
   - ./compose/compose.base.yaml
 
 services:
+  otel-collector:
+    image: explorviz/otel-collector
+    hostname: ${COLLECTOR_HOSTNAME}
+    profiles: ["env"]
+    command: ["--config=/etc/otel-collector-config.yaml"]
+    # command: ["--config=/etc/otel-collector-record-config.yaml"]
+    # command: ["--config=/etc/otel-collector-replay-config.yaml"]
+    restart: on-failure
+    depends_on:
+      init-kafka:
+        condition: service_completed_successfully
+      kafka:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+    volumes:
+      - ./compose/configurations/otel-collector/otel-collector-config.yaml:/etc/otel-collector-config.yaml
+      # - ./configurations/otel-collector/otel-collector-record-config.yaml:/etc/otel-collector-record-config.yaml
+      # - ./configurations/otel-collector/otel-collector-replay-config.yaml:/etc/otel-collector-replay-config.yaml
+      # - ./recorded-telemetry:/etc/otel
+    ports:
+      - ${OTEL_COLLECTOR_PORT}:55678
+      - ${OTEL_COLLECTOR_ZPAGES_PORT}:55679 # zPages
+
   trace-service:
     image: explorviz/trace-service:${TRACE_SERVICE_IMAGE_TAG}
     hostname: ${TRACE_HOSTNAME}
