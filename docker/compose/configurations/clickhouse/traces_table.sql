@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS otel_traces (
     CommitHash String MATERIALIZED SpanAttributes['vcs.ref.head.revision'],
     ExplorvizEntityId String MATERIALIZED SpanAttributes['explorviz.entity.id'],
     ExplorvizTelemetryKey String MATERIALIZED SpanAttributes['explorviz.entity.telemetrykey'],
+    ExplorvizServiceName String MATERIALIZED SpanAttributes['explorviz.service.name'],
     ExplorvizTokenId String MATERIALIZED SpanAttributes['explorviz.token.id'],
     ExplorvizFuncName String MATERIALIZED SpanAttributes['explorviz.code.function.name'],
 
@@ -47,5 +48,3 @@ CREATE TABLE IF NOT EXISTS otel_traces (
 PARTITION BY toDate(Timestamp)
 ORDER BY (ServiceName, SpanName, toDateTime(Timestamp))
 SETTINGS index_granularity=8192, ttl_only_drop_parts = 1
-
-
