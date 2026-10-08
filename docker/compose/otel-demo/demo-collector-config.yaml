@@ -1,6 +1,11 @@
 # This config is merged on top of the existing configuration of the OpenTelemetry Demo's
 # own collector instance such that telemetry is forwarded to our custom collector instance.
 
+receivers:
+  docker_stats:
+    excluded_images:
+      - '!/^(ghcr\.io.*|postgres.*)$/' # Include only containers that actually belong to the demo
+
 exporters:
   otlp_grpc/explorviz_collector:
     endpoint: host.docker.internal:55678

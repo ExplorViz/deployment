@@ -58,6 +58,28 @@ services:
       mode: replicated
       replicas: ${TRACE_REPLICAS}
 
+  metrics-service:
+    image: explorviz/metrics-service:${METRICS_SERVICE_IMAGE_TAG}
+    hostname: ${METRICS_HOSTNAME}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    profiles: ["backend"]
+    env_file:
+      - path: ./.env
+      - path: ./.env-custom
+        required: false
+    depends_on:
+      clickhouse:
+        condition: service_healthy
+    ports:
+      - ${METRICS_PORT}:${METRICS_PORT_INTERNAL}
+    environment:
+      - EXPLORVIZ_DB_ADDR=${CLICKHOUSE_HOSTNAME}:${CLICKHOUSE_NATIVE_PORT_INTERNAL}
+      - EXPLORVIZ_PORT=${METRICS_PORT_INTERNAL}
+    deploy:
+      mode: replicated
+      replicas: ${METRICS_REPLICAS}
+
   log-service:
     image: explorviz/log-service:${LOG_SERVICE_IMAGE_TAG}
     hostname: ${LOG_HOSTNAME}
