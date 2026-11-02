@@ -15,7 +15,7 @@ services:
   otel-collector:
     image: explorviz/otel-collector
     hostname: ${COLLECTOR_HOSTNAME}
-    profiles: ["env"]
+    profiles: ["otel"]
     command: ["--config=/etc/otel-collector-config.yaml"]
     # command: ["--config=/etc/otel-collector-record-config.yaml"]
     # command: ["--config=/etc/otel-collector-replay-config.yaml"]
@@ -41,7 +41,7 @@ services:
     hostname: ${TRACE_HOSTNAME}
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    profiles: ["backend"]
+    profiles: ["otel"]
     env_file:
       - path: ./.env
       - path: ./.env-custom
@@ -63,7 +63,7 @@ services:
     hostname: ${METRICS_HOSTNAME}
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    profiles: ["backend"]
+    profiles: ["otel"]
     env_file:
       - path: ./.env
       - path: ./.env-custom
@@ -85,7 +85,7 @@ services:
     hostname: ${LOG_HOSTNAME}
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    profiles: ["backend"]
+    profiles: ["otel"]
     env_file:
       - path: ./.env
       - path: ./.env-custom

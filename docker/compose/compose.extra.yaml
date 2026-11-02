@@ -90,7 +90,7 @@ services:
   clickhouse:
     image: clickhouse/clickhouse-server:26.7
     hostname: ${CLICKHOUSE_HOSTNAME}
-    profiles: ["env"]
+    profiles: ["otel"]
     restart: always
     ports:
       - ${CLICKHOUSE_HTTP_PORT}:8123
@@ -250,6 +250,7 @@ services:
   vs-code-backend:
     image: explorviz/vs-code-backend:${VSCODE_IMAGE_TAG}
     hostname: ${VSCODE_HOSTNAME}
+    profiles: ["vs-code"]
     environment:
       - EXPERIMENT_MODE=true
     ports:
