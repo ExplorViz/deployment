@@ -63,7 +63,7 @@ services:
   ## Neo4j
 
   neo4j:
-    image: neo4j:2026.07.1
+    image: neo4j:2026.10.1
     hostname: ${NEO4J_HOSTNAME}
     profiles: ["env"]
     ports:
@@ -80,10 +80,13 @@ services:
       - NEO4J_apoc_import_file_enabled=true
       - NEO4J_apoc_initializer_neo4j_0=CALL apoc.cypher.runSchemaFile("init.cypher")
     healthcheck:
-      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider localhost:7474 || exit 1"]
+      # Check the database over Bolt, which is also used by landscape-service.
+      test: ["CMD", "cypher-shell", "--address", "bolt://127.0.0.1:7687", "--database", "neo4j", "--non-interactive", "RETURN 1;"]
       interval: 15s
-      timeout: 10s
+      timeout: 30s
       retries: 10
+      # Plugin downloads and database recovery can delay readiness on startup.
+      start_period: 5m
 
   ## ClickHouse ##
 
@@ -221,7 +224,10 @@ services:
 
       # network config
       KC_HTTP_HOST: "0.0.0.0"
-      KC_HOSTNAME_SCHEME: http
+      KC_PROXY_HEADERS: xforwarded
+      KC_HOSTNAME: ${PUBLIC_URL}
+      # Keycloak substitutes this variable in the initial realm import.
+      PUBLIC_URL: ${PUBLIC_URL}
     networks:
       - default
 

@@ -122,14 +122,16 @@ services:
     ports:
       - ${USER_PORT}:${USER_PORT_INTERNAL}
     environment:
+      # Browser traffic reaches this service through the same-origin frontend.
+      - QUARKUS_HTTP_CORS_ENABLED=false
       - QUARKUS_OIDC_ENABLED=${KEYCLOAK_AUTH_ENABLED}
       - INIT_TOKEN_ENABLED=true
       - INIT_TOKEN_VALUE=mytokenvalue
       - INIT_TOKEN_SECRET=mytokensecret
-      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://${LOCALHOST_ALIAS}:${MONGO_USER_SERV_PORT}
+      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo-user:27017
       - EXPLORVIZ_LOG_LVL=DEBUG
       - QUARKUS_OIDC_AUTH_SERVER_URL=http://${KEYCLOAK_HOSTNAME}:${KEYCLOAK_PORT_INTERNAL}/realms/${KEYCLOAK_REALM}
-      - QUARKUS_OIDC_TOKEN_ISSUER=http://localhost:${KEYCLOAK_PORT}/realms/${KEYCLOAK_REALM}
+      - QUARKUS_OIDC_TOKEN_ISSUER=${PUBLIC_URL}/realms/${KEYCLOAK_REALM}
       - QUARKUS_OIDC_JWKS_PATH=/protocol/openid-connect/certs
       - QUARKUS_OIDC_CLIENT_ID=${USER_SERVICE_KC_CLIENT}
 
@@ -151,6 +153,8 @@ services:
     ports:
       - ${LANDSCAPE_PORT}:${LANDSCAPE_PORT_INTERNAL}
       - ${LANDSCAPE_GRPC_PORT}:9000
+    environment:
+      - QUARKUS_HTTP_CORS_ENABLED=false
 
   code-analyzer:
     hostname: ${CODE_ANALYZER_HOSTNAME}
@@ -166,6 +170,7 @@ services:
       - ${CODE_ANALYZER_PORT}:${CODE_ANALYZER_PORT_INTERNAL}
     environment:
       - EXPLORVIZ_LOG_LVL=DEBUG
+      - QUARKUS_HTTP_CORS_ENABLED=false
 
   chatbot-service:
     hostname: ${COPILOT_HOSTNAME}

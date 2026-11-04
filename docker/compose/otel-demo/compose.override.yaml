@@ -1,0 +1,18 @@
+# Local overrides for the imported OpenTelemetry Demo.
+# Must be a sibling override file: Compose rejects redefining an imported
+# service in the same file that uses `include`.
+#
+# `docker compose up` loads this automatically. If you pass `-f compose.yaml`
+# explicitly, also pass `-f compose.override.yaml`.
+
+services:
+  # Overrides / merges configuration from the included external compose
+  otel-collector:
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./demo-collector-config.yaml:/etc/otelcol-config-extras.yml
+
+  frontend-proxy:
+    ports: !override
+      - 18080:8080
