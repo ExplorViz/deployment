@@ -64,6 +64,8 @@ services:
 
   neo4j:
     image: neo4j:2026.10.1
+    entrypoint: ["tini", "-g", "--", "/bin/sh", "/startup/cached-plugins.sh"]
+    command: ["neo4j"]
     hostname: ${NEO4J_HOSTNAME}
     profiles: ["env"]
     ports:
@@ -71,12 +73,16 @@ services:
       - ${NEO4J_BOLT_PORT}:7687
     volumes:
       - neo4j:/data
+      - neo4j-plugins:/plugins
+      - ./configurations/neo4j/cached-plugins.sh:/startup/cached-plugins.sh:ro
       - ./configurations/neo4j/init.cypher:/import/init.cypher
     environment:
       - NEO4J_AUTH=none
       - NEO4J_dbms_usage__report_enabled=false
       - NEO4J_db_query_default__language=CYPHER_25
       - NEO4J_PLUGINS=["apoc", "apoc-extended"]
+      # Also needed when the wrapper skips the plugin installer on cached starts.
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*
       - NEO4J_apoc_import_file_enabled=true
       - NEO4J_apoc_initializer_neo4j_0=CALL apoc.cypher.runSchemaFile("init.cypher")
     healthcheck:
@@ -85,7 +91,7 @@ services:
       interval: 15s
       timeout: 30s
       retries: 10
-      # Plugin downloads and database recovery can delay readiness on startup.
+      # Initial plugin downloads and database recovery can delay readiness.
       start_period: 5m
 
   ## ClickHouse ##
@@ -284,6 +290,9 @@ volumes:
     name: explorviz-mongo-user-config
   neo4j:
     name: neo4j
+  neo4j-plugins:
+    # Keep this version aligned with the image to avoid reusing incompatible JARs.
+    name: explorviz-neo4j-plugins-2026.10.1
   clickhouse-data:
     name: explorviz-clickhouse-data
   clickhouse-logs:
