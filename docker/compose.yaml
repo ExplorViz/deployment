@@ -162,6 +162,8 @@ services:
       - "host.docker.internal:host-gateway"
     profiles: ["backend"]
     image: explorviz/code-analyzer:${CODE_ANALYZER_IMAGE_TAG}
+    volumes:
+      - ${CODE_ANALYZER_REPOSITORIES_STORAGE:-code-analyzer-repositories}:/home/jboss/cloned-repositories
     env_file:
       - path: ./.env
       - path: ./.env-custom
@@ -181,3 +183,6 @@ services:
     env_file: ./.llm-api-keys.env
     ports:
       - ${COPILOT_PORT}:${COPILOT_PORT_INTERNAL}
+
+volumes:
+  code-analyzer-repositories:
