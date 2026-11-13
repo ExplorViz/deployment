@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose -f explorviz.yaml convert --chart --pvc-request-size 1Gi
+    kompose.version: 1.34.0 (cbf2835db)
+  labels:
+    io.kompose.service: mongo-user
+  name: mongo-user
+spec:
+  ports:
+    - name: '27017'
+      port: 27017
+      targetPort: 27017
+  selector:
+    io.kompose.service: mongo-user

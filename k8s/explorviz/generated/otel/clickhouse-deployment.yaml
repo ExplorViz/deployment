@@ -1,0 +1,391 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose -f explorviz.yaml convert --chart --pvc-request-size 1Gi
+    kompose.version: 1.34.0 (cbf2835db)
+  labels:
+    io.kompose.service: clickhouse
+  name: clickhouse
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: clickhouse
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose -f explorviz.yaml convert --chart --pvc-request-size 1Gi
+        kompose.version: 1.34.0 (cbf2835db)
+        checksum/config: 9e5bee858d040cac9a8044bf6defc561d5671f0838118ae12d81b6b80ec0f4f2
+      labels:
+        io.kompose.service: clickhouse
+    spec:
+      containers:
+        - image: clickhouse/clickhouse-server:26.7
+          name: clickhouse
+          ports:
+            - containerPort: 8123
+              protocol: TCP
+            - containerPort: 9000
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /var/lib/clickhouse
+              name: clickhouse-data
+            - mountPath: /var/log/clickhouse-server
+              name: clickhouse-logs
+            - name: clickhouse-config-0
+              mountPath: /docker-entrypoint-initdb.d
+              readOnly: true
+          env:
+            - name: CLICKHOUSE_SKIP_USER_SETUP
+              value: '1'
+          readinessProbe:
+            exec:
+              command:
+                - /bin/sh
+                - -ec
+                - wget --no-verbose --tries=1 --spider http://localhost:8123/?query=SELECT%201 || exit 1
+            periodSeconds: 30
+            timeoutSeconds: 30
+            failureThreshold: 3
+      restartPolicy: Always
+      volumes:
+        - name: clickhouse-data
+          persistentVolumeClaim:
+            claimName: clickhouse-data
+        - name: clickhouse-logs
+          persistentVolumeClaim:
+            claimName: clickhouse-logs
+        - name: clickhouse-config-0
+          configMap:
+            name: clickhouse-config-0
+            defaultMode: 292
+            items:
+              - key: file-0
+                path: logs_table.sql
+              - key: file-1
+                path: metrics_exp_histogram_table.sql
+              - key: file-2
+                path: metrics_gauge_table.sql
+              - key: file-3
+                path: metrics_histogram_table.sql
+              - key: file-4
+                path: metrics_sum_table.sql
+              - key: file-5
+                path: traces_table.sql
+      enableServiceLinks: false
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: clickhouse-config-0
+data:
+  file-0: |
+    -- Modified version of the schema from the ClickHouse exporter:
+    -- https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/clickhouseexporter/internal/sqltemplates/logs_table.sql
+
+    CREATE TABLE IF NOT EXISTS otel_logs (
+        `Timestamp` DateTime64(9) COMMENT 'Event timestamp with nanosecond precision' CODEC(Delta(8), ZSTD(1)),
+        `TraceId` String COMMENT 'W3C trace identifier' CODEC(ZSTD(1)),
+        `SpanId` String COMMENT 'W3C span identifier' CODEC(ZSTD(1)),
+        `TraceFlags` UInt8 COMMENT 'W3C trace flags',
+        `SeverityText` LowCardinality(String) COMMENT 'Log severity as text' CODEC(ZSTD(1)),
+        `SeverityNumber` UInt8 COMMENT 'Log severity as number (1-24)',
+        `ServiceName` LowCardinality(String) COMMENT 'Service that emitted the log' CODEC(ZSTD(1)),
+        `Body` String COMMENT 'Log message body' CODEC(ZSTD(1)),
+        `ResourceSchemaUrl` LowCardinality(String) COMMENT 'Schema URL for the resource' CODEC(ZSTD(1)),
+        `ResourceAttributes` Map(LowCardinality(String), String) COMMENT 'Resource attributes as key-value pairs' CODEC(ZSTD(1)),
+        `ScopeSchemaUrl` LowCardinality(String) COMMENT 'Schema URL for the instrumentation scope' CODEC(ZSTD(1)),
+        `ScopeName` String COMMENT 'Instrumentation scope name' CODEC(ZSTD(1)),
+        `ScopeVersion` LowCardinality(String) COMMENT 'Instrumentation scope version' CODEC(ZSTD(1)),
+        `ScopeAttributes` Map(LowCardinality(String), String) COMMENT 'Instrumentation scope attributes' CODEC(ZSTD(1)),
+        `LogAttributes` Map(LowCardinality(String), String) COMMENT 'Log record attributes' CODEC(ZSTD(1)),
+        `EventName` String COMMENT 'Event name for log records representing events' CODEC(ZSTD(1)),
+
+        -- Custom columns for ExplorViz
+        `LogId` String DEFAULT toString(generateUUIDv4()),
+
+        -- Materialized columns for ExplorViz
+        Timestamp_ns Int64 MATERIALIZED toUnixTimestamp64Nano(Timestamp),
+        CommitHash String MATERIALIZED LogAttributes['vcs.ref.head.revision'],
+        ExplorvizEntityId String MATERIALIZED LogAttributes['explorviz.entity.id'],
+        ExplorvizTelemetryKey String MATERIALIZED LogAttributes['explorviz.entity.telemetrykey'],
+        ExplorvizServiceName String MATERIALIZED LogAttributes['explorviz.service.name'],
+        ExplorvizTokenId String MATERIALIZED LogAttributes['explorviz.token.id'],
+        ExplorvizFuncName String MATERIALIZED LogAttributes['explorviz.code.function.name'],
+
+        INDEX idx_trace_id TraceId TYPE text(tokenizer = 'array'),
+        INDEX idx_res_attr_key mapKeys(ResourceAttributes) TYPE text(tokenizer = 'array', preprocessor = lower(mapKeys(ResourceAttributes))),
+        INDEX idx_res_attr_value mapValues(ResourceAttributes) TYPE text(tokenizer = 'array', preprocessor = lower(mapValues(ResourceAttributes))),
+        INDEX idx_scope_attr_key mapKeys(ScopeAttributes) TYPE text(tokenizer = 'array', preprocessor = lower(mapKeys(ScopeAttributes))),
+        INDEX idx_scope_attr_value mapValues(ScopeAttributes) TYPE text(tokenizer = 'array', preprocessor = lower(mapValues(ScopeAttributes))),
+        INDEX idx_log_attr_key mapKeys(LogAttributes) TYPE text(tokenizer = 'array', preprocessor = lower(mapKeys(LogAttributes))),
+        INDEX idx_log_attr_value mapValues(LogAttributes) TYPE text(tokenizer = 'array', preprocessor = lower(mapValues(LogAttributes))),
+        INDEX idx_lower_body Body TYPE text(tokenizer = 'splitByNonAlpha', preprocessor = lower(Body))
+    ) ENGINE = MergeTree
+    PARTITION BY toDate(Timestamp)
+    ORDER BY (toStartOfFiveMinutes(Timestamp), ServiceName, Timestamp)
+    SETTINGS index_granularity = 8192, ttl_only_drop_parts = 1
+  file-1: |
+    -- Modified version of the schema from the ClickHouse exporter:
+    -- https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/clickhouseexporter/internal/sqltemplates/metrics_exp_histogram_table.sql
+
+    CREATE TABLE IF NOT EXISTS otel_metrics_exponential_histogram (
+        ResourceAttributes Map(LowCardinality(String), String) CODEC(ZSTD(1)),
+        ResourceSchemaUrl String CODEC(ZSTD(1)),
+        ScopeName String CODEC(ZSTD(1)),
+        ScopeVersion String CODEC(ZSTD(1)),
+        ScopeAttributes Map(LowCardinality(String), String) CODEC(ZSTD(1)),
+        ScopeDroppedAttrCount UInt32 CODEC(ZSTD(1)),
+        ScopeSchemaUrl String CODEC(ZSTD(1)),
+        ServiceName LowCardinality(String) CODEC(ZSTD(1)),
+        MetricName LowCardinality(String) CODEC(ZSTD(1)),
+        MetricDescription String CODEC(ZSTD(1)),
+        MetricUnit String CODEC(ZSTD(1)),
+        Attributes Map(LowCardinality(String), String) CODEC(ZSTD(1)),
+        StartTimeUnix DateTime CODEC(Delta, ZSTD(1)),
+        TimeUnix DateTime CODEC(Delta, ZSTD(1)),
+        Count UInt64 CODEC(Delta, ZSTD(1)),
+        Sum Float64 CODEC(ZSTD(1)),
+        Scale Int32 CODEC(ZSTD(1)),
+        ZeroCount UInt64 CODEC(ZSTD(1)),
+        PositiveOffset Int32 CODEC(ZSTD(1)),
+        PositiveBucketCounts Array(UInt64) CODEC(ZSTD(1)),
+        NegativeOffset Int32 CODEC(ZSTD(1)),
+        NegativeBucketCounts Array(UInt64) CODEC(ZSTD(1)),
+        Exemplars Nested (
+            FilteredAttributes Map(LowCardinality(String), String),
+            TimeUnix DateTime,
+            Value Float64,
+            SpanId String,
+            TraceId String
+        ) CODEC(ZSTD(1)),
+        Flags UInt32  CODEC(ZSTD(1)),
+        Min Float64 CODEC(ZSTD(1)),
+        Max Float64 CODEC(ZSTD(1)),
+        AggregationTemporality Int32 CODEC(ZSTD(1)),
+
+        -- Materialized columns for ExplorViz
+        Timestamp_ns Int64 MATERIALIZED toUnixTimestamp64Nano(toDateTime64(TimeUnix, 9, 'UTC')),
+        CommitHash String MATERIALIZED Attributes['vcs.ref.head.revision'],
+        ExplorvizTelemetryKey String MATERIALIZED Attributes['explorviz.entity.telemetrykey'],
+        ExplorvizServiceName String MATERIALIZED Attributes['explorviz.service.name'],
+        ExplorvizTokenId String MATERIALIZED Attributes['explorviz.token.id'],
+
+        INDEX idx_res_attr_key mapKeys(ResourceAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_res_attr_value mapValues(ResourceAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_scope_attr_key mapKeys(ScopeAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_scope_attr_value mapValues(ScopeAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_attr_key mapKeys(Attributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_attr_value mapValues(Attributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_time_minmax TimeUnix TYPE minmax GRANULARITY 1
+        ) ENGINE = MergeTree
+        PARTITION BY toDate(TimeUnix)
+        ORDER BY (ServiceName, MetricName, toStartOfHour(TimeUnix), cityHash64(Attributes), TimeUnix)
+        SETTINGS index_granularity=8192, ttl_only_drop_parts = 1
+  file-2: |
+    -- Modified version of the schema from the ClickHouse exporter:
+    -- https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/clickhouseexporter/internal/sqltemplates/metrics_gauge_table.sql
+
+    CREATE TABLE IF NOT EXISTS otel_metrics_gauge (
+        ResourceAttributes Map(LowCardinality(String), String) CODEC(ZSTD(1)),
+        ResourceSchemaUrl String CODEC(ZSTD(1)),
+        ScopeName String CODEC(ZSTD(1)),
+        ScopeVersion String CODEC(ZSTD(1)),
+        ScopeAttributes Map(LowCardinality(String), String) CODEC(ZSTD(1)),
+        ScopeDroppedAttrCount UInt32 CODEC(ZSTD(1)),
+        ScopeSchemaUrl String CODEC(ZSTD(1)),
+        ServiceName LowCardinality(String) CODEC(ZSTD(1)),
+        MetricName LowCardinality(String) CODEC(ZSTD(1)),
+        MetricDescription String CODEC(ZSTD(1)),
+        MetricUnit String CODEC(ZSTD(1)),
+        Attributes Map(LowCardinality(String), String) CODEC(ZSTD(1)),
+        StartTimeUnix DateTime CODEC(Delta, ZSTD(1)),
+        TimeUnix DateTime CODEC(Delta, ZSTD(1)),
+        Value Float64 CODEC(ZSTD(1)),
+        Flags UInt32 CODEC(ZSTD(1)),
+        Exemplars Nested (
+            FilteredAttributes Map(LowCardinality(String), String),
+            TimeUnix DateTime,
+            Value Float64,
+            SpanId String,
+            TraceId String
+        ) CODEC(ZSTD(1)),
+
+        -- Materialized columns for ExplorViz
+        Timestamp_ns Int64 MATERIALIZED toUnixTimestamp64Nano(toDateTime64(TimeUnix, 9, 'UTC')),
+        CommitHash String MATERIALIZED Attributes['vcs.ref.head.revision'],
+        ExplorvizTelemetryKey String MATERIALIZED Attributes['explorviz.entity.telemetrykey'],
+        ExplorvizServiceName String MATERIALIZED Attributes['explorviz.service.name'],
+        ExplorvizTokenId String MATERIALIZED Attributes['explorviz.token.id'],
+
+        INDEX idx_res_attr_key mapKeys(ResourceAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_res_attr_value mapValues(ResourceAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_scope_attr_key mapKeys(ScopeAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_scope_attr_value mapValues(ScopeAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_attr_key mapKeys(Attributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_attr_value mapValues(Attributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_time_minmax TimeUnix TYPE minmax GRANULARITY 1
+        ) ENGINE = MergeTree
+        PARTITION BY toDate(TimeUnix)
+        ORDER BY (ServiceName, MetricName, toStartOfHour(TimeUnix), cityHash64(Attributes), TimeUnix)
+        SETTINGS index_granularity=8192, ttl_only_drop_parts = 1
+  file-3: |
+    -- Modified version of the schema from the ClickHouse exporter:
+    -- https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/clickhouseexporter/internal/sqltemplates/metrics_histogram_table.sql
+
+    CREATE TABLE IF NOT EXISTS otel_metrics_histogram (
+        ResourceAttributes Map(LowCardinality(String), String) CODEC(ZSTD(1)),
+        ResourceSchemaUrl String CODEC(ZSTD(1)),
+        ScopeName String CODEC(ZSTD(1)),
+        ScopeVersion String CODEC(ZSTD(1)),
+        ScopeAttributes Map(LowCardinality(String), String) CODEC(ZSTD(1)),
+        ScopeDroppedAttrCount UInt32 CODEC(ZSTD(1)),
+        ScopeSchemaUrl String CODEC(ZSTD(1)),
+        ServiceName LowCardinality(String) CODEC(ZSTD(1)),
+        MetricName LowCardinality(String) CODEC(ZSTD(1)),
+        MetricDescription String CODEC(ZSTD(1)),
+        MetricUnit String CODEC(ZSTD(1)),
+        Attributes Map(LowCardinality(String), String) CODEC(ZSTD(1)),
+        StartTimeUnix DateTime CODEC(Delta, ZSTD(1)),
+        TimeUnix DateTime CODEC(Delta, ZSTD(1)),
+        Count UInt64 CODEC(Delta, ZSTD(1)),
+        Sum Float64 CODEC(ZSTD(1)),
+        BucketCounts Array(UInt64) CODEC(ZSTD(1)),
+        ExplicitBounds Array(Float64) CODEC(ZSTD(1)),
+        Exemplars Nested (
+            FilteredAttributes Map(LowCardinality(String), String),
+            TimeUnix DateTime,
+            Value Float64,
+            SpanId String,
+            TraceId String
+        ) CODEC(ZSTD(1)),
+        Flags UInt32 CODEC(ZSTD(1)),
+        Min Float64 CODEC(ZSTD(1)),
+        Max Float64 CODEC(ZSTD(1)),
+        AggregationTemporality Int32 CODEC(ZSTD(1)),
+
+        -- Materialized columns for ExplorViz
+        Timestamp_ns Int64 MATERIALIZED toUnixTimestamp64Nano(toDateTime64(TimeUnix, 9, 'UTC')),
+        CommitHash String MATERIALIZED Attributes['vcs.ref.head.revision'],
+        ExplorvizTelemetryKey String MATERIALIZED Attributes['explorviz.entity.telemetrykey'],
+        ExplorvizServiceName String MATERIALIZED Attributes['explorviz.service.name'],
+        ExplorvizTokenId String MATERIALIZED Attributes['explorviz.token.id'],
+
+        INDEX idx_res_attr_key mapKeys(ResourceAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_res_attr_value mapValues(ResourceAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_scope_attr_key mapKeys(ScopeAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_scope_attr_value mapValues(ScopeAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_attr_key mapKeys(Attributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_attr_value mapValues(Attributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_time_minmax TimeUnix TYPE minmax GRANULARITY 1
+        ) ENGINE = MergeTree
+        PARTITION BY toDate(TimeUnix)
+        ORDER BY (ServiceName, MetricName, toStartOfHour(TimeUnix), cityHash64(Attributes), TimeUnix)
+        SETTINGS index_granularity=8192, ttl_only_drop_parts = 1
+  file-4: |
+    -- Modified version of the schema from the ClickHouse exporter:
+    -- https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/clickhouseexporter/internal/sqltemplates/metrics_sum_table.sql
+
+    CREATE TABLE IF NOT EXISTS otel_metrics_sum (
+        ResourceAttributes Map(LowCardinality(String), String) CODEC(ZSTD(1)),
+        ResourceSchemaUrl String CODEC(ZSTD(1)),
+        ScopeName String CODEC(ZSTD(1)),
+        ScopeVersion String CODEC(ZSTD(1)),
+        ScopeAttributes Map(LowCardinality(String), String) CODEC(ZSTD(1)),
+        ScopeDroppedAttrCount UInt32 CODEC(ZSTD(1)),
+        ScopeSchemaUrl String CODEC(ZSTD(1)),
+        ServiceName LowCardinality(String) CODEC(ZSTD(1)),
+        MetricName LowCardinality(String) CODEC(ZSTD(1)),
+        MetricDescription String CODEC(ZSTD(1)),
+        MetricUnit String CODEC(ZSTD(1)),
+        Attributes Map(LowCardinality(String), String) CODEC(ZSTD(1)),
+        StartTimeUnix DateTime CODEC(Delta, ZSTD(1)),
+        TimeUnix DateTime CODEC(Delta, ZSTD(1)),
+        Value Float64 CODEC(ZSTD(1)),
+        Flags UInt32  CODEC(ZSTD(1)),
+        Exemplars Nested (
+            FilteredAttributes Map(LowCardinality(String), String),
+            TimeUnix DateTime,
+            Value Float64,
+            SpanId String,
+            TraceId String
+        ) CODEC(ZSTD(1)),
+        AggregationTemporality Int32 CODEC(ZSTD(1)),
+        IsMonotonic Boolean CODEC(Delta, ZSTD(1)),
+
+        -- Materialized columns for ExplorViz
+        Timestamp_ns Int64 MATERIALIZED toUnixTimestamp64Nano(toDateTime64(TimeUnix, 9, 'UTC')),
+        CommitHash String MATERIALIZED Attributes['vcs.ref.head.revision'],
+        ExplorvizTelemetryKey String MATERIALIZED Attributes['explorviz.entity.telemetrykey'],
+        ExplorvizServiceName String MATERIALIZED Attributes['explorviz.service.name'],
+        ExplorvizTokenId String MATERIALIZED Attributes['explorviz.token.id'],
+
+        INDEX idx_res_attr_key mapKeys(ResourceAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_res_attr_value mapValues(ResourceAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_scope_attr_key mapKeys(ScopeAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_scope_attr_value mapValues(ScopeAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_attr_key mapKeys(Attributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_attr_value mapValues(Attributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_time_minmax TimeUnix TYPE minmax GRANULARITY 1
+        ) ENGINE = MergeTree
+        PARTITION BY toDate(TimeUnix)
+        ORDER BY (ServiceName, MetricName, toStartOfHour(TimeUnix), cityHash64(Attributes), TimeUnix)
+        SETTINGS index_granularity=8192, ttl_only_drop_parts = 1
+  file-5: |
+    -- Modified version of the schema from the ClickHouse exporter:
+    -- https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/clickhouseexporter/internal/sqltemplates/traces_table.sql
+
+    CREATE TABLE IF NOT EXISTS otel_traces (
+        Timestamp DateTime64(9) CODEC(Delta, ZSTD(1)),
+        TraceId String CODEC(ZSTD(1)),
+        SpanId String CODEC(ZSTD(1)),
+        ParentSpanId String CODEC(ZSTD(1)),
+        TraceState String CODEC(ZSTD(1)),
+        SpanName LowCardinality(String) CODEC(ZSTD(1)),
+        SpanKind LowCardinality(String) CODEC(ZSTD(1)),
+        ServiceName LowCardinality(String) CODEC(ZSTD(1)),
+        ResourceAttributes Map(LowCardinality(String), String) CODEC(ZSTD(1)),
+        ScopeName String CODEC(ZSTD(1)),
+        ScopeVersion String CODEC(ZSTD(1)),
+        SpanAttributes Map(LowCardinality(String), String) CODEC(ZSTD(1)),
+        Duration UInt64 CODEC(ZSTD(1)),
+        StatusCode LowCardinality(String) CODEC(ZSTD(1)),
+        StatusMessage String CODEC(ZSTD(1)),
+        Events Nested (
+            Timestamp DateTime64(9),
+            Name LowCardinality(String),
+            Attributes Map(LowCardinality(String), String)
+        ) CODEC(ZSTD(1)),
+        Links Nested (
+            TraceId String,
+            SpanId String,
+            TraceState String,
+            Attributes Map(LowCardinality(String), String)
+        ) CODEC(ZSTD(1)),
+
+        -- Materialized columns for ExplorViz
+        Timestamp_ns Int64 MATERIALIZED toUnixTimestamp64Nano(Timestamp),
+        CommitHash String MATERIALIZED SpanAttributes['vcs.ref.head.revision'],
+        ExplorvizEntityId String MATERIALIZED SpanAttributes['explorviz.entity.id'],
+        ExplorvizTelemetryKey String MATERIALIZED SpanAttributes['explorviz.entity.telemetrykey'],
+        ExplorvizServiceName String MATERIALIZED SpanAttributes['explorviz.service.name'],
+        ExplorvizTokenId String MATERIALIZED SpanAttributes['explorviz.token.id'],
+        ExplorvizFuncName String MATERIALIZED SpanAttributes['explorviz.code.function.name'],
+
+        INDEX idx_trace_id TraceId TYPE bloom_filter(0.001) GRANULARITY 1,
+        INDEX idx_res_attr_key mapKeys(ResourceAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_res_attr_value mapValues(ResourceAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_span_attr_key mapKeys(SpanAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_span_attr_value mapValues(SpanAttributes) TYPE bloom_filter(0.01) GRANULARITY 1,
+        INDEX idx_duration Duration TYPE minmax GRANULARITY 1
+    ) ENGINE = MergeTree
+    PARTITION BY toDate(Timestamp)
+    ORDER BY (ServiceName, SpanName, toDateTime(Timestamp))
+    SETTINGS index_granularity=8192, ttl_only_drop_parts = 1

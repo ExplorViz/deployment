@@ -1,0 +1,18 @@
+# Compose profiles to deploy. Every folder under generated/ needs an entry.
+profiles:
+  env: true
+  otel: true
+  backend: true
+  frontend: true
+  generator: true
+  monitoring: false
+  auth: false
+  chatbot: false
+  vs-code: false
+
+clusterDomain: cluster.local
+
+keycloak:
+  # Browser-facing origin of the frontend. Also used as PUBLIC_URL by Keycloak's
+  # realm import and as the user-service's expected token issuer.
+  publicURL: http://localhost:8080
