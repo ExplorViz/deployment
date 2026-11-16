@@ -54,9 +54,6 @@ services:
     environment:
       - EXPLORVIZ_DB_ADDR=${CLICKHOUSE_HOSTNAME}:${CLICKHOUSE_NATIVE_PORT_INTERNAL}
       - EXPLORVIZ_PORT=${TRACE_PORT_INTERNAL}
-    deploy:
-      mode: replicated
-      replicas: ${TRACE_REPLICAS}
 
   metrics-service:
     image: explorviz/metrics-service:${METRICS_SERVICE_IMAGE_TAG}
@@ -76,9 +73,6 @@ services:
     environment:
       - EXPLORVIZ_DB_ADDR=${CLICKHOUSE_HOSTNAME}:${CLICKHOUSE_NATIVE_PORT_INTERNAL}
       - EXPLORVIZ_PORT=${METRICS_PORT_INTERNAL}
-    deploy:
-      mode: replicated
-      replicas: ${METRICS_REPLICAS}
 
   log-service:
     image: explorviz/log-service:${LOG_SERVICE_IMAGE_TAG}
@@ -98,9 +92,6 @@ services:
     environment:
       - EXPLORVIZ_DB_ADDR=${CLICKHOUSE_HOSTNAME}:${CLICKHOUSE_NATIVE_PORT_INTERNAL}
       - EXPLORVIZ_PORT=${LOG_PORT_INTERNAL}
-    deploy:
-      mode: replicated
-      replicas: ${LOG_REPLICAS}
 
   user-service:
     hostname: ${USER_HOSTNAME}
