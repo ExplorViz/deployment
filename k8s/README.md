@@ -17,14 +17,14 @@ After Helm finishes, the script waits for a ready pod for each enabled service b
 | Service | Default local port | Environment variable |
 | --- | --- | --- |
 | Frontend | 8080 | `EXPLORVIZ_FRONTEND_LOCAL_PORT` |
-| OTLP/gRPC collector | 55678 | `EXPLORVIZ_OTLP_LOCAL_PORT` |
+| OTLP/gRPC collector | 4317 | `EXPLORVIZ_OTLP_LOCAL_PORT` |
 | Trace generator | 8079 | `EXPLORVIZ_GENERATOR_LOCAL_PORT` |
 | Grafana | 3000 | `EXPLORVIZ_GRAFANA_LOCAL_PORT` |
 | Prometheus | 9090 | `EXPLORVIZ_PROMETHEUS_LOCAL_PORT` |
 
 If a port is already in use, override it when starting the script, for example `EXPLORVIZ_FRONTEND_LOCAL_PORT=8088 ./k8s/run.sh`. Keep the terminal open while using the forwarded ports. Press Ctrl+C to close the forwards and leave the cluster running.
 
-Open the frontend at `http://localhost:8080`. Send OTLP/gRPC telemetry to `localhost:55678` from the host or `otel-collector:55678` from the release namespace. Set the chart's `clusterDomain` if your cluster uses a DNS domain other than `cluster.local`.
+Open the frontend at `http://localhost:8080`. Send OTLP/gRPC telemetry to `localhost:4317` from the host or `otel-collector:4317` from the release namespace. Set the chart's `clusterDomain` if your cluster uses a DNS domain other than `cluster.local`.
 
 Kafka topic creation runs as a Job. The collector and Kafka-dependent backends wait for the topics before starting. View the initializer logs with `kubectl --context kind-explorviz -n explorviz logs -l io.kompose.service=init-kafka`.
 

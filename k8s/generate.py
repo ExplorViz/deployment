@@ -95,6 +95,7 @@ def prepare_conversion(model):
     frontend_env = services["frontend"]["environment"]
     for variable, name in {
         "CODE_ANALYZER_URL": "code-analyzer",
+        "COLLAB_SERV_URL": "collaboration-service",
         "COPILOT_SERV_URL": "chatbot-service",
         "KEYCLOAK_URL": "keycloak",
         "LANDSCAPE_SERV_URL": "landscape-service",
@@ -108,6 +109,10 @@ def prepare_conversion(model):
         frontend_env[variable] = f"http://{name}.__SERVICE_DNS_SUFFIX__:{port}"
     user_env["QUARKUS_OIDC_TOKEN_ISSUER"] = (
         "__KEYCLOAK_PUBLIC_URL__/realms/" + user_env["KEYCLOAK_REALM"]
+    )
+    collaboration_env = services["collaboration-service"]["environment"]
+    collaboration_env["KEYCLOAK_ISSUER"] = (
+        "__KEYCLOAK_PUBLIC_URL__/realms/" + collaboration_env["KEYCLOAK_REALM"]
     )
     for service in services.values():
         # PUBLIC_URL is the browser-facing origin, which is set by the chart.
@@ -198,6 +203,7 @@ def environment(name, service):
                 "name": AUTH_SECRET, "key": AUTH_KEYS[key],
             }}}
         elif (name, key) in {("frontend", "KEYCLOAK_AUTH_ENABLED"),
+                             ("collaboration-service", "KEYCLOAK_AUTH_ENABLED"),
                              ("user-service", "QUARKUS_OIDC_ENABLED")}:
             yield {"name": key, "value": "__KEYCLOAK_AUTH_ENABLED__"}
         else:

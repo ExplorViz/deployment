@@ -86,7 +86,7 @@ trap 'exit 0' INT TERM
 
 for mapping in \
     "frontend:${EXPLORVIZ_FRONTEND_LOCAL_PORT:-8080}:80" \
-    "otel-collector:${EXPLORVIZ_OTLP_LOCAL_PORT:-55678}:55678" \
+    "otel-collector:${EXPLORVIZ_OTLP_LOCAL_PORT:-4317}:4317" \
     "trace-generator:${EXPLORVIZ_GENERATOR_LOCAL_PORT:-8079}:8079" \
     "grafana:${EXPLORVIZ_GRAFANA_LOCAL_PORT:-3000}:3000" \
     "prometheus:${EXPLORVIZ_PROMETHEUS_LOCAL_PORT:-9090}:9090"; do

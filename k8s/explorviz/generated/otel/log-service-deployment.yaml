@@ -45,6 +45,14 @@ spec:
               value: '8078'
             - name: CODE_ANALYZER_REPOSITORIES_STORAGE
               value: code-analyzer-repositories
+            - name: COLLABORATION_HOSTNAME
+              value: collaboration-service
+            - name: COLLABORATION_PORT
+              value: '2567'
+            - name: COLLABORATION_PORT_INTERNAL
+              value: '2567'
+            - name: COLLABORATION_SERVICE_IMAGE_TAG
+              value: latest
             - name: COLLECTOR_HOSTNAME
               value: otel-collector
             - name: COPILOT_HOSTNAME
@@ -113,8 +121,6 @@ spec:
               value: '8083'
             - name: LOG_PORT_INTERNAL
               value: '8080'
-            - name: LOG_REPLICAS
-              value: '1'
             - name: LOG_SERVICE_IMAGE_TAG
               value: latest
             - name: METRICS_HOSTNAME
@@ -123,8 +129,6 @@ spec:
               value: '8082'
             - name: METRICS_PORT_INTERNAL
               value: '8080'
-            - name: METRICS_REPLICAS
-              value: '1'
             - name: METRICS_SERVICE_IMAGE_TAG
               value: latest
             - name: MONGO_USER_HOSTNAME
@@ -148,7 +152,7 @@ spec:
             - name: NEO4J_URI
               value: bolt://neo4j:7687
             - name: OTEL_COLLECTOR_PORT
-              value: '55678'
+              value: '4317'
             - name: OTEL_COLLECTOR_ZPAGES_PORT
               value: '55679'
             - name: PROMETHEUS_HOSTNAME
@@ -163,8 +167,6 @@ spec:
               value: '8081'
             - name: TRACE_PORT_INTERNAL
               value: '8080'
-            - name: TRACE_REPLICAS
-              value: '1'
             - name: TRACE_SERVICE_IMAGE_TAG
               value: latest
             - name: USER_HOSTNAME

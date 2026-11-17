@@ -17,7 +17,7 @@ spec:
       annotations:
         kompose.cmd: kompose -f explorviz.yaml convert --chart --pvc-request-size 1Gi
         kompose.version: 1.34.0 (cbf2835db)
-        checksum/config: 0a17809a221cd8428c499fc1915fd20cd3455faedfdd8b025ab929a07dbadd48
+        checksum/config: 2d65e560d5ef233003d8a816cb4c7ee19e69b9dec5e7fbf717d57a472e5e4f8c
       labels:
         io.kompose.service: otel-collector
     spec:
@@ -25,7 +25,7 @@ spec:
         - image: explorviz/otel-collector
           name: otel-collector
           ports:
-            - containerPort: 55678
+            - containerPort: 4317
               protocol: TCP
             - containerPort: 55679
               protocol: TCP
@@ -76,7 +76,7 @@ data:
       otlp:
         protocols:
           grpc:
-            endpoint: :55678
+            endpoint: :4317
 
     processors:
       explorviz_parsing:

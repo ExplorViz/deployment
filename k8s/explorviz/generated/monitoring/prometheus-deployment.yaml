@@ -22,7 +22,7 @@ spec:
       annotations:
         kompose.cmd: kompose -f explorviz.yaml convert --chart --pvc-request-size 1Gi
         kompose.version: 1.34.0 (cbf2835db)
-        checksum/config: 9a5c7260aaf5d30846c63fc28fee852c0798379ac42e73e5339488628b6feb24
+        checksum/config: f2aa4bc3bb56164621067f7ac5365b8073cfb9fbca9368c41421eb37da9c72b8
       labels:
         io.kompose.service: prometheus
     spec:
@@ -98,6 +98,12 @@ data:
         type: A
         port: 8080
       static_configs: []
+    - job_name: collaboration-service
+      dns_sd_configs:
+      - names:
+        - collaboration-service
+        type: A
+        port: 2567
     - job_name: push-service
       metrics_path: /q/metrics
       dns_sd_configs:
