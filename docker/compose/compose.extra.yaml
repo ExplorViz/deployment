@@ -11,14 +11,17 @@ services:
   ## Kafka ##
 
   kafka:
-    image: confluentinc/cp-kafka:7.3.15
+    # GraalVM native image: The broker is ready in less than a second.
+    # It is intended for development and ships without the Kafka CLI tools.
+    image: apache/kafka-native:4.4.0
     hostname: ${KAFKA_HOSTNAME}
     profiles: ["env"]
+    # A new named volume is owned by root, since the image has no data directory.
+    user: root
     ports:
       - "${KAFKA_EXT_PORT}:${KAFKA_EXT_PORT}"
       - "${KAFKA_JMX_PORT}:${KAFKA_JMX_PORT}"
     environment:
-      KAFKA_BROKER_ID: 1
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: "CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT"
       KAFKA_ADVERTISED_LISTENERS: "PLAINTEXT://kafka:${KAFKA_INT_PORT},PLAINTEXT_HOST://localhost:${KAFKA_EXT_PORT}"
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
@@ -34,19 +37,30 @@ services:
       KAFKA_LISTENERS: "PLAINTEXT://kafka:${KAFKA_INT_PORT},CONTROLLER://kafka:29093,PLAINTEXT_HOST://0.0.0.0:${KAFKA_EXT_PORT}"
       KAFKA_INTER_BROKER_LISTENER_NAME: "PLAINTEXT"
       KAFKA_CONTROLLER_LISTENER_NAMES: "CONTROLLER"
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+      # After an unclean stop the broker can only re-register once its old
+      # session expired. The default of 9s delays the restart accordingly.
+      KAFKA_BROKER_SESSION_TIMEOUT_MS: 3000
+      KAFKA_BROKER_HEARTBEAT_INTERVAL_MS: 1000
     volumes:
-      - kafka-data:/var/lib/kafka/data
+      - kafka-4-data:/var/lib/kafka/data
       - kafka-secrets:/etc/kafka/secrets
-      - ./configurations/kafka/kafka_kraft_init.sh:/tmp/update_run.sh
-    command: 'bash -c ''if [ ! -f /tmp/update_run.sh ]; then echo "ERROR: Did you forget the kafka_kraft_init.sh file that came with this docker-compose.yml file?" && exit 1 ; else /tmp/update_run.sh && /etc/confluent/docker/run ; fi'''
     healthcheck:
-      test: ["CMD", "kafka-topics", "--bootstrap-server", "kafka:${KAFKA_INT_PORT}", "--list"]
+      # The image has no Kafka CLI tools, so only check that the listener,
+      # which is bound to all interfaces, accepts connections. Services which
+      # need a working broker also wait for init-kafka.
+      test: ["CMD", "nc", "-z", "localhost", "${KAFKA_EXT_PORT}"]
       interval: 15s
       timeout: 10s
       retries: 10
+      # Probe every second while starting, so that dependent services are not
+      # held back by the regular interval (requires Docker Engine 25+).
+      start_period: 60s
+      start_interval: 1s
 
   init-kafka:
-    image: confluentinc/cp-kafka:7.3.15
+    # JVM-based image of the same version, since it includes the Kafka CLI tools.
+    image: apache/kafka:4.4.0
     profiles: ["env", "init-env"]
     depends_on:
       kafka:
@@ -276,8 +290,9 @@ services:
 # docker volume rm $(docker volume ls -f name=explorviz -q)
 
 volumes:
-  kafka-data:
-    name: explorviz-kafka-data
+  # Data of the former Confluent image (Kafka 3.3) cannot be reused.
+  kafka-4-data:
+    name: explorviz-kafka-4-data
   kafka-secrets:
     name: explorviz-kafka-secrets
   init-kafka-data:

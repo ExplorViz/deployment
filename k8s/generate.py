@@ -222,9 +222,10 @@ def wait_for_dependencies(service, services, kafka_port, topics):
             )
             yield {
                 "name": "wait-for-kafka-topics",
-                "image": services["kafka"]["image"],
+                # The native Kafka image has no CLI tools.
+                "image": services["init-kafka"]["image"],
                 "command": ["/bin/sh", "-ec",
-                            f"until topics=$(kafka-topics --bootstrap-server {broker} "
+                            f"until topics=$(/opt/kafka/bin/kafka-topics.sh --bootstrap-server {broker} "
                             f"--list 2>/dev/null) && {checks}; do sleep 5; done"],
             }
             continue
@@ -245,11 +246,6 @@ def add_healthcheck(name, container, service):
         return
     if mode == "CMD-SHELL":
         command = ["/bin/sh", "-ec", *command]
-    if name == "kafka":
-        # The external listener advertises localhost, so readiness can succeed
-        # before the internal Service has a ready endpoint.
-        local_listener = f"localhost:{service['ports'][0]['target']}"
-        command = [local_listener if part.startswith("kafka:") else part for part in command]
     container["readinessProbe"] = {
         "exec": {"command": command},
         "periodSeconds": duration_seconds(healthcheck.get("interval", "30s")),
@@ -287,7 +283,7 @@ def adapt_workload(workload, service, services, kafka_port, topics):
         container["command"] = service["entrypoint"]
     if service.get("command"):
         container["args"] = [arg.replace("$(", "$$(") for arg in service["command"]]
-    if name in {"kafka", "kafka-lag-exporter"}:
+    if name == "kafka-lag-exporter":
         container["command"] = [container["args"].pop(0)]
 
     configs = list(bind_configs(name, service, pod, container, services))
