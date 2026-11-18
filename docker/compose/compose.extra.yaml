@@ -100,13 +100,26 @@ services:
       - NEO4J_apoc_import_file_enabled=true
       - NEO4J_apoc_initializer_neo4j_0=CALL apoc.cypher.runSchemaFile("init.cypher")
     healthcheck:
-      # Check the database over Bolt, which is also used by landscape-service.
-      test: ["CMD", "cypher-shell", "--address", "bolt://127.0.0.1:7687", "--database", "neo4j", "--non-interactive", "RETURN 1;"]
+      # Check that Bolt, which is used by landscape-service, accepts connections
+      # and that the database answers a query. The query is sent to the HTTP
+      # API, since cypher-shell would start a JVM for every probe.
+      test:
+        - CMD
+        - bash
+        - -c
+        - >-
+          </dev/tcp/127.0.0.1/7687 &&
+          wget -qO /dev/null --header 'Content-Type: application/json'
+          --post-data '{"statement":"RETURN 1"}'
+          http://127.0.0.1:7474/db/neo4j/query/v2
       interval: 15s
       timeout: 30s
       retries: 10
       # Initial plugin downloads and database recovery can delay readiness.
       start_period: 5m
+      # Probe every second while starting, so that dependent services are not
+      # held back by the regular interval (requires Docker Engine 25+).
+      start_interval: 1s
 
   ## ClickHouse ##
 
@@ -129,7 +142,18 @@ services:
         soft: 262144
         hard: 262144
     healthcheck:
-      test: wget --no-verbose --tries=1 --spider http://localhost:8123/?query=SELECT%201 || exit 1
+      # On the first start the entrypoint runs the init scripts against a
+      # temporary server, which only listens on localhost and is stopped
+      # afterwards. Probe the container's own address, so that only the final
+      # server is reported as healthy.
+      test: ["CMD-SHELL", "wget -q --spider http://$$(hostname):8123/ping"]
+      interval: 5s
+      timeout: 10s
+      retries: 10
+      # Probe every second while starting, so that dependent services are not
+      # held back by the regular interval (requires Docker Engine 25+).
+      start_period: 60s
+      start_interval: 1s
 
   ## User-Service ##
 

@@ -244,6 +244,8 @@ def add_healthcheck(name, container, service):
     mode, *command = healthcheck["test"]
     if mode == "NONE":
         return
+    # Compose escapes dollar signs, which are meant for the probe's shell.
+    command = [argument.replace("$$", "$") for argument in command]
     if mode == "CMD-SHELL":
         command = ["/bin/sh", "-ec", *command]
     container["readinessProbe"] = {

@@ -73,13 +73,9 @@ spec:
           readinessProbe:
             exec:
               command:
-                - cypher-shell
-                - --address
-                - bolt://127.0.0.1:7687
-                - --database
-                - neo4j
-                - --non-interactive
-                - RETURN 1;
+                - bash
+                - -c
+                - '</dev/tcp/127.0.0.1/7687 && wget -qO /dev/null --header ''Content-Type: application/json'' --post-data ''{"statement":"RETURN 1"}'' http://127.0.0.1:7474/db/neo4j/query/v2'
             periodSeconds: 15
             timeoutSeconds: 30
             failureThreshold: 10

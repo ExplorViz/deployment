@@ -50,10 +50,10 @@ spec:
               command:
                 - /bin/sh
                 - -ec
-                - wget --no-verbose --tries=1 --spider http://localhost:8123/?query=SELECT%201 || exit 1
-            periodSeconds: 30
-            timeoutSeconds: 30
-            failureThreshold: 3
+                - wget -q --spider http://$(hostname):8123/ping
+            periodSeconds: 5
+            timeoutSeconds: 10
+            failureThreshold: 10
       restartPolicy: Always
       volumes:
         - name: clickhouse-data
