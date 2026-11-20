@@ -4,8 +4,9 @@
 # Stop + remove volumes: `docker compose down -v`
 # All commands work from this directory and from the repository root (see ../.env).
 
-# To use native images instead of jvm-based images either modify .env file
-# or start with `EXPLORVIZ_JAVA_IMAGE_TYPE=native docker compose up -d`
+# To use native images instead of jvm-based images for the user-service, landscape-service, or code-analyzer,
+# set the respective image tag to `native` in the .env file, or start with e.g.
+# `USER_SERVICE_IMAGE_TAG=native docker compose up -d`
 
 # Using custom .env file, e.g., `docker compose --env-file .env --env-file .env-custom up -d`
 # From the repository root: `docker compose -f docker/compose.yaml --env-file docker/.env --env-file docker/.env-custom up -d`
@@ -99,7 +100,7 @@ services:
     hostname: ${USER_HOSTNAME}
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    image: explorviz/user-service-${EXPLORVIZ_JAVA_IMAGE_TYPE}:${USER_SERVICE_IMAGE_TAG}
+    image: explorviz/user-service:${USER_SERVICE_IMAGE_TAG}
     profiles: ["backend"]
     env_file:
       - path: ./.env

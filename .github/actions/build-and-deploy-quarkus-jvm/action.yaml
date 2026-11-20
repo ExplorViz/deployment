@@ -16,6 +16,14 @@ inputs:
   image-tag:
     description: Docker image tag
     required: true
+  additional-tags:
+    description: Comma-separated list of further tags for the same image, e.g. jvm
+    required: false
+    default: ""
+  java-version:
+    description: JDK version used to run the Gradle build
+    required: false
+    default: "25"
 outputs: {}
 runs:
   using: "composite"
@@ -24,7 +32,7 @@ runs:
       uses: actions/setup-java@v3
       with:
         distribution: "temurin"
-        java-version: "21"
+        java-version: ${{ inputs.java-version }}
     - name: Build Quarkus JVM Image
       shell: sh
       run: |
@@ -34,5 +42,6 @@ runs:
           -Dquarkus.jib.platforms=${{ inputs.platforms }} \
           -Dquarkus.container-image.name=${{ inputs.image-name }} \
           -Dquarkus.container-image.tag=${{ inputs.image-tag }} \
+          -Dquarkus.container-image.additional-tags=${{ inputs.additional-tags }} \
           -Dquarkus.container-image.username=${{ inputs.docker-username }} \
           -Dquarkus.container-image.password=${{ inputs.docker-password }}

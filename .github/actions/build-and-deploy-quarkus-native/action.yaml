@@ -16,6 +16,10 @@ inputs:
   image-tag:
     description: Docker image tag
     required: true
+  java-version:
+    description: JDK version used to run the Gradle build
+    required: false
+    default: "25"
 outputs: {}
 runs:
   using: "composite"
@@ -24,7 +28,7 @@ runs:
       uses: actions/setup-java@v4
       with:
         distribution: "graalvm"
-        java-version: "21"
+        java-version: ${{ inputs.java-version }}
     - name: Build Quarkus Native Image
       shell: sh
       run: |
